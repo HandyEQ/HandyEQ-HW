@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">sw(15)_IBUF</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">430</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">sw(14)_IBUF,
+sw(13)_IBUF,
+sw(12)_IBUF,
+sw(11)_IBUF,
+sw(10)_IBUF</arg>
+To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
+</msg>
+
+<msg type="info" file="MapLib" num="899" delta="new" >Retargeting RAMB16 block <arg fmt="%s" index="1">eth0.e1/m100.u0/nft.tx_fifo0/xc2v.x0/a6.x0/a9.x[0].r0/RAMB16</arg> to a RAMB18SDP. This will result in the disconnection of the following output pins:
+<arg fmt="%s" index="2">DOA0, DOA1, DOA2, DOA3, DOA4, DOA5, DOA6, DOA7, DOA8, DOA9, DOA10, DOA11, DOA12, DOA13, DOA14, DOA15, DOA16, DOA17, DOA18, DOA19, DOA20, DOA21, DOA22, DOA23, DOA24, DOA25, DOA26, DOA27, DOA28, DOA29, DOA30, DOA31, DOPA0, DOPA1, DOPA2 and DOPA3</arg>
+These pins drive other logic in the design and will leave it sourceless.
+</msg>
+
+<msg type="info" file="MapLib" num="899" delta="new" >Retargeting RAMB16 block <arg fmt="%s" index="1">eth0.e1/m100.u0/edclramnft.r1/xc2v.x0/a6.x0/a9.x[0].r0/RAMB16</arg> to a RAMB18SDP. This will result in the disconnection of the following output pins:
+<arg fmt="%s" index="2">DOA0, DOA1, DOA2, DOA3, DOA4, DOA5, DOA6, DOA7, DOA8, DOA9, DOA10, DOA11, DOA12, DOA13, DOA14, DOA15, DOA16, DOA17, DOA18, DOA19, DOA20, DOA21, DOA22, DOA23, DOA24, DOA25, DOA26, DOA27, DOA28, DOA29, DOA30, DOA31, DOPA0, DOPA1, DOPA2 and DOPA3</arg>
+These pins drive other logic in the design and will leave it sourceless.
+</msg>
+
+<msg type="info" file="MapLib" num="899" delta="new" >Retargeting RAMB16 block <arg fmt="%s" index="1">eth0.e1/m100.u0/edclramnft.r0/xc2v.x0/a6.x0/a9.x[0].r0/RAMB16</arg> to a RAMB18SDP. This will result in the disconnection of the following output pins:
+<arg fmt="%s" index="2">DOA0, DOA1, DOA2, DOA3, DOA4, DOA5, DOA6, DOA7, DOA8, DOA9, DOA10, DOA11, DOA12, DOA13, DOA14, DOA15, DOA16, DOA17, DOA18, DOA19, DOA20, DOA21, DOA22, DOA23, DOA24, DOA25, DOA26, DOA27, DOA28, DOA29, DOA30, DOA31, DOPA0, DOPA1, DOPA2 and DOPA3</arg>
+These pins drive other logic in the design and will leave it sourceless.
+</msg>
+
+<msg type="info" file="MapLib" num="899" delta="new" >Retargeting RAMB16 block <arg fmt="%s" index="1">leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x1/xc2v.x0/a6.x0/a9.x[0].r0/RAMB16</arg> to a RAMB18SDP. This will result in the disconnection of the following output pins:
+<arg fmt="%s" index="2">DOA0, DOA1, DOA2, DOA3, DOA4, DOA5, DOA6, DOA7, DOA8, DOA9, DOA10, DOA11, DOA12, DOA13, DOA14, DOA15, DOA16, DOA17, DOA18, DOA19, DOA20, DOA21, DOA22, DOA23, DOA24, DOA25, DOA26, DOA27, DOA28, DOA29, DOA30, DOA31, DOPA0, DOPA1, DOPA2 and DOPA3</arg>
+These pins drive other logic in the design and will leave it sourceless.
+</msg>
+
+<msg type="info" file="MapLib" num="899" delta="new" >Retargeting RAMB16 block <arg fmt="%s" index="1">leon3gen.cpu[0].u0/leon3x0/rf0/s1.rhu/s1.dp.x0/xc2v.x0/a6.x0/a9.x[0].r0/RAMB16</arg> to a RAMB18SDP. This will result in the disconnection of the following output pins:
+<arg fmt="%s" index="2">DOA0, DOA1, DOA2, DOA3, DOA4, DOA5, DOA6, DOA7, DOA8, DOA9, DOA10, DOA11, DOA12, DOA13, DOA14, DOA15, DOA16, DOA17, DOA18, DOA19, DOA20, DOA21, DOA22, DOA23, DOA24, DOA25, DOA26, DOA27, DOA28, DOA29, DOA30, DOA31, DOPA0, DOPA1, DOPA2 and DOPA3</arg>
+These pins drive other logic in the design and will leave it sourceless.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">PhyRxEr</arg> connected to top level port <arg fmt="%s" index="2">PhyRxEr</arg> has been removed.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="new" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="new" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">eth0.e1/m100.u0/ethc0/r_mdioclk_INV_1032_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">ethpads.emdc_pad/xcv.x0/ttl0.slow0.op</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter eth0.e1/m100.u0/ethc0/r_mdioclk_INV_1032_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1186" delta="new" >One or more I/O components have conflicting property values.  For each occurrence, the system will use the property value attached to the pad.  Otherwise, the system will use the first property value read.  To view each occurrence, create a detailed map report (run map using the -detail option).
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="new" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="new" >Initializing voltage to <arg fmt="%0.3f" index="1">0.950</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">0.950</arg> to <arg fmt="%0.3f" index="3">1.050</arg> Volts)
+</msg>
+
+<msg type="info" file="Map" num="215" delta="new" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="new" >Map created a placed design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(10)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(11)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(12)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(13)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(14)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(15)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">btn(0)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">btn(1)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">btn(2)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">btn(3)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">btn(4)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(0)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(1)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(2)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(3)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(4)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(5)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(6)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(7)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(8)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw(9)_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">eth0.e1/m100.u0/nft.rx_fifo0/xc2v.x0/a0.x0/Mram_rfd4_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">eth0.e1/m100.u0/nft.rx_fifo0/xc2v.x0/a0.x0/Mram_rfd3_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">eth0.e1/m100.u0/nft.rx_fifo0/xc2v.x0/a0.x0/Mram_rfd1_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">eth0.e1/m100.u0/nft.rx_fifo0/xc2v.x0/a0.x0/Mram_rfd5_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">eth0.e1/m100.u0/nft.rx_fifo0/xc2v.x0/a0.x0/Mram_rfd2_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+</messages>
+

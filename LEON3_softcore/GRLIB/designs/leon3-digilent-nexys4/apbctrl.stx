@@ -1,0 +1,69 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: apbctrl.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\stdlib\version.vhd" into library grlib
+Parsing package <version>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\stdlib\config_types.vhd" into library grlib
+Parsing package <config_types>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\stdlib\stdlib.vhd" into library grlib
+Parsing package <stdlib>.
+Parsing package body <stdlib>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\stdlib\config.vhd" into library grlib
+Parsing package <config>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\amba\amba.vhd" into library grlib
+Parsing package <amba>.
+Parsing package body <amba>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\amba\apbctrl.vhd" into library grlib
+Parsing entity <apbctrl>.
+Parsing architecture <rtl> of entity <apbctrl>.
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.80 secs
+ 
+--> 
+
+Total memory usage is 216296 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

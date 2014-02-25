@@ -1,0 +1,6 @@
+vhdl grlib "../../lib/grlib/stdlib/version.vhd"
+vhdl grlib "../../lib/grlib/stdlib/config_types.vhd"
+vhdl grlib "../../lib/grlib/stdlib/stdlib.vhd"
+vhdl grlib "../../lib/grlib/stdlib/config.vhd"
+vhdl grlib "../../lib/grlib/amba/amba.vhd"
+vhdl grlib "../../lib/grlib/amba/apbctrl.vhd"

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Tue Feb 25 19:23:39 2014
+# Process ID: 2660
+# Log file: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.rdi
+# Journal file: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source PWM_TOP.tcl -notrace

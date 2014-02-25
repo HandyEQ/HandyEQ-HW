@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Tue Feb 25 18:24:54 2014
+# Process ID: 3628
+# Log file: Z:/.win/My Documents/DAT096_Embedded System Design Project/XADCv3/XADCwiz/vivado.log
+# Journal file: Z:/.win/My Documents/DAT096_Embedded System Design Project/XADCv3/XADCwiz\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {Z:\.win\My Documents\DAT096_Embedded System Design Project\XADCv3\XADCwiz\XADCwiz.xpr}
+close_project
+create_project DAC_PWM {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM} -part xc7a100tcsg324-3
+set_property target_language VHDL [current_project]
+close [ open {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.srcs/sources_1/new/pwm_top.vhd} w ]
+add_files {{Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.srcs/sources_1/new/pwm_top.vhd}}
+update_compile_order -fileset sources_1
+close [ open {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.srcs/constrs_1/new/pin_config.xdc} w ]
+add_files -fileset constrs_1 {{Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.srcs/constrs_1/new/pin_config.xdc}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+launch_impact 
+open_hw
+connect_hw_server -host localhost -port 60001
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210274505431A]
+open_hw_target
+set_property PROGRAM.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit} [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+launch_impact 
+set_property PROGRAM.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]

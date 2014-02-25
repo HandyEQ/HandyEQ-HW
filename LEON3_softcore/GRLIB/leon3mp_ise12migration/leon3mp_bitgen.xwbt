@@ -1,0 +1,7 @@
+INFILE=/chalmers/users/sebkarl/DAT096-Embedded System Design/Workspace/HandyEQ-HW/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/leon3mp.ncd
+OUTFILE=/chalmers/users/sebkarl/DAT096-Embedded System Design/Workspace/HandyEQ-HW/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/leon3mp.bit
+FAMILY=Artix7
+PART=xc7a100t-2csg324
+WORKINGDIR=/chalmers/users/sebkarl/DAT096-Embedded System Design/Workspace/HandyEQ-HW/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4
+LICENSE=ISE
+USER_INFO=210655449_178259189_210574059_844

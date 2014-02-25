@@ -1,0 +1,613 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: leon3mp.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\stdlib\version.vhd" into library grlib
+Parsing package <version>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\stdlib\config_types.vhd" into library grlib
+Parsing package <config_types>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\stdlib\stdlib.vhd" into library grlib
+Parsing package <stdlib>.
+Parsing package body <stdlib>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\stdlib\config.vhd" into library grlib
+Parsing package <config>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\gencomp\gencomp.vhd" into library techmap
+Parsing package <gencomp>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\amba\amba.vhd" into library grlib
+Parsing package <amba>.
+Parsing package body <amba>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\srmmu\mmuconfig.vhd" into library gaisler
+Parsing package <mmuconfig>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\allclkgen.vhd" into library techmap
+Parsing package <allclkgen>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\inferred\memory_inferred.vhd" into library techmap
+Parsing entity <generic_syncram>.
+Parsing architecture <behavioral> of entity <generic_syncram>.
+Parsing entity <generic_syncram_reg>.
+Parsing architecture <behavioral> of entity <generic_syncram_reg>.
+Parsing entity <generic_syncram_2p>.
+Parsing architecture <behav> of entity <generic_syncram_2p>.
+Parsing entity <generic_syncram_2p_reg>.
+Parsing architecture <behav> of entity <generic_syncram_2p_reg>.
+Parsing entity <generic_regfile_3p>.
+Parsing architecture <rtl> of entity <generic_regfile_3p>.
+Parsing entity <generic_regfile_4p>.
+Parsing architecture <rtl> of entity <generic_regfile_4p>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\srmmu\mmuiface.vhd" into library gaisler
+Parsing package <mmuiface>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3\leon3.vhd" into library gaisler
+Parsing package <leon3>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\unisim\memory_virtex.vhd" into library techmap
+Parsing entity <virtex_syncram>.
+Parsing architecture <behav> of entity <virtex_syncram>.
+Parsing entity <virtex_syncram_dp>.
+Parsing architecture <behav> of entity <virtex_syncram_dp>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\unisim\memory_unisim.vhd" into library techmap
+Parsing entity <unisim_syncram>.
+Parsing architecture <behav> of entity <unisim_syncram>.
+Parsing entity <unisim_syncram_dp>.
+Parsing architecture <behav> of entity <unisim_syncram_dp>.
+Parsing entity <unisim_syncram_2p>.
+Parsing architecture <behav> of entity <unisim_syncram_2p>.
+Parsing entity <unisim_syncram64>.
+Parsing architecture <behav> of entity <unisim_syncram64>.
+Parsing entity <unisim_syncram128>.
+Parsing architecture <behav> of entity <unisim_syncram128>.
+Parsing entity <unisim_syncram128bw>.
+Parsing architecture <behav> of entity <unisim_syncram128bw>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\grgates.vhd" into library techmap
+Parsing entity <grmux2>.
+Parsing architecture <rtl> of entity <grmux2>.
+Parsing entity <grmux2v>.
+Parsing architecture <rtl> of entity <grmux2v>.
+Parsing entity <grdff>.
+Parsing architecture <rtl> of entity <grdff>.
+Parsing entity <gror2>.
+Parsing architecture <rtl> of entity <gror2>.
+Parsing entity <grand12>.
+Parsing architecture <rtl> of entity <grand12>.
+Parsing entity <grnand2>.
+Parsing architecture <rtl> of entity <grnand2>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\allmem.vhd" into library techmap
+Parsing package <allmem>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\srmmu\mmulrue.vhd" into library gaisler
+Parsing entity <mmulrue>.
+Parsing architecture <rtl> of entity <mmulrue>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\srmmu\libmmu.vhd" into library gaisler
+Parsing package <libmmu>.
+Parsing package body <libmmu>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\libfpu.vhd" into library gaisler
+Parsing package <libfpu>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\arith\arith.vhd" into library gaisler
+Parsing package <arith>.
+Parsing package body <arith>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\syncram.vhd" into library techmap
+Parsing entity <syncram>.
+Parsing architecture <rtl> of entity <syncram>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\srmmu\mmutlbcam.vhd" into library gaisler
+Parsing entity <mmutlbcam>.
+Parsing architecture <rtl> of entity <mmutlbcam>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\srmmu\mmulru.vhd" into library gaisler
+Parsing entity <mmulru>.
+Parsing architecture <rtl> of entity <mmulru>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\libiu.vhd" into library gaisler
+Parsing package <libiu>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\syncram_2p.vhd" into library techmap
+Parsing entity <syncram_2p>.
+Parsing architecture <rtl> of entity <syncram_2p>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\allmul.vhd" into library techmap
+Parsing package <allmul>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\inferred\mul_inferred.vhd" into library techmap
+Parsing entity <gen_mul_61x61>.
+Parsing architecture <rtl> of entity <gen_mul_61x61>.
+Parsing entity <gen_mult_pipe>.
+Parsing architecture <simple> of entity <gen_mult_pipe>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\sparc\sparc.vhd" into library grlib
+Parsing package <sparc>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\modgen\multlib.vhd" into library grlib
+Parsing package <multlib>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\modgen\leaves.vhd" into library grlib
+Parsing package <blocks>.
+Parsing entity <FLIPFLOP>.
+Parsing architecture <FLIPFLOP> of entity <flipflop>.
+Parsing entity <PP_LOW>.
+Parsing architecture <PP_LOW> of entity <pp_low>.
+Parsing entity <PP_MIDDLE>.
+Parsing architecture <PP_MIDDLE> of entity <pp_middle>.
+Parsing entity <PP_HIGH>.
+Parsing architecture <PP_HIGH> of entity <pp_high>.
+Parsing entity <R_GATE>.
+Parsing architecture <R_GATE> of entity <r_gate>.
+Parsing entity <DECODER>.
+Parsing architecture <DECODER> of entity <decoder>.
+Parsing entity <FULL_ADDER>.
+Parsing architecture <FULL_ADDER> of entity <full_adder>.
+Parsing entity <HALF_ADDER>.
+Parsing architecture <HALF_ADDER> of entity <half_adder>.
+Parsing entity <INVBLOCK>.
+Parsing architecture <INVBLOCK_regular> of entity <invblock>.
+Parsing entity <XXOR1>.
+Parsing architecture <XXOR_regular> of entity <xxor1>.
+Parsing entity <BLOCK0>.
+Parsing architecture <BLOCK0_regular> of entity <block0>.
+Parsing entity <BLOCK1>.
+Parsing architecture <BLOCK1_regular> of entity <block1>.
+Parsing entity <BLOCK2>.
+Parsing architecture <BLOCK2_regular> of entity <block2>.
+Parsing entity <BLOCK1A>.
+Parsing architecture <BLOCK1A_regular> of entity <block1a>.
+Parsing entity <BLOCK2A>.
+Parsing architecture <BLOCK2A_regular> of entity <block2a>.
+Parsing entity <PRESTAGE_64>.
+Parsing architecture <PRESTAGE> of entity <prestage_64>.
+Parsing entity <DBLC_0_64>.
+Parsing architecture <DBLC_0> of entity <dblc_0_64>.
+Parsing entity <DBLC_1_64>.
+Parsing architecture <DBLC_1> of entity <dblc_1_64>.
+Parsing entity <DBLC_2_64>.
+Parsing architecture <DBLC_2> of entity <dblc_2_64>.
+Parsing entity <DBLC_3_64>.
+Parsing architecture <DBLC_3> of entity <dblc_3_64>.
+Parsing entity <DBLC_4_64>.
+Parsing architecture <DBLC_4> of entity <dblc_4_64>.
+Parsing entity <DBLC_5_64>.
+Parsing architecture <DBLC_5> of entity <dblc_5_64>.
+Parsing entity <XORSTAGE_64>.
+Parsing architecture <XORSTAGE> of entity <xorstage_64>.
+Parsing entity <DBLCTREE_64>.
+Parsing architecture <DBLCTREE> of entity <dblctree_64>.
+Parsing entity <DBLCADDER_64_64>.
+Parsing architecture <DBLCADDER> of entity <dblcadder_64_64>.
+Parsing entity <XXOR2>.
+Parsing architecture <XXOR_true> of entity <xxor2>.
+Parsing entity <DBLC_0_32>.
+Parsing architecture <DBLC_0> of entity <dblc_0_32>.
+Parsing entity <DBLC_1_32>.
+Parsing architecture <DBLC_1> of entity <dblc_1_32>.
+Parsing entity <DBLC_2_32>.
+Parsing architecture <DBLC_2> of entity <dblc_2_32>.
+Parsing entity <DBLC_3_32>.
+Parsing architecture <DBLC_3> of entity <dblc_3_32>.
+Parsing entity <DBLC_4_32>.
+Parsing architecture <DBLC_4> of entity <dblc_4_32>.
+Parsing entity <XORSTAGE_32>.
+Parsing architecture <XORSTAGE> of entity <xorstage_32>.
+Parsing entity <PRESTAGE_32>.
+Parsing architecture <PRESTAGE> of entity <prestage_32>.
+Parsing entity <DBLCTREE_32>.
+Parsing architecture <DBLCTREE> of entity <dblctree_32>.
+Parsing entity <DBLCADDER_32_32>.
+Parsing architecture <DBLCADDER> of entity <dblcadder_32_32>.
+Parsing entity <PRESTAGE_128>.
+Parsing architecture <PRESTAGE> of entity <prestage_128>.
+Parsing entity <DBLC_0_128>.
+Parsing architecture <DBLC_0> of entity <dblc_0_128>.
+Parsing entity <DBLC_1_128>.
+Parsing architecture <DBLC_1> of entity <dblc_1_128>.
+Parsing entity <DBLC_2_128>.
+Parsing architecture <DBLC_2> of entity <dblc_2_128>.
+Parsing entity <DBLC_3_128>.
+Parsing architecture <DBLC_3> of entity <dblc_3_128>.
+Parsing entity <DBLC_4_128>.
+Parsing architecture <DBLC_4> of entity <dblc_4_128>.
+Parsing entity <DBLC_5_128>.
+Parsing architecture <DBLC_5> of entity <dblc_5_128>.
+Parsing entity <DBLC_6_128>.
+Parsing architecture <DBLC_6> of entity <dblc_6_128>.
+Parsing entity <XORSTAGE_128>.
+Parsing architecture <XORSTAGE> of entity <xorstage_128>.
+Parsing entity <DBLCTREE_128>.
+Parsing architecture <DBLCTREE> of entity <dblctree_128>.
+Parsing entity <DBLCADDER_128_128>.
+Parsing architecture <DBLCADDER> of entity <dblcadder_128_128>.
+Parsing entity <BOOTHCODER_18_18>.
+Parsing architecture <BOOTHCODER> of entity <boothcoder_18_18>.
+Parsing entity <WALLACE_18_18>.
+Parsing architecture <WALLACE> of entity <wallace_18_18>.
+Parsing entity <MULTIPLIER_18_18>.
+Parsing architecture <MULTIPLIER> of entity <multiplier_18_18>.
+Parsing entity <BOOTHCODER_34_10>.
+Parsing architecture <BOOTHCODER> of entity <boothcoder_34_10>.
+Parsing entity <WALLACE_34_10>.
+Parsing architecture <WALLACE> of entity <wallace_34_10>.
+Parsing entity <MULTIPLIER_34_10>.
+Parsing architecture <MULTIPLIER> of entity <multiplier_34_10>.
+Parsing entity <MUL_33_9>.
+Parsing architecture <A> of entity <mul_33_9>.
+Parsing entity <BOOTHCODER_34_18>.
+Parsing architecture <BOOTHCODER> of entity <boothcoder_34_18>.
+Parsing entity <WALLACE_34_18>.
+Parsing architecture <WALLACE> of entity <wallace_34_18>.
+Parsing entity <MULTIPLIER_34_18>.
+Parsing architecture <MULTIPLIER> of entity <multiplier_34_18>.
+Parsing entity <MUL_33_17>.
+Parsing architecture <A> of entity <mul_33_17>.
+Parsing entity <BOOTHCODER_34_34>.
+Parsing architecture <BOOTHCODER> of entity <boothcoder_34_34>.
+Parsing entity <WALLACE_34_34>.
+Parsing architecture <WALLACE> of entity <wallace_34_34>.
+Parsing entity <MULTIPLIER_34_34>.
+Parsing architecture <MULTIPLIER> of entity <multiplier_34_34>.
+Parsing entity <MUL_33_33>.
+Parsing architecture <A> of entity <mul_33_33>.
+Parsing entity <ADD32>.
+Parsing architecture <A> of entity <add32>.
+Parsing entity <MUL_17_17>.
+Parsing architecture <A> of entity <mul_17_17>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\amba\devices.vhd" into library grlib
+Parsing package <devices>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\srmmu\mmutw.vhd" into library gaisler
+Parsing entity <mmutw>.
+Parsing architecture <rtl> of entity <mmutw>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\srmmu\mmutlb.vhd" into library gaisler
+Parsing entity <mmutlb>.
+Parsing architecture <rtl> of entity <mmutlb>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\libcache.vhd" into library gaisler
+Parsing package <libcache>.
+Parsing package body <libcache>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\techmult.vhd" into library techmap
+Parsing entity <techmult>.
+Parsing architecture <rtl> of entity <techmult>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\regfile_3p.vhd" into library techmap
+Parsing entity <regfile_3p>.
+Parsing architecture <rtl> of entity <regfile_3p>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\srmmu\mmu.vhd" into library gaisler
+Parsing entity <mmu>.
+Parsing architecture <rtl> of entity <mmu>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\mmu_icache.vhd" into library gaisler
+Parsing entity <mmu_icache>.
+Parsing architecture <rtl> of entity <mmu_icache>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\mmu_dcache.vhd" into library gaisler
+Parsing entity <mmu_dcache>.
+Parsing architecture <rtl> of entity <mmu_dcache>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\mmu_acache.vhd" into library gaisler
+Parsing entity <mmu_acache>.
+Parsing architecture <rtl> of entity <mmu_acache>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\libleon3.vhd" into library gaisler
+Parsing package <libleon3>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\eth\core\greth_pkg.vhd" into library eth
+Parsing package <grethpkg>.
+Parsing package body <grethpkg>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\eth\core\eth_rstgen.vhd" into library eth
+Parsing entity <eth_rstgen>.
+Parsing architecture <rtl> of entity <eth_rstgen>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\unisim\clkgen_unisim.vhd" into library techmap
+Parsing entity <clkgen_virtex5>.
+Parsing architecture <struct> of entity <clkgen_virtex5>.
+Parsing entity <clkgen_virtex7>.
+Parsing architecture <struct> of entity <clkgen_virtex7>.
+Parsing entity <clkand_unisim>.
+Parsing architecture <rtl> of entity <clkand_unisim>.
+Parsing entity <clkmux_unisim>.
+Parsing architecture <rtl> of entity <clkmux_unisim>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\unisim\buffer_unisim.vhd" into library techmap
+Parsing entity <clkbuf_xilinx>.
+Parsing architecture <rtl> of entity <clkbuf_xilinx>.
+Parsing entity <clkmux_xilinx>.
+Parsing architecture <rtl> of entity <clkmux_xilinx>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\syncram_dp.vhd" into library techmap
+Parsing entity <syncram_dp>.
+Parsing architecture <rtl> of entity <syncram_dp>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\syncram64.vhd" into library techmap
+Parsing entity <syncram64>.
+Parsing architecture <rtl> of entity <syncram64>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\grlfpw_net.vhd" into library techmap
+Parsing entity <grlfpw_net>.
+Parsing architecture <rtl> of entity <grlfpw_net>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\grfpw_net.vhd" into library techmap
+Parsing entity <grfpw_net>.
+Parsing architecture <rtl> of entity <grfpw_net>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\gencomp\netcomp.vhd" into library techmap
+Parsing package <netcomp>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\uart\uart.vhd" into library gaisler
+Parsing package <uart>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\net\net.vhd" into library gaisler
+Parsing package <net>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\misc\misc.vhd" into library gaisler
+Parsing package <misc>.
+Parsing package body <misc>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\regfile_3p_l3.vhd" into library gaisler
+Parsing entity <regfile_3p_l3>.
+Parsing architecture <rtl> of entity <regfile_3p_l3>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\mmu_cache.vhd" into library gaisler
+Parsing entity <mmu_cache>.
+Parsing architecture <rtl> of entity <mmu_cache>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\iu3.vhd" into library gaisler
+Parsing entity <iu3>.
+Parsing architecture <rtl> of entity <iu3>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\arith\mul32.vhd" into library gaisler
+Parsing entity <mul32>.
+Parsing architecture <rtl> of entity <mul32>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\arith\div32.vhd" into library gaisler
+Parsing entity <div32>.
+Parsing architecture <rtl> of entity <div32>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\eth\core\greth_tx.vhd" into library eth
+Parsing entity <greth_tx>.
+Parsing architecture <rtl> of entity <greth_tx>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\eth\core\greth_rx.vhd" into library eth
+Parsing entity <greth_rx>.
+Parsing architecture <rtl> of entity <greth_rx>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\eth\core\eth_edcl_ahb_mst.vhd" into library eth
+Parsing entity <eth_edcl_ahb_mst>.
+Parsing architecture <rtl> of entity <eth_edcl_ahb_mst>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\eth\core\eth_ahb_mst.vhd" into library eth
+Parsing entity <eth_ahb_mst>.
+Parsing architecture <rtl> of entity <eth_ahb_mst>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\unisim\tap_unisim.vhd" into library techmap
+Parsing entity <virtex_tap>.
+Parsing architecture <rtl> of entity <virtex_tap>.
+Parsing entity <virtex2_tap>.
+Parsing architecture <rtl> of entity <virtex2_tap>.
+Parsing entity <spartan3_tap>.
+Parsing architecture <rtl> of entity <spartan3_tap>.
+Parsing entity <virtex4_tap>.
+Parsing architecture <rtl> of entity <virtex4_tap>.
+Parsing entity <virtex5_tap>.
+Parsing architecture <rtl> of entity <virtex5_tap>.
+Parsing entity <virtex6_tap>.
+Parsing architecture <rtl> of entity <virtex6_tap>.
+Parsing entity <spartan6_tap>.
+Parsing architecture <rtl> of entity <spartan6_tap>.
+Parsing entity <virtex7_tap>.
+Parsing architecture <rtl> of entity <virtex7_tap>.
+Parsing entity <kintex7_tap>.
+Parsing architecture <rtl> of entity <kintex7_tap>.
+Parsing entity <artix7_tap>.
+Parsing architecture <rtl> of entity <artix7_tap>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\techbuf.vhd" into library techmap
+Parsing entity <techbuf>.
+Parsing architecture <rtl> of entity <techbuf>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\clkmux.vhd" into library techmap
+Parsing entity <clkmux>.
+Parsing architecture <rtl> of entity <clkmux>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\clkand.vhd" into library techmap
+Parsing entity <clkand>.
+Parsing architecture <rtl> of entity <clkand>.
+Parsing entity <clkrand>.
+Parsing architecture <rtl> of entity <clkrand>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\alltap.vhd" into library techmap
+Parsing package <alltap>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\uart\libdcom.vhd" into library gaisler
+Parsing package <libdcom>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\memctrl\memctrl.vhd" into library gaisler
+Parsing package <memctrl>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\tbufmem.vhd" into library gaisler
+Parsing entity <tbufmem>.
+Parsing architecture <rtl> of entity <tbufmem>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\proc3.vhd" into library gaisler
+Parsing entity <proc3>.
+Parsing architecture <rtl> of entity <proc3>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\grlfpwx.vhd" into library gaisler
+Parsing entity <grlfpwx>.
+Parsing architecture <rtl> of entity <grlfpwx>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\grfpwxsh.vhd" into library gaisler
+Parsing entity <grfpwxsh>.
+Parsing architecture <rtl> of entity <grfpwxsh>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\grfpwx.vhd" into library gaisler
+Parsing entity <grfpwx>.
+Parsing architecture <rtl> of entity <grfpwx>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\cachemem.vhd" into library gaisler
+Parsing entity <cachemem>.
+Parsing architecture <rtl> of entity <cachemem>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\jtag\libjtagcom.vhd" into library gaisler
+Parsing package <libjtagcom>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\greth\ethernet_mac.vhd" into library gaisler
+Parsing package <ethernet_mac>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\eth\core\grethc.vhd" into library eth
+Parsing entity <grethc>.
+Parsing architecture <rtl> of entity <grethc>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\eth\comp\ethcomp.vhd" into library eth
+Parsing package <ethcomp>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\unisim\pads_unisim.vhd" into library techmap
+Parsing entity <unisim_inpad>.
+Parsing architecture <rtl> of entity <unisim_inpad>.
+Parsing entity <unisim_iopad>.
+Parsing architecture <rtl> of entity <unisim_iopad>.
+Parsing entity <unisim_outpad>.
+Parsing architecture <rtl> of entity <unisim_outpad>.
+Parsing entity <unisim_toutpad>.
+Parsing architecture <rtl> of entity <unisim_toutpad>.
+Parsing entity <unisim_skew_outpad>.
+Parsing architecture <rtl> of entity <unisim_skew_outpad>.
+Parsing entity <unisim_clkpad>.
+Parsing architecture <rtl> of entity <unisim_clkpad>.
+Parsing entity <unisim_inpad_ds>.
+Parsing architecture <rtl> of entity <unisim_inpad_ds>.
+Parsing entity <unisim_clkpad_ds>.
+Parsing architecture <rtl> of entity <unisim_clkpad_ds>.
+Parsing entity <virtex4_inpad_ds>.
+Parsing architecture <rtl> of entity <virtex4_inpad_ds>.
+Parsing entity <virtex4_clkpad_ds>.
+Parsing architecture <rtl> of entity <virtex4_clkpad_ds>.
+Parsing entity <unisim_iopad_ds>.
+Parsing architecture <rtl> of entity <unisim_iopad_ds>.
+Parsing entity <unisim_outpad_ds>.
+Parsing architecture <rtl> of entity <unisim_outpad_ds>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\unisim\clkgen_virtex.vhd" into library techmap
+Parsing entity <clkgen_virtex>.
+Parsing architecture <rtl> of entity <clkgen_virtex>.
+Parsing entity <clkgen_virtex2>.
+Parsing architecture <struct> of entity <clkgen_virtex2>.
+Parsing entity <clkmul_virtex2>.
+Parsing architecture <struct> of entity <clkmul_virtex2>.
+Parsing entity <clkgen_spartan3>.
+Parsing architecture <struct> of entity <clkgen_spartan3>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\tap.vhd" into library techmap
+Parsing entity <tap>.
+Parsing architecture <rtl> of entity <tap>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\syncreg.vhd" into library techmap
+Parsing entity <syncreg>.
+Parsing architecture <tmap> of entity <syncreg>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\syncrambw.vhd" into library techmap
+Parsing entity <syncrambw>.
+Parsing architecture <rtl> of entity <syncrambw>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\allpads.vhd" into library techmap
+Parsing package <allpads>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\amba\ahbmst.vhd" into library grlib
+Parsing entity <ahbmst>.
+Parsing architecture <rtl> of entity <ahbmst>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\uart\dcom_uart.vhd" into library gaisler
+Parsing entity <dcom_uart>.
+Parsing architecture <rtl> of entity <dcom_uart>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\uart\dcom.vhd" into library gaisler
+Parsing entity <dcom>.
+Parsing architecture <struct> of entity <dcom>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\memctrl\sdmctrl.vhd" into library gaisler
+Parsing entity <sdmctrl>.
+Parsing architecture <rtl> of entity <sdmctrl>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\leon3x.vhd" into library gaisler
+Parsing entity <leon3x>.
+Parsing architecture <rtl> of entity <leon3x>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\dsu3x.vhd" into library gaisler
+Parsing entity <dsu3x>.
+Parsing architecture <rtl> of entity <dsu3x>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\jtag\jtagcom2.vhd" into library gaisler
+Parsing entity <jtagcom2>.
+Parsing architecture <rtl> of entity <jtagcom2>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\jtag\jtagcom.vhd" into library gaisler
+Parsing entity <jtagcom>.
+Parsing architecture <rtl> of entity <jtagcom>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\jtag\jtag.vhd" into library gaisler
+Parsing package <jtag>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\greth\greth_gbit.vhd" into library gaisler
+Parsing entity <greth_gbit>.
+Parsing architecture <rtl> of entity <greth_gbit>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\greth\greth.vhd" into library gaisler
+Parsing entity <greth>.
+Parsing architecture <rtl> of entity <greth>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\esa\memoryctrl\memoryctrl.vhd" into library esa
+Parsing package <memoryctrl>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\outpad.vhd" into library techmap
+Parsing entity <outpad>.
+Parsing architecture <rtl> of entity <outpad>.
+Parsing entity <outpadv>.
+Parsing architecture <rtl> of entity <outpadv>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\iopad.vhd" into library techmap
+Parsing entity <iopad>.
+Parsing architecture <rtl> of entity <iopad>.
+Parsing entity <iopadv>.
+Parsing architecture <rtl> of entity <iopadv>.
+Parsing entity <iopadvv>.
+Parsing architecture <rtl> of entity <iopadvv>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\inpad.vhd" into library techmap
+Parsing entity <inpad>.
+Parsing architecture <rtl> of entity <inpad>.
+Parsing entity <inpadv>.
+Parsing architecture <rtl> of entity <inpadv>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\techmap\maps\clkgen.vhd" into library techmap
+Parsing entity <clkgen>.
+Parsing architecture <struct> of entity <clkgen>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\amba\apbctrl.vhd" into library grlib
+Parsing entity <apbctrl>.
+Parsing architecture <rtl> of entity <apbctrl>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\grlib\amba\ahbctrl.vhd" into library grlib
+Parsing entity <ahbctrl>.
+Parsing architecture <rtl> of entity <ahbctrl>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\uart\apbuart.vhd" into library gaisler
+Parsing entity <apbuart>.
+Parsing architecture <rtl> of entity <apbuart>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\uart\ahbuart.vhd" into library gaisler
+Parsing entity <ahbuart>.
+Parsing architecture <struct> of entity <ahbuart>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\spi\spi.vhd" into library gaisler
+Parsing package <spi>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\misc\rstgen.vhd" into library gaisler
+Parsing entity <rstgen>.
+Parsing architecture <rtl> of entity <rstgen>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\misc\gptimer.vhd" into library gaisler
+Parsing entity <gptimer>.
+Parsing architecture <rtl> of entity <gptimer>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\misc\ahbram.vhd" into library gaisler
+Parsing entity <ahbram>.
+Parsing architecture <rtl> of entity <ahbram>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\leon3s.vhd" into library gaisler
+Parsing entity <leon3s>.
+Parsing architecture <rtl> of entity <leon3s>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\leon3v3\dsu3.vhd" into library gaisler
+Parsing entity <dsu3>.
+Parsing architecture <rtl> of entity <dsu3>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\jtag\ahbjtag.vhd" into library gaisler
+Parsing entity <ahbjtag>.
+Parsing architecture <struct> of entity <ahbjtag>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\irqmp\irqmp.vhd" into library gaisler
+Parsing entity <irqmp>.
+Parsing architecture <rtl> of entity <irqmp>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\gaisler\greth\grethm.vhd" into library gaisler
+Parsing entity <grethm>.
+Parsing architecture <rtl> of entity <grethm>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\lib\esa\memoryctrl\mctrl.vhd" into library esa
+Parsing entity <mctrl>.
+Parsing architecture <rtl> of entity <mctrl>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\config.vhd" into library work
+Parsing package <config>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\ahbrom.vhd" into library work
+Parsing entity <ahbrom>.
+Parsing architecture <rtl> of entity <ahbrom>.
+Parsing VHDL file "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" into library work
+ERROR:HDLCompiler:104 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 41: Cannot find <pwm> in library <gaisler>. Please ensure that the library was compiled, and that a library and a use clause are present in the VHDL file.
+Parsing entity <leon3mp>.
+ERROR:HDLCompiler:854 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 52: Unit <leon3mp> ignored due to previous errors.
+Parsing architecture <rtl> of entity <leon3mp>.
+ERROR:HDLCompiler:374 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 142: Entity <leon3mp> is not yet compiled.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 145: <string> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 146: <integer> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 147: <real> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 148: <real> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 149: <real> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 150: <integer> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 151: <real> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 152: <real> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 153: <integer> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 154: <real> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 155: <real> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 156: <integer> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 157: <real> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 158: <real> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 159: <integer> is not declared.
+ERROR:HDLCompiler:69 - "\\sol.ita.chalmers.se\sebkarl\DAT096-Embedded System Design\Workspace\HandyEQ-HW\grlib-gpl-1.3.4-b4140\designs\leon3-digilent-nexys4\leon3mp.vhd" Line 160: <real> is not declared.
+Sorry, too many errors..
+--> 
+
+Total memory usage is 244072 kilobytes
+
+Number of errors   :   19 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,130 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Tue Feb 25 18:24:54 2014
+# Process ID: 3628
+# Log file: Z:/.win/My Documents/DAT096_Embedded System Design Project/XADCv3/XADCwiz/vivado.log
+# Journal file: Z:/.win/My Documents/DAT096_Embedded System Design Project/XADCv3/XADCwiz\vivado.jou
+#-----------------------------------------------------------
+Attempting to get a license: Implementation
+Feature available: Implementation
+Loading parts and site information from C:/Xilinx/Vivado/2013.4/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+open_project {Z:\.win\My Documents\DAT096_Embedded System Design Project\XADCv3\XADCwiz\XADCwiz.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2013.4/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 879.133 ; gain = 72.129
+close_project
+create_project DAC_PWM {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM} -part xc7a100tcsg324-3
+set_property target_language VHDL [current_project]
+close [ open {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.srcs/sources_1/new/pwm_top.vhd} w ]
+add_files {{Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.srcs/sources_1/new/pwm_top.vhd}}
+update_compile_order -fileset sources_1
+WARNING: [Designutils 20-342] File / dir doesn't exist, skipping: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.srcs/constrs_1/new/pin_config.xdc
+close [ open {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.srcs/constrs_1/new/pin_config.xdc} w ]
+add_files -fileset constrs_1 {{Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.srcs/constrs_1/new/pin_config.xdc}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_runs impl_1 -to_step write_bitstream
+[Tue Feb 25 19:19:54 2014] Launched synth_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/synth_1/runme.log
+[Tue Feb 25 19:19:54 2014] Launched impl_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+[Tue Feb 25 19:22:25 2014] Launched synth_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/synth_1/runme.log
+launch_runs impl_1
+[Tue Feb 25 19:23:37 2014] Launched impl_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Tue Feb 25 19:25:10 2014] Launched impl_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/runme.log
+launch_impact 
+INFO: [Chipscope 16-8] Launching iMPACT with command: impact.exe -intstyle pa -mode bscan -port auto -autoassign -b "Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit"
+open_hw
+INFO: [Xicom 50-2] Connecting to hw_server...
+INFO: [Xicom 50-1] Attempting to launch hw_server...
+INFO: [#UNDEF] 
+****** Xilinx hw_server v2013.4
+  **** Build date : Dec  9 2013-17:47:52
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+INFO: [Labtools 27-109] Started Vivado Cse Server instance on port: 60001
+INFO: [Labtools 27-147] vcse_server: Connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: Connection established.
+INFO: [Labtools 27-147] vcse_server: Connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: Connection established.
+INFO: [Labtools 27-147] vcse_server: Connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: Connection established.
+connect_hw_server -host localhost -port 60001
+INFO: [Xicom 50-2] Connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: Connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: Connection established.
+INFO: [Labtools 27-147] vcse_server: Connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: Connection established.
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210274505431A]
+open_hw_target
+INFO: [Labtools 27-147] vcse_server: Connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: Connection established.
+set_property PROGRAM.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit} [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROGRAM.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2154] Reading 3825877 bytes from file Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit...
+INFO: [Labtools 27-32] Done pin status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1051.230 ; gain = 114.469
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1
+[Tue Feb 25 19:41:40 2014] Launched synth_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+[Tue Feb 25 19:42:29 2014] Launched synth_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+[Tue Feb 25 19:43:14 2014] Launched synth_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+[Tue Feb 25 19:43:47 2014] Launched synth_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+[Tue Feb 25 19:47:11 2014] Launched synth_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/synth_1/runme.log
+launch_runs impl_1
+[Tue Feb 25 19:48:18 2014] Launched impl_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Tue Feb 25 19:50:01 2014] Launched impl_1...
+Run output will be captured here: Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/runme.log
+launch_impact 
+INFO: [Chipscope 16-8] Launching iMPACT with command: impact.exe -intstyle pa -mode bscan -port auto -autoassign -b "Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit"
+set_property PROGRAM.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2154] Reading 3825877 bytes from file Y:/DAT096-Embedded System Design/Workspace/FPGA/DAC_PWM/DAC_PWM.runs/impl_1/PWM_TOP.bit...
+INFO: [Labtools 27-32] Done pin status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1070.500 ; gain = 19.270
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 25 19:54:48 2014...

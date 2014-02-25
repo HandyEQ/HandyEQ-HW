@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="leon3mp.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="apbctrl.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="apbctrl.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="apbctrl.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="config_types.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="config_types.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="config_types.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="leon3mp.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="leon3mp.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="leon3mp.xst"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+
+</generated_project>
