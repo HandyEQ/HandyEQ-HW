@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Thu Mar 27 18:34:52 2014
+# Process ID: 4424
+# Log file: Y:/DAT096-Embedded System Design/Project Git Test/HandyEQ/vivado.log
+# Journal file: Y:/DAT096-Embedded System Design/Project Git Test/HandyEQ\vivado.jou
+#-----------------------------------------------------------
+Attempting to get a license: Implementation
+Feature available: Implementation
+Loading parts and site information from C:/Xilinx/Vivado/2013.4/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+open_project {Y:\DAT096-Embedded System Design\Project Git Test\HandyEQ\HandyEQ.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2013.4/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 883.246 ; gain = 94.043
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 27 18:43:20 2014...
