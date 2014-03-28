@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--Product Version: Vivado v2013.4 (64-bit)-->
+<Project Version="6" Minor="14" Path="Y:/HandyEQ-HW/HandyEQ/HandyEQ.xpr">
+	<FileSet Dir="sources_1" File="fileset.xml"/>
+	<FileSet Dir="constrs_1" File="fileset.xml"/>
+	<FileSet Dir="sim_1" File="fileset.xml"/>
+	<HWSession Dir="hw" File="hwsession_1.xml"/>
+	<RunSet Dir="runs" File="runs.xml"/>
+	<DefaultLaunch Dir="$PRUNDIR"/>
+	<Config>
+		<Option Name="Id" Val="0f806e5f95e846118a76af08ae68d2af"/>
+		<Option Name="Part" Val="xc7a100tcsg324-2"/>
+		<Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+		<Option Name="TargetLanguage" Val="VHDL"/>
+		<Option Name="Board" Val=""/>
+		<Option Name="SourceMgmtMode" Val="DisplayOnly"/>
+		<Option Name="ActiveSimSet" Val="sim_1"/>
+	</Config>
+</Project>
+
