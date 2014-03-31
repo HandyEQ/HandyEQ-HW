@@ -1,0 +1,1662 @@
+*******************************************************************************
+*
+*                      IMPORT XISE SUMMARY REPORT
+*
+*                       (import_ise_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ON THE DATA THAT
+*  WAS PARSED FROM THE ISE PROJECT AND IMPORTED INTO THE CURRENT PROJECT.
+*
+*
+* The report is divided into following three sections:-
+*
+* Section (1) - ISE PROJECT INFORMATION
+*
+*  This section provides the details of the ISE project that was imported
+*
+* Section (2) - EXCEPTIONS
+*
+*  This section summarizes the ISE project data that was either not imported or
+*  not mapped into the current project
+*
+* Section (3) - MAPPED DATA
+*
+*  This section summarizes the Vivado project information that was imported
+*  from the ISE project data
+*
+*******************************************************************************
+
+Section (1) - ISE PROJECT INFORMATION
+-------------------------------------
+
+The following items describes the information about the ISE project that was imported:-
+
+Project Name    = leon3mp
+Project File    = Y:/Downloads/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/leon3mp.xise
+Project Version = 14.6
+Device Family   = Artix7
+Part Name       = xc7a100t-2-csg324
+
+
+Section (2) - EXCEPTIONS
+------------------------
+
+The following sub-sections describes the list of items that were NOT mapped from the
+XISE file contents into the current project:-
+
+Section (2.1) - Missing Sources
+-------------------------------
+None
+
+
+Section (2.2) - Unknown Sources
+-------------------------------
+None
+
+
+Section (2.3) - IP Import Issues
+--------------------------------
+None
+
+
+Section (2.4) - Unknown Properties
+----------------------------------
+
+The following ISE properties were not mapped into the current project:-
+
+
+<ISE Property Name>                                    <ISE Property Value>
+"AES Initial Vector virtex6"                           ''
+"AES Key (Hex String) virtex6"                         ''
+"Allow SelectMAP Pins to Persist"                      'false'
+"Analysis Effort Level"                                'Standard'
+"Asynchronous To Synchronous"                          'false'
+"Automatically Insert glbl Module in the Netlist"      'true'
+"Automatically Run Generate Target PROM/ACE File"      'false'
+"BPI Reads Per Page"                                   '1'
+"BPI Sync Mode"                                        'Disable'
+"BRAM Utilization Ratio"                               '100'
+"Bring Out Global Set/Reset Net as a Port"             'false'
+"Bring Out Global Tristate Net as a Port"              'false'
+"Bus Delimiter"                                        '()'
+"Case"                                                 'Maintain'
+"Case Implementation Style"                            'None'
+"Change Device Speed To"                               '-2'
+"Change Device Speed To Post Trace"                    '-2'
+"Configuration Clk (Configuration Pins)"               'Pull Up'
+"Configuration Pin Done"                               'Pull Up'
+"Configuration Pin Init"                               'Pull Up'
+"Configuration Pin M0"                                 'Pull Up'
+"Configuration Pin M1"                                 'Pull Up'
+"Configuration Pin M2"                                 'Pull Up'
+"Configuration Pin Program"                            'Pull Up'
+"Configuration Rate virtex5"                           '3'
+"Correlate Output to Input Design"                     'false'
+"Create Binary Configuration File"                     'false'
+"Create IEEE 1532 Configuration File"                  'false'
+"Create ReadBack Data Files"                           'true'
+"Cross Clock Analysis"                                 'false'
+"Cycles for First BPI Page Read"                       '1'
+"DCI Update Mode"                                      'As Required'
+"DSP Utilization Ratio"                                '100'
+"Device Speed Grade/Select ABS Minimum"                '-2'
+"Disable Detailed Package Model Insertion"             'false'
+"Disable JTAG Connection"                              'false'
+"Do Not Escape Signal and Instance Names in Netlist"   'false'
+"Done (Output Events)"                                 'Default (4)'
+"Drive Done Pin High"                                  'true'
+"Enable BitStream Compression"                         'false'
+"Enable Cyclic Redundancy Checking (CRC)"              'true'
+"Enable Debugging of Serial Mode BitStream"            'false'
+"Enable External Master Clock"                         'Disable'
+"Enable Internal Done Pipe"                            'true'
+"Enable Outputs (Output Events)"                       'Default (5)'
+"Encrypt Bitstream virtex6"                            'false'
+"Encrypt Key Select virtex6"                           'BBRAM'
+"FPGA Start-Up Clock"                                  'CCLK'
+"FSM Style"                                            'LUT'
+"Fallback Reconfiguration virtex7"                     'Disable'
+"Flatten Output Netlist"                               'false'
+"Functional Model Target Language ArchWiz"             'VHDL'
+"Functional Model Target Language Coregen"             'VHDL'
+"Functional Model Target Language Schematic"           'VHDL'
+"Generate Asynchronous Delay Report"                   'false'
+"Generate Clock Region Report"                         'false'
+"Generate Constraints Interaction Report"              'false'
+"Generate Constraints Interaction Report Post Trace"   'false'
+"Generate Datasheet Section"                           'true'
+"Generate Detailed MAP Report"                         'false'
+"Generate Multiple Hierarchical Netlist Files"         'false'
+"Generate Post-Place & Route Power Report"             'false'
+"Generate Post-Place & Route Simulation Model"         'false'
+"Generate RTL Schematic"                               'Yes'
+"Generate Testbench File"                              'false'
+"Generate Timegroups Section"                          'false'
+"Generate Timegroups Section Post Trace"               'false'
+"Global Optimization Goal"                             'AllClockNets'
+"Global Optimization map virtex5"                      'Off'
+"Global Set/Reset Port Name"                           'GSR_PORT'
+"Global Tristate Port Name"                            'GTS_PORT'
+"HMAC Key (Hex String)"                                ''
+"Hierarchy Separator"                                  '/'
+"ICAP Select"                                          'Auto'
+"Ignore User Timing Constraints Map"                   'false'
+"Include 'uselib Directive in Verilog File"            'false'
+"Include SIMPRIM Models in Verilog File"               'false'
+"Include UNISIM Models in Verilog File"                'false'
+"Include sdf_annotate task in Verilog File"            'true'
+"Insert Buffers to Prevent Pulse Swallowing"           'true'
+"JTAG Pin TCK"                                         'Pull Up'
+"JTAG Pin TDI"                                         'Pull Up'
+"JTAG Pin TDO"                                         'Pull Up'
+"JTAG Pin TMS"                                         'Pull Up'
+"JTAG to XADC Connection"                              'Enable'
+"Keep Hierarchy"                                       'No'
+"Library for Verilog Sources"                          ''
+"Max Fanout"                                           '100000'
+"Maximum Compression"                                  'false'
+"Maximum Number of Lines in Report"                    '1000'
+"Maximum Signal Name Length"                           '20'
+"Move First Flip-Flop Stage"                           'true'
+"Move Last Flip-Flop Stage"                            'true'
+"MultiBoot: Insert IPROG CMD in the Bitfile virtex7"   'Enable'
+"Netlist Translation Type"                             'Timestamp'
+"Number of Paths in Error/Verbose Report"              '3'
+"Optimize Instantiated Primitives"                     'false'
+"Other XPWR Command Line Options"                      ''
+"Output Extended Identifiers"                          'false'
+"Output File Name"                                     'leon3mp'
+"Perform Advanced Analysis"                            'false'
+"Perform Advanced Analysis Post Trace"                 'false'
+"Place And Route Mode"                                 'Route Only'
+"Place MultiBoot Settings into Bitstream virtex7"      'false'
+"Port to be used"                                      'Auto - default'
+"Post Map Simulation Model Name"                       'leon3mp_map.vhd'
+"Post Place & Route Simulation Model Name"             'leon3mp_timesim.vhd'
+"Post Synthesis Simulation Model Name"                 'leon3mp_synthesis.vhd'
+"Post Translate Simulation Model Name"                 'leon3mp_translate.vhd'
+"Power Down Device if Over Safe Temperature"           'false'
+"Produce Verbose Report"                               'false'
+"RAM Extraction"                                       'true'
+"ROM Extraction"                                       'true'
+"ROM Style"                                            'Auto'
+"Read Cores"                                           'true'
+"Reduce Control Sets"                                  'Auto'
+"Regenerate Core"                                      'Under Current Project Setting'
+"Register Duplication Xst"                             'true'
+"Release Write Enable (Output Events)"                 'Default (6)'
+"Rename Design Instance in Testbench File to"          'UUT'
+"Rename Top Level Architecture To"                     'Structure'
+"Rename Top Level Entity to"                           'leon3mp'
+"Report Paths by Endpoint"                             '3'
+"Report Paths by Endpoint Post Trace"                  '3'
+"Report Type"                                          'Verbose Report'
+"Report Type Post Trace"                               'Verbose Report'
+"Reset On Configuration Pulse Width"                   '100'
+"Revision Select"                                      '00'
+"Revision Select Tristate"                             'Disable'
+"SPI 32-bit Addressing"                                'No'
+"Safe Implementation"                                  'No'
+"Security"                                             'Enable Readback and Reconfiguration'
+"Set SPI Configuration Bus Width"                      '1'
+"Shift Register Extraction"                            'true'
+"Shift Register Minimum Size virtex6"                  '2'
+"Show All Models"                                      'false'
+"Slice Utilization Ratio"                              '100'
+"Starting Address for Fallback Configuration virtex7"  'None'
+"Top-Level Module Name in Output Netlist"              ''
+"Tristate On Configuration Pulse Width"                '0'
+"Unused IOB Pins"                                      'Pull Down'
+"Use Clock Enable"                                     'Auto'
+"Use SPI Falling Edge"                                 'No'
+"Use Smart Guide"                                      'false'
+"Use Synchronous Reset"                                'Auto'
+"Use Synchronous Set"                                  'Auto'
+"Use Synthesis Constraints File"                       'true'
+"User Access Register Value"                           'None'
+"UserID Code (8 Digit Hexadecimal)"                    '0xFFFFFFFF'
+"VHDL Source Analysis Standard"                        'VHDL-93'
+"Wait for DCI Match (Output Events) virtex5"           'Auto'
+"Wait for PLL Lock (Output Events) virtex6"            'No Wait'
+"Watchdog Timer Mode 7-series"                         'Off'
+"Watchdog Timer Value 7-series"                        '0x00000000'
+"Write Timing Constraints"                             'false'
+
+
+Section (3) - MAPPED DATA
+-------------------------
+
+The following sub-sections describes the list of items that were imported from the
+ISE properties and sources and mapped into the current project:-
+
+Section (3.1) - Target Device
+-----------------------------
+
+Default Part = xc7a100tcsg324-2
+Family       = artix7
+Package      = csg324
+Speed Grade  = -2
+
+
+Section (3.2) - Filesets
+------------------------
+
+<sources_1>
+FILESET_TYPE   = DesignSrcs
+TOP            = leon3mp
+DESIGN_MODE    = RTL
+VERILOG_DIR    = 
+VERILOG_DEFINE = 
+VHDL_GENERICS  = 
+
+File(s):-
+NAME      = leon3sh.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/leon3sh.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = leon3x.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/leon3x.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = grfpwxsh.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/grfpwxsh.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = irqmp.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/irqmp/irqmp.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = misc.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/misc.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = rstgen.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/rstgen.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = gptimer.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/gptimer.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahbram.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/ahbram.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahbdpram.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/ahbdpram.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahbtrace_mmb.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/ahbtrace_mmb.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahbtrace_mb.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/ahbtrace_mb.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahbtrace.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/ahbtrace.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = grgpio.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/grgpio.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahbstat.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/ahbstat.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = logan.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/logan.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = apbps2.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/apbps2.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = charrom_package.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/charrom_package.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = charrom.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/charrom.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = apbvga.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/apbvga.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = svgactrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/svgactrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = grsysmon.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/grsysmon.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = gracectrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/gracectrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = grgpreg.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/grgpreg.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahb_mst_iface.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/ahb_mst_iface.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = grgprbank.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/misc/grgprbank.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = net.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/net/net.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = uart.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/uart/uart.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = libdcom.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/uart/libdcom.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = libmmu.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/srmmu/libmmu.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmutlbcam.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/srmmu/mmutlbcam.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmulrue.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/srmmu/mmulrue.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmulru.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/srmmu/mmulru.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmutlb.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/srmmu/mmutlb.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmutw.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/srmmu/mmutw.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmu.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/srmmu/mmu.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = leon3.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3/leon3.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = grfpushwx.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3/grfpushwx.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = tbufmem.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/tbufmem.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = dsu3x.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/dsu3x.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = dsu3.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/dsu3.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = libfpu.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/libfpu.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = libiu.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/libiu.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = libcache.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/libcache.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = libleon3.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/libleon3.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = regfile_3p_l3.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/regfile_3p_l3.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmu_acache.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/mmu_acache.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmu_icache.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/mmu_icache.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmu_dcache.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/mmu_dcache.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = cachemem.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/cachemem.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmu_cache.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/mmu_cache.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = grfpwx.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/grfpwx.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = grlfpwx.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/grlfpwx.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = iu3.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/iu3.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = proc3.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/proc3.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = leon3cg.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/leon3cg.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = leon3s.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/leon3v3/leon3s.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ddr1spax.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ddr1spax.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ddr1spax_ddr.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ddr1spax_ddr.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahb2mig_series7_pkg.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ahb2mig_series7_pkg.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahb2mig_series7.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ahb2mig_series7.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahb2avl_async.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ahb2avl_async.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahb2avl_async_be.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ahb2avl_async_be.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = i2c.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/i2c/i2c.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = i2cmst.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/i2c/i2cmst.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = i2cmst_gen.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/i2c/i2cmst_gen.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = i2cslv.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/i2c/i2cslv.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = i2c2ahbx.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/i2c/i2c2ahbx.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = i2c2ahb.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/i2c/i2c2ahb.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = i2c2ahb_apb.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/i2c/i2c2ahb_apb.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = i2c2ahb_gen.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/i2c/i2c2ahb_gen.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = i2c2ahb_apb_gen.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/i2c/i2c2ahb_apb_gen.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = spi.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/spi/spi.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = spimctrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/spi/spimctrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = spictrlx.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/spi/spictrlx.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = spictrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/spi/spictrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = spi2ahbx.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/spi/spi2ahbx.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = spi2ahb.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/spi/spi2ahb.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = spi2ahb_apb.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/spi/spi2ahb_apb.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = memoryctrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/esa/memoryctrl/memoryctrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = esa
+
+NAME      = mctrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/esa/memoryctrl/mctrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = esa
+
+NAME      = config.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/config.vhd
+FILE_TYPE = VHDL
+LIBRARY   = work
+
+NAME      = ahbrom.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/ahbrom.vhd
+FILE_TYPE = VHDL
+LIBRARY   = work
+
+NAME      = leon3mp.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/leon3mp.vhd
+FILE_TYPE = VHDL
+LIBRARY   = work
+
+NAME      = apbuart.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/uart/apbuart.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = dcom.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/uart/dcom.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = dcom_uart.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/uart/dcom_uart.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahbuart.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/uart/ahbuart.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = jtag.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/jtag/jtag.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = libjtagcom.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/jtag/libjtagcom.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = jtagcom.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/jtag/jtagcom.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahbjtag.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/jtag/ahbjtag.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahbjtag_bsd.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/jtag/ahbjtag_bsd.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = bscanregs.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/jtag/bscanregs.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = bscanregsbd.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/jtag/bscanregsbd.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = jtagcom2.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/jtag/jtagcom2.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ethernet_mac.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/greth/ethernet_mac.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = greth.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/greth/greth.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = greth_mb.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/greth/greth_mb.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = greth_gbit.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/greth/greth_gbit.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = greth_gbit_mb.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/greth/greth_gbit_mb.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = grethm.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/greth/grethm.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = rgmii.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/greth/rgmii.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ddrpkg.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ddrpkg.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ddrintpkg.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ddrintpkg.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ddrphy_wrap.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ddrphy_wrap.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ddrspa.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ddrspa.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ddr2spa.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ddr2spa.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ddr2buf.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ddr2buf.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ddr2spax.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ddr2spax.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ddr2spax_ahb.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ddr2spax_ahb.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ddr2spax_ddr.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/ddr/ddr2spax_ddr.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = allclkgen.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/allclkgen.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = allddr.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/allddr.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = allmem.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/allmem.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = allmul.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/allmul.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = allpads.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/allpads.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = alltap.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/alltap.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = clkgen.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/clkgen.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = clkmux.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/clkmux.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = clkand.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/clkand.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = ddr_ireg.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/ddr_ireg.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = ddr_oreg.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/ddr_oreg.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = ddrphy.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/ddrphy.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = syncram.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/syncram.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = syncram64.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/syncram64.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = syncram_2p.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/syncram_2p.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = syncram_dp.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/syncram_dp.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = regfile_3p.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/regfile_3p.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = tap.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/tap.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = techbuf.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/techbuf.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = nandtree.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/nandtree.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = clkpad.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/clkpad.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = clkpad_ds.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/clkpad_ds.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = inpad.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/inpad.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = inpad_ds.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/inpad_ds.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = iodpad.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/iodpad.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = iopad.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/iopad.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = sparc.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/sparc/sparc.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = multlib.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/modgen/multlib.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = leaves.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/modgen/leaves.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = devices.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/amba/devices.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = defmst.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/amba/defmst.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = apbctrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/amba/apbctrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = ahbctrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/amba/ahbctrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = ahbmst.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/amba/ahbmst.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = gencomp.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/gencomp/gencomp.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = netcomp.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/gencomp/netcomp.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = memory_inferred.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/inferred/memory_inferred.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = ddr_inferred.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/inferred/ddr_inferred.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = mul_inferred.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/inferred/mul_inferred.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = ddr_phy_inferred.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/inferred/ddr_phy_inferred.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = ddrphy_datapath.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/inferred/ddrphy_datapath.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = memory_virtex.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/memory_virtex.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = memory_unisim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/memory_unisim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = buffer_unisim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/buffer_unisim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = pads_unisim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/pads_unisim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = clkgen_virtex.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/clkgen_virtex.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = clkgen_unisim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/clkgen_unisim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = tap_unisim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/tap_unisim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = ddr_unisim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/ddr_unisim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = ddr_phy_unisim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/ddr_phy_unisim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = sysmon_unisim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/sysmon_unisim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = mul_unisim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/mul_unisim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = spictrl_unisim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/unisim/spictrl_unisim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = sdram_phy.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/sdram_phy.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = syncreg.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/syncreg.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = clkinv.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/clkinv.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = ethcomp.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/eth/comp/ethcomp.vhd
+FILE_TYPE = VHDL
+LIBRARY   = eth
+
+NAME      = greth_pkg.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/eth/core/greth_pkg.vhd
+FILE_TYPE = VHDL
+LIBRARY   = eth
+
+NAME      = eth_rstgen.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/eth/core/eth_rstgen.vhd
+FILE_TYPE = VHDL
+LIBRARY   = eth
+
+NAME      = eth_edcl_ahb_mst.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/eth/core/eth_edcl_ahb_mst.vhd
+FILE_TYPE = VHDL
+LIBRARY   = eth
+
+NAME      = eth_ahb_mst.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/eth/core/eth_ahb_mst.vhd
+FILE_TYPE = VHDL
+LIBRARY   = eth
+
+NAME      = greth_tx.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/eth/core/greth_tx.vhd
+FILE_TYPE = VHDL
+LIBRARY   = eth
+
+NAME      = greth_rx.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/eth/core/greth_rx.vhd
+FILE_TYPE = VHDL
+LIBRARY   = eth
+
+NAME      = grethc.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/eth/core/grethc.vhd
+FILE_TYPE = VHDL
+LIBRARY   = eth
+
+NAME      = greth_gen.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/eth/wrapper/greth_gen.vhd
+FILE_TYPE = VHDL
+LIBRARY   = eth
+
+NAME      = greth_gbit_gen.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/eth/wrapper/greth_gbit_gen.vhd
+FILE_TYPE = VHDL
+LIBRARY   = eth
+
+NAME      = i2c_master_bit_ctrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/opencores/i2c/i2c_master_bit_ctrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = opencores
+
+NAME      = i2c_master_byte_ctrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/opencores/i2c/i2c_master_byte_ctrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = opencores
+
+NAME      = i2coc.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/opencores/i2c/i2coc.vhd
+FILE_TYPE = VHDL
+LIBRARY   = opencores
+
+NAME      = arith.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/arith/arith.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mul32.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/arith/mul32.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = div32.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/arith/div32.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = memctrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/memctrl/memctrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = sdctrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/memctrl/sdctrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = sdctrl64.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/memctrl/sdctrl64.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = sdmctrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/memctrl/sdmctrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = srctrl.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/memctrl/srctrl.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmuconfig.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/srmmu/mmuconfig.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = mmuiface.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/srmmu/mmuiface.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = iopad_ds.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/iopad_ds.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = lvds_combo.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/lvds_combo.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = odpad.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/odpad.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = outpad.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/outpad.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = outpad_ds.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/outpad_ds.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = toutpad.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/toutpad.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = skew_outpad.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/skew_outpad.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = grlfpw_net.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/grlfpw_net.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = grfpw_net.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/grfpw_net.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = leon4_net.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/leon4_net.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = mul_61x61.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/mul_61x61.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = cpu_disas_net.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/cpu_disas_net.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = ringosc.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/ringosc.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = syncram_2pbw.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/syncram_2pbw.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = syncrambw.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/syncrambw.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = scanreg.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/scanreg.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = spictrl_net.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/spictrl_net.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = techmult.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/techmult.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = syncram156bw.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/syncram156bw.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = syncram128.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/syncram128.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = syncram256bw.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/syncram256bw.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = syncram128bw.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/syncram128bw.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = iopad_ddr.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/iopad_ddr.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = outpad_ddr.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/outpad_ddr.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = inpad_ddr.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/inpad_ddr.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = grgates.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/grgates.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = system_monitor.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/maps/system_monitor.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = version.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/stdlib/version.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = config_types.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/stdlib/config_types.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = stdlib.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/stdlib/stdlib.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = config.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/stdlib/config.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = amba.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/amba/amba.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = dma2ahb_pkg.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/amba/dma2ahb_pkg.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = dma2ahb.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/amba/dma2ahb.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+
+<constrs_1>
+FILESET_TYPE   = Constrs
+
+Note: During the import operation, any constraint file(s) that are found in the ISE project will be added to the current Vivado project.
+      However, please note that none of these files will be automatically marked as a "Target Constraint File". To set a constraint file
+      as target, select the file in the GUI "Sources" window, right-click on this file and then select "Set Target UCF". Alternatively,
+      the target constraint file can be set using the "set_property target_constrs_file <filename> <fileset>" Tcl command.
+
+File(s):-
+NAME      = leon3mp.ucf
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/leon3mp.ucf
+FILE_TYPE = Unknown
+
+
+<sim_1>
+FILESET_TYPE   = SimulationSrcs
+
+File(s):-
+NAME      = testbench.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/testbench.vhd
+FILE_TYPE = VHDL
+LIBRARY   = work
+
+NAME      = unisim_VITAL.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/tech/unisim/ise/unisim_VITAL.vhd
+FILE_TYPE = VHDL
+LIBRARY   = unisim
+
+NAME      = synplify.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/synplify/sim/synplify.vhd
+FILE_TYPE = VHDL
+LIBRARY   = synplify
+
+NAME      = synattr.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/synplify/sim/synattr.vhd
+FILE_TYPE = VHDL
+LIBRARY   = synplify
+
+NAME      = package_utility.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/cypress/ssram/package_utility.vhd
+FILE_TYPE = VHDL
+LIBRARY   = cypress
+
+NAME      = components.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/cypress/ssram/components.vhd
+FILE_TYPE = VHDL
+LIBRARY   = cypress
+
+NAME      = g880e18bt.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gsi/ssram/g880e18bt.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gsi
+
+NAME      = core_burst.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gsi/ssram/core_burst.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gsi
+
+NAME      = functions.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gsi/ssram/functions.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gsi
+
+NAME      = idt7202.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/fmf/fifo/idt7202.vhd
+FILE_TYPE = VHDL
+LIBRARY   = fmf
+
+NAME      = m25p80.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/fmf/flash/m25p80.vhd
+FILE_TYPE = VHDL
+LIBRARY   = fmf
+
+NAME      = sim_pll.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/inferred/sim_pll.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = lpddr2_phy_inferred.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/techmap/inferred/lpddr2_phy_inferred.vhd
+FILE_TYPE = VHDL
+LIBRARY   = techmap
+
+NAME      = s25fl064a.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/fmf/flash/s25fl064a.vhd
+FILE_TYPE = VHDL
+LIBRARY   = fmf
+
+NAME      = flash.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/fmf/flash/flash.vhd
+FILE_TYPE = VHDL
+LIBRARY   = fmf
+
+NAME      = gen_utils.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/fmf/utilities/gen_utils.vhd
+FILE_TYPE = VHDL
+LIBRARY   = fmf
+
+NAME      = conversions.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/fmf/utilities/conversions.vhd
+FILE_TYPE = VHDL
+LIBRARY   = fmf
+
+NAME      = spi_flash.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/spi/spi_flash.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = jtagtst.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/jtag/jtagtst.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = sim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/sim/sim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = sram.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/sim/sram.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = sram16.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/sim/sram16.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = phy.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/sim/phy.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = ahbrep.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/sim/ahbrep.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = delay_wire.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/sim/delay_wire.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = pwm_check.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/gaisler/sim/pwm_check.vhd
+FILE_TYPE = VHDL
+LIBRARY   = gaisler
+
+NAME      = stdio.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/stdlib/stdio.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = testlib.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/stdlib/testlib.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = util.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/util/util.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = cpu_disas.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/work/debug/cpu_disas.vhd
+FILE_TYPE = VHDL
+LIBRARY   = work
+
+NAME      = sparc_disas.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/sparc/sparc_disas.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = cpu_disas.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/sparc/cpu_disas.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = grtestmod.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/work/debug/grtestmod.vhd
+FILE_TYPE = VHDL
+LIBRARY   = work
+
+NAME      = debug.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/work/debug/debug.vhd
+FILE_TYPE = VHDL
+LIBRARY   = work
+
+NAME      = mt46v16m16.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/micron/ddr_sdram/mt46v16m16.vhd
+FILE_TYPE = VHDL
+LIBRARY   = micron
+
+NAME      = mt48lc16m16a2.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/micron/sdram/mt48lc16m16a2.vhd
+FILE_TYPE = VHDL
+LIBRARY   = micron
+
+NAME      = simple_simprim.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/tech/unisim/ise/simple_simprim.vhd
+FILE_TYPE = VHDL
+LIBRARY   = unisim
+
+NAME      = unisim_VCOMP.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/tech/unisim/ise/unisim_VCOMP.vhd
+FILE_TYPE = VHDL
+LIBRARY   = unisim
+
+NAME      = unisim_VPKG.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/tech/unisim/ise/unisim_VPKG.vhd
+FILE_TYPE = VHDL
+LIBRARY   = unisim
+
+NAME      = amba_tp.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/amba/amba_tp.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = dma2ahb_tp.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/grlib/amba/dma2ahb_tp.vhd
+FILE_TYPE = VHDL
+LIBRARY   = grlib
+
+NAME      = cy7c1354b.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/cypress/ssram/cy7c1354b.vhd
+FILE_TYPE = VHDL
+LIBRARY   = cypress
+
+NAME      = components.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/micron/sdram/components.vhd
+FILE_TYPE = VHDL
+LIBRARY   = micron
+
+NAME      = components.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/hynix/ddr2/components.vhd
+FILE_TYPE = VHDL
+LIBRARY   = hynix
+
+NAME      = HY5PS121621F.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/hynix/ddr2/HY5PS121621F.vhd
+FILE_TYPE = VHDL
+LIBRARY   = hynix
+
+NAME      = HY5PS121621F_PACK.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/hynix/ddr2/HY5PS121621F_PACK.vhd
+FILE_TYPE = VHDL
+LIBRARY   = hynix
+
+NAME      = cy7c1380d.vhd
+FILE PATH = Y:/Downloads/grlib-gpl-1.3.4-b4140/lib/cypress/ssram/cy7c1380d.vhd
+FILE_TYPE = VHDL
+LIBRARY   = cypress
+
+
+Section (3.3) - Design Runs(s)
+------------------------------
+
+<synth_1>
+FLOW      = Vivado Synthesis 2013
+PART      = xc7a100tcsg324-2
+SRCSET    = sources_1
+CONSTRSET = constrs_1
+STRATEGY  = Vivado Synthesis Defaults
+
+Options:-
+
+Note: The current run uses Vivado Strategies; hence no ISE run options will be mapped to this run during the import operation.
+
+
+
+<impl_1>
+FLOW      = Vivado Implementation 2013
+PART      = xc7a100tcsg324-2
+SRCSET    = sources_1
+CONSTRSET = constrs_1
+STRATEGY  = Vivado Implementation Defaults
+
+Options:-
+
+Note: The current run uses Vivado Strategies; hence no ISE run options will be mapped to this run during the import operation.
+
+
+
+<sim_1>
+TOP  = testbench
+SOURCE_SET  = sources_1
+
+Options:-
+        
