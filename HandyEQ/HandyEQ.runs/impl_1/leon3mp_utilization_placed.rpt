@@ -1,8 +1,13 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
+<<<<<<< HEAD
 | Date         : Thu Mar 27 16:06:14 2014
 | Host         : XDAT06 running 64-bit Service Pack 1  (build 7601)
+=======
+| Date         : Thu Mar 27 16:02:08 2014
+| Host         : XDAT26 running 64-bit Service Pack 1  (build 7601)
+>>>>>>> UART
 | Command      : report_utilization -file leon3mp_utilization_placed.rpt -pb leon3mp_utilization_placed.pb
 | Design       : leon3mp
 | Device       : xc7a100t
@@ -27,6 +32,7 @@ Table of Contents
 1. Slice Logic
 --------------
 
+<<<<<<< HEAD
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Loced | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
@@ -41,6 +47,22 @@ Table of Contents
 | F7 Muxes                   |   270 |     0 |     31700 |  0.85 |
 | F8 Muxes                   |    45 |     0 |     15850 |  0.28 |
 +----------------------------+-------+-------+-----------+-------+
+=======
++----------------------------+------+-------+-----------+-------+
+|          Site Type         | Used | Loced | Available | Util% |
++----------------------------+------+-------+-----------+-------+
+| Slice LUTs                 | 9852 |     0 |     63400 | 15.53 |
+|   LUT as Logic             | 9818 |     0 |     63400 | 15.48 |
+|   LUT as Memory            |   34 |     0 |     19000 |  0.17 |
+|     LUT as Distributed RAM |   24 |     0 |           |       |
+|     LUT as Shift Register  |   10 |     0 |           |       |
+| Slice Registers            | 4635 |     0 |    126800 |  3.65 |
+|   Register as Flip Flop    | 4621 |     0 |    126800 |  3.64 |
+|   Register as Latch        |   14 |     0 |    126800 |  0.01 |
+| F7 Muxes                   |  273 |     0 |     31700 |  0.86 |
+| F8 Muxes                   |   48 |     0 |     15850 |  0.30 |
++----------------------------+------+-------+-----------+-------+
+>>>>>>> UART
 
 
 2. Slice Logic Distribution
@@ -49,16 +71,26 @@ Table of Contents
 +-------------------------------------------------------------+-----------+-------+-----------+-------+
 |                          Site Type                          |    Used   | Loced | Available | Util% |
 +-------------------------------------------------------------+-----------+-------+-----------+-------+
+<<<<<<< HEAD
 | Slice                                                       |      3157 |     0 |     15850 | 19.91 |
 | LUT as Logic                                                |     10160 |     0 |     63400 | 16.02 |
 |   using O5 output only                                      |         0 |       |           |       |
 |   using O6 output only                                      |      8739 |       |           |       |
 |   using O5 and O6                                           |      1421 |       |           |       |
 | LUT as Memory                                               |        35 |     0 |     19000 |  0.18 |
+=======
+| Slice                                                       |      3077 |     0 |     15850 | 19.41 |
+| LUT as Logic                                                |      9818 |     0 |     63400 | 15.48 |
+|   using O5 output only                                      |         0 |       |           |       |
+|   using O6 output only                                      |      8427 |       |           |       |
+|   using O5 and O6                                           |      1391 |       |           |       |
+| LUT as Memory                                               |        34 |     0 |     19000 |  0.17 |
+>>>>>>> UART
 |   LUT as Distributed RAM                                    |        24 |     0 |           |       |
 |     using O5 output only                                    |         0 |       |           |       |
 |     using O6 output only                                    |         0 |       |           |       |
 |     using O5 and O6                                         |        24 |       |           |       |
+<<<<<<< HEAD
 |   LUT as Shift Register                                     |        11 |     0 |           |       |
 |     using O5 output only                                    |         0 |       |           |       |
 |     using O6 output only                                    |        11 |       |           |       |
@@ -69,6 +101,18 @@ Table of Contents
 |   LUT-FF pairs with unused Flip Flop                        |      6213 |       |           |       |
 | Unique Control Sets                                         |       151 |       |           |       |
 | Minimum number of registers lost to control set restriction | 332(Lost) |       |           |       |
+=======
+|   LUT as Shift Register                                     |        10 |     0 |           |       |
+|     using O5 output only                                    |         0 |       |           |       |
+|     using O6 output only                                    |         9 |       |           |       |
+|     using O5 and O6                                         |         1 |       |           |       |
+| LUT Flip Flop Pairs                                         |     10248 |     0 |     63400 | 16.16 |
+|   fully used LUT-FF pairs                                   |      3886 |       |           |       |
+|   LUT-FF pairs with unused LUT                              |       396 |       |           |       |
+|   LUT-FF pairs with unused Flip Flop                        |      5966 |       |           |       |
+| Unique Control Sets                                         |       164 |       |           |       |
+| Minimum number of registers lost to control set restriction | 469(Lost) |       |           |       |
+>>>>>>> UART
 +-------------------------------------------------------------+-----------+-------+-----------+-------+
 
 
@@ -104,9 +148,15 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Loced | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
+<<<<<<< HEAD
 | Bonded IOB                  |   99 |    99 |       210 | 47.14 |
 |   IOB Master Pads           |   47 |       |           |       |
 |   IOB Slave Pads            |   49 |       |           |       |
+=======
+| Bonded IOB                  |  103 |   103 |       210 | 49.04 |
+|   IOB Master Pads           |   49 |       |           |       |
+|   IOB Slave Pads            |   51 |       |           |       |
+>>>>>>> UART
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | IBUFGDS                     |    0 |     0 |       202 |  0.00 |
 | IDELAYCTRL                  |    0 |     0 |         6 |  0.00 |
@@ -143,6 +193,7 @@ Table of Contents
 7. Specific Feature
 -------------------
 
+<<<<<<< HEAD
 +-------------+------+-------+-----------+-------+
 |  Site Type  | Used | Loced | Available | Util% |
 +-------------+------+-------+-----------+-------+
@@ -156,6 +207,21 @@ Table of Contents
 | STARTUPE2   |    0 |     0 |         1 |  0.00 |
 | XADC        |    0 |     0 |         1 |  0.00 |
 +-------------+------+-------+-----------+-------+
+=======
++-------------+------+-------+-----------+--------+
+|  Site Type  | Used | Loced | Available |  Util% |
++-------------+------+-------+-----------+--------+
+| BSCANE2     |    2 |     2 |         4 |  50.00 |
+| CAPTUREE2   |    0 |     0 |         1 |   0.00 |
+| DNA_PORT    |    0 |     0 |         1 |   0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |   0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |   0.00 |
+| ICAPE2      |    0 |     0 |         2 |   0.00 |
+| PCIE_2_1    |    0 |     0 |         1 |   0.00 |
+| STARTUPE2   |    0 |     0 |         1 |   0.00 |
+| XADC        |    1 |     1 |         1 | 100.00 |
++-------------+------+-------+-----------+--------+
+>>>>>>> UART
 
 
 8. Primitives
@@ -164,6 +230,7 @@ Table of Contents
 +-----------+------+
 |  Ref Name | Used |
 +-----------+------+
+<<<<<<< HEAD
 | LUT6      | 5427 |
 | FDRE      | 4592 |
 | LUT5      | 2825 |
@@ -182,6 +249,27 @@ Table of Contents
 | FDPE      |   19 |
 | FDCE      |   18 |
 | RAMB36E1  |   13 |
+=======
+| LUT6      | 5286 |
+| FDRE      | 4418 |
+| LUT5      | 2718 |
+| LUT4      | 1415 |
+| LUT3      | 1126 |
+| LUT2      |  622 |
+| MUXF7     |  273 |
+| CARRY4    |  200 |
+| FDSE      |  116 |
+| FDCE      |   74 |
+| OBUF      |   56 |
+| MUXF8     |   48 |
+| IBUF      |   47 |
+| LUT1      |   42 |
+| RAMD32    |   36 |
+| OBUFT     |   17 |
+| LDCE      |   14 |
+| RAMB36E1  |   13 |
+| FDPE      |   13 |
+>>>>>>> UART
 | RAMS32    |   12 |
 | RAMB18E1  |   12 |
 | SRL16E    |   11 |
@@ -189,6 +277,10 @@ Table of Contents
 | BUFG      |    4 |
 | PLLE2_ADV |    2 |
 | BSCANE2   |    2 |
+<<<<<<< HEAD
+=======
+| XADC      |    1 |
+>>>>>>> UART
 +-----------+------+
 
 
@@ -203,8 +295,16 @@ Table of Contents
 10. Instantiated Netlists
 -------------------------
 
+<<<<<<< HEAD
 +----------+------+
 | Ref Name | Used |
 +----------+------+
+=======
++------------+------+
+|  Ref Name  | Used |
++------------+------+
+| xadc_wiz_0 |    1 |
++------------+------+
+>>>>>>> UART
 
 

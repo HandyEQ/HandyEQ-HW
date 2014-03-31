@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
     <Process Command="vivado.bat" Owner="arpad" Host="XDAT06" Pid="172">
     </Process>
 </ProcessHandle>
+=======
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="sebkarl" Host="XDAT26" Pid="1788">
+    </Process>
+</ProcessHandle>
+>>>>>>> UART

@@ -1,8 +1,13 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
+<<<<<<< HEAD
 | Date         : Thu Mar 27 16:02:46 2014
 | Host         : XDAT06 running 64-bit Service Pack 1  (build 7601)
+=======
+| Date         : Thu Mar 27 15:59:14 2014
+| Host         : XDAT26 running 64-bit Service Pack 1  (build 7601)
+>>>>>>> UART
 | Command      : report_utilization -file leon3mp_utilization_synth.rpt -pb leon3mp_utilization_synth.pb
 | Design       : leon3mp
 | Device       : xc7a100t
@@ -29,6 +34,7 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Loced | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
+<<<<<<< HEAD
 | Slice LUTs*                | 10395 |     0 |     63400 | 16.39 |
 |   LUT as Logic             | 10360 |     0 |     63400 | 16.34 |
 |   LUT as Memory            |    35 |     0 |     19000 |  0.18 |
@@ -39,6 +45,18 @@ Table of Contents
 |   Register as Latch        |     0 |     0 |    126800 |  0.00 |
 | F7 Muxes                   |   270 |     0 |     31700 |  0.85 |
 | F8 Muxes                   |    45 |     0 |     15850 |  0.28 |
+=======
+| Slice LUTs*                | 10033 |     0 |     63400 | 15.82 |
+|   LUT as Logic             |  9998 |     0 |     63400 | 15.76 |
+|   LUT as Memory            |    35 |     0 |     19000 |  0.18 |
+|     LUT as Distributed RAM |    24 |     0 |           |       |
+|     LUT as Shift Register  |    11 |     0 |           |       |
+| Slice Registers            |  4635 |     0 |    126800 |  3.65 |
+|   Register as Flip Flop    |  4621 |     0 |    126800 |  3.64 |
+|   Register as Latch        |    14 |     0 |    126800 |  0.01 |
+| F7 Muxes                   |   273 |     0 |     31700 |  0.86 |
+| F8 Muxes                   |    48 |     0 |     15850 |  0.30 |
+>>>>>>> UART
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis for a more realistic count.
 
@@ -75,7 +93,11 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Loced | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
+<<<<<<< HEAD
 | Bonded IOB                  |   84 |     0 |       210 | 40.00 |
+=======
+| Bonded IOB                  |   79 |     0 |       210 | 37.61 |
+>>>>>>> UART
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | IBUFGDS                     |    0 |     0 |       202 |  0.00 |
 | IDELAYCTRL                  |    0 |     0 |         6 |  0.00 |
@@ -133,6 +155,7 @@ Table of Contents
 +-----------+------+
 |  Ref Name | Used |
 +-----------+------+
+<<<<<<< HEAD
 | LUT6      | 5429 |
 | FDRE      | 4592 |
 | LUT5      | 2823 |
@@ -151,6 +174,27 @@ Table of Contents
 | FDPE      |   19 |
 | FDCE      |   18 |
 | RAMB36E1  |   13 |
+=======
+| LUT6      | 5288 |
+| FDRE      | 4418 |
+| LUT5      | 2716 |
+| LUT4      | 1417 |
+| LUT3      | 1124 |
+| LUT2      |  622 |
+| MUXF7     |  273 |
+| LUT1      |  227 |
+| CARRY4    |  200 |
+| FDSE      |  116 |
+| FDCE      |   74 |
+| OBUF      |   56 |
+| MUXF8     |   48 |
+| RAMD32    |   36 |
+| IBUF      |   23 |
+| OBUFT     |   17 |
+| LDCE      |   14 |
+| RAMB36E1  |   13 |
+| FDPE      |   13 |
+>>>>>>> UART
 | RAMS32    |   12 |
 | RAMB18E1  |   12 |
 | SRL16E    |   11 |
@@ -164,9 +208,17 @@ Table of Contents
 8. Black Boxes
 --------------
 
+<<<<<<< HEAD
 +----------+------+
 | Ref Name | Used |
 +----------+------+
+=======
++------------+------+
+|  Ref Name  | Used |
++------------+------+
+| xadc_wiz_0 |    1 |
++------------+------+
+>>>>>>> UART
 
 
 9. Instantiated Netlists

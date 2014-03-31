@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
     <Process Command=".planAhead." Owner="arpad" Host="XDAT06" Pid="3988">
     </Process>
 </ProcessHandle>
+=======
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command=".planAhead." Owner="sebkarl" Host="XDAT26" Pid="1260">
+    </Process>
+</ProcessHandle>
+>>>>>>> UART

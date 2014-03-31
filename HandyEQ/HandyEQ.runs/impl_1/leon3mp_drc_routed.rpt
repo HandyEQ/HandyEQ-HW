@@ -1,8 +1,13 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
+<<<<<<< HEAD
 | Date         : Thu Mar 27 16:08:04 2014
 | Host         : XDAT06 running 64-bit Service Pack 1  (build 7601)
+=======
+| Date         : Thu Mar 27 16:03:51 2014
+| Host         : XDAT26 running 64-bit Service Pack 1  (build 7601)
+>>>>>>> UART
 | Command      : report_drc
 -----------------------------------------------------------------------------------
 
@@ -119,82 +124,175 @@ REPORT SUMMARY
                      Hold option missing in multicycle path constraint
                      Delay constraint missing on IO port
            Max violations: <unlimited>
+<<<<<<< HEAD
          Violations found: 56
+=======
+         Violations found: 80
+>>>>>>> UART
 
 2. REPORT DETAILS
 -----------------
 BUFC-1#1 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_10 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#2 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_1 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_11 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#3 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_10 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_12 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#4 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_11 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_13 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#5 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_12 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_14 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#6 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_13 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_15 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#7 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_14 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_16 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#8 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_2 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_17 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#9 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_3 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_18 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#10 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_4 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_19 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#11 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_5 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_20 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#12 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_6 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_21 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#13 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_7 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_22 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#14 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
 Input buffer IBUF_8 has no loads. An input buffer must drive an internal load.
+=======
+Input buffer IBUF_23 has no loads. An input buffer must drive an internal load.
+>>>>>>> UART
 Related violations: <none>
 
 BUFC-1#15 Warning
 Input Buffer Connections  
+<<<<<<< HEAD
+=======
+Input buffer IBUF_3 has no loads. An input buffer must drive an internal load.
+Related violations: <none>
+
+BUFC-1#16 Warning
+Input Buffer Connections  
+Input buffer IBUF_4 has no loads. An input buffer must drive an internal load.
+Related violations: <none>
+
+BUFC-1#17 Warning
+Input Buffer Connections  
+Input buffer IBUF_5 has no loads. An input buffer must drive an internal load.
+Related violations: <none>
+
+BUFC-1#18 Warning
+Input Buffer Connections  
+Input buffer IBUF_6 has no loads. An input buffer must drive an internal load.
+Related violations: <none>
+
+BUFC-1#19 Warning
+Input Buffer Connections  
+Input buffer IBUF_7 has no loads. An input buffer must drive an internal load.
+Related violations: <none>
+
+BUFC-1#20 Warning
+Input Buffer Connections  
+Input buffer IBUF_8 has no loads. An input buffer must drive an internal load.
+Related violations: <none>
+
+BUFC-1#21 Warning
+Input Buffer Connections  
+>>>>>>> UART
 Input buffer IBUF_9 has no loads. An input buffer must drive an internal load.
 Related violations: <none>
 
@@ -251,139 +349,359 @@ DSP output pipelining
 DSP p_1_out__0 output P  is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
+<<<<<<< HEAD
 XDCM-1#1 Warning
 Delay constraint missing on IO port  
 The port 'Led[0], Led[1], Led[2], Led[3], Led[4], Led[5], Led[6], Led[7], Led[8]' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+PDRC-153#1 Warning
+Physical design rule  
+Net PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1 is a gated clock net sourced by a combinational pin PWMapb_map/PWM_module/PWM_sample_reg[0]_LDC_i_1/O, cell PWMapb_map/PWM_module/PWM_sample_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Physical design rule  
+Net PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1 is a gated clock net sourced by a combinational pin PWMapb_map/PWM_module/PWM_sample_reg[1]_LDC_i_1/O, cell PWMapb_map/PWM_module/PWM_sample_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Physical design rule  
+Net PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1 is a gated clock net sourced by a combinational pin PWMapb_map/PWM_module/PWM_sample_reg[2]_LDC_i_1/O, cell PWMapb_map/PWM_module/PWM_sample_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Physical design rule  
+Net PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1 is a gated clock net sourced by a combinational pin PWMapb_map/PWM_module/PWM_sample_reg[3]_LDC_i_1/O, cell PWMapb_map/PWM_module/PWM_sample_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Physical design rule  
+Net PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1 is a gated clock net sourced by a combinational pin PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC_i_1/O, cell PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Physical design rule  
+Net PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1 is a gated clock net sourced by a combinational pin PWMapb_map/PWM_module/PWM_sample_reg[5]_LDC_i_1/O, cell PWMapb_map/PWM_module/PWM_sample_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Physical design rule  
+Net PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1 is a gated clock net sourced by a combinational pin PWMapb_map/PWM_module/PWM_sample_reg[6]_LDC_i_1/O, cell PWMapb_map/PWM_module/PWM_sample_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Physical design rule  
+Net apb0/E[0] is a gated clock net sourced by a combinational pin apb0/apb_reg_in_reg[15]_i_1/O, cell apb0/apb_reg_in_reg[15]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT PWMapb_map/PWM_module/PWM_sample_reg[0]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWMapb_map/PWM_module/PWM_sample_reg[0]_LDC {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT PWMapb_map/PWM_module/PWM_sample_reg[1]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWMapb_map/PWM_module/PWM_sample_reg[1]_LDC {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT PWMapb_map/PWM_module/PWM_sample_reg[2]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWMapb_map/PWM_module/PWM_sample_reg[2]_LDC {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT PWMapb_map/PWM_module/PWM_sample_reg[3]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWMapb_map/PWM_module/PWM_sample_reg[3]_LDC {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#5 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#6 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT PWMapb_map/PWM_module/PWM_sample_reg[5]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWMapb_map/PWM_module/PWM_sample_reg[5]_LDC {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#7 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT PWMapb_map/PWM_module/PWM_sample_reg[6]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWMapb_map/PWM_module/PWM_sample_reg[6]_LDC {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#8 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT apb0/apb_reg_in_reg[15]_i_1 is driving clock pin of 7 cells. This could lead to large hold time violations. First few involved cells are:
+    PWMapb_map/apb_reg_in_reg[10] {LDCE}
+    PWMapb_map/apb_reg_in_reg[11] {LDCE}
+    PWMapb_map/apb_reg_in_reg[12] {LDCE}
+    PWMapb_map/apb_reg_in_reg[13] {LDCE}
+    PWMapb_map/apb_reg_in_reg[14] {LDCE}
+
+Related violations: <none>
+
+XDCM-1#1 Warning
+Delay constraint missing on IO port  
+The port 'Led[0], Led[1], Led[2], Led[3], Led[4], Led[5], Led[6], Led[7], Led[8], Led[9], Led[10], Led[11], Led[12], Led[13], Led[14] (the first 15 of 16 listed)' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#2 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'PhyClk50Mhz' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'PWM_out_port' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#3 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'PhyCrs' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'PhyClk50Mhz' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#4 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'PhyMdc' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'PhyCrs' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#5 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'PhyMdio' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'PhyMdc' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#6 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'PhyRstn' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'PhyMdio' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#7 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'PhyRxEr' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'PhyRstn' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#8 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'PhyRxd[0], PhyRxd[1]' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'PhyRxEr' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#9 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'PhyTxEn' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'PhyRxd[0], PhyRxd[1]' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#10 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'PhyTxd[0], PhyTxd[1]' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'PhyTxEn' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#11 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'RamAdv' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'PhyTxd[0], PhyTxd[1]' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#12 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'RamCE' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'RamAdv' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#13 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'RamCRE' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'RamCE' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#14 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'RamClk' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'RamCRE' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#15 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'RamLB' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'RamClk' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#16 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'RamOE' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'RamLB' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#17 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'RamUB' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'RamOE' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#18 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'RamWE' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'RamUB' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#19 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'RsRx' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'RamWE' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#20 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'RsTx' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'RsRx' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#21 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'address[0], address[1], address[2], address[3], address[4], address[5], address[6], address[7], address[8], address[9], address[10], address[11], address[12], address[13], address[14] (the first 15 of 23 listed)' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'RsTx' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#22 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'btnCpuResetn' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'SD_audio_out_port' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#23 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'btn[0], btn[1], btn[2], btn[3], btn[4]' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'address[0], address[1], address[2], address[3], address[4], address[5], address[6], address[7], address[8], address[9], address[10], address[11], address[12], address[13], address[14] (the first 15 of 23 listed)' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#24 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], data[14] (the first 15 of 16 listed)' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'btnCpuResetn' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#25 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'gpioA[0], gpioA[1], gpioA[2], gpioA[3], gpioA[4], gpioA[5], gpioA[6], gpioA[7]' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'btn[0], btn[1], btn[2], btn[3], btn[4]' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#26 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'gpioB[0], gpioB[1], gpioB[2], gpioB[3], gpioB[4], gpioB[5]' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], data[14] (the first 15 of 16 listed)' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 XDCM-1#27 Warning
 Delay constraint missing on IO port  
+<<<<<<< HEAD
 The port 'sw[0], sw[1], sw[2], sw[3], sw[4], sw[5], sw[6], sw[7], sw[8]' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+=======
+The port 'sw[0], sw[1], sw[2], sw[3], sw[4], sw[5], sw[6], sw[7], sw[8], sw[9], sw[10], sw[11], sw[12], sw[13], sw[14] (the first 15 of 16 listed)' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+Related violations: <none>
+
+XDCM-1#28 Warning
+Delay constraint missing on IO port  
+The port 'vauxn3' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+Related violations: <none>
+
+XDCM-1#29 Warning
+Delay constraint missing on IO port  
+The port 'vauxp3' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+>>>>>>> UART
 Related violations: <none>
 
 AVAL-4#1 Advisory
@@ -408,7 +726,11 @@ Related violations: <none>
 
 RTSTAT-10#1 Advisory
 No routable loads  
+<<<<<<< HEAD
 17 net(s) have no routable loads. The problem net(s) are clkgen0/xc7l.v/CLKOUT1, clkgen0/xc7l.v/CLKOUT2, xlnx_opt__1, xlnx_opt__3, xlnx_opt__5, xlnx_opt__7, xlnx_opt__9, xlnx_opt__11, xlnx_opt__13, xlnx_opt__15, xlnx_opt__17, xlnx_opt__19, xlnx_opt__21, xlnx_opt__23, xlnx_opt__25 (the first 15 of 17 listed).
+=======
+23 net(s) have no routable loads. The problem net(s) are clkgen0/xc7l.v/CLKOUT1, clkgen0/xc7l.v/CLKOUT2, xlnx_opt__4, xlnx_opt__6, xlnx_opt__8, xlnx_opt__10, xlnx_opt__12, xlnx_opt__14, xlnx_opt__16, xlnx_opt__18, xlnx_opt__20, xlnx_opt__22, xlnx_opt__24, xlnx_opt__26, xlnx_opt__28 (the first 15 of 23 listed).
+>>>>>>> UART
 Related violations: <none>
 
 

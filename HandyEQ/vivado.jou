@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Thu Mar 27 18:34:52 2014
+# Process ID: 4424
+# Log file: Y:/DAT096-Embedded System Design/Project Git Test/HandyEQ/vivado.log
+# Journal file: Y:/DAT096-Embedded System Design/Project Git Test/HandyEQ\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {Y:\DAT096-Embedded System Design\Project Git Test\HandyEQ\HandyEQ.xpr}

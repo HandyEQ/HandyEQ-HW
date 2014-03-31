@@ -23,4 +23,8 @@ w
 Exiting %s at %s...
 206*common2
 Vivado2default:default2,
+<<<<<<< HEAD
 Thu Mar 27 16:11:12 20142default:defaultZ17-206
+=======
+Thu Mar 27 16:06:48 20142default:defaultZ17-206
+>>>>>>> UART

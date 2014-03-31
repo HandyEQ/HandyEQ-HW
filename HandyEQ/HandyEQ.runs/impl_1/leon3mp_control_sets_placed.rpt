@@ -1,8 +1,13 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
+<<<<<<< HEAD
 | Date         : Thu Mar 27 16:06:14 2014
 | Host         : XDAT06 running 64-bit Service Pack 1  (build 7601)
+=======
+| Date         : Thu Mar 27 16:02:08 2014
+| Host         : XDAT26 running 64-bit Service Pack 1  (build 7601)
+>>>>>>> UART
 | Command      : report_control_sets -verbose -file leon3mp_control_sets_placed.rpt
 | Design       : leon3mp
 | Device       : xc7a100t
@@ -22,8 +27,13 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
+<<<<<<< HEAD
 | Number of unique control sets                                     |   151 |
 | Minimum Number of register sites lost to control set restrictions |   332 |
+=======
+| Number of unique control sets                                     |   164 |
+| Minimum Number of register sites lost to control set restrictions |   469 |
+>>>>>>> UART
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,18 +43,28 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
+<<<<<<< HEAD
 | No           | No                    | No                     |            1733 |          748 |
 | No           | No                    | Yes                    |              23 |           14 |
 | No           | Yes                   | No                     |             186 |          108 |
 | Yes          | No                    | No                     |            1874 |          818 |
 | Yes          | No                    | Yes                    |              14 |            7 |
 | Yes          | Yes                   | No                     |             966 |          414 |
+=======
+| No           | No                    | No                     |            1644 |          732 |
+| No           | No                    | Yes                    |              64 |           41 |
+| No           | Yes                   | No                     |             178 |          106 |
+| Yes          | No                    | No                     |            1828 |          842 |
+| Yes          | No                    | Yes                    |              23 |           10 |
+| Yes          | Yes                   | No                     |             898 |          400 |
+>>>>>>> UART
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
+<<<<<<< HEAD
 +--------------------------------------------------+-------------------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
 |                   Clock Signal                   |                              Enable Signal                              |                       Set/Reset Signal                       | Slice Load Count | Bel Load Count |
 +--------------------------------------------------+-------------------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
@@ -200,5 +220,175 @@ Table of Contents
 |  clkgen0/xc7l.v/O1                               | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O119                        |                                                              |              308 |            677 |
 |  clkgen0/xc7l.v/O1                               |                                                                         |                                                              |              680 |           1582 |
 +--------------------------------------------------+-------------------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
+=======
++------------------------------------------------------+-----------------------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
+|                     Clock Signal                     |                                Enable Signal                                |                       Set/Reset Signal                       | Slice Load Count | Bel Load Count |
++------------------------------------------------------+-----------------------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
+|  clkgen0/xc7l.v/O1                                   | PWMapb_map/PWM_module/n_0_PWM_sample[6]_P_i_1                               | PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   | PWMapb_map/PWM_module/n_0_PWM_sample[6]_P_i_1                               | PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   | PWMapb_map/PWM_module/n_0_PWM_sample[6]_P_i_1                               | PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   | PWMapb_map/PWM_module/n_0_PWM_sample[6]_P_i_1                               | PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   | PWMapb_map/PWM_module/n_0_PWM_sample[6]_P_i_1                               | PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   | PWMapb_map/PWM_module/n_0_PWM_sample[6]_P_i_1                               | PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   | PWMapb_map/PWM_module/n_0_PWM_sample[6]_P_i_1                               | PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_2          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_2          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_2          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_2          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_2          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_2          |                1 |              1 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_2          |                1 |              1 |
+|  PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1 |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_2          |                1 |              1 |
+|  PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1 |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_2          |                1 |              1 |
+|  PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1 |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_2          |                1 |              1 |
+|  PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1 |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_2          |                1 |              1 |
+|  PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1 |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_2          |                1 |              1 |
+|  PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1 |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_2          |                1 |              1 |
+|  PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1 |                                                                             | PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_2          |                1 |              1 |
+| ~ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1     |                                                                             | rst0/p_0_in                                                  |                3 |              3 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O38[0]                                                                 | rst0/p_0_in                                                  |                1 |              4 |
+|  clkgen0/xc7l.v/O1                                   | apb0/v[ctrl][txen]                                                          | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/tx_rst/O1                 |                3 |              4 |
+|  clkgen0/xc7l.v/O1                                   | apb0/v[rxen]                                                                | rst0/p_0_in                                                  |                2 |              4 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[capbil][4]_i_1                                  |                                                              |                1 |              4 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[ecnt][3]_i_1                                    | rst0/p_0_in                                                  |                2 |              4 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/a0/O215[0]                              |                                                              |                4 |              4 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O63                             | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O222             |                2 |              4 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/n_0_r[vaddress][3]_i_1          |                                                              |                2 |              4 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/iu/n_0_r[w][s][icc][3]_i_1                    |                                                              |                4 |              4 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_r_reg[cnt][3]_i_1                    | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/tx_rst/SR[0]              |                2 |              4 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_r[rcnt][3]_i_1                       |                                                              |                1 |              4 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/dv12_in                                  | eth0.e1/m100.u0/ethc0/rx_rmii1.rx0/n_0_r[rxdp][3]_i_1        |                2 |              4 |
+|  clkgen0/xc7l.v/O1                                   | mg2.sr1/n_0_r[ws][3]_i_1                                                    | rst0/p_0_in                                                  |                3 |              4 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.dsugen.dsu0/x0/n_0_r[be][0]_i_1                                    | rst0/p_0_in                                                  |                1 |              4 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/iu/n_0_r[w][s][pil][3]_i_1                    |                                                              |                1 |              4 |
+|  ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1     |                                                                             | rst0/p_0_in                                                  |                3 |              4 |
+|  clkgen0/xc7l.v/O1                                   | ahbjtaggen0.ahbjtag0/ahbmst0/O7                                             |                                                              |                5 |              5 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O95                                                                    | rst0/p_0_in                                                  |                3 |              5 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/mgen.div0/n_0_r[cnt][4]_i_1                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/SR[0]            |                1 |              5 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[cnt][4]_i_1__0                                  | rst0/p_0_in                                                  |                5 |              5 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[mdio_ctrl][regadr][4]_i_1                       | rst0/p_0_in                                                  |                4 |              5 |
+|  clkgen0/xc7l.v/O1                                   | ua1.uart1/n_0_FSM_onehot_r[rxstate][4]_i_1                                  | rst0/p_0_in                                                  |                2 |              5 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | ahb0/n_0_r[hrdatam][24]_i_1                                  |                2 |              5 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_r[retry_cnt][4]_i_1                  | eth0.e1/m100.u0/n_0_FSM_onehot_r[def_state][5]_i_1           |                2 |              5 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/mgen.div0/n_0_FSM_onehot_r[state][5]_i_2      | leon3gen.cpu[0].u0/leon3x0/p0/iu/SS[0]                       |                2 |              6 |
+|  n_0_bufgclk45                                       |                                                                             | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/tx_rst/O1                 |                2 |              6 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_FSM_onehot_r[duplexstate][5]_i_1                  | rst0/p_0_in                                                  |                4 |              6 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_FSM_onehot_r[regaddr][5]_i_1                      | rst0/p_0_in                                                  |                2 |              6 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O64                             | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O136             |                5 |              6 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_FSM_onehot_r[def_state][5]_i_2       | eth0.e1/m100.u0/n_0_FSM_onehot_r[def_state][5]_i_1           |                3 |              6 |
+|  clkgen0/xc7l.v/O1                                   | ua1.uart1/n_0_r[irqcnt][5]_i_1                                              | rst0/p_0_in                                                  |                2 |              6 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | rst0/O2                                                      |                4 |              6 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O38[0]                                                                 |                                                              |                2 |              6 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[rcntm][6]_i_1                                   | rst0/p_0_in                                                  |                7 |              7 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[rcntl][6]_i_1                                   | rst0/p_0_in                                                  |                7 |              7 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[tfrpnt][6]_i_1                                  | rst0/p_0_in                                                  |                2 |              7 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_r[slot_count][6]_i_1                 | eth0.e1/m100.u0/n_0_FSM_onehot_r[def_state][5]_i_1           |                2 |              7 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/n_0_FSM_onehot_r[dstate][6]_i_1 | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/SR[0]            |                2 |              7 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.dsugen.dsu0/x0/n_0_tb0.tr[delaycnt][6]_i_1                         |                                                              |                4 |              7 |
+|  apb0/E[0]                                           |                                                                             |                                                              |                5 |              7 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/iu/n_0_dsugen.dsur[tbufcnt][6]_i_1            |                                                              |                2 |              7 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O130[0]                                                                | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/tx_rst/O1                 |                2 |              7 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O131[0]                                                                | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/tx_rst/O1                 |                3 |              7 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.dsugen.dsu0/x0/n_0_tb0.tr[aindex][6]_i_1                           |                                                              |                3 |              7 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/ahb0/O6[0]                                            | rst0/p_0_in                                                  |                2 |              7 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O15[0]                                                                 |                                                              |                3 |              8 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O27[0]                                                                 | rst0/p_0_in                                                  |                2 |              8 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O28[0]                                                                 | rst0/p_0_in                                                  |                4 |              8 |
+| ~ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1     | ahbjtaggen0.ahbjtag0/newcom.jtagcom0/n_0_tnr[addrlo][9]_i_1                 |                                                              |                3 |              8 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O63                             | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O223             |                3 |              8 |
+|  clkgen0/xc7l.v/O1                                   | mg2.sr1/n_0_r[writedata8][15]_i_2                                           | mg2.sr1/n_0_r[writedata8][7]_i_1                             |                3 |              8 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/n_0_r[faddr][7]_i_2             | leon3gen.cpu[0].u0/leon3x0/p0/iu/O190[0]                     |                3 |              8 |
+|  clkgen0/xc7l.v/O1                                   | mg2.sr1/n_0_r[writedata8][15]_i_2                                           | mg2.sr1/n_0_r[writedata8][15]_i_1                            |                3 |              8 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/E[0]                            |                                                              |                4 |              8 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/n_0_r[valid][0][3]_i_1          |                                                              |                6 |              8 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.dsugen.dsu0/x0/O68[0]                                              |                                                              |                8 |              8 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/iu/n_0_r[w][s][tt][7]_i_1                     | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O66              |                5 |              8 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/iu/O109[0]                                    |                                                              |                5 |              8 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/ahb0/O8[0]                                            | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/tx_rst/O1                 |                7 |              8 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O121[0]                                                                |                                                              |                2 |              8 |
+|  clkgen0/xc7l.v/O1                                   | ua1.uart1/n_0_r[rshift][7]_i_1                                              |                                                              |                4 |              8 |
+|  clkgen0/xc7l.v/O1                                   | apb0/v[rxen]                                                                |                                                              |                4 |              9 |
+|  clkgen0/xc7l.v/O1                                   | ahb0/E[0]                                                                   | rst0/p_0_in                                                  |                7 |              9 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/O5[0]                           | leon3gen.cpu[0].u0/leon3x0/p0/iu/O154[0]                     |                3 |              9 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_r[ifg_cycls][8]_i_1                  | eth0.e1/m100.u0/n_0_FSM_onehot_r[def_state][5]_i_1           |                4 |              9 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_r[delay_val][9]_i_2                  | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/tx_rst/SR[0]              |                5 |             10 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/rx_rmii1.rx0/n_0_FSM_onehot_r[rx_state][9]_i_1        | eth0.e1/m100.u0/n_0_FSM_onehot_r[def_state][5]_i_1           |                6 |             10 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[txlength][10]_i_1                               |                                                              |                6 |             11 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/rx_rmii1.rx0/n_0_r[byte_count][10]_i_1__0             | eth0.e1/m100.u0/n_0_FSM_onehot_r[def_state][5]_i_1           |                6 |             11 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[rxcnt][10]_i_1                                  | rst0/p_0_in                                                  |                7 |             11 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_r[byte_count][10]_i_2                | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_r[byte_count][10]_i_1 |                5 |             11 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O122                                                                   |                                                              |                5 |             12 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_FSM_onehot_r[mdio_state][11]_i_1                  | rst0/p_0_in                                                  |                2 |             12 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/ahb0/O7                                               |                                                              |                6 |             12 |
+|  clkgen0/xc7l.v/O1                                   | ua1.uart1/n_0_r[scaler][11]_i_1                                             |                                                              |                5 |             12 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[seq][0]_i_1                                     | rst0/p_0_in                                                  |                4 |             14 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O100[0]                                                                | rst0/p_0_in                                                  |                7 |             15 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_FSM_onehot_r[edclrstate][14]_i_1                  | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/tx_rst/O1                 |                6 |             15 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_FSM_onehot_r[main_state][14]_i_1     | eth0.e1/m100.u0/n_0_FSM_onehot_r[def_state][5]_i_1           |                6 |             15 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O99[0]                                                                 |                                                              |               10 |             15 |
+|  clkgen0/xc7l.v/O1                                   | mg2.sr1/r_reg[readdata]0                                                    |                                                              |               10 |             16 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[rmsto][data][18]_i_1                            |                                                              |                5 |             16 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O39[0]                                                                 | rst0/p_0_in                                                  |                9 |             16 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[rmsto][data][18]_i_1                            | eth0.e1/m100.u0/ethc0/n_0_r[rmsto][data][31]_i_1             |                4 |             16 |
+|  clkgen0/xc7l.v/O1                                   | ADCapb_map/XADC_component/XADC_component/drdy_out                           | xlnx_opt__2                                                  |                3 |             16 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/rx_rmii1.rx0/n_0_r[lentype][15]_i_1                   | eth0.e1/m100.u0/n_0_FSM_onehot_r[def_state][5]_i_1           |                4 |             16 |
+|  n_0_bufgclk45                                       |                                                                             | eth0.e1/m100.u0/n_0_FSM_onehot_r[def_state][5]_i_1           |                5 |             16 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[udpsrc][15]_i_1                                 | rst0/p_0_in                                                  |               13 |             16 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[ipcrc][17]_i_1                                  |                                                              |                9 |             18 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/ahb0/O7                                               | eth0.e1/m100.u0/ethc0/ahb0/O25                               |                4 |             20 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/iu/n_0_r[w][s][tba][19]_i_1                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O66              |                9 |             20 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/v[ewr]                                                | rst0/p_0_in                                                  |               16 |             22 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O93[0]                                                                 |                                                              |                7 |             22 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[rxbytecount][10]_i_1                            | rst0/p_0_in                                                  |                6 |             22 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O92[0]                                                                 |                                                              |               11 |             22 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/a0/O214                                 |                                                              |               11 |             23 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/SR[0]            |               17 |             24 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/tx_rst/O1                 |               19 |             28 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/n_0_r[waddress][22]_i_1         |                                                              |               10 |             28 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.dsugen.dsu0/x0/n_0_r[timer][0]_i_1                                 | rst0/p_0_in                                                  |                8 |             30 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.dsugen.dsu0/x0/n_0_tb0.tr[tbreg1][addr][31]_i_1                    |                                                              |               13 |             30 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.dsugen.dsu0/x0/O63[0]                                              |                                                              |               11 |             30 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.dsugen.dsu0/x0/n_0_tb0.tr[tbreg1][mask][31]_i_1                    |                                                              |               10 |             30 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/iu/n_0_irreg.ir[addr][31]_i_1                 |                                                              |               17 |             30 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.dsugen.dsu0/x0/n_0_tb0.tr[tbreg2][addr][31]_i_1                    |                                                              |               12 |             30 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O65[0]                          |                                                              |               16 |             30 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[txaddr][31]_i_1                                 | rst0/p_0_in                                                  |                7 |             30 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[rxaddr][31]_i_1                                 | rst0/p_0_in                                                  |               12 |             30 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_r[crc][31]_i_2                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_r[crc][31]_i_1        |               11 |             31 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/ahb0/O5[0]                                            | rst0/p_0_in                                                  |               13 |             31 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/ahb0/O4[0]                                            | rst0/p_0_in                                                  |               20 |             31 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O64                             | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O66              |               20 |             31 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O96[0]                                                                 | rst0/p_0_in                                                  |               12 |             32 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O26[0]                                                                 |                                                              |               12 |             32 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O25[0]                                                                 |                                                              |               11 |             32 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/rx_rmii1.rx0/n_0_r[dataout][31]_i_1                   |                                                              |               14 |             32 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/rx_rmii1.rx0/n_0_r[crc][31]_i_1__0                    |                                                              |               14 |             32 |
+|  clkgen0/xc7l.v/O1                                   | apb0/O20[0]                                                                 |                                                              |               15 |             32 |
+|  clkgen0/xc7l.v/O1                                   | ahbjtaggen0.ahbjtag0/newcom.jtagcom0/n_0_ar[dreg][31]_i_1                   | rst0/p_0_in                                                  |               10 |             32 |
+|  n_0_bufgclk45                                       | eth0.e1/m100.u0/ethc0/tx_rmii1.tx0/n_0_r[data][31]_i_1                      |                                                              |               13 |             32 |
+|  clkgen0/xc7l.v/O1                                   | apb0/n_0_r[pwdata][31]_i_1                                                  |                                                              |                9 |             32 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/n_0_r[checkdata][31]_i_1                              |                                                              |                7 |             32 |
+|  clkgen0/xc7l.v/O1                                   | gpt.timer0/n_0_r[timers][2][value][31]_i_1                                  |                                                              |               11 |             32 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/a0/I411[0]                              | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/SR[0]            |               17 |             32 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/n_0_r[wb][data2][31]_i_1        | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/SR[0]            |               17 |             32 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/iu/n_0_r[w][s][y][31]_i_1                     |                                                              |               25 |             32 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.dsugen.dsu0/x0/n_0_r[slv][hrdata][31]_i_1                          |                                                              |               17 |             32 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.dsugen.dsu0/x0/n_0_r[slv][hwdata][31]_i_1                          |                                                              |               16 |             32 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/v[tfrpnt]1                                            |                                                              |               13 |             33 |
+| ~ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1     | ahbjtaggen0.ahbjtag0/tap0/ac7v.u0/E[0]                                      |                                                              |               10 |             33 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | xlnx_opt__2                                                  |               19 |             34 |
+|  clkgen0/xc7l.v/O1                                   | ahbjtaggen0.ahbjtag0/newcom.jtagcom0/n_0_ar_reg[qual_dreg]                  | rst0/p_0_in                                                  |               10 |             35 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/r_reg[read]0                    |                                                              |               18 |             36 |
+|  clkgen0/xc7l.v/O1                                   | ahb0/E[0]                                                                   |                                                              |               26 |             42 |
+|  clkgen0/xc7l.v/O1                                   | eth0.e1/m100.u0/ethc0/write                                                 |                                                              |                6 |             48 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O63                             |                                                              |               34 |             52 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/icache0/O12[0]                          |                                                              |               34 |             66 |
+|  ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1     |                                                                             |                                                              |               24 |             69 |
+|  n_0_bufgclk45                                       |                                                                             |                                                              |               44 |             82 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             | rst0/p_0_in                                                  |               59 |            102 |
+|  clkgen0/xc7l.v/O1                                   | leon3gen.cpu[0].u0/leon3x0/p0/c0mmu/dcache0/O64                             |                                                              |              305 |            677 |
+|  clkgen0/xc7l.v/O1                                   |                                                                             |                                                              |              659 |           1486 |
++------------------------------------------------------+-----------------------------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+
+>>>>>>> UART
 
 
