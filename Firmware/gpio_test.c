@@ -1,16 +1,15 @@
-#define UART_BASE_ADDRESS 0x80000100
-
-//#include "uart.h"
+#include "uart.h"
 #include "gpio.h"
 #include "digilent_nexys4.h"
 #include <stdio.h>
 
 int main(void)
 {
-  volatile char* UART_DATA = (char*)UART_BASE_ADDRESS;
-  volatile int* UART_STATUS = (int*)UART_BASE_ADDRESS + 0x1;
-  volatile int* UART_CONTROL = (int*)UART_BASE_ADDRESS + 0x2;
-  volatile int* UART_SCALER = (int*)UART_BASE_ADDRESS + 0x3;
+  volatile char* UART_DATA = (char*)UART1;
+  volatile int* UART_STATUS = (int*)UART1 + 0x01;
+  volatile int* UART_CONTROL = (int*)UART1 + 0x02;
+  volatile int* UART_SCALER = (int*)UART1 + 0x03;
+  
   int i;
   char str[80];
 
@@ -23,7 +22,7 @@ int main(void)
 
   *UART_SCALER = 650;
   *UART_CONTROL = 0x3;
-  //putStr("Test Started, Entering Infinite Loop.\n\r");
+
   printf("Test Started, Entering Infinite Loop.\n\r");
   scanf("%s", str);
   printf("SCANF executed. Rec'd: %s\n\r", str);
@@ -80,8 +79,7 @@ int main(void)
     GPIO_WriteBit(GPIOB, NEXYS4_JB9, GPIO_ReadInputDataBit(GPIOB, NEXYS4_JB3));
   }
 
-  printf("Test Finished\n\r");
+  printf("Test Finished.\n\r");
 
   return 0;
-
 }

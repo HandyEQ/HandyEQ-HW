@@ -46,11 +46,10 @@ typedef enum
 
 typedef struct
 {
-  int GPIO_Pin;              	  /*!< Specifies the GPIO pins to be configured.
-                                       This parameter can be any value of @ref GPIO_pins_define */
-                                       
+  int GPIO_Pin;              	    /*!< Specifies the GPIO pins to be configured.
+                                  This parameter can be any value of @ref GPIO_pins_define */                               
   GPIOMode_TypeDef GPIO_Mode;     /*!< Specifies the operating mode for the selected pins.
-                                       This parameter can be a value of @ref GPIOMode_TypeDef   */
+                                  This parameter can be a value of @ref GPIOMode_TypeDef   */
 }GPIO_InitTypeDef;
 
 #define GPIO_Pin_0                 (0x00000001)  /*!< Pin 0 selected    */
