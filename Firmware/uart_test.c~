@@ -24,7 +24,7 @@ int main(void)
 
   UART_StructInit(&UART_InitStructure);
 
-  UART_InitStructure.baud_rate = UART_BaudRate_9600;
+  UART_InitStructure.baud_rate = UART_BaudRate_115200;
 
   UART_Init(UART1, &UART_InitStructure);
 

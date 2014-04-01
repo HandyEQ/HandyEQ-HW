@@ -1,7 +1,7 @@
 #include "uart.h"
-#include "gpio.h"
+/*#include "gpio.h"
 #include "leon3_it.h"
-#include "digilent_nexys4.h"
+#include "digilent_nexys4.h"*/
 
 /******* Global Variables and Functions **********/
 int UART_it_active = 0;
