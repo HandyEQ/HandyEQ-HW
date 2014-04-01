@@ -2,8 +2,8 @@
 # Vivado v2013.4 (64-bit)
 # SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
 # IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
-# Start of session at: Tue Apr 01 12:36:13 2014
-# Process ID: 4044
+# Start of session at: Tue Apr 01 13:16:28 2014
+# Process ID: 4840
 # Log file: Z:/HandyEQ-HW/HandyEQ/vivado.log
 # Journal file: Z:/HandyEQ-HW/HandyEQ\vivado.jou
 #-----------------------------------------------------------
@@ -531,9 +531,16 @@ Import path for source Z:/HandyEQ-HW/HandyEQ/HandyEQ.srcs/constrs_1/imports/LEON
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2013.4/data/ip'.
-open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:41 . Memory (MB): peak = 999.750 ; gain = 141.285
-reset_run impl_1
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:46 . Memory (MB): peak = 945.199 ; gain = 96.707
 launch_runs impl_1
-[Tue Apr 01 12:38:36 2014] Launched impl_1...
+[Tue Apr 01 13:19:29 2014] Launched synth_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/synth_1/runme.log
+[Tue Apr 01 13:19:29 2014] Launched impl_1...
 Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 1038.973 ; gain = 4.266
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:52 . Memory (MB): peak = 951.410 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream
+[Tue Apr 01 13:30:46 2014] Launched impl_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1046.688 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 01 13:32:03 2014...

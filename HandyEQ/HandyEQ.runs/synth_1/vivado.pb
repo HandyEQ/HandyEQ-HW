@@ -24,8 +24,16 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2
 read_vhdl: 2default:default2
 00:00:002default:default2
+00:00:082default:default2
+187.0082default:default2
+0.0002default:defaultZ17-268
+˜
+I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
+268*common2
+read_vhdl: 2default:default2
+00:00:002default:default2
 00:00:062default:default2
-187.8402default:default2
+187.0082default:default2
 0.0002default:defaultZ17-268
 l
 Command: %s
@@ -48,7 +56,7 @@ Starting synthesis...
 xc7a100t2default:defaultZ17-349
 õ
 %s*synth2ã
-wStarting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:47 . Memory (MB): peak = 236.004 ; gain = 87.590
+wStarting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:54 . Memory (MB): peak = 236.059 ; gain = 87.660
 2default:default
 Á
 synthesizing module '%s'638*oasys2
@@ -13029,7 +13037,7 @@ s
 btn[0]2default:defaultZ8-3331
 ú
 %s*synth2å
-xFinished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:01:27 . Memory (MB): peak = 522.387 ; gain = 373.973
+xFinished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:01:44 . Memory (MB): peak = 522.172 ; gain = 373.773
 2default:default
 ;
 %s*synth2,
@@ -14749,11 +14757,11 @@ MSuccessfully populated the BRAM INIT strings from the following elf files: %s
 2default:defaultZ1-111
 µ
 %s*synth2•
-êFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:01:59 . Memory (MB): peak = 766.801 ; gain = 618.387
+êFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:02:24 . Memory (MB): peak = 767.352 ; gain = 618.953
 2default:default
 ù
 %s*synth2ç
-yFinished RTL Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:01:59 . Memory (MB): peak = 766.801 ; gain = 618.387
+yFinished RTL Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:02:24 . Memory (MB): peak = 767.352 ; gain = 618.953
 2default:default
 »
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2 
@@ -15020,7 +15028,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 2default:default
 ±
 %s*synth2°
-åFinished Loading Part and Timing Information : Time (s): cpu = 00:00:52 ; elapsed = 00:02:19 . Memory (MB): peak = 766.801 ; gain = 618.387
+åFinished Loading Part and Timing Information : Time (s): cpu = 00:00:55 ; elapsed = 00:02:44 . Memory (MB): peak = 767.352 ; gain = 618.953
 2default:default
 B
 %s*synth23
@@ -15036,11 +15044,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input     33 Bit       Adders := 1     
+.	   2 Input     33 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     33 Bit       Adders := 1     
+.	   3 Input     33 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
@@ -15080,7 +15088,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      8 Bit       Adders := 1     
+.	   3 Input      8 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
@@ -15088,7 +15096,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      8 Bit       Adders := 1     
+.	   4 Input      8 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
@@ -15260,11 +15268,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     48 Bit        Muxes := 3     
+.	  13 Input     48 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	  13 Input     48 Bit        Muxes := 2     
+.	   2 Input     48 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -15288,39 +15296,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  13 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   7 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  16 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   6 Input     32 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
-.	   8 Input     32 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
 .	 142 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	  11 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  10 Input     32 Bit        Muxes := 5     
-2default:default
-Q
-%s*synth2B
-.	  18 Input     32 Bit        Muxes := 1     
+.	  13 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -15328,19 +15308,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   9 Input     32 Bit        Muxes := 3     
+.	   8 Input     32 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   4 Input     32 Bit        Muxes := 21    
-2default:default
-Q
-%s*synth2B
-.	   3 Input     32 Bit        Muxes := 9     
-2default:default
-Q
-%s*synth2B
-.	  19 Input     32 Bit        Muxes := 2     
+.	  18 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -15348,7 +15320,43 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input     30 Bit        Muxes := 3     
+.	   9 Input     32 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
+.	  19 Input     32 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   4 Input     32 Bit        Muxes := 21    
+2default:default
+Q
+%s*synth2B
+.	   7 Input     32 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   6 Input     32 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
+.	  11 Input     32 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  16 Input     32 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   3 Input     32 Bit        Muxes := 9     
+2default:default
+Q
+%s*synth2B
+.	  10 Input     32 Bit        Muxes := 5     
+2default:default
+Q
+%s*synth2B
+.	   7 Input     30 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -15360,11 +15368,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input     30 Bit        Muxes := 2     
+.	   4 Input     30 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     30 Bit        Muxes := 1     
+.	   3 Input     30 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -15404,15 +15412,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     16 Bit        Muxes := 33    
-2default:default
-Q
-%s*synth2B
 .	   6 Input     16 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
+.	   2 Input     16 Bit        Muxes := 33    
+2default:default
+Q
+%s*synth2B
 .	  15 Input     16 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   4 Input     15 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -15424,10 +15436,6 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input     15 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
 .	  14 Input     15 Bit        Muxes := 1     
 2default:default
 Q
@@ -15436,15 +15444,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     13 Bit        Muxes := 6     
-2default:default
-Q
-%s*synth2B
 .	  12 Input     13 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     12 Bit        Muxes := 2     
+.	   2 Input     13 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
@@ -15452,11 +15456,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     11 Bit        Muxes := 11    
-2default:default
-Q
-%s*synth2B
-.	   7 Input     11 Bit        Muxes := 1     
+.	   2 Input     12 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -15464,7 +15464,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  19 Input     11 Bit        Muxes := 1     
+.	   9 Input     11 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -15472,15 +15472,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   9 Input     11 Bit        Muxes := 1     
+.	   7 Input     11 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   4 Input     10 Bit        Muxes := 1     
+.	  19 Input     11 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   9 Input     10 Bit        Muxes := 1     
+.	   2 Input     11 Bit        Muxes := 11    
 2default:default
 Q
 %s*synth2B
@@ -15492,6 +15492,14 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   9 Input     10 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   4 Input     10 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	   2 Input     10 Bit        Muxes := 25    
 2default:default
 Q
@@ -15500,19 +15508,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      8 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   4 Input      8 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
 .	 142 Input      8 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      8 Bit        Muxes := 54    
 2default:default
 Q
 %s*synth2B
@@ -15524,7 +15520,27 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      7 Bit        Muxes := 1     
+.	   2 Input      8 Bit        Muxes := 54    
+2default:default
+Q
+%s*synth2B
+.	   3 Input      8 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   4 Input      8 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	  15 Input      7 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  12 Input      7 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      7 Bit        Muxes := 26    
 2default:default
 Q
 %s*synth2B
@@ -15532,11 +15548,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      7 Bit        Muxes := 6     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      7 Bit        Muxes := 26    
+.	   8 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -15548,11 +15560,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  12 Input      7 Bit        Muxes := 2     
+.	  10 Input      7 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
-.	  15 Input      7 Bit        Muxes := 1     
+.	   2 Input      6 Bit        Muxes := 34    
 2default:default
 Q
 %s*synth2B
@@ -15564,15 +15576,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      6 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   5 Input      6 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      6 Bit        Muxes := 34    
 2default:default
 Q
 %s*synth2B
@@ -15580,15 +15584,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      5 Bit        Muxes := 30    
-2default:default
-Q
-%s*synth2B
-.	   4 Input      5 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
-.	  19 Input      5 Bit        Muxes := 1     
+.	   4 Input      6 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -15600,43 +15596,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   2 Input      5 Bit        Muxes := 30    
+2default:default
+Q
+%s*synth2B
+.	   4 Input      5 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
 .	   6 Input      5 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   3 Input      4 Bit        Muxes := 6     
-2default:default
-Q
-%s*synth2B
-.	   4 Input      4 Bit        Muxes := 4     
-2default:default
-Q
-%s*synth2B
-.	  16 Input      4 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	   6 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      4 Bit        Muxes := 132   
-2default:default
-Q
-%s*synth2B
-.	  15 Input      4 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
-.	   7 Input      4 Bit        Muxes := 5     
-2default:default
-Q
-%s*synth2B
-.	   9 Input      4 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	  13 Input      4 Bit        Muxes := 1     
+.	  19 Input      5 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -15644,31 +15616,39 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   9 Input      3 Bit        Muxes := 1     
+.	   4 Input      4 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	  16 Input      3 Bit        Muxes := 2     
+.	   2 Input      4 Bit        Muxes := 132   
 2default:default
 Q
 %s*synth2B
-.	   3 Input      3 Bit        Muxes := 1     
+.	   3 Input      4 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
-.	  19 Input      3 Bit        Muxes := 1     
+.	   9 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	  10 Input      3 Bit        Muxes := 2     
+.	  15 Input      4 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	  15 Input      3 Bit        Muxes := 1     
+.	  13 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      3 Bit        Muxes := 4     
+.	   7 Input      4 Bit        Muxes := 5     
+2default:default
+Q
+%s*synth2B
+.	   6 Input      4 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  16 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -15680,7 +15660,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 49    
+.	  10 Input      3 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   3 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -15688,19 +15672,27 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      2 Bit        Muxes := 11    
+.	   9 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	  10 Input      2 Bit        Muxes := 3     
+.	   2 Input      3 Bit        Muxes := 49    
 2default:default
 Q
 %s*synth2B
-.	  11 Input      2 Bit        Muxes := 1     
+.	  19 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	  19 Input      2 Bit        Muxes := 1     
+.	  16 Input      3 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	  15 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      3 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
@@ -15708,11 +15700,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  16 Input      2 Bit        Muxes := 5     
+.	   9 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      2 Bit        Muxes := 132   
+.	  19 Input      2 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  16 Input      2 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -15720,7 +15716,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   9 Input      2 Bit        Muxes := 1     
+.	   5 Input      2 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	  11 Input      2 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  10 Input      2 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -15728,47 +15732,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   5 Input      2 Bit        Muxes := 2     
+.	   4 Input      2 Bit        Muxes := 11    
 2default:default
 Q
 %s*synth2B
-.	  16 Input      1 Bit        Muxes := 39    
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 2009  
-2default:default
-Q
-%s*synth2B
-.	  15 Input      1 Bit        Muxes := 19    
-2default:default
-Q
-%s*synth2B
-.	  13 Input      1 Bit        Muxes := 33    
-2default:default
-Q
-%s*synth2B
-.	  10 Input      1 Bit        Muxes := 105   
-2default:default
-Q
-%s*synth2B
-.	   7 Input      1 Bit        Muxes := 26    
-2default:default
-Q
-%s*synth2B
-.	   5 Input      1 Bit        Muxes := 11    
-2default:default
-Q
-%s*synth2B
-.	   3 Input      1 Bit        Muxes := 111   
-2default:default
-Q
-%s*synth2B
-.	  11 Input      1 Bit        Muxes := 22    
-2default:default
-Q
-%s*synth2B
-.	   6 Input      1 Bit        Muxes := 107   
+.	   2 Input      2 Bit        Muxes := 132   
 2default:default
 Q
 %s*synth2B
@@ -15776,7 +15744,23 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  14 Input      1 Bit        Muxes := 29    
+.	  16 Input      1 Bit        Muxes := 39    
+2default:default
+Q
+%s*synth2B
+.	  11 Input      1 Bit        Muxes := 22    
+2default:default
+Q
+%s*synth2B
+.	   3 Input      1 Bit        Muxes := 111   
+2default:default
+Q
+%s*synth2B
+.	  19 Input      1 Bit        Muxes := 9     
+2default:default
+Q
+%s*synth2B
+.	  13 Input      1 Bit        Muxes := 33    
 2default:default
 Q
 %s*synth2B
@@ -15784,11 +15768,35 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input      1 Bit        Muxes := 26    
+2default:default
+Q
+%s*synth2B
+.	  10 Input      1 Bit        Muxes := 105   
+2default:default
+Q
+%s*synth2B
+.	   6 Input      1 Bit        Muxes := 107   
+2default:default
+Q
+%s*synth2B
+.	  15 Input      1 Bit        Muxes := 19    
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 2009  
+2default:default
+Q
+%s*synth2B
 .	   4 Input      1 Bit        Muxes := 182   
 2default:default
 Q
 %s*synth2B
-.	  19 Input      1 Bit        Muxes := 9     
+.	   5 Input      1 Bit        Muxes := 11    
+2default:default
+Q
+%s*synth2B
+.	  14 Input      1 Bit        Muxes := 29    
 2default:default
 F
 %s*synth27
@@ -15956,19 +15964,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      2 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 531   
+.	   4 Input      2 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
 .	   4 Input      1 Bit        Muxes := 15    
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 531   
 2default:default
 F
 %s*synth27
@@ -16028,15 +16036,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input     32 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
-.	   2 Input     32 Bit        Muxes := 22    
-2default:default
-Q
-%s*synth2B
-.	   4 Input     32 Bit        Muxes := 3     
+.	   3 Input     32 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -16044,7 +16044,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input     32 Bit        Muxes := 2     
+.	   4 Input     32 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
+.	  10 Input     32 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
+.	   2 Input     32 Bit        Muxes := 22    
 2default:default
 Q
 %s*synth2B
@@ -16056,11 +16064,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  14 Input     10 Bit        Muxes := 1     
+.	   2 Input     10 Bit        Muxes := 9     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     10 Bit        Muxes := 9     
+.	  14 Input     10 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -16080,15 +16088,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      2 Bit        Muxes := 8     
-2default:default
-Q
-%s*synth2B
 .	  10 Input      2 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	  14 Input      1 Bit        Muxes := 29    
+.	   2 Input      2 Bit        Muxes := 8     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      1 Bit        Muxes := 13    
 2default:default
 Q
 %s*synth2B
@@ -16100,7 +16108,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      1 Bit        Muxes := 13    
+.	  14 Input      1 Bit        Muxes := 29    
 2default:default
 F
 %s*synth27
@@ -16136,11 +16144,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     32 Bit        Muxes := 1     
+.	   4 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   4 Input     32 Bit        Muxes := 1     
+.	   2 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -16152,7 +16160,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      2 Bit        Muxes := 1     
+.	   2 Input      2 Bit        Muxes := 35    
 2default:default
 Q
 %s*synth2B
@@ -16160,11 +16168,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      2 Bit        Muxes := 35    
+.	   4 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   3 Input      1 Bit        Muxes := 7     
+.	   4 Input      1 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
@@ -16172,7 +16180,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 8     
+.	   3 Input      1 Bit        Muxes := 7     
 2default:default
 E
 %s*synth26
@@ -16296,11 +16304,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input     32 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	  19 Input     32 Bit        Muxes := 2     
+.	   4 Input     32 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
@@ -16308,15 +16312,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input     32 Bit        Muxes := 6     
+.	  19 Input     32 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   3 Input     32 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     32 Bit        Muxes := 39    
-2default:default
-Q
-%s*synth2B
-.	   3 Input     30 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -16325,6 +16329,10 @@ Q
 Q
 %s*synth2B
 .	   4 Input     30 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   3 Input     30 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -16344,15 +16352,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   4 Input      8 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	   3 Input      8 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input      8 Bit        Muxes := 19    
-2default:default
-Q
-%s*synth2B
-.	   4 Input      8 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -16364,10 +16372,6 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      6 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      6 Bit        Muxes := 20    
 2default:default
 Q
@@ -16376,11 +16380,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      5 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      5 Bit        Muxes := 6     
+.	   8 Input      6 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -16388,11 +16388,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 15    
+.	   2 Input      5 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
-.	   6 Input      4 Bit        Muxes := 1     
+.	   4 Input      5 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      4 Bit        Muxes := 15    
 2default:default
 Q
 %s*synth2B
@@ -16400,15 +16404,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   6 Input      4 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	   8 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   3 Input      3 Bit        Muxes := 1     
+.	   2 Input      3 Bit        Muxes := 20    
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 20    
+.	   3 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -16432,15 +16440,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      2 Bit        Muxes := 6     
-2default:default
-Q
-%s*synth2B
 .	   5 Input      2 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   3 Input      2 Bit        Muxes := 2     
+.	   4 Input      2 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
@@ -16448,11 +16452,39 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  13 Input      1 Bit        Muxes := 4     
+.	   3 Input      2 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 182   
+2default:default
+Q
+%s*synth2B
+.	   7 Input      1 Bit        Muxes := 8     
+2default:default
+Q
+%s*synth2B
+.	   4 Input      1 Bit        Muxes := 113   
 2default:default
 Q
 %s*synth2B
 .	  11 Input      1 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  13 Input      1 Bit        Muxes := 4     
+2default:default
+Q
+%s*synth2B
+.	  10 Input      1 Bit        Muxes := 14    
+2default:default
+Q
+%s*synth2B
+.	   3 Input      1 Bit        Muxes := 22    
+2default:default
+Q
+%s*synth2B
+.	   6 Input      1 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -16464,31 +16496,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      1 Bit        Muxes := 8     
-2default:default
-Q
-%s*synth2B
-.	   6 Input      1 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  10 Input      1 Bit        Muxes := 14    
-2default:default
-Q
-%s*synth2B
 .	  16 Input      1 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	   4 Input      1 Bit        Muxes := 113   
-2default:default
-Q
-%s*synth2B
-.	   3 Input      1 Bit        Muxes := 22    
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 182   
 2default:default
 I
 %s*synth2:
@@ -17084,7 +17092,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  11 Input     32 Bit        Muxes := 1     
+.	   4 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17092,7 +17100,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input     32 Bit        Muxes := 1     
+.	  11 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17108,15 +17116,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	  11 Input      1 Bit        Muxes := 21    
+.	   4 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17125,6 +17129,10 @@ Q
 Q
 %s*synth2B
 .	   2 Input      1 Bit        Muxes := 51    
+2default:default
+Q
+%s*synth2B
+.	  11 Input      1 Bit        Muxes := 21    
 2default:default
 @
 %s*synth21
@@ -17200,11 +17208,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     32 Bit        Muxes := 6     
+.	   3 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   3 Input     32 Bit        Muxes := 1     
+.	   2 Input     32 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
@@ -17232,11 +17240,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  16 Input      3 Bit        Muxes := 2     
+.	   4 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   4 Input      3 Bit        Muxes := 2     
+.	  16 Input      3 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -17252,7 +17260,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 1     
+.	   2 Input      1 Bit        Muxes := 136   
+2default:default
+Q
+%s*synth2B
+.	   3 Input      1 Bit        Muxes := 63    
 2default:default
 Q
 %s*synth2B
@@ -17264,11 +17276,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      1 Bit        Muxes := 63    
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 136   
+.	   8 Input      1 Bit        Muxes := 1     
 2default:default
 7
 %s*synth2(
@@ -17456,15 +17464,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	  16 Input      4 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	   3 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input      4 Bit        Muxes := 6     
-2default:default
-Q
-%s*synth2B
-.	  16 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17484,7 +17492,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 1     
+.	  16 Input      1 Bit        Muxes := 22    
 2default:default
 Q
 %s*synth2B
@@ -17492,7 +17500,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  16 Input      1 Bit        Muxes := 22    
+.	   8 Input      1 Bit        Muxes := 1     
 2default:default
 I
 %s*synth2:
@@ -17596,15 +17604,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     11 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
 .	   9 Input     11 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     10 Bit        Muxes := 7     
+.	   2 Input     11 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -17612,15 +17616,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   2 Input     10 Bit        Muxes := 7     
+2default:default
+Q
+%s*synth2B
 .	   9 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	  10 Input      4 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 3     
+.	  10 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17632,11 +17640,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 15    
+.	   9 Input      1 Bit        Muxes := 17    
 2default:default
 Q
 %s*synth2B
-.	   9 Input      1 Bit        Muxes := 17    
+.	   2 Input      1 Bit        Muxes := 15    
 2default:default
 B
 %s*synth23
@@ -17672,15 +17680,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   2 Input      8 Bit       Adders := 2     
+2default:default
+Q
+%s*synth2B
 .	   4 Input      8 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
 .	   3 Input      8 Bit       Adders := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      8 Bit       Adders := 2     
 2default:default
 Q
 %s*synth2B
@@ -17788,7 +17796,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  18 Input     32 Bit        Muxes := 1     
+.	   8 Input     32 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  13 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17796,15 +17808,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input     32 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	   9 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   8 Input     32 Bit        Muxes := 1     
+.	   2 Input     32 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	  13 Input     32 Bit        Muxes := 1     
+.	  18 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17816,14 +17832,6 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     32 Bit        Muxes := 4     
-2default:default
-Q
-%s*synth2B
-.	   7 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input     30 Bit        Muxes := 1     
 2default:default
 Q
@@ -17832,19 +17840,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  15 Input     18 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	  10 Input     18 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	  13 Input     16 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	   6 Input     16 Bit        Muxes := 4     
+.	  15 Input     18 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17852,11 +17852,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     15 Bit        Muxes := 12    
+.	   6 Input     16 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	  10 Input     15 Bit        Muxes := 1     
+.	  13 Input     16 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -17864,11 +17864,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     14 Bit        Muxes := 1     
+.	  10 Input     15 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	  12 Input     13 Bit        Muxes := 1     
+.	   2 Input     15 Bit        Muxes := 12    
+2default:default
+Q
+%s*synth2B
+.	   2 Input     14 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17876,11 +17880,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     11 Bit        Muxes := 9     
-2default:default
-Q
-%s*synth2B
-.	  19 Input     11 Bit        Muxes := 1     
+.	  12 Input     13 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17892,7 +17892,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   2 Input     11 Bit        Muxes := 9     
+2default:default
+Q
+%s*synth2B
 .	  16 Input     11 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  19 Input     11 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17912,11 +17920,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      7 Bit        Muxes := 6     
-2default:default
-Q
-%s*synth2B
-.	   7 Input      7 Bit        Muxes := 2     
+.	  16 Input      7 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -17924,15 +17928,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      7 Bit        Muxes := 12    
-2default:default
-Q
-%s*synth2B
 .	   8 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	  16 Input      7 Bit        Muxes := 2     
+.	   2 Input      7 Bit        Muxes := 12    
+2default:default
+Q
+%s*synth2B
+.	   7 Input      7 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	  10 Input      7 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
@@ -17956,19 +17964,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input      5 Bit        Muxes := 4     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      5 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 10    
+.	   6 Input      5 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	  13 Input      4 Bit        Muxes := 1     
+.	  16 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17980,23 +17984,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  16 Input      4 Bit        Muxes := 1     
+.	   2 Input      4 Bit        Muxes := 10    
 2default:default
 Q
 %s*synth2B
-.	   9 Input      3 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   6 Input      3 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  15 Input      3 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      3 Bit        Muxes := 17    
+.	  13 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -18004,7 +17996,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      3 Bit        Muxes := 1     
+.	  15 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   9 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      3 Bit        Muxes := 17    
 2default:default
 Q
 %s*synth2B
@@ -18012,19 +18012,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   6 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  10 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	  11 Input      2 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   8 Input      2 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   9 Input      2 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      2 Bit        Muxes := 22    
 2default:default
 Q
 %s*synth2B
@@ -18032,11 +18028,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input      1 Bit        Muxes := 30    
+.	   2 Input      2 Bit        Muxes := 22    
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 35    
+.	   9 Input      2 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   8 Input      2 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   6 Input      1 Bit        Muxes := 30    
 2default:default
 Q
 %s*synth2B
@@ -18044,11 +18048,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input      1 Bit        Muxes := 5     
-2default:default
-Q
-%s*synth2B
-.	  15 Input      1 Bit        Muxes := 19    
+.	  10 Input      1 Bit        Muxes := 36    
 2default:default
 Q
 %s*synth2B
@@ -18056,11 +18056,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  13 Input      1 Bit        Muxes := 29    
+.	  15 Input      1 Bit        Muxes := 19    
 2default:default
 Q
 %s*synth2B
-.	  10 Input      1 Bit        Muxes := 36    
+.	   7 Input      1 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -18068,7 +18068,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   8 Input      1 Bit        Muxes := 35    
+2default:default
+Q
+%s*synth2B
 .	   2 Input      1 Bit        Muxes := 153   
+2default:default
+Q
+%s*synth2B
+.	  13 Input      1 Bit        Muxes := 29    
 2default:default
 M
 %s*synth2>
@@ -19320,15 +19328,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   4 Input     32 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
 .	   2 Input     32 Bit        Muxes := 27    
 2default:default
 Q
 %s*synth2B
 .	   8 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   4 Input     32 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -19344,10 +19352,6 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   3 Input      4 Bit        Muxes := 4     
 2default:default
 Q
@@ -19356,11 +19360,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 7     
+.	   4 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   8 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      3 Bit        Muxes := 7     
 2default:default
 Q
 %s*synth2B
@@ -19372,15 +19380,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      1 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      1 Bit        Muxes := 48    
 2default:default
 Q
 %s*synth2B
 .	   8 Input      1 Bit        Muxes := 13    
+2default:default
+Q
+%s*synth2B
+.	   3 Input      1 Bit        Muxes := 2     
 2default:default
 A
 %s*synth22
@@ -19596,11 +19604,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input     32 Bit        Muxes := 1     
+.	   2 Input     32 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     32 Bit        Muxes := 2     
+.	   6 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19616,11 +19624,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 2     
+.	   5 Input      6 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      6 Bit        Muxes := 1     
+.	   2 Input      6 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -19628,15 +19636,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      3 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      3 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   7 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   4 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19644,7 +19648,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      2 Bit        Muxes := 2     
+.	   2 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19656,7 +19660,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 9     
+.	   2 Input      2 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -19665,6 +19669,10 @@ Q
 Q
 %s*synth2B
 .	   2 Input      1 Bit        Muxes := 64    
+2default:default
+Q
+%s*synth2B
+.	   4 Input      1 Bit        Muxes := 9     
 2default:default
 C
 %s*synth24
@@ -20334,7 +20342,7 @@ s
 btn[0]2default:defaultZ8-3331
 ©
 %s*synth2ô
-ÑFinished Cross Boundary Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:02:30 . Memory (MB): peak = 766.801 ; gain = 618.387
+ÑFinished Cross Boundary Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:02:55 . Memory (MB): peak = 767.352 ; gain = 618.953
 2default:default
 ¢
 %s*synth2í
@@ -20544,11 +20552,11 @@ Mi_3/\eth0.e1/m100.u0/ethc0 /\tx_rmii1.tx0 /\FSM_onehot_r_reg[main_state][15] 2
 7\leon3gen.cpu[0].u0/leon3x0/p0/c0mmu /\a0/r_reg[retry] 2default:defaultZ8-3333
 ü
 %s*synth2è
-{Finished Area Optimization : Time (s): cpu = 00:03:19 ; elapsed = 00:04:52 . Memory (MB): peak = 1115.129 ; gain = 966.715
+{Finished Area Optimization : Time (s): cpu = 00:03:20 ; elapsed = 00:05:16 . Memory (MB): peak = 1115.438 ; gain = 967.039
 2default:default
 Æ
 %s*synth2û
-âFinished Applying XDC Timing Constraints : Time (s): cpu = 00:03:22 ; elapsed = 00:04:56 . Memory (MB): peak = 1115.129 ; gain = 966.715
+âFinished Applying XDC Timing Constraints : Time (s): cpu = 00:03:24 ; elapsed = 00:05:19 . Memory (MB): peak = 1115.438 ; gain = 967.039
 2default:default
 ∏
 Hbinding instance '%s' in module '%s' to reference '%s' which has no pins115*oasys2
@@ -20557,7 +20565,7 @@ Hbinding instance '%s' in module '%s' to reference '%s' which has no pins115
 leon3mp_GT22default:defaultZ8-115
 °
 %s*synth2ë
-}Finished Timing Optimization : Time (s): cpu = 00:03:30 ; elapsed = 00:05:03 . Memory (MB): peak = 1115.129 ; gain = 966.715
+}Finished Timing Optimization : Time (s): cpu = 00:03:31 ; elapsed = 00:05:27 . Memory (MB): peak = 1115.438 ; gain = 967.039
 2default:default
 ¶
 6propagating constant %s across sequential element (%s)3333*oasys2
@@ -20573,7 +20581,7 @@ Hbinding instance '%s' in module '%s' to reference '%s' which has no pins115
 *\leon3gen.dsugen.dsu0/x0/r_reg[dsubre][2] 2default:defaultZ8-3333
 †
 %s*synth2ê
-|Finished Technology Mapping : Time (s): cpu = 00:04:00 ; elapsed = 00:05:35 . Memory (MB): peak = 1115.129 ; gain = 966.715
+|Finished Technology Mapping : Time (s): cpu = 00:04:01 ; elapsed = 00:05:59 . Memory (MB): peak = 1115.438 ; gain = 967.039
 2default:default
 D
 %s*synth25
@@ -20581,7 +20589,7 @@ D
 2default:default
 ö
 %s*synth2ä
-vFinished IO Insertion : Time (s): cpu = 00:04:01 ; elapsed = 00:05:36 . Memory (MB): peak = 1115.129 ; gain = 966.715
+vFinished IO Insertion : Time (s): cpu = 00:04:02 ; elapsed = 00:06:00 . Memory (MB): peak = 1115.438 ; gain = 967.039
 2default:default
 ;
 %s*synth2,
@@ -20610,11 +20618,11 @@ I+------+------------------+-------+---------+-------+------------------+
 2default:default
 ´
 %s*synth2õ
-ÜFinished Renaming Generated Instances : Time (s): cpu = 00:04:02 ; elapsed = 00:05:37 . Memory (MB): peak = 1115.129 ; gain = 966.715
+ÜFinished Renaming Generated Instances : Time (s): cpu = 00:04:03 ; elapsed = 00:06:00 . Memory (MB): peak = 1115.438 ; gain = 967.039
 2default:default
 ®
 %s*synth2ò
-ÉFinished Rebuilding User Hierarchy : Time (s): cpu = 00:04:03 ; elapsed = 00:05:38 . Memory (MB): peak = 1115.129 ; gain = 966.715
+ÉFinished Rebuilding User Hierarchy : Time (s): cpu = 00:04:04 ; elapsed = 00:06:02 . Memory (MB): peak = 1115.438 ; gain = 967.039
 2default:default
 ¢
 %s*synth2í
@@ -21805,7 +21813,7 @@ Z+------+-----------------------------------+-----------------------------------
 2default:default
 ß
 %s*synth2ó
-ÇFinished Writing Synthesis Report : Time (s): cpu = 00:04:04 ; elapsed = 00:05:39 . Memory (MB): peak = 1115.129 ; gain = 966.715
+ÇFinished Writing Synthesis Report : Time (s): cpu = 00:04:05 ; elapsed = 00:06:03 . Memory (MB): peak = 1115.438 ; gain = 967.039
 2default:default
 k
 %s*synth2\
@@ -21813,7 +21821,7 @@ HSynthesis finished with 0 errors, 0 critical warnings and 573 warnings.
 2default:default
 •
 %s*synth2ï
-ÄSynthesis Optimization Complete : Time (s): cpu = 00:04:04 ; elapsed = 00:05:39 . Memory (MB): peak = 1115.129 ; gain = 966.715
+ÄSynthesis Optimization Complete : Time (s): cpu = 00:04:05 ; elapsed = 00:06:03 . Memory (MB): peak = 1115.438 ; gain = 967.039
 2default:default
 ]
 -Analyzing %s Unisim elements for replacement
@@ -21868,10 +21876,10 @@ U
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2"
 synth_design: 2default:default2
-00:04:172default:default2
-00:05:472default:default2
-1189.2812default:default2
-1001.4412default:defaultZ17-268
+00:04:182default:default2
+00:06:082default:default2
+1189.7382default:default2
+1002.7302default:defaultZ17-268
 <
 %Done setting XDC timing constraints.
 35*timingZ38-35
@@ -21881,13 +21889,13 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 write_checkpoint: 2default:default2
 00:00:032default:default2
 00:00:092default:default2
-1190.6642default:default2
-1.3832default:defaultZ17-268
+1191.8052default:default2
+2.0662default:defaultZ17-268
 Ä
-treport_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.203 . Memory (MB): peak = 1190.664 ; gain = 0.000
+treport_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 1191.805 ; gain = 0.000
 *common
 w
 Exiting %s at %s...
 206*common2
 Vivado2default:default2,
-Tue Apr 01 09:56:57 20142default:defaultZ17-206
+Tue Apr 01 13:26:06 20142default:defaultZ17-206

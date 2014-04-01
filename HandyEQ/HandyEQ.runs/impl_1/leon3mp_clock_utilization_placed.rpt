@@ -1,7 +1,7 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date         : Tue Apr 01 12:40:10 2014
+| Date         : Tue Apr 01 13:29:00 2014
 | Host         : CSE-4225-05 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_clock_utilization -file leon3mp_clock_utilization_placed.rpt
 | Design       : leon3mp
@@ -239,18 +239,18 @@ add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg
 resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
-# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC_i_1" located at site "SLICE_X79Y102"
-#startgroup
-create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1
-add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1"}]]]
-resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
-#endgroup
-
 # Clock net "apb0/O63[0]" driven by instance "apb0/apb_reg_in_reg[15]_i_1" located at site "SLICE_X60Y93"
 #startgroup
 create_pblock CLKAG_apb0/O63[0]
 add_cells_to_pblock [get_pblocks  CLKAG_apb0/O63[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="apb0/O63[0]"}]]]
 resize_pblock [get_pblocks CLKAG_apb0/O63[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC_i_1" located at site "SLICE_X79Y102"
+#startgroup
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
 # Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[3]_LDC_i_1" located at site "SLICE_X84Y99"
