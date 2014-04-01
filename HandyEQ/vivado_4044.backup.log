@@ -2,8 +2,8 @@
 # Vivado v2013.4 (64-bit)
 # SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
 # IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
-# Start of session at: Tue Apr 01 12:36:13 2014
-# Process ID: 4044
+# Start of session at: Tue Apr 01 09:22:15 2014
+# Process ID: 3764
 # Log file: Z:/HandyEQ-HW/HandyEQ/vivado.log
 # Journal file: Z:/HandyEQ-HW/HandyEQ\vivado.jou
 #-----------------------------------------------------------
@@ -531,9 +531,73 @@ Import path for source Z:/HandyEQ-HW/HandyEQ/HandyEQ.srcs/constrs_1/imports/LEON
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2013.4/data/ip'.
-open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:41 . Memory (MB): peak = 999.750 ; gain = 141.285
-reset_run impl_1
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:01:01 . Memory (MB): peak = 936.055 ; gain = 64.445
 launch_runs impl_1
-[Tue Apr 01 12:38:36 2014] Launched impl_1...
+[Tue Apr 01 09:25:56 2014] Launched impl_1...
 Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 1038.973 ; gain = 4.266
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:23 . Memory (MB): peak = 997.539 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'launch_runs' was cancelled
+launch_runs impl_1 -to_step write_bitstream
+[Tue Apr 01 09:29:32 2014] Launched impl_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1043.090 ; gain = 36.629
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Tue Apr 01 09:45:25 2014] Launched synth_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/synth_1/runme.log
+[Tue Apr 01 09:45:25 2014] Launched impl_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:43 . Memory (MB): peak = 1087.199 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream
+[Tue Apr 01 09:47:51 2014] Launched synth_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/synth_1/runme.log
+[Tue Apr 01 09:47:51 2014] Launched impl_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:30 . Memory (MB): peak = 1087.199 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream
+[Tue Apr 01 09:49:29 2014] Launched synth_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/synth_1/runme.log
+[Tue Apr 01 09:49:29 2014] Launched impl_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 1087.199 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1
+[Tue Apr 01 09:50:44 2014] Launched synth_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/synth_1/runme.log
+[Tue Apr 01 09:50:44 2014] Launched impl_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:49 . Memory (MB): peak = 1087.199 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream
+[Tue Apr 01 10:00:36 2014] Launched impl_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 1087.199 ; gain = 0.000
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2013.4
+Loading clock regions from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2013.4/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2013.4/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/ConfigModes.xml
+Parsing XDC File [Z:/HandyEQ-HW/HandyEQ/.Xil/Vivado-3764-CSE-4225-05/dcp/leon3mp_early.xdc]
+Finished Parsing XDC File [Z:/HandyEQ-HW/HandyEQ/.Xil/Vivado-3764-CSE-4225-05/dcp/leon3mp_early.xdc]
+Parsing XDC File [Z:/HandyEQ-HW/HandyEQ/.Xil/Vivado-3764-CSE-4225-05/dcp/leon3mp.xdc]
+Finished Parsing XDC File [Z:/HandyEQ-HW/HandyEQ/.Xil/Vivado-3764-CSE-4225-05/dcp/leon3mp.xdc]
+Reading XDEF placement.
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1794.039 ; gain = 12.125
+Restoring placement.
+Restored 3246 out of 3246 XDEF sites from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+INFO: [Opt 31-138] Pushed 0 inverter(s).
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 37 instances were transformed.
+  IOBUF => IOBUF (OBUFT, IBUF): 31 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+open_run: Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2062.016 ; gain = 974.816

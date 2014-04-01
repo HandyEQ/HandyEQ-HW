@@ -2,28 +2,13 @@
 # Vivado v2013.4 (64-bit)
 # SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
 # IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
-# Start of session at: Tue Apr 01 09:22:15 2014
-# Process ID: 3764
+# Start of session at: Tue Apr 01 12:36:13 2014
+# Process ID: 4044
 # Log file: Z:/HandyEQ-HW/HandyEQ/vivado.log
 # Journal file: Z:/HandyEQ-HW/HandyEQ\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {Z:\HandyEQ-HW\HandyEQ\HandyEQ.xpr}
+reset_run impl_1
 launch_runs impl_1
 wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-open_run impl_1

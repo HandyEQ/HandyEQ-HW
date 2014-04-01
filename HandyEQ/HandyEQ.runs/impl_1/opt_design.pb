@@ -39,7 +39,7 @@ BPlease refer to the DRC report (report_drc) for more information.
 
 %s
 *constraints2r
-^Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 906.309 ; gain = 3.9492default:default
+^Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.188 . Memory (MB): peak = 906.629 ; gain = 3.9102default:default
 X
 
 Starting %s Task
@@ -72,7 +72,7 @@ B
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 929.473 ; gain = 23.1642default:default
+[Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 929.879 ; gain = 23.2502default:default
 l
 
 Phase %s%s
@@ -94,7 +94,7 @@ B
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 929.473 ; gain = 23.1642default:default
+[Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 929.879 ; gain = 23.2502default:default
 ]
 
 Phase %s%s
@@ -116,7 +116,7 @@ $Phase 3 Sweep | Checksum: 1da9e82dc
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 929.473 ; gain = 23.1642default:default
+[Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 929.879 ; gain = 23.2502default:default
 A
 5Ending Logic Optimization Task | Checksum: 1da9e82dc
 *common
@@ -124,7 +124,7 @@ A
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 929.473 ; gain = 23.1642default:default
+[Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 929.879 ; gain = 23.2502default:default
 8
 ,Implement Debug Cores | Checksum: 259b25ea4
 *common
@@ -151,7 +151,7 @@ D
 
 %s
 *constraints2r
-^Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.905 . Memory (MB): peak = 932.867 ; gain = 3.3952default:default
+^Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.858 . Memory (MB): peak = 932.305 ; gain = 2.4262default:default
 4
 Applying IDT optimizations ...
 9*pwroptZ34-9
@@ -184,7 +184,7 @@ A
 
 %s
 *constraints2q
-]Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1098.719 ; gain = 169.2462default:default
+]Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1099.090 ; gain = 169.2112default:default
 Q
 Releasing license: %s
 83*common2"
@@ -207,8 +207,8 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 opt_design: 2default:default2
 00:00:122default:default2
 00:00:122default:default2
-1098.7192default:default2
-196.4532default:defaultZ17-268
+1099.0902default:default2
+196.5122default:defaultZ17-268
 <
 %Done setting XDC timing constraints.
 35*timingZ38-35
@@ -225,17 +225,17 @@ A
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2)
 Write XDEF Complete: 2default:default2
-00:00:002default:default2 
+00:00:012default:default2 
 00:00:00.2812default:default2
-1098.7192default:default2
+1099.0902default:default2
 0.0002default:defaultZ17-268
 ÿ
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2&
 write_checkpoint: 2default:default2
-00:00:042default:default2
-00:00:122default:default2
-1098.7192default:default2
+00:00:032default:default2
+00:00:092default:default2
+1099.0902default:default2
 0.0002default:defaultZ17-268
 
 
