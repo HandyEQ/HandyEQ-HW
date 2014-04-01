@@ -839,3 +839,125 @@ selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL A
 // d:I (bT:JFrame): Vivado: addNotify
 selectButton (PAResourceAtoH.ClosePlanner_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, d:I)
 dismissDialog ("Vivado"); // d:I (bT:JFrame)
+expandTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // w:Q (v:u, bT:JFrame)
+// [GUI Memory]: 214 mb (+665kb) [00:41:27]
+// [GUI Memory]: 214 mb (+93kb) [00:47:48]
+// [GUI Memory]: 215 mb (+645kb) [00:53:59]
+// [GUI Memory]: 216 mb (+1129kb) [00:54:09]
+// [GUI Memory]: 217 mb (+1168kb) [00:54:23]
+// [GUI Memory]: 218 mb (+1646kb) [00:54:34]
+// Elapsed time: 870 seconds
+selectButton (PAResourceQtoZ.TaskBanner_CLOSE, (String) null); // j:JideButton (JPanel:JComponent, bT:JFrame)
+closeTask ("Implementation", "Implemented Design", "DesignTask.RESULTS_ANALYSIS");
+// af:bw (bT:JFrame): Confirm Close: addNotify
+selectButton (RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, af:bw)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 10:17:38 AM
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DESIGN_CLOSE
+// [Engine Memory]: 1,679 mb (+679kb) [00:55:01]
+// Tcl Message: close_design 
+dismissDialog ("Confirm Close"); // af:bw (bT:JFrame)
+selectCodeEditor ("grgpio.vhd", 292, 250); // aR:G (JPanel:JComponent, bT:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor ("leon3mp.vhd", 48, 485); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 48, 485, false, false, false, false, true); // aR:G (JPanel:JComponent, bT:JFrame) - DOUBLE CLICK
+setText (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "RsRx", true); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "RsRx"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "RsRx"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "RsRx"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "RsRx"); // j:am (c:JComboBox, bT:JFrame)
+// Elapsed time: 28 seconds
+selectCodeEditor ("leon3mp.vhd", 86, 296); // aR:G (JPanel:JComponent, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "RsRx"); // j:am (c:JComboBox, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 192, 395); // aR:G (JPanel:JComponent, bT:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor ("leon3mp.vhd", 330, 435); // aR:G (JPanel:JComponent, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "RsRx"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "RsRx"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "RsRx"); // j:am (c:JComboBox, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 186, 466); // aR:G (JPanel:JComponent, bT:JFrame)
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 10:22:43 AM
+// Elapsed time: 880 seconds
+selectCodeEditor ("Nexys4_Master.xdc", 433, 330); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 407, 294); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 431, 330); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 113, 257, false, false, false, true, false); // aR:G (JPanel:JComponent, bT:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_LINE_COMMENTS, "Toggle Line Comments"); // ah:JMenuItem (al:JPopupMenu, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 435, 402); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 66, 299, false, false, false, true, false); // aR:G (JPanel:JComponent, bT:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_LINE_COMMENTS, "Toggle Line Comments"); // ah:JMenuItem (al:JPopupMenu, bT:JFrame)
+// Elapsed time: 66 seconds
+selectCodeEditor ("Nexys4_Master.xdc", 241, 346); // aR:G (JPanel:JComponent, bT:JFrame)
+// Elapsed time: 25 seconds
+setText (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "jb"); // j:am (c:JComboBox, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 409, 397); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 159, 316, false, false, false, true, false); // aR:G (JPanel:JComponent, bT:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_LINE_COMMENTS, "Toggle Line Comments"); // ah:JMenuItem (al:JPopupMenu, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 524, 157); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 543, 163); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 549, 164); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 87, 82, false, false, false, true, false); // aR:G (JPanel:JComponent, bT:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_LINE_COMMENTS, "Toggle Line Comments"); // ah:JMenuItem (al:JPopupMenu, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 315, 69); // aR:G (JPanel:JComponent, bT:JFrame)
+// Elapsed time: 23 seconds
+selectCodeEditor ("Nexys4_Master.xdc", 289, 144); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 348, 161); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 296, 196); // aR:G (JPanel:JComponent, bT:JFrame)
+// Elapsed time: 13 seconds
+selectCodeEditor ("Nexys4_Master.xdc", 415, 265); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 48, 241, false, false, false, true, false); // aR:G (JPanel:JComponent, bT:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_LINE_COMMENTS, "Toggle Line Comments"); // ah:JMenuItem (al:JPopupMenu, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 292, 248); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 1, 230); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 349, 269); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 293, 350); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 350, 364); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 349, 418); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 295, 401); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 288, 449); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 346, 472); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 438, 474); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 381, 454); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 331, 351); // aR:G (JPanel:JComponent, bT:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 150 seconds
+selectCodeEditor ("Nexys4_Master.xdc", 492, 129); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 499, 179); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 500, 224); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 455, 334); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 455, 389); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 452, 430); // aR:G (JPanel:JComponent, bT:JFrame)
+// Elapsed time: 115 seconds
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 31); // w:Q (v:u, bT:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 31); // w:Q (v:u, bT:JFrame)
+// cb:I (bT:JFrame):  Generate Bitstream : addNotify
+// cb:I (bT:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Apr 01 10:42:40 2014] Launched synth_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/synth_1/runme.log [Tue Apr 01 10:42:40 2014] Launched impl_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:45 . Memory (MB): peak = 2075.660 ; gain = 0.000 
+// Tcl Message: not ready 
+// Elapsed time: 44 seconds
+dismissDialog ("Generate Bitstream"); // cb:I (bT:JFrame)
+// Elapsed time: 297 seconds
+selectButton (RDIResource.ProgressDialog_BACKGROUND, "Background"); // a:JButton (JPanel:JComponent, cb:I)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// O:af (bT:JFrame): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 10:52:43 AM
+// Elapsed time: 317 seconds
+selectRadioButton (PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a:JRadioButton (JPanel:JComponent, O:af)
+selectCheckBox (RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // v:JCheckBox (JPanel:JComponent, O:af): TRUE
+selectCheckBox (RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // v:JCheckBox (JPanel:JComponent, O:af): FALSE
+selectButton (RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, O:af)
+dismissDialog ("Bitstream Generation Completed"); // O:af (bT:JFrame)

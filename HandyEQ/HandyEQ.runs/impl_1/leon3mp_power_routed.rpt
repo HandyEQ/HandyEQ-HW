@@ -1,7 +1,7 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date             : Tue Apr 01 09:59:50 2014
+| Date             : Tue Apr 01 10:51:48 2014
 | Host             : CSE-4225-05 running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file leon3mp_power_routed.rpt -pb leon3mp_power_summary_routed.pb
 | Design           : leon3mp
@@ -33,7 +33,6 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.384 |
 | Dynamic (W)              | 0.286 |
 | Device Static (W)        | 0.098 |
-| Total Off-Chip Power (W) | 0.000 |
 | Effective TJA (C/W)      | 4.6   |
 | Max Ambient (C)          | 83.2  |
 | Junction Temperature (C) | 26.8  |
@@ -52,7 +51,7 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.015 |       10 |       --- |             --- |
 | Slice Logic              |     0.013 |    16652 |       --- |             --- |
-|   LUT as Logic           |     0.013 |     9869 |     63400 |           15.56 |
+|   LUT as Logic           |     0.013 |     9868 |     63400 |           15.56 |
 |   Register               |    <0.001 |     4691 |    126800 |            3.69 |
 |   CARRY4                 |    <0.001 |      202 |     15850 |            1.27 |
 |   F7/F8 Muxes            |    <0.001 |      320 |     63400 |            0.50 |
@@ -77,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.092 |       0.076 |      0.016 |
+| Vccint    |       1.000 |     0.091 |       0.075 |      0.016 |
 | Vccaux    |       1.800 |     0.120 |       0.102 |      0.018 |
 | Vcco33    |       3.300 |     0.012 |       0.008 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |

@@ -601,3 +601,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
 
 open_run: Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2062.016 ; gain = 974.816
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Tue Apr 01 10:42:40 2014] Launched synth_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/synth_1/runme.log
+[Tue Apr 01 10:42:40 2014] Launched impl_1...
+Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:45 . Memory (MB): peak = 2075.660 ; gain = 0.000
+not ready
