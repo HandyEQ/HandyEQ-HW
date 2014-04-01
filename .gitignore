@@ -8,6 +8,7 @@ HandyEQ/*.jou
 HandyEQ/*.log
 HandyEQ/*.png
 HandyEQ/*.str
+HandyEQ/Thumbs.db
 Firmware/*.c~
 Firmware/Makefile~
 Firmware/*.srec
