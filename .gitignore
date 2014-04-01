@@ -1,5 +1,9 @@
-*.srec
-HandyEQ\HandyEQ.runs\*
-HandyEQ\HandyEQ.cache\*
-HandyEQ\HandyEQ.data\*
-HandyEQ\HandyEQ.hw\*
+HandyEQ/HandyEQ.cache/
+HandyEQ/HandyEQ.hw/
+HandyEQ/*.jou
+HandyEQ/*.log
+HandyEQ/*.png
+HandyEQ/*.str
+Firmware/*.c~
+Firmware/Makefile~
+Firmware/*.srec
