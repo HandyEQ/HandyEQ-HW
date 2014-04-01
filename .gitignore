@@ -1,4 +1,6 @@
 *.srec
 HandyEQ/HandyEQ.runs/*
-HandyEQ/*.jou
-HandyEQ/*.log
+*.jou
+*.log
+*.c~
+Makefile~
