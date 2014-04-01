@@ -39,11 +39,7 @@ BPlease refer to the DRC report (report_drc) for more information.
 
 %s
 *constraints2r
-<<<<<<< HEAD
-^Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.422 . Memory (MB): peak = 903.563 ; gain = 3.2542default:default
-=======
-^Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.418 . Memory (MB): peak = 902.781 ; gain = 2.4842default:default
->>>>>>> UART
+^Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 906.309 ; gain = 3.9492default:default
 X
 
 Starting %s Task
@@ -70,21 +66,13 @@ B
 49*opt2
 02default:defaultZ31-49
 3
-<<<<<<< HEAD
-'Phase 1 Retarget | Checksum: 197883aca
-=======
-'Phase 1 Retarget | Checksum: 12cd456a1
->>>>>>> UART
+'Phase 1 Retarget | Checksum: 1d54c4372
 *common
 †
 
 %s
 *constraints2o
-<<<<<<< HEAD
-[Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 924.754 ; gain = 21.1912default:default
-=======
-[Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 925.563 ; gain = 22.7812default:default
->>>>>>> UART
+[Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 929.473 ; gain = 23.1642default:default
 l
 
 Phase %s%s
@@ -98,25 +86,15 @@ C
 B
 Eliminated %s cells.
 10*opt2
-<<<<<<< HEAD
-1862default:defaultZ31-10
+1572default:defaultZ31-10
 ?
-3Phase 2 Constant Propagation | Checksum: 28a5812bf
-=======
-1582default:defaultZ31-10
-?
-3Phase 2 Constant Propagation | Checksum: 2a715dd24
->>>>>>> UART
+3Phase 2 Constant Propagation | Checksum: 2fe87d1ee
 *common
 †
 
 %s
 *constraints2o
-<<<<<<< HEAD
-[Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 924.754 ; gain = 21.1912default:default
-=======
-[Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 925.563 ; gain = 22.7812default:default
->>>>>>> UART
+[Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 929.473 ; gain = 23.1642default:default
 ]
 
 Phase %s%s
@@ -126,57 +104,32 @@ Phase %s%s
 M
  Eliminated %s unconnected nets.
 12*opt2
-<<<<<<< HEAD
-9982default:defaultZ31-12
+9402default:defaultZ31-12
 L
 !Eliminated %s unconnected cells.
 11*opt2
 92default:defaultZ31-11
 0
-$Phase 3 Sweep | Checksum: 259255437
-=======
-9352default:defaultZ31-12
-M
-!Eliminated %s unconnected cells.
-11*opt2
-102default:defaultZ31-11
-0
-$Phase 3 Sweep | Checksum: 1f135072f
->>>>>>> UART
+$Phase 3 Sweep | Checksum: 1da9e82dc
 *common
 †
 
 %s
 *constraints2o
-<<<<<<< HEAD
-[Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 924.754 ; gain = 21.1912default:default
+[Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 929.473 ; gain = 23.1642default:default
 A
-5Ending Logic Optimization Task | Checksum: 259255437
-=======
-[Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 925.563 ; gain = 22.7812default:default
-A
-5Ending Logic Optimization Task | Checksum: 1f135072f
->>>>>>> UART
+5Ending Logic Optimization Task | Checksum: 1da9e82dc
 *common
 †
 
 %s
 *constraints2o
-<<<<<<< HEAD
-[Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 924.754 ; gain = 21.1912default:default
+[Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 929.473 ; gain = 23.1642default:default
 8
-,Implement Debug Cores | Checksum: 144a990c7
+,Implement Debug Cores | Checksum: 259b25ea4
 *common
 5
-)Logic Optimization | Checksum: 144a990c7
-=======
-[Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 925.563 ; gain = 22.7812default:default
-8
-,Implement Debug Cores | Checksum: 1f5758622
-*common
-5
-)Logic Optimization | Checksum: 1f5758622
->>>>>>> UART
+)Logic Optimization | Checksum: 259b25ea4
 *common
 X
 
@@ -192,21 +145,13 @@ Starting %s Task
 %Done setting XDC timing constraints.
 35*timingZ38-35
 D
-<<<<<<< HEAD
-8Ending PowerOpt TimerUpdates Task | Checksum: 259255437
-=======
-8Ending PowerOpt TimerUpdates Task | Checksum: 1f135072f
->>>>>>> UART
+8Ending PowerOpt TimerUpdates Task | Checksum: 1da9e82dc
 *common
-…
+‰
 
 %s
-*constraints2n
-<<<<<<< HEAD
-ZTime (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 926.918 ; gain = 2.1642default:default
-=======
-ZTime (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 927.973 ; gain = 2.4102default:default
->>>>>>> UART
+*constraints2r
+^Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.905 . Memory (MB): peak = 932.867 ; gain = 3.3952default:default
 4
 Applying IDT optimizations ...
 9*pwroptZ34-9
@@ -233,21 +178,13 @@ CNumber of BRAM Ports augmented: %s newly gated: %s Total Ports: %s
 22default:default2
 502default:defaultZ34-65
 A
-<<<<<<< HEAD
-5Ending Power Optimization Task | Checksum: 1c945d798
-=======
-5Ending Power Optimization Task | Checksum: 22445addb
->>>>>>> UART
+5Ending Power Optimization Task | Checksum: 24d13aa90
 *common
 ˆ
 
 %s
 *constraints2q
-<<<<<<< HEAD
-]Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 1097.078 ; gain = 172.3242default:default
-=======
-]Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 1103.957 ; gain = 178.3952default:default
->>>>>>> UART
+]Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1098.719 ; gain = 169.2462default:default
 Q
 Releasing license: %s
 83*common2"
@@ -255,11 +192,7 @@ Q
 ½
 G%s Infos, %s Warnings, %s Critical Warnings and %s Errors encountered.
 28*	vivadotcl2
-<<<<<<< HEAD
-262default:default2
-=======
 272default:default2
->>>>>>> UART
 02default:default2
 02default:default2
 02default:defaultZ4-41
@@ -272,17 +205,10 @@ opt_design2default:defaultZ4-42
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2 
 opt_design: 2default:default2
-<<<<<<< HEAD
-00:00:232default:default2
-00:00:232default:default2
-1097.0782default:default2
-196.9492default:defaultZ17-268
-=======
-00:00:212default:default2
-00:00:222default:default2
-1103.9572default:default2
-203.7702default:defaultZ17-268
->>>>>>> UART
+00:00:122default:default2
+00:00:122default:default2
+1098.7192default:default2
+196.4532default:defaultZ17-268
 <
 %Done setting XDC timing constraints.
 35*timingZ38-35
@@ -299,29 +225,17 @@ A
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2)
 Write XDEF Complete: 2default:default2
-<<<<<<< HEAD
-00:00:012default:default2 
-00:00:00.4222default:default2
-1097.0782default:default2
-=======
 00:00:002default:default2 
-00:00:00.4112default:default2
-1103.9572default:default2
->>>>>>> UART
+00:00:00.2812default:default2
+1098.7192default:default2
 0.0002default:defaultZ17-268
 ÿ
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2&
 write_checkpoint: 2default:default2
-<<<<<<< HEAD
 00:00:042default:default2
-00:00:162default:default2
-1097.0782default:default2
-=======
-00:00:032default:default2
-00:00:132default:default2
-1103.9572default:default2
->>>>>>> UART
+00:00:122default:default2
+1098.7192default:default2
 0.0002default:defaultZ17-268
 
 

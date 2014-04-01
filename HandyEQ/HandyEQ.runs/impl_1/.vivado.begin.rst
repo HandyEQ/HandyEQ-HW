@@ -1,23 +1,10 @@
-<<<<<<< HEAD
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="arpad" Host="XDAT06" Pid="272">
+    <Process Command="vivado.bat" Owner="bregell" Host="CSE-4225-05" Pid="980">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="arpad" Host="XDAT06" Pid="2140">
+    <Process Command="vivado.bat" Owner="bregell" Host="CSE-4225-05" Pid="2732">
     </Process>
 </ProcessHandle>
-=======
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sebkarl" Host="XDAT26" Pid="4732">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="sebkarl" Host="XDAT26" Pid="2764">
-    </Process>
-</ProcessHandle>
->>>>>>> UART

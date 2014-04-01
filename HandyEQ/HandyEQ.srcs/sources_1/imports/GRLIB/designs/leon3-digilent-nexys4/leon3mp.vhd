@@ -38,7 +38,6 @@ use gaisler.misc.all;
 use gaisler.spi.all;
 use gaisler.net.all;
 use gaisler.jtag.all;
---use gaisler.pwm.all; -- PROBLEM
 --pragma translate_off
 use gaisler.sim.all;
 library unisim;
@@ -87,10 +86,14 @@ entity leon3mp is
     --an              : out   std_logic_vector(7 downto 0);
 
     -- LEDs
-    Led             : out   std_logic_vector(15 downto 0);
+    --Led             : out   std_logic_vector(15 downto 0);
 
     -- Switches
-    sw              : in    std_logic_vector(15 downto 0);
+    sw              : in    std_logic_vector(0 downto 0);
+    
+    --gpio
+    gpioA           : inout std_logic_vector(7 downto 0);
+    gpioB           : inout std_logic_vector(5 downto 0);
 
     -- Buttons
     btnCpuResetn    : in    std_ulogic;
@@ -137,9 +140,11 @@ entity leon3mp is
     RsRx            : in    std_logic;
     RsTx            : out   std_logic;
     
+    --XADC
     vauxp3          : in    std_logic;
     vauxn3          : in    std_logic;
     
+    --PWM
     PWM_out_port         : out    std_logic;
     SD_audio_out_port    : out    std_logic
   );
@@ -251,9 +256,11 @@ architecture rtl of leon3mp is
   signal memi : memory_in_type;
   signal memo : memory_out_type;
   signal wpo  : wprot_out_type;
-
-  signal gpioi : gpio_in_type;
-  signal gpioo : gpio_out_type;
+  --GPIO
+  signal gpioiA : gpio_in_type;
+  signal gpiooA : gpio_out_type;
+  signal gpioiB : gpio_in_type;
+  signal gpiooB : gpio_out_type;
 
   signal apbi  : apb_slv_in_type;
   signal apbo  : apb_slv_out_vector := (others => apb_none);
@@ -297,7 +304,7 @@ architecture rtl of leon3mp is
   signal lock               : std_logic;
   
   -- GRPWM signals
---  signal pwm : grpwm_out_type;
+  -- signal pwm : grpwm_out_type;
   signal PWM_out_signal         :    std_logic;
   signal SD_audio_out_signal    :    std_logic;
 
@@ -375,8 +382,8 @@ begin
         port map (clkm, rstn, ahbmi, ahbmo(i), ahbsi, ahbso, irqi(i), irqo(i), dbgi(i), dbgo(i));
     end generate;
 
-   -- led(3)  <= not dbgo(0).error;
-   -- led(2)  <= not dsuo.active;
+   --led(3)  <= not dbgo(0).error;
+   --led(2)  <= not dsuo.active;
 
     -- LEON3 Debug Support Unit    
     dsugen : if CFG_DSU = 1 generate
@@ -474,7 +481,9 @@ begin
     generic map (hindex => 1, haddr => CFG_APBADDR)
     port map (rstn, clkm, ahbsi, ahbso(1), apbi, apbo);
 
-  -- Interrupt controller
+-----------------------------------------------------------------------
+--- Interrupt Controller ----------------------------------------------
+-----------------------------------------------------------------------
   irqctrl : if CFG_IRQ3_ENABLE /= 0 generate
     irqctrl0 : irqmp
       generic map (pindex => 2, paddr => 2, ncpu => CFG_NCPU)
@@ -487,7 +496,9 @@ begin
     apbo(2) <= apb_none;
   end generate;
 
-  -- Time Unit
+-----------------------------------------------------------------------
+--- Time Unit ---------------------------------------------------------
+-----------------------------------------------------------------------
   gpt : if CFG_GPT_ENABLE /= 0 generate
     timer0 : gptimer
       generic map (pindex => 3, paddr => 3, pirq => CFG_GPT_IRQ,
@@ -499,8 +510,11 @@ begin
   end generate;
   notim : if CFG_GPT_ENABLE = 0 generate apbo(3) <= apb_none; end generate;
 
+-----------------------------------------------------------------------
+--- UART1 -------------------------------------------------------------
+-----------------------------------------------------------------------
   ua1 : if CFG_UART1_ENABLE /= 0 generate
-    uart1 : apbuart                     -- UART 1
+    uart1 : apbuart                     
       generic map (pindex   => 1, paddr => 1, pirq => 2, console => dbguart, fifosize => CFG_UART1_FIFO)
       port map (rstn, clkm, apbi, apbo(1), u1i, u1o);
     --u1i.rxd    <= rxd1;
@@ -511,8 +525,8 @@ begin
     sertx_pad : outpad generic map (tech => padtech) port map (RsTx, u1o.txd);
 --    serrx_pad : inpad generic map (tech  => padtech) port map (dsurx, rxd1);
 --    sertx_pad : outpad generic map (tech => padtech) port map (dsutx, txd1);
-    Led(0) <= not u1i.rxd;
-    Led(1) <= not u1o.txd;
+    --Led(0) <= not u1i.rxd;
+    --Led(1) <= not u1o.txd;
   end generate;
   noua0 : if CFG_UART1_ENABLE = 0 generate apbo(1) <= apb_none; end generate;
 
@@ -584,6 +598,42 @@ begin
   nram : if CFG_AHBRAMEN = 0 generate ahbso(3) <= ahbs_none; end generate;
 
 -----------------------------------------------------------------------
+---  GPIOA (APB 0x80000B00) -------------------------------------------
+-----------------------------------------------------------------------
+
+  gpio1 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
+    --gpioA(3 downto 0) <= sw(15 downto 12);
+    --Led(15 downto 12) <= gpioA(7 downto 4); 
+    grgpio1: grgpio
+      generic map( pindex => 11, paddr => 11, imask => CFG_GRGPIO_IMASK, nbits => 8)
+    port map( rstn, clkm, apbi, apbo(11), gpioiA, gpiooA);
+    
+    pio_pads : for i in 0 to 7 generate
+      pio_pad1 : iopad generic map (tech => padtech)
+        port map (gpioA(i), gpiooA.dout(i), gpiooA.oen(i), gpioiA.din(i));
+    end generate;
+  end generate;
+   
+-----------------------------------------------------------------------
+---  GPIOB (APB 0x80000C00) -------------------------------------------
+-----------------------------------------------------------------------
+
+-- modify signals of 2 port maps
+
+ gpio2 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
+   --gpioB(2 downto 0) <= sw(11 downto 9);
+   --Led(11 downto 9) <= gpioB(5 downto 3); 
+   grgpio2: grgpio
+     generic map( pindex => 12, paddr => 12, imask => CFG_GRGPIO_IMASK, nbits => 6)
+     port map( rstn, clkm, apbi, apbo(12), gpioiB, gpiooB);
+    
+     pio_pads : for i in 0 to 5 generate
+       pio_pad2 : iopad generic map (tech => padtech)
+         port map (gpioB(i), gpiooB.dout(i), gpiooB.oen(i), gpioiB.din(i));
+     end generate;
+ end generate;
+
+-----------------------------------------------------------------------
 --  Test report module, only used for simulation ----------------------
 -----------------------------------------------------------------------
 
@@ -599,17 +649,6 @@ begin
   nam1 : for i in (CFG_NCPU+CFG_AHB_UART+CFG_AHB_JTAG+CFG_GRETH+1) to NAHBMST-1 generate
     ahbmo(i) <= ahbm_none;
   end generate;
-
------------------------------------------------------------------------
----  GRPWM core  ---------------------------------------
------------------------------------------------------------------------
-
---grpwm0 : grpwm	generic map (pindex => 8, paddr => 8, pmask => 16#FFF#, pirq => 8)
---	port map (rstn, clk, apbi, apbo(8), pwm);
---	
----- Pads for GRPWM core
---pwm_pad : outpadv generic map (tech => padtech, width => 6)
---	port map (pwmo, pwm.pwm);
 	
 -----------------------------------------------------------------------
 ---  Boot message  ----------------------------------------------------

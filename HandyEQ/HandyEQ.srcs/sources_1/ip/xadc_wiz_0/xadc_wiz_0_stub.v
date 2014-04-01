@@ -1,10 +1,10 @@
 // Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-// Date        : Thu Feb 27 19:38:37 2014
-// Host        : CSE-4225-11 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode synth_stub {y:/DAT096-Embedded System
-//               Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/designs/leon3-digilent-nexys4/Leon3_ADC/Leon3_ADC.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v}
+// Date        : Mon Mar 31 18:43:27 2014
+// Host        : CE-PC56 running 64-bit Service Pack 1  (build 7601)
+// Command     : write_verilog -force -mode synth_stub
+//               Y:/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v
 // Design      : xadc_wiz_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-2

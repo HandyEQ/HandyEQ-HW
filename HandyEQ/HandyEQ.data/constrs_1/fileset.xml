@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?>
-<DARoots Version="1" Minor="30">
-  <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
-    <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/imports/leon3-digilent-nexys4/leon3mp.ucf">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/leon3mp.ucf"/>
-        <Attr Name="ImportTime" Val="1395758047"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/constrs_1/imports/new/leon3mp.xdc">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/grlib-gpl-1.3.4-b4140/designs/leon3-digilent-nexys4/project_1/project_1.srcs/constrs_1/new/leon3mp.xdc"/>
-        <Attr Name="ImportTime" Val="1395761247"/>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInImplementation" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
-    <Config>
-      <Option Name="ConstrsType" Val="XDC"/>
-    </Config>
-  </FileSet>
-</DARoots>
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <DARoots Version="1" Minor="30">
   <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -48,4 +18,3 @@
     </Config>
   </FileSet>
 </DARoots>
->>>>>>> UART

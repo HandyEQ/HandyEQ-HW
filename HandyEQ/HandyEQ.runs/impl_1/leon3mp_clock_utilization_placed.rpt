@@ -1,13 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-<<<<<<< HEAD
-| Date         : Thu Mar 27 16:06:13 2014
-| Host         : XDAT06 running 64-bit Service Pack 1  (build 7601)
-=======
-| Date         : Thu Mar 27 16:02:08 2014
-| Host         : XDAT26 running 64-bit Service Pack 1  (build 7601)
->>>>>>> UART
+| Date         : Tue Apr 01 09:58:35 2014
+| Host         : CSE-4225-05 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_clock_utilization -file leon3mp_clock_utilization_placed.rpt
 | Design       : leon3mp
 | Device       : xc7a100t
@@ -24,15 +19,11 @@ Table of Contents
 5. Details of I/O Clocks
 6. Details of Local Clocks
 7. Clock Regions : Key Resource Utilization
-8. Net wise resources used in clock region X1Y0
-9. Net wise resources used in clock region X0Y1
-10. Net wise resources used in clock region X1Y1
-11. Net wise resources used in clock region X0Y2
-12. Net wise resources used in clock region X1Y2
-<<<<<<< HEAD
-13. Net wise resources used in clock region X0Y3
-=======
->>>>>>> UART
+8. Net wise resources used in clock region X0Y1
+9. Net wise resources used in clock region X1Y1
+10. Net wise resources used in clock region X0Y2
+11. Net wise resources used in clock region X1Y2
+12. Net wise resources used in clock region X0Y3
 
 1. Clock Primitive Utilization
 ------------------------------
@@ -58,15 +49,9 @@ Table of Contents
 | Index | BUFG Cell                                             | Net Name                                        | BELs | Sites | Locked | MaxDelay (ns) | Skew (ns) |
 +-------+-------------------------------------------------------+-------------------------------------------------+------+-------+--------+---------------+-----------+
 |     1 | bufgclk0                                              | O                                               |    1 |     1 |     no |         2.389 |     0.119 |
-<<<<<<< HEAD
-|     2 | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/buf2.buf | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1 |  117 |    38 |     no |         1.505 |     0.146 |
-|     3 | bufgclk45                                             | n_0_bufgclk45                                   |  343 |   137 |     no |         1.654 |     0.298 |
-|     4 | clkgen0/xc7l.v/bufgclk0                               | clkgen0/xc7l.v/O1                               | 4422 |  1972 |     no |         1.625 |     0.296 |
-=======
-|     2 | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/buf2.buf | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1 |  117 |    43 |     no |         1.510 |     0.136 |
-|     3 | bufgclk45                                             | n_0_bufgclk45                                   |  343 |   151 |     no |         1.589 |     0.237 |
-|     4 | clkgen0/xc7l.v/bufgclk0                               | clkgen0/xc7l.v/O1                               | 4248 |  1964 |     no |         1.698 |     0.416 |
->>>>>>> UART
+|     2 | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/buf2.buf | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1 |  117 |    41 |     no |         1.502 |     0.142 |
+|     3 | bufgclk45                                             | n_0_bufgclk45                                   |  343 |   134 |     no |         1.661 |     0.288 |
+|     4 | clkgen0/xc7l.v/bufgclk0                               | clkgen0/xc7l.v/clkm                             | 4304 |  1964 |     no |         1.594 |     0.312 |
 +-------+-------------------------------------------------------+-------------------------------------------------+------+-------+--------+---------------+-----------+
 
 
@@ -82,25 +67,22 @@ Table of Contents
 6. Details of Local Clocks
 --------------------------
 
-<<<<<<< HEAD
-=======
 +-------+-------------------------------------------------+-----------------------------------------------------+--------------+--------+---------------+-----------+
 |       |                                                 |                                                     |   Num Loads  |        |               |           |
 +-------+-------------------------------------------------+-----------------------------------------------------+------+-------+--------+---------------+-----------+
 | Index | Local Clk Src                                   | Net Name                                            | BELs | Sites | Locked | MaxDelay (ns) | Skew (ns) |
 +-------+-------------------------------------------------+-----------------------------------------------------+------+-------+--------+---------------+-----------+
-|     1 | PWMapb_map/PWM_module/PWM_sample_reg[2]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1 |    2 |     2 |     no |         0.479 |     0.151 |
-|     2 | PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1 |    2 |     2 |     no |         0.502 |     0.058 |
-|     3 | PWMapb_map/PWM_module/PWM_sample_reg[3]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1 |    2 |     2 |     no |         0.502 |     0.058 |
-|     4 | PWMapb_map/PWM_module/PWM_sample_reg[0]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1 |    2 |     2 |     no |         0.502 |     0.052 |
-|     5 | PWMapb_map/PWM_module/PWM_sample_reg[6]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1 |    2 |     2 |     no |         0.502 |     0.056 |
-|     6 | PWMapb_map/PWM_module/PWM_sample_reg[5]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1 |    2 |     2 |     no |         0.479 |     0.109 |
-|     7 | PWMapb_map/PWM_module/PWM_sample_reg[1]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1 |    2 |     2 |     no |         0.568 |     0.094 |
-|     8 | apb0/apb_reg_in_reg[15]_i_1                     | apb0/E[0]                                           |    7 |     5 |     no |         0.962 |     0.200 |
+|     1 | PWMapb_map/PWM_module/PWM_sample_reg[1]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1 |    2 |     2 |     no |         0.537 |     0.110 |
+|     2 | PWMapb_map/PWM_module/PWM_sample_reg[0]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1 |    2 |     2 |     no |         0.537 |     0.087 |
+|     3 | PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1 |    2 |     2 |     no |         0.481 |     0.157 |
+|     4 | PWMapb_map/PWM_module/PWM_sample_reg[3]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1 |    2 |     2 |     no |         0.667 |     0.219 |
+|     5 | PWMapb_map/PWM_module/PWM_sample_reg[5]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1 |    2 |     2 |     no |         0.514 |     0.051 |
+|     6 | PWMapb_map/PWM_module/PWM_sample_reg[2]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1 |    2 |     2 |     no |         0.620 |     0.124 |
+|     7 | PWMapb_map/PWM_module/PWM_sample_reg[6]_LDC_i_1 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1 |    2 |     2 |     no |         0.540 |     0.094 |
+|     8 | apb0/apb_reg_in_reg[15]_i_1                     | apb0/O63[0]                                         |    7 |     4 |     no |         1.180 |     0.290 |
 +-------+-------------------------------------------------+-----------------------------------------------------+------+-------+--------+---------------+-----------+
 
 
->>>>>>> UART
 7. Clock Regions : Key Resource Utilization
 -------------------------------------------
 
@@ -110,118 +92,69 @@ Table of Contents
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 20800 |    0 |  2400 |    0 |    40 |    0 |    10 |    0 |    20 |
-<<<<<<< HEAD
-| X1Y0              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 |   13 | 12000 |    0 |  2200 |    0 |    80 |    0 |    20 |    0 |    40 |
-| X0Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2074 | 16000 |   11 |  2400 |    4 |    40 |    6 |    10 |    4 |    20 |
-| X1Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2189 | 15200 |   48 |  2600 |    8 |   120 |    7 |    30 |    0 |    40 |
-| X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  407 | 16000 |    0 |  2400 |    0 |    40 |    0 |    10 |    0 |    20 |
-| X1Y2              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  110 | 15200 |    0 |  2600 |    0 |   120 |    0 |    30 |    0 |    40 |
-| X0Y3              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    3 | 20800 |    0 |  2400 |    0 |    40 |    0 |    10 |    0 |    20 |
-=======
-| X1Y0              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 |   31 | 12000 |    0 |  2200 |    0 |    80 |    0 |    20 |    0 |    40 |
-| X0Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1494 | 16000 |   48 |  2400 |    0 |    40 |    3 |    10 |    0 |    20 |
-| X1Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2114 | 15200 |   11 |  2600 |   12 |   120 |   10 |    30 |    4 |    40 |
+| X1Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 |    0 | 12000 |    0 |  2200 |    0 |    80 |    0 |    20 |    0 |    40 |
+| X0Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2171 | 16000 |   11 |  2400 |    4 |    40 |    6 |    10 |    4 |    20 |
+| X1Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1878 | 15200 |   48 |  2600 |    8 |   120 |    7 |    30 |    0 |    40 |
 | X0Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  478 | 16000 |    0 |  2400 |    0 |    40 |    0 |    10 |    0 |    20 |
-| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  518 | 15200 |    0 |  2600 |    0 |   120 |    0 |    30 |    0 |    40 |
-| X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 20800 |    0 |  2400 |    0 |    40 |    0 |    10 |    0 |    20 |
->>>>>>> UART
+| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  162 | 15200 |    0 |  2600 |    0 |   120 |    0 |    30 |    0 |    40 |
+| X0Y3              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    2 | 20800 |    0 |  2400 |    0 |    40 |    0 |    10 |    0 |    20 |
 | X1Y3              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     1 |    0 |     0 |    0 |     0 |    0 | 10800 |    0 |  2000 |    0 |    60 |    0 |    15 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * RAMB36 site can be used as two RAMB18/FIFO18 sites
 
 
-8. Net wise resources used in clock region X1Y0
+8. Net wise resources used in clock region X0Y1
 -----------------------------------------------
 
-<<<<<<< HEAD
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
+| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s | PLLs |                                  Clock Net Name |
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   63 |     0 |        0 |    0 | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1 |
+| BUFG        |   no   |         0 |       0 |        16 |       0 |       0 | 2108 |    11 |        2 |    0 | clkgen0/xc7l.v/clkm                             |
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
+
+
+9. Net wise resources used in clock region X1Y1
+-----------------------------------------------
+
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
+| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s | PLLs |                                  Clock Net Name |
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   54 |     0 |        0 |    0 | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1 |
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |  340 |     0 |        0 |    0 | n_0_bufgclk45                                   |
+| BUFG        |   no   |         0 |       0 |        20 |       0 |       0 | 1478 |    48 |        0 |    0 | clkgen0/xc7l.v/clkm                             |
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
+
+
+10. Net wise resources used in clock region X0Y2
+------------------------------------------------
+
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+---------------------+
+| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | PLLs |      Clock Net Name |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+---------------------+
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   1 |     0 |        0 |    0 | n_0_bufgclk45       |
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 | 477 |     0 |        0 |    0 | clkgen0/xc7l.v/clkm |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+---------------------+
+
+
+11. Net wise resources used in clock region X1Y2
+------------------------------------------------
+
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+---------------------+
+| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | PLLs |      Clock Net Name |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+---------------------+
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 | 154 |     0 |        0 |    0 | clkgen0/xc7l.v/clkm |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+---------------------+
+
+
+12. Net wise resources used in clock region X0Y3
+------------------------------------------------
+
 +-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+----------------+
 | Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | PLLs | Clock Net Name |
 +-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+----------------+
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |  13 |     0 |        0 |    0 | n_0_bufgclk45  |
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   2 |     0 |        0 |    0 | n_0_bufgclk45  |
 +-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+----------------+
-=======
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
-| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | PLLs |    Clock Net Name |
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |  31 |     0 |        0 |    0 | clkgen0/xc7l.v/O1 |
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
->>>>>>> UART
-
-
-9. Net wise resources used in clock region X0Y1
------------------------------------------------
-
-+-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
-| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s | PLLs |                                  Clock Net Name |
-+-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
-<<<<<<< HEAD
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   53 |     0 |        0 |    0 | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1 |
-| BUFG        |   no   |         0 |       0 |        16 |       0 |       0 | 2021 |    11 |        2 |    0 | clkgen0/xc7l.v/O1                               |
-=======
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   45 |     0 |        0 |    0 | n_0_bufgclk45                                   |
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   58 |     0 |        0 |    0 | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1 |
-| BUFG        |   no   |         0 |       0 |         6 |       0 |       0 | 1377 |    48 |        0 |    0 | clkgen0/xc7l.v/O1                               |
->>>>>>> UART
-+-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
-
-
-10. Net wise resources used in clock region X1Y1
-------------------------------------------------
-
-+-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
-| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s | PLLs |                                  Clock Net Name |
-+-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
-<<<<<<< HEAD
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   64 |     0 |        0 |    0 | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1 |
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |  291 |     0 |        0 |    0 | n_0_bufgclk45                                   |
-| BUFG        |   no   |         0 |       0 |        20 |       0 |       0 | 1834 |    48 |        0 |    0 | clkgen0/xc7l.v/O1                               |
-=======
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |    5 |     0 |        0 |    0 | n_0_bufgclk45                                   |
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   59 |     0 |        0 |    0 | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1 |
-| BUFG        |   no   |         0 |       0 |        30 |       0 |       0 | 2050 |    11 |        2 |    0 | clkgen0/xc7l.v/O1                               |
->>>>>>> UART
-+-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
-
-
-11. Net wise resources used in clock region X0Y2
-------------------------------------------------
-
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
-| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | PLLs |    Clock Net Name |
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
-<<<<<<< HEAD
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 | 407 |     0 |        0 |    0 | clkgen0/xc7l.v/O1 |
-=======
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 | 185 |     0 |        0 |    0 | clkgen0/xc7l.v/O1 |
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 | 293 |     0 |        0 |    0 | n_0_bufgclk45     |
->>>>>>> UART
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
-
-
-12. Net wise resources used in clock region X1Y2
-------------------------------------------------
-
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
-| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | PLLs |    Clock Net Name |
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
-<<<<<<< HEAD
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |  37 |     0 |        0 |    0 | n_0_bufgclk45     |
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |  73 |     0 |        0 |    0 | clkgen0/xc7l.v/O1 |
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
-
-
-13. Net wise resources used in clock region X0Y3
-------------------------------------------------
-
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
-| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | PLLs |    Clock Net Name |
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   1 |     0 |        0 |    0 | clkgen0/xc7l.v/O1 |
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   2 |     0 |        0 |    0 | n_0_bufgclk45     |
-=======
-| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 | 518 |     0 |        0 |    0 | clkgen0/xc7l.v/O1 |
->>>>>>> UART
-+-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
 
 
 
@@ -264,11 +197,11 @@ add_cells_to_pblock [get_pblocks  CLKAG_n_0_bufgclk45] [get_cells  -filter { IS_
 resize_pblock [get_pblocks CLKAG_n_0_bufgclk45] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
-# Clock net "clkgen0/xc7l.v/O1" driven by instance "clkgen0/xc7l.v/bufgclk0" located at site "BUFGCTRL_X0Y16"
+# Clock net "clkgen0/xc7l.v/clkm" driven by instance "clkgen0/xc7l.v/bufgclk0" located at site "BUFGCTRL_X0Y16"
 #startgroup
-create_pblock CLKAG_clkgen0/xc7l.v/O1
-add_cells_to_pblock [get_pblocks  CLKAG_clkgen0/xc7l.v/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clkgen0/xc7l.v/O1"}]]]
-resize_pblock [get_pblocks CLKAG_clkgen0/xc7l.v/O1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+create_pblock CLKAG_clkgen0/xc7l.v/clkm
+add_cells_to_pblock [get_pblocks  CLKAG_clkgen0/xc7l.v/clkm] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clkgen0/xc7l.v/clkm"}]]]
+resize_pblock [get_pblocks CLKAG_clkgen0/xc7l.v/clkm] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
 # Clock net "CLKFBOUT" driven by instance "PLLE2_ADV_inst" located at site "PLLE2_ADV_X1Y1"
@@ -291,62 +224,59 @@ create_pblock CLKAG_clkgen0/xc7l.v/cgo[clklock]
 add_cells_to_pblock [get_pblocks  CLKAG_clkgen0/xc7l.v/cgo[clklock]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clkgen0/xc7l.v/cgo[clklock]"}]]]
 resize_pblock [get_pblocks CLKAG_clkgen0/xc7l.v/cgo[clklock]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
-<<<<<<< HEAD
-=======
 
-# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[2]_LDC_i_1" located at site "SLICE_X45Y68"
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[1]_LDC_i_1" located at site "SLICE_X82Y100"
 #startgroup
-create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1
-add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1"}]]]
-resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
-# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC_i_1" located at site "SLICE_X45Y66"
-#startgroup
-create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1
-add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1"}]]]
-resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
-#endgroup
-
-# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[3]_LDC_i_1" located at site "SLICE_X48Y68"
-#startgroup
-create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1
-add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1"}]]]
-resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
-#endgroup
-
-# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[0]_LDC_i_1" located at site "SLICE_X47Y69"
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[0]_LDC_i_1" located at site "SLICE_X78Y101"
 #startgroup
 create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1
 add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1"}]]]
 resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
-# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[6]_LDC_i_1" located at site "SLICE_X43Y67"
+# Clock net "apb0/O63[0]" driven by instance "apb0/apb_reg_in_reg[15]_i_1" located at site "SLICE_X60Y93"
 #startgroup
-create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1
-add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1"}]]]
-resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+create_pblock CLKAG_apb0/O63[0]
+add_cells_to_pblock [get_pblocks  CLKAG_apb0/O63[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="apb0/O63[0]"}]]]
+resize_pblock [get_pblocks CLKAG_apb0/O63[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
-# Clock net "apb0/E[0]" driven by instance "apb0/apb_reg_in_reg[15]_i_1" located at site "SLICE_X42Y80"
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC_i_1" located at site "SLICE_X79Y102"
 #startgroup
-create_pblock CLKAG_apb0/E[0]
-add_cells_to_pblock [get_pblocks  CLKAG_apb0/E[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="apb0/E[0]"}]]]
-resize_pblock [get_pblocks CLKAG_apb0/E[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
-# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[5]_LDC_i_1" located at site "SLICE_X49Y67"
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[3]_LDC_i_1" located at site "SLICE_X84Y99"
+#startgroup
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[5]_LDC_i_1" located at site "SLICE_X82Y99"
 #startgroup
 create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1
 add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1"}]]]
 resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
-# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[1]_LDC_i_1" located at site "SLICE_X47Y67"
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[2]_LDC_i_1" located at site "SLICE_X80Y99"
 #startgroup
-create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1
-add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1"}]]]
-resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
->>>>>>> UART
+
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[6]_LDC_i_1" located at site "SLICE_X78Y100"
+#startgroup
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup

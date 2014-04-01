@@ -1,0 +1,841 @@
+/*
+
+Vivado v2013.4 (64-bit)
+SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+Process ID: 3764
+
+Current time: 	4/1/14 9:22:53 AM
+Time zone: 	Central European Time (Europe/Berlin)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1280x1024
+Screen resolution (DPI): 96
+Available screens: 2
+
+Java version: 	1.7.0_40 64-bit
+Java home: 	C:/Xilinx/Vivado/2013.4/tps/win64/jre
+
+User name: 	bregell
+User directory: Z:/HandyEQ-HW/HandyEQ
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+GUI Allocated memory:	122 mb
+GUI Max memory:		3,066 mb
+Engine Allocated memory: 496 mb
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: START_PROGRESS_DIALOG
+// cb:I (bT:JFrame):  Opening project 'Z:\HandyEQ-HW\HandyEQ\HandyEQ.xpr' : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {Z:\HandyEQ-HW\HandyEQ\HandyEQ.xpr} 
+selectButton (RDIResource.ProgressDialog_BACKGROUND, "Background"); // a:JButton (JPanel:JComponent, cb:I)
+// TclEventType: MSGMGR_MOVEMSG
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 9:22:54 AM
+// [GUI Memory]: 72 mb (+72997kb) [00:00:26]
+// [Engine Memory]: 496 mb (+368470kb) [00:00:26]
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 76 mb (+4162kb) [00:00:51]
+// [Engine Memory]: 500 mb (+4616kb) [00:00:51]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 524 mb (+25387kb) [00:01:00]
+// [GUI Memory]: 78 mb (+2250kb) [00:01:01]
+// [Engine Memory]: 528 mb (+3805kb) [00:01:01]
+// [GUI Memory]: 84 mb (+6565kb) [00:01:01]
+// [GUI Memory]: 85 mb (+342kb) [00:01:01]
+// [Engine Memory]: 553 mb (+26144kb) [00:01:02]
+// [GUI Memory]: 110 mb (+26427kb) [00:01:02]
+// [Engine Memory]: 558 mb (+4685kb) [00:01:02]
+// [Engine Memory]: 575 mb (+18259kb) [00:01:03]
+// [GUI Memory]: 110 mb (+612kb) [00:01:14]
+// [GUI Memory]: 113 mb (+2582kb) [00:01:14]
+// [GUI Memory]: 115 mb (+1721kb) [00:01:14]
+// Tcl Message: open_project {Z:\HandyEQ-HW\HandyEQ\HandyEQ.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'Y:/DAT096-Embedded System Design/Project Git Test/HandyEQ' since last save. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2013.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 9:23:53 AM
+// [Engine Memory]: 575 mb (+61kb) [00:01:15]
+// [Engine Memory]: 586 mb (+11673kb) [00:01:16]
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:01:01 . Memory (MB): peak = 936.055 ; gain = 64.445 
+// TclEventType: STOP_PROGRESS_DIALOG
+// [Engine Memory]: 588 mb (+1609kb) [00:01:17]
+// TclEventType: STOP_PROGRESS_DIALOG
+// Elapsed time: 61 seconds
+dismissDialog ("Opening project 'Z:\\HandyEQ-HW\\HandyEQ\\HandyEQ.xpr'"); // cb:I (bT:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 596 mb (+8421kb) [00:01:18]
+// [Engine Memory]: 611 mb (+16576kb) [00:01:19]
+// [Engine Memory]: 616 mb (+5091kb) [00:01:20]
+// [Engine Memory]: 625 mb (+9011kb) [00:01:21]
+// [Engine Memory]: 629 mb (+4378kb) [00:01:23]
+// [GUI Memory]: 115 mb (+494kb) [00:01:26]
+// [GUI Memory]: 115 mb (+153kb) [00:01:36]
+// [GUI Memory]: 116 mb (+1230kb) [00:01:41]
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 122 mb (+6294kb) [00:01:49]
+// [Engine Memory]: 636 mb (+6791kb) [00:01:56]
+// [GUI Memory]: 123 mb (+417kb) [00:02:10]
+// [Engine Memory]: 637 mb (+1097kb) [00:02:14]
+// [Engine Memory]: 637 mb (+40kb) [00:02:16]
+// [Engine Memory]: 638 mb (+933kb) [00:02:17]
+// [GUI Memory]: 131 mb (+8703kb) [00:02:21]
+// [Engine Memory]: 638 mb (+122kb) [00:02:24]
+// [Engine Memory]: 640 mb (+2506kb) [00:02:25]
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 642 mb (+1527kb) [00:02:37]
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 642 mb (+212kb) [00:02:55]
+// [Engine Memory]: 644 mb (+2379kb) [00:02:55]
+// [GUI Memory]: 133 mb (+1589kb) [00:02:55]
+// [Engine Memory]: 644 mb (+331kb) [00:02:56]
+// Elapsed time: 98 seconds
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 19); // w:Q (v:u, bT:JFrame)
+// cb:I (bT:JFrame):  Starting Design runs : addNotify
+// Tcl Message: launch_runs impl_1 
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 9:25:35 AM
+// [Engine Memory]: 645 mb (+196kb) [00:03:07]
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// [Engine Memory]: 646 mb (+1114kb) [00:03:17]
+// [Engine Memory]: 647 mb (+1724kb) [00:03:18]
+// TclEventType: RUN_MODIFY
+// [Engine Memory]: 651 mb (+4452kb) [00:03:19]
+// [GUI Memory]: 133 mb (+138kb) [00:03:19]
+// [Engine Memory]: 652 mb (+143kb) [00:03:19]
+// [GUI Memory]: 135 mb (+2802kb) [00:03:19]
+// [Engine Memory]: 658 mb (+6369kb) [00:03:19]
+// Tcl Message: [Tue Apr 01 09:25:56 2014] Launched impl_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:23 . Memory (MB): peak = 997.539 ; gain = 0.000 
+// 'g' command handler elapsed time: 23 seconds
+// [Engine Memory]: 659 mb (+966kb) [00:03:19]
+// Elapsed time: 23 seconds
+dismissDialog ("Starting Design runs"); // cb:I (bT:JFrame)
+// [Engine Memory]: 659 mb (+77kb) [00:03:23]
+// Elapsed time: 11 seconds
+selectTab ((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 9:26:10 AM
+// [Engine Memory]: 665 mb (+6635kb) [00:03:37]
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 56 seconds
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Project Settings]", 1); // w:Q (v:u, bT:JFrame)
+// Project Settings: addNotify
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd)]", 1); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), rst0 - rstgen - rtl (rstgen.vhd)]", 2, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), rst0 - rstgen - rtl (rstgen.vhd)]", 2); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), rst0 - rstgen - rtl (rstgen.vhd)]", 2, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+// [Engine Memory]: 667 mb (+1781kb) [00:04:30]
+// [Engine Memory]: 668 mb (+1785kb) [00:04:30]
+// [Engine Memory]: 672 mb (+4296kb) [00:04:30]
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd)]", 1); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd)]", 1, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+closeView (PAResourceItoP.PAViews_CODE, "Code"); // I:b
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd)]", 1); // o:f (u:JPanel, bT:JFrame)
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), rst0 - rstgen - rtl (rstgen.vhd), syncinrst.syncreg0 - syncreg - tmap (syncreg.vhd)]", 3); // o:f (u:JPanel, bT:JFrame)
+collapseTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), rst0 - rstgen - rtl (rstgen.vhd), syncinrst.syncreg0 - syncreg - tmap (syncreg.vhd)]", 3); // o:f (u:JPanel, bT:JFrame)
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), rst0 - rstgen - rtl (rstgen.vhd), syncinrst.syncreg1 - syncreg - tmap (syncreg.vhd)]", 4); // o:f (u:JPanel, bT:JFrame)
+collapseTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), rst0 - rstgen - rtl (rstgen.vhd), syncinrst.syncreg1 - syncreg - tmap (syncreg.vhd)]", 4); // o:f (u:JPanel, bT:JFrame)
+collapseTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), rst0 - rstgen - rtl (rstgen.vhd)]", 2); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), gpio0.grgpio0 - grgpio - rtl (grgpio.vhd)]", 37); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), gpio0.pio_pads.pio_pad - iopad - rtl (iopad.vhd)]", 38); // o:f (u:JPanel, bT:JFrame)
+collapseTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd)]", 1); // o:f (u:JPanel, bT:JFrame)
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, greth_gbit_gen - rtl (greth_gbit_gen.vhd)]", 2); // o:f (u:JPanel, bT:JFrame)
+collapseTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, greth_gbit_gen - rtl (greth_gbit_gen.vhd)]", 2); // o:f (u:JPanel, bT:JFrame)
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd)]", 1); // o:f (u:JPanel, bT:JFrame)
+collapseTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd)]", 1); // o:f (u:JPanel, bT:JFrame)
+// Elapsed time: 12 seconds
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd)]", 1); // o:f (u:JPanel, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 273, 198); // aR:G (JPanel:JComponent, bT:JFrame)
+// Elapsed time: 13 seconds
+floatFrame (PAResourceItoP.PAViews_CODE, "leon3mp.vhd"); // ah:DockableFrame (FrameContainer:JideTabbedPane, bT:JFrame)
+// PAResourceItoP.PAViews_CODE: Code: float view
+maximizeFrame (PAResourceItoP.PAViews_CODE, "leon3mp.vhd"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+// TclEventType: RUN_COMPLETED
+// O:af (FrameFloatingContainer:ResizableFrame): Implementation Completed: addNotify
+// Elapsed time: 71 seconds
+selectRadioButton (PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, O:af)
+selectButton (RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, O:af)
+// [Engine Memory]: 673 mb (+483kb) [00:06:38]
+// [GUI Memory]: 136 mb (+572kb) [00:06:38]
+dismissDialog ("Implementation Completed"); // O:af (FrameFloatingContainer:ResizableFrame)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// cb:I (FrameFloatingContainer:ResizableFrame):  Generate Bitstream : addNotify
+selectButton (RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, cb:I)
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// [GUI Memory]: 137 mb (+815kb) [00:06:42]
+// [Engine Memory]: 674 mb (+815kb) [00:06:42]
+selectButton (RDIResource.ProgressDialog_BACKGROUND, "Background"); // a:JButton (JPanel:JComponent, cb:I)
+// [Engine Memory]: 674 mb (+77kb) [00:06:43]
+// [Engine Memory]: 674 mb (+360kb) [00:06:43]
+// Tcl Message: INFO: [Common 17-344] 'launch_runs' was cancelled 
+// [Engine Memory]: 678 mb (+3571kb) [00:06:44]
+dismissDialog ("Generate Bitstream"); // cb:I (FrameFloatingContainer:ResizableFrame)
+// [Engine Memory]: 678 mb (+155kb) [00:06:45]
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23); // w:Q (v:u, bT:JFrame)
+// [GUI Memory]: 140 mb (+3575kb) [00:06:46]
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false, false, false, false, true); // w:Q (v:u, bT:JFrame) - DOUBLE CLICK
+// cb:I (bT:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+selectButton (RDIResource.ProgressDialog_BACKGROUND, "Background"); // a:JButton (JPanel:JComponent, cb:I)
+// [Engine Memory]: 687 mb (+9400kb) [00:06:48]
+// [GUI Memory]: 143 mb (+2528kb) [00:06:48]
+// [Engine Memory]: 688 mb (+1712kb) [00:06:48]
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 9:29:26 AM
+// TclEventType: RUN_LAUNCH
+// [Engine Memory]: 696 mb (+8269kb) [00:06:53]
+// [Engine Memory]: 699 mb (+2662kb) [00:06:54]
+// TclEventType: RUN_MODIFY
+// [Engine Memory]: 699 mb (+106kb) [00:06:54]
+// [Engine Memory]: 702 mb (+2891kb) [00:06:54]
+// Tcl Message: [Tue Apr 01 09:29:32 2014] Launched impl_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1043.090 ; gain = 36.629 
+// [Engine Memory]: 712 mb (+11087kb) [00:06:55]
+dismissDialog ("Generate Bitstream"); // cb:I (bT:JFrame)
+selectTab ((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+// TclEventType: RUN_FAILED
+// O:af (bT:JFrame): Bitstream Generation Failed: addNotify
+// Elapsed time: 32 seconds
+selectButton (RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, O:af)
+dismissDialog ("Bitstream Generation Failed"); // O:af (bT:JFrame)
+// Elapsed time: 19 seconds
+selectCodeEditor ("leon3mp.vhd", 619, 45); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor ("leon3mp.vhd", 505, 634); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 124, 215); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 92, 227); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 416, 554); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 478, 233); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 507, 603); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 177, 146); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 68, 166); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 13 seconds
+selectCodeEditor ("leon3mp.vhd", 37, 161); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 503, 160); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor ("leon3mp.vhd", 501, 229); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 60, 434); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 48, 451); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// [GUI Memory]: 144 mb (+1106kb) [00:09:04]
+selectCodeEditor ("leon3mp.vhd", 109, 503); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 30, 466); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 429, 460); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 31, 504); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 500, 499); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 31 seconds
+selectCodeEditor ("leon3mp.vhd", 416, 508); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 25, 367); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 455, 355); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 314, 385); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 9:32:47 AM
+selectCodeEditor ("leon3mp.vhd", 391, 387); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// [Engine Memory]: 737 mb (+26537kb) [00:10:19]
+// Elapsed time: 25 seconds
+selectCodeEditor ("leon3mp.vhd", 22, 449); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 21 seconds
+selectCodeEditor ("leon3mp.vhd", 325, 399); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 322, 381); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor ("leon3mp.vhd", 347, 239); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor ("leon3mp.vhd", 146, 354); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 146, 354, false, false, false, false, true); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame) - DOUBLE CLICK
+selectCodeEditor ("leon3mp.vhd", 171, 350); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 146, 348); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 146, 348, false, false, false, false, true); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame) - DOUBLE CLICK
+// Elapsed time: 47 seconds
+selectCodeEditor ("Monitor", 644, 84); // K:aR (JPanel:JComponent, bT:JFrame)
+// Elapsed time: 26 seconds
+selectCodeEditor ("leon3mp.vhd", 834, 504); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+setText (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "gpio0"); // j:am (c:JComboBox, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("Monitor", 748, 53); // K:aR (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Monitor", 415, 89); // K:aR (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 53, 554); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor ("leon3mp.vhd", 67, 690); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor ("leon3mp.vhd", 92, 453); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 98, 772); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 15 seconds
+selectTab ((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+selectTree (PAResourceItoP.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design, [Route 35-19] Driver is not a routable pin (driver inst term gpio1.pio_pads[5].pio_pad/xcv.x0/ttl0.slow0.op/IBUF/O, cell type IBUF). Design will not pass DRC check. Router will skip net gpio1.pio_pads[5].pio_pad/xcv.x0/ttl0.slow0.op/O. ]", 2); // O:f (JViewport:JComponent, bT:JFrame)
+selectTree (PAResourceItoP.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design, [Route 35-19] Driver is not a routable pin (driver inst term gpio1.pio_pads[5].pio_pad/xcv.x0/ttl0.slow0.op/IBUF/O, cell type IBUF). Design will not pass DRC check. Router will skip net gpio1.pio_pads[5].pio_pad/xcv.x0/ttl0.slow0.op/O. ]", 2); // O:f (JViewport:JComponent, bT:JFrame)
+selectTree (PAResourceItoP.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design, [Route 35-19] Driver is not a routable pin (driver inst term gpio1.pio_pads[5].pio_pad/xcv.x0/ttl0.slow0.op/IBUF/O, cell type IBUF). Design will not pass DRC check. Router will skip net gpio1.pio_pads[5].pio_pad/xcv.x0/ttl0.slow0.op/O. ]", 2, false, false, false, false, true); // O:f (JViewport:JComponent, bT:JFrame) - DOUBLE CLICK
+selectTree (PAResourceItoP.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design, [Route 35-19] Driver is not a routable pin (driver inst term gpio0.pio_pads[6].pio_pad/xcv.x0/ttl0.slow0.op/IBUF/O, cell type IBUF). Design will not pass DRC check. Router will skip net gpio0.pio_pads[6].pio_pad/xcv.x0/ttl0.slow0.op/O. ]", 3); // O:f (JViewport:JComponent, bT:JFrame)
+selectTree (PAResourceItoP.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design, [Route 35-19] Driver is not a routable pin (driver inst term gpio0.pio_pads[6].pio_pad/xcv.x0/ttl0.slow0.op/IBUF/O, cell type IBUF). Design will not pass DRC check. Router will skip net gpio0.pio_pads[6].pio_pad/xcv.x0/ttl0.slow0.op/O. ]", 3, false, false, false, false, true); // O:f (JViewport:JComponent, bT:JFrame) - DOUBLE CLICK
+// Elapsed time: 11 seconds
+collapseTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // o:f (u:JPanel, bT:JFrame)
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // o:f (u:JPanel, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 25, 340); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 24, 330); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 27 seconds
+collapseTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // o:f (u:JPanel, bT:JFrame)
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 1); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys4_Master.xdc]", 3); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys4_Master.xdc]", 3, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+floatFrame (PAResourceItoP.PAViews_CODE, "Nexys4_Master.xdc"); // ah:DockableFrame (FrameContainer:JideTabbedPane, bT:JFrame)
+// PAResourceItoP.PAViews_CODE: Code: float view
+maximizeFrame (PAResourceItoP.PAViews_CODE, "Nexys4_Master.xdc"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 286, 690); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 286, 690, false, false, false, false, true); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame) - DOUBLE CLICK
+// Elapsed time: 41 seconds
+selectCodeEditor ("leon3mp.vhd", 18, 226); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor ("leon3mp.vhd", 327, 296); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor ("leon3mp.vhd", 411, 603); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 418, 555); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 37 seconds
+selectCodeEditor ("leon3mp.vhd", 25, 583); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 20 seconds
+selectCodeEditor ("Nexys4_Master.xdc", 279, 318); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 331, 375); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 427, 488); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 31 seconds
+selectCodeEditor ("leon3mp.vhd", 32, 491); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 26, 431); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 44, 539); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 44, 539, false, false, false, false, true); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame) - DOUBLE CLICK
+// Elapsed time: 28 seconds
+selectCodeEditor ("leon3mp.vhd", 29, 258); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// Elapsed time: 82 seconds
+selectCodeEditor ("Nexys4_Master.xdc", 511, 490); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+dockFrame (PAResourceItoP.PAViews_CODE, "leon3mp.vhd"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+maximizeFrame (PAResourceItoP.PAViews_CODE, "leon3mp.vhd"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+dockFrame (PAResourceItoP.PAViews_CODE, "Nexys4_Master.xdc"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+maximizeFrame (PAResourceItoP.PAViews_CODE, "Nexys4_Master.xdc"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "leon3mp.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+// TclEventType: FILE_SET_CHANGE
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys4_Master.xdc", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+selectButton (RDIResource.CodeView_RELOAD, "Reload"); // h:j (JPanel:JComponent, bT:JFrame)
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "leon3mp.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 209, 78); // aR:G (JPanel:JComponent, bT:JFrame)
+floatFrame (PAResourceItoP.PAViews_CODE, "leon3mp.vhd *"); // ah:DockableFrame (FrameContainer:JideTabbedPane, bT:JFrame)
+// PAResourceItoP.PAViews_CODE: Code: float view
+maximizeFrame (PAResourceItoP.PAViews_CODE, "leon3mp.vhd *"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+floatFrame (PAResourceItoP.PAViews_CODE, "Nexys4_Master.xdc"); // ah:DockableFrame (FrameContainer:JideTabbedPane, bT:JFrame)
+// PAResourceItoP.PAViews_CODE: Code: float view
+maximizeFrame (PAResourceItoP.PAViews_CODE, "Nexys4_Master.xdc"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 2, 363); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 408, 789); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 57, 364, false, false, false, true, false); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_LINE_COMMENTS, "Toggle Line Comments"); // ah:JMenuItem (al:JPopupMenu, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 407, 316); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 29, 212, false, false, false, true, false); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame) - POPUP TRIGGER
+selectMenu (RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // ab:JideMenu (al:JPopupMenu, FrameFloatingContainer:ResizableFrame)
+selectMenuItem (RDIResource.HCodeEditor_LINE_COMMENTS, "Toggle Line Comments"); // ah:JMenuItem (al:JPopupMenu, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 206, 477); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 265, 213); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 151 mb (+7369kb) [00:21:31]
+// Elapsed time: 10 seconds
+selectMenu (PAResourceItoP.MainMenuMgr_FILE, "File"); // ab:JideMenu (CommandMenuBar:CommandBar, bT:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_OPEN_EXAMPLE_PROJECT, "Open Example Project"); // ae:JMenu (JPopupMenu:JComponent, bT:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_OPEN_EXAMPLE_PROJECT, "Open Example Project"); // ae:JMenu (JPopupMenu:JComponent, bT:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_OPEN_EXAMPLE_PROJECT, "Open Example Project"); // ae:JMenu (JPopupMenu:JComponent, bT:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectMenu (PAResourceItoP.MainMenuMgr_OPEN_EXAMPLE_PROJECT, "Open Example Project"); // ae:JMenu (JPopupMenu:JComponent, bT:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_OPEN_EXAMPLE_PROJECT, "Open Example Project"); // ae:JMenu (JPopupMenu:JComponent, bT:JFrame)
+dismissMenu (PAResourceItoP.MainMenuMgr_FILE, "File"); // ab:JideMenu (CommandMenuBar:CommandBar, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 836, 168); // aR:G (JPanel:JComponent, FrameFloatingContainer:ResizableFrame)
+dockFrame (PAResourceItoP.PAViews_CODE, "leon3mp.vhd *"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+maximizeFrame (PAResourceItoP.PAViews_CODE, "leon3mp.vhd *"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+selectCodeEditor ("leon3mp.vhd", 120, 54); // aR:G (JPanel:JComponent, bT:JFrame)
+// [Engine Memory]: 742 mb (+4243kb) [00:21:42]
+dockFrame (PAResourceItoP.PAViews_CODE, "Nexys4_Master.xdc"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+maximizeFrame (PAResourceItoP.PAViews_CODE, "Nexys4_Master.xdc"); // ah:DockableFrame (FrameContainer:JideTabbedPane, FrameFloatingContainer:ResizableFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 155 mb (+4682kb) [00:21:58]
+// Elapsed time: 12 seconds
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23); // w:Q (v:u, bT:JFrame)
+// af:bw (bT:JFrame): Synthesis is Out-of-date: addNotify
+selectCheckBox (RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // v:JCheckBox (JPanel:JComponent, af:bw): TRUE
+selectButton (RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, af:bw)
+// 'bF' command handler elapsed time: 3 seconds
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 157 mb (+2026kb) [00:22:02]
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog ("Synthesis is Out-of-date"); // af:bw (bT:JFrame)
+dismissDialog ("Synthesis is Out-of-date"); // af:bw (bT:JFrame)
+// Tcl Message: reset_run synth_1 
+// cb:I (bT:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Elapsed time: 15 seconds
+selectButton (RDIResource.ProgressDialog_BACKGROUND, "Background"); // a:JButton (JPanel:JComponent, cb:I)
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys4_Master.xdc", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// Elapsed time: 10 seconds
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "leon3mp.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+// [GUI Memory]: 158 mb (+1014kb) [00:22:29]
+selectTab ((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 159 mb (+1014kb) [00:22:47]
+// Tcl Message: [Tue Apr 01 09:45:25 2014] Launched synth_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/synth_1/runme.log [Tue Apr 01 09:45:25 2014] Launched impl_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:43 . Memory (MB): peak = 1087.199 ; gain = 0.000 
+// Elapsed time: 16 seconds
+dismissDialog ("Generate Bitstream"); // cb:I (bT:JFrame)
+selectTab ((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+selectCheckBox (PAResourceItoP.MsgView_WARNING_MESSAGES, (String) null, true); // v:JCheckBox (JPanel:JComponent, bT:JFrame): TRUE
+expandTree (PAResourceItoP.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1]", 1); // O:f (JViewport:JComponent, bT:JFrame)
+// Elapsed time: 18 seconds
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys4_Master.xdc", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+setText (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "gpio0led", true); // j:am (c:JComboBox, bT:JFrame)
+setText (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led", true); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+setText (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 18, 427); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 22, 449); // aR:G (JPanel:JComponent, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+setText (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // j:am (c:JComboBox, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 177, 43); // aR:G (JPanel:JComponent, bT:JFrame)
+selectButton (PAResourceQtoZ.StateMonitor_CANCEL, "Cancel"); // a:JButton (v:JPanel, bT:JFrame)
+// TclEventType: RUN_FAILED
+// O:af (bT:JFrame): Synthesis Failed: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton (RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, O:af)
+dismissDialog ("Synthesis Failed"); // O:af (bT:JFrame)
+selectButton ((HResource) null, "Cancel"); // JButton:AbstractButton (JPanel:JComponent, V:JDialog)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 12 seconds
+selectCodeEditor ("leon3mp.vhd", 46, 177); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 145, 332); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 145, 332, false, false, false, false, true); // aR:G (JPanel:JComponent, bT:JFrame) - DOUBLE CLICK
+selectCodeEditor ("leon3mp.vhd", 51, 180); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 40, 402); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 64, 402); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 96, 484); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 92, 215); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 71, 130); // aR:G (JPanel:JComponent, bT:JFrame)
+// [GUI Memory]: 160 mb (+1096kb) [00:24:44]
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23); // w:Q (v:u, bT:JFrame)
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false, false, false, false, true); // w:Q (v:u, bT:JFrame) - DOUBLE CLICK
+// cb:I (bT:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+selectButton (RDIResource.ProgressDialog_BACKGROUND, "Background"); // a:JButton (JPanel:JComponent, cb:I)
+// [GUI Memory]: 160 mb (+250kb) [00:24:46]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// Elapsed time: 22 seconds
+selectTab ((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Apr 01 09:47:51 2014] Launched synth_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/synth_1/runme.log [Tue Apr 01 09:47:51 2014] Launched impl_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:30 . Memory (MB): peak = 1087.199 ; gain = 0.000 
+dismissDialog ("Generate Bitstream"); // cb:I (bT:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor ("leon3mp.vhd", 153, 177); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 188, 346); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 38, 471); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 324, 469); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 327, 469); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 331, 470); // aR:G (JPanel:JComponent, bT:JFrame)
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "leon3mp.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 4, 111); // aR:G (JPanel:JComponent, bT:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor ("Nexys4_Master.xdc", 488, 127); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("Nexys4_Master.xdc", 156, 98, false, false, false, true, false); // aR:G (JPanel:JComponent, bT:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_LINE_COMMENTS, "Toggle Line Comments"); // ah:JMenuItem (al:JPopupMenu, bT:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys4_Master.xdc", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+// [GUI Memory]: 162 mb (+1767kb) [00:26:01]
+setText (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "sw", true); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "sw"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "sw"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "sw"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "sw"); // j:am (c:JComboBox, bT:JFrame)
+applyEnter (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "sw"); // j:am (c:JComboBox, bT:JFrame)
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "leon3mp.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+selectTab ((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 42, 181); // aR:G (JPanel:JComponent, bT:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23); // w:Q (v:u, bT:JFrame)
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false, false, false, false, true); // w:Q (v:u, bT:JFrame) - DOUBLE CLICK
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// cb:I (bT:JFrame):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Apr 01 09:49:29 2014] Launched synth_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/synth_1/runme.log [Tue Apr 01 09:49:29 2014] Launched impl_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 1087.199 ; gain = 0.000 
+// Elapsed time: 17 seconds
+dismissDialog ("Generate Bitstream"); // cb:I (bT:JFrame)
+// Elapsed time: 10 seconds
+selectTab ((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+// Elapsed time: 11 seconds
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 19); // w:Q (v:u, bT:JFrame)
+// cb:I (bT:JFrame):  Resetting Runs : addNotify
+selectButton ((HResource) null, "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, V:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// cb:I (bT:JFrame):  Starting Design runs : addNotify
+// Tcl Message: launch_runs impl_1 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Apr 01 09:50:44 2014] Launched synth_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/synth_1/runme.log [Tue Apr 01 09:50:44 2014] Launched impl_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:49 . Memory (MB): peak = 1087.199 ; gain = 0.000 
+// 'g' command handler elapsed time: 53 seconds
+// Elapsed time: 50 seconds
+dismissDialog ("Starting Design runs"); // cb:I (bT:JFrame)
+selectTab ((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+// [GUI Memory]: 162 mb (+35kb) [00:28:12]
+selectCheckBox (PAResourceItoP.MsgView_WARNING_MESSAGES, (String) null, true); // v:JCheckBox (JPanel:JComponent, bT:JFrame): TRUE
+expandTree (PAResourceItoP.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1]", 1); // O:f (JViewport:JComponent, bT:JFrame)
+// Elapsed time: 32 seconds
+selectCodeEditor ("leon3mp.vhd", 342, 195); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 307, 190); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("leon3mp.vhd", 305, 359); // aR:G (JPanel:JComponent, bT:JFrame)
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd)]", 1); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), gpio1.grgpio1 - grgpio - rtl (grgpio.vhd)]", 37); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, leon3mp - rtl (leon3mp.vhd), gpio1.grgpio1 - grgpio - rtl (grgpio.vhd)]", 37, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+selectCodeEditor ("grgpio.vhd", 27, 211); // aR:G (JPanel:JComponent, bT:JFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor ("grgpio.vhd", 128, 232); // aR:G (JPanel:JComponent, bT:JFrame)
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 9:52:42 AM
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 292 seconds
+selectTab ((HResource) null, (HResource) null, "Log", 2); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+selectTab ((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 91 seconds
+selectTab ((HResource) null, (HResource) null, "Log", 2); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+selectTab ((HResource) null, (HResource) null, "Reports", 3); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+selectTab ((HResource) null, (HResource) null, "Design Runs", 4); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+// [Engine Memory]: 742 mb (+401kb) [00:37:05]
+// [Engine Memory]: 742 mb (+135kb) [00:37:09]
+// [Engine Memory]: 743 mb (+552kb) [00:37:15]
+// [Engine Memory]: 745 mb (+2965kb) [00:37:19]
+// [Engine Memory]: 746 mb (+471kb) [00:37:29]
+// TclEventType: RUN_COMPLETED
+// [Engine Memory]: 746 mb (+192kb) [00:37:31]
+// [Engine Memory]: 747 mb (+872kb) [00:37:32]
+// O:af (bT:JFrame): Implementation Completed: addNotify
+// Elapsed time: 89 seconds
+selectRadioButton (PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, O:af)
+selectButton (RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, O:af)
+dismissDialog ("Implementation Completed"); // O:af (bT:JFrame)
+// cb:I (bT:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_LAUNCH
+// [Engine Memory]: 748 mb (+1019kb) [00:37:58]
+// TclEventType: RUN_MODIFY
+// [Engine Memory]: 748 mb (+163kb) [00:37:59]
+// [Engine Memory]: 751 mb (+3215kb) [00:37:59]
+// Tcl Message: [Tue Apr 01 10:00:36 2014] Launched impl_1... Run output will be captured here: Z:/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 1087.199 ; gain = 0.000 
+// [Engine Memory]: 752 mb (+675kb) [00:37:59]
+// Elapsed time: 24 seconds
+dismissDialog ("Generate Bitstream"); // cb:I (bT:JFrame)
+// Elapsed time: 14 seconds
+selectTab ((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+selectTab ((HResource) null, (HResource) null, "Log", 2); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, bT:JFrame)
+// [Engine Memory]: 752 mb (+536kb) [00:38:45]
+// [Engine Memory]: 752 mb (+49kb) [00:38:45]
+// [GUI Memory]: 163 mb (+1135kb) [00:38:46]
+// TclEventType: RUN_COMPLETED
+// O:af (bT:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 59 seconds
+selectButton (RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, O:af)
+// cb:I (bT:JFrame):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 10:02:10 AM
+// [Engine Memory]: 1,426 mb (+706768kb) [00:39:46]
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 1,459 mb (+34291kb) [00:39:51]
+// [Engine Memory]: 1,459 mb (+4kb) [00:39:51]
+// [Engine Memory]: 1,459 mb (+8kb) [00:39:51]
+// HMemoryUtils.trashcanNow. Current time: 4/1/14 10:02:29 AM
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 1,462 mb (+3641kb) [00:39:51]
+// [Engine Memory]: 1,532 mb (+73093kb) [00:39:52]
+// [Engine Memory]: 1,598 mb (+69033kb) [00:39:52]
+// [Engine Memory]: 1,626 mb (+29454kb) [00:39:52]
+// [GUI Memory]: 165 mb (+2195kb) [00:39:52]
+// [Engine Memory]: 1,627 mb (+1187kb) [00:39:52]
+// [Engine Memory]: 1,631 mb (+4423kb) [00:39:52]
+// [Engine Memory]: 1,632 mb (+397kb) [00:39:52]
+// [Engine Memory]: 1,632 mb (+413kb) [00:39:52]
+// [GUI Memory]: 169 mb (+4560kb) [00:39:53]
+// [GUI Memory]: 170 mb (+319kb) [00:39:53]
+// [GUI Memory]: 171 mb (+1026kb) [00:39:53]
+// [GUI Memory]: 171 mb (+684kb) [00:39:53]
+// [GUI Memory]: 172 mb (+684kb) [00:39:53]
+// [GUI Memory]: 173 mb (+684kb) [00:39:53]
+// [GUI Memory]: 174 mb (+1026kb) [00:39:53]
+// [GUI Memory]: 176 mb (+2066kb) [00:39:53]
+// [GUI Memory]: 176 mb (+661kb) [00:39:53]
+// [Engine Memory]: 1,633 mb (+372kb) [00:39:53]
+// [GUI Memory]: 180 mb (+4128kb) [00:39:53]
+// [Engine Memory]: 1,636 mb (+4042kb) [00:39:53]
+// [Engine Memory]: 1,645 mb (+8667kb) [00:39:54]
+// [Engine Memory]: 1,651 mb (+6434kb) [00:39:54]
+// [GUI Memory]: 182 mb (+2027kb) [00:39:54]
+// Device: addNotify
+// [GUI Memory]: 190 mb (+8350kb) [00:39:54]
+// [GUI Memory]: 197 mb (+6862kb) [00:39:55]
+// [Engine Memory]: 1,658 mb (+7024kb) [00:39:55]
+// [Engine Memory]: 1,659 mb (+1609kb) [00:39:55]
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2013.4 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1794.039 ; gain = 12.125 
+// Tcl Message: Restoring placement. Restored 3246 out of 3246 XDEF sites from archive | CPU: 2.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s). INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files:  INFO: [Project 1-111] Unisim Transformation Summary:   A total of 37 instances were transformed.   IOBUF => IOBUF (OBUFT, IBUF): 31 instances   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances  
+// TclEventType: CURR_DESIGN_SET
+// [GUI Memory]: 203 mb (+6710kb) [00:39:56]
+// [Engine Memory]: 1,668 mb (+9068kb) [00:39:56]
+// Tcl Message: open_run: Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2062.016 ; gain = 974.816 
+// [Engine Memory]: 1,670 mb (+2715kb) [00:39:56]
+// 'dd' command handler elapsed time: 38 seconds
+// bw:I (bT:JFrame): Touchpoint Survey: addNotify
+// Device view-level: 0.0
+// [GUI Memory]: 203 mb (+168kb) [00:39:56]
+// [GUI Memory]: 204 mb (+689kb) [00:39:56]
+// [GUI Memory]: 205 mb (+689kb) [00:39:56]
+// [GUI Memory]: 205 mb (+689kb) [00:39:56]
+// [GUI Memory]: 207 mb (+1380kb) [00:39:56]
+// [Engine Memory]: 1,670 mb (+196kb) [00:39:56]
+// Elapsed time: 39 seconds
+dismissDialog ("Open Implemented Design"); // cb:I (bT:JFrame)
+selectButton (RDIResource.BaseDialog_NO, "No"); // a:JButton (JPanel:JComponent, bw:I)
+// [Engine Memory]: 1,679 mb (+8540kb) [00:40:01]
+dismissDialog ("Touchpoint Survey"); // bw:I (bT:JFrame)
+selectButton ((HResource) null, "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, V:JDialog)
+selectGraphicalView (PAResourceItoP.PAViews_DEVICE, 125510, 389060); // E:a (JViewport:JComponent, bT:JFrame)
+selectView (PAResourceItoP.PAViews_DEVICE, "Device", 233, 324, 647, 602); // O:A (TdiGroup:JideTabbedPane, bT:JFrame)
+// [GUI Memory]: 213 mb (+7022kb) [00:40:14]
+// Elapsed time: 14 seconds
+collapseTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // w:Q (v:u, bT:JFrame)
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // w:Q (v:u, bT:JFrame)
+// d:I (bT:JFrame): Vivado: addNotify
+selectButton (PAResourceAtoH.ClosePlanner_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, d:I)
+dismissDialog ("Vivado"); // d:I (bT:JFrame)
