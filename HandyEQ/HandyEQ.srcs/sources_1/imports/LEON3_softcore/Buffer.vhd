@@ -15,7 +15,7 @@ entity buff is
         output_select   : in    std_logic;
         chunk           : in    std_logic_vector(integer(ceil(log2(real(LENGTH))))-1 downto 0);
         output_ready    : out   std_logic;
-        output_sample   : out   std_logic_vector(SIZE-1 downto 0);
+        output_sample   : out   std_logic_vector(31 downto 0);
         chunk_irq       : out   std_logic;
         buffer_empty    : out   std_logic;
         buffer_full     : out   std_logic
@@ -70,27 +70,27 @@ begin
     end process put;
 
     get : process(output_select) is
-        variable new_tail : unsigned(LOG_LENGTH-1 downto 0) := (tail + 1) mod LENGTH;
+    	variable tail_index : unsigned(LOG_LENGTH-1 downto 0) := tail;
+    	variable head_index : unsigned(LOG_LENGTH-1 downto 0) := head;
     begin
-        output_ready  <= '0';
         if(output_select = '1' and output_select'event) then
-            --Put oldest sample on output and signal to register
-            output_sample <= circ_buffer(to_integer(tail));
-            output_ready  <= '1';
-            
+            output_ready  							<= '1';      
+            output_sample(SIZE downto 1)			<= circ_buffer(to_integer(tail_index));   
             --Check if the new tail will be equal to head
-            if(tail = head) then
-                buffer_empty <= '1';
-            else 
-                if (new_tail = head) then
-                    buffer_empty <= '1';
-                    tail <= new_tail;
-                else 
-                    buffer_empty <= '0';
-                    tail <= new_tail;
-                end if;
+            if(tail_index = head_index) then
+            	output_sample(0) 					<= '0';
+                buffer_empty 						<= '1';
+            elsif (tail_index+1 = head_index)  then
+            	output_sample(SIZE*2 downto SIZE+1)	<= circ_buffer(to_integer(tail_index));
+            	output_sample(0) 					<= '1';
+                buffer_empty 						<= '1';
+                tail 								<= (tail + 1) mod LENGTH;
+           	else
+            	output_sample(SIZE*2 downto SIZE+1)	<= circ_buffer(to_integer(tail_index));
+            	output_sample(0) 					<= '1';
+                buffer_empty 						<= '0';
+                tail 								<= (tail + 2) mod LENGTH;
             end if;
-            
         else 
             output_ready  <= '0';
         end if; 
