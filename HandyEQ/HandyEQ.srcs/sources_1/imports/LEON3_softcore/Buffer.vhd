@@ -74,25 +74,29 @@ begin
     	variable head_index : unsigned(LOG_LENGTH-1 downto 0) := head;
     begin
         if(output_select = '1' and output_select'event) then
-            output_ready  							<= '1';      
+        	--Set sample ready and put one sample in the output vector 
+            output_ready							<= '1';      
             output_sample(SIZE downto 1)			<= circ_buffer(to_integer(tail_index));   
-            --Check if the new tail will be equal to head
+            --Check if the buffer is empty
             if(tail_index = head_index) then
-            	output_sample(0) 					<= '0';
-                buffer_empty 						<= '1';
+            	output_sample(0)					<= '0';
+                buffer_empty						<= '1';
+            --Check if retrieving two samples will empty the buffer
+            --Put one more sample in the output vector
             elsif (tail_index+1 = head_index)  then
-            	output_sample(SIZE*2 downto SIZE+1)	<= circ_buffer(to_integer(tail_index));
-            	output_sample(0) 					<= '1';
-                buffer_empty 						<= '1';
-                tail 								<= (tail + 1) mod LENGTH;
+            	output_sample(SIZE*2 downto SIZE+1)	<= circ_buffer(to_integer(tail_index+1));
+            	output_sample(0)					<= '1';
+                buffer_empty						<= '1';
+                tail								<= (tail + 1) mod LENGTH;
+            --Otherwise put one more sample in output vector
            	else
-            	output_sample(SIZE*2 downto SIZE+1)	<= circ_buffer(to_integer(tail_index));
-            	output_sample(0) 					<= '1';
-                buffer_empty 						<= '0';
-                tail 								<= (tail + 2) mod LENGTH;
+            	output_sample(SIZE*2 downto SIZE+1)	<= circ_buffer(to_integer(tail_index+1));
+            	output_sample(0)					<= '1';
+                buffer_empty						<= '0';
+                tail								<= (tail + 2) mod LENGTH;
             end if;
         else 
-            output_ready  <= '0';
+            output_ready <= '0';
         end if; 
     end process get;
 end architecture arch;
