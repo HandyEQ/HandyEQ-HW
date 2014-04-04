@@ -175,27 +175,42 @@ begin
 
   begin
 
-    v := r; irq := (others => '0'); irq(pirq) := r.irq;
-    v.irq := '0'; v.txtick := '0'; v.rxtick := '0'; v.tick := '0';
-    rdata := (others => '0'); v.rxdb(1) := r.rxdb(0);
-    dready := '0'; thempty := '1'; thalffull := '1'; rhalffull := '0';
+    v := r; irq := (others => '0'); 
+    irq(pirq) := r.irq;
+    v.irq := '0'; 
+    v.txtick := '0'; 
+    v.rxtick := '0'; 
+    v.tick := '0';
+    rdata := (others => '0'); 
+    v.rxdb(1) := r.rxdb(0);
+    dready := '0'; 
+    thempty := '1'; 
+    thalffull := '1'; 
+    rhalffull := '0';
     v.ctsn := r.ctsn(0) & uarti.ctsn;
     paddress := (others => '0');
     paddress(abits-1 downto 2) := apbi.paddr(abits-1 downto 2);
 
     if fifosize = 1 then
-      dready := r.rcnt(0); rfull := dready; tfull := r.tcnt(0);
+      dready := r.rcnt(0); 
+      rfull := dready; 
+      tfull := r.tcnt(0);
       thempty := not tfull;
     else
-      tfull := r.tcnt(log2x(fifosize)); rfull := r.rcnt(log2x(fifosize));
+      tfull := r.tcnt(log2x(fifosize)); 
+      rfull := r.rcnt(log2x(fifosize));
       if (r.rcnt(log2x(fifosize)) or r.rcnt(log2x(fifosize) - 1)) = '1' then
         rhalffull := '1';
       end if;
       if ((r.tcnt(log2x(fifosize)) or r.tcnt(log2x(fifosize) - 1))) = '1' then
         thalffull := '0';
       end if;
-      if r.rcnt /= rcntzero then dready := '1'; end if;
-      if r.tcnt /= rcntzero then thempty := '0'; end if;
+      if r.rcnt /= rcntzero then 
+        dready := '1'; 
+      end if;
+      if r.tcnt /= rcntzero then 
+        thempty := '0'; 
+      end if;
     end if;
 
 -- scaler
@@ -204,7 +219,9 @@ begin
     if (r.rxen or r.txen) = '1' then
       v.scaler := scaler;
       v.tick := scaler(sbits-1) and not r.scaler(sbits-1);
-      if v.tick = '1' then v.scaler := r.brate; end if;
+      if v.tick = '1' then 
+        v.scaler := r.brate; 
+      end if;
     end if;
 
 -- optional external uart clock
@@ -539,9 +556,11 @@ begin
     uarto.txd <= r.txd; uarto.rtsn <= r.rtsn;
     uarto.scaler <= (others => '0');
     uarto.scaler(sbits-1 downto 0) <= r.scaler;
-    apbo.prdata <= rdata; apbo.pirq <= irq;
+    apbo.prdata <= rdata; 
+    apbo.pirq <= irq;
     apbo.pindex <= pindex;
-    uarto.txen <= r.txen; uarto.rxen <= r.rxen;
+    uarto.txen <= r.txen; 
+    uarto.rxen <= r.rxen;
     uarto.flow <= '0';
   
   end process;
