@@ -81,20 +81,16 @@ begin
     if (apbi.psel(pindex) and apbi.penable and (not apbi.pwrite)) = '1' then
       if apbi.paddr(4 downto 2) = "000" then
         -- Read buffer_reg.status
-        chunk_apb_signal <= apbi.data(???);
-      elsif apbi.paddr(4 downto 2) = "001" then
-        -- Read buffer_reg.RR 
-        output_select_apb_signal <= apbi.data(???);        
+        chunk_apb_signal <= apbi.data(12 downto 3);
+        output_select_apb_signal <= apbi.data(13); 
       end if;
     
     if (apbi.psel(pindex) and apbi.penable and apbi.pwrite) = '1' then 
       if apbi.paddr(4 downto 2) = "000" then
         -- Write buffer_reg.status
         apbi.data(x+2 downto x) <= buffer_empty_apb_signal or buffer_full_apb_signal;
+        apbi.data(x+1 downto x) <= output_ready_apb_signal; 
       elsif apbi.paddr(4 downto 2) = "001" then
-        -- Write buffer_reg.RR         
-        apbi.data(x+1 downto x) <= output_ready_apb_signal;         
-      elsif apbi.paddr(4 downto 2) = "010" then
         -- Write buffer_reg.data
         apbi.data(x-1 downto 0) <= output_sample_apb_signal;
       end if;
