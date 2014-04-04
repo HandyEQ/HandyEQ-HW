@@ -2,10 +2,10 @@
 <DARoots Version="1" Minor="30">
   <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/ADDA_v1.2/PWM.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/test withoutSoftcore/PWM.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Workspace/HandyEQ-HW/Nexys4_FPGAboard/ADDA_v1.2/PWM.vhd"/>
-        <Attr Name="ImportTime" Val="1393584556"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test withoutSoftcore/PWM.vhd"/>
+        <Attr Name="ImportTime" Val="1396540767"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -13,21 +13,10 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/ADDA.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/test withoutSoftcore/ADDA.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Workspace/HandyEQ-HW/Nexys4_FPGAboard/ADDA_v1.2/ADDA_v1.2.srcs/sources_1/new/ADDA.vhd"/>
-        <Attr Name="ImportTime" Val="1393866761"/>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInSimulation" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/ADDA_v1.2/MAC_serial_implementation.vhd">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Workspace/HandyEQ-HW/Nexys4_FPGAboard/ADDA_v1.2/MAC_serial_implementation.vhd"/>
-        <Attr Name="ImportTime" Val="1393781946"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test withoutSoftcore/ADDA.vhd"/>
+        <Attr Name="ImportTime" Val="1396618350"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

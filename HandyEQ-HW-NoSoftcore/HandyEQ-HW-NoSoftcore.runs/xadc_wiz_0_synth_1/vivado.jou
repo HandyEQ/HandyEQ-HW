@@ -2,9 +2,9 @@
 # Vivado v2013.4 (64-bit)
 # SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
 # IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
-# Start of session at: Mon Mar 03 16:18:43 2014
-# Process ID: 4220
-# Log file: Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/Nexys4_FPGAboard/ADDA_v1.2/ADDA_v1.2.runs/xadc_wiz_0_synth_1/xadc_wiz_0.rds
-# Journal file: Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/Nexys4_FPGAboard/ADDA_v1.2/ADDA_v1.2.runs/xadc_wiz_0_synth_1\vivado.jou
+# Start of session at: Fri Apr 04 16:15:43 2014
+# Process ID: 3148
+# Log file: Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.rds
+# Journal file: Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/xadc_wiz_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source xadc_wiz_0.tcl

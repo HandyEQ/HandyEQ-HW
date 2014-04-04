@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="9">
+	<Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" LaunchPart="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" LaunchTime="1396621314">
+		<File Type="RDS-UTIL" Name="ADDA_utilization_synth.rpt"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
+		<File Type="RDS-UTIL-PB" Name="ADDA_utilization_synth.pb"/>
+		<File Type="RDS-DCP" Name="ADDA.dcp"/>
+		<File Type="VDS-TIMINGSUMMARY" Name="ADDA_timing_summary_synth.rpt"/>
+		<File Type="VDS-TIMING-PB" Name="ADDA_timing_summary_synth.pb"/>
+		<File Type="PA-TCL" Name="ADDA.tcl"/>
+		<File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
+		<File Type="RDS-RDS" Name="ADDA.rds"/>
+		<FileSet Type="BlockSrcs" Name="xadc_wiz_0"/>
+	</Run>
+	<Run Id="xadc_wiz_0_synth_1" Type="Ft3:Synth" SrcSet="xadc_wiz_0" Part="xc7a100tcsg324-1" LaunchPart="xc7a100tcsg324-1" ConstrsSet="xadc_wiz_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/xadc_wiz_0_synth_1" LaunchTime="1396620938">
+		<File Type="RDS-UTIL" Name="xadc_wiz_0_utilization_synth.rpt"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/xadc_wiz_0_synth_1/xadc_wiz_0_synth_1.psg"/>
+		<File Type="RDS-UTIL-PB" Name="xadc_wiz_0_utilization_synth.pb"/>
+		<File Type="RDS-DCP" Name="xadc_wiz_0.dcp"/>
+		<File Type="VDS-TIMINGSUMMARY" Name="xadc_wiz_0_timing_summary_synth.rpt"/>
+		<File Type="VDS-TIMING-PB" Name="xadc_wiz_0_timing_summary_synth.pb"/>
+		<File Type="PA-TCL" Name="xadc_wiz_0.tcl"/>
+		<File Type="RUN-SRCS" Name="$PDATADIR/runs/xadc_wiz_0_synth_1/sources.xml"/>
+		<File Type="RDS-RDS" Name="xadc_wiz_0.rds"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/xadc_wiz_0_synth_1/constrs_in.xml"/>
+	</Run>
+	<Run Id="impl_1" Type="Ft2:EntireDesign" SynthRun="synth_1" Part="xc7a100tcsg324-1" LaunchPart="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" LaunchTime="1396621314">
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+		<File Type="OPT-DRC" Name="ADDA_drc_opted.rpt"/>
+		<File Type="PLACE-IO" Name="ADDA_io_placed.rpt"/>
+		<File Type="PLACE-CLK" Name="ADDA_clock_utilization_placed.rpt"/>
+		<File Type="PLACE-UTIL" Name="ADDA_utilization_placed.rpt"/>
+		<File Type="PLACE-UTIL-PB" Name="ADDA_utilization_placed.pb"/>
+		<File Type="PLACE-CTRL" Name="ADDA_control_sets_placed.rpt"/>
+		<File Type="PLACE-SIMILARITY" Name="ADDA_incremental_reuse_placed.rpt"/>
+		<File Type="PLACE-PRE-SIMILARITY" Name="ADDA_incremental_reuse_pre_placed.rpt"/>
+		<File Type="PA-TCL" Name="ADDA.tcl"/>
+		<File Type="ROUTE-DRC" Name="ADDA_drc_routed.rpt"/>
+		<File Type="ROUTE-DRC-PB" Name="ADDA_drc_routed.pb"/>
+		<File Type="ROUTE-PWR" Name="ADDA_power_routed.rpt"/>
+		<File Type="ROUTE-PWR-SUM" Name="ADDA_power_summary_routed.pb"/>
+		<File Type="ROUTE-STATUS" Name="ADDA_route_status.rpt"/>
+		<File Type="ROUTE-STATUS-PB" Name="ADDA_route_status.pb"/>
+		<File Type="ROUTE-DCP" Name="ADDA_routed.dcp"/>
+		<File Type="ROUTE-TIMINGSUMMARY" Name="ADDA_timing_summary_routed.rpt"/>
+		<File Type="ROUTE-TIMING-PB" Name="ADDA_timing_summary_routed.pb"/>
+		<File Type="ROUTE-SIMILARITY" Name="ADDA_incremental_reuse_routed.rpt"/>
+		<File Type="RDI-RDI" Name="ADDA.rdi"/>
+		<File Type="OPT-DCP" Name="ADDA_opt.dcp"/>
+		<File Type="PLACE-DCP" Name="ADDA_placed.dcp"/>
+		<File Type="PWROPT-DCP" Name="ADDA_pwropt.dcp"/>
+		<File Type="POSTPLACE-PWROPT-DCP" Name="ADDA_postplace_pwropt.dcp"/>
+		<File Type="PWROPT-DRC" Name="ADDA_drc_pwropted.rpt"/>
+		<File Type="PHYSOPT-DCP" Name="ADDA_physopt.dcp"/>
+		<File Type="PHYSOPT-DRC" Name="ADDA_drc_physopted.rpt"/>
+		<File Type="BG-BIT" Name="ADDA.bit"/>
+		<File Type="BG-DRC" Name="ADDA.drc"/>
+		<File Type="BG-BGN" Name="ADDA.bgn"/>
+		<File Type="BG-BIN" Name="ADDA.bin"/>
+		<File Type="BITSTR-MSK" Name="ADDA.msk"/>
+		<File Type="BITSTR-RBT" Name="ADDA.rbt"/>
+		<File Type="BITSTR-NKY" Name="ADDA.nky"/>
+		<File Type="BITSTR-BMM" Name="ADDA_bd.bmm"/>
+		<File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+		<FileSet Type="BlockSrcs" Name="xadc_wiz_0"/>
+	</Run>
+	<Run Id="xadc_wiz_0_impl_1" Type="Ft2:EntireDesign" SynthRun="xadc_wiz_0_synth_1" Part="xc7a100tcsg324-1" ConstrsSet="xadc_wiz_0" Description="Vivado Implementation Defaults"/>
+</Runs>
+

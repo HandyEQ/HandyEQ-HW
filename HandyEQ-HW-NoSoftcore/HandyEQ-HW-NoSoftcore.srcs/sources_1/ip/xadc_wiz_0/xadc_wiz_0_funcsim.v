@@ -1,53 +1,51 @@
 // Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-// Date        : Mon Mar 03 16:19:47 2014
-// Host        : CE-PC43 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode funcsim {Y:/DAT096-Embedded System
-//               Design/Workspace/HandyEQ-HW/Nexys4_FPGAboard/ADDA_v1.2/ADDA_v1.2.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.v}
+// Date        : Fri Apr 04 16:16:43 2014
+// Host        : XDAT26 running 64-bit Service Pack 1  (build 7601)
+// Command     : write_verilog -force -mode funcsim {y:/DAT096-Embedded System Design/test
+//               withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.v}
 // Design      : xadc_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7a100tcsg324-2
+// Device      : xc7a100tcsg324-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "xadc_wiz_0,xadc_wiz_v3_0,{component_name=xadc_wiz_0,enable_axi=false,enable_axi4stream=false,dclk_frequency=250,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=true,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=true,enable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}" *) 
+(* core_generation_info = "xadc_wiz_0,xadc_wiz_v3_0,{component_name=xadc_wiz_0,enable_axi=false,enable_axi4stream=false,dclk_frequency=100,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=true,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=falseenable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}" *) 
 (* NotValidForBitStream *)
 module xadc_wiz_0
    (daddr_in,
-    dclk_in,
     den_in,
     di_in,
     dwe_in,
+    do_out,
+    drdy_out,
+    dclk_in,
     reset_in,
     vauxp3,
     vauxn3,
     busy_out,
     channel_out,
-    do_out,
-    drdy_out,
     eoc_out,
     eos_out,
-    vccaux_alarm_out,
     alarm_out,
     vp_in,
     vn_in);
   input [6:0]daddr_in;
-  input dclk_in;
   input den_in;
   input [15:0]di_in;
   input dwe_in;
+  output [15:0]do_out;
+  output drdy_out;
+  input dclk_in;
   input reset_in;
   input vauxp3;
   input vauxn3;
   output busy_out;
   output [4:0]channel_out;
-  output [15:0]do_out;
-  output drdy_out;
   output eoc_out;
   output eos_out;
-  output vccaux_alarm_out;
   output alarm_out;
   input vp_in;
   input vn_in;
@@ -68,23 +66,22 @@ module xadc_wiz_0
   wire reset_in;
   wire vauxn3;
   wire vauxp3;
-  wire vccaux_alarm_out;
   wire vn_in;
   wire vp_in;
-  wire NLW_inst_JTAGBUSY_UNCONNECTED;
-  wire NLW_inst_JTAGLOCKED_UNCONNECTED;
-  wire NLW_inst_JTAGMODIFIED_UNCONNECTED;
-  wire NLW_inst_OT_UNCONNECTED;
-  wire [6:0]NLW_inst_ALM_UNCONNECTED;
-  wire [4:0]NLW_inst_MUXADDR_UNCONNECTED;
+  wire NLW_U0_JTAGBUSY_UNCONNECTED;
+  wire NLW_U0_JTAGLOCKED_UNCONNECTED;
+  wire NLW_U0_JTAGMODIFIED_UNCONNECTED;
+  wire NLW_U0_OT_UNCONNECTED;
+  wire [6:0]NLW_U0_ALM_UNCONNECTED;
+  wire [4:0]NLW_U0_MUXADDR_UNCONNECTED;
 
 GND GND
        (.G(\<const0> ));
-(* BOX_TYPE = "PRIMITIVE" *) 
+(* box_type = "PRIMITIVE" *) 
    XADC #(
-    .INIT_40(16'h0113),
-    .INIT_41(16'h3107),
-    .INIT_42(16'h3F00),
+    .INIT_40(16'h0413),
+    .INIT_41(16'h310F),
+    .INIT_42(16'h0500),
     .INIT_43(16'h0000),
     .INIT_44(16'h0000),
     .INIT_45(16'h0000),
@@ -117,9 +114,9 @@ GND GND
     .IS_CONVSTCLK_INVERTED(1'b0),
     .IS_DCLK_INVERTED(1'b0),
     .SIM_DEVICE("7SERIES"),
-    .SIM_MONITOR_FILE("y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/Nexys4_FPGAboard/ADDA_v1.2/ADDA_v1.2.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt")) 
-     inst
-       (.ALM({alarm_out,NLW_inst_ALM_UNCONNECTED[6:3],vccaux_alarm_out,NLW_inst_ALM_UNCONNECTED[1:0]}),
+    .SIM_MONITOR_FILE("y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt")) 
+     U0
+       (.ALM({alarm_out,NLW_U0_ALM_UNCONNECTED[6:0]}),
         .BUSY(busy_out),
         .CHANNEL(channel_out),
         .CONVST(\<const0> ),
@@ -133,11 +130,11 @@ GND GND
         .DWE(dwe_in),
         .EOC(eoc_out),
         .EOS(eos_out),
-        .JTAGBUSY(NLW_inst_JTAGBUSY_UNCONNECTED),
-        .JTAGLOCKED(NLW_inst_JTAGLOCKED_UNCONNECTED),
-        .JTAGMODIFIED(NLW_inst_JTAGMODIFIED_UNCONNECTED),
-        .MUXADDR(NLW_inst_MUXADDR_UNCONNECTED[4:0]),
-        .OT(NLW_inst_OT_UNCONNECTED),
+        .JTAGBUSY(NLW_U0_JTAGBUSY_UNCONNECTED),
+        .JTAGLOCKED(NLW_U0_JTAGLOCKED_UNCONNECTED),
+        .JTAGMODIFIED(NLW_U0_JTAGMODIFIED_UNCONNECTED),
+        .MUXADDR(NLW_U0_MUXADDR_UNCONNECTED[4:0]),
+        .OT(NLW_U0_OT_UNCONNECTED),
         .RESET(reset_in),
         .VAUXN({\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,vauxn3,\<const0> ,\<const0> ,\<const0> }),
         .VAUXP({\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,\<const0> ,vauxp3,\<const0> ,\<const0> ,\<const0> }),

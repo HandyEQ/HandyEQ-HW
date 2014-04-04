@@ -1,64 +1,63 @@
 -- Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
--- Date        : Mon Mar 03 16:19:47 2014
--- Host        : CE-PC43 running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode funcsim {Y:/DAT096-Embedded System
---               Design/Workspace/HandyEQ-HW/Nexys4_FPGAboard/ADDA_v1.2/ADDA_v1.2.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.vhdl}
+-- Date        : Fri Apr 04 16:16:43 2014
+-- Host        : XDAT26 running 64-bit Service Pack 1  (build 7601)
+-- Command     : write_vhdl -force -mode funcsim {y:/DAT096-Embedded System Design/test
+--               withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.vhdl}
 -- Design      : xadc_wiz_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
--- Device      : xc7a100tcsg324-2
+-- Device      : xc7a100tcsg324-1
 -- --------------------------------------------------------------------------------
 library IEEE; use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM; use UNISIM.VCOMPONENTS.ALL; 
 entity xadc_wiz_0 is
   port (
     daddr_in : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    dclk_in : in STD_LOGIC;
     den_in : in STD_LOGIC;
     di_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
     dwe_in : in STD_LOGIC;
+    do_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    drdy_out : out STD_LOGIC;
+    dclk_in : in STD_LOGIC;
     reset_in : in STD_LOGIC;
     vauxp3 : in STD_LOGIC;
     vauxn3 : in STD_LOGIC;
     busy_out : out STD_LOGIC;
     channel_out : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    do_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    drdy_out : out STD_LOGIC;
     eoc_out : out STD_LOGIC;
     eos_out : out STD_LOGIC;
-    vccaux_alarm_out : out STD_LOGIC;
     alarm_out : out STD_LOGIC;
     vp_in : in STD_LOGIC;
     vn_in : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of xadc_wiz_0 : entity is true;
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of xadc_wiz_0 : entity is "xadc_wiz_0,xadc_wiz_v3_0,{component_name=xadc_wiz_0,enable_axi=false,enable_axi4stream=false,dclk_frequency=250,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=true,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=true,enable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}";
+  attribute core_generation_info : string;
+  attribute core_generation_info of xadc_wiz_0 : entity is "xadc_wiz_0,xadc_wiz_v3_0,{component_name=xadc_wiz_0,enable_axi=false,enable_axi4stream=false,dclk_frequency=100,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=true,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=falseenable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}";
 end xadc_wiz_0;
 
 architecture STRUCTURE of xadc_wiz_0 is
   signal \<const0>\ : STD_LOGIC;
-  signal NLW_inst_JTAGBUSY_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_JTAGLOCKED_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_JTAGMODIFIED_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_OT_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_ALM_UNCONNECTED : STD_LOGIC_VECTOR ( 6 downto 0 );
-  signal NLW_inst_MUXADDR_UNCONNECTED : STD_LOGIC_VECTOR ( 4 downto 0 );
-  attribute BOX_TYPE : string;
-  attribute BOX_TYPE of inst : label is "PRIMITIVE";
+  signal NLW_U0_JTAGBUSY_UNCONNECTED : STD_LOGIC;
+  signal NLW_U0_JTAGLOCKED_UNCONNECTED : STD_LOGIC;
+  signal NLW_U0_JTAGMODIFIED_UNCONNECTED : STD_LOGIC;
+  signal NLW_U0_OT_UNCONNECTED : STD_LOGIC;
+  signal NLW_U0_ALM_UNCONNECTED : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal NLW_U0_MUXADDR_UNCONNECTED : STD_LOGIC_VECTOR ( 4 downto 0 );
+  attribute box_type : string;
+  attribute box_type of U0 : label is "PRIMITIVE";
 begin
 GND: unisim.vcomponents.GND
     port map (
       G => \<const0>\
     );
-inst: unisim.vcomponents.XADC
+U0: unisim.vcomponents.XADC
     generic map(
-      INIT_40 => X"0113",
-      INIT_41 => X"3107",
-      INIT_42 => X"3F00",
+      INIT_40 => X"0413",
+      INIT_41 => X"310F",
+      INIT_42 => X"0500",
       INIT_43 => X"0000",
       INIT_44 => X"0000",
       INIT_45 => X"0000",
@@ -91,13 +90,11 @@ inst: unisim.vcomponents.XADC
       IS_CONVSTCLK_INVERTED => '0',
       IS_DCLK_INVERTED => '0',
       SIM_DEVICE => "7SERIES",
-      SIM_MONITOR_FILE => "y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/Nexys4_FPGAboard/ADDA_v1.2/ADDA_v1.2.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt"
+      SIM_MONITOR_FILE => "y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt"
     )
     port map (
       ALM(7) => alarm_out,
-      ALM(6 downto 3) => NLW_inst_ALM_UNCONNECTED(6 downto 3),
-      ALM(2) => vccaux_alarm_out,
-      ALM(1 downto 0) => NLW_inst_ALM_UNCONNECTED(1 downto 0),
+      ALM(6 downto 0) => NLW_U0_ALM_UNCONNECTED(6 downto 0),
       BUSY => busy_out,
       CHANNEL(4 downto 0) => channel_out(4 downto 0),
       CONVST => \<const0>\,
@@ -111,11 +108,11 @@ inst: unisim.vcomponents.XADC
       DWE => dwe_in,
       EOC => eoc_out,
       EOS => eos_out,
-      JTAGBUSY => NLW_inst_JTAGBUSY_UNCONNECTED,
-      JTAGLOCKED => NLW_inst_JTAGLOCKED_UNCONNECTED,
-      JTAGMODIFIED => NLW_inst_JTAGMODIFIED_UNCONNECTED,
-      MUXADDR(4 downto 0) => NLW_inst_MUXADDR_UNCONNECTED(4 downto 0),
-      OT => NLW_inst_OT_UNCONNECTED,
+      JTAGBUSY => NLW_U0_JTAGBUSY_UNCONNECTED,
+      JTAGLOCKED => NLW_U0_JTAGLOCKED_UNCONNECTED,
+      JTAGMODIFIED => NLW_U0_JTAGMODIFIED_UNCONNECTED,
+      MUXADDR(4 downto 0) => NLW_U0_MUXADDR_UNCONNECTED(4 downto 0),
+      OT => NLW_U0_OT_UNCONNECTED,
       RESET => reset_in,
       VAUXN(15) => \<const0>\,
       VAUXN(14) => \<const0>\,
