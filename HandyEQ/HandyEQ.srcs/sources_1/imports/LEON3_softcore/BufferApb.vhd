@@ -47,24 +47,18 @@ component circular_buffer is
     );
 end component;
 
--- Signals connected to the bus
-  signal output_select_apb_signal    : std_logic; -- from interrupt routine
-  signal chunk_apb_signal            : std_logic_vector(integer(ceil(log2(real(LENGTH))))-1 downto 0); -- from interrupt routine
-  signal output_ready_apb_signal    : std_logic; -- to interrupt routine
-  signal output_sample_apb_signal    : std_logic_vector(SIZE-1 downto 0); -- to interrupt routine
-  signal chunk_irq_apb_signal        : std_logic; -- ???
-  signal buffer_empty_apb_signal    : std_logic; -- to interrupt routine
-  signal buffer_full_apb_signal     : std_logic -- to interrupt routine
+type buffer_signals is record
+    output_select    : std_logic; -- from interrupt routine
+    chunk           : std_logic_vector(integer(ceil(log2(real(LENGTH))))-1 downto 0); -- from interrupt routine
+    output_ready     : std_logic; -- to interrupt routine
+    output_sample    : std_logic_vector(SIZE-1 downto 0); -- to interrupt routine
+    chunk_irq        : std_logic; -- ???
+    buffer_empty     : std_logic; -- to interrupt routine
+    buffer_full     : std_logic -- to interrupt routine
+end record;
 
--- Signals used to connect the component and the bus signals in the Sequential process.  
-  signal output_select_signal    : std_logic; -- from interrupt routine
-  signal chunk_signal            : std_logic_vector(integer(ceil(log2(real(LENGTH))))-1 downto 0); -- from interrupt routine
-  signal output_ready_signal     : std_logic; -- to interrupt routine
-  signal output_sample_signal    : std_logic_vector(SIZE-1 downto 0); -- to interrupt routine
-  signal chunk_irq_signal        : std_logic; -- ???
-  signal buffer_empty_signal     : std_logic; -- to interrupt routine
-  signal buffer_full_signal      : std_logic -- to interrupt routine
-
+signal process_signals  : buffer_signals;
+signal apb_signals      : buffer_signals;
 
 --constant REVISION       : amba_version_type := 0; 
 constant pconfig        : apb_config_type := (
@@ -74,43 +68,43 @@ constant pconfig        : apb_config_type := (
 begin
   
   -- combinatorial process
-  apb_comb : process(rstn, apb_reg, apbi)
+  apb_comb : process(process_signals, apb_signals, apbi)
   begin
     
     -- Read/Write registers
     if (apbi.psel(pindex) and apbi.penable and (not apbi.pwrite)) = '1' then
       if apbi.paddr(4 downto 2) = "000" then
         -- Read buffer_reg.status
-        chunk_apb_signal <= apbi.data(12 downto 3);
-        output_select_apb_signal <= apbi.data(13); 
+        apb_signals.chunk <= apbi.data(12 downto 3);
+        apb_signals.output_select <= apbi.data(13); 
       end if;
     
     if (apbi.psel(pindex) and apbi.penable and apbi.pwrite) = '1' then 
       if apbi.paddr(4 downto 2) = "000" then
         -- Write buffer_reg.status
-        apbi.data(x+2 downto x) <= buffer_empty_apb_signal or buffer_full_apb_signal;
-        apbi.data(x+1 downto x) <= output_ready_apb_signal; 
+        apbi.data(x+2 downto x) <= apb_signals.buffer_emptyt or apb_signals.buffer_full;
+        apbi.data(x+1 downto x) <= apb_signals.output_ready; 
       elsif apbi.paddr(4 downto 2) = "001" then
         -- Write buffer_reg.data
-        apbi.data(x-1 downto 0) <= output_sample_apb_signal;
+        apbi.data(x-1 downto 0) <= apb_signals.output_sample;
       end if;
     end if;    
   end process;
 
   -- Sequential process
-  regs: process (clk)
+  regs: process (clk, rstn)
   begin
     if rstn = '0' then
       output_select_signal <= '0';
       chunk_signal <= (others => '0'); -- or maybe something standard chunk size
     elsif rising_edge(clk) then
-      output_select_signal <= output_select_apb_signal;
-      chunk_signal <= chunk_apb_signal;
+      process_signals.output_select <= apb_signals.output_select;
+      process_signals.chunk <= apb_signals.chunk;
       
-      buffer_empty_apb_signal <= buffer_empty_signal;
-      buffer_full_apb_signal <= buffer_full_signal;
-      output_ready_apb_signal <= output_ready_signal;
-      output_sample_apb_signal <= output_sample_signal;
+      apb_signals.buffer_empty <= process_signals.buffer_empty;
+      apb_signals.buffer_full <= process_signals.buffer_full;
+      apb_signals.output_ready <= process_signals.output_ready;
+      apb_signals.output_sample <= process_signals.output_sample;
     end if;
   end process;
 
@@ -124,13 +118,13 @@ circular_buffer_comp : circular_buffer
         reset           => rstn,
         --input_irq       : in    std_logic, -- from XADC
         --input_sample    : in    std_logic_vector(SIZE-1 downto 0), -- from XAD
-        output_select   => output_select_signal,
-        chunk           => chunk_signal,
-        output_ready    => output_ready_signal,
-        output_sample   => output_sample_signal,
+        output_select   => process_signals.output_select,
+        chunk           => process_signals.chunk,
+        output_ready    => process_signals.output_ready,
+        output_sample   => process_signals.output_sample,
         --chunk_irq       => -- ???
-        buffer_empty    => buffer_empty_signal,
-        buffer_full     => buffer_full_signal);
+        buffer_empty    => process_signals.buffer_empty,
+        buffer_full     => process_signals.buffer_full);
 
    -- pragma translate_off   
    bootmsg : report_version 
