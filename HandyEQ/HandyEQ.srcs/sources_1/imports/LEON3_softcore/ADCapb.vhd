@@ -31,12 +31,14 @@ component ADC is
         reset : in STD_LOGIC;
         vauxp3 : in STD_LOGIC;
         vauxn3 : in STD_LOGIC;
+        drdy : out std_logic;
         AD_data : out STD_LOGIC_VECTOR (15 downto 0)
         );
 end component;
 
   signal apb_reg    : std_logic_vector(15 downto 0);
   signal apb_reg_in : std_logic_vector(15 downto 0);
+  signal drdy_signal: std_logic;
 
 
 --constant REVISION       : amba_version_type := 0; 
@@ -79,6 +81,7 @@ XADC_component : ADC
         reset => rstn,
         vauxp3 => vauxp3,
         vauxn3 => vauxn3,
+        drdy => drdy_signal,
         AD_data => apb_reg_in
         );
 

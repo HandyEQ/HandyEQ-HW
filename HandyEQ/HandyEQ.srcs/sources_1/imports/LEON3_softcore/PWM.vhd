@@ -19,7 +19,7 @@ SD_audio_out <= '1';
 
 process(clk, reset)
 begin
-  if (reset = '1') then
+  if (reset = '0') then
       PWM_counter <= (others => '0');
       PWM_sample <= sample(15 downto 9);
       PWM_out <= '0';

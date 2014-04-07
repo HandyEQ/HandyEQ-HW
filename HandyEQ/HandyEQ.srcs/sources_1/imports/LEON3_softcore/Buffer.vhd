@@ -15,7 +15,7 @@ entity buff is
         output_select   : in    std_logic;
         chunk           : in    std_logic_vector(integer(ceil(log2(real(LENGTH))))-1 downto 0);
         output_ready    : out   std_logic;
-        output_sample   : out   std_logic_vector(SIZE-1 downto 0);
+        output_sample   : out   std_logic_vector(2*SIZE downto 0); -- one extra bit for sample status
         chunk_irq       : out   std_logic;
         buffer_empty    : out   std_logic;
         buffer_full     : out   std_logic
@@ -23,78 +23,91 @@ entity buff is
 end buff;
 
 architecture arch of buff is
-constant LOG_LENGTH : integer := integer(natural(ceil(log2(real(LENGTH)))));
 type BUFFER_ARRAY is array (LENGTH-1 downto 0) of std_logic_vector(SIZE-1 downto 0);
 signal circ_buffer  : BUFFER_ARRAY;
-signal head         : std_logic_vector(LOG_LENGTH-1 downto 0);
-signal tail         : std_logic_vector(LOG_LENGTH-1 downto 0);
+signal head         : integer;
+signal tail         : integer;
+signal tail_shadow  : integer;
 
 begin
   
-    process(input_irq, output_select, reset) is
-        variable new_head : std_logic_vector(LOG_LENGTH-1 downto 0);
-        variable new_tail : std_logic_vector(LOG_LENGTH-1 downto 0);
-    begin
-      if reset = '1' then
+   Put: process(input_irq, reset) is -- What if signals arrive at the same time, we use 'Event.
+        variable head_var : integer;
+        variable tail_var : integer;
+   begin
+      if reset = '0' then
         for i in 0 to SIZE-1 loop
           circ_buffer(i) <= (others => '0');
         end loop;
         
-        head <= (others => '0');
+        head <= 0;
         chunk_irq <= '0';
         buffer_full <= '0';
         
-        tail <= (others => '0');
+      elsif input_irq = '1' then
+        head_var := head;
+        --Insert new sample and update head
+        head <= head + 1;
+        circ_buffer(head_var) <= input_sample;
+            
+        --Check is buffer is full
+        if ((head_var+1) = tail_var) then
+            buffer_full <= '1';
+            tail_shadow <= (tail + 1) mod LENGTH;
+        else
+            buffer_full <= '0';
+        end if;
+            
+        --Check if interrupt is to be sent
+        if ((head_var + 1) mod to_integer(unsigned(CHUNK)) = 0) then
+            chunk_irq <= '1';
+        else
+            chunk_irq <= '0';
+        end if;
+      end if;
+    end process;
+    
+    Get: process(output_select, reset, tail_shadow) is -- What if signals arrive at the same time, we use 'Event.
+        variable head_var : integer;
+        variable tail_var : integer;
+    begin
+      if reset = '0' then
+        tail <= 0;
         output_ready <= '0';
         output_sample <= (others => '0');
         buffer_empty <= '1';
-      else
         
-      -- Put
-        new_head := std_logic_vector((unsigned(head) + 1) mod LENGTH);
-        if(input_irq='1' and input_irq'event) then
-              --Insert new sample and update head
-              head <= new_head;
-              circ_buffer(to_integer(unsigned(head))) <= input_sample;
-            
-              --Check is buffer is full
-              if (new_head = tail) then
-                  buffer_full <= '1';
-                  tail <= std_logic_vector((unsigned(tail) + 1) mod LENGTH);
-              else
-                  buffer_full <= '0';
-              end if;
-            
-              --Check if interrupt is to be sent
-              if ((unsigned(new_head) mod unsigned(CHUNK)) = 1) then
-                  chunk_irq <= '1';
-              else
-                  chunk_irq <= '0';
-              end if;
-          end if;
-          
-        -- Get
-          new_tail := std_logic_vector((unsigned(tail) + 1) mod LENGTH);
-          if(output_select = '1' and output_select'event) then
-            --Put oldest sample on output and signal to register
-            output_sample <= circ_buffer(to_integer(unsigned(tail)));
-            output_ready  <= '1';
-            
-            --Check if the new tail will be equal to head
-            if(tail = head) then
-                buffer_empty <= '1';
-            else 
-                if (new_tail = head) then
-                    buffer_empty <= '1';
-                    tail <= new_tail;
-                else 
-                    buffer_empty <= '0';
-                    tail <= new_tail;
-                end if;
-            end if;
-          elsif output_select = '0' and output_select'event then
-            output_ready  <= '0';
-          end if;
+      elsif output_select = '1' then
+        tail_var := tail;  
+        if(tail_var = head_var)then
+            buffer_empty <= '1';
+            output_sample(0) <= '0';
+            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
+        elsif((tail_var + 1) = head_var) then
+            buffer_empty <= '1';
+            output_sample(0) <= '0';
+            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
+            tail <= (tail + 1) mod LENGTH;
+        elsif((tail_var + 2) = head_var) then
+            buffer_empty <= '1';
+            output_sample(0) <= '1';
+            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
+            output_sample(SIZE*2 downto SIZE+1) <= circ_buffer(tail_var+1);
+            tail <= (tail + 2) mod LENGTH;
+        else
+            buffer_empty <= '0';
+            output_sample(0) <= '1';
+            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
+            output_sample(SIZE*2 downto SIZE+1) <= circ_buffer(tail_var+1);
+            tail <= (tail + 2) mod LENGTH;
         end if;
+          
+        output_ready  <= '1';
+
+        elsif output_select = '0' then-- output_select = '0' and output_select'event then
+           output_ready  <= '0';
+        elsif (tail /= tail_shadow)then
+          tail <= tail_shadow;
+        end if;      
     end process;
 end architecture arch;

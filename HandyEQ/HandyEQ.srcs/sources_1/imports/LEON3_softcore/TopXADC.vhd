@@ -27,6 +27,7 @@ entity ADC is
         reset : in STD_LOGIC;
         vauxp3 : IN STD_LOGIC;
         vauxn3 : IN STD_LOGIC;
+        drdy : out std_logic;
         AD_data : out STD_LOGIC_VECTOR (15 downto 0)
         );
 end ADC;
@@ -91,7 +92,7 @@ XADC_component : xadc_wiz_0
         drdy_out => DRDY_signal,
         do_out => DO_signal,
         dclk_in => clk,
-        reset_in => reset,
+        reset_in => not reset,
         vp_in => '0',
         vn_in => '0',
         vauxp3 => vauxp3,
@@ -109,7 +110,7 @@ XADC_component : xadc_wiz_0
             
 process(clk, reset)
 begin  
-  if (reset = '1') then
+  if (reset = '0') then
     DI_signal <= (OTHERS=>'0');
     DEN_signal <= '0';
     DWE_signal <= '0';
@@ -131,5 +132,7 @@ begin
     end if;
   end if;  
 end process;
-        
+
+drdy <= DRDY_signal;
+     
 end rtl;
