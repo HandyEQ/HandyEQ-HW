@@ -2,8 +2,9 @@
 
 //Initialise structs as pointers to memory adress
 
+
 //Retrieves samples from the buffer in the form of a chunk
-void retrieve_chunk(buffer_regs* s_inp_buf){
+void retrieve_chunk(struct buffer_regs *s_inp_buf, struct chunk *current_chunk){
 	int i = 0;
 	int hold = 0;
 	while(i < 48){
@@ -13,18 +14,18 @@ void retrieve_chunk(buffer_regs* s_inp_buf){
 		if(s_inp_buf->data & 1 == 1){
 			hold = s_inp_buf->data;
 			hold >>= 1;
-			//s_chunk_data.data[i++] = hold &= 0x3FFF;
+			current_chunk->data[i++] = hold &= 0x3FFF;
 			hold >>= 14;
-			//s_chunk_data.data[i++] = hold &= 0x3FFF;
+			current_chunk->data[i++] = hold &= 0x3FFF;
 		} else {
 			hold = s_inp_buf->data;
 			hold >>= 1;
-			//s_chunk_data.data[i++] = hold &= 0x3FFF;
+			current_chunk->data[i++] = hold &= 0x3FFF;
 		}
 		s_inp_buf->csreg |= (0 << 13);
 	}
 }
 
-void output_chunk(){
+void output_chunk(struct buffer_regs *s_out_buf, struct chunk *current_chunk){
 
 }

@@ -1,9 +1,8 @@
 #ifndef IRQ_H
 #define IRQ_H
 
-/*
 #define irq_addr 0x80000000
-*/
+
 
 struct irq_regs {
     volatile unsigned int irqlevel;    /* 0x00 */
