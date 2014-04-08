@@ -6,7 +6,7 @@
 void retrieve_chunk(buffer_regs* s_inp_buf){
 	int i = 0;
 	int hold = 0;
-	while(i < chunk_size){
+	while(i < 48){
 		s_inp_buf->csreg |= (1 << 13);
 		s_inp_buf->csreg = s_inp_buf->csreg | (1 << 13);
 		while(s_inp_buf->csreg & (1 << 2) == 0);

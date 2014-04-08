@@ -4,17 +4,20 @@
 #include "buffer.h"
 #include "uart.h"
 
+struct irq_regs *irq_struct = (struct irq_regs *) 0x80000000;
+int i, j;
+
 int main(void){
-	int i, j;
-	catch_interrupt(audio_path, buf_irq);
-	catch_interrupt(uart_input, uart_irq);
-	init_irq(IRQSTRUCT);
-	enable_irq(IRQSTRUCT, buf_irq, 0);
-	enable_irq(IRQSTRUCT, uart_irq, 0);
+
+	catch_interrupt(audio_path, 13);
+	catch_interrupt(uart_input, 2);
+	init_irq(irq_struct);
+	enable_irq(irq_struct, 13, 0);
+	enable_irq(irq_struct, uart_irq, 0);
 	j = 0;
 	while(j < 10000){
 		for(i = 0; i <100000; i++);
-		printf("New Loop, %d", j++);
+		printf("New Loop, %d \n", j++);
 	}
 	return 0;
 }
