@@ -2,6 +2,7 @@
 #define _APBUART_H
 
 #define uart_irq 2
+#define uart_addr 0x80000100
 
 typedef struct
 {

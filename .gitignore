@@ -21,6 +21,9 @@ HandyEQ/*.png
 HandyEQ/*.str
 HandyEQ/Thumbs.db
 Firmware/*.c~
+Firmware/*.h~
 Firmware/Makefile~
 Firmware/*.srec
+Firmware/*.exe
 .Xil/
+
