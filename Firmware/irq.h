@@ -3,7 +3,7 @@
 
 #define irq_addr 0x80000000
 
-struct irq_regs {
+typedef struct {
     volatile unsigned int irqlevel;    /* 0x00 */
     volatile unsigned int irqpend;	   /* 0x04 */
     volatile unsigned int irqforce;	   /* 0x08 */
@@ -17,11 +17,15 @@ struct irq_regs {
     volatile unsigned int icsel1; 	   /* 0x28 */
     volatile unsigned int dummy1[5];   /* 0x2c - 0x3C */
     volatile unsigned int irqmask;     /* 0x40 */
-};
+} irq_regs;
 
-void set_irq_level(int irq, int level);
-void enable_irq(int irq, int level);
-void init_irq();
-void force_irq(int irq);
+#define IRQSTRUCT   ((irq_regs *) irq_addr)
+
+void set_irq_level(irq_regs* s_irq, int irq, int level);
+void enable_irq(irq_regs* s_irq, int irq, int level);
+void init_irq(irq_regs* s_irq);
+void force_irq(irq_regs* s_irq, int irq);
+
+//extern struct irq_regs *s_irq;
 
 #endif

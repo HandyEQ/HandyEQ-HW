@@ -8,19 +8,19 @@
 
 
 //Define registers as struct
-struct buffer_regs
+typedef struct 
 {
 	volatile int csreg;	/* 0x00 Control and Status Reg*/
 	volatile int data;	/* 0x04 Data Reg*/
-};
+} buffer_regs;
 
+#define INBUFSTRUCT	((buffer_regs *) input_buf_addr)
+#define OUBUFSTRUCT	((buffer_regs *) output_buf_addr)
 
 struct chunk
 {
 	volatile int data[chunk_size];
 };
-
-
 
 //Functions for Buffers 
 void retrieve_chunk();
