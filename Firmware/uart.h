@@ -1,9 +1,7 @@
 #ifndef _APBUART_H
 #define _APBUART_H
 
-#ifndef uart_irq
 #define uart_irq 2
-#endif
 
 typedef struct
 {

@@ -1,6 +1,7 @@
-#ifndef irq_addr
+#ifndef IRQ_H
+#define IRQ_H
+
 #define irq_addr 0x80000000
-#endif
 
 struct irq_regs {
     volatile unsigned int irqlevel;    /* 0x00 */
@@ -22,3 +23,5 @@ void set_irq_level(int irq, int level);
 void enable_irq(int irq, int level);
 void init_irq();
 void force_irq(int irq);
+
+#endif
