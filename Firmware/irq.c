@@ -1,18 +1,12 @@
 #include "irq.h"
 
 void set_irq_level(struct irq_regs *s_irq, int irq, int level){
-	int hold;
-	//s_irq->irqlevel |= (level << irq);
-	hold = s_irq->irqlevel;
-	s_irq->irqlevel = hold | (1 << irq);	
+	s_irq->irqlevel |= (level << irq);	
 }
 
 void enable_irq(struct irq_regs *s_irq, int irq, int level){
-	int hold;
-	//s_irq->irqmask |= (1 << irq);
-	hold = s_irq->irqmask;
-	s_irq->irqmask = hold | (1 << irq);
-	//set_irq_level(s_irq, irq, level);
+	s_irq->irqmask |= (1 << irq);
+	set_irq_level(s_irq, irq, level);
 }
 
 void init_irq(struct irq_regs *s_irq){
@@ -24,8 +18,5 @@ void init_irq(struct irq_regs *s_irq){
 }
 
 void force_irq(struct irq_regs *s_irq, int irq){
-	int hold;
-	//s_irq->irqforce |= (1 << irq);
-	hold = s_irq->irqforce;
-	s_irq->irqforce = hold | (1 << irq);
+	s_irq->irqforce |= (1 << irq);
 }
