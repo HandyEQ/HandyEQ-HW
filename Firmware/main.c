@@ -43,6 +43,7 @@ void audio_path(){
 
 	//Output chunk to buffer
 	output_chunk(out_buff_struct, current_chunk);
+	free(current_chunk);
 }
 
 void uart_input(){
