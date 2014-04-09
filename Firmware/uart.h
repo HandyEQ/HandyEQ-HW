@@ -4,6 +4,17 @@
 #define uart_irq 2
 #define uart_addr 0x80000100
 
+struct uart_regs {
+  volatile unsigned int data;
+  volatile unsigned int status;
+  volatile unsigned int control;
+  volatile unsigned int scaler;
+  volatile unsigned int FIFO_debug;
+};
+
+
+
+
 typedef struct
 {
   int data;        /*!< UART input/output data register                                         Address offset: 0x00 */
@@ -59,6 +70,10 @@ void UART_StructInit(UART_InitTypeDef* UART_InitStruct);
 /* Data transfers functions ***************************************************/
 void UART_SendData(UART_TypeDef* UARTx, int Data);
 int UART_ReceiveData(UART_TypeDef* UARTx);
+
+void init_uart();
+void send_uart(char data);
+//void sent_uart(char *data);
 
 #endif
 

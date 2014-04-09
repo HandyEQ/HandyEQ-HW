@@ -9,8 +9,8 @@
 //Define registers as struct
 struct buffer_regs
 {
-	volatile int csreg;	/* 0x00 Control and Status Reg*/
-	volatile int data;	/* 0x04 Data Reg*/
+	volatile unsigned int csreg;	/* 0x00 Control and Status Reg*/
+	volatile unsigned int data;	/* 0x04 Data Reg*/
 };
 
 struct chunk
