@@ -6,7 +6,7 @@ ENTITY PWM IS
       PORT(reset:STD_LOGIC;
            clk:STD_LOGIC;
            sample:in STD_LOGIC_vector(15 downto 0);
-           PWM_out:OUT STD_LOGIc;
+           PWM_out:OUT STD_LOGIC;
            SD_audio_out:OUT STD_LOGIc);
    END  PWM;
 
