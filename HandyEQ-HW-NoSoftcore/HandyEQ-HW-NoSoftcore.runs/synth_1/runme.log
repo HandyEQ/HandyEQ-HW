@@ -15,27 +15,28 @@ Parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims
 Finished parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
 source ADDA.tcl
 # set_param gui.test TreeTableDev
-# set_msg_config -id {Common-41} -limit 4294967295
 # set_msg_config -id {HDL 9-1061} -limit 100000
 # set_msg_config -id {HDL 9-1654} -limit 100000
 # create_project -in_memory -part xc7a100tcsg324-1
 # set_property target_language VHDL [current_project]
 # set_param project.compositeFile.enableAutoGeneration 0
-# add_files {{Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}
-# set_property used_in_implementation false [get_files {{Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}]
-# set_property use_blackbox_stub false [get_files {{Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}]
-# read_verilog {{y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v}}
+# add_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}
+# set_property used_in_implementation false [get_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}]
+# set_property use_blackbox_stub false [get_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}]
+# read_verilog {{y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v}}
 # read_vhdl {
-#   {Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd}
-#   {Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd}
+#   {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/coefficient_pkg_orig.vhd}
+#   {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd}
+#   {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd}
+#   {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd}
 # }
-# read_xdc {{Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}
-# set_property used_in_implementation false [get_files {{Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}]
+# read_xdc {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}
+# set_property used_in_implementation false [get_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}]
 # read_xdc dont_buffer.xdc
 # set_property used_in_implementation false [get_files dont_buffer.xdc]
 # set_param synth.vivado.isSynthRun true
-# set_property webtalk.parent_dir {Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.data/wt} [current_project]
-# set_property parent.project_dir {Y:/DAT096-Embedded System Design/test withoutSoftcore} [current_project]
+# set_property webtalk.parent_dir {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.data/wt} [current_project]
+# set_property parent.project_dir {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore} [current_project]
 # synth_design -top ADDA -part xc7a100tcsg324-1
 Command: synth_design -top ADDA -part xc7a100tcsg324-1
 
@@ -44,19 +45,26 @@ Starting synthesis...
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 232.328 ; gain = 86.223
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 235.098 ; gain = 85.711
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ADDA' [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:15]
-INFO: [Synth 8-637] synthesizing blackbox instance 'XADC_component' of component 'xadc_wiz_0' [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:70]
-INFO: [Synth 8-3491] module 'PWM' declared at 'Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:5' bound to instance 'PWM_component' of component 'PWM' [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:91]
-INFO: [Synth 8-638] synthesizing module 'PWM' [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:17]
+WARNING: [Synth 8-1565] actual for formal port n_reset is neither a static name nor a globally static expression [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:109]
+WARNING: [Synth 8-1565] actual for formal port x_in is neither a static name nor a globally static expression [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'ADDA' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:15]
+INFO: [Synth 8-637] synthesizing blackbox instance 'XADC_component' of component 'xadc_wiz_0' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:85]
+INFO: [Synth 8-3491] module 'IIR_Biquad_1' declared at 'Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:33' bound to instance 'IIR_biquad_comp' of component 'IIR_Biquad_1' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'IIR_Biquad_1' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'IIR_Biquad_1' (1#1) [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:44]
 	Parameter width bound to: 16 - type: integer 
 	Parameter accuracy bound to: 10 - type: integer 
-WARNING: [Synth 8-614] signal 'sample' is read in the process but is not in the sensitivity list [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'PWM' (1#1) [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'ADDA' (2#1) [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:15]
+INFO: [Synth 8-3491] module 'PWM' declared at 'Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:5' bound to instance 'PWM_component' of component 'PWM' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:116]
+INFO: [Synth 8-638] synthesizing module 'PWM__parameterized0' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:17]
+	Parameter width bound to: 16 - type: integer 
+	Parameter accuracy bound to: 10 - type: integer 
+WARNING: [Synth 8-614] signal 'sample' is read in the process but is not in the sensitivity list [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'PWM__parameterized0' (2#1) [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ADDA' (3#1) [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:15]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 265.703 ; gain = 119.598
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 266.363 ; gain = 116.977
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -78,12 +86,12 @@ Loading io standards from C:/Xilinx/Vivado/2013.4/data\./parts/xilinx/artix7/IOS
 Loading device configuration modes from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/ConfigModes.xml
 
 Processing XDC Constraints
-Parsing XDC File [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]
-Finished Parsing XDC File [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/synth_1/.Xil/ADDA_propImpl.xdc].
-Resolution: To avoid this message, exclude constraints listed in [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/synth_1/.Xil/ADDA_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/synth_1/dont_buffer.xdc]
-Finished Parsing XDC File [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/synth_1/dont_buffer.xdc]
+Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]
+Finished Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/.Xil/ADDA_propImpl.xdc].
+Resolution: To avoid this message, exclude constraints listed in [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/.Xil/ADDA_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc]
+Finished Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: 
@@ -98,20 +106,30 @@ Start RTL Optimization
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
-Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
-Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
-Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
+Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
+Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
+Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
+Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 470.922 ; gain = 324.816
----------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------
-Finished RTL Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 470.922 ; gain = 324.816
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 476.785 ; gain = 327.398
 ---------------------------------------------------------------------------------
 
-WARNING: [Synth 8-327] inferring latch for variable 'DI_signal_reg' [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:72]
-WARNING: [Synth 8-327] inferring latch for variable 'DWE_signal_reg' [Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:75]
+---------------------------------------------------------------------------------
+Finished RTL Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 476.785 ; gain = 327.398
+---------------------------------------------------------------------------------
+
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:204]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:205]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X0_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:199]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:200]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:201]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X1_quad_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:200]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X2_quad_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:201]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y1_quad_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:204]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y2_quad_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:205]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X0_quad_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:199]
+WARNING: [Synth 8-327] inferring latch for variable 'DI_signal_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:87]
+WARNING: [Synth 8-327] inferring latch for variable 'DWE_signal_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:90]
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -127,7 +145,7 @@ Part Resources:
 DSPs: 240 (col length:80)
 BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 538.363 ; gain = 392.258
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 545.219 ; gain = 395.832
 ---------------------------------------------------------------------------------
 
 
@@ -136,15 +154,25 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   6 Input     18 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
+	               18 Bit    Registers := 12    
 	               16 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
 	                7 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Multipliers : 
+	                18x31  Multipliers := 1     
+	                18x32  Multipliers := 1     
+	                18x27  Multipliers := 1     
+	                18x26  Multipliers := 2     
 +---Muxes : 
 	   2 Input     10 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
 
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -162,7 +190,24 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
-Module PWM 
+Module IIR_Biquad_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   6 Input     18 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 12    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                18x31  Multipliers := 1     
+	                18x32  Multipliers := 1     
+	                18x27  Multipliers := 1     
+	                18x26  Multipliers := 2     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+Module PWM__parameterized0 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     10 Bit       Adders := 1     
@@ -180,9 +225,110 @@ Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[29] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[28] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[27] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[26] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[25] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[24] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[23] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[22] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[21] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[20] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[19] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[18] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[17] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[16] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[15] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[14] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[13] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[12] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[11] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[10] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[9] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[8] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[7] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[6] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[5] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[4] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[3] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[2] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[1] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X1_quad_reg[0] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[29] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[28] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[27] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[26] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[25] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[24] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[23] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[22] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[21] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[20] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[19] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[18] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[17] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[16] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[15] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[14] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[13] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[12] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[11] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[10] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[9] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[8] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[7] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[6] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[5] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[4] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[3] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[2] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[1] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_X2_quad_reg[0] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[29] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[28] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[27] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[26] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[25] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[24] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[23] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[22] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[21] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[20] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[19] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[18] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[17] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[16] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[15] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[14] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[13] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[12] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[11] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[10] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[9] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[8] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[7] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[6] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[5] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[4] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[3] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[2] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[1] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y1_quad_reg[0] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[29] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[28] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[27] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[26] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[25] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[24] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[23] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[22] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[21] ) is unused and will be removed from module IIR_Biquad_1.
+WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[20] ) is unused and will be removed from module IIR_Biquad_1.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3917] design ADDA has port SD_audio_out driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 538.391 ; gain = 392.285
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 545.219 ; gain = 395.832
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -197,41 +343,8 @@ Start Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DADDR_signal_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DI_signal_reg[15] )
-WARNING: [Synth 8-3332] Sequential element (DWE_signal_reg) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DADDR_signal_reg[6] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DADDR_signal_reg[5] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DADDR_signal_reg[3] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DADDR_signal_reg[2] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DADDR_signal_reg[1] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DADDR_signal_reg[0] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[15] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[0] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[1] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[2] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[3] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[4] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[5] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[6] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[7] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[8] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[9] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[10] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[11] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[12] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[13] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\DI_signal_reg[14] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\PWM_component/PWM_sample_reg[9] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\PWM_component/PWM_sample_reg[8] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\PWM_component/PWM_sample_reg[7] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\PWM_component/PWM_sample_reg[6] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\PWM_component/PWM_sample_reg[5] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\PWM_component/PWM_sample_reg[4] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\PWM_component/PWM_sample_reg[3] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\PWM_component/PWM_sample_reg[2] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\PWM_component/PWM_sample_reg[1] ) is unused and will be removed from module ADDA.
-WARNING: [Synth 8-3332] Sequential element (\PWM_component/PWM_sample_reg[0] ) is unused and will be removed from module ADDA.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 569.023 ; gain = 422.918
+Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 574.762 ; gain = 425.375
 ---------------------------------------------------------------------------------
 
 
@@ -243,11 +356,11 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 569.023 ; gain = 422.918
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 569.023 ; gain = 422.918
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
 ---------------------------------------------------------------------------------
 
 
@@ -255,7 +368,7 @@ Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . M
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 569.023 ; gain = 422.918
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
 ---------------------------------------------------------------------------------
 
 
@@ -280,7 +393,7 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Gated Clock Conversion mode: off
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 569.023 ; gain = 422.918
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
 ---------------------------------------------------------------------------------
 
 
@@ -295,7 +408,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 569.023 ; gain = 422.918
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
 ---------------------------------------------------------------------------------
 
 
@@ -303,7 +416,7 @@ Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 569.023 ; gain = 422.918
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -331,7 +444,7 @@ Report Cell Usage:
 |1     |xadc_wiz_0_bbox |     1|
 |2     |BUFG            |     1|
 |3     |CARRY4          |     2|
-|4     |LUT1            |     1|
+|4     |LUT1            |     2|
 |5     |LUT2            |    22|
 |6     |LUT3            |     7|
 |7     |LUT4            |    11|
@@ -344,18 +457,18 @@ Report Cell Usage:
 +------+----------------+------+
 
 Report Instance Areas: 
-+------+----------------+-------+------+
-|      |Instance        |Module |Cells |
-+------+----------------+-------+------+
-|1     |top             |       |   172|
-|2     |  PWM_component |PWM    |   106|
-+------+----------------+-------+------+
++------+----------------+--------------------+------+
+|      |Instance        |Module              |Cells |
++------+----------------+--------------------+------+
+|1     |top             |                    |   173|
+|2     |  PWM_component |PWM__parameterized0 |   106|
++------+----------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 569.023 ; gain = 422.918
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
 ---------------------------------------------------------------------------------
 
-Synthesis finished with 0 errors, 0 critical warnings and 36 warnings.
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 569.023 ; gain = 422.918
+Synthesis finished with 0 errors, 0 critical warnings and 506 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
@@ -367,11 +480,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 10 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-20 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
+23 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 964.066 ; gain = 779.023
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 967.723 ; gain = 780.660
 # write_checkpoint ADDA.dcp
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 # report_utilization -file ADDA_utilization_synth.rpt -pb ADDA_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 964.066 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 04 16:22:59 2014...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 967.723 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 09 15:01:20 2014...

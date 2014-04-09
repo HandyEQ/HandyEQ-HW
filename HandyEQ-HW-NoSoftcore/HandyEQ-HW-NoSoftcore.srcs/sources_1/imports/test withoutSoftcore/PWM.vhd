@@ -5,7 +5,7 @@ USE ieee.numeric_std.ALL;
 ENTITY PWM IS
     generic (
         width  : integer :=16;
-        accuracy  : integer :=10
+        accuracy  : integer :=9
     );
       PORT(reset:STD_LOGIC;
            clk:STD_LOGIC;

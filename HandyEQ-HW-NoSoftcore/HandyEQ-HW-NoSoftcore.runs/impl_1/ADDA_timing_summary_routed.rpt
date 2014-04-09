@@ -1,8 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date         : Fri Apr 04 16:24:26 2014
-| Host         : XDAT26 running 64-bit Service Pack 1  (build 7601)
+| Date         : Wed Apr 09 15:02:10 2014
+| Host         : CSE-4225-16 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_timing_summary -file ADDA_timing_summary_routed.rpt -pb ADDA_timing_summary_routed.pb
 | Design       : ADDA
 | Device       : 7a100t-csg324
@@ -38,16 +38,16 @@ Timing Summary Report
 
 Checking 'no_clock'.
  There are 0 register/latch pins with constant_clock.
- There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[0]_LDC_i_1/O and possible clock pin by: AD_data_signal_reg[6]/Q reset 
- There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[1]_LDC_i_1/O and possible clock pin by: AD_data_signal_reg[7]/Q reset 
- There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[2]_LDC_i_1/O and possible clock pin by: AD_data_signal_reg[8]/Q reset 
- There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[3]_LDC_i_1/O and possible clock pin by: AD_data_signal_reg[9]/Q reset 
- There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[4]_LDC_i_1/O and possible clock pin by: AD_data_signal_reg[10]/Q reset 
- There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[5]_LDC_i_1/O and possible clock pin by: AD_data_signal_reg[11]/Q reset 
- There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[6]_LDC_i_1/O and possible clock pin by: AD_data_signal_reg[12]/Q reset 
- There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[7]_LDC_i_1/O and possible clock pin by: AD_data_signal_reg[13]/Q reset 
- There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[8]_LDC_i_1/O and possible clock pin by: AD_data_signal_reg[14]/Q reset 
- There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[9]_LDC_i_1/O and possible clock pin by: AD_data_signal_reg[15]/Q reset 
+ There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[0]_LDC_i_1/O and possible clock pin by: Filter_in_signal_reg[6]/Q reset 
+ There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[1]_LDC_i_1/O and possible clock pin by: Filter_in_signal_reg[7]/Q reset 
+ There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[2]_LDC_i_1/O and possible clock pin by: Filter_in_signal_reg[8]/Q reset 
+ There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[3]_LDC_i_1/O and possible clock pin by: Filter_in_signal_reg[9]/Q reset 
+ There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[4]_LDC_i_1/O and possible clock pin by: Filter_in_signal_reg[10]/Q reset 
+ There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[5]_LDC_i_1/O and possible clock pin by: Filter_in_signal_reg[11]/Q reset 
+ There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[6]_LDC_i_1/O and possible clock pin by: Filter_in_signal_reg[12]/Q reset 
+ There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[7]_LDC_i_1/O and possible clock pin by: Filter_in_signal_reg[13]/Q reset 
+ There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[8]_LDC_i_1/O and possible clock pin by: Filter_in_signal_reg[14]/Q reset 
+ There is 1 register/latch pin with no clock driven by: PWM_component/PWM_sample_reg[9]_LDC_i_1/O and possible clock pin by: Filter_in_signal_reg[15]/Q reset 
 
 Checking 'unconstrained_internal_endpoints'.
  There are 61 pins that are not constrained for maximum delay.
@@ -89,7 +89,7 @@ Checking 'latch_loops'.
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      5.989        0.000                      0                  100        0.242        0.000                      0                  100        4.500        0.000                       0                    52  
+      5.856        0.000                      0                  100        0.220        0.000                      0                  100        4.500        0.000                       0                    52  
 
 
 All user specified timing constraints are met.
@@ -112,7 +112,7 @@ sys_clk_pin  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-sys_clk_pin         5.989        0.000                      0                   80        0.242        0.000                      0                   80        4.500        0.000                       0                    52  
+sys_clk_pin         5.856        0.000                      0                   80        0.220        0.000                      0                   80        4.500        0.000                       0                    52  
 
 
 ------------------------------------------------------------------------------------------------
@@ -131,7 +131,7 @@ From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS
 
 Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
 ----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
-**async_default**  sys_clk_pin        sys_clk_pin              6.031        0.000                      0                   20        0.715        0.000                      0                   20  
+**async_default**  sys_clk_pin        sys_clk_pin              5.898        0.000                      0                   20        0.715        0.000                      0                   20  
 
 
 ------------------------------------------------------------------------------------------------
@@ -144,26 +144,26 @@ Path Group         From Clock         To Clock               WNS(ns)      TNS(ns
 From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
-Setup :            0  Failing Endpoints,  Worst Slack        5.989ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.242ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        5.856ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.220ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             5.989ns  (required time - arrival time)
-  Source:                 PWM_component/PWM_counter_reg[1]/C
+Slack (MET) :             5.856ns  (required time - arrival time)
+  Source:                 PWM_component/PWM_counter_reg[5]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            PWM_component/PWM_sample_reg[5]_P/CE
                             (rising edge-triggered cell FDPE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        3.727ns  (logic 1.078ns (28.926%)  route 2.649ns (71.074%))
+  Data Path Delay:        3.861ns  (logic 0.940ns (24.345%)  route 2.921ns (75.655%))
   Logic Levels:           2  (LUT4=2)
-  Clock Path Skew:        -0.044ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.704ns = ( 14.704 - 10.000 ) 
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.705ns = ( 14.705 - 10.000 ) 
     Source Clock Delay      (SCD):    5.000ns
     Clock Pessimism Removal (CPR):    0.252ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -182,15 +182,15 @@ Slack (MET) :             5.989ns  (required time - arrival time)
                          net (fo=1, routed)           1.780     3.262    xlnx_opt_
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_BUFG_inst/O
                          net (fo=51, routed)          1.641     5.000    PWM_component/CLK
-    SLICE_X32Y94                                                      r  PWM_component/PWM_counter_reg[1]/C
+    SLICE_X31Y95                                                      r  PWM_component/PWM_counter_reg[5]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X32Y94         FDCE (Prop_fdce_C_Q)         0.419     5.419 r  PWM_component/PWM_counter_reg[1]/Q
-                         net (fo=8, routed)           1.172     6.591    PWM_component/PWM_counter[1]
-    SLICE_X33Y92         LUT4 (Prop_lut4_I1_O)        0.327     6.918 r  PWM_component/PWM_sample[9]_P_i_2/O
-                         net (fo=15, routed)          0.787     7.705    PWM_component/n_0_PWM_sample[9]_P_i_2
-    SLICE_X30Y95         LUT4 (Prop_lut4_I1_O)        0.332     8.037 r  PWM_component/PWM_sample[9]_P_i_1/O
-                         net (fo=10, routed)          0.689     8.726    PWM_component/n_0_PWM_sample[9]_P_i_1
-    SLICE_X35Y92         FDPE                                         r  PWM_component/PWM_sample_reg[5]_P/CE
+    SLICE_X31Y95         FDCE (Prop_fdce_C_Q)         0.456     5.456 r  PWM_component/PWM_counter_reg[5]/Q
+                         net (fo=7, routed)           1.149     6.605    PWM_component/PWM_counter[5]
+    SLICE_X32Y95         LUT4 (Prop_lut4_I0_O)        0.152     6.757 f  PWM_component/PWM_sample[9]_P_i_3/O
+                         net (fo=12, routed)          1.009     7.766    PWM_component/n_0_PWM_sample[9]_P_i_3
+    SLICE_X29Y94         LUT4 (Prop_lut4_I2_O)        0.332     8.098 r  PWM_component/PWM_sample[9]_P_i_1/O
+                         net (fo=10, routed)          0.763     8.861    PWM_component/n_0_PWM_sample[9]_P_i_1
+    SLICE_X36Y94         FDPE                                         r  PWM_component/PWM_sample_reg[5]_P/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -200,16 +200,16 @@ Slack (MET) :             5.989ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  IBUF/O
                          net (fo=1, routed)           1.683    13.094    xlnx_opt_
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_BUFG_inst/O
-                         net (fo=51, routed)          1.518    14.704    PWM_component/CLK
-    SLICE_X35Y92                                                      r  PWM_component/PWM_sample_reg[5]_P/C
-                         clock pessimism              0.252    14.956    
-                         clock uncertainty           -0.035    14.920    
-    SLICE_X35Y92         FDPE (Setup_fdpe_C_CE)      -0.205    14.715    PWM_component/PWM_sample_reg[5]_P
+                         net (fo=51, routed)          1.519    14.705    PWM_component/CLK
+    SLICE_X36Y94                                                      r  PWM_component/PWM_sample_reg[5]_P/C
+                         clock pessimism              0.252    14.957    
+                         clock uncertainty           -0.035    14.921    
+    SLICE_X36Y94         FDPE (Setup_fdpe_C_CE)      -0.205    14.716    PWM_component/PWM_sample_reg[5]_P
   -------------------------------------------------------------------
-                         required time                         14.715    
-                         arrival time                          -8.726    
+                         required time                         14.716    
+                         arrival time                          -8.861    
   -------------------------------------------------------------------
-                         slack                                  5.989    
+                         slack                                  5.856    
 
 
 
@@ -217,20 +217,20 @@ Slack (MET) :             5.989ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.242ns  (arrival time - required time)
-  Source:                 PWM_component/PWM_counter_reg[8]/C
+Slack (MET) :             0.220ns  (arrival time - required time)
+  Source:                 PWM_component/PWM_counter_reg[9]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            PWM_component/PWM_sample_reg[9]_C/D
+  Destination:            PWM_component/PWM_sample_reg[8]_C/D
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.346ns  (logic 0.186ns (53.721%)  route 0.160ns (46.279%))
+  Data Path Delay:        0.327ns  (logic 0.186ns (56.825%)  route 0.141ns (43.175%))
   Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    1.911ns
     Source Clock Delay      (SCD):    1.404ns
-    Clock Pessimism Removal (CPR):    0.493ns
+    Clock Pessimism Removal (CPR):    0.490ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -242,13 +242,13 @@ Slack (MET) :             0.242ns  (arrival time - required time)
                          net (fo=1, routed)           0.558     0.808    xlnx_opt_
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_BUFG_inst/O
                          net (fo=51, routed)          0.571     1.404    PWM_component/CLK
-    SLICE_X32Y96                                                      r  PWM_component/PWM_counter_reg[8]/C
+    SLICE_X31Y95                                                      r  PWM_component/PWM_counter_reg[9]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X32Y96         FDCE (Prop_fdce_C_Q)         0.141     1.545 r  PWM_component/PWM_counter_reg[8]/Q
-                         net (fo=15, routed)          0.160     1.706    PWM_component/PWM_counter[8]
-    SLICE_X33Y96         LUT6 (Prop_lut6_I4_O)        0.045     1.751 r  PWM_component/PWM_sample[9]_C_i_1/O
-                         net (fo=1, routed)           0.000     1.751    PWM_component/n_0_PWM_sample[9]_C_i_1
-    SLICE_X33Y96         FDCE                                         r  PWM_component/PWM_sample_reg[9]_C/D
+    SLICE_X31Y95         FDCE (Prop_fdce_C_Q)         0.141     1.545 r  PWM_component/PWM_counter_reg[9]/Q
+                         net (fo=14, routed)          0.141     1.687    PWM_component/PWM_counter[9]
+    SLICE_X31Y96         LUT6 (Prop_lut6_I1_O)        0.045     1.732 r  PWM_component/PWM_sample[8]_C_i_1/O
+                         net (fo=1, routed)           0.000     1.732    PWM_component/n_0_PWM_sample[8]_C_i_1
+    SLICE_X31Y96         FDCE                                         r  PWM_component/PWM_sample_reg[8]_C/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -259,14 +259,14 @@ Slack (MET) :             0.242ns  (arrival time - required time)
                          net (fo=1, routed)           0.603     1.040    xlnx_opt_
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_BUFG_inst/O
                          net (fo=51, routed)          0.842     1.911    PWM_component/CLK
-    SLICE_X33Y96                                                      r  PWM_component/PWM_sample_reg[9]_C/C
-                         clock pessimism             -0.493     1.417    
-    SLICE_X33Y96         FDCE (Hold_fdce_C_D)         0.091     1.508    PWM_component/PWM_sample_reg[9]_C
+    SLICE_X31Y96                                                      r  PWM_component/PWM_sample_reg[8]_C/C
+                         clock pessimism             -0.490     1.420    
+    SLICE_X31Y96         FDCE (Hold_fdce_C_D)         0.091     1.511    PWM_component/PWM_sample_reg[8]_C
   -------------------------------------------------------------------
-                         required time                         -1.508    
-                         arrival time                           1.751    
+                         required time                         -1.511    
+                         arrival time                           1.732    
   -------------------------------------------------------------------
-                         slack                                  0.242    
+                         slack                                  0.220    
 
 
 
@@ -281,8 +281,8 @@ Sources:            { clk }
 
 Check Type        Corner  Lib Pin    Reference Pin  Required  Actual  Slack  Location       Pin
 Min Period        n/a     XADC/DCLK  n/a            4.000     10.000  6.000  XADC_X0Y0      XADC_component/U0/DCLK
-Low Pulse Width   Fast    FDCE/C     n/a            0.500     5.000   4.500  SLICE_X28Y125  AD_data_signal_reg[0]/C
-High Pulse Width  Slow    FDCE/C     n/a            0.500     5.000   4.500  SLICE_X28Y125  AD_data_signal_reg[0]/C
+Low Pulse Width   Fast    FDCE/C     n/a            0.500     5.000   4.500  SLICE_X28Y126  DADDR_signal_reg[4]/C
+High Pulse Width  Slow    FDCE/C     n/a            0.500     5.000   4.500  SLICE_X28Y126  DADDR_signal_reg[4]/C
 
 
 
@@ -291,25 +291,25 @@ Path Group:  **async_default**
 From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
-Setup :            0  Failing Endpoints,  Worst Slack        6.031ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        5.898ns,  Total Violation        0.000ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.715ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             6.031ns  (required time - arrival time)
-  Source:                 AD_data_signal_reg[15]/C
+Slack (MET) :             5.898ns  (required time - arrival time)
+  Source:                 Filter_in_signal_reg[8]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            PWM_component/PWM_sample_reg[9]_C/CLR
+  Destination:            PWM_component/PWM_sample_reg[2]_P/PRE
                             (recovery check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             **async_default**
   Path Type:              Recovery (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        3.444ns  (logic 0.716ns (20.793%)  route 2.728ns (79.207%))
+  Data Path Delay:        3.621ns  (logic 0.716ns (19.775%)  route 2.905ns (80.225%))
   Logic Levels:           1  (LUT2=1)
-  Clock Path Skew:        -0.086ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.706ns = ( 14.706 - 10.000 ) 
+  Clock Path Skew:        -0.087ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.705ns = ( 14.705 - 10.000 ) 
     Source Clock Delay      (SCD):    4.964ns
     Clock Pessimism Removal (CPR):    0.173ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -328,13 +328,13 @@ Slack (MET) :             6.031ns  (required time - arrival time)
                          net (fo=1, routed)           1.780     3.262    xlnx_opt_
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_BUFG_inst/O
                          net (fo=51, routed)          1.606     4.964    clk_BUFG
-    SLICE_X28Y125                                                     r  AD_data_signal_reg[15]/C
+    SLICE_X29Y125                                                     r  Filter_in_signal_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X28Y125        FDCE (Prop_fdce_C_Q)         0.419     5.383 r  AD_data_signal_reg[15]/Q
-                         net (fo=5, routed)           1.903     7.286    PWM_component/Q[9]
-    SLICE_X33Y96         LUT2 (Prop_lut2_I1_O)        0.297     7.583 f  PWM_component/PWM_sample_reg[9]_LDC_i_2/O
-                         net (fo=2, routed)           0.825     8.408    PWM_component/n_0_PWM_sample_reg[9]_LDC_i_2
-    SLICE_X33Y96         FDCE                                         f  PWM_component/PWM_sample_reg[9]_C/CLR
+    SLICE_X29Y125        FDCE (Prop_fdce_C_Q)         0.419     5.383 f  Filter_in_signal_reg[8]/Q
+                         net (fo=5, routed)           2.367     7.751    PWM_component/Q[2]
+    SLICE_X34Y93         LUT2 (Prop_lut2_I1_O)        0.297     8.048 f  PWM_component/PWM_sample_reg[2]_LDC_i_1/O
+                         net (fo=2, routed)           0.538     8.585    PWM_component/n_0_PWM_sample_reg[2]_LDC_i_1
+    SLICE_X35Y93         FDPE                                         f  PWM_component/PWM_sample_reg[2]_P/PRE
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -344,16 +344,16 @@ Slack (MET) :             6.031ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  IBUF/O
                          net (fo=1, routed)           1.683    13.094    xlnx_opt_
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_BUFG_inst/O
-                         net (fo=51, routed)          1.520    14.706    PWM_component/CLK
-    SLICE_X33Y96                                                      r  PWM_component/PWM_sample_reg[9]_C/C
-                         clock pessimism              0.173    14.879    
-                         clock uncertainty           -0.035    14.843    
-    SLICE_X33Y96         FDCE (Recov_fdce_C_CLR)     -0.405    14.438    PWM_component/PWM_sample_reg[9]_C
+                         net (fo=51, routed)          1.519    14.705    PWM_component/CLK
+    SLICE_X35Y93                                                      r  PWM_component/PWM_sample_reg[2]_P/C
+                         clock pessimism              0.173    14.878    
+                         clock uncertainty           -0.035    14.842    
+    SLICE_X35Y93         FDPE (Recov_fdpe_C_PRE)     -0.359    14.483    PWM_component/PWM_sample_reg[2]_P
   -------------------------------------------------------------------
-                         required time                         14.438    
-                         arrival time                          -8.408    
+                         required time                         14.483    
+                         arrival time                          -8.585    
   -------------------------------------------------------------------
-                         slack                                  6.031    
+                         slack                                  5.898    
 
 
 
@@ -362,7 +362,7 @@ Slack (MET) :             6.031ns  (required time - arrival time)
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.715ns  (arrival time - required time)
-  Source:                 AD_data_signal_reg[14]/C
+  Source:                 Filter_in_signal_reg[14]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            PWM_component/PWM_sample_reg[8]_C/CLR
                             (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
@@ -386,13 +386,13 @@ Slack (MET) :             0.715ns  (arrival time - required time)
                          net (fo=1, routed)           0.558     0.808    xlnx_opt_
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_BUFG_inst/O
                          net (fo=51, routed)          0.553     1.386    clk_BUFG
-    SLICE_X28Y125                                                     r  AD_data_signal_reg[14]/C
+    SLICE_X28Y125                                                     r  Filter_in_signal_reg[14]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X28Y125        FDCE (Prop_fdce_C_Q)         0.128     1.514 r  AD_data_signal_reg[14]/Q
-                         net (fo=5, routed)           0.555     2.070    PWM_component/Q[8]
-    SLICE_X31Y95         LUT2 (Prop_lut2_I1_O)        0.098     2.168 f  PWM_component/PWM_sample_reg[8]_LDC_i_2/O
-                         net (fo=2, routed)           0.131     2.299    PWM_component/n_0_PWM_sample_reg[8]_LDC_i_2
-    SLICE_X31Y95         FDCE                                         f  PWM_component/PWM_sample_reg[8]_C/CLR
+    SLICE_X28Y125        FDCE (Prop_fdce_C_Q)         0.128     1.514 r  Filter_in_signal_reg[14]/Q
+                         net (fo=5, routed)           0.570     2.084    PWM_component/Q[8]
+    SLICE_X32Y96         LUT2 (Prop_lut2_I1_O)        0.098     2.182 f  PWM_component/PWM_sample_reg[8]_LDC_i_2/O
+                         net (fo=2, routed)           0.116     2.299    PWM_component/n_0_PWM_sample_reg[8]_LDC_i_2
+    SLICE_X31Y96         FDCE                                         f  PWM_component/PWM_sample_reg[8]_C/CLR
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -403,9 +403,9 @@ Slack (MET) :             0.715ns  (arrival time - required time)
                          net (fo=1, routed)           0.603     1.040    xlnx_opt_
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_BUFG_inst/O
                          net (fo=51, routed)          0.842     1.911    PWM_component/CLK
-    SLICE_X31Y95                                                      r  PWM_component/PWM_sample_reg[8]_C/C
+    SLICE_X31Y96                                                      r  PWM_component/PWM_sample_reg[8]_C/C
                          clock pessimism             -0.235     1.675    
-    SLICE_X31Y95         FDCE (Remov_fdce_C_CLR)     -0.092     1.583    PWM_component/PWM_sample_reg[8]_C
+    SLICE_X31Y96         FDCE (Remov_fdce_C_CLR)     -0.092     1.583    PWM_component/PWM_sample_reg[8]_C
   -------------------------------------------------------------------
                          required time                         -1.583    
                          arrival time                           2.299    

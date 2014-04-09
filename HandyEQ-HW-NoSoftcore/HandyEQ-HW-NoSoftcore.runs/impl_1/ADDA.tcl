@@ -42,7 +42,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 
@@ -51,11 +50,11 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param gui.test TreeTableDev
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir {Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.data/wt} [current_project]
-  set_property parent.project_dir {Y:/DAT096-Embedded System Design/test withoutSoftcore} [current_project]
-  add_files {{Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/synth_1/ADDA.dcp}}
-  add_files {{Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}
-  read_xdc {{Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}
+  set_property webtalk.parent_dir {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.data/wt} [current_project]
+  set_property parent.project_dir {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore} [current_project]
+  add_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/ADDA.dcp}}
+  add_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}
+  read_xdc {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}
   link_design -top ADDA -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -115,5 +114,18 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+}
+
+start_step write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  write_bitstream -force ADDA.bit 
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
 }
 

@@ -35,7 +35,21 @@ COMPONENT xadc_wiz_0
         );
 END COMPONENT;
 
+component IIR_Biquad_1
+		Port ( 
+				clk : in  STD_LOGIC;
+				n_reset : in  STD_LOGIC;
+				sample_trig : in  STD_LOGIC;
+				X_in : in  STD_LOGIC_VECTOR (17 downto 0);
+				filter_done : out STD_LOGIC;
+				Y_out : out  STD_LOGIC_VECTOR (17 downto 0)
+				);
+end COMPONENT;
+
 COMPONENT PWM 
+      generic (
+        width  : integer;
+        accuracy  : integer);
       PORT(reset:STD_LOGIC;
            clk:STD_LOGIC;
            sample:in STD_LOGIC_vector(15 downto 0);
@@ -54,6 +68,7 @@ SIGNAL DRDY_signal:STD_LOGIC;
 SIGNAL DADDR_signal:STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL DI_signal:STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL DO_signal:STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL Filter_in_signal:STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL channel_out_signal : STD_LOGIC_VECTOR(4 DOWNTO 0);
 SIGNAL eoc_out_signal : STD_LOGIC;
 SIGNAL alarm_out_signal : STD_LOGIC;
@@ -61,7 +76,7 @@ SIGNAL eos_out_signal : STD_LOGIC;
 SIGNAL busy_out_signal : STD_LOGIC;
 SIGNAL first_conv : STD_LOGIC;
 SIGNAL counter:STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL AD_data_signal:STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL Filter_out_signal:STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL AA_dataOUT_signal:STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL start_signal : STD_LOGIC;
 SIGNAL finished_signal : STD_LOGIC;
@@ -88,14 +103,27 @@ XADC_component : xadc_wiz_0
         busy_out => busy_out_signal
         );
         
-PWM_component : PWM 
+IIR_biquad_comp: IIR_Biquad_1
+    port map (
+        clk => clk,
+        n_reset => not(reset),
+        sample_trig => DRDY_signal,
+        X_in => Filter_in_signal & "00",
+        filter_done => open,
+        Y_out => Filter_out_signal
+    );
+        
+PWM_component : PWM
+    generic map(
+                width => 16,
+                accuracy => 10)
     PORT MAP(reset => reset,
            clk => clk,
-           sample => AD_data_signal,
+           sample => Filter_in_signal, --Filter_out_signal(17 downto 2),
            PWM_out => PWM_audio_out,
            SD_audio_out => SD_audio_out);  
            
-AD_data <= AD_data_signal;
+AD_data <= Filter_in_signal; --Filter_out_signal(17 downto 2);
             
 process(clk, reset)
 begin  
@@ -104,12 +132,13 @@ begin
     DEN_signal <= '0';
     DWE_signal <= '0';
     DADDR_signal <= (OTHERS=>'0');
-    AD_data_signal <= (OTHERS=>'0');
+    Filter_in_signal <= (OTHERS=>'0');
     first_conv <= '1';
     
   elsif rising_edge(clk) then
     if (DRDY_signal = '1') then
-      AD_data_signal <= DO_signal;
+      Filter_in_signal(15) <= not(DO_signal(15));
+      Filter_in_signal(14 downto 0) <= DO_signal(14 downto 0);
       first_conv <= '1';
     end if;
       

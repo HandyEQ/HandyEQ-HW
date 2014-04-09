@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc} rfile:{../../../test_withoutSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc} id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc} rfile:{../../../HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc} id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E3 [get_ports clk]							
 set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]

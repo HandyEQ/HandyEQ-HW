@@ -2,9 +2,9 @@
 # Vivado v2013.4 (64-bit)
 # SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
 # IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
-# Start of session at: Fri Apr 04 16:21:59 2014
-# Process ID: 4952
-# Log file: Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/synth_1/ADDA.rds
-# Journal file: Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/synth_1\vivado.jou
+# Start of session at: Wed Apr 09 15:00:44 2014
+# Process ID: 5600
+# Log file: Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/ADDA.rds
+# Journal file: Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source ADDA.tcl
