@@ -10,7 +10,7 @@
 struct buffer_regs
 {
 	volatile unsigned int csreg;	/* 0x00 Control and Status Reg*/
-	volatile unsigned int data;	/* 0x04 Data Reg*/
+	volatile unsigned int data;		/* 0x04 Data Reg*/
 };
 
 struct chunk
@@ -19,7 +19,7 @@ struct chunk
 };
 
 //Functions for Buffers 
-void retrieve_chunk(struct buffer_regs *s_inp_buf, struct chunk *current_chunk);
-void output_chunk(struct buffer_regs *s_out_buf, struct chunk *current_chunk);
+struct chunk * retrieve_chunk();
+void output_chunk(struct chunk *current_chunk);
 
 #endif
