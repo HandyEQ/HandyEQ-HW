@@ -41,9 +41,7 @@ component buff_out is
         input_sample    : in    std_logic_vector(2*SIZE downto 0); -- one extra for status
         output_select   : in    std_logic;
         output_ready    : out   std_logic;
-        output_sample   : out   std_logic_vector(SIZE-1 downto 0);
-        buffer_empty    : out   std_logic;
-        buffer_full     : out   std_logic
+        output_sample   : out   std_logic_vector(SIZE-1 downto 0)
     );
 end component;
 
@@ -52,9 +50,7 @@ type buffer_signals is record
     input_sample     : std_logic_vector(2*sample_size downto 0);
     output_select    : std_logic; -- from interrupt routine
     output_ready     : std_logic; -- to interrupt routine
-    output_sample    : std_logic_vector(sample_size-1 downto 0); -- to interrupt routine 
-    buffer_empty     : std_logic; -- to interrupt routine
-    buffer_full      : std_logic; -- to interrupt routine
+    output_sample    : std_logic_vector(sample_size-1 downto 0); -- to interrupt routine
 end record;
 
 signal process_signals  : buffer_signals;
@@ -80,13 +76,6 @@ begin
       elsif apbi.paddr(4 downto 2) = "001" then 
          apb_signals.input_sample <= apbi.pwdata(2*sample_size downto 0);
       end if;
-    end if;
-    
-    if (apbi.psel(pindex) and apbi.penable) = '1' then 
-      if apbi.paddr(4 downto 2) = "000" then
-        -- Write buffer_reg.status
-        apbo.prdata(1 downto 0) <= apb_signals.buffer_empty & apb_signals.buffer_full;
-      end if;
     end if;    
   end process; 
 
@@ -101,8 +90,6 @@ begin
       process_signals.input_irq <= apb_signals.input_irq; -- from soft
       process_signals.input_sample <= apb_signals.input_sample; -- from soft
       
-      apb_signals.buffer_empty <= process_signals.buffer_empty;
-      apb_signals.buffer_full <= process_signals.buffer_full;
       apb_signals.output_ready <= process_signals.output_ready;
       sample_pwm <= (others => '0');
       sample_pwm(sample_size-1 downto 0) <= process_signals.output_sample;
@@ -121,9 +108,7 @@ circular_buffer_comp : buff_out
         input_sample    => process_signals.input_sample,
         output_select   => process_signals.output_select,
         output_ready    => process_signals.output_ready,
-        output_sample   => process_signals.output_sample,
-        buffer_empty    => process_signals.buffer_empty,
-        buffer_full     => process_signals.buffer_full);
+        output_sample   => process_signals.output_sample);
 
    -- pragma translate_off   
    bootmsg : report_version 

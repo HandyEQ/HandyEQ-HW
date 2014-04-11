@@ -42,20 +42,16 @@ component buff is
         chunk           : in    std_logic_vector(integer(ceil(log2(real(LENGTH))))-1 downto 0);
         output_ready    : out   std_logic;
         output_sample   : out   std_logic_vector(2*SIZE downto 0); -- one extra bit for sample status
-        chunk_irq       : out   std_logic;
-        buffer_empty    : out   std_logic;
-        buffer_full     : out   std_logic
-    );
+        chunk_irq       : out   std_logic
+        );
 end component;
 
 type buffer_signals is record
     output_select    : std_logic; -- from interrupt routine
-    chunk           : std_logic_vector(integer(ceil(log2(real(buffer_size))))-1 downto 0); -- from interrupt routine
+    chunk            : std_logic_vector(integer(ceil(log2(real(buffer_size))))-1 downto 0); -- from interrupt routine
     output_ready     : std_logic; -- to interrupt routine
     output_sample    : std_logic_vector(2*sample_size downto 0); -- to interrupt routine
-    chunk_irq        : std_logic; 
-    buffer_empty     : std_logic; -- to interrupt routine
-    buffer_full     : std_logic; -- to interrupt routine
+    chunk_irq        : std_logic;
 end record;
 
 signal process_signals  : buffer_signals;
@@ -84,7 +80,6 @@ begin
     if (apbi.psel(pindex) and apbi.penable) = '1' then 
       if apbi.paddr(4 downto 2) = "000" then
         -- Write buffer_reg.status
-        apbo.prdata(1 downto 0) <= apb_signals.buffer_empty & apb_signals.buffer_full;
         apbo.prdata(2) <= apb_signals.output_ready; 
       elsif apbi.paddr(4 downto 2) = "001" then
         -- Write buffer_reg.data
@@ -104,8 +99,6 @@ begin
       process_signals.output_select <= apb_signals.output_select;
       process_signals.chunk <= apb_signals.chunk;
       
-      apb_signals.buffer_empty <= process_signals.buffer_empty;
-      apb_signals.buffer_full <= process_signals.buffer_full;
       apb_signals.output_ready <= process_signals.output_ready;
       apb_signals.output_sample <= process_signals.output_sample;
     end if;
@@ -125,9 +118,7 @@ circular_buffer_comp : buff
         chunk           => process_signals.chunk,
         output_ready    => process_signals.output_ready,
         output_sample   => process_signals.output_sample,
-        chunk_irq       => process_signals.chunk_irq,
-        buffer_empty    => process_signals.buffer_empty,
-        buffer_full     => process_signals.buffer_full);
+        chunk_irq       => process_signals.chunk_irq);
 
    -- pragma translate_off   
    bootmsg : report_version 

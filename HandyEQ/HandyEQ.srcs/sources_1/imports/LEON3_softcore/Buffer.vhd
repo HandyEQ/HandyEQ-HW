@@ -16,9 +16,7 @@ entity buff is
         chunk           : in    std_logic_vector(integer(ceil(log2(real(LENGTH))))-1 downto 0);
         output_ready    : out   std_logic;
         output_sample   : out   std_logic_vector(2*SIZE downto 0); -- one extra bit for sample status
-        chunk_irq       : out   std_logic;
-        buffer_empty    : out   std_logic;
-        buffer_full     : out   std_logic
+        chunk_irq       : out   std_logic
     );
 end buff;
 
@@ -27,11 +25,11 @@ type BUFFER_ARRAY is array (LENGTH-1 downto 0) of std_logic_vector(SIZE-1 downto
 signal circ_buffer  : BUFFER_ARRAY;
 signal head         : integer;
 signal tail         : integer;
-signal tail_shadow  : integer;
-
+signal full, empty  : std_logic;
+        
 begin
   
-   Put: process(input_irq, reset) is -- What if signals arrive at the same time, we use 'Event.
+   main: process(input_irq, output_select, reset) is -- What if signals arrive at the same time, we use 'Event.
         variable head_var : integer;
         variable tail_var : integer;
    begin
@@ -39,75 +37,80 @@ begin
         for i in 0 to SIZE-1 loop
           circ_buffer(i) <= (others => '0');
         end loop;
-        
+        full <= '0';
+        empty <= '1';
         head <= 0;
         chunk_irq <= '0';
-        buffer_full <= '0';
         
-      elsif input_irq = '1' then
-        head_var := head;
-        --Insert new sample and update head
-        head <= head + 1;
-        circ_buffer(head_var) <= input_sample;
-            
-        --Check is buffer is full
-        if ((head_var+1) = tail_var) then
-            buffer_full <= '1';
-            tail_shadow <= (tail + 1) mod LENGTH;
-        else
-            buffer_full <= '0';
-        end if;
-            
-        --Check if interrupt is to be sent
-        if ((head_var + 1) mod to_integer(unsigned(CHUNK)) = 0) then
-            chunk_irq <= '1';
-        else
-            chunk_irq <= '0';
-        end if;
-      end if;
-    end process;
-    
-    Get: process(output_select, reset, tail_shadow) is -- What if signals arrive at the same time, we use 'Event.
-        variable head_var : integer;
-        variable tail_var : integer;
-    begin
-      if reset = '0' then
         tail <= 0;
         output_ready <= '0';
-        output_sample <= (others => '0');
-        buffer_empty <= '1';
+        output_sample <= (others => '0');          
+      else
+        head_var := head;        
+        tail_var := tail;
         
-      elsif output_select = '1' then
-        tail_var := tail;  
-        if(tail_var = head_var)then
-            buffer_empty <= '1';
-            output_sample(0) <= '0';
-            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
-        elsif((tail_var + 1) = head_var) then
-            buffer_empty <= '1';
-            output_sample(0) <= '0';
-            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
-            tail <= (tail + 1) mod LENGTH;
-        elsif((tail_var + 2) = head_var) then
-            buffer_empty <= '1';
-            output_sample(0) <= '1';
-            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
-            output_sample(SIZE*2 downto SIZE+1) <= circ_buffer(tail_var+1);
-            tail <= (tail + 2) mod LENGTH;
-        else
-            buffer_empty <= '0';
-            output_sample(0) <= '1';
-            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
-            output_sample(SIZE*2 downto SIZE+1) <= circ_buffer(tail_var+1);
-            tail <= (tail + 2) mod LENGTH;
-        end if;
+        --Put
+        if input_irq = '1' then          
+          --Insert new sample
+          circ_buffer(head_var) <= input_sample;
+          empty <= '0';
           
-        output_ready  <= '1';
-
-        elsif output_select = '0' then-- output_select = '0' and output_select'event then
+          if(((head_var + 1) mod LENGTH) = tail_var) then
+            full <= '1';
+          elsif ((head_var = tail_var) AND (full = '1')) then --Check if buffer is full
+            full <= '1';            
+            tail <= (tail_var + 1) mod LENGTH;
+            tail_var := (tail_var + 1) mod LENGTH;
+          else
+            full <= '0';
+          end if;
+            
+          --Check if interrupt is to be sent
+          if ((head_var + 1) mod to_integer(unsigned(chunk)) = 0) then
+            chunk_irq <= '1';
+          else
+            chunk_irq <= '0';
+          end if;
+          
+          --Update Head
+          head <= (head_var + 1) mod LENGTH;
+          head_var := (head_var + 1) mod LENGTH;
+        end if;
+        
+        -- Get  
+        if output_select = '1' then
+          full <= '0';
+          if((tail_var = head_var) AND (empty = '1'))then
+            empty <= '1';
+            output_ready <= '0';
+            output_sample <= (others => '0'); 
+            
+          elsif(((tail_var + 1) mod LENGTH) = head_var) then
+            empty <= '1';
+            output_ready  <= '1';
+            output_sample(0) <= '0';
+            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
+            tail <= (tail_var + 1) mod LENGTH;
+            
+          elsif(((tail_var + 2) mod LENGTH) = head_var) then
+            empty <= '1';
+            output_ready  <= '1';
+            output_sample(0) <= '1';
+            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
+            output_sample(SIZE*2 downto SIZE+1) <= circ_buffer((tail_var+1) mod LENGTH);
+            tail <= (tail_var + 2) mod LENGTH;
+            
+          else
+            empty <= '0';
+            output_ready  <= '1';
+            output_sample(0) <= '1';
+            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
+            output_sample(SIZE*2 downto SIZE+1) <= circ_buffer((tail_var+1) mod LENGTH);
+            tail <= (tail_var + 2) mod LENGTH;
+          end if;
+        elsif output_select = '0' then
            output_ready  <= '0';
-        elsif (tail /= tail_shadow)then
-          tail <= tail_shadow;
-        end if;      
+        end if;        
+      end if;      
     end process;
 end architecture arch;

@@ -1,7 +1,7 @@
 -- Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
--- Date        : Tue Apr 08 08:18:04 2014
+-- Date        : Wed Apr 09 15:17:39 2014
 -- Host        : CSE-4225-16 running 64-bit Service Pack 1  (build 7601)
 -- Command     : write_vhdl -force -mode funcsim {Y:/DAT096-Embedded System
 --               Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.vhdl}

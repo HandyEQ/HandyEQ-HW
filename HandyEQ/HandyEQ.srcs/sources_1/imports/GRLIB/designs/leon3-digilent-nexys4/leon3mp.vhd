@@ -752,7 +752,7 @@ Buffer_apb_map : Buffer_apb
     
     XADC_component : ADC
         Port map(clk => clk,
-            reset => rstn,
+            reset => rstn, -- Dont know if this is connected correctly..
             vauxp3 => vauxp3,
             vauxn3 => vauxn3,
             drdy => drdy_signal,
