@@ -20,7 +20,7 @@ G
 ^
 DRC finished with %s
 1905*	planAhead2)
-0 Errors, 21 Warnings2default:defaultZ12-3199
+0 Errors, 23 Warnings2default:defaultZ12-3199
 `
 BPlease refer to the DRC report (report_drc) for more information.
 1906*	planAheadZ12-3200
@@ -57,7 +57,7 @@ QWebTalk data collection is enabled (User setting is ON. Install Setting is ON.)
 †'%s' has been successfully sent to Xilinx on %s. For additional details about this file, please refer to the Webtalk help file at %s.
 186*common2•
 €Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/impl_1/usage_statistics_webtalk.xml2default:default2,
-Wed Apr 09 15:02:34 20142default:default2I
+Fri Apr 11 09:54:16 20142default:default2I
 5C:/Xilinx/Vivado/2013.4/doc/webtalk_introduction.html2default:defaultZ17-186
 Q
 Releasing license: %s
@@ -67,10 +67,10 @@ Q
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2%
 write_bitstream: 2default:default2
-00:00:182default:default2
-00:00:222default:default2
-1242.9182default:default2
-177.6252default:defaultZ17-268
+00:00:282default:default2
+00:00:342default:default2
+1237.3952default:default2
+178.3092default:defaultZ17-268
 
 
 End Record

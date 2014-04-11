@@ -1,0 +1,1158 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Fri Apr 11 08:56:06 2014
+# Process ID: 576
+# Log file: Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/leon3mp.rdi
+# Journal file: Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+Attempting to get a license: Implementation
+Feature available: Implementation
+Loading parts and site information from C:/Xilinx/Vivado/2013.4/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+source leon3mp.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 'Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp' for cell 'XADC_component/XADC_component'
+INFO: [Netlist 29-17] Analyzing 74 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2013.4
+Loading clock regions from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2013.4/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2013.4/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/ConfigModes.xml
+INFO: [Opt 31-140] Inserted 3 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/.Xil/Vivado-576-XDAT20/dcp_2/xadc_wiz_0_early.xdc] for cell 'XADC_component/XADC_component'
+Finished Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/.Xil/Vivado-576-XDAT20/dcp_2/xadc_wiz_0_early.xdc] for cell 'XADC_component/XADC_component'
+Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc]
+Finished Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc]
+Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/.Xil/Vivado-576-XDAT20/dcp/leon3mp.xdc]
+Finished Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/.Xil/Vivado-576-XDAT20/dcp/leon3mp.xdc]
+Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/.Xil/Vivado-576-XDAT20/dcp_2/xadc_wiz_0.xdc] for cell 'XADC_component/XADC_component'
+Finished Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/.Xil/Vivado-576-XDAT20/dcp_2/xadc_wiz_0.xdc] for cell 'XADC_component/XADC_component'
+INFO: [Opt 31-138] Pushed 0 inverter(s).
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 37 instances were transformed.
+  IOBUF => IOBUF (OBUFT, IBUF): 31 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+link_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:48 . Memory (MB): peak = 909.453 ; gain = 724.215
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.578 . Memory (MB): peak = 913.539 ; gain = 4.008
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1fd0699f3
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 942.035 ; gain = 28.496
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s).
+INFO: [Opt 31-10] Eliminated 196 cells.
+Phase 2 Constant Propagation | Checksum: 202ebd727
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 942.035 ; gain = 28.496
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 1422 unconnected nets.
+INFO: [Opt 31-11] Eliminated 14 unconnected cells.
+Phase 3 Sweep | Checksum: 2a6cb9c22
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 942.035 ; gain = 28.496
+Ending Logic Optimization Task | Checksum: 2a6cb9c22
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 942.035 ; gain = 28.496
+Implement Debug Cores | Checksum: 2387efe06
+Logic Optimization | Checksum: 2387efe06
+
+Starting Power Optimization Task
+
+Starting PowerOpt TimerUpdates Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending PowerOpt TimerUpdates Task | Checksum: 2a6cb9c22
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 945.563 ; gain = 3.527
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 7 BRAM(s) out of a total of 25 was updated to NO_CHANGE to save power.
+    Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 2 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 2 Total Ports: 50
+Ending Power Optimization Task | Checksum: 1aba62b27
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 1123.656 ; gain = 181.621
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1123.656 ; gain = 214.203
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.483 . Memory (MB): peak = 1123.656 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command place_design
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Core
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 1.1.1 Mandatory Logic Optimization
+INFO: [Opt 31-140] Inserted 7 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Phase 1.1.1 Mandatory Logic Optimization | Checksum: 145e64320
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 1.1.2 Build Super Logic Region (SLR) Database
+Phase 1.1.2 Build Super Logic Region (SLR) Database | Checksum: 145e64320
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 1.1.3 Add Constraints
+Phase 1.1.3 Add Constraints | Checksum: 145e64320
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 1.1.4 Build Macros
+Phase 1.1.4 Build Macros | Checksum: 16d71da59
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 1.1.5 Implementation Feasibility check
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[102][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[102][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[102][13] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[102][4] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[102][5] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[102][6] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[103][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[103][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[103][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[103][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[103][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[103][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[104][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[104][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[104][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[104][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[104][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[104][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[105][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[105][2] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[105][1] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[105][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[105][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[105][11] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[108][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[108][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[108][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[108][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[108][13] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[108][1] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[109][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[109][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[109][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[109][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[109][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[109][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[10][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[10][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[10][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[10][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[10][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[10][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[106][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[106][6] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[106][7] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[106][8] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[106][9] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[106][0] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[107][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[107][9] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[107][8] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[107][7] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[107][6] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[107][5] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[101][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[101][9] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[101][8] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[101][7] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[101][6] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[101][5] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[100][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[100][9] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[100][8] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[100][7] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[100][6] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[100][5] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[0][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[0][9] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[0][8] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[0][7] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[0][6] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[0][5] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[4][13]_i_2' is driving clock pin of 5 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[4][10] {LDCE}
+	Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[4][11] {LDCE}
+	Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[4][12] {LDCE}
+	Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[4][13] {LDCE}
+	Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[4][9] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[5][13]_i_2' is driving clock pin of 5 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[5][10] {LDCE}
+	Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[5][11] {LDCE}
+	Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[5][12] {LDCE}
+	Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[5][13] {LDCE}
+	Buffer_apb_out_map/circular_buffer_comp/circ_buffer_reg[5][9] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[110][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[110][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[110][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[110][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[110][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[110][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[111][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[111][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[111][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[111][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[111][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[111][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[112][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[112][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[112][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[112][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[112][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[112][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[113][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[113][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[113][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[113][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[113][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[113][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[114][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[114][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[114][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[114][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[114][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[114][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[115][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[115][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[115][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[115][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[115][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[115][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[116][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[116][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[116][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[116][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[116][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[116][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[117][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[117][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[117][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[117][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[117][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[117][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[118][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[118][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[118][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[118][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[118][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[118][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[119][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[119][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[119][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[119][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[119][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[119][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[11][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[11][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[11][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[11][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[11][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[11][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[120][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[120][1] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[120][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[120][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[120][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[120][12] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[121][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[121][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[121][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[121][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[121][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[121][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[122][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[122][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[122][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[122][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[122][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[122][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[123][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[123][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[123][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[123][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[123][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[123][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/output_sample_reg[28]_i_2' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/output_sample_reg[26] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/output_sample_reg[27] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/output_sample_reg[28] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/output_sample_reg[15] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/output_sample_reg[16] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[124][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[124][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[124][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[124][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[124][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[124][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[125][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[125][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[125][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[125][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[125][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[125][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[126][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[126][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[126][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[126][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[126][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[126][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[127][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[127][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[127][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[127][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[127][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[127][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[12][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[12][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[12][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[12][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[12][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[12][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[13][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[13][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[13][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[13][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[13][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[13][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[14][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[14][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[14][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[14][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[14][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[14][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[15][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[15][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[15][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[15][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[15][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[15][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[16][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[16][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[16][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[16][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[16][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[16][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[17][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[17][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[17][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[17][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[17][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[17][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[18][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[18][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[18][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[18][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[18][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[18][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[19][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[19][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[19][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[19][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[19][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[19][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[1][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[1][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[1][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[1][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[1][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[1][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[20][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[20][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[20][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[20][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[20][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[20][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[21][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[21][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[21][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[21][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[21][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[21][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[22][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[22][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[22][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[22][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[22][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[22][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[23][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[23][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[23][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[23][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[23][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[23][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[24][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[24][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[24][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[24][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[24][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[24][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[25][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[25][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[25][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[25][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[25][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[25][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[26][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[26][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[26][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[26][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[26][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[26][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[27][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[27][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[27][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[27][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[27][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[27][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[28][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[28][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[28][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[28][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[28][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[28][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[29][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[29][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[29][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[29][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[29][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[29][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[2][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[2][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[2][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[2][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[2][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[2][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[30][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[30][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[30][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[30][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[30][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[30][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[31][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[31][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[31][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[31][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[31][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[31][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[32][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[32][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[32][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[32][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[32][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[32][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[33][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[33][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[33][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[33][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[33][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[33][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[34][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[34][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[34][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[34][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[34][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[34][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[35][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[35][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[35][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[35][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[35][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[35][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[36][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[36][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[36][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[36][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[36][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[36][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[37][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[37][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[37][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[37][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[37][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[37][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[38][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[38][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[38][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[38][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[38][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[38][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[39][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[39][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[39][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[39][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[39][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[39][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[3][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[3][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[3][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[3][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[3][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[3][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[40][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[40][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[40][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[40][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[40][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[40][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[41][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[41][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[41][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[41][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[41][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[41][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[42][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[42][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[42][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[42][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[42][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[42][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[43][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[43][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[43][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[43][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[43][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[43][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[44][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[44][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[44][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[44][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[44][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[44][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[45][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[45][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[45][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[45][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[45][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[45][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[46][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[46][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[46][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[46][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[46][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[46][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[47][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[47][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[47][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[47][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[47][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[47][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[48][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[48][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[48][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[48][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[48][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[48][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[49][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[49][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[49][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[49][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[49][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[49][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[4][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[4][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[4][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[4][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[4][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[4][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[50][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[50][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[50][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[50][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[50][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[50][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[51][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[51][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[51][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[51][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[51][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[51][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[52][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[52][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[52][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[52][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[52][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[52][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[53][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[53][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[53][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[53][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[53][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[53][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[54][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[54][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[54][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[54][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[54][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[54][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[55][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[55][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[55][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[55][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[55][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[55][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[56][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[56][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[56][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[56][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[56][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[56][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[57][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[57][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[57][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[57][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[57][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[57][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[58][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[58][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[58][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[58][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[58][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[58][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[59][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[59][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[59][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[59][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[59][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[59][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[5][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[5][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[5][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[5][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[5][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[5][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[60][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[60][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[60][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[60][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[60][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[60][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[61][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[61][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[61][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[61][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[61][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[61][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[62][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[62][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[62][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[62][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[62][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[62][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[63][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[63][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[63][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[63][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[63][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[63][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[64][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[64][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[64][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[64][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[64][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[64][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[65][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[65][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[65][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[65][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[65][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[65][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[66][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[66][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[66][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[66][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[66][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[66][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[67][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[67][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[67][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[67][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[67][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[67][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[68][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[68][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[68][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[68][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[68][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[68][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[69][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[69][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[69][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[69][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[69][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[69][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[6][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[6][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[6][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[6][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[6][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[6][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[70][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[70][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[70][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[70][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[70][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[70][13] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[71][13]_i_1__0' is driving clock pin of 14 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[71][0] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[71][10] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[71][11] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[71][12] {LDCE}
+	Buffer_apb_map/circular_buffer_comp/circ_buffer_reg[71][13] {LDCE}
+INFO: [Common 17-14] Message 'Place 30-568' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1.1.5 Implementation Feasibility check | Checksum: 16d71da59
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 1.1.6 Pre-Place Cells
+Phase 1.1.6 Pre-Place Cells | Checksum: ee544b40
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 1.1.7 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.1.7 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 137505772
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 1.1.8 Build Placer Netlist Model
+
+Phase 1.1.8.1 Place Init Design
+
+Phase 1.1.8.1.1 Build Clock Data
+Phase 1.1.8.1.1 Build Clock Data | Checksum: 20fad5058
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Phase 1.1.8.1 Place Init Design | Checksum: 14128c068
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Phase 1.1.8 Build Placer Netlist Model | Checksum: 14128c068
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 1.1.9 Constrain Clocks/Macros
+
+Phase 1.1.9.1 Constrain Global/Regional Clocks
+Phase 1.1.9.1 Constrain Global/Regional Clocks | Checksum: db2178e1
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Phase 1.1.9 Constrain Clocks/Macros | Checksum: db2178e1
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Phase 1.1 Placer Initialization Core | Checksum: db2178e1
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: db2178e1
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 10aa95afe
+
+Time (s): cpu = 00:01:34 ; elapsed = 00:01:13 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 10aa95afe
+
+Time (s): cpu = 00:01:34 ; elapsed = 00:01:13 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 12545b337
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:19 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1ca7044f3
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:20 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 3.4 Timing Path Optimizer
+Phase 3.4 Timing Path Optimizer | Checksum: 105d79bc2
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:22 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 3.5 Commit Small Macros & Core Logic
+Phase 3.5 Commit Small Macros & Core Logic | Checksum: 111f50064
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:33 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 111f50064
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:35 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 111f50064
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:35 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 PCOPT Shape updates
+Phase 4.1 PCOPT Shape updates | Checksum: 18ec8cbd5
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:35 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 4.2 Post Placement Optimization
+
+Phase 4.2.1 Post Placement Timing Optimization
+
+Phase 4.2.1.1 Restore Best Placement
+Phase 4.2.1.1 Restore Best Placement | Checksum: 1cb4729ec
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:45 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Phase 4.2.1 Post Placement Timing Optimization | Checksum: 1cb4729ec
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:45 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Phase 4.2 Post Placement Optimization | Checksum: 1cb4729ec
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:45 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 4.3 Post Placement Cleanup
+Phase 4.3 Post Placement Cleanup | Checksum: 1cb4729ec
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:45 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 4.4 Placer Reporting
+
+Phase 4.4.1 Congestion Reporting
+Phase 4.4.1 Congestion Reporting | Checksum: 1cb4729ec
+
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:46 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 4.4.2 Dump Critical Paths 
+Phase 4.4.2 Dump Critical Paths  | Checksum: 1cb4729ec
+
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:46 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 4.4.3 Restore STA
+Phase 4.4.3 Restore STA | Checksum: 1cb4729ec
+
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:46 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 4.4.4 Print Final WNS
+INFO: [Place 30-100] Post Placement Timing Summary | WNS=0.513  | TNS=0.000  |
+
+Phase 4.4.4 Print Final WNS | Checksum: 1cb4729ec
+
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:53 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Phase 4.4 Placer Reporting | Checksum: 1cb4729ec
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:54 . Memory (MB): peak = 1123.656 ; gain = 0.000
+
+Phase 4.5 Final Placement Cleanup
+Phase 4.5 Final Placement Cleanup | Checksum: 1febeb2ef
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:54 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1febeb2ef
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:54 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Ending Placer Task | Checksum: 14d80c9b7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:01:54 . Memory (MB): peak = 1123.656 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+38 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:26 ; elapsed = 00:01:55 . Memory (MB): peak = 1123.656 ; gain = 0.000
+INFO: [Timing 38-163] DEBUG : Generate clock report | CPU: 1 secs 
+
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.343 . Memory (MB): peak = 1123.656 ; gain = 0.000
+INFO: [Designutils 20-134] DEBUG : Generate Control Sets report | CPU: 1 secs 
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1123.656 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 1123.656 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command route_design
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Starting Route Task
+
+Phase 1 Build RT Design
+
+Phase 1.1 Build Netlist & NodeGraph
+Phase 1.1 Build Netlist & NodeGraph | Checksum: 1b388113e
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:40 . Memory (MB): peak = 1202.527 ; gain = 78.871
+Phase 1 Build RT Design | Checksum: 11b3ff16e
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:40 . Memory (MB): peak = 1202.527 ; gain = 78.871
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 11b3ff16e
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:41 . Memory (MB): peak = 1202.527 ; gain = 78.871
+
+Phase 2.2 Restore Routing
+Phase 2.2 Restore Routing | Checksum: 11b3ff16e
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:41 . Memory (MB): peak = 1208.391 ; gain = 84.734
+
+Phase 2.3 Special Net Routing
+Phase 2.3 Special Net Routing | Checksum: 17dadf883
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:42 . Memory (MB): peak = 1224.332 ; gain = 100.676
+
+Phase 2.4 Local Clock Net Routing
+Phase 2.4 Local Clock Net Routing | Checksum: 16d799f6b
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:44 . Memory (MB): peak = 1224.332 ; gain = 100.676
+
+Phase 2.5 Update Timing
+
+Phase 2.5.1 Update timing with NCN CRPR
+
+Phase 2.5.1.1 Hold Budgeting
+Phase 2.5.1.1 Hold Budgeting | Checksum: 16d799f6b
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:00:53 . Memory (MB): peak = 1229.773 ; gain = 106.117
+Phase 2.5.1 Update timing with NCN CRPR | Checksum: 16d799f6b
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:00:53 . Memory (MB): peak = 1229.773 ; gain = 106.117
+Phase 2.5 Update Timing | Checksum: 16d799f6b
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:00:53 . Memory (MB): peak = 1229.773 ; gain = 106.117
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.318  | TNS=0      | WHS=-1.72  | THS=-216   |
+
+
+Phase 2.6 Budgeting
+Phase 2.6 Budgeting | Checksum: 16d799f6b
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:56 . Memory (MB): peak = 1229.773 ; gain = 106.117
+Phase 2 Router Initialization | Checksum: 16d799f6b
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:56 . Memory (MB): peak = 1229.773 ; gain = 106.117
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1210836a6
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:01 . Memory (MB): peak = 1229.773 ; gain = 106.117
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+
+Phase 4.1.1 Remove Overlaps
+ Number of Nodes with overlaps = 3235
+ Number of Nodes with overlaps = 463
+ Number of Nodes with overlaps = 220
+ Number of Nodes with overlaps = 204
+ Number of Nodes with overlaps = 168
+ Number of Nodes with overlaps = 125
+ Number of Nodes with overlaps = 78
+ Number of Nodes with overlaps = 55
+ Number of Nodes with overlaps = 47
+ Number of Nodes with overlaps = 84
+ Number of Nodes with overlaps = 52
+ Number of Nodes with overlaps = 29
+ Number of Nodes with overlaps = 47
+ Number of Nodes with overlaps = 23
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+INFO: [Route 35-325] The following overlapped node exist in the design and there is low overall congestion. 
+Resolution: Check for routing resource conflicts on the identified nets or significant localized congestion using the Route Congestion Metrics in the Device View. 
+1. INT_L_X24Y148/EE4BEG0
+Overlapping nets: 2
+	Buffer_apb_map/circular_buffer_comp/n_0_circ_buffer_reg[35][13]_i_1__0
+	Buffer_apb_map/circular_buffer_comp/n_0_circ_buffer_reg[49][13]_i_1__0
+
+ Number of Nodes with overlaps = 0
+Phase 4.1.1 Remove Overlaps | Checksum: d16c53b9
+
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:32 . Memory (MB): peak = 1229.773 ; gain = 106.117
+
+Phase 4.1.2 Update Timing
+Phase 4.1.2 Update Timing | Checksum: d16c53b9
+
+Time (s): cpu = 00:02:33 ; elapsed = 00:01:35 . Memory (MB): peak = 1229.773 ; gain = 106.117
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.194  | TNS=0      | WHS=N/A    | THS=N/A    |
+
+
+Phase 4.1.3 collectNewHoldAndFix
+Phase 4.1.3 collectNewHoldAndFix | Checksum: cfba35c4
+
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:36 . Memory (MB): peak = 1229.773 ; gain = 106.117
+Phase 4.1 Global Iteration 0 | Checksum: cfba35c4
+
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:36 . Memory (MB): peak = 1229.773 ; gain = 106.117
+Phase 4 Rip-up And Reroute | Checksum: cfba35c4
+
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:36 . Memory (MB): peak = 1229.773 ; gain = 106.117
+
+Phase 5 Delay CleanUp
+
+Phase 5.1 Update Timing
+Phase 5.1 Update Timing | Checksum: cfba35c4
+
+Time (s): cpu = 00:02:35 ; elapsed = 00:01:37 . Memory (MB): peak = 1229.773 ; gain = 106.117
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.194  | TNS=0      | WHS=N/A    | THS=N/A    |
+
+Phase 5 Delay CleanUp | Checksum: cfba35c4
+
+Time (s): cpu = 00:02:35 ; elapsed = 00:01:37 . Memory (MB): peak = 1229.773 ; gain = 106.117
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Full Hold Analysis
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: cfba35c4
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:01:39 . Memory (MB): peak = 1229.773 ; gain = 106.117
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.194  | TNS=0      | WHS=0.089  | THS=0      |
+
+Phase 6.1 Full Hold Analysis | Checksum: cfba35c4
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:01:39 . Memory (MB): peak = 1229.773 ; gain = 106.117
+Phase 6 Post Hold Fix | Checksum: cfba35c4
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:01:39 . Memory (MB): peak = 1229.773 ; gain = 106.117
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 4.65056 %
+  Global Horizontal Routing Utilization  = 5.67988 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+Phase 7 Verifying routed nets
+
+ Verification completed successfully
+Phase 7 Verifying routed nets | Checksum: cfba35c4
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:01:39 . Memory (MB): peak = 1229.773 ; gain = 106.117
+
+Phase 8 Depositing Routes
+Phase 8 Depositing Routes | Checksum: 181c7b346
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:43 . Memory (MB): peak = 1229.773 ; gain = 106.117
+
+Phase 9 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.200  | TNS=0.000  | WHS=0.091  | THS=0.000  |
+
+INFO: [Route 35-61] The design met the timing requirement.
+Phase 9 Post Router Timing | Checksum: 181c7b346
+
+Time (s): cpu = 00:02:56 ; elapsed = 00:01:51 . Memory (MB): peak = 1229.773 ; gain = 106.117
+INFO: [Route 35-16] Router Completed Successfully
+Ending Route Task | Checksum: 181c7b346
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:01:51 . Memory (MB): peak = 1229.773 ; gain = 106.117
+
+Routing Is Done.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:01:51 . Memory (MB): peak = 1229.773 ; gain = 106.117
+INFO: [Common 17-83] Releasing license: Implementation
+54 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:01 ; elapsed = 00:01:55 . Memory (MB): peak = 1229.773 ; gain = 106.117
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/leon3mp_drc_routed.rpt.
+report_drc: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1229.773 ; gain = 0.000
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+report_power: Time (s): cpu = 00:01:00 ; elapsed = 00:00:46 . Memory (MB): peak = 1229.773 ; gain = 0.000
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max, Constraints type: SDC.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1229.773 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1229.773 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 1229.773 ; gain = 0.000
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 560 Warnings, 5 Advisories
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./leon3mp.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-186] 'Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri Apr 11 09:04:04 2014. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2013.4/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+write_bitstream: Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 1495.813 ; gain = 266.039
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 11 09:04:04 2014...

@@ -1,8 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date             : Wed Apr 09 15:02:10 2014
-| Host             : CSE-4225-16 running 64-bit Service Pack 1  (build 7601)
+| Date             : Fri Apr 11 09:53:40 2014
+| Host             : XDAT20 running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file ADDA_power_routed.rpt -pb ADDA_power_summary_routed.pb
 | Design           : ADDA
 | Device           : xc7a100tcsg324-1
@@ -51,12 +51,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      134 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       56 |     63400 |            0.08 |
-|   Register     |    <0.001 |       60 |    126800 |            0.04 |
+| Slice Logic    |    <0.001 |      139 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       57 |     63400 |            0.08 |
+|   Register     |    <0.001 |       61 |    126800 |            0.04 |
 |   CARRY4       |    <0.001 |        2 |     15850 |            0.01 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      119 |       --- |             --- |
+|   Others       |     0.000 |        8 |       --- |             --- |
+|   BUFG         |     0.000 |        1 |        32 |            3.12 |
+| Signals        |    <0.001 |      122 |       --- |             --- |
 | I/O            |     0.006 |       22 |       210 |           10.47 |
 | XADC           |     0.002 |        1 |       --- |             --- |
 | Static Power   |     0.097 |          |           |                 |

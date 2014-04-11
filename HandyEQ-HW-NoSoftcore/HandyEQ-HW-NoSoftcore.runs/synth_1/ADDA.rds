@@ -2,8 +2,8 @@
 # Vivado v2013.4 (64-bit)
 # SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
 # IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
-# Start of session at: Wed Apr 09 15:00:44 2014
-# Process ID: 5600
+# Start of session at: Fri Apr 11 09:51:14 2014
+# Process ID: 3188
 # Log file: Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/ADDA.rds
 # Journal file: Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -44,10 +44,12 @@ Starting synthesis...
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 235.098 ; gain = 85.711
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 232.516 ; gain = 86.441
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port reset_in is neither a static name nor a globally static expression [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:94]
 WARNING: [Synth 8-1565] actual for formal port n_reset is neither a static name nor a globally static expression [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:109]
 WARNING: [Synth 8-1565] actual for formal port x_in is neither a static name nor a globally static expression [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:111]
+WARNING: [Synth 8-1565] actual for formal port reset is neither a static name nor a globally static expression [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:120]
 INFO: [Synth 8-638] synthesizing module 'ADDA' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:15]
 INFO: [Synth 8-637] synthesizing blackbox instance 'XADC_component' of component 'xadc_wiz_0' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:85]
 INFO: [Synth 8-3491] module 'IIR_Biquad_1' declared at 'Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:33' bound to instance 'IIR_biquad_comp' of component 'IIR_Biquad_1' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:106]
@@ -63,7 +65,7 @@ WARNING: [Synth 8-614] signal 'sample' is read in the process but is not in the 
 INFO: [Synth 8-256] done synthesizing module 'PWM__parameterized0' (2#1) [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'ADDA' (3#1) [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:15]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 266.363 ; gain = 116.977
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 263.813 ; gain = 117.738
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -108,13 +110,12 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
 Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
 Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
-Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 476.785 ; gain = 327.398
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 473.512 ; gain = 327.438
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished RTL Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 476.785 ; gain = 327.398
+Finished RTL Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 473.512 ; gain = 327.438
 ---------------------------------------------------------------------------------
 
 WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:204]
@@ -144,7 +145,7 @@ Part Resources:
 DSPs: 240 (col length:80)
 BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 545.219 ; gain = 395.832
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 541.711 ; gain = 395.637
 ---------------------------------------------------------------------------------
 
 
@@ -327,7 +328,7 @@ WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[20] ) is unused a
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3917] design ADDA has port SD_audio_out driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 545.219 ; gain = 395.832
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 541.711 ; gain = 395.637
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -341,9 +342,8 @@ Finished RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DADDR_signal_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DI_signal_reg[15] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 574.762 ; gain = 425.375
+Finished Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 571.078 ; gain = 425.004
 ---------------------------------------------------------------------------------
 
 
@@ -355,11 +355,11 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 571.078 ; gain = 425.004
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 571.078 ; gain = 425.004
 ---------------------------------------------------------------------------------
 
 
@@ -367,7 +367,7 @@ Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . M
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 571.078 ; gain = 425.004
 ---------------------------------------------------------------------------------
 
 
@@ -392,7 +392,7 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Gated Clock Conversion mode: off
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 571.078 ; gain = 425.004
 ---------------------------------------------------------------------------------
 
 
@@ -407,7 +407,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 571.078 ; gain = 425.004
 ---------------------------------------------------------------------------------
 
 
@@ -415,7 +415,7 @@ Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 571.078 ; gain = 425.004
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -441,9 +441,9 @@ Report Cell Usage:
 |      |Cell            |Count |
 +------+----------------+------+
 |1     |xadc_wiz_0_bbox |     1|
-|2     |BUFG            |     1|
+|2     |BUFG            |     2|
 |3     |CARRY4          |     2|
-|4     |LUT1            |     2|
+|4     |LUT1            |     3|
 |5     |LUT2            |    22|
 |6     |LUT3            |     7|
 |7     |LUT4            |    11|
@@ -451,39 +451,42 @@ Report Cell Usage:
 |9     |LUT6            |    17|
 |10    |FDCE            |    39|
 |11    |FDPE            |    11|
-|12    |LDC             |    10|
-|13    |OBUF            |    18|
+|12    |LD              |     1|
+|13    |LDC             |    10|
+|14    |IBUF            |     1|
+|15    |OBUF            |    18|
 +------+----------------+------+
 
 Report Instance Areas: 
 +------+----------------+--------------------+------+
 |      |Instance        |Module              |Cells |
 +------+----------------+--------------------+------+
-|1     |top             |                    |   173|
+|1     |top             |                    |   177|
 |2     |  PWM_component |PWM__parameterized0 |   106|
 +------+----------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 571.078 ; gain = 425.004
 ---------------------------------------------------------------------------------
 
-Synthesis finished with 0 errors, 0 critical warnings and 506 warnings.
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 574.762 ; gain = 425.375
-INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+Synthesis finished with 0 errors, 0 critical warnings and 505 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 571.078 ; gain = 425.004
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s).
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 10 instances were transformed.
+  A total of 11 instances were transformed.
+  LD => LDCE: 1 instances
   LDC => LDCE: 10 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
+22 Infos, 118 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 967.723 ; gain = 780.660
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 964.316 ; gain = 779.051
 # write_checkpoint ADDA.dcp
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 # report_utilization -file ADDA_utilization_synth.rpt -pb ADDA_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 967.723 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 09 15:01:20 2014...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 964.316 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 11 09:52:13 2014...

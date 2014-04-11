@@ -1,8 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date         : Wed Apr 09 15:01:45 2014
-| Host         : CSE-4225-16 running 64-bit Service Pack 1  (build 7601)
+| Date         : Fri Apr 11 09:52:54 2014
+| Host         : XDAT20 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_control_sets -verbose -file ADDA_control_sets_placed.rpt
 | Design       : ADDA
 | Device       : xc7a100t
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |    32 |
-| Minimum Number of register sites lost to control set restrictions |   212 |
+| Number of unique control sets                                     |    33 |
+| Minimum Number of register sites lost to control set restrictions |   219 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,7 +33,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | No                     |               1 |            1 |
 | No           | No                    | Yes                    |              24 |           14 |
 | No           | Yes                   | No                     |              10 |           10 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -48,38 +48,39 @@ Table of Contents
 +----------------------------------------------+---------------------------------------+---------------------------------------------+------------------+----------------+
 |                 Clock Signal                 |             Enable Signal             |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
 +----------------------------------------------+---------------------------------------+---------------------------------------------+------------------+----------------+
-|  PWM_component/n_0_PWM_sample_reg[9]_LDC_i_1 |                                       | PWM_component/n_0_PWM_sample_reg[9]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_0_PWM_sample_reg[8]_LDC_i_1 |                                       | PWM_component/n_0_PWM_sample_reg[8]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_0_PWM_sample_reg[7]_LDC_i_1 |                                       | PWM_component/n_0_PWM_sample_reg[7]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_0_PWM_sample_reg[6]_LDC_i_1 |                                       | PWM_component/n_0_PWM_sample_reg[6]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_0_PWM_sample_reg[5]_LDC_i_1 |                                       | PWM_component/n_0_PWM_sample_reg[5]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_0_PWM_sample_reg[4]_LDC_i_1 |                                       | PWM_component/n_0_PWM_sample_reg[4]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_0_PWM_sample_reg[3]_LDC_i_1 |                                       | PWM_component/n_0_PWM_sample_reg[3]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_0_PWM_sample_reg[2]_LDC_i_1 |                                       | PWM_component/n_0_PWM_sample_reg[2]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_0_PWM_sample_reg[1]_LDC_i_1 |                                       | PWM_component/n_0_PWM_sample_reg[1]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_0_PWM_sample_reg[0]_LDC_i_1 |                                       | PWM_component/n_0_PWM_sample_reg[0]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_0_PWM_sample[9]_P_i_1 | PWM_component/n_0_PWM_sample_reg[9]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_0_PWM_sample[9]_P_i_1 | PWM_component/n_0_PWM_sample_reg[8]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_0_PWM_sample[9]_P_i_1 | PWM_component/n_0_PWM_sample_reg[7]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_0_PWM_sample[9]_P_i_1 | PWM_component/n_0_PWM_sample_reg[6]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_0_PWM_sample[9]_P_i_1 | PWM_component/n_0_PWM_sample_reg[5]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_0_PWM_sample_reg[0]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_0_PWM_sample_reg[1]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_0_PWM_sample_reg[2]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_0_PWM_sample_reg[3]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_0_PWM_sample_reg[4]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_0_PWM_sample_reg[5]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_0_PWM_sample_reg[6]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_0_PWM_sample_reg[7]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_0_PWM_sample_reg[8]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_0_PWM_sample_reg[9]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_0_PWM_sample[9]_P_i_1 | PWM_component/n_0_PWM_sample_reg[0]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_0_PWM_sample[9]_P_i_1 | PWM_component/n_0_PWM_sample_reg[1]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_0_PWM_sample[9]_P_i_1 | PWM_component/n_0_PWM_sample_reg[2]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_0_PWM_sample[9]_P_i_1 | PWM_component/n_0_PWM_sample_reg[3]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_0_PWM_sample[9]_P_i_1 | PWM_component/n_0_PWM_sample_reg[4]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    |                                       | xlnx_opt__1                                 |                4 |             14 |
-|  clk_BUFG                                    | XADC_component/drdy_out               | xlnx_opt__1                                 |                2 |             16 |
+|  PWM_component/n_2_PWM_sample_reg[9]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[9]_LDC_i_2 |                1 |              1 |
+|  PWM_component/n_2_PWM_sample_reg[8]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[8]_LDC_i_2 |                1 |              1 |
+|  PWM_component/n_2_PWM_sample_reg[7]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[7]_LDC_i_2 |                1 |              1 |
+|  PWM_component/n_2_PWM_sample_reg[6]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[6]_LDC_i_2 |                1 |              1 |
+|  PWM_component/n_2_PWM_sample_reg[5]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[5]_LDC_i_2 |                1 |              1 |
+|  PWM_component/n_2_PWM_sample_reg[4]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[4]_LDC_i_2 |                1 |              1 |
+|  PWM_component/n_2_PWM_sample_reg[3]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[3]_LDC_i_2 |                1 |              1 |
+|  PWM_component/n_2_PWM_sample_reg[2]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[2]_LDC_i_2 |                1 |              1 |
+|  PWM_component/n_2_PWM_sample_reg[1]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[1]_LDC_i_2 |                1 |              1 |
+|  PWM_component/n_2_PWM_sample_reg[0]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[0]_LDC_i_2 |                1 |              1 |
+|  n_0_32_BUFG                                 |                                       |                                             |                1 |              1 |
+|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[9]_LDC_i_1 |                1 |              1 |
+|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[8]_LDC_i_1 |                1 |              1 |
+|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[7]_LDC_i_1 |                1 |              1 |
+|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[6]_LDC_i_1 |                1 |              1 |
+|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[5]_LDC_i_1 |                1 |              1 |
+|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[0]_LDC_i_2 |                1 |              1 |
+|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[1]_LDC_i_2 |                1 |              1 |
+|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[2]_LDC_i_2 |                1 |              1 |
+|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[3]_LDC_i_2 |                1 |              1 |
+|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[4]_LDC_i_2 |                1 |              1 |
+|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[5]_LDC_i_2 |                1 |              1 |
+|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[6]_LDC_i_2 |                1 |              1 |
+|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[7]_LDC_i_2 |                1 |              1 |
+|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[8]_LDC_i_2 |                1 |              1 |
+|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[9]_LDC_i_2 |                1 |              1 |
+|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[0]_LDC_i_1 |                1 |              1 |
+|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[1]_LDC_i_1 |                1 |              1 |
+|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[2]_LDC_i_1 |                1 |              1 |
+|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[3]_LDC_i_1 |                1 |              1 |
+|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[4]_LDC_i_1 |                1 |              1 |
+|  clk_BUFG                                    |                                       | n_0_32_BUFG                                 |                4 |             14 |
+|  clk_BUFG                                    | XADC_component/drdy_out               | n_0_32_BUFG                                 |                2 |             16 |
 +----------------------------------------------+---------------------------------------+---------------------------------------------+------------------+----------------+
 
 

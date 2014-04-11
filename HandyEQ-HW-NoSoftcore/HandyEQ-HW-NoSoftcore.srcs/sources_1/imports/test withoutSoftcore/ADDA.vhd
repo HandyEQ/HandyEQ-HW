@@ -91,7 +91,7 @@ XADC_component : xadc_wiz_0
         drdy_out => DRDY_signal,
         do_out => DO_signal,
         dclk_in => clk,
-        reset_in => reset,
+        reset_in => not reset,
         vp_in => '0',
         vn_in => '0',
         vauxp3 => vauxp3,
@@ -117,7 +117,7 @@ PWM_component : PWM
     generic map(
                 width => 16,
                 accuracy => 10)
-    PORT MAP(reset => reset,
+    PORT MAP(reset => not reset,
            clk => clk,
            sample => Filter_in_signal, --Filter_out_signal(17 downto 2),
            PWM_out => PWM_audio_out,
@@ -127,7 +127,7 @@ AD_data <= Filter_in_signal; --Filter_out_signal(17 downto 2);
             
 process(clk, reset)
 begin  
-  if (reset = '1') then
+  if (reset = '0') then
     DI_signal <= (OTHERS=>'0');
     DEN_signal <= '0';
     DWE_signal <= '0';
