@@ -19,26 +19,12 @@ struct chunk * retrieve_chunk(){
 	while(i < chunk_size){
 		s_inp_buf -> csreg |= (1 << 13);
 		while(s_inp_buf -> csreg & (1 << 2) == 0);
-		if(s_inp_buf -> data & 1 == 1){
-			hold = s_inp_buf->data;
-			hold >>= 1;
-			if ((hold & 0x2000) == 0x2000) {
-				sign = 0xFFFE000;
-			}
-			current_chunk->data[i++] = sign | hold & 0x1FFF;
-			hold >>= 14;
-			if ((hold & 0x2000) == 0x2000) {
-				sign = 0xFFFE000;
-			}
-			current_chunk->data[i++] = sign | hold & 0x1FFF;
-		} else {
-			hold = s_inp_buf->data;
-			hold >>= 1;
-			if ((hold & 0x2000) == 0x2000) {
-				sign = 0xFFFE000;
-			}
-			current_chunk->data[i++] = sign | hold & 0x1FFF;
+		hold = s_inp_buf->data;
+		hold >>= 1;
+		if ((hold & 0x2000) == 0x2000) {
+			sign = 0xFFFE000;
 		}
+		current_chunk->data[i++] = sign | hold & 0x7FFF;
 		s_inp_buf->csreg |= (0 << 13);
 	}
 	return current_chunk; 
@@ -47,8 +33,7 @@ struct chunk * retrieve_chunk(){
 void output_chunk(struct chunk *current_chunk){
 	int i = 0;
 	while(i < chunk_size){
-		s_out_buf -> data = 1 | (current_chunk->data[i] << 1) | (current_chunk->data[i+1] << 15);
-		i += 2;
+		s_out_buf -> data = current_chunk->data[i++];
 	}
 	free(current_chunk);
 }

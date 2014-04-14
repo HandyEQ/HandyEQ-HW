@@ -34,8 +34,8 @@ void audio_path(){
 	/*
 		Put fucking DSP stuff here!!
 	*/
-	send_char_uart('C');
-	//printf("IRQ Data in Chunk.data[0]: %d \n", current_chunk->data[0]);
+	//send_char_uart('C');
+	printf("IRQ: %d \n", current_chunk->data[0]);
 
 	//Output chunk to buffer
 	output_chunk(current_chunk);
