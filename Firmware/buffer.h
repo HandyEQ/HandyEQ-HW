@@ -1,8 +1,8 @@
 #ifndef BUFFER_H
 #define BUFFER_H
 
-#define input_buf_addr 0x8000D000
-#define output_buf_addr 0x8000E000
+#define input_buf_addr 0x80000D00
+#define output_buf_addr 0x80000E00
 #define buf_irq 13
 #define chunk_size 48
 
@@ -21,5 +21,6 @@ struct chunk
 //Functions for Buffers 
 struct chunk * retrieve_chunk();
 void output_chunk(struct chunk *current_chunk);
+void init_buffer();
 
 #endif

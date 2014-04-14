@@ -7,7 +7,7 @@ struct buffer_regs *s_out_buf = (struct buffer_regs *) output_buf_addr;
 
 
 void init_buffer(){
-	s_inp_buf -> csreg |= (chunk_size << 3); 
+	s_inp_buf -> csreg = (chunk_size << 3); 
 }
 
 //Retrieves samples from the buffer in the form of a chunk
@@ -15,19 +15,29 @@ struct chunk * retrieve_chunk(){
 	struct chunk *current_chunk = malloc(sizeof(struct chunk));
 	int i = 0;
 	int hold = 0;
+	int sign = 0;
 	while(i < chunk_size){
 		s_inp_buf -> csreg |= (1 << 13);
 		while(s_inp_buf -> csreg & (1 << 2) == 0);
 		if(s_inp_buf -> data & 1 == 1){
 			hold = s_inp_buf->data;
 			hold >>= 1;
-			current_chunk->data[i++] = hold & 0x3FFF;
+			if ((hold & 0x2000) == 0x2000) {
+				sign = 0xFFFE000;
+			}
+			current_chunk->data[i++] = sign | hold & 0x1FFF;
 			hold >>= 14;
-			current_chunk->data[i++] = hold & 0x3FFF;
+			if ((hold & 0x2000) == 0x2000) {
+				sign = 0xFFFE000;
+			}
+			current_chunk->data[i++] = sign | hold & 0x1FFF;
 		} else {
 			hold = s_inp_buf->data;
 			hold >>= 1;
-			current_chunk->data[i++] = hold & 0x3FFF;
+			if ((hold & 0x2000) == 0x2000) {
+				sign = 0xFFFE000;
+			}
+			current_chunk->data[i++] = sign | hold & 0x1FFF;
 		}
 		s_inp_buf->csreg |= (0 << 13);
 	}
@@ -38,9 +48,6 @@ void output_chunk(struct chunk *current_chunk){
 	int i = 0;
 	while(i < chunk_size){
 		s_out_buf -> data = 1 | (current_chunk->data[i] << 1) | (current_chunk->data[i+1] << 15);
-		s_out_buf -> csreg |= (1 << 14);
-		while(s_out_buf -> csreg & (1 << 2) == 0);
-		s_out_buf -> csreg |= (0 << 14);
 		i += 2;
 	}
 	free(current_chunk);

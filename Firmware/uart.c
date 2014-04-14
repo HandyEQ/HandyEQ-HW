@@ -13,16 +13,18 @@ void init_uart(int baud_rate){
 
 void send_char_uart(char data){
 	uart_struct -> data = data;
+	while((uart_struct->status & 2) == 1);
 }
 
-void send_string_uart(char *data){
+void send_string_uart(char data[]){
 	int i = 0;
-	while(i < sizeof(data)/8){
-		send_uart(data[i++]);
-		while((uart_struct->status & 1) == 1);
+	while(i < sizeof(data)){
+		send_char_uart(data[i++]);
 	}
 }
 
 char recieve_uart(){
 	return uart_struct -> data;
 }
+
+
