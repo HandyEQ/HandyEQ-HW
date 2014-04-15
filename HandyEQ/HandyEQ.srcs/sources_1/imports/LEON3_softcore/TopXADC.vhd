@@ -133,6 +133,7 @@ begin
   end if;  
 end process;
 
-drdy <= DRDY_signal;
+drdy <= eoc_out_signal;
+--drdy <= DRDY_signal;
      
 end rtl;

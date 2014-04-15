@@ -5,13 +5,13 @@ use ieee.math_real.all;
 
 entity buff_out is 
     generic(
-        SIZE    : integer := 14; 
+        SIZE    : integer := 16; 
         LENGTH  : integer := 128
     );
     port(
         reset           : in    std_logic;
         input_irq       : in    std_logic;
-        input_sample    : in    std_logic_vector(2*SIZE downto 0); -- one extra for status
+        input_sample    : in    std_logic_vector(SIZE-1 downto 0); -- one extra for status
         output_select   : in    std_logic;
         output_ready    : out   std_logic;
         output_sample   : out   std_logic_vector(SIZE-1 downto 0)
@@ -46,33 +46,10 @@ begin
         head_var := head;
         
         --Put
-        if input_irq = '1' then          
-          --Insert new sample and update head
-          if(input_sample(0) = '1') then
-            circ_buffer((head_var + 1) mod LENGTH) <= input_sample(2*SIZE downto SIZE+1);
-            circ_buffer(head_var) <= input_sample(SIZE downto 1);
+        if input_irq = '1' then  
+         
+            circ_buffer(head_var) <= input_sample;
             empty <= '0';
-          
-            if(((head_var + 2) mod LENGTH) = tail_var) then
-              full <= '1';
-            elsif (head_var = tail_var) and (full = '1') then
-              full <= '1';
-              tail <= (tail_var + 2) mod LENGTH;
-              tail_var := (tail_var + 2) mod LENGTH;
-            elsif (((head_var+ 1) mod LENGTH) = tail_var) and (full = '1') then 
-              full <= '1';             
-              tail <= (tail_var + 1) mod LENGTH;
-              tail_var := (tail_var + 1) mod LENGTH;
-            else
-              full <= '0';
-            end if;
-            
-            --Update Head
-            head <= (head_var + 2) mod LENGTH;
-            head_var := (head_var + 2) mod LENGTH;
-          
-          else
-            circ_buffer(head_var) <= input_sample(SIZE downto 1);
           
             if(((head_var + 1) mod LENGTH) = tail_var) then
               full <= '1';
@@ -88,8 +65,7 @@ begin
           head <= (head_var + 1) mod LENGTH;
           head_var := (head_var + 1) mod LENGTH;
           
-          end if;        
-        end if;
+          end if;
       
         -- Get      
         if output_select = '1' then

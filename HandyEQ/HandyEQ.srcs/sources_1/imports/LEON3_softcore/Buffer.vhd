@@ -5,7 +5,7 @@ use ieee.math_real.all;
 
 entity buff is 
     generic(
-        SIZE    : integer := 14; 
+        SIZE    : integer := 16; 
         LENGTH  : integer := 128
     );
     port(
@@ -15,7 +15,7 @@ entity buff is
         output_select   : in    std_logic;
         chunk           : in    std_logic_vector(integer(ceil(log2(real(LENGTH))))-1 downto 0);
         output_ready    : out   std_logic;
-        output_sample   : out   std_logic_vector(2*SIZE downto 0); -- one extra bit for sample status
+        output_sample   : out   std_logic_vector(SIZE-1 downto 0); 
         chunk_irq       : out   std_logic
     );
 end buff;
@@ -82,31 +82,18 @@ begin
           full <= '0';
           if((tail_var = head_var) AND (empty = '1'))then
             empty <= '1';
-            output_ready <= '0';
             output_sample <= (others => '0'); 
             
           elsif(((tail_var + 1) mod LENGTH) = head_var) then
             empty <= '1';
             output_ready  <= '1';
-            output_sample(0) <= '0';
-            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
+            output_sample <= circ_buffer(tail_var);
             tail <= (tail_var + 1) mod LENGTH;
-            
-          elsif(((tail_var + 2) mod LENGTH) = head_var) then
-            empty <= '1';
-            output_ready  <= '1';
-            output_sample(0) <= '1';
-            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
-            output_sample(SIZE*2 downto SIZE+1) <= circ_buffer((tail_var+1) mod LENGTH);
-            tail <= (tail_var + 2) mod LENGTH;
-            
           else
             empty <= '0';
             output_ready  <= '1';
-            output_sample(0) <= '1';
-            output_sample(SIZE downto 1) <= circ_buffer(tail_var);
-            output_sample(SIZE*2 downto SIZE+1) <= circ_buffer((tail_var+1) mod LENGTH);
-            tail <= (tail_var + 2) mod LENGTH;
+            output_sample <= circ_buffer(tail_var);
+            tail <= (tail_var + 1) mod LENGTH;
           end if;
         elsif output_select = '0' then
            output_ready  <= '0';

@@ -13,7 +13,7 @@ entity Buffer_apb is
     paddr       : integer := 0;
     pmask       : integer := 16#fff#;
     pirq        : integer := 0;
-    sample_size : integer := 14;
+    sample_size : integer := 16;
     buffer_size : integer := 128
   );
   port (
@@ -41,7 +41,7 @@ component buff is
         output_select   : in    std_logic;
         chunk           : in    std_logic_vector(integer(ceil(log2(real(LENGTH))))-1 downto 0);
         output_ready    : out   std_logic;
-        output_sample   : out   std_logic_vector(2*SIZE downto 0); -- one extra bit for sample status
+        output_sample   : out   std_logic_vector(SIZE-1 downto 0);
         chunk_irq       : out   std_logic
         );
 end component;
@@ -50,7 +50,7 @@ type buffer_signals is record
     output_select    : std_logic; -- from interrupt routine
     chunk            : std_logic_vector(integer(ceil(log2(real(buffer_size))))-1 downto 0); -- from interrupt routine
     output_ready     : std_logic; -- to interrupt routine
-    output_sample    : std_logic_vector(2*sample_size downto 0); -- to interrupt routine
+    output_sample    : std_logic_vector(sample_size-1 downto 0); -- to interrupt routine
     chunk_irq        : std_logic;
 end record;
 
@@ -83,8 +83,9 @@ begin
         apbo.prdata(2) <= apb_signals.output_ready; 
       elsif apbi.paddr(4 downto 2) = "001" then
         -- Write buffer_reg.data
-        apbo.prdata(0) <= apb_signals.output_sample(0);
-        apbo.prdata(2*sample_size downto 1) <= apb_signals.output_sample(2*sample_size downto 1);
+        apbo.prdata <= (others => '0');        
+        apbo.prdata(31) <= apb_signals.output_sample(sample_size-1);
+        apbo.prdata(sample_size-2 downto 0) <= apb_signals.output_sample(sample_size-2 downto 0);
       end if;
     end if;    
   end process;

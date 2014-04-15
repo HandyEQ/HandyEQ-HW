@@ -14,7 +14,7 @@ entity Buffer_apb_out is
     paddr       : integer := 0;
     pmask       : integer := 16#fff#;
     pirq        : integer := 0;
-    sample_size : integer := 14;
+    sample_size : integer := 16;
     buffer_size : integer := 128
   );
   port (
@@ -38,7 +38,7 @@ component buff_out is
     port(
         reset           : in    std_logic;
         input_irq       : in    std_logic;
-        input_sample    : in    std_logic_vector(2*SIZE downto 0); -- one extra for status
+        input_sample    : in    std_logic_vector(SIZE-1 downto 0); -- one extra for status
         output_select   : in    std_logic;
         output_ready    : out   std_logic;
         output_sample   : out   std_logic_vector(SIZE-1 downto 0)
@@ -47,7 +47,7 @@ end component;
 
 type buffer_signals is record
     input_irq        : std_logic;
-    input_sample     : std_logic_vector(2*sample_size downto 0);
+    input_sample     : std_logic_vector(sample_size-1 downto 0);
     output_select    : std_logic; -- from interrupt routine
     output_ready     : std_logic; -- to interrupt routine
     output_sample    : std_logic_vector(sample_size-1 downto 0); -- to interrupt routine
@@ -65,16 +65,16 @@ begin
   
   -- combinatorial process
   apb_comb : process(process_signals, apb_signals, apbi)
+  variable temp : std_logic;
   begin
     
     -- Read registers
-    if (apbi.psel(pindex) and apbi.penable and apbi.pwrite) = '1' then
-      if apbi.paddr(4 downto 2) = "000" then
-        -- Read buffer_reg.status
-        apb_signals.input_irq <= apbi.pwdata(14);
-                
-      elsif apbi.paddr(4 downto 2) = "001" then 
-         apb_signals.input_sample <= apbi.pwdata(2*sample_size downto 0);
+    temp := apbi.psel(pindex) and apbi.penable and apbi.pwrite;
+    apb_signals.input_irq <= temp;
+    if temp = '1' then
+      if apbi.paddr(4 downto 2) = "001" then 
+         apb_signals.input_sample(sample_size-1) <= apbi.pwdata(31);
+         apb_signals.input_sample(sample_size-2 downto 0) <= apbi.pwdata(sample_size-2 downto 0);
       end if;
     end if;    
   end process; 
