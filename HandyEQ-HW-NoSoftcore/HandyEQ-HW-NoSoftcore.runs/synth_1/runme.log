@@ -20,23 +20,28 @@ source ADDA.tcl
 # create_project -in_memory -part xc7a100tcsg324-1
 # set_property target_language VHDL [current_project]
 # set_param project.compositeFile.enableAutoGeneration 0
-# add_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}
-# set_property used_in_implementation false [get_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}]
-# set_property use_blackbox_stub false [get_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}]
-# read_verilog {{y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v}}
+# add_files Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp
+# set_property used_in_implementation false [get_files Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp]
+# set_property use_blackbox_stub false [get_files Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp]
+# read_verilog y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v
 # read_vhdl {
-#   {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/coefficient_pkg_orig.vhd}
-#   {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd}
-#   {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd}
-#   {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd}
+#   {Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/coefficient_pkg_orig.vhd}
+#   {Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd}
+#   {Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd}
+#   Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd
+#   Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd
+#   Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd
+#   Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd
+#   Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/decimator.vhd
+#   {Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd}
 # }
-# read_xdc {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}
-# set_property used_in_implementation false [get_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}]
+# read_xdc {{Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}
+# set_property used_in_implementation false [get_files {{Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}]
 # read_xdc dont_buffer.xdc
 # set_property used_in_implementation false [get_files dont_buffer.xdc]
 # set_param synth.vivado.isSynthRun true
-# set_property webtalk.parent_dir {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.data/wt} [current_project]
-# set_property parent.project_dir {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore} [current_project]
+# set_property webtalk.parent_dir Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.data/wt [current_project]
+# set_property parent.project_dir Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore [current_project]
 # synth_design -top ADDA -part xc7a100tcsg324-1
 Command: synth_design -top ADDA -part xc7a100tcsg324-1
 
@@ -45,28 +50,47 @@ Starting synthesis...
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 232.516 ; gain = 86.441
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 235.211 ; gain = 86.734
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-1565] actual for formal port reset_in is neither a static name nor a globally static expression [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:94]
-WARNING: [Synth 8-1565] actual for formal port n_reset is neither a static name nor a globally static expression [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:109]
-WARNING: [Synth 8-1565] actual for formal port x_in is neither a static name nor a globally static expression [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:111]
-WARNING: [Synth 8-1565] actual for formal port reset is neither a static name nor a globally static expression [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:120]
-INFO: [Synth 8-638] synthesizing module 'ADDA' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:15]
-INFO: [Synth 8-637] synthesizing blackbox instance 'XADC_component' of component 'xadc_wiz_0' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:85]
-INFO: [Synth 8-3491] module 'IIR_Biquad_1' declared at 'Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:33' bound to instance 'IIR_biquad_comp' of component 'IIR_Biquad_1' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'IIR_Biquad_1' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'IIR_Biquad_1' (1#1) [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:44]
+WARNING: [Synth 8-1565] actual for formal port reset_in is neither a static name nor a globally static expression [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:189]
+WARNING: [Synth 8-1565] actual for formal port x_in is neither a static name nor a globally static expression [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:206]
+WARNING: [Synth 8-1565] actual for formal port reset is neither a static name nor a globally static expression [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:295]
+WARNING: [Synth 8-1565] actual for formal port sample is neither a static name nor a globally static expression [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:297]
+INFO: [Synth 8-638] synthesizing module 'ADDA' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:21]
+INFO: [Synth 8-637] synthesizing blackbox instance 'XADC_component' of component 'xadc_wiz_0' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:180]
+INFO: [Synth 8-3491] module 'IIR_Biquad_1' declared at 'Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:33' bound to instance 'IIR_Biquad_1_cmp' of component 'IIR_Biquad_1' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:201]
+INFO: [Synth 8-638] synthesizing module 'IIR_Biquad_1' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'IIR_Biquad_1' (1#1) [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:44]
+INFO: [Synth 8-3491] module 'decimator' declared at 'Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/decimator.vhd:35' bound to instance 'decimator1_cmp' of component 'decimator' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:211]
+INFO: [Synth 8-638] synthesizing module 'decimator' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/decimator.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'decimator' (2#1) [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/decimator.vhd:46]
+INFO: [Synth 8-3491] module 'IIR_Biquad_2' declared at 'Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:33' bound to instance 'IIR_Biquad_2_cmp' of component 'IIR_Biquad_2' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'IIR_Biquad_2' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'IIR_Biquad_2' (3#1) [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:44]
+INFO: [Synth 8-3491] module 'decimator' declared at 'Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/decimator.vhd:35' bound to instance 'decimator2_cmp' of component 'decimator' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:231]
+INFO: [Synth 8-3491] module 'IIR_Biquad_3' declared at 'Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:33' bound to instance 'IIR_Biquad_3_cmp' of component 'IIR_Biquad_3' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:241]
+INFO: [Synth 8-638] synthesizing module 'IIR_Biquad_3' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'IIR_Biquad_3' (4#1) [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:44]
+INFO: [Synth 8-3491] module 'decimator' declared at 'Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/decimator.vhd:35' bound to instance 'decimator3_cmp' of component 'decimator' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:251]
+INFO: [Synth 8-3491] module 'IIR_Biquad_4' declared at 'Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:33' bound to instance 'IIR_Biquad_4_cmp' of component 'IIR_Biquad_4' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:261]
+INFO: [Synth 8-638] synthesizing module 'IIR_Biquad_4' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'IIR_Biquad_4' (5#1) [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:44]
+INFO: [Synth 8-3491] module 'decimator' declared at 'Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/decimator.vhd:35' bound to instance 'decimator4_cmp' of component 'decimator' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:271]
+INFO: [Synth 8-3491] module 'IIR_Biquad_5' declared at 'Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:33' bound to instance 'IIR_Biquad_5_cmp' of component 'IIR_Biquad_5' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:281]
+INFO: [Synth 8-638] synthesizing module 'IIR_Biquad_5' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'IIR_Biquad_5' (6#1) [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:44]
 	Parameter width bound to: 16 - type: integer 
 	Parameter accuracy bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'PWM' declared at 'Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:5' bound to instance 'PWM_component' of component 'PWM' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:116]
-INFO: [Synth 8-638] synthesizing module 'PWM__parameterized0' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:17]
+INFO: [Synth 8-3491] module 'PWM' declared at 'Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:30' bound to instance 'PWM_component' of component 'PWM' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:291]
+INFO: [Synth 8-638] synthesizing module 'PWM__parameterized0' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:42]
 	Parameter width bound to: 16 - type: integer 
 	Parameter accuracy bound to: 10 - type: integer 
-WARNING: [Synth 8-614] signal 'sample' is read in the process but is not in the sensitivity list [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'PWM__parameterized0' (2#1) [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'ADDA' (3#1) [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:15]
+WARNING: [Synth 8-614] signal 'sample' is read in the process but is not in the sensitivity list [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'PWM__parameterized0' (7#1) [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'ADDA' (8#1) [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:21]
+WARNING: [Synth 8-3917] design ADDA has port SD_audio_out driven by constant 1
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 263.813 ; gain = 117.738
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 267.547 ; gain = 119.070
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -88,12 +112,12 @@ Loading io standards from C:/Xilinx/Vivado/2013.4/data\./parts/xilinx/artix7/IOS
 Loading device configuration modes from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/ConfigModes.xml
 
 Processing XDC Constraints
-Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]
-Finished Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/.Xil/ADDA_propImpl.xdc].
-Resolution: To avoid this message, exclude constraints listed in [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/.Xil/ADDA_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc]
-Finished Parsing XDC File [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc]
+Parsing XDC File [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]
+Finished Parsing XDC File [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/.Xil/ADDA_propImpl.xdc].
+Resolution: To avoid this message, exclude constraints listed in [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/.Xil/ADDA_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc]
+Finished Parsing XDC File [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: 
@@ -108,29 +132,72 @@ Start RTL Optimization
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
-Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
-Applied set_property BUFFER_TYPE = NONE. (constraint file  {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc}, line 4).
+Applied set_property BUFFER_TYPE = NONE. (constraint file  Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE. (constraint file  Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE. (constraint file  Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE. (constraint file  Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE. (constraint file  Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE. (constraint file  Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/dont_buffer.xdc, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 473.512 ; gain = 327.438
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 484.941 ; gain = 336.465
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished RTL Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 473.512 ; gain = 327.438
+Finished RTL Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 484.941 ; gain = 336.465
 ---------------------------------------------------------------------------------
 
-WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:204]
-WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:205]
-WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X0_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:199]
-WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:200]
-WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:201]
-WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X1_quad_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:200]
-WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X2_quad_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:201]
-WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y1_quad_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:204]
-WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y2_quad_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:205]
-WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X0_quad_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:199]
-WARNING: [Synth 8-327] inferring latch for variable 'DI_signal_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:87]
-WARNING: [Synth 8-327] inferring latch for variable 'DWE_signal_reg' [Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:90]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:204]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:205]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X0_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:199]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:200]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:201]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:203]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:204]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X0_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:198]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:199]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:200]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:202]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:203]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X0_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:197]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:198]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:199]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:203]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:204]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X0_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:198]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:199]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:200]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:204]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_Y2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:205]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X0_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:199]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X1_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:200]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pgZFF_X2_quad_reg' and it is trimmed from '50' to '48' bits. [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:201]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X1_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:200]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X2_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:201]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y1_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:204]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y2_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:205]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X0_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/IIR_Biquad_f1_1.vhd:199]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X1_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:199]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X2_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:200]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y1_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:203]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y2_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:204]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X0_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_2.vhd:198]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X1_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:198]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X2_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:199]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y1_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:202]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y2_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:203]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X0_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_3.vhd:197]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X1_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:199]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X2_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:200]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y1_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:203]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y2_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:204]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X0_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_4.vhd:198]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X1_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:200]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X2_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:201]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y1_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:204]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_Y2_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:205]
+WARNING: [Synth 8-327] inferring latch for variable 'pgZFF_X0_quad_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/Downloads/IIR_Biquad_f1_5.vhd:199]
+WARNING: [Synth 8-327] inferring latch for variable 'DI_signal_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:182]
+WARNING: [Synth 8-327] inferring latch for variable 'DWE_signal_reg' [Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd:185]
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -146,7 +213,7 @@ Part Resources:
 DSPs: 240 (col length:80)
 BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 541.711 ; gain = 395.637
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 554.598 ; gain = 406.121
 ---------------------------------------------------------------------------------
 
 
@@ -155,25 +222,29 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   6 Input     18 Bit       Adders := 1     
+	   6 Input     18 Bit       Adders := 5     
 	   2 Input     10 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 5     
 +---Registers : 
-	               18 Bit    Registers := 12    
+	               32 Bit    Registers := 4     
+	               18 Bit    Registers := 68    
 	               16 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
 	                7 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	                3 Bit    Registers := 5     
+	                1 Bit    Registers := 13    
 +---Multipliers : 
-	                18x31  Multipliers := 1     
-	                18x32  Multipliers := 1     
-	                18x27  Multipliers := 1     
+	                18x30  Multipliers := 4     
+	                18x31  Multipliers := 5     
+	                18x32  Multipliers := 4     
+	                18x28  Multipliers := 1     
+	                18x27  Multipliers := 3     
 	                18x26  Multipliers := 2     
 +---Muxes : 
 	   2 Input     10 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 16    
+	   2 Input      3 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 74    
 
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -188,10 +259,49 @@ Detailed RTL Component Info :
 +---Registers : 
 	               16 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
 Module IIR_Biquad_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   6 Input     18 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 12    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                18x31  Multipliers := 1     
+	                18x32  Multipliers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+Module decimator 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               18 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module IIR_Biquad_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   6 Input     18 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 12    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                18x31  Multipliers := 1     
+	                18x32  Multipliers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+Module IIR_Biquad_3 
 Detailed RTL Component Info : 
 +---Adders : 
 	   6 Input     18 Bit       Adders := 1     
@@ -208,6 +318,38 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 13    
+Module IIR_Biquad_4 
+Detailed RTL Component Info : 
++---Adders : 
+	   6 Input     18 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 12    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                18x31  Multipliers := 1     
+	                18x32  Multipliers := 1     
+	                18x28  Multipliers := 1     
+	                18x27  Multipliers := 2     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+Module IIR_Biquad_5 
+Detailed RTL Component Info : 
++---Adders : 
+	   6 Input     18 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 12    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                18x30  Multipliers := 4     
+	                18x31  Multipliers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
 Module PWM__parameterized0 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -217,7 +359,6 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     10 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 2     
 
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -327,14 +468,39 @@ WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[22] ) is unused a
 WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[21] ) is unused and will be removed from module IIR_Biquad_1.
 WARNING: [Synth 8-3332] Sequential element (\pgZFF_Y2_quad_reg[20] ) is unused and will be removed from module IIR_Biquad_1.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+DSP Report: Generating DSP pgZFF_X1_quad0, operation Mode is: (A:0x2a4400)*B.
+DSP Report: operator pgZFF_X1_quad0 is absorbed into DSP pgZFF_X1_quad0.
+DSP Report: Generating DSP pgZFF_X2_quad0, operation Mode is: (A:0x152200)*B.
+DSP Report: operator pgZFF_X2_quad0 is absorbed into DSP pgZFF_X2_quad0.
+DSP Report: Generating DSP pgZFF_X0_quad0, operation Mode is: (A:0x152200)*B.
+DSP Report: operator pgZFF_X0_quad0 is absorbed into DSP pgZFF_X0_quad0.
+DSP Report: Generating DSP pgZFF_X1_quad0, operation Mode is: (A:0xa1ec00)*B.
+DSP Report: operator pgZFF_X1_quad0 is absorbed into DSP pgZFF_X1_quad0.
+DSP Report: Generating DSP pgZFF_X2_quad0, operation Mode is: (A:0x50f600)*B.
+DSP Report: operator pgZFF_X2_quad0 is absorbed into DSP pgZFF_X2_quad0.
+DSP Report: Generating DSP pgZFF_X0_quad0, operation Mode is: (A:0x50f600)*B.
+DSP Report: operator pgZFF_X0_quad0 is absorbed into DSP pgZFF_X0_quad0.
 WARNING: [Synth 8-3917] design ADDA has port SD_audio_out driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 541.711 ; gain = 395.637
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 555.676 ; gain = 407.199
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
 Start RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
+
+DSP:
++-------------+----------------+--------------+------------------+--------+--------+--------+--------+------+------+------+------+------+
+|Module Name  | OP MODE        | Neg Edge Clk | A Size (Signed?) | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | PREG | 
++-------------+----------------+--------------+------------------+--------+--------+--------+--------+------+------+------+------+------+
+|IIR_Biquad_1 | (A:0x2a4400)*B | No           | 23 (Y)           | 18 (Y) | 48 (N) | 25 (N) | 41 (N) | 0    | 0    | 1    | 1    | 0    | 
+|IIR_Biquad_1 | (A:0x152200)*B | No           | 22 (Y)           | 18 (Y) | 48 (N) | 25 (N) | 40 (N) | 0    | 0    | 1    | 1    | 0    | 
+|IIR_Biquad_1 | (A:0x152200)*B | No           | 22 (Y)           | 18 (Y) | 48 (N) | 25 (N) | 40 (N) | 0    | 0    | 1    | 1    | 0    | 
+|IIR_Biquad_2 | (A:0xa1ec00)*B | No           | 25 (Y)           | 18 (Y) | 48 (N) | 25 (N) | 43 (N) | 0    | 0    | 1    | 1    | 0    | 
+|IIR_Biquad_2 | (A:0x50f600)*B | No           | 24 (Y)           | 18 (Y) | 48 (N) | 25 (N) | 42 (N) | 0    | 0    | 1    | 1    | 0    | 
+|IIR_Biquad_2 | (A:0x50f600)*B | No           | 24 (Y)           | 18 (Y) | 48 (N) | 25 (N) | 42 (N) | 0    | 0    | 1    | 1    | 0    | 
++-------------+----------------+--------------+------------------+--------+--------+--------+--------+------+------+------+------+------+
+
 ---------------------------------------------------------------------------------
 Finished RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
@@ -342,9 +508,11 @@ Finished RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (decimator:/\sample_counter_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DADDR_signal_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DI_signal_reg[15] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 571.078 ; gain = 425.004
+Finished Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 587.586 ; gain = 439.109
 ---------------------------------------------------------------------------------
 
 
@@ -356,11 +524,11 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 571.078 ; gain = 425.004
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 606.086 ; gain = 457.609
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 571.078 ; gain = 425.004
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 611.012 ; gain = 462.535
 ---------------------------------------------------------------------------------
 
 
@@ -368,7 +536,7 @@ Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . M
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 571.078 ; gain = 425.004
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 641.480 ; gain = 493.004
 ---------------------------------------------------------------------------------
 
 
@@ -393,7 +561,7 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Gated Clock Conversion mode: off
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 571.078 ; gain = 425.004
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 641.480 ; gain = 493.004
 ---------------------------------------------------------------------------------
 
 
@@ -408,7 +576,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 571.078 ; gain = 425.004
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 641.480 ; gain = 493.004
 ---------------------------------------------------------------------------------
 
 
@@ -416,7 +584,7 @@ Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 571.078 ; gain = 425.004
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 641.480 ; gain = 493.004
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -442,52 +610,63 @@ Report Cell Usage:
 |      |Cell            |Count |
 +------+----------------+------+
 |1     |xadc_wiz_0_bbox |     1|
-|2     |BUFG            |     2|
-|3     |CARRY4          |     2|
-|4     |LUT1            |     3|
-|5     |LUT2            |    22|
-|6     |LUT3            |     7|
-|7     |LUT4            |    11|
-|8     |LUT5            |     7|
-|9     |LUT6            |    17|
-|10    |FDCE            |    39|
-|11    |FDPE            |    11|
-|12    |LD              |     1|
-|13    |LDC             |    10|
-|14    |IBUF            |     1|
-|15    |OBUF            |    18|
+|2     |BUFG            |     6|
+|3     |CARRY4          |   657|
+|4     |DSP48E1_1       |     6|
+|5     |LUT1            |   580|
+|6     |LUT2            |  1235|
+|7     |LUT3            |   542|
+|8     |LUT4            |   910|
+|9     |LUT5            |   192|
+|10    |LUT6            |   142|
+|11    |FDCE            |   632|
+|12    |FDPE            |    11|
+|13    |FDRE            |   560|
+|14    |LD              |   391|
+|15    |LDC             |    10|
+|16    |IBUF            |     1|
+|17    |OBUF            |    19|
 +------+----------------+------+
 
 Report Instance Areas: 
-+------+----------------+--------------------+------+
-|      |Instance        |Module              |Cells |
-+------+----------------+--------------------+------+
-|1     |top             |                    |   177|
-|2     |  PWM_component |PWM__parameterized0 |   106|
-+------+----------------+--------------------+------+
++------+-------------------+--------------------+------+
+|      |Instance           |Module              |Cells |
++------+-------------------+--------------------+------+
+|1     |top                |                    |  5920|
+|2     |  decimator2_cmp   |decimator_0         |    36|
+|3     |  IIR_Biquad_4_cmp |IIR_Biquad_4        |  1378|
+|4     |  PWM_component    |PWM__parameterized0 |    86|
+|5     |  IIR_Biquad_3_cmp |IIR_Biquad_3        |  1377|
+|6     |  IIR_Biquad_1_cmp |IIR_Biquad_1        |   686|
+|7     |  decimator4_cmp   |decimator           |    36|
+|8     |  IIR_Biquad_5_cmp |IIR_Biquad_5        |  1373|
+|9     |  IIR_Biquad_2_cmp |IIR_Biquad_2        |   795|
+|10    |  decimator3_cmp   |decimator_1         |    36|
+|11    |  decimator1_cmp   |decimator_2         |    36|
++------+-------------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 571.078 ; gain = 425.004
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 641.480 ; gain = 493.004
 ---------------------------------------------------------------------------------
 
-Synthesis finished with 0 errors, 0 critical warnings and 505 warnings.
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 571.078 ; gain = 425.004
-INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+Synthesis finished with 0 errors, 0 critical warnings and 1020 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 641.480 ; gain = 493.004
+INFO: [Netlist 29-17] Analyzing 408 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s).
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 11 instances were transformed.
-  LD => LDCE: 1 instances
+  A total of 401 instances were transformed.
+  LD => LDCE: 391 instances
   LDC => LDCE: 10 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-22 Infos, 118 Warnings, 0 Critical Warnings and 0 Errors encountered.
+42 Infos, 159 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 964.316 ; gain = 779.051
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 999.914 ; gain = 812.766
 # write_checkpoint ADDA.dcp
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 # report_utilization -file ADDA_utilization_synth.rpt -pb ADDA_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 964.316 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 11 09:52:13 2014...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.141 . Memory (MB): peak = 999.914 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 16 14:26:25 2014...

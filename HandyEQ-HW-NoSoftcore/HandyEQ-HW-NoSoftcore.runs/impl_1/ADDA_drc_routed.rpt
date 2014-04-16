@@ -1,8 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date         : Fri Apr 11 09:53:39 2014
-| Host         : XDAT20 running 64-bit Service Pack 1  (build 7601)
+| Date         : Wed Apr 16 14:27:40 2014
+| Host         : CSE-4225-18 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_drc
 -----------------------------------------------------------------------------------
 
@@ -119,7 +119,7 @@ REPORT SUMMARY
                      Hold option missing in multicycle path constraint
                      Delay constraint missing on IO port
            Max violations: <unlimited>
-         Violations found: 29
+         Violations found: 61
 
 2. REPORT DETAILS
 -----------------
@@ -136,135 +136,273 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
 Refer to the device configuration user guide for more information.
 Related violations: <none>
 
+DPIP-1#1 Warning
+DSP input pipelining  
+DSP pgZFF_X0_quad0 input A B  is not pipelined. Pipelining DSP48 input will improve performance. Each input of DSP48 has 2 levels of pipelining.
+Related violations: <none>
+
+DPIP-1#2 Warning
+DSP input pipelining  
+DSP pgZFF_X0_quad0__0 input A B  is not pipelined. Pipelining DSP48 input will improve performance. Each input of DSP48 has 2 levels of pipelining.
+Related violations: <none>
+
+DPIP-1#3 Warning
+DSP input pipelining  
+DSP pgZFF_X1_quad0 input A B  is not pipelined. Pipelining DSP48 input will improve performance. Each input of DSP48 has 2 levels of pipelining.
+Related violations: <none>
+
+DPIP-1#4 Warning
+DSP input pipelining  
+DSP pgZFF_X1_quad0__0 input A B  is not pipelined. Pipelining DSP48 input will improve performance. Each input of DSP48 has 2 levels of pipelining.
+Related violations: <none>
+
+DPIP-1#5 Warning
+DSP input pipelining  
+DSP pgZFF_X2_quad0 input A B  is not pipelined. Pipelining DSP48 input will improve performance. Each input of DSP48 has 2 levels of pipelining.
+Related violations: <none>
+
+DPIP-1#6 Warning
+DSP input pipelining  
+DSP pgZFF_X2_quad0__0 input A B  is not pipelined. Pipelining DSP48 input will improve performance. Each input of DSP48 has 2 levels of pipelining.
+Related violations: <none>
+
+DPIR-1#1 Warning
+DSP input registers  
+DSP pgZFF_X2_quad0 input B (13 )C  is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (DSP48 has synchronous registers built in).
+Related violations: <none>
+
+DPIR-1#2 Warning
+DSP input registers  
+DSP pgZFF_X2_quad0__0 input B (16 )C  is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (DSP48 has synchronous registers built in).
+Related violations: <none>
+
+DPOP-1#1 Warning
+DSP output pipelining  
+DSP pgZFF_X0_quad0 output P  is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#2 Warning
+DSP output pipelining  
+DSP pgZFF_X0_quad0__0 output P  is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#3 Warning
+DSP output pipelining  
+DSP pgZFF_X1_quad0 output P  is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#4 Warning
+DSP output pipelining  
+DSP pgZFF_X1_quad0__0 output P  is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#5 Warning
+DSP output pipelining  
+DSP pgZFF_X2_quad0 output P  is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
+DPOP-1#6 Warning
+DSP output pipelining  
+DSP pgZFF_X2_quad0__0 output P  is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+Related violations: <none>
+
 PDRC-153#1 Warning
 Physical design rule  
-Net PWM_component/n_2_PWM_sample_reg[0]_LDC_i_1 is a gated clock net sourced by a combinational pin PWM_component/PWM_sample_reg[0]_LDC_i_1/O, cell PWM_component/PWM_sample_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net IIR_Biquad_1_cmp/O6 is a gated clock net sourced by a combinational pin IIR_Biquad_1_cmp/pgZFF_X1_quad_reg[47]_i_2/O, cell IIR_Biquad_1_cmp/pgZFF_X1_quad_reg[47]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Physical design rule  
-Net PWM_component/n_2_PWM_sample_reg[1]_LDC_i_1 is a gated clock net sourced by a combinational pin PWM_component/PWM_sample_reg[1]_LDC_i_1/O, cell PWM_component/PWM_sample_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net IIR_Biquad_2_cmp/O7 is a gated clock net sourced by a combinational pin IIR_Biquad_2_cmp/pgZFF_X1_quad_reg[47]_i_2__0/O, cell IIR_Biquad_2_cmp/pgZFF_X1_quad_reg[47]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Physical design rule  
-Net PWM_component/n_2_PWM_sample_reg[2]_LDC_i_1 is a gated clock net sourced by a combinational pin PWM_component/PWM_sample_reg[2]_LDC_i_1/O, cell PWM_component/PWM_sample_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net IIR_Biquad_3_cmp/O3 is a gated clock net sourced by a combinational pin IIR_Biquad_3_cmp/pgZFF_X1_quad_reg[47]_i_10/O, cell IIR_Biquad_3_cmp/pgZFF_X1_quad_reg[47]_i_10. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Physical design rule  
-Net PWM_component/n_2_PWM_sample_reg[3]_LDC_i_1 is a gated clock net sourced by a combinational pin PWM_component/PWM_sample_reg[3]_LDC_i_1/O, cell PWM_component/PWM_sample_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net IIR_Biquad_4_cmp/O3 is a gated clock net sourced by a combinational pin IIR_Biquad_4_cmp/pgZFF_X1_quad_reg[47]_i_7/O, cell IIR_Biquad_4_cmp/pgZFF_X1_quad_reg[47]_i_7. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Physical design rule  
-Net PWM_component/n_2_PWM_sample_reg[4]_LDC_i_1 is a gated clock net sourced by a combinational pin PWM_component/PWM_sample_reg[4]_LDC_i_1/O, cell PWM_component/PWM_sample_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net IIR_Biquad_5_cmp/O1 is a gated clock net sourced by a combinational pin IIR_Biquad_5_cmp/PWM_sample_reg[8]_LDC_i_1/O, cell IIR_Biquad_5_cmp/PWM_sample_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Physical design rule  
-Net PWM_component/n_2_PWM_sample_reg[5]_LDC_i_1 is a gated clock net sourced by a combinational pin PWM_component/PWM_sample_reg[5]_LDC_i_1/O, cell PWM_component/PWM_sample_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net IIR_Biquad_5_cmp/O11 is a gated clock net sourced by a combinational pin IIR_Biquad_5_cmp/PWM_sample_reg[3]_LDC_i_1/O, cell IIR_Biquad_5_cmp/PWM_sample_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Physical design rule  
-Net PWM_component/n_2_PWM_sample_reg[6]_LDC_i_1 is a gated clock net sourced by a combinational pin PWM_component/PWM_sample_reg[6]_LDC_i_1/O, cell PWM_component/PWM_sample_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net IIR_Biquad_5_cmp/O13 is a gated clock net sourced by a combinational pin IIR_Biquad_5_cmp/PWM_sample_reg[2]_LDC_i_1/O, cell IIR_Biquad_5_cmp/PWM_sample_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Physical design rule  
-Net PWM_component/n_2_PWM_sample_reg[7]_LDC_i_1 is a gated clock net sourced by a combinational pin PWM_component/PWM_sample_reg[7]_LDC_i_1/O, cell PWM_component/PWM_sample_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net IIR_Biquad_5_cmp/O15 is a gated clock net sourced by a combinational pin IIR_Biquad_5_cmp/PWM_sample_reg[1]_LDC_i_1/O, cell IIR_Biquad_5_cmp/PWM_sample_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Physical design rule  
-Net PWM_component/n_2_PWM_sample_reg[8]_LDC_i_1 is a gated clock net sourced by a combinational pin PWM_component/PWM_sample_reg[8]_LDC_i_1/O, cell PWM_component/PWM_sample_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net IIR_Biquad_5_cmp/O17 is a gated clock net sourced by a combinational pin IIR_Biquad_5_cmp/PWM_sample_reg[0]_LDC_i_1/O, cell IIR_Biquad_5_cmp/PWM_sample_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Physical design rule  
-Net PWM_component/n_2_PWM_sample_reg[9]_LDC_i_1 is a gated clock net sourced by a combinational pin PWM_component/PWM_sample_reg[9]_LDC_i_1/O, cell PWM_component/PWM_sample_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net IIR_Biquad_5_cmp/O20 is a gated clock net sourced by a combinational pin IIR_Biquad_5_cmp/PWM_sample_reg[9]_LDC_i_1/O, cell IIR_Biquad_5_cmp/PWM_sample_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Physical design rule  
-Net n_1_n_0_32_BUFG_inst is a gated clock net sourced by a combinational pin n_0_32_BUFG_inst_i_1/O, cell n_0_32_BUFG_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net IIR_Biquad_5_cmp/O21 is a gated clock net sourced by a combinational pin IIR_Biquad_5_cmp/pgZFF_X1_quad_reg[47]_i_6/O, cell IIR_Biquad_5_cmp/pgZFF_X1_quad_reg[47]_i_6. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Physical design rule  
+Net IIR_Biquad_5_cmp/O3 is a gated clock net sourced by a combinational pin IIR_Biquad_5_cmp/PWM_sample_reg[7]_LDC_i_1/O, cell IIR_Biquad_5_cmp/PWM_sample_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Physical design rule  
+Net IIR_Biquad_5_cmp/O5 is a gated clock net sourced by a combinational pin IIR_Biquad_5_cmp/PWM_sample_reg[6]_LDC_i_1/O, cell IIR_Biquad_5_cmp/PWM_sample_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Physical design rule  
+Net IIR_Biquad_5_cmp/O7 is a gated clock net sourced by a combinational pin IIR_Biquad_5_cmp/PWM_sample_reg[5]_LDC_i_1/O, cell IIR_Biquad_5_cmp/PWM_sample_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Physical design rule  
+Net IIR_Biquad_5_cmp/O9 is a gated clock net sourced by a combinational pin IIR_Biquad_5_cmp/PWM_sample_reg[4]_LDC_i_1/O, cell IIR_Biquad_5_cmp/PWM_sample_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT PWM_component/PWM_sample_reg[0]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
-    PWM_component/PWM_sample_reg[0]_LDC {LDCE}
+A LUT IIR_Biquad_1_cmp/pgZFF_X1_quad_reg[47]_i_2 is driving clock pin of 67 cells. This could lead to large hold time violations. First few involved cells are:
+    IIR_Biquad_1_cmp/pgZFF_X1_quad_reg[39] {LDCE}
+    IIR_Biquad_1_cmp/pgZFF_X1_quad_reg[38] {LDCE}
+    IIR_Biquad_1_cmp/pgZFF_X1_quad_reg[37] {LDCE}
+    IIR_Biquad_1_cmp/pgZFF_X1_quad_reg[36] {LDCE}
+    IIR_Biquad_1_cmp/pgZFF_X1_quad_reg[35] {LDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#2 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT PWM_component/PWM_sample_reg[1]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
-    PWM_component/PWM_sample_reg[1]_LDC {LDCE}
+A LUT IIR_Biquad_2_cmp/pgZFF_X1_quad_reg[47]_i_2__0 is driving clock pin of 73 cells. This could lead to large hold time violations. First few involved cells are:
+    IIR_Biquad_2_cmp/pgZFF_X1_quad_reg[41] {LDCE}
+    IIR_Biquad_2_cmp/pgZFF_X1_quad_reg[40] {LDCE}
+    IIR_Biquad_2_cmp/pgZFF_X1_quad_reg[39] {LDCE}
+    IIR_Biquad_2_cmp/pgZFF_X1_quad_reg[38] {LDCE}
+    IIR_Biquad_2_cmp/pgZFF_X1_quad_reg[37] {LDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#3 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT PWM_component/PWM_sample_reg[2]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
-    PWM_component/PWM_sample_reg[2]_LDC {LDCE}
+A LUT IIR_Biquad_3_cmp/pgZFF_X1_quad_reg[47]_i_10 is driving clock pin of 79 cells. This could lead to large hold time violations. First few involved cells are:
+    IIR_Biquad_3_cmp/pgZFF_X1_quad_reg[43] {LDCE}
+    IIR_Biquad_3_cmp/pgZFF_X1_quad_reg[42] {LDCE}
+    IIR_Biquad_3_cmp/pgZFF_X1_quad_reg[41] {LDCE}
+    IIR_Biquad_3_cmp/pgZFF_X1_quad_reg[40] {LDCE}
+    IIR_Biquad_3_cmp/pgZFF_X1_quad_reg[39] {LDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#4 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT PWM_component/PWM_sample_reg[3]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
-    PWM_component/PWM_sample_reg[3]_LDC {LDCE}
+A LUT IIR_Biquad_4_cmp/pgZFF_X1_quad_reg[47]_i_7 is driving clock pin of 82 cells. This could lead to large hold time violations. First few involved cells are:
+    IIR_Biquad_4_cmp/pgZFF_Y1_quad_reg[42] {LDCE}
+    IIR_Biquad_4_cmp/pgZFF_Y1_quad_reg[43] {LDCE}
+    IIR_Biquad_4_cmp/pgZFF_Y1_quad_reg[44] {LDCE}
+    IIR_Biquad_4_cmp/pgZFF_X1_quad_reg[44] {LDCE}
+    IIR_Biquad_4_cmp/pgZFF_X1_quad_reg[43] {LDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#5 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT PWM_component/PWM_sample_reg[4]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
-    PWM_component/PWM_sample_reg[4]_LDC {LDCE}
+A LUT IIR_Biquad_5_cmp/PWM_sample_reg[0]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWM_component/PWM_sample_reg[0]_LDC {LDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#6 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT PWM_component/PWM_sample_reg[5]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
-    PWM_component/PWM_sample_reg[5]_LDC {LDCE}
+A LUT IIR_Biquad_5_cmp/PWM_sample_reg[1]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWM_component/PWM_sample_reg[1]_LDC {LDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#7 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT PWM_component/PWM_sample_reg[6]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
-    PWM_component/PWM_sample_reg[6]_LDC {LDCE}
+A LUT IIR_Biquad_5_cmp/PWM_sample_reg[2]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWM_component/PWM_sample_reg[2]_LDC {LDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#8 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT PWM_component/PWM_sample_reg[7]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
-    PWM_component/PWM_sample_reg[7]_LDC {LDCE}
+A LUT IIR_Biquad_5_cmp/PWM_sample_reg[3]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWM_component/PWM_sample_reg[3]_LDC {LDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#9 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT PWM_component/PWM_sample_reg[8]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
-    PWM_component/PWM_sample_reg[8]_LDC {LDCE}
+A LUT IIR_Biquad_5_cmp/PWM_sample_reg[4]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWM_component/PWM_sample_reg[4]_LDC {LDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#10 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT PWM_component/PWM_sample_reg[9]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
-    PWM_component/PWM_sample_reg[9]_LDC {LDCE}
+A LUT IIR_Biquad_5_cmp/PWM_sample_reg[5]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWM_component/PWM_sample_reg[5]_LDC {LDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#11 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT n_0_32_BUFG_inst_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
-    DI_signal_reg[15] {LDCE}
+A LUT IIR_Biquad_5_cmp/PWM_sample_reg[6]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWM_component/PWM_sample_reg[6]_LDC {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#12 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT IIR_Biquad_5_cmp/PWM_sample_reg[7]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWM_component/PWM_sample_reg[7]_LDC {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#13 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT IIR_Biquad_5_cmp/PWM_sample_reg[8]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWM_component/PWM_sample_reg[8]_LDC {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#14 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT IIR_Biquad_5_cmp/PWM_sample_reg[9]_LDC_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. First few involved cells are:
+    PWM_component/PWM_sample_reg[9]_LDC {LDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#15 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT IIR_Biquad_5_cmp/pgZFF_X1_quad_reg[47]_i_6 is driving clock pin of 90 cells. This could lead to large hold time violations. First few involved cells are:
+    IIR_Biquad_5_cmp/pgZFF_X1_quad_reg[46] {LDCE}
+    IIR_Biquad_5_cmp/pgZFF_X1_quad_reg[45] {LDCE}
+    IIR_Biquad_5_cmp/pgZFF_X1_quad_reg[44] {LDCE}
+    IIR_Biquad_5_cmp/pgZFF_X1_quad_reg[43] {LDCE}
+    IIR_Biquad_5_cmp/pgZFF_X1_quad_reg[42] {LDCE}
 
 Related violations: <none>
 
@@ -285,17 +423,67 @@ Related violations: <none>
 
 XDCM-1#4 Warning
 Delay constraint missing on IO port  
-The port 'reset' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+The port 'decimator4_done_board_out' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
 Related violations: <none>
 
 XDCM-1#5 Warning
 Delay constraint missing on IO port  
-The port 'vauxn3' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+The port 'drdy_board_out' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
 Related violations: <none>
 
 XDCM-1#6 Warning
 Delay constraint missing on IO port  
+The port 'eoc_board_out' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+Related violations: <none>
+
+XDCM-1#7 Warning
+Delay constraint missing on IO port  
+The port 'eos_board_out' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+Related violations: <none>
+
+XDCM-1#8 Warning
+Delay constraint missing on IO port  
+The port 'reset' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+Related violations: <none>
+
+XDCM-1#9 Warning
+Delay constraint missing on IO port  
+The port 'vauxn3' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+Related violations: <none>
+
+XDCM-1#10 Warning
+Delay constraint missing on IO port  
 The port 'vauxp3' does not have any I/O delay defined. It is necessary to have I/O (input or output) delays defined on all the ports to properly time the FPGA interface.
+Related violations: <none>
+
+AVAL-4#1 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_1_enum_ADREG_1  
+pgZFF_X0_quad0: If the DSP48E1 USE_DPORT attribute is set to FALSE, then Please set DREG and ADREG to 0 to save power.
+Related violations: <none>
+
+AVAL-4#2 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_1_enum_ADREG_1  
+pgZFF_X0_quad0__0: If the DSP48E1 USE_DPORT attribute is set to FALSE, then Please set DREG and ADREG to 0 to save power.
+Related violations: <none>
+
+AVAL-4#3 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_1_enum_ADREG_1  
+pgZFF_X1_quad0: If the DSP48E1 USE_DPORT attribute is set to FALSE, then Please set DREG and ADREG to 0 to save power.
+Related violations: <none>
+
+AVAL-4#4 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_1_enum_ADREG_1  
+pgZFF_X1_quad0__0: If the DSP48E1 USE_DPORT attribute is set to FALSE, then Please set DREG and ADREG to 0 to save power.
+Related violations: <none>
+
+AVAL-4#5 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_1_enum_ADREG_1  
+pgZFF_X2_quad0: If the DSP48E1 USE_DPORT attribute is set to FALSE, then Please set DREG and ADREG to 0 to save power.
+Related violations: <none>
+
+AVAL-4#6 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_1_enum_ADREG_1  
+pgZFF_X2_quad0__0: If the DSP48E1 USE_DPORT attribute is set to FALSE, then Please set DREG and ADREG to 0 to save power.
 Related violations: <none>
 
 

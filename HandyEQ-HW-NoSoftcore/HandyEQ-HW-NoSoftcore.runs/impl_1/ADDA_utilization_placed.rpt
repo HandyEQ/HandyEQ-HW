@@ -1,8 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date         : Fri Apr 11 09:52:54 2014
-| Host         : XDAT20 running 64-bit Service Pack 1  (build 7601)
+| Date         : Wed Apr 16 14:27:08 2014
+| Host         : CSE-4225-18 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file ADDA_utilization_placed.rpt -pb ADDA_utilization_placed.pb
 | Design       : ADDA
 | Device       : xc7a100t
@@ -30,12 +30,12 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Loced | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs              |   57 |     0 |     63400 |  0.08 |
-|   LUT as Logic          |   57 |     0 |     63400 |  0.08 |
+| Slice LUTs              | 2463 |     0 |     63400 |  3.88 |
+|   LUT as Logic          | 2463 |     0 |     63400 |  3.88 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |   61 |     0 |    126800 |  0.04 |
-|   Register as Flip Flop |   50 |     0 |    126800 |  0.03 |
-|   Register as Latch     |   11 |     0 |    126800 | <0.01 |
+| Slice Registers         | 1604 |     0 |    126800 |  1.26 |
+|   Register as Flip Flop | 1203 |     0 |    126800 |  0.94 |
+|   Register as Latch     |  401 |     0 |    126800 |  0.31 |
 | F7 Muxes                |    0 |     0 |     31700 |  0.00 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
@@ -47,20 +47,20 @@ Table of Contents
 +-------------------------------------------------------------+-----------+-------+-----------+-------+
 |                          Site Type                          |    Used   | Loced | Available | Util% |
 +-------------------------------------------------------------+-----------+-------+-----------+-------+
-| Slice                                                       |        39 |     0 |     15850 |  0.24 |
-| LUT as Logic                                                |        57 |     0 |     63400 |  0.08 |
-|   using O5 output only                                      |         0 |       |           |       |
-|   using O6 output only                                      |        47 |       |           |       |
-|   using O5 and O6                                           |        10 |       |           |       |
+| Slice                                                       |      1092 |     0 |     15850 |  6.88 |
+| LUT as Logic                                                |      2463 |     0 |     63400 |  3.88 |
+|   using O5 output only                                      |         8 |       |           |       |
+|   using O6 output only                                      |      1572 |       |           |       |
+|   using O5 and O6                                           |       883 |       |           |       |
 | LUT as Memory                                               |         0 |     0 |     19000 |  0.00 |
 |   LUT as Distributed RAM                                    |         0 |     0 |           |       |
 |   LUT as Shift Register                                     |         0 |     0 |           |       |
-| LUT Flip Flop Pairs                                         |        75 |     0 |     63400 |  0.11 |
-|   fully used LUT-FF pairs                                   |        32 |       |           |       |
-|   LUT-FF pairs with unused LUT                              |        18 |       |           |       |
-|   LUT-FF pairs with unused Flip Flop                        |        25 |       |           |       |
-| Unique Control Sets                                         |        33 |       |           |       |
-| Minimum number of registers lost to control set restriction | 219(Lost) |       |           |       |
+| LUT Flip Flop Pairs                                         |      3241 |     0 |     63400 |  5.11 |
+|   fully used LUT-FF pairs                                   |       726 |       |           |       |
+|   LUT-FF pairs with unused LUT                              |       786 |       |           |       |
+|   LUT-FF pairs with unused Flip Flop                        |      1729 |       |           |       |
+| Unique Control Sets                                         |        65 |       |           |       |
+| Minimum number of registers lost to control set restriction | 404(Lost) |       |           |       |
 +-------------------------------------------------------------+-----------+-------+-----------+-------+
 
 
@@ -80,11 +80,12 @@ Table of Contents
 4. DSP
 ------
 
-+-----------+------+-------+-----------+-------+
-| Site Type | Used | Loced | Available | Util% |
-+-----------+------+-------+-----------+-------+
-| DSPs      |    0 |     0 |       240 |  0.00 |
-+-----------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Loced | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |    6 |     0 |       240 |  2.50 |
+|   DSP48E1 only |    6 |       |           |       |
++----------------+------+-------+-----------+-------+
 
 
 5. IO and GTX Specific
@@ -93,9 +94,9 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Loced | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   22 |    22 |       210 | 10.47 |
-|   IOB Master Pads           |   10 |       |           |       |
-|   IOB Slave Pads            |   12 |       |           |       |
+| Bonded IOB                  |   26 |    26 |       210 | 12.38 |
+|   IOB Master Pads           |   13 |       |           |       |
+|   IOB Slave Pads            |   13 |       |           |       |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | IBUFGDS                     |    0 |     0 |       202 |  0.00 |
 | IDELAYCTRL                  |    0 |     0 |         6 |  0.00 |
@@ -119,7 +120,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Loced | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    2 |     0 |        32 |  6.25 |
+| BUFGCTRL   |    6 |     0 |        32 | 18.75 |
 | BUFIO      |    0 |     0 |        24 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         6 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         6 |  0.00 |
@@ -153,19 +154,21 @@ Table of Contents
 +----------+------+
 | Ref Name | Used |
 +----------+------+
-| FDCE     |   39 |
-| LUT2     |   22 |
-| OBUF     |   18 |
-| LUT6     |   17 |
-| LUT4     |   11 |
-| LDCE     |   11 |
+| LUT2     | 1235 |
+| LUT4     |  910 |
+| CARRY4   |  657 |
+| FDCE     |  632 |
+| FDRE     |  560 |
+| LUT3     |  542 |
+| LDCE     |  401 |
+| LUT1     |  325 |
+| LUT5     |  192 |
+| LUT6     |  142 |
+| OBUF     |   22 |
 | FDPE     |   11 |
-| LUT5     |    7 |
-| LUT3     |    7 |
+| DSP48E1  |    6 |
+| BUFG     |    6 |
 | IBUF     |    4 |
-| LUT1     |    3 |
-| CARRY4   |    2 |
-| BUFG     |    2 |
 | XADC     |    1 |
 +----------+------+
 

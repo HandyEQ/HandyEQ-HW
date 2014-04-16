@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Wed Apr 16 14:19:19 2014
+# Process ID: 4764
+# Log file: Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/vivado.log
+# Journal file: Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {Y:\HandyEQ-HW\HandyEQ-HW\HandyEQ-HW-NoSoftcore\HandyEQ-HW-NoSoftcore.xpr}
+import_files -norecurse {C:/Users/arpad/Downloads/decimator.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_4.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_3.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_5.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_2.vhd}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1

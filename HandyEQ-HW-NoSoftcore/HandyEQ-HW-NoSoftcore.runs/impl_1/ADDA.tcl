@@ -50,11 +50,11 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param gui.test TreeTableDev
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.data/wt} [current_project]
-  set_property parent.project_dir {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore} [current_project]
-  add_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/ADDA.dcp}}
-  add_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}
-  read_xdc {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}
+  set_property webtalk.parent_dir Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.data/wt [current_project]
+  set_property parent.project_dir Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore [current_project]
+  add_files Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/ADDA.dcp
+  add_files Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp
+  read_xdc {{Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc}}
   link_design -top ADDA -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

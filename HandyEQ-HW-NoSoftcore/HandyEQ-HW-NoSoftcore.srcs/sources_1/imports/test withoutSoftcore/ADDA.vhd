@@ -8,7 +8,13 @@ entity ADDA is
         vauxn3 : IN STD_LOGIC;
         AD_data : out STD_LOGIC_VECTOR (15 downto 0);        
         PWM_audio_out : out STD_LOGIC;  
-        SD_audio_out : out STD_LOGIC
+        SD_audio_out : out STD_LOGIC;
+        
+        --test:
+        drdy_board_out : out STD_LOGIC;
+        eoc_board_out : out STD_LOGIC;
+        eos_board_out : out STD_LOGIC;
+        decimator4_done_board_out : out STD_LOGIC
         );
 end ADDA;
 
@@ -46,6 +52,61 @@ component IIR_Biquad_1
 				);
 end COMPONENT;
 
+component IIR_Biquad_2
+		Port ( 
+				clk : in  STD_LOGIC;
+				n_reset : in  STD_LOGIC;
+				sample_trig : in  STD_LOGIC;
+				X_in : in  STD_LOGIC_VECTOR (17 downto 0);
+				filter_done : out STD_LOGIC;
+				Y_out : out  STD_LOGIC_VECTOR (17 downto 0)
+				);
+end COMPONENT;
+
+component IIR_Biquad_3
+		Port ( 
+				clk : in  STD_LOGIC;
+				n_reset : in  STD_LOGIC;
+				sample_trig : in  STD_LOGIC;
+				X_in : in  STD_LOGIC_VECTOR (17 downto 0);
+				filter_done : out STD_LOGIC;
+				Y_out : out  STD_LOGIC_VECTOR (17 downto 0)
+				);
+end COMPONENT;
+
+component IIR_Biquad_4
+		Port ( 
+				clk : in  STD_LOGIC;
+				n_reset : in  STD_LOGIC;
+				sample_trig : in  STD_LOGIC;
+				X_in : in  STD_LOGIC_VECTOR (17 downto 0);
+				filter_done : out STD_LOGIC;
+				Y_out : out  STD_LOGIC_VECTOR (17 downto 0)
+				);
+end COMPONENT;
+
+component decimator is
+    Port (
+            clk : in  STD_LOGIC;
+            rst : in  STD_LOGIC;
+            start : in  STD_LOGIC;
+            input : in  STD_LOGIC_VECTOR (17 downto 0);
+            done : out STD_LOGIC;
+            output : out  STD_LOGIC_VECTOR (17 downto 0)
+            );
+end COMPONENT;
+            
+component IIR_Biquad_5
+        Port ( 
+                clk : in  STD_LOGIC;
+                n_reset : in  STD_LOGIC;
+                sample_trig : in  STD_LOGIC;
+                X_in : in  STD_LOGIC_VECTOR (17 downto 0);
+                filter_done : out STD_LOGIC;
+                Y_out : out  STD_LOGIC_VECTOR (17 downto 0)
+                );
+end COMPONENT;
+
 COMPONENT PWM 
       generic (
         width  : integer;
@@ -56,6 +117,20 @@ COMPONENT PWM
            PWM_out:OUT STD_LOGIc;
            SD_audio_out:OUT STD_LOGIc);
 END COMPONENT;
+--COMPONENT pwm
+--  GENERIC(
+--      sys_clk         : INTEGER; --system clock frequency in Hz
+--      pwm_freq        : INTEGER;    --PWM switching frequency in Hz
+--      bits_resolution : INTEGER;          --bits of resolution setting the duty cycle
+--      phases          : INTEGER);         --number of output pwms and phases
+--  PORT(
+--      clk       : IN  STD_LOGIC;                                    --system clock
+--      reset_n   : IN  STD_LOGIC;                                    --asynchronous reset
+--      ena       : IN  STD_LOGIC;                                    --latches in new duty cycle
+--      duty      : IN  STD_LOGIC_VECTOR(bits_resolution-1 DOWNTO 0); --duty cycle
+--      pwm_out   : OUT STD_LOGIC_VECTOR(phases-1 DOWNTO 0);          --pwm outputs
+--      pwm_n_out : OUT STD_LOGIC_VECTOR(phases-1 DOWNTO 0));         --pwm inverse outputs
+--END COMPONENT;
 
 ATTRIBUTE SYN_BLACK_BOX : BOOLEAN;
 ATTRIBUTE SYN_BLACK_BOX OF xadc_wiz_0 : COMPONENT IS TRUE;
@@ -76,10 +151,30 @@ SIGNAL eos_out_signal : STD_LOGIC;
 SIGNAL busy_out_signal : STD_LOGIC;
 SIGNAL first_conv : STD_LOGIC;
 SIGNAL counter:STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL Filter_out_signal:STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL AA_dataOUT_signal:STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL start_signal : STD_LOGIC;
 SIGNAL finished_signal : STD_LOGIC;
+
+SIGNAL Filter1_out_signal:STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL filter1_done_signal:STD_LOGIC;
+SIGNAL decimator1_out_signal:STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL decimator1_done_signal:STD_LOGIC;
+SIGNAL Filter2_out_signal:STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL filter2_done_signal:STD_LOGIC;
+SIGNAL decimator2_out_signal:STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL decimator2_done_signal:STD_LOGIC;
+SIGNAL Filter3_out_signal:STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL filter3_done_signal:STD_LOGIC;
+SIGNAL decimator3_out_signal:STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL decimator3_done_signal:STD_LOGIC;
+SIGNAL Filter4_out_signal:STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL filter4_done_signal:STD_LOGIC;
+SIGNAL decimator4_out_signal:STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL decimator4_done_signal:STD_LOGIC;
+SIGNAL Filter5_out_signal:STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL filter5_done_signal:STD_LOGIC;
+
+signal zerosOrOnes:STD_LOGIC_VECTOR(3 DOWNTO 0);
 begin
 
 XADC_component : xadc_wiz_0
@@ -103,14 +198,94 @@ XADC_component : xadc_wiz_0
         busy_out => busy_out_signal
         );
         
-IIR_biquad_comp: IIR_Biquad_1
+IIR_Biquad_1_cmp : IIR_Biquad_1
     port map (
         clk => clk,
-        n_reset => not(reset),
-        sample_trig => DRDY_signal,
-        X_in => Filter_in_signal & "00",
-        filter_done => open,
-        Y_out => Filter_out_signal
+        n_reset => reset,
+        sample_trig => eoc_out_signal, --eos_out_signal,
+        X_in => Filter_in_signal(15 downto 2) & zerosOrOnes,
+        filter_done => filter1_done_signal,
+        Y_out => Filter1_out_signal
+    );
+    
+decimator1_cmp : decimator
+    Port map (
+        clk => clk,
+        rst => reset,
+        start => filter1_done_signal,
+        input => Filter1_out_signal,
+        done => decimator1_done_signal,
+        output => decimator1_out_signal
+        );
+                
+IIR_Biquad_2_cmp : IIR_Biquad_2
+    port map (
+        clk => clk,
+        n_reset => reset,
+        sample_trig => decimator1_done_signal,
+        X_in => decimator1_out_signal,
+        filter_done => filter2_done_signal,
+        Y_out => Filter2_out_signal
+    );
+    
+decimator2_cmp : decimator
+    Port map (
+        clk => clk,
+        rst => reset,
+        start => filter2_done_signal,
+        input => Filter2_out_signal,
+        done => decimator2_done_signal,
+        output => decimator2_out_signal
+        );
+                        
+IIR_Biquad_3_cmp : IIR_Biquad_3
+    port map (
+        clk => clk,
+        n_reset => reset,
+        sample_trig => decimator2_done_signal,
+        X_in => decimator2_out_signal,
+        filter_done => filter3_done_signal,
+        Y_out => Filter3_out_signal
+    );
+    
+decimator3_cmp : decimator
+    Port map (
+        clk => clk,
+        rst => reset,
+        start => filter3_done_signal,
+        input => Filter3_out_signal,
+        done => decimator3_done_signal,
+        output => decimator3_out_signal
+        );
+                        
+IIR_Biquad_4_cmp : IIR_Biquad_4
+    port map (
+        clk => clk,
+        n_reset => reset,
+        sample_trig => decimator3_done_signal,
+        X_in => decimator3_out_signal,
+        filter_done => filter4_done_signal,
+        Y_out => Filter4_out_signal
+    );
+    
+decimator4_cmp : decimator
+    Port map (
+        clk => clk,
+        rst => reset,
+        start => filter4_done_signal,
+        input => Filter4_out_signal,
+        done => decimator4_done_signal,
+        output => decimator4_out_signal
+        );
+                                
+IIR_Biquad_5_cmp : IIR_Biquad_5
+    port map (
+        clk => clk,
+        n_reset => reset,
+        sample_trig => decimator4_done_signal,
+        X_in => decimator4_out_signal,
+        filter_done => filter5_done_signal,
+        Y_out => Filter5_out_signal
     );
         
 PWM_component : PWM
@@ -119,11 +294,31 @@ PWM_component : PWM
                 accuracy => 10)
     PORT MAP(reset => not reset,
            clk => clk,
-           sample => Filter_in_signal, --Filter_out_signal(17 downto 2),
+           sample(15) => not(Filter5_out_signal(17)),
+           sample(14 downto 0) => Filter5_out_signal(16 downto 2),
            PWM_out => PWM_audio_out,
-           SD_audio_out => SD_audio_out);  
+           SD_audio_out => open); 
+--PWM_component : pwm
+-- GENERIC map(
+--     sys_clk         => 100_000_000, --system clock frequency in Hz
+--     pwm_freq        => 100_000,    --PWM switching frequency in Hz
+--     bits_resolution => 10,          --bits of resolution setting the duty cycle
+--     phases          => 1)         --number of output pwms and phases
+-- PORT map(
+--     clk => clk,                                   --system clock
+--     reset_n => reset,                                    --asynchronous reset
+--     ena => decimator4_done_signal,                                    --latches in new duty cycle
+--     duty(9) => not(decimator4_out_signal(17)), --duty cycle
+--     duty(8 downto 0) => decimator4_out_signal(16 downto 8),
+--     pwm_out(0) => PWM_audio_out,          --pwm outputs
+--     pwm_n_out => open);         --pwm inverse outputs
            
 AD_data <= Filter_in_signal; --Filter_out_signal(17 downto 2);
+SD_audio_out <= '1';
+drdy_board_out <= DRDY_signal;
+eoc_board_out <= eoc_out_signal;
+eos_board_out <= clk;
+decimator4_done_board_out <= decimator4_done_signal;
             
 process(clk, reset)
 begin  
@@ -136,13 +331,20 @@ begin
     first_conv <= '1';
     
   elsif rising_edge(clk) then
-    if (DRDY_signal = '1') then
-      Filter_in_signal(15) <= not(DO_signal(15));
-      Filter_in_signal(14 downto 0) <= DO_signal(14 downto 0);
+    if (eoc_out_signal = '1') then --DRDY_signal
+      --Filter_in_signal(15) <= not(DO_signal(15));
+      --Filter_in_signal(14 downto 0) <= DO_signal(14 downto 0);
+      if (DO_signal(15) = '1') then
+        zerosOrOnes <= "1111";
+      else
+        zerosOrOnes <= "0000";
+      end if;
+        
+      Filter_in_signal <= DO_signal;
       first_conv <= '1';
     end if;
       
-    if (first_conv = '1' and DRDY_signal = '0') then
+    if (first_conv = '1' and eoc_out_signal = '0') then --DRDY_signal
       DEN_signal <= '1';
       DADDR_signal <= "0010011";
       first_conv <= '0';

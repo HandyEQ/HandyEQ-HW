@@ -1,8 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date         : Fri Apr 11 09:52:54 2014
-| Host         : XDAT20 running 64-bit Service Pack 1  (build 7601)
+| Date         : Wed Apr 16 14:27:08 2014
+| Host         : CSE-4225-18 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_control_sets -verbose -file ADDA_control_sets_placed.rpt
 | Design       : ADDA
 | Device       : xc7a100t
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |    33 |
-| Minimum Number of register sites lost to control set restrictions |   219 |
+| Number of unique control sets                                     |    65 |
+| Minimum Number of register sites lost to control set restrictions |   404 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,11 +33,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               1 |            1 |
-| No           | No                    | Yes                    |              24 |           14 |
+| No           | No                    | No                     |             392 |          126 |
+| No           | No                    | Yes                    |              52 |           27 |
 | No           | Yes                   | No                     |              10 |           10 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              26 |           12 |
+| Yes          | No                    | No                     |             559 |          206 |
+| Yes          | No                    | Yes                    |             591 |          253 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -45,42 +45,74 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+----------------------------------------------+---------------------------------------+---------------------------------------------+------------------+----------------+
-|                 Clock Signal                 |             Enable Signal             |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
-+----------------------------------------------+---------------------------------------+---------------------------------------------+------------------+----------------+
-|  PWM_component/n_2_PWM_sample_reg[9]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[9]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_2_PWM_sample_reg[8]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[8]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_2_PWM_sample_reg[7]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[7]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_2_PWM_sample_reg[6]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[6]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_2_PWM_sample_reg[5]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[5]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_2_PWM_sample_reg[4]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[4]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_2_PWM_sample_reg[3]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[3]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_2_PWM_sample_reg[2]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[2]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_2_PWM_sample_reg[1]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[1]_LDC_i_2 |                1 |              1 |
-|  PWM_component/n_2_PWM_sample_reg[0]_LDC_i_1 |                                       | PWM_component/n_2_PWM_sample_reg[0]_LDC_i_2 |                1 |              1 |
-|  n_0_32_BUFG                                 |                                       |                                             |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[9]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[8]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[7]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[6]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[5]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[0]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[1]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[2]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[3]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[4]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[5]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[6]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[7]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[8]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    |                                       | PWM_component/n_2_PWM_sample_reg[9]_LDC_i_2 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[0]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[1]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[2]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[3]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    | PWM_component/n_2_PWM_sample[9]_P_i_1 | PWM_component/n_2_PWM_sample_reg[4]_LDC_i_1 |                1 |              1 |
-|  clk_BUFG                                    |                                       | n_0_32_BUFG                                 |                4 |             14 |
-|  clk_BUFG                                    | XADC_component/drdy_out               | n_0_32_BUFG                                 |                2 |             16 |
-+----------------------------------------------+---------------------------------------+---------------------------------------------+------------------+----------------+
++-----------------------+------------------------------+----------------------+------------------+----------------+
+|      Clock Signal     |         Enable Signal        |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
++-----------------------+------------------------------+----------------------+------------------+----------------+
+|  xlnx_opt__5          |                              | IIR_Biquad_5_cmp/O6  |                1 |              1 |
+|  xlnx_opt__5          |                              | IIR_Biquad_5_cmp/O8  |                1 |              1 |
+|  xlnx_opt__5          |                              | IIR_Biquad_5_cmp/O10 |                1 |              1 |
+|  xlnx_opt__5          |                              | IIR_Biquad_5_cmp/O12 |                1 |              1 |
+|  xlnx_opt__5          |                              | IIR_Biquad_5_cmp/O14 |                1 |              1 |
+|  xlnx_opt__5          |                              | IIR_Biquad_5_cmp/O16 |                1 |              1 |
+|  xlnx_opt__5          |                              | IIR_Biquad_5_cmp/O18 |                1 |              1 |
+|  xlnx_opt__5          |                              | IIR_Biquad_5_cmp/O19 |                1 |              1 |
+|  xlnx_opt__5          | PWM_component/load           | IIR_Biquad_5_cmp/O20 |                1 |              1 |
+|  xlnx_opt__5          | PWM_component/load           | IIR_Biquad_5_cmp/O15 |                1 |              1 |
+|  xlnx_opt__5          | PWM_component/load           | IIR_Biquad_5_cmp/O17 |                1 |              1 |
+|  xlnx_opt__5          | PWM_component/load           | IIR_Biquad_5_cmp/O13 |                1 |              1 |
+|  xlnx_opt__5          | PWM_component/load           | IIR_Biquad_5_cmp/O11 |                1 |              1 |
+|  xlnx_opt__5          | PWM_component/load           | IIR_Biquad_5_cmp/O9  |                1 |              1 |
+|  xlnx_opt__5          | PWM_component/load           | IIR_Biquad_5_cmp/O7  |                1 |              1 |
+|  xlnx_opt__5          | PWM_component/load           | IIR_Biquad_5_cmp/O5  |                1 |              1 |
+|  xlnx_opt__5          | PWM_component/load           | IIR_Biquad_5_cmp/O3  |                1 |              1 |
+|  xlnx_opt__5          | PWM_component/load           | IIR_Biquad_5_cmp/O1  |                1 |              1 |
+|  IIR_Biquad_5_cmp/O1  |                              | IIR_Biquad_5_cmp/O2  |                1 |              1 |
+|  IIR_Biquad_5_cmp/O3  |                              | IIR_Biquad_5_cmp/O4  |                1 |              1 |
+|  IIR_Biquad_5_cmp/O5  |                              | IIR_Biquad_5_cmp/O6  |                1 |              1 |
+|  IIR_Biquad_5_cmp/O7  |                              | IIR_Biquad_5_cmp/O8  |                1 |              1 |
+|  IIR_Biquad_5_cmp/O9  |                              | IIR_Biquad_5_cmp/O10 |                1 |              1 |
+|  IIR_Biquad_5_cmp/O11 |                              | IIR_Biquad_5_cmp/O12 |                1 |              1 |
+|  IIR_Biquad_5_cmp/O13 |                              | IIR_Biquad_5_cmp/O14 |                1 |              1 |
+|  IIR_Biquad_5_cmp/O17 |                              | IIR_Biquad_5_cmp/O18 |                1 |              1 |
+|  IIR_Biquad_5_cmp/O15 |                              | IIR_Biquad_5_cmp/O16 |                1 |              1 |
+|  IIR_Biquad_5_cmp/O20 |                              | IIR_Biquad_5_cmp/O19 |                1 |              1 |
+|  xlnx_opt__5          |                              |                      |                1 |              1 |
+|  xlnx_opt__5          |                              | IIR_Biquad_5_cmp/O2  |                1 |              1 |
+|  xlnx_opt__5          |                              | IIR_Biquad_5_cmp/O4  |                1 |              1 |
+|  xlnx_opt__5          | IIR_Biquad_5_cmp/trunc_out   |                      |                4 |             10 |
+|  xlnx_opt__5          | IIR_Biquad_2_cmp/trunc_out   |                      |                4 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_2_cmp/O3          | IIR_Biquad_2_cmp/O1  |                6 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_1_cmp/trunc_out   |                      |                6 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_3_cmp/trunc_out   |                      |                8 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_4_cmp/trunc_out   |                      |                8 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_4_cmp/E[0]        | IIR_Biquad_2_cmp/O1  |                6 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_4_cmp/O2[0]       | IIR_Biquad_2_cmp/O1  |                6 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_3_cmp/E[0]        | IIR_Biquad_2_cmp/O1  |                7 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_3_cmp/O2[0]       | IIR_Biquad_2_cmp/O1  |               10 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_1_cmp/E[0]        | IIR_Biquad_2_cmp/O1  |                6 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_1_cmp/O2[0]       | IIR_Biquad_2_cmp/O1  |                7 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_2_cmp/E[0]        | IIR_Biquad_2_cmp/O1  |                5 |             17 |
+|  xlnx_opt__5          | IIR_Biquad_4_cmp/sum_stg_a   |                      |                6 |             18 |
+|  xlnx_opt__5          | IIR_Biquad_2_cmp/sum_stg_a   |                      |                6 |             18 |
+|  xlnx_opt__5          | IIR_Biquad_5_cmp/sum_stg_a   |                      |                6 |             18 |
+|  xlnx_opt__5          | IIR_Biquad_1_cmp/sum_stg_a   |                      |                6 |             18 |
+|  xlnx_opt__5          | IIR_Biquad_3_cmp/sum_stg_a   |                      |                6 |             18 |
+|  xlnx_opt__5          |                              | IIR_Biquad_2_cmp/O1  |               17 |             42 |
+|  xlnx_opt__5          | IIR_Biquad_1_cmp/trunc_prods |                      |               26 |             67 |
+|  mul_coefs_3          |                              |                      |               28 |             67 |
+|  mul_coefs_2          |                              |                      |               24 |             73 |
+|  xlnx_opt__5          | IIR_Biquad_2_cmp/trunc_prods |                      |               20 |             73 |
+|  xlnx_opt__5          | IIR_Biquad_3_cmp/trunc_prods |                      |               32 |             79 |
+|  mul_coefs_1          |                              |                      |               24 |             79 |
+|  mul_coefs_0          |                              |                      |               24 |             82 |
+|  xlnx_opt__5          | IIR_Biquad_4_cmp/trunc_prods |                      |               33 |             82 |
+|  xlnx_opt__5          | decimator1_cmp/I5[0]         | IIR_Biquad_2_cmp/O1  |               28 |             87 |
+|  xlnx_opt__5          | decimator2_cmp/done          | IIR_Biquad_2_cmp/O1  |               47 |             87 |
+|  xlnx_opt__5          | decimator4_cmp/E[0]          | IIR_Biquad_2_cmp/O1  |               38 |             87 |
+|  xlnx_opt__5          | decimator3_cmp/O1            | IIR_Biquad_2_cmp/O1  |               37 |             87 |
+|  xlnx_opt__5          | IIR_Biquad_5_cmp/trunc_prods |                      |               35 |             90 |
+|  mul_coefs            |                              |                      |               25 |             90 |
+|  xlnx_opt__5          | XADC_component/eoc_out       | IIR_Biquad_2_cmp/O1  |               40 |             97 |
++-----------------------+------------------------------+----------------------+------------------+----------------+
 
 

@@ -1,8 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date             : Fri Apr 11 09:53:40 2014
-| Host             : XDAT20 running 64-bit Service Pack 1  (build 7601)
+| Date             : Wed Apr 16 14:27:45 2014
+| Host             : CSE-4225-18 running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file ADDA_power_routed.rpt -pb ADDA_power_summary_routed.pb
 | Design           : ADDA
 | Device           : xc7a100tcsg324-1
@@ -30,13 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.107  |
-| Dynamic (W)              | 0.010  |
+| Total On-Chip Power (W)  | 0.128  |
+| Dynamic (W)              | 0.030  |
 | Device Static (W)        | 0.097  |
-| Total Off-Chip Power (W) | 0.000  |
 | Effective TJA (C/W)      | 4.6    |
-| Max Ambient (C)          | 84.5   |
-| Junction Temperature (C) | 25.5   |
+| Max Ambient (C)          | 84.4   |
+| Junction Temperature (C) | 25.6   |
 | Confidence Level         | Medium |
 | Setting File             | ---    |
 | Simulation Activity File | ---    |
@@ -50,18 +49,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      139 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       57 |     63400 |            0.08 |
-|   Register     |    <0.001 |       61 |    126800 |            0.04 |
-|   CARRY4       |    <0.001 |        2 |     15850 |            0.01 |
-|   Others       |     0.000 |        8 |       --- |             --- |
-|   BUFG         |     0.000 |        1 |        32 |            3.12 |
-| Signals        |    <0.001 |      122 |       --- |             --- |
-| I/O            |     0.006 |       22 |       210 |           10.47 |
+| Clocks         |     0.007 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |     5644 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     2463 |     63400 |            3.88 |
+|   CARRY4       |    <0.001 |      657 |     15850 |            4.14 |
+|   BUFG         |    <0.001 |        5 |        32 |           15.62 |
+|   Register     |    <0.001 |     1604 |    126800 |            1.26 |
+|   Others       |     0.000 |       32 |       --- |             --- |
+| Signals        |     0.001 |     4695 |       --- |             --- |
+| DSPs           |    <0.001 |        6 |       240 |            2.50 |
+| I/O            |     0.019 |       26 |       210 |           12.38 |
 | XADC           |     0.002 |        1 |       --- |             --- |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.107 |          |           |                 |
+| Total          |     0.128 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.017 |       0.002 |      0.015 |
-| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
-| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
+| Vccint    |       1.000 |     0.025 |       0.010 |      0.015 |
+| Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |
+| Vcco33    |       3.300 |     0.009 |       0.005 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -124,13 +124,13 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-----------+-----------+-----------------+
-| Clock     | Domain    | Constraint (ns) |
-+-----------+-----------+-----------------+
-| clk       | clk       |            10.0 |
-| clk_BUFG  | clk_BUFG  |            10.0 |
-| xlnx_opt_ | xlnx_opt_ |            10.0 |
-+-----------+-----------+-----------------+
++-------------+-------------+-----------------+
+| Clock       | Domain      | Constraint (ns) |
++-------------+-------------+-----------------+
+| clk         | clk         |            10.0 |
+| xlnx_opt_   | xlnx_opt_   |            10.0 |
+| xlnx_opt__5 | xlnx_opt__5 |            10.0 |
++-------------+-------------+-----------------+
 
 
 3. Detailed Reports
@@ -139,12 +139,21 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------+-----------+
-| Name             | Power (W) |
-+------------------+-----------+
-| ADDA             |     0.010 |
-|   PWM_component  |    <0.001 |
-|   XADC_component |     0.002 |
-+------------------+-----------+
++--------------------+-----------+
+| Name               | Power (W) |
++--------------------+-----------+
+| ADDA               |     0.030 |
+|   IIR_Biquad_1_cmp |     0.002 |
+|   IIR_Biquad_2_cmp |     0.001 |
+|   IIR_Biquad_3_cmp |     0.001 |
+|   IIR_Biquad_4_cmp |     0.001 |
+|   IIR_Biquad_5_cmp |     0.001 |
+|   PWM_component    |    <0.001 |
+|   XADC_component   |     0.002 |
+|   decimator1_cmp   |    <0.001 |
+|   decimator2_cmp   |    <0.001 |
+|   decimator3_cmp   |    <0.001 |
+|   decimator4_cmp   |    <0.001 |
++--------------------+-----------+
 
 

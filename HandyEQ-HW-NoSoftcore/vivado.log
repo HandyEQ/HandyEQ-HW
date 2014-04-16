@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Wed Apr 16 14:19:19 2014
+# Process ID: 4764
+# Log file: Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/vivado.log
+# Journal file: Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore\vivado.jou
+#-----------------------------------------------------------
+Attempting to get a license: Implementation
+Feature available: Implementation
+Loading parts and site information from C:/Xilinx/Vivado/2013.4/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+open_project {Y:\HandyEQ-HW\HandyEQ-HW\HandyEQ-HW-NoSoftcore\HandyEQ-HW-NoSoftcore.xpr}
+INFO: [Project 1-313] Project file moved from 'Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore' since last save.
+Import path for source Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd: Could not find the file 'Y:/HandyEQ-HW/test withoutSoftcore/PWM.vhd', nor could it be found using path 'Y:/DAT096-Embedded System Design/test withoutSoftcore/PWM.vhd'.
+Import path for source Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd: Could not find the file 'Y:/HandyEQ-HW/test withoutSoftcore/ADDA.vhd', nor could it be found using path 'Y:/DAT096-Embedded System Design/test withoutSoftcore/ADDA.vhd'.
+Import path for source Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc: Could not find the file 'Y:/HandyEQ-HW/test withoutSoftcore/Nexys4_Master.xdc', nor could it be found using path 'Y:/DAT096-Embedded System Design/test withoutSoftcore/Nexys4_Master.xdc'.
+Import path for source Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci: Could not find the file 'Y:/HandyEQ-HW/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci', nor could it be found using path 'Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci'.
+Scanning sources...
+Finished scanning sources
+Import path for source Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/PWM.vhd: Could not find the file 'Y:/HandyEQ-HW/test withoutSoftcore/PWM.vhd', nor could it be found using path 'Y:/DAT096-Embedded System Design/test withoutSoftcore/PWM.vhd'.
+Import path for source Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/imports/test withoutSoftcore/ADDA.vhd: Could not find the file 'Y:/HandyEQ-HW/test withoutSoftcore/ADDA.vhd', nor could it be found using path 'Y:/DAT096-Embedded System Design/test withoutSoftcore/ADDA.vhd'.
+Import path for source Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc: Could not find the file 'Y:/HandyEQ-HW/test withoutSoftcore/Nexys4_Master.xdc', nor could it be found using path 'Y:/DAT096-Embedded System Design/test withoutSoftcore/Nexys4_Master.xdc'.
+Import path for source Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci: Could not find the file 'Y:/HandyEQ-HW/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci', nor could it be found using path 'Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci'.
+Import path for source Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci: Could not find the file 'Y:/HandyEQ-HW/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci', nor could it be found using path 'Y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci'.
+Import path for source Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc: Could not find the file 'Y:/HandyEQ-HW/test withoutSoftcore/Nexys4_Master.xdc', nor could it be found using path 'Y:/DAT096-Embedded System Design/test withoutSoftcore/Nexys4_Master.xdc'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2013.4/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 930.016 ; gain = 81.820
+import_files -norecurse {C:/Users/arpad/Downloads/decimator.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_4.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_3.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_5.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_2.vhd}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Wed Apr 16 14:25:25 2014] Launched synth_1...
+Run output will be captured here: Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/runme.log
+[Wed Apr 16 14:25:25 2014] Launched impl_1...
+Run output will be captured here: Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1006.492 ; gain = 0.000

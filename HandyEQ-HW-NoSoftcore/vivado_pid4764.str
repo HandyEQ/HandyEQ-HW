@@ -1,0 +1,239 @@
+/*
+
+Vivado v2013.4 (64-bit)
+SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+Process ID: 4764
+
+Current time: 	4/16/14 2:19:27 PM
+Time zone: 	Central European Time (Europe/Berlin)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1280x1024
+Screen resolution (DPI): 96
+Available screens: 2
+
+Java version: 	1.7.0_40 64-bit
+Java home: 	C:/Xilinx/Vivado/2013.4/tps/win64/jre
+
+User name: 	arpad
+User directory: Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+GUI Allocated memory:	122 mb
+GUI Max memory:		3,066 mb
+Engine Allocated memory: 496 mb
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: START_PROGRESS_DIALOG
+// cb:I (bT:JFrame):  Opening project 'Y:\HandyEQ-HW\HandyEQ-HW\HandyEQ-HW-NoSoftcore\HandyEQ-HW-NoSoftcore.xpr' : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// Tcl Message: open_project {Y:\HandyEQ-HW\HandyEQ-HW\HandyEQ-HW-NoSoftcore\HandyEQ-HW-NoSoftcore.xpr} 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 64 mb (+64511kb) [00:00:06]
+// [Engine Memory]: 521 mb (+394459kb) [00:00:06]
+// [GUI Memory]: 91 mb (+28783kb) [00:00:07]
+// [Engine Memory]: 541 mb (+21692kb) [00:00:07]
+// [GUI Memory]: 96 mb (+4641kb) [00:00:07]
+// [Engine Memory]: 541 mb (+61kb) [00:00:07]
+// [Engine Memory]: 560 mb (+19075kb) [00:00:08]
+// [Engine Memory]: 561 mb (+1753kb) [00:00:09]
+// [Engine Memory]: 562 mb (+659kb) [00:00:09]
+// [Engine Memory]: 564 mb (+1732kb) [00:00:09]
+// [GUI Memory]: 98 mb (+2372kb) [00:00:09]
+// [GUI Memory]: 102 mb (+4026kb) [00:00:09]
+// [GUI Memory]: 108 mb (+6441kb) [00:00:09]
+// Tcl Message: open_project {Y:\HandyEQ-HW\HandyEQ-HW\HandyEQ-HW-NoSoftcore\HandyEQ-HW-NoSoftcore.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore' since last save. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2013.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Current time: 4/16/14 2:19:31 PM
+// [Engine Memory]: 568 mb (+4210kb) [00:00:10]
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 930.016 ; gain = 81.820 
+// TclEventType: STOP_PROGRESS_DIALOG
+// [Engine Memory]: 568 mb (+942kb) [00:00:11]
+dismissDialog ("Opening project 'Y:\\HandyEQ-HW\\HandyEQ-HW\\HandyEQ-HW-NoSoftcore\\HandyEQ-HW-NoSoftcore.xpr'"); // cb:I (bT:JFrame)
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 575 mb (+7303kb) [00:00:13]
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 576 mb (+471kb) [00:00:15]
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 110 mb (+2225kb) [00:00:35]
+// Elapsed time: 170 seconds
+selectTab (PAResourceAtoH.FileSetView_TABBED_PANE, (HResource) null, "Compile Order", 3); // g:JideTabbedPane (y:aC, bT:JFrame)
+// [Engine Memory]: 582 mb (+6754kb) [00:03:02]
+// [Engine Memory]: 583 mb (+401kb) [00:03:05]
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, coefficient_pkg_orig.vhd]", 1); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, coefficient_pkg_orig.vhd]", 1, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+closeView (PAResourceItoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // B:aC
+// [GUI Memory]: 112 mb (+2041kb) [00:03:08]
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, PWM.vhd]", 2); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, PWM.vhd]", 2, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IIR_Biquad_f1_1.vhd]", 3); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IIR_Biquad_f1_1.vhd]", 3, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+// [GUI Memory]: 113 mb (+1259kb) [00:03:10]
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ADDA.vhd]", 4); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ADDA.vhd]", 4, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+// [Engine Memory]: 583 mb (+520kb) [00:03:12]
+// [Engine Memory]: 592 mb (+9719kb) [00:03:13]
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ADDA.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+// HMemoryUtils.trashcanNow. Current time: 4/16/14 2:22:38 PM
+// [Engine Memory]: 593 mb (+913kb) [00:03:17]
+// [Engine Memory]: 599 mb (+5578kb) [00:03:20]
+closeView (PAResourceItoP.PAViews_CODE, "Code"); // I:b
+// Elapsed time: 10 seconds
+selectCodeEditor ("ADDA.vhd", 193, 263); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("ADDA.vhd", 327, 240); // aR:G (JPanel:JComponent, bT:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 602 mb (+3760kb) [00:03:47]
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ADDA.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+selectCodeEditor ("PWM.vhd", 160, 215); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("PWM.vhd", 233, 257); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("PWM.vhd", 233, 317); // aR:G (JPanel:JComponent, bT:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PWM.vhd", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+// [Engine Memory]: 606 mb (+4300kb) [00:04:11]
+// [Engine Memory]: 608 mb (+2134kb) [00:04:16]
+selectCodeEditor ("coefficient_pkg_orig.vhd", 299, 417); // aR:G (JPanel:JComponent, bT:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 10 seconds
+selectTab (PAResourceAtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // g:JideTabbedPane (y:aC, bT:JFrame)
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ADDA - ARCH_ADDA (ADDA.vhd)]", 1); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, false, false, false, true, false); // o:f (u:JPanel, bT:JFrame) - POPUP TRIGGER
+selectMenu (PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae:JMenu (al:JPopupMenu, bT:JFrame)
+selectMenu (PAResourceQtoZ.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae:JMenu (al:JPopupMenu, bT:JFrame)
+selectMenuItem (PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ah:JMenuItem (al:JPopupMenu, bT:JFrame)
+// b:aG (bT:JFrame): Add Sources: addNotify
+selectButton ((HResource) null, "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:aG)
+selectButton (PAResourceQtoZ.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // a:JButton (JPanel:JComponent, b:aG)
+// [Engine Memory]: 610 mb (+1458kb) [00:04:38]
+// Elapsed time: 19 seconds
+String[] filenames31467 = {"C:/Users/arpad/Downloads/IIR_Biquad_f1_2.vhd", "C:/Users/arpad/Downloads/IIR_Biquad_f1_3.vhd", "C:/Users/arpad/Downloads/IIR_Biquad_f1_4.vhd", "C:/Users/arpad/Downloads/IIR_Biquad_f1_5.vhd", "C:/Users/arpad/Downloads/decimator.vhd"};
+setFileChooser (filenames31467);
+// [Engine Memory]: 614 mb (+4661kb) [00:04:55]
+selectButton ((HResource) null, "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:aG)
+// 'd' command handler elapsed time: 24 seconds
+// [Engine Memory]: 616 mb (+2146kb) [00:04:56]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Current time: 4/16/14 2:24:18 PM
+// Tcl Message: import_files -norecurse {C:/Users/arpad/Downloads/decimator.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_4.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_3.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_5.vhd C:/Users/arpad/Downloads/IIR_Biquad_f1_2.vhd} 
+// b:aG (bT:JFrame): Add Sources: addNotify
+// cb:I (b:aG):  Add Sources  : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 619 mb (+2801kb) [00:04:57]
+dismissDialog ("Add Sources"); // cb:I (b:aG)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 115 mb (+2203kb) [00:05:00]
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_UPDATE_GRAPH
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ADDA - ARCH_ADDA (ADDA.vhd)]", 1); // o:f (u:JPanel, bT:JFrame)
+// [GUI Memory]: 116 mb (+560kb) [00:05:04]
+// [Engine Memory]: 626 mb (+7163kb) [00:05:06]
+// [Engine Memory]: 628 mb (+2027kb) [00:05:07]
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 13); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 14, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 14); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys4_Master.xdc]", 15); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys4_Master.xdc]", 15, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+// [GUI Memory]: 120 mb (+4423kb) [00:05:09]
+// Elapsed time: 15 seconds
+selectCodeEditor ("Nexys4_Master.xdc", 287, 370); // aR:G (JPanel:JComponent, bT:JFrame)
+// HMemoryUtils.trashcanNow. Current time: 4/16/14 2:24:53 PM
+// [Engine Memory]: 645 mb (+18526kb) [00:05:33]
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectTree (PAResourceAtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23); // w:Q (v:u, bT:JFrame)
+// af:bw (bT:JFrame): Synthesis is Out-of-date: addNotify
+// [GUI Memory]: 125 mb (+4864kb) [00:05:50]
+selectButton (RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, af:bw)
+// 'bF' command handler elapsed time: 6 seconds
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog ("Synthesis is Out-of-date"); // af:bw (bT:JFrame)
+dismissDialog ("Synthesis is Out-of-date"); // af:bw (bT:JFrame)
+// Tcl Message: reset_run synth_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// cb:I (bT:JFrame):  Generate Bitstream : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Apr 16 14:25:25 2014] Launched synth_1... Run output will be captured here: Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/synth_1/runme.log [Wed Apr 16 14:25:25 2014] Launched impl_1... Run output will be captured here: Y:/HandyEQ-HW/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1006.492 ; gain = 0.000 
+// Elapsed time: 10 seconds
+dismissDialog ("Generate Bitstream"); // cb:I (bT:JFrame)
+// [Engine Memory]: 645 mb (+135kb) [00:06:05]
+// [Engine Memory]: 647 mb (+1671kb) [00:06:30]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// [Engine Memory]: 647 mb (+331kb) [00:08:58]
+// O:af (bT:JFrame): Bitstream Generation Completed: addNotify
+// [Engine Memory]: 649 mb (+1785kb) [00:10:35]
+// [GUI Memory]: 126 mb (+1667kb) [00:13:30]
+// [GUI Memory]: 127 mb (+1179kb) [00:19:45]
+// HMemoryUtils.trashcanNow. Current time: 4/16/14 2:49:21 PM
+// Elapsed time: 1630 seconds
+selectButton (RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, O:af)
+dismissDialog ("Bitstream Generation Completed"); // O:af (bT:JFrame)
+// Elapsed time: 99 seconds
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ADDA - ARCH_ADDA (ADDA.vhd), decimator1_cmp - decimator - arch (decimator.vhd)]", 4); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ADDA - ARCH_ADDA (ADDA.vhd), decimator1_cmp - decimator - arch (decimator.vhd)]", 4, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ADDA - ARCH_ADDA (ADDA.vhd), IIR_Biquad_1_cmp - IIR_Biquad_1 - arch (IIR_Biquad_f1_1.vhd)]", 3); // o:f (u:JPanel, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ADDA - ARCH_ADDA (ADDA.vhd), IIR_Biquad_1_cmp - IIR_Biquad_1 - arch (IIR_Biquad_f1_1.vhd)]", 3, false, false, false, false, true); // o:f (u:JPanel, bT:JFrame) - DOUBLE CLICK
+// Elapsed time: 780 seconds
+selectCodeEditor ("IIR_Biquad_f1_1.vhd", 271, 187); // aR:G (JPanel:JComponent, bT:JFrame)
+selectCodeEditor ("IIR_Biquad_f1_1.vhd", 277, 186); // aR:G (JPanel:JComponent, bT:JFrame)
+// Elapsed time: 151 seconds
+selectTab ("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "IIR_Biquad_f1_1.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, bT:JFrame)
+// Elapsed time: 25 seconds
+selectCodeEditor ("ADDA.vhd", 236, 349); // aR:G (JPanel:JComponent, bT:JFrame)
+// [GUI Memory]: 128 mb (+53kb) [00:56:10]
+// Elapsed time: 396 seconds
+selectCodeEditor ("ADDA.vhd", 218, 329); // aR:G (JPanel:JComponent, bT:JFrame)
+// [GUI Memory]: 128 mb (+17kb) [00:59:00]
