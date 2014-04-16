@@ -1,9 +1,9 @@
 -- Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
--- Date        : Mon Apr 14 15:48:26 2014
--- Host        : XDAT20 running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode funcsim {Y:/DAT096-Embedded System
+-- Date        : Wed Apr 16 13:42:28 2014
+-- Host        : CSE-4225-12 running 64-bit Service Pack 1  (build 7601)
+-- Command     : write_vhdl -force -mode funcsim {y:/DAT096-Embedded System
 --               Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.vhdl}
 -- Design      : xadc_wiz_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
@@ -28,10 +28,6 @@ entity xadc_wiz_0 is
     channel_out : out STD_LOGIC_VECTOR ( 4 downto 0 );
     eoc_out : out STD_LOGIC;
     eos_out : out STD_LOGIC;
-    ot_out : out STD_LOGIC;
-    vccaux_alarm_out : out STD_LOGIC;
-    vccint_alarm_out : out STD_LOGIC;
-    user_temp_alarm_out : out STD_LOGIC;
     alarm_out : out STD_LOGIC;
     vp_in : in STD_LOGIC;
     vn_in : in STD_LOGIC
@@ -39,7 +35,7 @@ entity xadc_wiz_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of xadc_wiz_0 : entity is true;
   attribute core_generation_info : string;
-  attribute core_generation_info of xadc_wiz_0 : entity is "xadc_wiz_0,xadc_wiz_v3_0,{component_name=xadc_wiz_0,enable_axi=false,enable_axi4stream=false,dclk_frequency=100,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=true,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=true,enable_Vccaux_alaram=trueenable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=true,user_temp_alaram=true,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}";
+  attribute core_generation_info of xadc_wiz_0 : entity is "xadc_wiz_0,xadc_wiz_v3_0,{component_name=xadc_wiz_0,enable_axi=false,enable_axi4stream=false,dclk_frequency=100,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=true,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=falseenable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}";
 end xadc_wiz_0;
 
 architecture STRUCTURE of xadc_wiz_0 is
@@ -47,7 +43,8 @@ architecture STRUCTURE of xadc_wiz_0 is
   signal NLW_U0_JTAGBUSY_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_JTAGLOCKED_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_JTAGMODIFIED_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_ALM_UNCONNECTED : STD_LOGIC_VECTOR ( 6 downto 3 );
+  signal NLW_U0_OT_UNCONNECTED : STD_LOGIC;
+  signal NLW_U0_ALM_UNCONNECTED : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal NLW_U0_MUXADDR_UNCONNECTED : STD_LOGIC_VECTOR ( 4 downto 0 );
   attribute box_type : string;
   attribute box_type of U0 : label is "PRIMITIVE";
@@ -58,9 +55,9 @@ GND: unisim.vcomponents.GND
     );
 U0: unisim.vcomponents.XADC
     generic map(
-      INIT_40 => X"0013",
-      INIT_41 => X"3100",
-      INIT_42 => X"0400",
+      INIT_40 => X"0413",
+      INIT_41 => X"310F",
+      INIT_42 => X"0500",
       INIT_43 => X"0000",
       INIT_44 => X"0000",
       INIT_45 => X"0000",
@@ -93,14 +90,11 @@ U0: unisim.vcomponents.XADC
       IS_CONVSTCLK_INVERTED => '0',
       IS_DCLK_INVERTED => '0',
       SIM_DEVICE => "7SERIES",
-      SIM_MONITOR_FILE => "y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/designs/leon3-digilent-nexys4/Leon3_ADC/Leon3_ADC.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt"
+      SIM_MONITOR_FILE => "y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt"
     )
     port map (
       ALM(7) => alarm_out,
-      ALM(6 downto 3) => NLW_U0_ALM_UNCONNECTED(6 downto 3),
-      ALM(2) => vccaux_alarm_out,
-      ALM(1) => vccint_alarm_out,
-      ALM(0) => user_temp_alarm_out,
+      ALM(6 downto 0) => NLW_U0_ALM_UNCONNECTED(6 downto 0),
       BUSY => busy_out,
       CHANNEL(4 downto 0) => channel_out(4 downto 0),
       CONVST => \<const0>\,
@@ -118,7 +112,7 @@ U0: unisim.vcomponents.XADC
       JTAGLOCKED => NLW_U0_JTAGLOCKED_UNCONNECTED,
       JTAGMODIFIED => NLW_U0_JTAGMODIFIED_UNCONNECTED,
       MUXADDR(4 downto 0) => NLW_U0_MUXADDR_UNCONNECTED(4 downto 0),
-      OT => ot_out,
+      OT => NLW_U0_OT_UNCONNECTED,
       RESET => reset_in,
       VAUXN(15) => \<const0>\,
       VAUXN(14) => \<const0>\,

@@ -14,13 +14,14 @@ entity Buffer_apb is
     pmask       : integer := 16#fff#;
     pirq        : integer := 0;
     sample_size : integer := 16;
-    buffer_size : integer := 128
+    buffer_size : integer := 1024
   );
   port (
     rstn          : in    std_ulogic;
     clk           : in    std_ulogic;
     apbi          : in    apb_slv_in_type;
     apbo          : out   apb_slv_out_type;
+    led_out       : out   std_logic;
     --Connections mapped to the XADC output
     sample_irq    : in    std_logic;
     sample_in     : in    std_logic_vector(sample_size-1 downto 0) 
@@ -56,6 +57,7 @@ end record;
 
 signal process_signals  : buffer_signals;
 signal apb_signals      : buffer_signals;
+signal irq              : std_logic_vector(15 downto 0);
 
 --constant REVISION       : amba_version_type := 0; 
 constant pconfig        : apb_config_type := (
@@ -100,13 +102,16 @@ begin
       process_signals.output_select <= apb_signals.output_select;
       process_signals.chunk <= apb_signals.chunk;
       
+      irq <= (others => '0');
+      irq(pirq)  <= process_signals.chunk_irq;
+      led_out <= process_signals.chunk_irq;
       apb_signals.output_ready <= process_signals.output_ready;
       apb_signals.output_sample <= process_signals.output_sample;
     end if;
   end process;
 
   -- Set APB bus signals
-  apbo.pirq(pirq)    <= process_signals.chunk_irq; 
+  apbo.pirq          <= irq; 
   apbo.pindex        <= pindex;          -- VHDL Generic
   apbo.pconfig       <= PCONFIG;         -- VHDL Constant
 

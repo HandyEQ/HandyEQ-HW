@@ -6,7 +6,7 @@ use ieee.math_real.all;
 entity buff is 
     generic(
         SIZE    : integer := 16; 
-        LENGTH  : integer := 128
+        LENGTH  : integer := 1024
     );
     port(
         reset           : in    std_logic;
@@ -66,7 +66,7 @@ begin
           end if;
             
           --Check if interrupt is to be sent
-          if ((head_var + 1) mod to_integer(unsigned(chunk)) = 0) then
+          if ((head_var + 1) mod 512 = 0) then--mod to_integer(unsigned(chunk)) = 0) then
             chunk_irq <= '1';
           else
             chunk_irq <= '0';

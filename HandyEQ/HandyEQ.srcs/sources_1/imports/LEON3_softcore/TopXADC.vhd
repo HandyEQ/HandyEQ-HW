@@ -28,8 +28,8 @@ entity ADC is
         vauxp3 : IN STD_LOGIC;
         vauxn3 : IN STD_LOGIC;
         drdy : out std_logic;
-        AD_data : out STD_LOGIC_VECTOR (15 downto 0)
-        );
+        AD_data : out STD_LOGIC_VECTOR (15 downto 0);
+        led_out : out std_logic);
 end ADC;
 
 architecture rtl of ADC is
@@ -47,10 +47,6 @@ COMPONENT xadc_wiz_0
         vn_in : IN STD_LOGIC;
         vauxp3 : IN STD_LOGIC;
         vauxn3 : IN STD_LOGIC;
-        user_temp_alarm_out : OUT STD_LOGIC;
-        vccint_alarm_out : OUT STD_LOGIC;
-        vccaux_alarm_out : OUT STD_LOGIC;
-        ot_out : OUT STD_LOGIC;
         channel_out : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
         eoc_out : OUT STD_LOGIC;
         alarm_out : OUT STD_LOGIC;
@@ -70,17 +66,13 @@ SIGNAL DRDY_signal:STD_LOGIC;
 SIGNAL DADDR_signal:STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL DI_signal:STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL DO_signal:STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL user_temp_alarm_out_signal : STD_LOGIC;
-SIGNAL vccint_alarm_out_signal : STD_LOGIC;
-SIGNAL vccaux_alarm_out_signal : STD_LOGIC;
-SIGNAL ot_out_signal : STD_LOGIC;
+SIGNAL Filter_in_signal:STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL channel_out_signal : STD_LOGIC_VECTOR(4 DOWNTO 0);
 SIGNAL eoc_out_signal : STD_LOGIC;
 SIGNAL alarm_out_signal : STD_LOGIC;
 SIGNAL eos_out_signal : STD_LOGIC;
 SIGNAL busy_out_signal : STD_LOGIC;
 SIGNAL first_conv : STD_LOGIC;
-SIGNAL counter:STD_LOGIC_VECTOR(15 DOWNTO 0) ;
 begin
 
 XADC_component : xadc_wiz_0
@@ -97,41 +89,41 @@ XADC_component : xadc_wiz_0
         vn_in => '0',
         vauxp3 => vauxp3,
         vauxn3 => vauxn3,
-        user_temp_alarm_out => user_temp_alarm_out_signal,
-        vccint_alarm_out => vccint_alarm_out_signal,
-        vccaux_alarm_out => vccaux_alarm_out_signal,
-        ot_out => ot_out_signal,
         channel_out => channel_out_signal,
         eoc_out => eoc_out_signal,
         alarm_out => alarm_out_signal,
         eos_out => eos_out_signal,
         busy_out => busy_out_signal
-        );
+        );        
             
-process(clk, reset)
-begin  
-  if (reset = '0') then
-    DI_signal <= (OTHERS=>'0');
-    DEN_signal <= '0';
-    DWE_signal <= '0';
-    DADDR_signal <= (OTHERS=>'0');
-    AD_data <= (OTHERS=>'0');
-    first_conv <= '1';
-  elsif rising_edge(clk) then
-    if (DRDY_signal = '1') then
-      AD_data <= DO_signal;
-      first_conv <= '1';
-    end if;
-    
-    if (first_conv = '1' and DRDY_signal = '0') then
-      DEN_signal <= '1';
-      DADDR_signal <= "0010011";
-      first_conv <= '0';
-    else
-      DEN_signal <= '0';
-    end if;
-  end if;  
-end process;
+    process(clk, reset)
+    begin  
+      if (reset = '0') then
+        DI_signal <= (OTHERS=>'0');
+        DEN_signal <= '0';
+        DWE_signal <= '0';
+        DADDR_signal <= (OTHERS=>'0');
+        AD_data <= (OTHERS=>'0');
+        first_conv <= '1';
+        led_out <= '1';
+        
+      elsif rising_edge(clk) then
+      led_out <= '0';
+        if (DRDY_signal = '1') then
+          AD_data(15) <= not(DO_signal(15));
+          AD_data(14 downto 0) <= DO_signal(14 downto 0);
+          first_conv <= '1';
+        end if;
+          
+        if (first_conv = '1' and DRDY_signal = '0') then
+          DEN_signal <= '1';
+          DADDR_signal <= "0010011";
+          first_conv <= '0';
+        else
+          DEN_signal <= '0';
+        end if;
+      end if;  
+    end process;
 
 drdy <= eoc_out_signal;
 --drdy <= DRDY_signal;

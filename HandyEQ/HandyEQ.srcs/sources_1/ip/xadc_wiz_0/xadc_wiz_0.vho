@@ -66,10 +66,6 @@ COMPONENT xadc_wiz_0
     vn_in : IN STD_LOGIC;
     vauxp3 : IN STD_LOGIC;
     vauxn3 : IN STD_LOGIC;
-    user_temp_alarm_out : OUT STD_LOGIC;
-    vccint_alarm_out : OUT STD_LOGIC;
-    vccaux_alarm_out : OUT STD_LOGIC;
-    ot_out : OUT STD_LOGIC;
     channel_out : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
     eoc_out : OUT STD_LOGIC;
     alarm_out : OUT STD_LOGIC;
@@ -80,7 +76,7 @@ END COMPONENT;
 ATTRIBUTE SYN_BLACK_BOX : BOOLEAN;
 ATTRIBUTE SYN_BLACK_BOX OF xadc_wiz_0 : COMPONENT IS TRUE;
 ATTRIBUTE BLACK_BOX_PAD_PIN : STRING;
-ATTRIBUTE BLACK_BOX_PAD_PIN OF xadc_wiz_0 : COMPONENT IS "di_in[15:0],daddr_in[6:0],den_in,dwe_in,drdy_out,do_out[15:0],dclk_in,reset_in,vp_in,vn_in,vauxp3,vauxn3,user_temp_alarm_out,vccint_alarm_out,vccaux_alarm_out,ot_out,channel_out[4:0],eoc_out,alarm_out,eos_out,busy_out";
+ATTRIBUTE BLACK_BOX_PAD_PIN OF xadc_wiz_0 : COMPONENT IS "di_in[15:0],daddr_in[6:0],den_in,dwe_in,drdy_out,do_out[15:0],dclk_in,reset_in,vp_in,vn_in,vauxp3,vauxn3,channel_out[4:0],eoc_out,alarm_out,eos_out,busy_out";
 
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
 
@@ -102,10 +98,6 @@ your_instance_name : xadc_wiz_0
     vn_in => vn_in,
     vauxp3 => vauxp3,
     vauxn3 => vauxn3,
-    user_temp_alarm_out => user_temp_alarm_out,
-    vccint_alarm_out => vccint_alarm_out,
-    vccaux_alarm_out => vccaux_alarm_out,
-    ot_out => ot_out,
     channel_out => channel_out,
     eoc_out => eoc_out,
     alarm_out => alarm_out,
