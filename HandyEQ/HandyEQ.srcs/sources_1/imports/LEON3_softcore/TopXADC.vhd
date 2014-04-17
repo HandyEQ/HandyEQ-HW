@@ -125,7 +125,5 @@ XADC_component : xadc_wiz_0
       end if;  
     end process;
 
-drdy <= eoc_out_signal;
---drdy <= DRDY_signal;
-     
+drdy <= eoc_out_signal;     
 end rtl;

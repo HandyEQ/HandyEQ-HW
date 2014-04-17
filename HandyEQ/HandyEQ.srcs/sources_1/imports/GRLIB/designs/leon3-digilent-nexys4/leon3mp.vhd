@@ -262,25 +262,25 @@ architecture rtl of leon3mp is
         );
     end component;
     
-    component Buffer_apb_out 
-        generic(
-            pindex      : integer := 0;
-            paddr       : integer := 0;
-            pmask       : integer := 16#fff#;
-            pirq        : integer := 0;
-            sample_size : integer := 16;
-            buffer_size : integer := 128
-        );
-         port (
-            rstn          : in    std_ulogic;
-            clk           : in    std_ulogic;
-            apbi          : in    apb_slv_in_type;
-            apbo          : out   apb_slv_out_type;
-            --Connections mapped to the PWM module
-            output_select_pwm : in    std_logic;
-            sample_pwm    : out    std_logic_vector(15 downto 0)
-         );
-    end component;
+--    component Buffer_apb_out 
+--        generic(
+--            pindex      : integer := 0;
+--            paddr       : integer := 0;
+--            pmask       : integer := 16#fff#;
+--            pirq        : integer := 0;
+--            sample_size : integer := 16;
+--            buffer_size : integer := 128
+--        );
+--         port (
+--            rstn          : in    std_ulogic;
+--            clk           : in    std_ulogic;
+--            apbi          : in    apb_slv_in_type;
+--            apbo          : out   apb_slv_out_type;
+--            --Connections mapped to the PWM module
+--            output_select_pwm : in    std_logic;
+--            sample_pwm    : out    std_logic_vector(15 downto 0)
+--         );
+--    end component;
    
     component ADC is
         Port (clk : in std_logic;
@@ -377,7 +377,6 @@ architecture rtl of leon3mp is
   signal Led_signal : std_logic_vector(15 downto 0);
   signal drdy_signal :  std_logic;
   signal AD_data_signal : std_logic_vector(15 downto 0);
-  signal led_out_signal :  std_logic;
   signal led_out_buffer :  std_logic;
 
   -- RS232 APB Uart
@@ -760,13 +759,8 @@ Buffer_apb_map : Buffer_apb
     port map (rstn => rstn, clk => clkm, apbi => apbi, apbo => apbo(13), led_out => led_out_buffer, sample_irq => drdy_signal, sample_in => AD_data_signal);
     
     led(0) <= AD_data_signal(15); --test
-    led(3) <= rstn;
-    
-    led_out_signal <= '0' when rstn = '0' else
-                  not led_out_signal when led_out_buffer = '1' else
-                  led_out_signal;
-                      
-    led(4) <= led_out_signal;
+    led(3) <= rstn;                      
+    led(4) <= led_out_buffer;
     
     XADC_component : ADC
         Port map(clk => clk,
@@ -780,9 +774,9 @@ Buffer_apb_map : Buffer_apb
 ---------------------------------------------------------------------
 ----------  Circular output buffer 80000E00-80000F00 ----------------
 ---------------------------------------------------------------------
-Buffer_apb_out_map : Buffer_apb_out
-    generic map (pindex => 14, paddr => 14, pmask => 16#FFF#, pirq => 14) 
-    port map (rstn => rstn, clk => clkm, apbi => apbi, apbo => apbo(14), output_select_pwm => drdy_signal, sample_pwm => sample_pwm_buffer_signal);
+--Buffer_apb_out_map : Buffer_apb_out
+--    generic map (pindex => 14, paddr => 14, pmask => 16#FFF#, pirq => 14) 
+--    port map (rstn => rstn, clk => clkm, apbi => apbi, apbo => apbo(14), output_select_pwm => drdy_signal, sample_pwm => sample_pwm_buffer_signal);
     
    -- bypass
     sample_pwm_signal <= AD_data_signal when sw(0) = '1' else

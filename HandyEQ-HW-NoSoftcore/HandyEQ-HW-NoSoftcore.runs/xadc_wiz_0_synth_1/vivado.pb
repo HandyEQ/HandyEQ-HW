@@ -56,13 +56,13 @@ xadc_wiz_02default:default2M
 xc7a100t2default:defaultZ17-349
 õ
 %s*synth2ã
-wStarting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 238.957 ; gain = 92.961
+wStarting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 242.141 ; gain = 93.777
 2default:default
-¸
+ä
 synthesizing module '%s'638*oasys2
 
-xadc_wiz_02default:default2å
-vy:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
+xadc_wiz_02default:default2ö
+Éy:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
 782default:default8@Z8-638
 V
 %s*synth2G
@@ -204,27 +204,27 @@ O
 %s*synth2L
 8	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
 2default:default
-Ô
-%s*synth2ﬂ
- 	Parameter SIM_MONITOR_FILE bound to: y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt - type: string 
+¸
+%s*synth2Ï
+◊	Parameter SIM_MONITOR_FILE bound to: y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt - type: string 
 2default:default
-£
+±
 ,binding component instance '%s' to cell '%s'113*oasys2
 U02default:default2
-XADC2default:default2å
-vy:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
+XADC2default:default2ö
+Éy:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
 1452default:default8@Z8-113
-∑
+≈
 %done synthesizing module '%s' (%s#%s)256*oasys2
 
 xadc_wiz_02default:default2
 12default:default2
-12default:default2å
-vy:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
+12default:default2ö
+Éy:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
 782default:default8@Z8-256
 ú
 %s*synth2å
-xFinished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 272.137 ; gain = 126.141
+xFinished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 275.418 ; gain = 127.055
 2default:default
 ;
 %s*synth2,
@@ -291,34 +291,34 @@ BC:/Xilinx/Vivado/2013.4/data\./parts/xilinx/artix7/IOStandards.xml2default:de
 
 Processing XDC Constraints
 244*projectZ1-262
-Î
+˘
 $Parsing XDC File [%s] for cell '%s'
-848*designutils2é
-zy:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
+848*designutils2ú
+áy:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
 U02default:defaultZ20-848
-Ù
+Ç
 -Finished Parsing XDC File [%s] for cell '%s'
-847*designutils2é
-zy:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
+847*designutils2ú
+áy:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
 U02default:defaultZ20-847
-Á
+ı
 $Parsing XDC File [%s] for cell '%s'
-848*designutils2ä
-vy:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
+848*designutils2ò
+Éy:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
 U02default:defaultZ20-848
-
+˛
 -Finished Parsing XDC File [%s] for cell '%s'
-847*designutils2ä
-vy:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
+847*designutils2ò
+Éy:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
 U02default:defaultZ20-847
-º
+…
 Parsing XDC File [%s]
-179*designutils2Ö
-qY:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/xadc_wiz_0_synth_1/dont_touch.xdc2default:defaultZ20-179
-≈
+179*designutils2í
+~Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/dont_touch.xdc2default:defaultZ20-179
+“
 Finished Parsing XDC File [%s]
-178*designutils2Ö
-qY:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.runs/xadc_wiz_0_synth_1/dont_touch.xdc2default:defaultZ20-178
+178*designutils2í
+~Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.runs/xadc_wiz_0_synth_1/dont_touch.xdc2default:defaultZ20-178
 ?
 &Completed Processing XDC Constraints
 
@@ -330,11 +330,11 @@ u
 2default:defaultZ1-111
 µ
 %s*synth2•
-êFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 472.031 ; gain = 326.035
+êFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 474.109 ; gain = 325.746
 2default:default
 ù
 %s*synth2ç
-yFinished RTL Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 472.031 ; gain = 326.035
+yFinished RTL Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 474.109 ; gain = 325.746
 2default:default
 <
 %s*synth2-
@@ -365,7 +365,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 2default:default
 ±
 %s*synth2°
-åFinished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 534.672 ; gain = 388.676
+åFinished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 537.645 ; gain = 389.281
 2default:default
 B
 %s*synth23
@@ -385,7 +385,7 @@ B
 2default:default
 ©
 %s*synth2ô
-ÑFinished Cross Boundary Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 534.672 ; gain = 388.676
+ÑFinished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 537.645 ; gain = 389.281
 2default:default
 ¢
 %s*synth2í
@@ -407,19 +407,19 @@ R-------------------------------------------------------------------------------
 2default:default
 û
 %s*synth2é
-zFinished Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 536.730 ; gain = 390.734
+zFinished Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 538.684 ; gain = 390.320
 2default:default
 ≠
 %s*synth2ù
-àFinished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 536.734 ; gain = 390.738
+àFinished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 538.688 ; gain = 390.324
 2default:default
 †
 %s*synth2ê
-|Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 536.734 ; gain = 390.738
+|Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 538.688 ; gain = 390.324
 2default:default
 ü
 %s*synth2è
-{Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 546.266 ; gain = 400.270
+{Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 548.152 ; gain = 399.789
 2default:default
 D
 %s*synth25
@@ -427,7 +427,7 @@ D
 2default:default
 ô
 %s*synth2â
-uFinished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 546.266 ; gain = 400.270
+uFinished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 548.152 ; gain = 399.789
 2default:default
 ;
 %s*synth2,
@@ -456,11 +456,11 @@ I+------+------------------+-------+---------+-------+------------------+
 2default:default
 ™
 %s*synth2ö
-ÖFinished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 546.266 ; gain = 400.270
+ÖFinished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 548.152 ; gain = 399.789
 2default:default
 ß
 %s*synth2ó
-ÇFinished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 546.266 ; gain = 400.270
+ÇFinished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 548.152 ; gain = 399.789
 2default:default
 ¢
 %s*synth2í
@@ -553,7 +553,7 @@ E
 2default:default
 ¶
 %s*synth2ñ
-ÅFinished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 546.266 ; gain = 400.270
+ÅFinished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 548.152 ; gain = 399.789
 2default:default
 i
 %s*synth2Z
@@ -561,7 +561,7 @@ FSynthesis finished with 0 errors, 0 critical warnings and 0 warnings.
 2default:default
 £
 %s*synth2ì
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 546.266 ; gain = 400.270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 548.152 ; gain = 399.789
 2default:default
 \
 -Analyzing %s Unisim elements for replacement
@@ -571,25 +571,25 @@ a
 2Unisim Transformation completed in %s CPU seconds
 28*netlist2
 02default:defaultZ29-28
-Î
+˘
 $Parsing XDC File [%s] for cell '%s'
-848*designutils2é
-zy:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
+848*designutils2ú
+áy:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
 U02default:defaultZ20-848
-Ù
+Ç
 -Finished Parsing XDC File [%s] for cell '%s'
-847*designutils2é
-zy:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
+847*designutils2ú
+áy:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
 U02default:defaultZ20-847
-Á
+ı
 $Parsing XDC File [%s] for cell '%s'
-848*designutils2ä
-vy:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
+848*designutils2ò
+Éy:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
 U02default:defaultZ20-848
-
+˛
 -Finished Parsing XDC File [%s] for cell '%s'
-847*designutils2ä
-vy:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
+847*designutils2ò
+Éy:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
 U02default:defaultZ20-847
 C
 Pushed %s inverter(s).
@@ -619,18 +619,18 @@ U
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2"
 synth_design: 2default:default2
-00:00:482default:default2
-00:00:542default:default2
-949.9882default:default2
-760.5472default:defaultZ17-268
+00:00:262default:default2
+00:00:292default:default2
+951.9382default:default2
+759.3052default:defaultZ17-268
 <
 %Done setting XDC timing constraints.
 35*timingZ38-35
 
-sreport_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 949.988 ; gain = 0.000
+sreport_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 951.938 ; gain = 0.000
 *common
 w
 Exiting %s at %s...
 206*common2
 Vivado2default:default2,
-Fri Apr 04 16:16:44 20142default:defaultZ17-206
+Thu Apr 17 17:34:56 20142default:defaultZ17-206

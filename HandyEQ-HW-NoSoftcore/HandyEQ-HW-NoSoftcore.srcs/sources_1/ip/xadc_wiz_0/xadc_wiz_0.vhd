@@ -166,7 +166,7 @@ begin
         INIT_58 => X"5999",  -- Vbram upper alarm limit
         INIT_5C => X"5111",  -- Vbram lower alarm limit
         SIM_DEVICE => "7SERIES",
-        SIM_MONITOR_FILE => "y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt"
+        SIM_MONITOR_FILE => "y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt"
         )
 
 port map (

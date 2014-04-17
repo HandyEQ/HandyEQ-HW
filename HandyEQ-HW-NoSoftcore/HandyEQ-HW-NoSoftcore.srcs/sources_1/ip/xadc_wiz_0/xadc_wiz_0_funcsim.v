@@ -1,10 +1,10 @@
 // Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-// Date        : Fri Apr 04 16:16:43 2014
-// Host        : XDAT26 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode funcsim {y:/DAT096-Embedded System Design/test
-//               withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.v}
+// Date        : Thu Apr 17 17:34:55 2014
+// Host        : CSE-4225-11 running 64-bit Service Pack 1  (build 7601)
+// Command     : write_verilog -force -mode funcsim {y:/DAT096-Embedded System
+//               Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.v}
 // Design      : xadc_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -114,7 +114,7 @@ GND GND
     .IS_CONVSTCLK_INVERTED(1'b0),
     .IS_DCLK_INVERTED(1'b0),
     .SIM_DEVICE("7SERIES"),
-    .SIM_MONITOR_FILE("y:/DAT096-Embedded System Design/test withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt")) 
+    .SIM_MONITOR_FILE("y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt")) 
      U0
        (.ALM({alarm_out,NLW_U0_ALM_UNCONNECTED[6:0]}),
         .BUSY(busy_out),

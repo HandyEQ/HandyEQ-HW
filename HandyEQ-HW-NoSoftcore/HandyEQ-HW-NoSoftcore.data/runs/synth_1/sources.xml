@@ -2,25 +2,63 @@
 <DARoots Version="1" Minor="30">
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/test withoutSoftcore/PWM.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/HandyEQ-HW-NoSoftcore/coefficient_pkg_orig.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../test withoutSoftcore/PWM.vhd"/>
-        <Attr Name="ImportTime" Val="1396540767"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/coefficient_pkg_orig.vhd"/>
+        <Attr Name="ImportTime" Val="1397171864"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/test withoutSoftcore/ADDA.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/HandyEQ-HW-NoSoftcore/PWM.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../test withoutSoftcore/ADDA.vhd"/>
-        <Attr Name="ImportTime" Val="1396618350"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/PWM.vhd"/>
+        <Attr Name="ImportTime" Val="1397658690"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HandyEQ-HW-NoSoftcore/IIR_Biquad_f1_1.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/IIR_Biquad_f1_1.vhd"/>
+        <Attr Name="ImportTime" Val="1397171864"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HandyEQ-HW-NoSoftcore/BufferOut.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/BufferOut.vhd"/>
+        <Attr Name="ImportTime" Val="1397744702"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HandyEQ-HW-NoSoftcore/Buffer.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Buffer.vhd"/>
+        <Attr Name="ImportTime" Val="1397736349"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HandyEQ-HW-NoSoftcore/ADDA.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/ADDA.vhd"/>
+        <Attr Name="ImportTime" Val="1397745953"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>

@@ -2,10 +2,10 @@
 <DARoots Version="1" Minor="30">
   <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/imports/test withoutSoftcore/Nexys4_Master.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/HandyEQ-HW-NoSoftcore/Nexys4_Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../test withoutSoftcore/Nexys4_Master.xdc"/>
-        <Attr Name="ImportTime" Val="1396540767"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/Nexys4_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1397746348"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

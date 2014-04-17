@@ -1,10 +1,10 @@
 // Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-// Date        : Fri Apr 04 16:16:43 2014
-// Host        : XDAT26 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode synth_stub {y:/DAT096-Embedded System Design/test
-//               withoutSoftcore/test_withoutSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v}
+// Date        : Thu Apr 17 17:34:55 2014
+// Host        : CSE-4225-11 running 64-bit Service Pack 1  (build 7601)
+// Command     : write_verilog -force -mode synth_stub {y:/DAT096-Embedded System
+//               Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v}
 // Design      : xadc_wiz_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1
