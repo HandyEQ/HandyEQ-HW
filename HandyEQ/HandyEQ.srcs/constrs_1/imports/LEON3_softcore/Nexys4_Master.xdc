@@ -13,103 +13,103 @@ set_property PACKAGE_PIN E3 [get_ports clk]
 #Bank = 34, Pin name = IO_L21P_T3_DQS_34,					Sch name = SW0
 set_property PACKAGE_PIN U9 [get_ports {sw[0]}]					
 	set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]
-##Bank = 34, Pin name = IO_25_34,							Sch name = SW1
-#set_property PACKAGE_PIN U8 [get_ports {sw[1]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {sw[1]}]
-##Bank = 34, Pin name = IO_L23P_T3_34,						Sch name = SW2
-#set_property PACKAGE_PIN R7 [get_ports {sw[2]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {sw[2]}]
-##Bank = 34, Pin name = IO_L19P_T3_34,						Sch name = SW3
-#set_property PACKAGE_PIN R6 [get_ports {sw[3]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {sw[3]}]
-##Bank = 34, Pin name = IO_L19N_T3_VREF_34,					Sch name = SW4
-#set_property PACKAGE_PIN R5 [get_ports {sw[4]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {sw[4]}]
-##Bank = 34, Pin name = IO_L20P_T3_34,						Sch name = SW5
-#set_property PACKAGE_PIN V7 [get_ports {sw[5]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {sw[5]}]
-##Bank = 34, Pin name = IO_L20N_T3_34,						Sch name = SW6
-#set_property PACKAGE_PIN V6 [get_ports {sw[6]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {sw[6]}]
-##Bank = 34, Pin name = IO_L10P_T1_34,						Sch name = SW7
-#set_property PACKAGE_PIN V5 [get_ports {sw[7]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {sw[7]}]
-##Bank = 34, Pin name = IO_L8P_T1-34,						Sch name = SW8
-#set_property PACKAGE_PIN U4 [get_ports {sw[8]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {sw[8]}]
-#Bank = 34, Pin name = IO_L9N_T1_DQS_34,                    Sch name = SW9
-#set_property PACKAGE_PIN V2 [get_ports {gpioB[0]}]                   
-#    set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[0]}]
-##Bank = 34, Pin name = IO_L9P_T1_DQS_34,                    Sch name = SW10
-#set_property PACKAGE_PIN U2 [get_ports {gpioB[1]}]                   
-#    set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[1]}]
-##Bank = 34, Pin name = IO_L11N_T1_MRCC_34,                    Sch name = SW11
-#set_property PACKAGE_PIN T3 [get_ports {gpioB[2]}]                   
-#    set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[2]}]
-#Bank = 34, Pin name = IO_L17N_T2_34,                        Sch name = SW12
-set_property PACKAGE_PIN T1 [get_ports {gpioA[0]}]                   
-    set_property IOSTANDARD LVCMOS33 [get_ports {gpioA[0]}]
-#Bank = 34, Pin name = IO_L11P_T1_SRCC_34,                    Sch name = SW13
-set_property PACKAGE_PIN R3 [get_ports {gpioA[1]}]                   
-    set_property IOSTANDARD LVCMOS33 [get_ports {gpioA[1]}]
-#Bank = 34, Pin name = IO_L14N_T2_SRCC_34,                    Sch name = SW14
-set_property PACKAGE_PIN P3 [get_ports {gpioA[2]}]                   
-    set_property IOSTANDARD LVCMOS33 [get_ports {gpioA[2]}]
-#Bank = 34, Pin name = IO_L14P_T2_SRCC_34,                    Sch name = SW15
-set_property PACKAGE_PIN P4 [get_ports {gpioA[3]}]                   
-    set_property IOSTANDARD LVCMOS33 [get_ports {gpioA[3]}]
+#Bank = 34, Pin name = IO_25_34,							Sch name = SW1
+set_property PACKAGE_PIN U8 [get_ports {sw[1]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[1]}]
+#Bank = 34, Pin name = IO_L23P_T3_34,						Sch name = SW2
+set_property PACKAGE_PIN R7 [get_ports {sw[2]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[2]}]
+#Bank = 34, Pin name = IO_L19P_T3_34,						Sch name = SW3
+set_property PACKAGE_PIN R6 [get_ports {sw[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[3]}]
+#Bank = 34, Pin name = IO_L19N_T3_VREF_34,					Sch name = SW4
+set_property PACKAGE_PIN R5 [get_ports {sw[4]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[4]}]
+#Bank = 34, Pin name = IO_L20P_T3_34,						Sch name = SW5
+set_property PACKAGE_PIN V7 [get_ports {sw[5]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[5]}]
+#Bank = 34, Pin name = IO_L20N_T3_34,						Sch name = SW6
+set_property PACKAGE_PIN V6 [get_ports {sw[6]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[6]}]
+#Bank = 34, Pin name = IO_L10P_T1_34,						Sch name = SW7
+set_property PACKAGE_PIN V5 [get_ports {sw[7]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[7]}]
+#Bank = 34, Pin name = IO_L8P_T1-34,						Sch name = SW8
+set_property PACKAGE_PIN U4 [get_ports {sw[8]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[8]}]
+#Bank = 34, Pin name = IO_L9N_T1_DQS_34,					Sch name = SW9
+set_property PACKAGE_PIN V2 [get_ports {sw[9]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[9]}]
+#Bank = 34, Pin name = IO_L9P_T1_DQS_34,					Sch name = SW10
+set_property PACKAGE_PIN U2 [get_ports {sw[10]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[10]}]
+#Bank = 34, Pin name = IO_L11N_T1_MRCC_34,					Sch name = SW11
+set_property PACKAGE_PIN T3 [get_ports {sw[11]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[11]}]
+#Bank = 34, Pin name = IO_L17N_T2_34,						Sch name = SW12
+set_property PACKAGE_PIN T1 [get_ports {sw[12]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[12]}]
+#Bank = 34, Pin name = IO_L11P_T1_SRCC_34,					Sch name = SW13
+set_property PACKAGE_PIN R3 [get_ports {sw[13]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[13]}]
+#Bank = 34, Pin name = IO_L14N_T2_SRCC_34,					Sch name = SW14
+set_property PACKAGE_PIN P3 [get_ports {sw[14]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[14]}]
+#Bank = 34, Pin name = IO_L14P_T2_SRCC_34,					Sch name = SW15
+set_property PACKAGE_PIN P4 [get_ports {sw1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw1}]
  
 
 
-### LEDs
-##Bank = 34, Pin name = IO_L24N_T3_34,						Sch name = LED0
-#set_property PACKAGE_PIN T8 [get_ports {Led[0]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {Led[0]}]
-##Bank = 34, Pin name = IO_L21N_T3_DQS_34,					Sch name = LED1
-#set_property PACKAGE_PIN V9 [get_ports {Led[1]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {Led[1]}]
-##Bank = 34, Pin name = IO_L24P_T3_34,						Sch name = LED2
-#set_property PACKAGE_PIN R8 [get_ports {Led[2]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {Led[2]}]
-##Bank = 34, Pin name = IO_L23N_T3_34,						Sch name = LED3
-#set_property PACKAGE_PIN T6 [get_ports {Led[3]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {Led[3]}]
-##Bank = 34, Pin name = IO_L12P_T1_MRCC_34,					Sch name = LED4
-#set_property PACKAGE_PIN T5 [get_ports {Led[4]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {Led[4]}]
-##Bank = 34, Pin name = IO_L12N_T1_MRCC_34,					Sch	name = LED5
-#set_property PACKAGE_PIN T4 [get_ports {Led[5]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {Led[5]}]
-##Bank = 34, Pin name = IO_L22P_T3_34,						Sch name = LED6
-#set_property PACKAGE_PIN U7 [get_ports {Led[6]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {Led[6]}]
-##Bank = 34, Pin name = IO_L22N_T3_34,						Sch name = LED7
-#set_property PACKAGE_PIN U6 [get_ports {Led[7]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {Led[7]}]
-##Bank = 34, Pin name = IO_L10N_T1_34,						Sch name = LED8
-#set_property PACKAGE_PIN V4 [get_ports {Led[8]}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {Led[8]}]
-#Bank = 34, Pin name = IO_L8N_T1_34,                        Sch name = LED9
-#set_property PACKAGE_PIN U3 [get_ports {gpioB[3]}]                   
-#    set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[3]}]
-##Bank = 34, Pin name = IO_L7N_T1_34,                        Sch name = LED10
-#set_property PACKAGE_PIN V1 [get_ports {gpioB[4]}]                   
-#    set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[4]}]
-##Bank = 34, Pin name = IO_L17P_T2_34,                        Sch name = LED11
-#set_property PACKAGE_PIN R1 [get_ports {gpioB[5]}]                   
-#    set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[5]}]
-#Bank = 34, Pin name = IO_L13N_T2_MRCC_34,                    Sch name = LED12
-set_property PACKAGE_PIN P5 [get_ports {gpioA[4]}]                   
-    set_property IOSTANDARD LVCMOS33 [get_ports {gpioA[4]}]
-#Bank = 34, Pin name = IO_L7P_T1_34,                        Sch name = LED13
-set_property PACKAGE_PIN U1 [get_ports {gpioA[5]}]                   
-    set_property IOSTANDARD LVCMOS33 [get_ports {gpioA[5]}]
-#Bank = 34, Pin name = IO_L15N_T2_DQS_34,                    Sch name = LED14
-set_property PACKAGE_PIN R2 [get_ports {gpioA[6]}]                   
-    set_property IOSTANDARD LVCMOS33 [get_ports {gpioA[6]}]
-#Bank = 34, Pin name = IO_L15P_T2_DQS_34,                    Sch name = LED15
-set_property PACKAGE_PIN P2 [get_ports {gpioA[7]}]                   
-    set_property IOSTANDARD LVCMOS33 [get_ports {gpioA[7]}]
+## LEDs
+#Bank = 34, Pin name = IO_L24N_T3_34,						Sch name = LED0
+set_property PACKAGE_PIN T8 [get_ports {Led[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[0]}]
+#Bank = 34, Pin name = IO_L21N_T3_DQS_34,					Sch name = LED1
+set_property PACKAGE_PIN V9 [get_ports {Led[1]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[1]}]
+#Bank = 34, Pin name = IO_L24P_T3_34,						Sch name = LED2
+set_property PACKAGE_PIN R8 [get_ports {Led[2]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[2]}]
+#Bank = 34, Pin name = IO_L23N_T3_34,						Sch name = LED3
+set_property PACKAGE_PIN T6 [get_ports {Led[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[3]}]
+#Bank = 34, Pin name = IO_L12P_T1_MRCC_34,					Sch name = LED4
+set_property PACKAGE_PIN T5 [get_ports {Led[4]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[4]}]
+#Bank = 34, Pin name = IO_L12N_T1_MRCC_34,					Sch	name = LED5
+set_property PACKAGE_PIN T4 [get_ports {Led[5]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[5]}]
+#Bank = 34, Pin name = IO_L22P_T3_34,						Sch name = LED6
+set_property PACKAGE_PIN U7 [get_ports {Led[6]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[6]}]
+#Bank = 34, Pin name = IO_L22N_T3_34,						Sch name = LED7
+set_property PACKAGE_PIN U6 [get_ports {Led[7]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[7]}]
+#Bank = 34, Pin name = IO_L10N_T1_34,						Sch name = LED8
+set_property PACKAGE_PIN V4 [get_ports {Led[8]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[8]}]
+#Bank = 34, Pin name = IO_L8N_T1_34,						Sch name = LED9
+set_property PACKAGE_PIN U3 [get_ports {Led[9]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[9]}]
+#Bank = 34, Pin name = IO_L7N_T1_34,						Sch name = LED10
+set_property PACKAGE_PIN V1 [get_ports {Led[10]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[10]}]
+#Bank = 34, Pin name = IO_L17P_T2_34,						Sch name = LED11
+set_property PACKAGE_PIN R1 [get_ports {Led[11]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[11]}]
+#Bank = 34, Pin name = IO_L13N_T2_MRCC_34,					Sch name = LED12
+set_property PACKAGE_PIN P5 [get_ports {Led[12]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[12]}]
+#Bank = 34, Pin name = IO_L7P_T1_34,						Sch name = LED13
+set_property PACKAGE_PIN U1 [get_ports {Led[13]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[13]}]
+#Bank = 34, Pin name = IO_L15N_T2_DQS_34,					Sch name = LED14
+set_property PACKAGE_PIN R2 [get_ports {Led[14]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[14]}]
+#Bank = 34, Pin name = IO_L15P_T2_DQS_34,					Sch name = LED15
+set_property PACKAGE_PIN P2 [get_ports {Led[15]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {Led[15]}]
 
 ##Bank = 34, Pin name = IO_L5P_T0_34,						Sch name = LED16_R
 #set_property PACKAGE_PIN K5 [get_ports RGB1_Red]					
@@ -209,58 +209,58 @@ set_property PACKAGE_PIN V10 [get_ports {btn[4]}]
 
 
 ##Pmod Header JA
-##Bank = 15, Pin name = IO_L1N_T0_AD0N_15,					Sch name = JA1
-#set_property PACKAGE_PIN B13 [get_ports {JA[0]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[0]}]
-##Bank = 15, Pin name = IO_L5N_T0_AD9N_15,					Sch name = JA2
-#set_property PACKAGE_PIN F14 [get_ports {JA[1]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[1]}]
-##Bank = 15, Pin name = IO_L16N_T2_A27_15,					Sch name = JA3
-#set_property PACKAGE_PIN D17 [get_ports {JA[2]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[2]}]
-##Bank = 15, Pin name = IO_L16P_T2_A28_15,					Sch name = JA4
-#set_property PACKAGE_PIN E17 [get_ports {JA[3]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[3]}]
-##Bank = 15, Pin name = IO_0_15,								Sch name = JA7
-#set_property PACKAGE_PIN G13 [get_ports {JA[4]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[4]}]
-##Bank = 15, Pin name = IO_L20N_T3_A19_15,					Sch name = JA8
-#set_property PACKAGE_PIN C17 [get_ports {JA[5]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[5]}]
-##Bank = 15, Pin name = IO_L21N_T3_A17_15,					Sch name = JA9
-#set_property PACKAGE_PIN D18 [get_ports {JA[6]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[6]}]
-##Bank = 15, Pin name = IO_L21P_T3_DQS_15,					Sch name = JA10
-#set_property PACKAGE_PIN E18 [get_ports {JA[7]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[7]}]
+#Bank = 15, Pin name = IO_L1N_T0_AD0N_15,					Sch name = JA1 spisel
+set_property PACKAGE_PIN B13 [get_ports {gpioDisplayEnc[1]}] 					
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[1]}]
+#Bank = 15, Pin name = IO_L5N_T0_AD9N_15,					Sch name = JA2 gpioDisplayEnc[5]
+set_property PACKAGE_PIN F14 [get_ports {mosi}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {mosi}]
+#Bank = 15, Pin name = IO_L16N_T2_A27_15,					Sch name = JA3 gpioDisplayEnc[6]
+set_property PACKAGE_PIN D17 [get_ports {miso}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {miso}]
+#Bank = 15, Pin name = IO_L16P_T2_A28_15,					Sch name = JA4 gpioDisplayEnc[7]
+set_property PACKAGE_PIN E17 [get_ports {sck}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sck}]
+#Bank = 15, Pin name = IO_0_15,								Sch name = JA7
+set_property PACKAGE_PIN G13 [get_ports {gpioDisplayEnc[8]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[8]}]
+#Bank = 15, Pin name = IO_L20N_T3_A19_15,					Sch name = JA8
+set_property PACKAGE_PIN C17 [get_ports {gpioDisplayEnc[9]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[9]}]
+#Bank = 15, Pin name = IO_L21N_T3_A17_15,					Sch name = JA9
+set_property PACKAGE_PIN D18 [get_ports {gpioDisplayEnc[10]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[10]}]
+#Bank = 15, Pin name = IO_L21P_T3_DQS_15,					Sch name = JA10
+set_property PACKAGE_PIN E18 [get_ports {gpioDisplayEnc[11]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[11]}]
 
 
 
 ##Pmod Header JB
 #Bank = 15, Pin name = IO_L15N_T2_DQS_ADV_B_15,				Sch name = JB1
-set_property PACKAGE_PIN G14 [get_ports {gpioB[0]}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[0]}]
+set_property PACKAGE_PIN G14 [get_ports {spisel}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {spisel}]
 #Bank = 14, Pin name = IO_L13P_T2_MRCC_14,					Sch name = JB2
-set_property PACKAGE_PIN P15 [get_ports {gpioB[1]}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[1]}]
+set_property PACKAGE_PIN P15 [get_ports {gpioDisplayEnc[5]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[5]}]
 #Bank = 14, Pin name = IO_L21N_T3_DQS_A06_D22_14,			Sch name = JB3
-set_property PACKAGE_PIN V11 [get_ports {gpioB[2]}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[2]}]
-##Bank = CONFIG, Pin name = IO_L16P_T2_CSI_B_14,				Sch name = JB4
-#set_property PACKAGE_PIN V15 [get_ports {JB[3]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JB[3]}]
-#Bank = 15, Pin name = IO_25_15,							Sch name = JB7
-set_property PACKAGE_PIN K16 [get_ports {gpioB[3]}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[3]}]
-#Bank = CONFIG, Pin name = IO_L15P_T2_DQS_RWR_B_14,			Sch name = JB8
-set_property PACKAGE_PIN R16 [get_ports {gpioB[4]}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[4]}]
-#Bank = 14, Pin name = IO_L24P_T3_A01_D17_14,				Sch name = JB9
-set_property PACKAGE_PIN T9 [get_ports {gpioB[5]}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {gpioB[5]}]
-##Bank = 14, Pin name = IO_L19N_T3_A09_D25_VREF_14,			Sch name = JB10 
-#set_property PACKAGE_PIN U11 [get_ports {JB[7]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JB[7]}]
+set_property PACKAGE_PIN V11 [get_ports {gpioDisplayEnc[6]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[6]}]
+#Bank = CONFIG, Pin name = IO_L16P_T2_CSI_B_14,				Sch name = JB4
+set_property PACKAGE_PIN V15 [get_ports {gpioDisplayEnc[7]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[7]}]
+#Bank = 15, Pin name = IO_25_15,							Sch name = JB7 int11
+set_property PACKAGE_PIN K16 [get_ports {gpioDisplayEnc[0]}] 					
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[0]}]
+#Bank = CONFIG, Pin name = IO_L15P_T2_DQS_RWR_B_14,			Sch name = JB8 int13
+set_property PACKAGE_PIN R16 [get_ports {gpioDisplayEnc[2]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[2]}]
+#Bank = 14, Pin name = IO_L24P_T3_A01_D17_14,				Sch name = JB9 int14	
+set_property PACKAGE_PIN T9 [get_ports {gpioDisplayEnc[3]}]				
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[3]}]
+#Bank = 14, Pin name = IO_L19N_T3_A09_D25_VREF_14,			Sch name = JB10 int15 
+set_property PACKAGE_PIN U11 [get_ports {gpioDisplayEnc[4]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {gpioDisplayEnc[4]}]
  
 
 

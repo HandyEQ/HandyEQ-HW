@@ -18,7 +18,8 @@ entity PWMapb is
     apbi   : in  apb_slv_in_type;
     apbo   : out apb_slv_out_type;
     PWM_out: out std_logic;
-    SD_audio_out: out std_logic
+    SD_audio_out: out std_logic;
+    sample_rdy : in  std_logic
   );                      
  
 end entity PWMapb;
@@ -30,7 +31,8 @@ component PWM IS
            clk:STD_LOGIC;
            sample:in STD_LOGIC_vector(15 downto 0);
            PWM_out:OUT STD_LOGIc;
-           SD_audio_out:OUT STD_LOGIc);
+           SD_audio_out:OUT STD_LOGIc;
+           smp_rdy: in STD_LOGIC);
 end component;
 
   signal apb_reg    : STD_LOGIC_vector(15 downto 0);
@@ -75,7 +77,8 @@ begin
            clk => clk,
            sample => apb_reg,
            PWM_out => PWM_out,
-           SD_audio_out => SD_audio_out);
+           SD_audio_out => SD_audio_out,
+           smp_rdy => sample_rdy);
 
    -- pragma translate_off   
 --   bootmsg : report_version 

@@ -1061,7 +1061,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>1008881526</spirit:value>
+            <spirit:value>664457863</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1069,7 +1069,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Feb 27 18:37:13 UTC 2014</spirit:value>
+            <spirit:value>Wed Apr 16 11:39:14 UTC 2014</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1088,7 +1088,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>1008881526</spirit:value>
+            <spirit:value>664457863</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1096,7 +1096,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Feb 27 18:37:40 UTC 2014</spirit:value>
+            <spirit:value>Wed Apr 16 11:41:17 UTC 2014</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1115,7 +1115,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>1008881526</spirit:value>
+            <spirit:value>664457863</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1123,7 +1123,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Feb 27 18:37:40 UTC 2014</spirit:value>
+            <spirit:value>Wed Apr 16 11:41:18 UTC 2014</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1142,7 +1142,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>4035808926</spirit:value>
+            <spirit:value>856243718</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1150,7 +1150,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Feb 27 18:37:47 UTC 2014</spirit:value>
+            <spirit:value>Wed Apr 16 11:41:27 UTC 2014</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1169,7 +1169,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>4035808926</spirit:value>
+            <spirit:value>856243718</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1177,7 +1177,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Feb 27 18:37:48 UTC 2014</spirit:value>
+            <spirit:value>Wed Apr 16 11:41:27 UTC 2014</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1195,7 +1195,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>1008881526</spirit:value>
+            <spirit:value>664457863</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1203,7 +1203,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Feb 27 18:37:51 UTC 2014</spirit:value>
+            <spirit:value>Wed Apr 16 11:41:33 UTC 2014</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1221,7 +1221,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>1008881526</spirit:value>
+            <spirit:value>664457863</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -2821,7 +2821,7 @@
           <xilinx:portInfo>
             <xilinx:enablement>
               <xilinx:presence>optional</xilinx:presence>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_USER_TEMP_ALARM&apos;))">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_USER_TEMP_ALARM&apos;))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -2842,7 +2842,7 @@
           <xilinx:portInfo>
             <xilinx:enablement>
               <xilinx:presence>optional</xilinx:presence>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_VCCINT_ALARM&apos;))">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_VCCINT_ALARM&apos;))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -2863,7 +2863,7 @@
           <xilinx:portInfo>
             <xilinx:enablement>
               <xilinx:presence>optional</xilinx:presence>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_VCCAUX_ALARM&apos;))">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_VCCAUX_ALARM&apos;))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -2947,7 +2947,7 @@
           <xilinx:portInfo>
             <xilinx:enablement>
               <xilinx:presence>optional</xilinx:presence>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_OT_ALARM&apos;))">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_OT_ALARM&apos;))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3271,19 +3271,19 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_HAS_OT_ALARM</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_OT_ALARM" spirit:order="162">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_OT_ALARM" spirit:order="162">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_HAS_USER_TEMP_ALARM</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_USER_TEMP_ALARM" spirit:order="163">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_USER_TEMP_ALARM" spirit:order="163">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_HAS_VCCINT_ALARM</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_VCCINT_ALARM" spirit:order="164">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_VCCINT_ALARM" spirit:order="164">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_HAS_VCCAUX_ALARM</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_VCCAUX_ALARM" spirit:order="165">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_VCCAUX_ALARM" spirit:order="165">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_HAS_VBRAM_ALARM</spirit:name>
@@ -3303,15 +3303,15 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_CONFIGURATION_R0</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONFIGURATION_R0" spirit:order="170">19</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONFIGURATION_R0" spirit:order="170">1043</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_CONFIGURATION_R1</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONFIGURATION_R1" spirit:order="171">12544</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONFIGURATION_R1" spirit:order="171">12559</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_CONFIGURATION_R2</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONFIGURATION_R2" spirit:order="172">1024</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONFIGURATION_R2" spirit:order="172">1280</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_ALARM_LIMIT_R0</spirit:name>
@@ -3779,7 +3779,7 @@
     <spirit:parameter>
       <spirit:name>ADC_CONVERSION_RATE</spirit:name>
       <spirit:displayName>ADC conversion rate(KSPS)</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_CONVERSION_RATE" spirit:order="9" spirit:minimum="154" spirit:maximum="1000" spirit:rangeType="float">1000</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_CONVERSION_RATE" spirit:order="9" spirit:minimum="154" spirit:maximum="1000" spirit:rangeType="float">800</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SEQUENCER_MODE</spirit:name>
@@ -3848,19 +3848,19 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>OT_ALARM</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.OT_ALARM" spirit:order="23">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.OT_ALARM" spirit:order="23">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>USER_TEMP_ALARM</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.USER_TEMP_ALARM" spirit:order="24">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.USER_TEMP_ALARM" spirit:order="24">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>VCCINT_ALARM</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.VCCINT_ALARM" spirit:order="25">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.VCCINT_ALARM" spirit:order="25">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>VCCAUX_ALARM</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.VCCAUX_ALARM" spirit:order="26">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.VCCAUX_ALARM" spirit:order="26">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ENABLE_VBRAM_ALARM</spirit:name>
@@ -3972,7 +3972,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BIPOLAR_OPERATION</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.BIPOLAR_OPERATION" spirit:order="50">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.BIPOLAR_OPERATION" spirit:order="50">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SINGLE_CHANNEL_ACQUISITION_TIME</spirit:name>
