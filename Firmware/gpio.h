@@ -15,9 +15,9 @@ typedef struct
 }GPIO_TypeDef;
 
 #define GPIOA               ((GPIO_TypeDef *) 0x80000B00)
-#define GPIOB               ((GPIO_TypeDef *) 0x80000C00)
-/*#define GPIOC               ((GPIO_TypeDef *) 0x00000000)
-#define GPIOD               ((GPIO_TypeDef *) 0x00000000)*/
+#define GPIOB               ((GPIO_TypeDef *) 0x80000D00)
+#define GPIOC               ((GPIO_TypeDef *) 0x80000E00)
+//#define GPIOD               ((GPIO_TypeDef *) 0x80000000)
 
 #define IS_GPIO_ALL_PERIPH(PERIPH) (((PERIPH) == GPIOA) || \
                                     ((PERIPH) == GPIOB) || \

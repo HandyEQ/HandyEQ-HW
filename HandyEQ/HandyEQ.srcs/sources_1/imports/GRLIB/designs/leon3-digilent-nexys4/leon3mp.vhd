@@ -83,6 +83,7 @@ entity leon3mp is
     data            : inout std_logic_vector(15 downto 0);
 
     -- 7 segment display
+    sevenSeg          : inout   std_logic_vector(15 downto 0); --inout coz GPIO
     --seg             : out   std_logic_vector(6 downto 0);
     --an              : out   std_logic_vector(7 downto 0);
 
@@ -95,6 +96,10 @@ entity leon3mp is
     
     -- GPIO
     gpioDisplayEnc         : inout std_logic_vector(11 downto 0);
+    testModule             : inout std_logic_vector(5 downto 0);
+    --sevenSeg above is GPIO also
+    sample_ready_port      : out   std_logic;
+    chunk_ready_port       : out   std_logic;
     
     -- SPI
     sck : inout std_ulogic;
@@ -267,6 +272,11 @@ architecture rtl of leon3mp is
 
   signal gpioiA : gpio_in_type;
   signal gpiooA : gpio_out_type;
+  signal gpioiB : gpio_in_type;
+  signal gpiooB : gpio_out_type;
+  signal gpioiC : gpio_in_type;
+  signal gpiooC : gpio_out_type;
+  
   signal adc_data_ready_signal : std_logic;
   signal gpio_signal : std_logic;
   
@@ -667,7 +677,7 @@ PWMapb_map : PWMapb
 ---  GPIOA (APB 0x80000B00) Encoder and OLED  -------------------------
 -----------------------------------------------------------------------
 --adc_data_ready_signal <= sw1;
-
+--interrupts used: 11, 13, 14, 15.
 gpio1 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
     grgpio1: grgpio
         generic map( pindex => 11, paddr => 11, pirq => 11, imask => 16#001D#, nbits => 12)
@@ -680,22 +690,39 @@ gpio1 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
 end generate;
 
 -----------------------------------------------------------------------
----  GPIOB (APB 0x80000?00) 7 segment   -------------------------------
+---  GPIOB (APB 0x80000D00) 7 segment   -------------------------------
 -----------------------------------------------------------------------
 
---gpio1 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
---    grgpio1: grgpio
---        generic map( pindex => ?, paddr => ?, nbits => 16)
---        port map( rstn, clkm, apbi, apbo(11), gpioiB, gpiooB);
+gpio2 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
+    grgpio2: grgpio
+        generic map( pindex => 13, paddr => 13, nbits => 16)
+        port map( rstn, clkm, apbi, apbo(13), gpioiB, gpiooB);
 
---        pio_pads : for i in 0 to 15 generate
---          pio_pad1 : iopad generic map (tech => padtech)
---            port map (____(i), gpiooB.dout(i), gpiooB.oen(i), gpioiB.din(i)); --adc_data_ready_signal btn(2) sw1
---        end generate;
---end generate;
+        pio_pads : for i in 0 to 15 generate
+          pio_pad1 : iopad generic map (tech => padtech)
+            port map (sevenSeg(i), gpiooB.dout(i), gpiooB.oen(i), gpioiB.din(i));
+        end generate;
+end generate;
+
+-----------------------------------------------------------------------
+---  GPIOC (APB 0x80000E00) test module   -----------------------------
+-----------------------------------------------------------------------
+sample_ready_port <= adc_data_ready_signal;
+--chunk_ready_port <= ; --signal coming from the input buffer noting a full buffer
+
+gpio3 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
+    grgpio3: grgpio
+        generic map( pindex => 14, paddr => 14, nbits => 6)
+        port map( rstn, clkm, apbi, apbo(14), gpioiC, gpiooC);
+
+        pio_pads : for i in 0 to 5 generate
+          pio_pad1 : iopad generic map (tech => padtech)
+            port map (testModule(i), gpiooC.dout(i), gpiooC.oen(i), gpioiC.din(i));
+        end generate;
+end generate;
    
 -----------------------------------------------------------------------
----  SPI (APB 0x80000400) OLED   --------------------------------------
+---  SPI (APB 0x80000C00) OLED   --------------------------------------
 -----------------------------------------------------------------------   
 
 -- SPI controller with FIFO depth 2 and no slave select register
