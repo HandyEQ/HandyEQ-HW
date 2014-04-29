@@ -286,11 +286,10 @@ begin
     data_ready_port_signal <= '0';
   elsif rising_edge(clk) then
     if (eoc_out_signal = '1') then --DRDY_signal
-      AD_data(15) <= not DO_signal(15); --NO FILTERS
-      AD_data(14 downto 0) <= DO_signal(14 downto 0); --NO FILTERS
-      --AD_data <= decimator4_out_signal(17 downto 2);
-      --AD_data(15) <= not decimator4_out_signal(17); --THIS IS NEEDED TO HAVE THE FILTERS
-      --AD_data(14 downto 0) <= decimator4_out_signal(16 downto 2); --THIS IS NEEDED TO HAVE THE FILTERS
+      --AD_data(15) <= not DO_signal(15); --NO FILTERS
+      --AD_data(14 downto 0) <= DO_signal(14 downto 0); --NO FILTERS
+      AD_data(15) <= not decimator4_out_signal(17); --THIS IS NEEDED TO HAVE THE FILTERS
+      AD_data(14 downto 0) <= decimator4_out_signal(16 downto 2); --THIS IS NEEDED TO HAVE THE FILTERS
       
       if (DO_signal(15) = '1') then
         zerosOrOnes <= "1111";

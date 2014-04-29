@@ -60,16 +60,19 @@ void irqhandler(int irq)
     lreg[IPEND/4] &= ~(1 << irq);
     flag = 1;
     putStr("13\n\r");
+    putInt(flag3);
+    putInt(flag2);
+
   } 
   else if (irq == 14) {
     lreg[IPEND/4] &= ~(1 << irq);
-    flag = 1;
-    putStr("14\n\r");
+    flag3++;
+    //putStr("14\n\r");
   } 
   else if (irq == 15) {
     lreg[IPEND/4] &= ~(1 << irq);
-    flag = 1;
-    putStr("15\n\r");
+    flag2++;
+    //putStr("15\n\r");
   }
     //putStr("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n\r");
 }
@@ -120,7 +123,7 @@ GPIOA -> int_pol = 0x0000001D;
 GPIOA -> int_edg = 0x0000001D;
 
 catch_interrupt(irqhandler, 10);
-enable_irq(10);
+//enable_irq(10);
 
 catch_interrupt(irqhandler, 11);
 enable_irq(11);

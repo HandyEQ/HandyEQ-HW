@@ -3,150 +3,87 @@
 
 #define time               ((int) 6000)
 
-void put7Seg(char c);
-void enable7Seg(int i);
+void SEVENSEG_WriteChar(char c);
+void SEVENSEG_EnableDisplay(int i);
+void SEVENSEG_WriteString(char* s);
 
 int main(void)
 {
 
-int i = 1;
+  int i = 1;
 
-GPIO_InitTypeDef GPIO_InitStructure;
+  GPIO_InitTypeDef GPIO_InitStructure;
 
-putStr("Test Started\n\r");
+  putStr("Test Started\n\r");
 
-putStr("Test Started\n\r");
+  putStr("Test Started\n\r");
 
-/* GPIOB */
+  /* GPIOB */
 
-GPIO_DeInit(GPIOB);
+  GPIO_DeInit(GPIOB);
 
-GPIO_StructInit(&GPIO_InitStructure);
+  GPIO_StructInit(&GPIO_InitStructure);
 
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 |
-                              GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 |
-                              GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10 | GPIO_Pin_11 |
-                              GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 |
+                                GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 |
+                                GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10 | GPIO_Pin_11 |
+                                GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
 
-GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 
-GPIO_Init(GPIOB, &GPIO_InitStructure);
+  GPIO_Init(GPIOB, &GPIO_InitStructure);
 
-/* GPIOC */
+  /* GPIOC */
 
-GPIO_DeInit(GPIOC);
+  GPIO_DeInit(GPIOC);
 
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 |
-                              GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5;
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 |
+                                GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5;
 
-GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 
-GPIO_Init(GPIOC, &GPIO_InitStructure);
+  GPIO_Init(GPIOC, &GPIO_InitStructure);
 
-putStr("Test Started\n\r");
+  putStr("Test Started\n\r");
 
-/****************** GPIOC *****************************/
-GPIO_SetBits(GPIOC, GPIO_Pin_0);
-GPIO_SetBits(GPIOC, GPIO_Pin_1);
-GPIO_SetBits(GPIOC, GPIO_Pin_2);
-GPIO_SetBits(GPIOC, GPIO_Pin_3);
-GPIO_SetBits(GPIOC, GPIO_Pin_4);
-GPIO_SetBits(GPIOC, GPIO_Pin_5);
+  /****************** GPIOC *****************************/
+  GPIO_SetBits(GPIOC, GPIO_Pin_0);
+  GPIO_SetBits(GPIOC, GPIO_Pin_1);
+  GPIO_SetBits(GPIOC, GPIO_Pin_2);
+  GPIO_SetBits(GPIOC, GPIO_Pin_3);
+  GPIO_SetBits(GPIOC, GPIO_Pin_4);
+  GPIO_SetBits(GPIOC, GPIO_Pin_5);
 
-/****************** GPIOB *****************************/
-GPIO_SetBits(GPIOB, GPIO_Pin_8);
-GPIO_SetBits(GPIOB, GPIO_Pin_9);
-GPIO_SetBits(GPIOB, GPIO_Pin_10);
-GPIO_SetBits(GPIOB, GPIO_Pin_11);
-GPIO_SetBits(GPIOB, GPIO_Pin_12);
-GPIO_SetBits(GPIOB, GPIO_Pin_13);
-GPIO_SetBits(GPIOB, GPIO_Pin_14);
-GPIO_ResetBits(GPIOB, GPIO_Pin_15);
-
-GPIO_ResetBits(GPIOB, GPIO_Pin_0);
-GPIO_ResetBits(GPIOB, GPIO_Pin_1);
-GPIO_ResetBits(GPIOB, GPIO_Pin_2);
-GPIO_ResetBits(GPIOB, GPIO_Pin_3);
-GPIO_SetBits(GPIOB, GPIO_Pin_4);
-GPIO_SetBits(GPIOB, GPIO_Pin_5);
-GPIO_SetBits(GPIOB, GPIO_Pin_6);
-GPIO_SetBits(GPIOB, GPIO_Pin_7);
-
-while (1)
-{
   /****************** GPIOB *****************************/
-  enable7Seg(0);
+  GPIO_SetBits(GPIOB, GPIO_Pin_8);
+  GPIO_SetBits(GPIOB, GPIO_Pin_9);
+  GPIO_SetBits(GPIOB, GPIO_Pin_10);
+  GPIO_SetBits(GPIOB, GPIO_Pin_11);
+  GPIO_SetBits(GPIOB, GPIO_Pin_12);
+  GPIO_SetBits(GPIOB, GPIO_Pin_13);
+  GPIO_SetBits(GPIOB, GPIO_Pin_14);
+  GPIO_ResetBits(GPIOB, GPIO_Pin_15);
 
-  put7Seg('A');
+  GPIO_ResetBits(GPIOB, GPIO_Pin_0);
+  GPIO_ResetBits(GPIOB, GPIO_Pin_1);
+  GPIO_ResetBits(GPIOB, GPIO_Pin_2);
+  GPIO_ResetBits(GPIOB, GPIO_Pin_3);
+  GPIO_SetBits(GPIOB, GPIO_Pin_4);
+  GPIO_SetBits(GPIOB, GPIO_Pin_5);
+  GPIO_SetBits(GPIOB, GPIO_Pin_6);
+  GPIO_SetBits(GPIOB, GPIO_Pin_7);
 
-  while (i++ < time);
+  while (1)
+  {
+    /****************** GPIOB *****************************/
 
-  i = 0;
+    SEVENSEG_WriteString("B00B1E5-");
+  }
 
-  enable7Seg(1);
-
-  put7Seg('B');
-
-  while (i++ < time);
-
-  i = 0;
-
-  enable7Seg(2);
-
-  put7Seg('C');
-
-  while (i++ < time);
-
-  i = 0;
-
-  enable7Seg(3);
-
-  put7Seg('D');
-
-  while (i++ < time);
-
-  i = 0;
-
-  enable7Seg(4);
-
-  put7Seg('E');
-
-  while (i++ < time);
-
-  i = 0;
-
-  enable7Seg(5);
-
-  put7Seg('F');
-
-  while (i++ < time);
-
-  i = 0;
-
-  enable7Seg(6);
-
-  put7Seg('9');
-
-  while (i++ < time);
-
-  i = 0;
-
-  enable7Seg(7);
-
-  put7Seg('8');
-
-  put7Seg('.');
-
-  while (i++ < time);
-
-  i = 0;
+  return 0;
 }
 
-return 0;
-
-}
-
-void put7Seg(char c)
+void SEVENSEG_WriteChar(char c)
 {
   switch(c)
   {
@@ -327,14 +264,52 @@ void put7Seg(char c)
     break;
 
   case '.':
+    GPIO_SetBits(GPIOB, GPIO_Pin_0);
+    GPIO_SetBits(GPIOB, GPIO_Pin_1);
+    GPIO_SetBits(GPIOB, GPIO_Pin_2);
+    GPIO_SetBits(GPIOB, GPIO_Pin_3);
+    GPIO_SetBits(GPIOB, GPIO_Pin_4);
+    GPIO_SetBits(GPIOB, GPIO_Pin_5);
+    GPIO_SetBits(GPIOB, GPIO_Pin_6);
     GPIO_ResetBits(GPIOB, GPIO_Pin_7);
     break;
 
+  case '-':
+    GPIO_SetBits(GPIOB, GPIO_Pin_0);
+    GPIO_SetBits(GPIOB, GPIO_Pin_1);
+    GPIO_SetBits(GPIOB, GPIO_Pin_2);
+    GPIO_SetBits(GPIOB, GPIO_Pin_3);
+    GPIO_SetBits(GPIOB, GPIO_Pin_4);
+    GPIO_SetBits(GPIOB, GPIO_Pin_5);
+    GPIO_ResetBits(GPIOB, GPIO_Pin_6);
+    GPIO_SetBits(GPIOB, GPIO_Pin_7);
+    break;
+
+  case ' ':
+    GPIO_SetBits(GPIOB, GPIO_Pin_0);
+    GPIO_SetBits(GPIOB, GPIO_Pin_1);
+    GPIO_SetBits(GPIOB, GPIO_Pin_2);
+    GPIO_SetBits(GPIOB, GPIO_Pin_3);
+    GPIO_SetBits(GPIOB, GPIO_Pin_4);
+    GPIO_SetBits(GPIOB, GPIO_Pin_5);
+    GPIO_SetBits(GPIOB, GPIO_Pin_6);
+    GPIO_SetBits(GPIOB, GPIO_Pin_7);
+    break;
+
   default:
+    GPIO_SetBits(GPIOB, GPIO_Pin_0);
+    GPIO_SetBits(GPIOB, GPIO_Pin_1);
+    GPIO_SetBits(GPIOB, GPIO_Pin_2);
+    GPIO_SetBits(GPIOB, GPIO_Pin_3);
+    GPIO_SetBits(GPIOB, GPIO_Pin_4);
+    GPIO_SetBits(GPIOB, GPIO_Pin_5);
+    GPIO_SetBits(GPIOB, GPIO_Pin_6);
+    GPIO_SetBits(GPIOB, GPIO_Pin_7);
     break;
   }
 }
-void enable7Seg(int i)
+
+void SEVENSEG_EnableDisplay(int i)
 {
   switch (i)
   {
@@ -427,6 +402,30 @@ void enable7Seg(int i)
     break;
 
   default:
+    GPIO_SetBits(GPIOB, GPIO_Pin_8);
+    GPIO_SetBits(GPIOB, GPIO_Pin_9);
+    GPIO_SetBits(GPIOB, GPIO_Pin_10);
+    GPIO_SetBits(GPIOB, GPIO_Pin_11);
+    GPIO_SetBits(GPIOB, GPIO_Pin_12);
+    GPIO_SetBits(GPIOB, GPIO_Pin_13);
+    GPIO_SetBits(GPIOB, GPIO_Pin_14);
+    GPIO_SetBits(GPIOB, GPIO_Pin_15);
     break;
+  }
+}
+
+void SEVENSEG_WriteString(char *s)
+{
+  int k = 0, i = 0;
+
+  for(k = 0; k < 8; k++)
+  {
+    SEVENSEG_EnableDisplay(7 - k);
+
+    SEVENSEG_WriteChar(s[k]);
+
+    while (i++ < time);
+
+    i = 0;
   }
 }
