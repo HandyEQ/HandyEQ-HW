@@ -3,7 +3,7 @@ LD_LIBRARY_PATH := /nfs4/merkurius.ita.chalmers.se/sw/unsup64/gmp-5.0.2/lib:/nfs
 CC = sparc-elf-gcc
 OBJC= sparc-elf-objcopy
 
-%.exe: %.c gpio.c uart.c irq.c buffer.c
+%.exe: %.c gpio.c uart.c irq.c buffer.c parson.c delay.c record.c
 ifeq (${UART}, sim)
 	export PATH=${PATH} && export LD_LIBRARY_PATH=${LD_LIBRARY_PATH} && $(CC) -o $@ -D_UART=2 $^
 else
