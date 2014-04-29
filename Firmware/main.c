@@ -1,55 +1,66 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 #include "irq.h"
 #include "buffer.h"
 #include "uart.h"
 #include "parson.h"
 
+int newSample;
+int newUart;
+char input_buffer[200];
+char *input_pointer = input_buffer;
+int counter;
 
 int main(void){
 	//UART
+	newUart = 0;
 	catch_interrupt(uart_input, uart_irq);
 	init_uart(9600);
-	send_char_uart('K');
 	enable_irq(uart_irq);
 
 	//Buffer
-	catch_interrupt(audio_path, buf_irq);
-	init_buffer();
+	newSample = 0;
+	catch_interrupt(new_sample, buf_irq);
 	enable_irq(buf_irq);
 
 	//Delay
-	//init_delay();
+	init_delay(3);
+	setDelay(3);
+	setGain(16384);
 
-	while(1);
+	//Chunk
+	struct chunk *current_chunk = malloc(sizeof(struct chunk));
+	while(1){
+		if(newSample){
+			newSample = 0;
+			current_chunk = retrieve_chunk(current_chunk);
+			//current_chunk = calcDelay(current_chunk);
+			output_chunk(current_chunk);
+		}
+		if(newUart){
+			newUart = 0;
+			uart_input();
+		}
+	}
 
 	return 0;
 }
 
-void audio_path(){
-	//Get chunk from buffer
-	struct chunk *current_chunk;
-	current_chunk = retrieve_chunk();
-	
-	/*
-		Put fucking DSP stuff here!!
-	*/
-	//send_char_uart('C');
-	printf("IRQ: %d \n", current_chunk->data[0]);
-
-	//Output chunk to buffer
-	output_chunk(current_chunk);
+void new_sample(){
+	newSample = 1;
 }
+
+void new_uart(){
+	newUart = 1;
+}
+
 
 void parse_input(char *data){
 	JSON_Array * settings;
 	settings = json_value_get_array(json_parse_string(data));
-	send_char_uart('J');
 }
 
-char input_buffer[200];
-char *input_pointer = input_buffer;
-int counter;
 void uart_input(){
 	char i = recieve_uart();
 	if(i == 0){
@@ -59,7 +70,4 @@ void uart_input(){
 		input_buffer[counter] = i;
 		counter++;
 	}
-	send_char_uart(i);
 }
-
-

@@ -1,19 +1,10 @@
-
-struct delay_struct {
-	int size;
-	int head;
-	int tail;
-	int delay;
-	int gain;
- 	struct chunk * chunks;
-};
+#include "delay.h"
 
 struct delay_struct *delay_buffer;
 
 void init_delay(int size){
-	delay_buffer = malloc(sizeof(delay_struct));
-	delay_buffer->chunks = malloc(sizeof(chunk*size));
-	chunks = NULL;
+	delay_buffer = calloc(1, sizeof(struct delay_struct) + sizeof(struct chunk) * size);
+	delay_buffer->head = 0;
 }
 
 void setGain(int gain){
@@ -21,33 +12,50 @@ void setGain(int gain){
 }
 
 void setDelay(int delay){
-	if(delay > size-1){
-		delay_buffer->dealy = delay_buffer->size - 1; 
+	if(delay > delay_buffer->size-1){
+		delay_buffer->delay = delay_buffer->size - 1; 
 	} else {
-		delay_buffer->dealy = delay;
+		delay_buffer->delay = delay;
 	}
 }
 
-struct chunk * delay(struct chunk * new_chunk){
-	//Holding value for manipulation
-	struct chunk *hold = malloc(sizeof(struct chunk));
+signed short int fixedMul(signed short int a, signed short int b){
+	unsigned int temp = a * b;
+	signed short int sum = (temp >> 16);
+	return sum;
+}
+
+struct chunk * calcDelay(struct chunk * new_chunk){
+	//init var
+	int i;
+	signed short int a, b;
+	struct chunk * hold = malloc(sizeof(struct chunk));
+
 	//Retrieve values so that they are stable
 	int size = delay_buffer->size;
 	int head = delay_buffer->head;
-	int tail = delay_buffer->tail;
 	int gain = delay_buffer->gain;
 	int delay = delay_buffer->delay;
 
 	//Input new chunk in queue
-	delay_buffer->chunks[head] = new_chunk;
-	//Update head
-	delay_buffer->head = (head + 1) mod size;
-	//Get oldest sample acording to delay value
-	hold = delay_buffer->chunks[(head-delay) mod size];
+	memcpy(delay_buffer->chunks[head], new_chunk, sizeof(struct chunk));
+	
+
+	memcpy(hold, delay_buffer->chunks[(head-delay) % size], sizeof(struct chunk));
+
 	//Manipulate sound
-	for(int i = 0; i < chunk_size; i++){
-		hold[i] = (hold[i] * gain) + (new_chunk[i] * !gain);
+	for(i = 0; i < chunk_size; i++){
+		a = fixedMul(hold->data[i], gain);
+		b = fixedMul(new_chunk->data[i], (1*power)-gain);
+		hold->data[i] = (a + b);
+		i++;
 	}
 
-	return hold;
+	//Update head
+	delay_buffer->head = (head + 1) % size;
+
+	//Return Value
+	memcpy(new_chunk, hold, sizeof(struct chunk));
+	free(hold);
+	return new_chunk;
 }
