@@ -3,12 +3,14 @@
 struct uart_regs *uart_struct = (struct uart_regs *) uart_addr;
 
 void init_uart(int baud_rate){
+	char init;	
 	uart_struct -> data = 0x00000000;
 	uart_struct -> control = 0x00000000;
 	uart_struct -> scaler = 0x00000000;
 	uart_struct -> FIFO_debug = 0x00000000;
 	uart_struct -> control = 0x00000007;
 	uart_struct -> scaler = SysCLK/(baud_rate*8)-1;
+	init = uart_struct -> data;
 }
 
 void send_char_uart(char data){

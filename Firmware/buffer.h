@@ -17,7 +17,7 @@ struct buffer_regs
 
 struct chunk
 {
-	volatile signed short int data[chunk_size];
+	volatile unsigned int data[chunk_size];
 };
 
 //Functions for Buffers 

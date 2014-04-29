@@ -11,12 +11,13 @@ int newUart;
 char input_buffer[200];
 char *input_pointer = input_buffer;
 int counter;
+int print;
 
 int main(void){
 	//UART
 	newUart = 0;
 	catch_interrupt(uart_input, uart_irq);
-	init_uart(9600);
+	init_uart(57600);
 	enable_irq(uart_irq);
 
 	//Buffer
@@ -30,13 +31,24 @@ int main(void){
 	setGain(16384);
 
 	//Chunk
-	struct chunk *current_chunk = malloc(sizeof(struct chunk));
+	print = 0;	
+	
 	while(1){
 		if(newSample){
-			newSample = 0;
+			struct chunk *current_chunk = calloc(1, sizeof(struct chunk));		
+			if(print == 1){
+				printf("R");
+			}
 			retrieve_chunk(current_chunk);
-			//calcDelay(current_chunk);
+			if(print == 1){
+				printf("O");
+			}
 			output_chunk(current_chunk);
+			if(print == 1){
+				printf("D");
+			}
+			free(current_chunk);
+			newSample = 0;
 		}
 		if(newUart){
 			newUart = 0;
@@ -55,19 +67,12 @@ void new_uart(){
 	newUart = 1;
 }
 
-
-void parse_input(char *data){
-	JSON_Array * settings;
-	settings = json_value_get_array(json_parse_string(data));
-}
-
 void uart_input(){
 	char i = recieve_uart();
-	if(i == 0){
-		parse_input(input_pointer);
-		counter = 0;
-	} else {
-		input_buffer[counter] = i;
-		counter++;
+	if(i == 'P'){
+		print = 1;
+	} else if ( i == 'S'){
+		print = 0;
 	}
+	printf("%c", i);
 }
