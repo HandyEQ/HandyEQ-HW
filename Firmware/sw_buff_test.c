@@ -5,8 +5,10 @@
 
 #include "uart.h"
 #include "gpio.h"
+#include "sevenseg.h"
 
 int flag = 0, flag2 = 0, flag3 = 0, delay = 0;
+char s[8] = "ABCDEF.-";
 
 extern void *catch_interrupt(void func(), int irq);
 int *lreg = (int *) 0x80000000;
@@ -67,11 +69,27 @@ void irqhandler(int irq)
   else if (irq == 14) {
     lreg[IPEND/4] &= ~(1 << irq);
     flag3++;
+    s[0] = 'E';
+    s[1] = 'C';
+    s[2] = '.';
+    s[3] = '.';
+    s[4] = '1';
+    s[5] = '2';
+    s[6] = '3';
+    s[7] = '4';
     //putStr("14\n\r");
   } 
   else if (irq == 15) {
     lreg[IPEND/4] &= ~(1 << irq);
     flag2++;
+    s[0] = '2';
+    s[1] = '0';
+    s[2] = '1';
+    s[3] = '4';
+    s[4] = '0';
+    s[5] = '4';
+    s[6] = '2';
+    s[7] = '9';
     //putStr("15\n\r");
   }
     //putStr("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n\r");
@@ -201,8 +219,11 @@ flag = 0;*/
 //putStr("w(1)\n\r");
 //catch_interrupt(irqhandler, 11);
 
+SEVENSEG_Init();
+
 while (1)
 {
+  SEVENSEG_WriteString(s);
   //putInt(sample);
 
   /*if (sample & 0x00000800)
