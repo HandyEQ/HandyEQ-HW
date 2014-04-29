@@ -21,7 +21,7 @@ struct chunk
 };
 
 //Functions for Buffers 
-struct chunk * retrieve_chunk(struct chunk *current_chunk);
+void retrieve_chunk(struct chunk *current_chunk);
 void output_chunk(struct chunk *current_chunk);
 
 #endif

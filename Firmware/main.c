@@ -34,8 +34,8 @@ int main(void){
 	while(1){
 		if(newSample){
 			newSample = 0;
-			current_chunk = retrieve_chunk(current_chunk);
-			//current_chunk = calcDelay(current_chunk);
+			retrieve_chunk(current_chunk);
+			//calcDelay(current_chunk);
 			output_chunk(current_chunk);
 		}
 		if(newUart){

@@ -20,6 +20,6 @@ void init_delay(int size);
 void setGain(int gain);
 void setDelay(int delay);
 signed short int fixedMul(signed short int a, signed short int b);
-struct chunk * calcDelay(struct chunk *new_chunk);
+void calcDelay(struct chunk *new_chunk);
 
 #endif

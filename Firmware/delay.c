@@ -25,7 +25,7 @@ signed short int fixedMul(signed short int a, signed short int b){
 	return sum;
 }
 
-struct chunk * calcDelay(struct chunk * new_chunk){
+void calcDelay(struct chunk * new_chunk){
 	//init var
 	int i;
 	signed short int a, b;
@@ -57,5 +57,4 @@ struct chunk * calcDelay(struct chunk * new_chunk){
 	//Return Value
 	memcpy(new_chunk, hold, sizeof(struct chunk));
 	free(hold);
-	return new_chunk;
 }
