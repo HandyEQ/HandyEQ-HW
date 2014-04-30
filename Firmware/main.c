@@ -36,7 +36,7 @@ int main(void){
 		if(newSample){
 			newSample = 0;
 			retrieve_chunk(current_chunk);
-			record_pcm(current_chunk);
+			//record_pcm(current_chunk);
 			//calcDelay(current_chunk);
 			output_chunk(current_chunk);
 		}
