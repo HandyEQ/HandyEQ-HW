@@ -5,6 +5,7 @@
 #include "buffer.h"
 #include "uart.h"
 #include "parson.h"
+#include "record.c"
 
 int newSample;
 int newUart;
@@ -43,6 +44,8 @@ int main(void){
 			if(print == 1){
 				printf("O");
 			}
+			record_pcm(current_chunk);
+			//calcDelay(current_chunk);
 			output_chunk(current_chunk);
 			if(print == 1){
 				printf("D");
