@@ -1,0 +1,1395 @@
+Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
+| Date         : Mon Apr 07 18:00:39 2014
+| Host         : CSE-4225-16 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_clock_utilization -file leon3mp_clock_utilization_placed.rpt
+| Design       : leon3mp
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Details of Global Clocks
+3. Details of Regional Clocks
+4. Details of Multi-Regional Clocks
+5. Details of I/O Clocks
+6. Details of Local Clocks
+7. Clock Regions : Key Resource Utilization
+8. Net wise resources used in clock region X0Y0
+9. Net wise resources used in clock region X1Y0
+10. Net wise resources used in clock region X0Y1
+11. Net wise resources used in clock region X1Y1
+12. Net wise resources used in clock region X0Y2
+13. Net wise resources used in clock region X1Y2
+
+1. Clock Primitive Utilization
+------------------------------
+
++-------+------+-----------+------------+
+| Type  | Used | Available | Num Locked |
++-------+------+-----------+------------+
+| BUFG  |    7 |        32 |          0 |
+| BUFH  |    0 |        96 |          0 |
+| BUFIO |    0 |        24 |          0 |
+| MMCM  |    0 |         6 |          0 |
+| BUFR  |    0 |        24 |          0 |
+| BUFMR |    0 |        12 |          0 |
++-------+------+-----------+------------+
+
+
+2. Details of Global Clocks
+---------------------------
+
++-------+-------------------------------------------------------+-------------------------------------------------+--------------+--------+---------------+-----------+
+|       |                                                       |                                                 |   Num Loads  |        |               |           |
++-------+-------------------------------------------------------+-------------------------------------------------+------+-------+--------+---------------+-----------+
+| Index | BUFG Cell                                             | Net Name                                        | BELs | Sites | Locked | MaxDelay (ns) | Skew (ns) |
++-------+-------------------------------------------------------+-------------------------------------------------+------+-------+--------+---------------+-----------+
+|     1 | bufgclk0                                              | O                                               |    1 |     1 |     no |         2.389 |     0.119 |
+|     2 | clk_BUFG_inst                                         | clk_BUFG                                        |   20 |     9 |     no |         1.601 |     0.319 |
+|     3 | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/buf2.buf | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1 |  117 |    37 |     no |         1.515 |     0.133 |
+|     4 | xlnx_opt_BUFG                                         | xlnx_opt__3                                     |  162 |    87 |     no |         1.961 |     0.448 |
+|     5 | bufgclk45                                             | n_0_bufgclk45                                   |  343 |   148 |     no |         1.504 |     0.159 |
+|     6 | r_reg[slv][hsel]_i_1                                  | reset_in                                        |  922 |   444 |     no |         1.597 |     1.597 |
+|     7 | clkgen0/xc7l.v/bufgclk0                               | clkgen0/xc7l.v/O1                               | 4308 |  1875 |     no |         1.660 |     0.331 |
++-------+-------------------------------------------------------+-------------------------------------------------+------+-------+--------+---------------+-----------+
+
+
+3. Details of Regional Clocks
+-----------------------------
+
+4. Details of Multi-Regional Clocks
+-----------------------------------
+
+5. Details of I/O Clocks
+------------------------
+
+6. Details of Local Clocks
+--------------------------
+
++-------+-----------------------------------------------------------------+---------------------------------------------------------------------+--------------+--------+---------------+-----------+
+|       |                                                                 |                                                                     |   Num Loads  |        |               |           |
++-------+-----------------------------------------------------------------+---------------------------------------------------------------------+------+-------+--------+---------------+-----------+
+| Index | Local Clk Src                                                   | Net Name                                                            | BELs | Sites | Locked | MaxDelay (ns) | Skew (ns) |
++-------+-----------------------------------------------------------------+---------------------------------------------------------------------+------+-------+--------+---------------+-----------+
+|     1 | PWMapb_map/PWM_module/PWM_sample_reg[6]_LDC_i_1                 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1                 |    2 |     2 |     no |         0.540 |     0.094 |
+|     2 | PWMapb_map/PWM_module/PWM_sample_reg[0]_LDC_i_1                 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1                 |    2 |     2 |     no |         0.517 |     0.052 |
+|     3 | PWMapb_map/PWM_module/PWM_sample_reg[2]_LDC_i_1                 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1                 |    2 |     2 |     no |         0.502 |     0.054 |
+|     4 | PWMapb_map/PWM_module/PWM_sample_reg[3]_LDC_i_1                 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1                 |    2 |     2 |     no |         0.573 |     0.250 |
+|     5 | PWMapb_map/PWM_module/PWM_sample_reg[5]_LDC_i_1                 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1                 |    2 |     2 |     no |         0.509 |     0.168 |
+|     6 | PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC_i_1                 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1                 |    2 |     2 |     no |         0.644 |     0.299 |
+|     7 | PWMapb_map/PWM_module/PWM_sample_reg[1]_LDC_i_1                 | PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1                 |    2 |     2 |     no |         0.540 |     0.094 |
+|     8 | Bufferapb_map/apbo_reg[prdata][2]_i_2                           | Bufferapb_map/n_0_apbo_reg[prdata][2]_i_2                           |    3 |     2 |     no |         0.741 |     0.211 |
+|     9 | apb0/apb_reg_in_reg[15]_i_1                                     | apb0/O16[0]                                                         |    7 |     4 |     no |         1.010 |     0.199 |
+|    10 | apb0/apb_signals_reg[output_select]_i_1                         | apb0/O125[0]                                                        |    8 |     3 |     no |         0.959 |     0.247 |
+|    11 | Bufferapb_map/circular_buffer_comp/tail_reg[7]_i_2              | Bufferapb_map/circular_buffer_comp/n_0_tail_reg[7]_i_2              |    8 |     3 |     no |         0.628 |     0.089 |
+|    12 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[48][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[48][13]_i_1  |   14 |    10 |     no |         1.286 |     0.570 |
+|    13 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[95][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[95][13]_i_1  |   14 |     7 |     no |         1.311 |     0.507 |
+|    14 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[76][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[76][13]_i_1  |   14 |     6 |     no |         1.108 |     0.420 |
+|    15 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[93][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[93][13]_i_1  |   14 |     8 |     no |         1.123 |     0.470 |
+|    16 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[65][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[65][13]_i_1  |   14 |    10 |     no |         1.075 |     0.747 |
+|    17 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[82][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[82][13]_i_1  |   14 |    10 |     no |         1.262 |     0.575 |
+|    18 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[54][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[54][13]_i_1  |   14 |     9 |     no |         1.286 |     0.577 |
+|    19 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[33][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[33][13]_i_1  |   14 |     8 |     no |         1.282 |     0.477 |
+|    20 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[9][13]_i_1   | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[9][13]_i_1   |   14 |    10 |     no |         1.275 |     0.811 |
+|    21 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[6][13]_i_1   | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[6][13]_i_1   |   14 |     8 |     no |         1.080 |     0.611 |
+|    22 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[87][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[87][13]_i_1  |   14 |     9 |     no |         1.150 |     0.626 |
+|    23 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[59][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[59][13]_i_1  |   14 |     9 |     no |         1.283 |     0.687 |
+|    24 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[24][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[24][13]_i_1  |   14 |     7 |     no |         1.457 |     0.591 |
+|    25 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[122][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[122][13]_i_1 |   14 |    11 |     no |         1.046 |     0.478 |
+|    26 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[112][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[112][13]_i_1 |   14 |     7 |     no |         1.097 |     0.506 |
+|    27 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[10][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[10][13]_i_1  |   14 |    10 |     no |         1.310 |     0.688 |
+|    28 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[41][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[41][13]_i_1  |   14 |     9 |     no |         1.379 |     0.613 |
+|    29 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[71][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[71][13]_i_1  |   14 |     5 |     no |         1.166 |     0.450 |
+|    30 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[89][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[89][13]_i_1  |   14 |     9 |     no |         1.196 |     0.613 |
+|    31 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[60][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[60][13]_i_1  |   14 |    10 |     no |         1.376 |     0.536 |
+|    32 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[78][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[78][13]_i_1  |   14 |     5 |     no |         1.232 |     0.672 |
+|    33 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[3][13]_i_1   | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[3][13]_i_1   |   14 |     9 |     no |         1.614 |     1.034 |
+|    34 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[29][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[29][13]_i_1  |   14 |     8 |     no |         1.142 |     0.567 |
+|    35 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[18][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[18][13]_i_1  |   14 |    11 |     no |         1.257 |     0.764 |
+|    36 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[101][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[101][13]_i_1 |   14 |     8 |     no |         1.075 |     0.558 |
+|    37 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[120][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[120][13]_i_1 |   14 |     8 |     no |         1.010 |     0.486 |
+|    38 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[108][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[108][13]_i_1 |   14 |     6 |     no |         1.005 |     0.425 |
+|    39 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[119][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[119][13]_i_1 |   14 |     7 |     no |         0.888 |     0.268 |
+|    40 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[22][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[22][13]_i_1  |   14 |     7 |     no |         1.315 |     0.621 |
+|    41 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[50][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[50][13]_i_1  |   14 |     9 |     no |         1.136 |     0.527 |
+|    42 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[61][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[61][13]_i_1  |   14 |    10 |     no |         1.481 |     0.726 |
+|    43 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[8][13]_i_1   | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[8][13]_i_1   |   14 |     8 |     no |         1.195 |     0.629 |
+|    44 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[72][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[72][13]_i_1  |   14 |     6 |     no |         1.164 |     0.687 |
+|    45 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[42][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[42][13]_i_1  |   14 |     7 |     no |         1.311 |     0.412 |
+|    46 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[110][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[110][13]_i_1 |   14 |     8 |     no |         1.096 |     0.604 |
+|    47 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[123][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[123][13]_i_1 |   14 |     7 |     no |         0.994 |     0.446 |
+|    48 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[25][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[25][13]_i_1  |   14 |     9 |     no |         1.369 |     0.690 |
+|    49 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[36][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[36][13]_i_1  |   14 |     9 |     no |         1.161 |     0.590 |
+|    50 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[125][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[125][13]_i_1 |   14 |     7 |     no |         0.906 |     0.326 |
+|    51 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[115][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[115][13]_i_1 |   14 |     8 |     no |         1.026 |     0.492 |
+|    52 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[57][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[57][13]_i_1  |   14 |     9 |     no |         1.165 |     0.523 |
+|    53 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[85][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[85][13]_i_1  |   14 |    11 |     no |         1.125 |     0.626 |
+|    54 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[68][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[68][13]_i_1  |   14 |     5 |     no |         1.057 |     0.495 |
+|    55 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[98][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[98][13]_i_1  |   14 |     7 |     no |         1.145 |     0.553 |
+|    56 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[12][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[12][13]_i_1  |   14 |     9 |     no |         1.236 |     0.730 |
+|    57 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[106][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[106][13]_i_1 |   14 |     6 |     no |         0.946 |     0.472 |
+|    58 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[38][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[38][13]_i_1  |   14 |     9 |     no |         1.307 |     0.584 |
+|    59 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[27][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[27][13]_i_1  |   14 |     8 |     no |         1.146 |     0.703 |
+|    60 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[46][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[46][13]_i_1  |   14 |     8 |     no |         1.544 |     0.868 |
+|    61 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[16][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[16][13]_i_1  |   14 |    10 |     no |         1.294 |     0.640 |
+|    62 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[91][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[91][13]_i_1  |   14 |     7 |     no |         1.074 |     0.421 |
+|    63 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[74][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[74][13]_i_1  |   14 |     5 |     no |         1.298 |     0.618 |
+|    64 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[63][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[63][13]_i_1  |   14 |     9 |     no |         1.230 |     0.640 |
+|    65 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[52][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[52][13]_i_1  |   14 |     9 |     no |         1.367 |     0.606 |
+|    66 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[117][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[117][13]_i_1 |   14 |     8 |     no |         0.970 |     0.402 |
+|    67 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[20][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[20][13]_i_1  |   14 |     7 |     no |         1.247 |     0.621 |
+|    68 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[104][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[104][13]_i_1 |   14 |     6 |     no |         1.212 |     0.581 |
+|    69 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[44][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[44][13]_i_1  |   14 |     8 |     no |         1.453 |     0.632 |
+|    70 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[80][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[80][13]_i_1  |   14 |    10 |     no |         1.349 |     0.609 |
+|    71 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[0][13]_i_1   | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[0][13]_i_1   |   14 |    10 |     no |         1.317 |     0.854 |
+|    72 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[14][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[14][13]_i_1  |   14 |     7 |     no |         1.184 |     0.487 |
+|    73 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[31][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[31][13]_i_1  |   14 |     6 |     no |         1.011 |     0.372 |
+|    74 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[75][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[75][13]_i_1  |   14 |     5 |     no |         1.124 |     0.535 |
+|    75 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[45][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[45][13]_i_1  |   14 |     7 |     no |         1.230 |     0.516 |
+|    76 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[47][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[47][13]_i_1  |   14 |     8 |     no |         1.192 |     0.592 |
+|    77 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[21][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[21][13]_i_1  |   14 |     8 |     no |         1.287 |     0.696 |
+|    78 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[118][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[118][13]_i_1 |   14 |     8 |     no |         0.921 |     0.448 |
+|    79 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[11][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[11][13]_i_1  |   14 |     8 |     no |         1.228 |     0.516 |
+|    80 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[100][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[100][13]_i_1 |   14 |     8 |     no |         1.075 |     0.600 |
+|    81 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[92][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[92][13]_i_1  |   14 |     9 |     no |         1.205 |     0.645 |
+|    82 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[17][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[17][13]_i_1  |   14 |     9 |     no |         1.231 |     0.636 |
+|    83 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[94][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[94][13]_i_1  |   14 |     8 |     no |         1.232 |     0.607 |
+|    84 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[28][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[28][13]_i_1  |   14 |     8 |     no |         1.068 |     0.488 |
+|    85 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[127][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[127][13]_i_1 |   14 |     9 |     no |         1.259 |     0.524 |
+|    86 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[39][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[39][13]_i_1  |   14 |     7 |     no |         1.183 |     0.642 |
+|    87 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[107][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[107][13]_i_1 |   14 |     6 |     no |         0.898 |     0.324 |
+|    88 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[5][13]_i_1   | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[5][13]_i_1   |   14 |     7 |     no |         1.612 |     1.010 |
+|    89 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[88][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[88][13]_i_1  |   14 |     9 |     no |         1.182 |     0.601 |
+|    90 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[19][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[19][13]_i_1  |   14 |     9 |     no |         1.245 |     0.652 |
+|    91 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[102][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[102][13]_i_1 |   14 |     8 |     no |         1.075 |     0.495 |
+|    92 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[79][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[79][13]_i_1  |   14 |     4 |     no |         1.172 |     0.424 |
+|    93 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[2][13]_i_1   | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[2][13]_i_1   |   14 |     7 |     no |         1.029 |     0.596 |
+|    94 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[49][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[49][13]_i_1  |   14 |    10 |     no |         1.340 |     0.733 |
+|    95 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[96][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[96][13]_i_1  |   14 |     6 |     no |         0.981 |     0.418 |
+|    96 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[77][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[77][13]_i_1  |   14 |     7 |     no |         1.303 |     0.686 |
+|    97 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[66][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[66][13]_i_1  |   14 |     7 |     no |         1.086 |     0.630 |
+|    98 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[83][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[83][13]_i_1  |   14 |     9 |     no |         1.169 |     0.565 |
+|    99 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[55][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[55][13]_i_1  |   14 |    10 |     no |         1.473 |     0.880 |
+|   100 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[113][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[113][13]_i_1 |   14 |     8 |     no |         0.974 |     0.539 |
+|   101 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[34][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[34][13]_i_1  |   14 |     9 |     no |         1.173 |     0.564 |
+|   102 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[23][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[23][13]_i_1  |   14 |     6 |     no |         1.226 |     0.639 |
+|   103 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[121][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[121][13]_i_1 |   14 |     7 |     no |         1.076 |     0.495 |
+|   104 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[109][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[109][13]_i_1 |   14 |     6 |     no |         1.076 |     0.573 |
+|   105 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[40][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[40][13]_i_1  |   14 |     8 |     no |         1.408 |     0.616 |
+|   106 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[70][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[70][13]_i_1  |   14 |     6 |     no |         1.047 |     0.592 |
+|   107 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[90][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[90][13]_i_1  |   14 |     8 |     no |         1.055 |     0.473 |
+|   108 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[62][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[62][13]_i_1  |   14 |     8 |     no |         1.263 |     0.513 |
+|   109 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[51][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[51][13]_i_1  |   14 |     9 |     no |         1.281 |     0.688 |
+|   110 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[13][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[13][13]_i_1  |   14 |     8 |     no |         1.294 |     0.738 |
+|   111 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[126][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[126][13]_i_1 |   14 |     7 |     no |         0.985 |     0.441 |
+|   112 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[1][13]_i_1   | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[1][13]_i_1   |   14 |     9 |     no |         1.246 |     0.790 |
+|   113 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[124][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[124][13]_i_1 |   14 |     9 |     no |         1.048 |     0.475 |
+|   114 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[103][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[103][13]_i_1 |   14 |     5 |     no |         1.257 |     0.582 |
+|   115 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[43][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[43][13]_i_1  |   14 |     9 |     no |         1.220 |     0.603 |
+|   116 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[7][13]_i_1   | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[7][13]_i_1   |   14 |     8 |     no |         1.279 |     0.543 |
+|   117 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[30][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[30][13]_i_1  |   14 |    10 |     no |         1.397 |     0.819 |
+|   118 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[4][13]_i_1   | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[4][13]_i_1   |   14 |     8 |     no |         1.238 |     0.675 |
+|   119 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[97][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[97][13]_i_1  |   14 |     7 |     no |         1.167 |     0.610 |
+|   120 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[67][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[67][13]_i_1  |   14 |     9 |     no |         1.198 |     0.734 |
+|   121 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[84][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[84][13]_i_1  |   14 |    10 |     no |         1.340 |     0.560 |
+|   122 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[114][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[114][13]_i_1 |   14 |     8 |     no |         0.897 |     0.286 |
+|   123 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[56][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[56][13]_i_1  |   14 |     7 |     no |         1.480 |     0.583 |
+|   124 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[35][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[35][13]_i_1  |   14 |     9 |     no |         1.165 |     0.569 |
+|   125 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[64][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[64][13]_i_1  |   14 |     6 |     no |         1.213 |     0.472 |
+|   126 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[81][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[81][13]_i_1  |   14 |     9 |     no |         1.241 |     0.634 |
+|   127 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[53][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[53][13]_i_1  |   14 |    12 |     no |         1.299 |     0.540 |
+|   128 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[15][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[15][13]_i_1  |   14 |     9 |     no |         1.334 |     0.870 |
+|   129 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[32][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[32][13]_i_1  |   14 |     8 |     no |         1.220 |     0.454 |
+|   130 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[99][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[99][13]_i_1  |   14 |     7 |     no |         1.314 |     0.867 |
+|   131 | Bufferapb_map/circular_buffer_comp/output_sample_reg[28]_i_2    | Bufferapb_map/circular_buffer_comp/n_0_output_sample_reg[28]_i_2    |   14 |     5 |     no |         1.389 |     0.204 |
+|   132 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[69][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[69][13]_i_1  |   14 |     8 |     no |         1.266 |     0.639 |
+|   133 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[86][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[86][13]_i_1  |   14 |     9 |     no |         1.422 |     0.672 |
+|   134 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[58][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[58][13]_i_1  |   14 |     9 |     no |         1.359 |     0.638 |
+|   135 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[116][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[116][13]_i_1 |   14 |     7 |     no |         1.046 |     0.686 |
+|   136 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[105][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[105][13]_i_1 |   14 |     5 |     no |         1.168 |     0.558 |
+|   137 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[37][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[37][13]_i_1  |   14 |     8 |     no |         1.474 |     0.624 |
+|   138 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[26][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[26][13]_i_1  |   14 |     9 |     no |         1.303 |     0.661 |
+|   139 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[111][13]_i_1 | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[111][13]_i_1 |   14 |     6 |     no |         1.304 |     0.810 |
+|   140 | Bufferapb_map/circular_buffer_comp/circ_buffer_reg[73][13]_i_1  | Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[73][13]_i_1  |   14 |     6 |     no |         1.240 |     0.768 |
+|   141 | Bufferapb_map/process_signals_reg[output_select]                | Bufferapb_map/output_select                                         |   19 |    18 |     no |         1.525 |     0.881 |
+|   142 | Bufferapb_map/apbo_reg[prdata][28]_i_1                          | Bufferapb_map/n_0_apbo_reg[prdata][28]_i_1                          |   26 |    12 |     no |         1.023 |     0.683 |
++-------+-----------------------------------------------------------------+---------------------------------------------------------------------+------+-------+--------+---------------+-----------+
+
+
+7. Clock Regions : Key Resource Utilization
+-------------------------------------------
+
++-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|                   | Global Clock |     BUFRs    |    BUFMRs    |    BUFIOs    |     MMCM     |      PLL     |      GT      |      PCI     |    ILOGIC    |    OLOGIC    |      FF      |     LUTM     |    RAMB18    |    RAMB36    |    DSP48E1   |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| X0Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  244 | 20800 |    0 |  2400 |    0 |    40 |    0 |    10 |    0 |    20 |
+| X1Y0              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 |  481 | 12000 |    0 |  2200 |    0 |    80 |    0 |    20 |    0 |    40 |
+| X0Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2339 | 16000 |   11 |  2400 |    2 |    40 |    6 |    10 |    4 |    20 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2408 | 15200 |   48 |  2600 |   10 |   120 |    7 |    30 |    0 |    40 |
+| X0Y2              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  561 | 16000 |    0 |  2400 |    0 |    40 |    0 |    10 |    0 |    20 |
+| X1Y2              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  582 | 15200 |    0 |  2600 |    0 |   120 |    0 |    30 |    0 |    40 |
+| X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 20800 |    0 |  2400 |    0 |    40 |    0 |    10 |    0 |    20 |
+| X1Y3              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     1 |    0 |     0 |    0 |     0 |    0 | 10800 |    0 |  2000 |    0 |    60 |    0 |    15 |    0 |    40 |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+* RAMB36 site can be used as two RAMB18/FIFO18 sites
+
+
+8. Net wise resources used in clock region X0Y0
+-----------------------------------------------
+
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | PLLs |    Clock Net Name |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 |    1 | clk_BUFG          |
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 | 199 |     0 |        0 |    0 | clkgen0/xc7l.v/O1 |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+
+
+9. Net wise resources used in clock region X1Y0
+-----------------------------------------------
+
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | PLLs |    Clock Net Name |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   8 |     0 |        0 |    0 | clkgen0/xc7l.v/O1 |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+
+
+10. Net wise resources used in clock region X0Y1
+------------------------------------------------
+
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
+| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s | PLLs |                                  Clock Net Name |
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |    0 |     0 |        0 |    1 | clk_BUFG                                        |
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |  117 |     0 |        0 |    0 | ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1 |
+| BUFG        |   no   |         0 |       0 |        14 |       0 |       0 | 2074 |    11 |        2 |    0 | clkgen0/xc7l.v/O1                               |
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------------------------------------+
+
+
+11. Net wise resources used in clock region X1Y1
+------------------------------------------------
+
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------+
+| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s | PLLs |    Clock Net Name |
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------+
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |   25 |     0 |        0 |    0 | n_0_bufgclk45     |
+| BUFG        |   no   |         0 |       0 |        22 |       0 |       0 | 1148 |    48 |        0 |    0 | clkgen0/xc7l.v/O1 |
++-------------+--------+-----------+---------+-----------+---------+---------+------+-------+----------+------+-------------------+
+
+
+12. Net wise resources used in clock region X0Y2
+------------------------------------------------
+
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | PLLs |    Clock Net Name |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 |  17 |     0 |        0 |    0 | clk_BUFG          |
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 | 543 |     0 |        0 |    0 | clkgen0/xc7l.v/O1 |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+
+
+13. Net wise resources used in clock region X1Y2
+------------------------------------------------
+
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+| Source Type | Locked | MMCM Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | PLLs |    Clock Net Name |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 | 250 |     0 |        0 |    0 | clkgen0/xc7l.v/O1 |
+| BUFG        |   no   |         0 |       0 |         0 |       0 |       0 | 318 |     0 |        0 |    0 | n_0_bufgclk45     |
++-------------+--------+-----------+---------+-----------+---------+---------+-----+-------+----------+------+-------------------+
+
+
+
+# Location of BUFG Primitives 
+set_property LOC BUFGCTRL_X0Y1 [get_cells bufgclk0]
+set_property LOC BUFGCTRL_X0Y16 [get_cells clk_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y5 [get_cells ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/buf2.buf]
+set_property LOC BUFGCTRL_X0Y4 [get_cells xlnx_opt_BUFG]
+set_property LOC BUFGCTRL_X0Y3 [get_cells bufgclk45]
+set_property LOC BUFGCTRL_X0Y0 [get_cells r_reg[slv][hsel]_i_1]
+set_property LOC BUFGCTRL_X0Y2 [get_cells clkgen0/xc7l.v/bufgclk0]
+
+# Location of IO Clock Primitives
+
+# Location of MMCM Clock Primitives
+
+# Location of BUFH Clock Primitives
+
+# Location of BUFR Clock Primitives
+
+# Location of BUFMR Clock Primitives
+
+# Location of PLL Clock Primitives
+set_property LOC PLLE2_ADV_X0Y1 [get_cells PLLE2_ADV_inst]
+set_property LOC PLLE2_ADV_X0Y0 [get_cells clkgen0/xc7l.v/PLLE2_ADV_inst]
+
+# Location of IO Primitives which is load of clock spine
+set_property LOC IOB_X1Y128 [get_cells etxc_pad/xcv.x0/ttl0.slow0.op]
+
+# Location of clock ports
+set_property LOC IOB_X1Y126 [get_ports clk]
+
+# Clock net "ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1" driven by instance "ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/buf2.buf" located at site "BUFGCTRL_X0Y5"
+#startgroup
+create_pblock CLKAG_ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1
+add_cells_to_pblock [get_pblocks  CLKAG_ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1"}]]]
+resize_pblock [get_pblocks CLKAG_ahbjtaggen0.ahbjtag0/gtckbuf.tckbuf/xil.xil0/O1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "n_0_bufgclk45" driven by instance "bufgclk45" located at site "BUFGCTRL_X0Y3"
+#startgroup
+create_pblock CLKAG_n_0_bufgclk45
+add_cells_to_pblock [get_pblocks  CLKAG_n_0_bufgclk45] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="n_0_bufgclk45"}]]]
+resize_pblock [get_pblocks CLKAG_n_0_bufgclk45] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "clk_BUFG" driven by instance "clk_BUFG_inst" located at site "BUFGCTRL_X0Y16"
+#startgroup
+create_pblock CLKAG_clk_BUFG
+add_cells_to_pblock [get_pblocks  CLKAG_clk_BUFG] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clk_BUFG"}]]]
+resize_pblock [get_pblocks CLKAG_clk_BUFG] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "clkgen0/xc7l.v/O1" driven by instance "clkgen0/xc7l.v/bufgclk0" located at site "BUFGCTRL_X0Y2"
+#startgroup
+create_pblock CLKAG_clkgen0/xc7l.v/O1
+add_cells_to_pblock [get_pblocks  CLKAG_clkgen0/xc7l.v/O1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clkgen0/xc7l.v/O1"}]]]
+resize_pblock [get_pblocks CLKAG_clkgen0/xc7l.v/O1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "reset_in" driven by instance "r_reg[slv][hsel]_i_1" located at site "BUFGCTRL_X0Y0"
+#startgroup
+create_pblock CLKAG_reset_in
+add_cells_to_pblock [get_pblocks  CLKAG_reset_in] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="reset_in"}]]]
+resize_pblock [get_pblocks CLKAG_reset_in] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "xlnx_opt__3" driven by instance "xlnx_opt_BUFG" located at site "BUFGCTRL_X0Y4"
+#startgroup
+create_pblock CLKAG_xlnx_opt__3
+add_cells_to_pblock [get_pblocks  CLKAG_xlnx_opt__3] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="xlnx_opt__3"}]]]
+resize_pblock [get_pblocks CLKAG_xlnx_opt__3] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "CLKFBOUT" driven by instance "PLLE2_ADV_inst" located at site "PLLE2_ADV_X0Y1"
+#startgroup
+create_pblock CLKAG_CLKFBOUT
+add_cells_to_pblock [get_pblocks  CLKAG_CLKFBOUT] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="CLKFBOUT"}]]]
+resize_pblock [get_pblocks CLKAG_CLKFBOUT] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "clkgen0/xc7l.v/CLKFBOUT" driven by instance "clkgen0/xc7l.v/PLLE2_ADV_inst" located at site "PLLE2_ADV_X0Y0"
+#startgroup
+create_pblock CLKAG_clkgen0/xc7l.v/CLKFBOUT
+add_cells_to_pblock [get_pblocks  CLKAG_clkgen0/xc7l.v/CLKFBOUT] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clkgen0/xc7l.v/CLKFBOUT"}]]]
+resize_pblock [get_pblocks CLKAG_clkgen0/xc7l.v/CLKFBOUT] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "clkgen0/xc7l.v/cgo[clklock]" driven by instance "clkgen0/xc7l.v/PLLE2_ADV_inst" located at site "PLLE2_ADV_X0Y0"
+#startgroup
+create_pblock CLKAG_clkgen0/xc7l.v/cgo[clklock]
+add_cells_to_pblock [get_pblocks  CLKAG_clkgen0/xc7l.v/cgo[clklock]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clkgen0/xc7l.v/cgo[clklock]"}]]]
+resize_pblock [get_pblocks CLKAG_clkgen0/xc7l.v/cgo[clklock]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[19][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[19][13]_i_1" located at site "SLICE_X55Y58"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[19][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[19][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[19][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[19][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[102][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[102][13]_i_1" located at site "SLICE_X58Y43"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[102][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[102][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[102][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[102][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[0]_LDC_i_1" located at site "SLICE_X74Y118"
+#startgroup
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[0]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[79][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[79][13]_i_1" located at site "SLICE_X58Y54"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[79][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[79][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[79][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[79][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[2][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[2][13]_i_1" located at site "SLICE_X58Y57"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[2][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[2][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[2][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[2][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[49][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[49][13]_i_1" located at site "SLICE_X58Y58"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[49][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[49][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[49][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[49][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[96][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[96][13]_i_1" located at site "SLICE_X60Y43"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[96][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[96][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[96][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[96][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_tail_reg[7]_i_2" driven by instance "Bufferapb_map/circular_buffer_comp/tail_reg[7]_i_2" located at site "SLICE_X83Y56"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_tail_reg[7]_i_2
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_tail_reg[7]_i_2] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_tail_reg[7]_i_2"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_tail_reg[7]_i_2] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[77][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[77][13]_i_1" located at site "SLICE_X56Y51"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[77][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[77][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[77][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[77][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[66][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[66][13]_i_1" located at site "SLICE_X56Y51"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[66][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[66][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[66][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[66][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[5]_LDC_i_1" located at site "SLICE_X73Y115"
+#startgroup
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[5]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[83][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[83][13]_i_1" located at site "SLICE_X59Y50"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[83][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[83][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[83][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[83][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[55][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[55][13]_i_1" located at site "SLICE_X54Y60"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[55][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[55][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[55][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[55][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[113][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[113][13]_i_1" located at site "SLICE_X58Y42"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[113][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[113][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[113][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[113][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[34][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[34][13]_i_1" located at site "SLICE_X58Y60"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[34][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[34][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[34][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[34][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[23][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[23][13]_i_1" located at site "SLICE_X54Y58"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[23][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[23][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[23][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[23][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[121][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[121][13]_i_1" located at site "SLICE_X57Y46"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[121][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[121][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[121][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[121][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "apb0/O16[0]" driven by instance "apb0/apb_reg_in_reg[15]_i_1" located at site "SLICE_X74Y84"
+#startgroup
+create_pblock CLKAG_apb0/O16[0]
+add_cells_to_pblock [get_pblocks  CLKAG_apb0/O16[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="apb0/O16[0]"}]]]
+resize_pblock [get_pblocks CLKAG_apb0/O16[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[109][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[109][13]_i_1" located at site "SLICE_X58Y46"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[109][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[109][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[109][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[109][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[40][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[40][13]_i_1" located at site "SLICE_X59Y60"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[40][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[40][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[40][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[40][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[70][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[70][13]_i_1" located at site "SLICE_X56Y50"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[70][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[70][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[70][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[70][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[88][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[88][13]_i_1" located at site "SLICE_X55Y49"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[88][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[88][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[88][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[88][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[5][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[5][13]_i_1" located at site "SLICE_X54Y54"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[5][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[5][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[5][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[5][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[107][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[107][13]_i_1" located at site "SLICE_X60Y48"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[107][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[107][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[107][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[107][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[39][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[39][13]_i_1" located at site "SLICE_X54Y64"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[39][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[39][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[39][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[39][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[127][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[127][13]_i_1" located at site "SLICE_X56Y50"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[127][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[127][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[127][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[127][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[28][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[28][13]_i_1" located at site "SLICE_X59Y57"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[28][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[28][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[28][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[28][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[94][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[94][13]_i_1" located at site "SLICE_X59Y51"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[94][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[94][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[94][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[94][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[17][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[17][13]_i_1" located at site "SLICE_X57Y57"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[17][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[17][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[17][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[17][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[92][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[92][13]_i_1" located at site "SLICE_X57Y48"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[92][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[92][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[92][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[92][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[100][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[100][13]_i_1" located at site "SLICE_X58Y42"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[100][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[100][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[100][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[100][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[11][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[11][13]_i_1" located at site "SLICE_X56Y59"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[11][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[11][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[11][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[11][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[118][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[118][13]_i_1" located at site "SLICE_X60Y43"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[118][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[118][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[118][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[118][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[21][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[21][13]_i_1" located at site "SLICE_X58Y56"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[21][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[21][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[21][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[21][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[47][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[47][13]_i_1" located at site "SLICE_X58Y61"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[47][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[47][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[47][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[47][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[45][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[45][13]_i_1" located at site "SLICE_X59Y61"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[45][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[45][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[45][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[45][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[3]_LDC_i_1" located at site "SLICE_X74Y118"
+#startgroup
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[3]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[75][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[75][13]_i_1" located at site "SLICE_X57Y50"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[75][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[75][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[75][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[75][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[64][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[64][13]_i_1" located at site "SLICE_X57Y44"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[64][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[64][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[64][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[64][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[81][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[81][13]_i_1" located at site "SLICE_X57Y46"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[81][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[81][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[81][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[81][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[53][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[53][13]_i_1" located at site "SLICE_X59Y56"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[53][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[53][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[53][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[53][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[15][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[15][13]_i_1" located at site "SLICE_X59Y54"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[15][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[15][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[15][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[15][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[32][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[32][13]_i_1" located at site "SLICE_X59Y54"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[32][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[32][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[32][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[32][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[99][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[99][13]_i_1" located at site "SLICE_X54Y43"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[99][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[99][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[99][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[99][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_output_sample_reg[28]_i_2" driven by instance "Bufferapb_map/circular_buffer_comp/output_sample_reg[28]_i_2" located at site "SLICE_X83Y60"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_output_sample_reg[28]_i_2
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_output_sample_reg[28]_i_2] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_output_sample_reg[28]_i_2"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_output_sample_reg[28]_i_2] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[69][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[69][13]_i_1" located at site "SLICE_X55Y53"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[69][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[69][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[69][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[69][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[86][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[86][13]_i_1" located at site "SLICE_X54Y42"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[86][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[86][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[86][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[86][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[58][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[58][13]_i_1" located at site "SLICE_X59Y59"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[58][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[58][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[58][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[58][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[116][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[116][13]_i_1" located at site "SLICE_X59Y41"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[116][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[116][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[116][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[116][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[105][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[105][13]_i_1" located at site "SLICE_X55Y44"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[105][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[105][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[105][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[105][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[37][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[37][13]_i_1" located at site "SLICE_X59Y57"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[37][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[37][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[37][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[37][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[26][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[26][13]_i_1" located at site "SLICE_X59Y52"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[26][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[26][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[26][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[26][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[111][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[111][13]_i_1" located at site "SLICE_X57Y48"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[111][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[111][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[111][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[111][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[73][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[73][13]_i_1" located at site "SLICE_X54Y50"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[73][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[73][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[73][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[73][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[90][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[90][13]_i_1" located at site "SLICE_X59Y50"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[90][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[90][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[90][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[90][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[62][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[62][13]_i_1" located at site "SLICE_X58Y56"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[62][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[62][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[62][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[62][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[51][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[51][13]_i_1" located at site "SLICE_X55Y60"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[51][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[51][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[51][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[51][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[13][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[13][13]_i_1" located at site "SLICE_X55Y54"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[13][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[13][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[13][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[13][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[126][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[126][13]_i_1" located at site "SLICE_X58Y40"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[126][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[126][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[126][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[126][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[1][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[1][13]_i_1" located at site "SLICE_X56Y59"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[1][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[1][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[1][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[1][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[124][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[124][13]_i_1" located at site "SLICE_X56Y49"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[124][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[124][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[124][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[124][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[103][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[103][13]_i_1" located at site "SLICE_X54Y41"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[103][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[103][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[103][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[103][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[1]_LDC_i_1" located at site "SLICE_X76Y117"
+#startgroup
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[1]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[43][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[43][13]_i_1" located at site "SLICE_X58Y61"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[43][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[43][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[43][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[43][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[7][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[7][13]_i_1" located at site "SLICE_X55Y56"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[7][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[7][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[7][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[7][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[30][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[30][13]_i_1" located at site "SLICE_X59Y55"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[30][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[30][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[30][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[30][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[4][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[4][13]_i_1" located at site "SLICE_X55Y56"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[4][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[4][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[4][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[4][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[97][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[97][13]_i_1" located at site "SLICE_X57Y41"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[97][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[97][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[97][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[97][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[67][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[67][13]_i_1" located at site "SLICE_X58Y48"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[67][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[67][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[67][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[67][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[84][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[84][13]_i_1" located at site "SLICE_X59Y44"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[84][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[84][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[84][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[84][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[114][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[114][13]_i_1" located at site "SLICE_X59Y40"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[114][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[114][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[114][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[114][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[6]_LDC_i_1" located at site "SLICE_X76Y116"
+#startgroup
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[6]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[56][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[56][13]_i_1" located at site "SLICE_X57Y51"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[56][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[56][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[56][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[56][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[35][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[35][13]_i_1" located at site "SLICE_X58Y62"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[35][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[35][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[35][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[35][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[24][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[24][13]_i_1" located at site "SLICE_X57Y53"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[24][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[24][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[24][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[24][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[122][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[122][13]_i_1" located at site "SLICE_X58Y41"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[122][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[122][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[122][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[122][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[112][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[112][13]_i_1" located at site "SLICE_X54Y43"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[112][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[112][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[112][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[112][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[10][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[10][13]_i_1" located at site "SLICE_X58Y57"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[10][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[10][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[10][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[10][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[41][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[41][13]_i_1" located at site "SLICE_X57Y54"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[41][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[41][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[41][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[41][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[71][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[71][13]_i_1" located at site "SLICE_X59Y46"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[71][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[71][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[71][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[71][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[89][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[89][13]_i_1" located at site "SLICE_X59Y48"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[89][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[89][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[89][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[89][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[60][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[60][13]_i_1" located at site "SLICE_X56Y53"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[60][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[60][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[60][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[60][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[78][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[78][13]_i_1" located at site "SLICE_X57Y48"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[78][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[78][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[78][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[78][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[3][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[3][13]_i_1" located at site "SLICE_X55Y58"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[3][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[3][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[3][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[3][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[29][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[29][13]_i_1" located at site "SLICE_X59Y61"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[29][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[29][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[29][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[29][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[18][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[18][13]_i_1" located at site "SLICE_X55Y60"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[18][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[18][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[18][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[18][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[101][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[101][13]_i_1" located at site "SLICE_X58Y41"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[101][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[101][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[101][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[101][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[120][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[120][13]_i_1" located at site "SLICE_X55Y41"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[120][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[120][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[120][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[120][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[108][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[108][13]_i_1" located at site "SLICE_X59Y42"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[108][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[108][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[108][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[108][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[119][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[119][13]_i_1" located at site "SLICE_X58Y46"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[119][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[119][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[119][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[119][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[22][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[22][13]_i_1" located at site "SLICE_X57Y53"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[22][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[22][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[22][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[22][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[48][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[48][13]_i_1" located at site "SLICE_X58Y58"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[48][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[48][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[48][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[48][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[95][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[95][13]_i_1" located at site "SLICE_X59Y52"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[95][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[95][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[95][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[95][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "apb0/O125[0]" driven by instance "apb0/apb_signals_reg[output_select]_i_1" located at site "SLICE_X66Y85"
+#startgroup
+create_pblock CLKAG_apb0/O125[0]
+add_cells_to_pblock [get_pblocks  CLKAG_apb0/O125[0]] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="apb0/O125[0]"}]]]
+resize_pblock [get_pblocks CLKAG_apb0/O125[0]] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[76][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[76][13]_i_1" located at site "SLICE_X58Y53"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[76][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[76][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[76][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[76][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[4]_LDC_i_1" located at site "SLICE_X73Y116"
+#startgroup
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[4]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[93][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[93][13]_i_1" located at site "SLICE_X58Y52"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[93][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[93][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[93][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[93][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[65][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[65][13]_i_1" located at site "SLICE_X55Y53"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[65][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[65][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[65][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[65][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[82][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[82][13]_i_1" located at site "SLICE_X58Y49"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[82][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[82][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[82][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[82][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[54][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[54][13]_i_1" located at site "SLICE_X59Y59"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[54][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[54][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[54][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[54][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[33][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[33][13]_i_1" located at site "SLICE_X58Y55"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[33][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[33][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[33][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[33][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[9][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[9][13]_i_1" located at site "SLICE_X57Y54"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[9][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[9][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[9][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[9][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[6][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[6][13]_i_1" located at site "SLICE_X57Y58"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[6][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[6][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[6][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[6][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[87][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[87][13]_i_1" located at site "SLICE_X57Y50"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[87][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[87][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[87][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[87][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[59][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[59][13]_i_1" located at site "SLICE_X59Y64"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[59][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[59][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[59][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[59][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[106][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[106][13]_i_1" located at site "SLICE_X58Y44"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[106][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[106][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[106][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[106][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[38][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[38][13]_i_1" located at site "SLICE_X60Y56"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[38][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[38][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[38][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[38][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[27][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[27][13]_i_1" located at site "SLICE_X56Y58"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[27][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[27][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[27][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[27][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[46][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[46][13]_i_1" located at site "SLICE_X58Y54"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[46][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[46][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[46][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[46][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/n_0_apbo_reg[prdata][28]_i_1" driven by instance "Bufferapb_map/apbo_reg[prdata][28]_i_1" located at site "SLICE_X68Y84"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/n_0_apbo_reg[prdata][28]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/n_0_apbo_reg[prdata][28]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/n_0_apbo_reg[prdata][28]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/n_0_apbo_reg[prdata][28]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[16][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[16][13]_i_1" located at site "SLICE_X59Y57"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[16][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[16][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[16][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[16][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[91][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[91][13]_i_1" located at site "SLICE_X59Y51"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[91][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[91][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[91][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[91][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[74][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[74][13]_i_1" located at site "SLICE_X55Y53"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[74][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[74][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[74][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[74][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[63][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[63][13]_i_1" located at site "SLICE_X55Y62"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[63][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[63][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[63][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[63][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[52][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[52][13]_i_1" located at site "SLICE_X59Y58"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[52][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[52][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[52][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[52][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[117][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[117][13]_i_1" located at site "SLICE_X58Y44"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[117][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[117][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[117][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[117][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[20][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[20][13]_i_1" located at site "SLICE_X58Y54"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[20][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[20][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[20][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[20][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[104][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[104][13]_i_1" located at site "SLICE_X55Y41"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[104][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[104][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[104][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[104][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1" driven by instance "PWMapb_map/PWM_module/PWM_sample_reg[2]_LDC_i_1" located at site "SLICE_X75Y115"
+#startgroup
+create_pblock CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_PWMapb_map/PWM_module/n_0_PWM_sample_reg[2]_LDC_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[44][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[44][13]_i_1" located at site "SLICE_X58Y56"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[44][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[44][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[44][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[44][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[80][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[80][13]_i_1" located at site "SLICE_X59Y43"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[80][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[80][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[80][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[80][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/output_select" driven by instance "Bufferapb_map/process_signals_reg[output_select]" located at site "SLICE_X63Y77"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/output_select
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/output_select] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/output_select"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/output_select] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[0][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[0][13]_i_1" located at site "SLICE_X54Y55"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[0][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[0][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[0][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[0][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[14][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[14][13]_i_1" located at site "SLICE_X59Y52"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[14][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[14][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[14][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[14][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[31][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[31][13]_i_1" located at site "SLICE_X54Y64"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[31][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[31][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[31][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[31][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[12][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[12][13]_i_1" located at site "SLICE_X54Y55"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[12][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[12][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[12][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[12][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[98][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[98][13]_i_1" located at site "SLICE_X59Y44"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[98][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[98][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[98][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[98][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[68][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[68][13]_i_1" located at site "SLICE_X58Y53"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[68][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[68][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[68][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[68][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[85][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[85][13]_i_1" located at site "SLICE_X58Y49"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[85][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[85][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[85][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[85][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[57][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[57][13]_i_1" located at site "SLICE_X59Y58"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[57][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[57][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[57][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[57][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[115][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[115][13]_i_1" located at site "SLICE_X55Y42"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[115][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[115][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[115][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[115][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[125][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[125][13]_i_1" located at site "SLICE_X58Y43"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[125][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[125][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[125][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[125][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[36][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[36][13]_i_1" located at site "SLICE_X59Y60"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[36][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[36][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[36][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[36][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[25][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[25][13]_i_1" located at site "SLICE_X55Y54"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[25][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[25][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[25][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[25][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[123][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[123][13]_i_1" located at site "SLICE_X55Y42"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[123][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[123][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[123][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[123][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/n_0_apbo_reg[prdata][2]_i_2" driven by instance "Bufferapb_map/apbo_reg[prdata][2]_i_2" located at site "SLICE_X70Y82"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/n_0_apbo_reg[prdata][2]_i_2
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/n_0_apbo_reg[prdata][2]_i_2] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/n_0_apbo_reg[prdata][2]_i_2"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/n_0_apbo_reg[prdata][2]_i_2] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[110][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[110][13]_i_1" located at site "SLICE_X59Y46"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[110][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[110][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[110][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[110][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[42][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[42][13]_i_1" located at site "SLICE_X60Y51"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[42][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[42][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[42][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[42][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[72][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[72][13]_i_1" located at site "SLICE_X55Y53"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[72][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[72][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[72][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[72][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[8][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[8][13]_i_1" located at site "SLICE_X56Y54"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[8][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[8][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[8][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[8][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[61][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[61][13]_i_1" located at site "SLICE_X59Y56"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[61][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[61][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[61][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[61][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup
+
+# Clock net "Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[50][13]_i_1" driven by instance "Bufferapb_map/circular_buffer_comp/circ_buffer_reg[50][13]_i_1" located at site "SLICE_X59Y61"
+#startgroup
+create_pblock CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[50][13]_i_1
+add_cells_to_pblock [get_pblocks  CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[50][13]_i_1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[50][13]_i_1"}]]]
+resize_pblock [get_pblocks CLKAG_Bufferapb_map/circular_buffer_comp/n_0_circ_buffer_reg[50][13]_i_1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
+#endgroup

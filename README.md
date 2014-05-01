@@ -1,6 +1,4 @@
 HandyEQ-HW
 ==========
 
-Hey, Carl-Johan made a change!
-Hello again, Carl-Johan made another change.
-rp branch created
+This project contain files for the hardware part of the HandyEQ chalmers project.

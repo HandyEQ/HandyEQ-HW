@@ -86,7 +86,7 @@ entity leon3mp is
     --an              : out   std_logic_vector(7 downto 0);
 
     -- LEDs
-    --Led             : out   std_logic_vector(15 downto 0);
+    Led             : out   std_logic_vector(3 downto 0);
 
     -- Switches
     sw              : in    std_logic_vector(0 downto 0);
@@ -208,39 +208,69 @@ architecture rtl of leon3mp is
   end component;
   
   component BUFG port (O : out std_logic; I : in std_logic); end component;
-  
-  component ADCapb 
-    generic(
-      pindex      : integer := 0;
-      paddr       : integer := 0;
-      pmask       : integer := 16#fff#
-      );
-    port (
-      rstn     : in  std_ulogic;
-      clk      : in  std_ulogic;
-      vauxp3   : in  std_ulogic;
-      vauxn3   : in  std_ulogic;
-      apbi     : in  apb_slv_in_type;
-      apbo     : out apb_slv_out_type;
-      Led_ADC      : out   std_logic_vector(15 downto 0)
-    ); 
-  end component;
-  
-  component PWMapb
-    generic(
-      pindex      : integer := 0;
-      paddr       : integer := 0;
-      pmask       : integer := 16#fff#
-      );
-    port (
-        rstn  : in  std_ulogic;
-        clk   : in  std_ulogic;
-        apbi   : in  apb_slv_in_type;
-        apbo   : out apb_slv_out_type;
-        PWM_out: out std_logic;
-        SD_audio_out: out std_logic
-      );
-  end component;
+   
+    component Buffer_apb 
+        generic(
+            pindex      : integer := 0;
+            paddr       : integer := 0;
+            pmask       : integer := 16#fff#;
+            pirq        : integer := 0;
+            sample_size : integer := 16;
+            buffer_size : integer := 256;
+            chunk_size  : integer := 64
+        );
+        port (
+            rstn          : in    std_ulogic;
+            clk           : in    std_ulogic;
+            apbi          : in    apb_slv_in_type;
+            apbo          : out   apb_slv_out_type;
+            --Connections mapped to the XADC output
+            sample_irq    : in    std_logic;
+            sample_in     : in    std_logic_vector(sample_size-1 downto 0) 
+        );
+    end component;
+    
+    component Buffer_apb_out 
+        generic(
+            pindex      : integer := 0;
+            paddr       : integer := 0;
+            pmask       : integer := 16#fff#;
+            pirq        : integer := 0;
+            sample_size : integer := 16;
+            buffer_size : integer := 256
+        );
+         port (
+            rstn          : in    std_ulogic;
+            clk           : in    std_ulogic;
+            apbi          : in    apb_slv_in_type;
+            apbo          : out   apb_slv_out_type;
+            --Connections mapped to the PWM module
+            output_select_pwm : in    std_logic;
+            sample_pwm    : out    std_logic_vector(15 downto 0)
+         );
+    end component;
+   
+    component ADC is
+        Port ( clk : in STD_LOGIC;
+            reset : in STD_LOGIC;
+            vauxp3 : IN STD_LOGIC;
+            vauxn3 : IN STD_LOGIC;
+            AD_data : out STD_LOGIC_VECTOR (15 downto 0);
+            data_ready_port : out STD_LOGIC
+            );
+    end component; 
+    
+    component PWM 
+          generic (
+            width  : integer;
+            accuracy  : integer);
+          PORT(reset:STD_LOGIC;
+               clk:STD_LOGIC;
+               sample:in STD_LOGIC_vector(15 downto 0);
+               PWM_out:OUT STD_LOGIc;
+               SD_audio_out:OUT STD_LOGIc;
+               led_out : out std_logic);
+    end component;  
 
   signal CLKFBOUT      : std_logic;
   signal CLKFBIN       : std_logic;
@@ -261,6 +291,9 @@ architecture rtl of leon3mp is
   signal gpiooA : gpio_out_type;
   signal gpioiB : gpio_in_type;
   signal gpiooB : gpio_out_type;
+  signal gpioiC : gpio_in_type;
+  signal gpiooC : gpio_out_type;
+  signal gpio_signal : std_logic;
 
   signal apbi  : apb_slv_in_type;
   signal apbo  : apb_slv_out_vector := (others => apb_none);
@@ -305,11 +338,17 @@ architecture rtl of leon3mp is
   
   -- GRPWM signals
   -- signal pwm : grpwm_out_type;
-  signal PWM_out_signal         :    std_logic;
-  signal SD_audio_out_signal    :    std_logic;
+  signal PWM_out_signal         :   std_logic;
+  signal SD_audio_out_signal    :   std_logic;
+  signal sample_pwm_buffer_signal : std_logic_vector(15 downto 0);
+  signal sample_pwm_signal      :   std_logic_vector(15 downto 0);
 
   -- ADC signals
   signal Led_signal : std_logic_vector(15 downto 0);
+  signal drdy_signal :  std_logic;
+  signal AD_data_signal : std_logic_vector(15 downto 0);
+  
+  signal led_out_buffer :  std_logic;
 
   -- RS232 APB Uart
   signal rxd1 : std_logic;
@@ -663,26 +702,50 @@ begin
       );
 -- pragma translate_on
 
-----------------------------------------------------------------------
-----------  ADC on APB 80000800-80000900------------------------------------
-----------------------------------------------------------------------
-ADCapb_map : ADCapb
-    generic map (pindex => 8, paddr => 8, pmask => 16#FFF#) 
-    port map (rstn => sw(0), clk => clkm, vauxp3 => vauxp3, vauxn3 => vauxn3, apbi => apbi, apbo => apbo(8), Led_ADC => Led_signal);
-    
-    --signals
-    --Led <= Led_signal;
-    
-----------------------------------------------------------------------
-----------  PWM on APB 80000A00-80000B00------------------------------------
 ---------------------------------------------------------------------
-PWMapb_map : PWMapb
-    generic map (pindex => 10, paddr => 10, pmask => 16#FFF#) 
-    port map (rstn => sw(0), clk => clkm, apbi => apbi, apbo => apbo(10), PWM_out => PWM_out_signal, SD_audio_out => SD_audio_out_signal);
-
-    --signals
-    PWM_out_port <= PWM_out_signal;
-    SD_audio_out_port <= SD_audio_out_signal;
+----------  Circular input buffer 80000D00-80000E00 -----------------------------------
+---------------------------------------------------------------------
+Buffer_apb_map : Buffer_apb
+    generic map (pindex => 13, paddr => 13, pmask => 16#FFF#, pirq => 13) 
+    port map (rstn => rstn, clk => clkm, apbi => apbi, apbo => apbo(13), sample_irq => drdy_signal, sample_in => AD_data_signal);
+    
+    led(0) <= AD_data_signal(15); --test
+    led(3) <= rstn;
+    
+    XADC_component : ADC
+    Port map ( clk => clkm,
+        reset => rstn,
+        vauxp3 => vauxp3,
+        vauxn3 => vauxn3,
+        AD_data => AD_data_signal,
+        data_ready_port => drdy_signal);
+    
+---------------------------------------------------------------------
+----------  Circular output buffer 80000E00-80000F00 ----------------
+---------------------------------------------------------------------
+Buffer_apb_out_map : Buffer_apb_out
+    generic map (pindex => 14, paddr => 14, pmask => 16#FFF#) 
+    port map (rstn => rstn, clk => clkm, apbi => apbi, apbo => apbo(14), output_select_pwm => drdy_signal, sample_pwm => sample_pwm_buffer_signal);
+    
+   -- bypass
+    sample_pwm_signal <= AD_data_signal when sw(0) = '1' else
+                         sample_pwm_buffer_signal; 
+    --sample_pwm_signal <= AD_data_signal;
+ 
+    PWM_module: PWM
+    generic map(width => 16,
+                accuracy => 10)
+    PORT MAP(reset => rstn,
+             clk => clk,
+             sample => sample_pwm_signal,
+             PWM_out => PWM_out_signal,
+             SD_audio_out => SD_audio_out_signal,
+             led_out => led(2));
+           
+     --signals
+     PWM_out_port <= PWM_out_signal;
+     SD_audio_out_port <= SD_audio_out_signal;  
+       
 -----------------------------------------------------------------------
 ---  Ethernet Clock Generation  ---------------------------------------
 -----------------------------------------------------------------------

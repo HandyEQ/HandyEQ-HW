@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <!--Product Version: Vivado v2013.4 (64-bit)-->
-<Project Version="6" Minor="14" Path="Y:/DAT096-Embedded System Design/Project Git Test/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.xpr">
+<Project Version="6" Minor="14" Path="Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ-HW-NoSoftcore/HandyEQ-HW-NoSoftcore.xpr">
 	<FileSet Dir="sources_1" File="fileset.xml"/>
 	<FileSet Dir="constrs_1" File="fileset.xml"/>
 	<FileSet Dir="sim_1" File="fileset.xml"/>
 	<FileSet Dir="xadc_wiz_0" File="fileset.xml"/>
-	<HWSession Dir="hw" File="hwsession_1.xml"/>
 	<RunSet Dir="runs" File="runs.xml"/>
 	<DefaultLaunch Dir="$PRUNDIR"/>
 	<Config>
-		<Option Name="Id" Val="73ea2ec786e64ed1b69aadd436ba8944"/>
-		<Option Name="Part" Val="xc7a100tcsg324-2"/>
-		<Option Name="CompiledLibDir" Val="$PPRDIR/../../Workspace/HandyEQ-HW/Nexys4_FPGAboard/ADDA_v1.2/ADDA_v1.2.cache/compile_simlib"/>
+		<Option Name="Id" Val="e5ccf340dc8c4aad9b6575d4f2fe5b2f"/>
+		<Option Name="Part" Val="xc7a100tcsg324-1"/>
+		<Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+		<Option Name="TargetLanguage" Val="VHDL"/>
 		<Option Name="Board" Val=""/>
 		<Option Name="ActiveSimSet" Val="sim_1"/>
 	</Config>

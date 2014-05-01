@@ -58,7 +58,7 @@ begin
   -- Sequential process
   regs: process (clk, rstn)
   begin
-    if rstn = '1' then
+    if rstn = '0' then
       apb_reg <= (others => '0');
     elsif rising_edge(clk) then
       apb_reg <= apb_reg_in;
