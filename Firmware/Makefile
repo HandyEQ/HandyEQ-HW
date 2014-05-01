@@ -4,6 +4,7 @@ CC = sparc-elf-gcc
 OBJC= sparc-elf-objcopy
 
 %.exe: %.c gpio.c uart.c irq.c buffer.c parson.c delay.c
+
 ifeq (${UART}, sim)
 	export PATH=${PATH} && export LD_LIBRARY_PATH=${LD_LIBRARY_PATH} && $(CC) -o $@ -D_UART=2 $^
 else

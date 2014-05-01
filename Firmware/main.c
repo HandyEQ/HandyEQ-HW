@@ -36,21 +36,21 @@ int main(void){
 	
 	while(1){
 		if(newSample){
-			struct chunk *current_chunk = calloc(1, sizeof(struct chunk));		
+			struct chunk *new_chunk = calloc(1, sizeof(struct chunk));		
 			if(print == 1){
 				printf("R");
 			}
-			retrieve_chunk(current_chunk);
+			retrieve_chunk(new_chunk);
 			if(print == 1){
 				printf("O");
 			}
-			record_pcm(current_chunk);
+			//record_pcm(new_chunk);
 			//calcDelay(current_chunk);
-			output_chunk(current_chunk);
+			output_chunk(new_chunk);
 			if(print == 1){
 				printf("D");
 			}
-			free(current_chunk);
+			free(new_chunk);
 			newSample = 0;
 		}
 		if(newUart){
