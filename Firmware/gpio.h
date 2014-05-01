@@ -14,9 +14,9 @@ typedef struct
   int int_map_reg[8]; /*!< GPIO interrupt map registers                                            Address offset: 0x20-3C */
 }GPIO_TypeDef;
 
-#define GPIOA               ((GPIO_TypeDef *) 0x80000B00)
-#define GPIOB               ((GPIO_TypeDef *) 0x80000D00)
-#define GPIOC               ((GPIO_TypeDef *) 0x80000E00)
+#define GPIOA               ((GPIO_TypeDef *) 0x80000900)
+#define GPIOB               ((GPIO_TypeDef *) 0x80000A00)
+#define GPIOC               ((GPIO_TypeDef *) 0x80000B00)
 //#define GPIOD               ((GPIO_TypeDef *) 0x80000000)
 
 #define IS_GPIO_ALL_PERIPH(PERIPH) (((PERIPH) == GPIOA) || \

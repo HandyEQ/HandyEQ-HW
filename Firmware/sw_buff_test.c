@@ -7,7 +7,7 @@
 #include "gpio.h"
 #include "sevenseg.h"
 
-int flag = 0, flag2 = 0, flag3 = 0, delay = 0;
+int flag = 0, flag2 = 0, flag3 = 0, delay = 0, gpioAPrev = 0, gpioBPrev = 0, gpioAChg = 0;
 char s[8] = "ABCDEF.-";
 
 extern void *catch_interrupt(void func(), int irq);
@@ -34,6 +34,24 @@ typedef struct
 
 #define SPIA               ((SPI_TypeDef *) 0x80000C00)
 
+typedef struct
+{
+  int scaler; //0x00
+  int scalerReload; //0x04
+  int config; //08
+  int timerLatchCfg; //0C
+  int timer1counter; //10
+  int timer1reload; //14
+  int timer1ctrl; //18
+  int timer1latch; //1C
+  int timer2counter; //20
+  int timer2reload; //24
+  int timer2ctrl; //28
+  int timer2latch; //2C
+}TIMER_TypeDef;
+
+#define TIMERA               ((TIMER_TypeDef *) 0x80000300)
+
 enable_irq (int irq) 
 {
 
@@ -47,11 +65,153 @@ force_irq (int irq) { lreg[IFORCE/4] = (1 << irq); }
 
 void irqhandler(int irq)
 {
-  if (irq == 10) { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
+  if (irq == 7) { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
     lreg[IPEND/4] &= ~(1 << irq);
+    TIMERA -> timer1ctrl |= 0x00000010;
+    putStr("timer1\n\r");
+  }
+  else if (irq == 8) { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
+    lreg[IPEND/4] &= ~(1 << irq);
+    TIMERA -> timer2ctrl |= 0x00000010;
+    putStr("timer2\n\r");
+  }
+  else if (irq == 9) { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
+    lreg[IPEND/4] &= ~(1 << irq);
+
+    switch (gpioAPrev ^ GPIO_ReadInputData(GPIOA))
+    {
+    case 1:
+      putStr("0\n\r");
+      break;
+    case 2:
+      putStr("1\n\r");
+      break;
+    case 4:
+      putStr("2\n\r");
+      break;
+    case 8:
+      putStr("3\n\r");
+      break;
+    case 16:
+      putStr("4\n\r");
+      break;
+    case 32:
+      putStr("5\n\r");
+      break;
+    case 64:
+      putStr("6\n\r");
+      break;
+    case 128:
+      putStr("7\n\r");
+      break;
+    case 256:
+      putStr("8\n\r");
+      break;
+    case 512:
+      putStr("9\n\r");
+      break;
+    case 1024:
+      putStr("10\n\r");
+      break;
+    case 2048:
+      putStr("11\n\r");
+      break;
+    case 4096:
+      putStr("12\n\r");
+      break;
+    case 8192:
+      putStr("13\n\r");
+      break;
+    case 16384:
+      putStr("14\n\r");
+      break;
+    case 32768:
+      putStr("15\n\r");
+      break;
+    default:
+      break;
+    }
     //flag2 = 1;
     //flag3 = 1;
-    //putStr("10ten\n\r");
+    //putStr("SWITCH\n\r");
+  } 
+  else if (irq == 10) { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
+    lreg[IPEND/4] &= ~(1 << irq);
+
+    switch (gpioBPrev ^ GPIO_ReadInputData(GPIOB))
+    {
+    case 1:
+      putStr("0\n\r");
+      break;
+    case 2:
+      putStr("1\n\r");
+      break;
+    case 4:
+      putStr("2\n\r");
+      break;
+    case 8:
+      putStr("3\n\r");
+      break;
+    case 16:
+      putStr("4\n\r");
+      break;
+    case 32:
+      putStr("5\n\r");
+      break;
+    case 64:
+      putStr("6\n\r");
+      break;
+    case 128:
+      putStr("7\n\r");
+      break;
+    case 256:
+      putStr("8\n\r");
+      break;
+    case 512:
+      putStr("9\n\r");
+      break;
+    case 1024:
+      putStr("10\n\r");
+      break;
+    case 2048:
+      putStr("11\n\r");
+      break;
+    case 4096:
+      putStr("ENC RITE\n\r");
+      break;
+    case 8192:
+      putStr("ENC LEFT\n\r");
+      break;
+    case 16384:
+      putStr("ENC PUSH\n\r");
+      break;
+    case 32768:
+      putStr("ENC SW\n\r");
+      break;
+
+    case 0x00200000:
+      putStr("BTNC\n\r");
+      break;
+    case 0x00400000:
+      putStr("BTNU\n\r");
+      break;
+    case 0x00800000:
+      putStr("BTNL\n\r");
+      break;
+    case 0x01000000:
+      putStr("BTNR\n\r");
+      break;
+    case 0x02000000:
+      putStr("BTND\n\r");
+      break;
+    default:
+      break;
+    }
+
+    //gpioBPrev = 0x03E0FFFF & GPIO_ReadInputData(GPIOB);
+    //flag2 = 1;
+    //flag3 = 1;
+    //putStr("BTN OR ENCODER\n\r");
   } 
   else if (irq == 11) {
     lreg[IPEND/4] &= ~(1 << irq);
@@ -122,39 +282,78 @@ GPIO_DeInit(GPIOA);
 
 GPIO_StructInit(&GPIO_InitStructure);
 
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4;
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4
+                            | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9
+                            | GPIO_Pin_10 | GPIO_Pin_11 | GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+
 GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
 
 GPIO_Init(GPIOA, &GPIO_InitStructure);
 
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7
-                            | GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10 | GPIO_Pin_11;
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_16 | GPIO_Pin_17 | GPIO_Pin_18 | GPIO_Pin_19 | GPIO_Pin_20
+                            | GPIO_Pin_21 | GPIO_Pin_22 | GPIO_Pin_23 | GPIO_Pin_24 | GPIO_Pin_25
+                            | GPIO_Pin_26 | GPIO_Pin_27 | GPIO_Pin_28 | GPIO_Pin_29 | GPIO_Pin_30 | GPIO_Pin_31;
+
 GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 
 GPIO_Init(GPIOA, &GPIO_InitStructure);
 
-//enable_irq(11);
-//catch_interrupt(irqhandler, 11);
+/* GPIOB */
 
-GPIOA -> interrupt = 0x0000001D;
-GPIOA -> int_pol = 0x0000001D;
-GPIOA -> int_edg = 0x0000001D;
+GPIO_DeInit(GPIOB);
+
+GPIO_StructInit(&GPIO_InitStructure);
+
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15 
+                            | GPIO_Pin_21 | GPIO_Pin_22 | GPIO_Pin_23 | GPIO_Pin_24 | GPIO_Pin_25;
+
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+
+GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4
+                            | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10
+                            | GPIO_Pin_11 | GPIO_Pin_16 | GPIO_Pin_17 | GPIO_Pin_18 | GPIO_Pin_19 | GPIO_Pin_20
+                            | GPIO_Pin_26 | GPIO_Pin_27 | GPIO_Pin_28 | GPIO_Pin_29 | GPIO_Pin_30 | GPIO_Pin_31;
+
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+
+GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+GPIOA -> interrupt = 0x0000FFFF;
+GPIOA -> int_pol = 0x0000FFFF;
+GPIOA -> int_edg = 0x0000FFFF;
+
+catch_interrupt(irqhandler, 9);
+enable_irq(9);
+
+GPIOB -> interrupt = 0x03E0FFFF;
+GPIOB -> int_pol = 0x03E0FFFF;
+GPIOB -> int_edg = 0x03E0FFFF;
 
 catch_interrupt(irqhandler, 10);
-//enable_irq(10);
+enable_irq(10);
 
-catch_interrupt(irqhandler, 11);
-enable_irq(11);
+/* TIMER */
 
-catch_interrupt(irqhandler, 13);
-enable_irq(13);
+TIMERA -> scaler = 0x0000FFFF;
+TIMERA -> scalerReload = 0x0000FFFF;
+TIMERA -> config = 0x0000FFFF;
+TIMERA -> timerLatchCfg = 0x00000000;
+TIMERA -> timer1counter = 0x0000FFFF;
+TIMERA -> timer1reload = 0x0000FFFF;
+TIMERA -> timer1ctrl = 0x0000000B;
+TIMERA -> timer2counter = 0x000FFFFF;
+TIMERA -> timer2reload = 0x000FFFFF;
+TIMERA -> timer2ctrl = 0x0000000B;
 
-catch_interrupt(irqhandler, 14);
-enable_irq(14);
 
-catch_interrupt(irqhandler, 15);
-enable_irq(15);
 
+catch_interrupt(irqhandler, 7);
+enable_irq(7);
+
+catch_interrupt(irqhandler, 8);
+enable_irq(8);
 
 //putStr("Test Started\n\r");
 
@@ -221,6 +420,9 @@ flag = 0;*/
 
 SEVENSEG_Init();
 
+gpioAPrev = 0x0000FFFF & GPIO_ReadInputData(GPIOA);
+gpioBPrev = 0x03E0FFFF & GPIO_ReadInputData(GPIOB);
+
 while (1)
 {
   SEVENSEG_WriteString(s);
@@ -267,7 +469,16 @@ while (1)
       j = 0;
   }*/
 
-  //putStr("aaaaaaaaa\n\r");
+  //putInt(GPIO_ReadInputData(GPIOA) << 16);
+  GPIO_Write(GPIOA, GPIO_ReadInputData(GPIOA) << 16);
+
+
+  GPIO_WriteBit(GPIOB, GPIO_Pin_31, GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5));
+  GPIO_WriteBit(GPIOB, GPIO_Pin_30, GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_4));
+  GPIO_WriteBit(GPIOB, GPIO_Pin_29, GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_3));
+  GPIO_WriteBit(GPIOB, GPIO_Pin_28, GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_2));
+  GPIO_WriteBit(GPIOB, GPIO_Pin_27, GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1));
+  GPIO_WriteBit(GPIOB, GPIO_Pin_26, GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0));
 
 }
 
