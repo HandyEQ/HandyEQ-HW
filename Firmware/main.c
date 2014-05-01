@@ -30,15 +30,15 @@ int main(void){
 	setDelay(3);
 	setGain(16384);
 
-	//Chunk
-	struct chunk *current_chunk = malloc(sizeof(struct chunk));
 	while(1){
 		if(newSample){
 			newSample = 0;
-			retrieve_chunk(current_chunk);
+			struct chunk *new_chunk = malloc(sizeof(struct chunk));
+			struct chunk *delay_output = malloc(sizeof(struct chunk));
+			retrieve_chunk(new_chunk);
 			//record_pcm(current_chunk);
-			//calcDelay(current_chunk);
-			output_chunk(current_chunk);
+			calcDelay(new_chunk, delay_output);
+			output_chunk(new_chunk);
 		}
 		if(newUart){
 			newUart = 0;

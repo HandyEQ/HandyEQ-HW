@@ -13,13 +13,15 @@ struct delay_struct
 	int head;
 	int delay;
 	int gain;
- 	struct chunk *chunks[chunk_size];
+	int feedback;
+ 	signed short data[100];
 };
 
-void init_delay(int size);
+void init_delay();
 void setGain(int gain);
+void setFeedback(int feedback);
 void setDelay(int delay);
 signed short int fixedMul(signed short int a, signed short int b);
-void calcDelay(struct chunk *new_chunk);
+void calcDelay(struct chunk * input, struct chunk * output);
 
 #endif
