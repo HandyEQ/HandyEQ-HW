@@ -17,15 +17,17 @@ source xadc_wiz_0.tcl
 # set_param gui.test TreeTableDev
 # set_msg_config -id {HDL 9-1061} -limit 100000
 # set_msg_config -id {HDL 9-1654} -limit 100000
+# set_msg_config -id {Labtools 27-147} -limit 4294967295
 # create_project -in_memory -part xc7a100tcsg324-2
 # set_property target_language VHDL [current_project]
 # set_param project.compositeFile.enableAutoGeneration 0
-# read_ip {{y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci}}
+# read_ip {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci}}
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2013.4/data/ip'.
+# set_property used_in_implementation false [get_files {{y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.dcp}}]
 # set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
-# set_property is_locked true [get_files {{y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci}}]
+# set_property is_locked true [get_files {{Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci}}]
 # read_xdc dont_touch.xdc
 # set_property used_in_implementation false [get_files dont_touch.xdc]
 # set_param synth.vivado.isSynthRun true
@@ -40,7 +42,7 @@ INFO: [IP_Flow 19-2162] IP 'xadc_wiz_0' is locked. Locked reason: Property 'IS_L
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 241.793 ; gain = 93.324
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 242.105 ; gain = 93.688
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'xadc_wiz_0' [y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd:78]
 	Parameter INIT_40 bound to: 16'b0000010000010011 
@@ -82,7 +84,7 @@ INFO: [Synth 8-638] synthesizing module 'xadc_wiz_0' [y:/DAT096-Embedded System 
 INFO: [Synth 8-113] binding component instance 'U0' to cell 'XADC' [y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd:145]
 INFO: [Synth 8-256] done synthesizing module 'xadc_wiz_0' (1#1) [y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd:78]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 275.055 ; gain = 126.586
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 275.402 ; gain = 126.984
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -126,11 +128,11 @@ Start RTL Optimization
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 474.723 ; gain = 326.254
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 474.164 ; gain = 325.746
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished RTL Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 474.723 ; gain = 326.254
+Finished RTL Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 474.164 ; gain = 325.746
 ---------------------------------------------------------------------------------
 
 
@@ -148,7 +150,7 @@ Part Resources:
 DSPs: 240 (col length:80)
 BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 537.270 ; gain = 388.801
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 537.723 ; gain = 389.305
 ---------------------------------------------------------------------------------
 
 
@@ -176,7 +178,7 @@ Finished RTL Hierarchical Component Statistics
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 537.270 ; gain = 388.801
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 537.723 ; gain = 389.305
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -190,7 +192,7 @@ Finished RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 539.293 ; gain = 390.824
+Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 538.746 ; gain = 390.328
 ---------------------------------------------------------------------------------
 
 
@@ -202,11 +204,11 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 539.301 ; gain = 390.832
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 538.754 ; gain = 390.336
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 539.301 ; gain = 390.832
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 538.754 ; gain = 390.336
 ---------------------------------------------------------------------------------
 
 
@@ -214,7 +216,7 @@ Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . M
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 548.828 ; gain = 400.359
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 548.281 ; gain = 399.863
 ---------------------------------------------------------------------------------
 
 
@@ -239,7 +241,7 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Gated Clock Conversion mode: off
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 548.828 ; gain = 400.359
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 548.281 ; gain = 399.863
 ---------------------------------------------------------------------------------
 
 
@@ -254,7 +256,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 548.828 ; gain = 400.359
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 548.281 ; gain = 399.863
 ---------------------------------------------------------------------------------
 
 
@@ -262,7 +264,7 @@ Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 548.828 ; gain = 400.359
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 548.281 ; gain = 399.863
 ---------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------
@@ -296,11 +298,11 @@ Report Instance Areas:
 |1     |top      |       |     1|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 548.828 ; gain = 400.359
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 548.281 ; gain = 399.863
 ---------------------------------------------------------------------------------
 
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 548.828 ; gain = 400.359
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 548.281 ; gain = 399.863
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 Parsing XDC File [y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc] for cell 'U0'
@@ -314,18 +316,18 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 13 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 952.559 ; gain = 760.250
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 953.059 ; gain = 760.426
 # rename_ref -prefix_all xadc_wiz_0
 # write_checkpoint -noxdef xadc_wiz_0.dcp
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 # report_utilization -file xadc_wiz_0_utilization_synth.rpt -pb xadc_wiz_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 952.559 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 953.059 ; gain = 0.000
 # if { [catch {
-#   file copy -force {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp} {y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.dcp}
-#   write_verilog -force -mode synth_stub {y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v}
-#   write_verilog -force -mode funcsim {y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.v}
-#   write_vhdl -force -mode funcsim {y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.vhdl}
+#   file copy -force {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp} {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.dcp}
+#   write_verilog -force -mode synth_stub {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v}
+#   write_verilog -force -mode funcsim {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.v}
+#   write_vhdl -force -mode funcsim {Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.vhdl}
 # } _RESULT ] } { 
 #   puts "Critical Warning: Unable to successfully create or copy supporting IP files."
 # }
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 16 13:42:28 2014...
+INFO: [Common 17-206] Exiting Vivado at Thu May 01 09:43:16 2014...

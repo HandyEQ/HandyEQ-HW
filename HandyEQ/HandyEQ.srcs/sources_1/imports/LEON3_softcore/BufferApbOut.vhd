@@ -15,7 +15,7 @@ entity Buffer_apb_out is
     pmask       : integer := 16#fff#;
     pirq        : integer := 0;
     sample_size : integer := 16;
-    buffer_size : integer := 128
+    buffer_size : integer := 256
   );
   port (
     rstn          : in    std_ulogic;
@@ -36,9 +36,10 @@ component buff_out is
         LENGTH  : integer := buffer_size
     );
     port(
+        clk             : in    std_logic;
         reset           : in    std_logic;
         input_irq       : in    std_logic;
-        input_sample    : in    std_logic_vector(SIZE-1 downto 0); -- one extra for status
+        input_sample    : in    std_logic_vector(SIZE-1 downto 0); 
         output_select   : in    std_logic;
         output_ready    : out   std_logic;
         output_sample   : out   std_logic_vector(SIZE-1 downto 0)
@@ -46,11 +47,11 @@ component buff_out is
 end component;
 
 type buffer_signals is record
-    input_irq        : std_logic;
-    input_sample     : std_logic_vector(sample_size-1 downto 0);
-    output_select    : std_logic; -- from interrupt routine
-    output_ready     : std_logic; -- to interrupt routine
-    output_sample    : std_logic_vector(sample_size-1 downto 0); -- to interrupt routine
+    input_irq        : std_logic; -- from interrupt routine
+    input_sample     : std_logic_vector(sample_size-1 downto 0); -- from interrupt routine
+    output_select    : std_logic; -- to PWM
+    output_ready     : std_logic; -- to PWM
+    output_sample    : std_logic_vector(sample_size-1 downto 0); -- to PWM
 end record;
 
 signal process_signals  : buffer_signals;
@@ -61,6 +62,10 @@ constant pconfig        : apb_config_type := (
                         0 => ahb_device_reg ( VENDOR_OPENCORES, GAISLER_GPREG, 0, 0, pirq),
                         1 => apb_iobar(paddr, pmask));
 
+attribute mark_debug : string;
+attribute mark_debug of apbi : signal is "true";
+attribute mark_debug of apbo : signal is "true";
+
 begin
   
   -- combinatorial process
@@ -70,13 +75,16 @@ begin
     
     -- Read registers
     temp := apbi.psel(pindex) and apbi.penable and apbi.pwrite;
-    apb_signals.input_irq <= temp;
+    --apb_signals.input_irq <= temp; -- Could save clocks
     if temp = '1' then
-      if apbi.paddr(4 downto 2) = "001" then 
-         apb_signals.input_sample(sample_size-1) <= apbi.pwdata(31);
-         apb_signals.input_sample(sample_size-2 downto 0) <= apbi.pwdata(sample_size-2 downto 0);
+      if apbi.paddr(4 downto 2) = "000" then 
+        apb_signals.input_irq <= apbi.pwdata(sample_size + 2);
+        apb_signals.input_sample <= apbi.pwdata(sample_size-1 downto 0); 
+        
+        --apb_signals.input_sample(sample_size-1) <= apbi.pwdata(31);
+        --apb_signals.input_sample(sample_size-2 downto 0) <= apbi.pwdata(sample_size-2 downto 0);  
       end if;
-    end if;    
+    end if;  
   end process; 
 
   -- Sequential process
@@ -90,7 +98,6 @@ begin
       process_signals.input_irq <= apb_signals.input_irq; -- from soft
       process_signals.input_sample <= apb_signals.input_sample; -- from soft
       
-      apb_signals.output_ready <= process_signals.output_ready;
       sample_pwm <= (others => '0');
       sample_pwm(sample_size-1 downto 0) <= process_signals.output_sample;
     end if;
@@ -102,7 +109,11 @@ begin
   apbo.pconfig       <= PCONFIG;         -- VHDL Constant
 
 circular_buffer_comp : buff_out
+    generic map(
+        SIZE    => sample_size, 
+        LENGTH  => buffer_size)
     port map(
+        clk             => clk,
         reset           => rstn,
         input_irq       => process_signals.input_irq,
         input_sample    => process_signals.input_sample,

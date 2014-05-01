@@ -25,6 +25,7 @@ signal circ_buffer  : BUFFER_ARRAY;
 signal head         : integer;
 signal tail         : integer;
 signal full, empty  : std_logic;
+signal new_input, new_output  : std_logic; 
 
 attribute mark_debug : string;
 attribute mark_debug of full : signal is "true";
@@ -33,6 +34,9 @@ attribute mark_debug of head : signal is "true";
 attribute mark_debug of tail : signal is "true";     
 attribute mark_debug of input_irq : signal is "true";
 attribute mark_debug of output_select : signal is "true";
+attribute mark_debug of output_ready : signal is "true";
+attribute mark_debug of new_input : signal is "true";
+attribute mark_debug of new_output : signal is "true";
 
 begin
   
@@ -49,13 +53,16 @@ begin
         head <= 0;
         tail <= 0;
         output_ready <= '0';
-        output_sample <= (others => '0');        
+        output_sample <= (others => '0');
+        new_input <= '1';
+        new_output <= '1';        
       elsif rising_edge(clk) then
         tail_var := tail;
         head_var := head;
         
         --Put
-        if input_irq = '1' then
+        if (input_irq = '1') and (new_input = '1') then
+          new_input <= '0'; -- used to not input several samples if input_irq is high more then one clk.
           -- Modulo
           if (head_var + 1) = LENGTH then
             head_var_modulo := 0;
@@ -87,11 +94,13 @@ begin
           head <= head_var_modulo;
           head_var := head_var_modulo;
           
-          end if;
+        elsif input_irq = '0' then
+          new_input <= '1';
+        end if;
       
         -- Get      
-        if output_select = '1' then
-          
+        if (output_select = '1') and (new_output = '1') then
+          new_output <= '0'; -- used to not outpus several samples if output_select is high more then one clk.
           -- Modulo
           if (head_var + 1) = LENGTH then
             head_var_modulo := 0;
@@ -127,10 +136,12 @@ begin
           end if;
           
         elsif output_select = '0' then
-          output_ready  <= '0';        
+          output_ready  <= '0';  
+          new_output <= '1';      
         end if; 
       end if;     
     end process;
 end architecture arch;
+
 
 

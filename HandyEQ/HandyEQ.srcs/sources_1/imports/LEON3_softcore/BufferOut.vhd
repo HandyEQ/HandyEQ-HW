@@ -6,12 +6,13 @@ use ieee.math_real.all;
 entity buff_out is 
     generic(
         SIZE    : integer := 16; 
-        LENGTH  : integer := 128
+        LENGTH  : integer := 256
     );
     port(
+        clk             : in    std_logic;
         reset           : in    std_logic;
         input_irq       : in    std_logic;
-        input_sample    : in    std_logic_vector(SIZE-1 downto 0); -- one extra for status
+        input_sample    : in    std_logic_vector(SIZE-1 downto 0); 
         output_select   : in    std_logic;
         output_ready    : out   std_logic;
         output_sample   : out   std_logic_vector(SIZE-1 downto 0)
@@ -24,51 +25,96 @@ signal circ_buffer  : BUFFER_ARRAY;
 signal head         : integer;
 signal tail         : integer;
 signal full, empty  : std_logic;
+signal new_input, new_output  : std_logic; 
+
+attribute mark_debug : string;
+attribute mark_debug of full : signal is "true";
+attribute mark_debug of empty : signal is "true";
+attribute mark_debug of head : signal is "true"; 
+attribute mark_debug of tail : signal is "true";     
+attribute mark_debug of input_irq : signal is "true";     
+attribute mark_debug of input_sample : signal is "true";
+attribute mark_debug of output_select : signal is "true";
+attribute mark_debug of output_ready : signal is "true";
+attribute mark_debug of new_input : signal is "true";
+attribute mark_debug of new_output : signal is "true";
 
 begin
   
-   main: process(input_irq, output_select, reset) is -- What if signals arrive at the same time, we use 'Event.
+   main: process(clk, reset) is
         variable head_var : integer;
         variable tail_var : integer;
+        variable head_var_modulo : integer;
+        variable tail_var_modulo : integer;
    begin
       if reset = '0' then
-        for i in 0 to SIZE-1 loop
-          circ_buffer(i) <= (others => '0');
-        end loop;
+        circ_buffer <= (others => (others => '0'));
         full <= '0';
         empty <= '1';
         head <= 0;
         tail <= 0;
         output_ready <= '0';
-        output_sample <= (others => '0');        
-      else
+        output_sample <= (others => '0');
+        new_input <= '1';
+        new_output <= '1';        
+      elsif rising_edge(clk) then
         tail_var := tail;
         head_var := head;
         
         --Put
-        if input_irq = '1' then  
+        if (input_irq = '1') and (new_input = '1') then
+          new_input <= '0'; -- used to not input several samples if input_irq is high more then one clk.
+          -- Modulo
+          if (head_var + 1) = LENGTH then
+            head_var_modulo := 0;
+          else
+            head_var_modulo := head_var + 1;
+          end if;
          
+          if (tail_var + 1) = LENGTH then
+            tail_var_modulo := 0;
+          else
+            tail_var_modulo := tail_var + 1;
+          end if;
+            
+            --Insert new sample
             circ_buffer(head_var) <= input_sample;
             empty <= '0';
           
-            if(((head_var + 1) mod LENGTH) = tail_var) then
+            if(head_var_modulo = tail_var) then
               full <= '1';
             elsif (head_var = tail_var) and (full = '1')  then
               full <= '1';               
-              tail <= (tail_var + 1) mod LENGTH;
-              tail_var := (tail_var + 1) mod LENGTH;
+              tail <= tail_var_modulo;
+              tail_var := tail_var_modulo;
             else
               full <= '0';
             end if;
             
           --Update Head
-          head <= (head_var + 1) mod LENGTH;
-          head_var := (head_var + 1) mod LENGTH;
+          head <= head_var_modulo;
+          head_var := head_var_modulo;
           
-          end if;
+        elsif input_irq = '0' then
+          new_input <= '1';
+        end if;
       
         -- Get      
-        if output_select = '1' then
+        if (output_select = '1') and (new_output = '1') then
+          new_output <= '0'; -- used to not outpus several samples if output_select is high more then one clk.
+          -- Modulo
+          if (head_var + 1) = LENGTH then
+            head_var_modulo := 0;
+          else
+            head_var_modulo := head_var + 1;
+          end if;
+         
+          if (tail_var + 1) = LENGTH then
+            tail_var_modulo := 0;
+          else
+            tail_var_modulo := tail_var + 1;
+          end if;
+          
           full <= '0';            
           if(tail_var = head_var) and (empty = '1')then
               empty <= '1';
@@ -76,27 +122,27 @@ begin
               output_ready  <= '0';
               output_sample <= (others => '0');
               
-          elsif(((tail_var + 1) mod LENGTH) = head_var) then
+          elsif(tail_var_modulo = head_var) then
               empty <= '1';
               output_ready  <= '1';
               output_sample(0) <= '0';
               output_sample <= circ_buffer(tail_var);
-              tail <= (tail + 1) mod LENGTH;
+              tail <= tail_var_modulo;
           else
               empty <= '0';
               output_ready  <= '1';
               output_sample(0) <= '1';
               output_sample <= circ_buffer(tail_var);
-              tail <= (tail_var + 1) mod LENGTH;
+              tail <= tail_var_modulo;
           end if;
           
-          
-
-          elsif output_select = '0' then-- output_select = '0' and output_select'event then
-            output_ready  <= '0';        
-          end if; 
-        end if;     
+        elsif output_select = '0' then
+          output_ready  <= '0';  
+          new_output <= '1';      
+        end if; 
+      end if;     
     end process;
 end architecture arch;
+
 
 
