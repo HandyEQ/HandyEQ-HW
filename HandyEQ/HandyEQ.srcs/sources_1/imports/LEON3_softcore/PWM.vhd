@@ -11,8 +11,7 @@ ENTITY PWM IS
            clk:STD_LOGIC;
            sample:in STD_LOGIC_vector(width-1 downto 0);
            PWM_out:OUT STD_LOGIc;
-           SD_audio_out:OUT STD_LOGIc;
-           led_out : out std_logic);
+           SD_audio_out:OUT STD_LOGIc);
    END PWM;
 
 ARCHITECTURE Arch OF PWM IS
@@ -30,10 +29,8 @@ begin
       PWM_counter <= (others => '0');
       PWM_sample <= sample(width-1 downto width-accuracy);
       PWM_out <= '0';
-      led_out <= '1';
       
   elsif (rising_edge(CLK)) then	
-    led_out <= '0';	
 	if(PWM_counter <= PWM_sample) then
        PWM_out <= '1';
        PWM_counter  <= STD_LOGIC_VECTOR(unsigned(PWM_counter) + 1);

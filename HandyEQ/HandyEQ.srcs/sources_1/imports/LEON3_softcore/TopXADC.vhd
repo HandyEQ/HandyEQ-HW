@@ -27,6 +27,7 @@ entity ADC is
         reset : in STD_LOGIC;
         vauxp3 : IN STD_LOGIC;
         vauxn3 : IN STD_LOGIC;
+        sw : IN STD_LOGIC;
         AD_data : out STD_LOGIC_VECTOR (15 downto 0);
         data_ready_port : out STD_LOGIC
         );
@@ -161,6 +162,17 @@ SIGNAL filter5_done_signal:STD_LOGIC;
 
 signal zerosOrOnes:STD_LOGIC_VECTOR(3 DOWNTO 0);
 
+SIGNAL AD_data_12bit:STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL AD_data_filters:STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL AD_data_signal:STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+attribute mark_debug : string;
+attribute mark_debug of eoc_out_signal : signal is "true";
+attribute mark_debug of decimator1_done_signal : signal is "true";
+attribute mark_debug of decimator2_done_signal : signal is "true";
+attribute mark_debug of decimator3_done_signal : signal is "true";
+attribute mark_debug of decimator4_done_signal : signal is "true";
+
 begin
 
 XADC_component : xadc_wiz_0
@@ -267,6 +279,10 @@ decimator4_cmp : decimator
         done => decimator4_done_signal,
         output => decimator4_out_signal
         );
+
+   -- bypass
+    AD_data_signal <= AD_data_12bit when sw = '1' else
+                         AD_data_filters; 
             
 process(clk, reset)
     --variable count : integer;
@@ -285,11 +301,12 @@ begin
     Filter_in_signal <= (OTHERS=>'0');
     data_ready_port_signal <= '0';
   elsif rising_edge(clk) then
+    AD_data <= AD_data_signal;
     if (eoc_out_signal = '1') then --DRDY_signal
-      AD_data(15) <= not DO_signal(15); --NO FILTERS
-      AD_data(14 downto 0) <= DO_signal(14 downto 0); --NO FILTERS
-      --AD_data(15) <= not decimator4_out_signal(17); --THIS IS NEEDED TO HAVE THE FILTERS
-      --AD_data(14 downto 0) <= decimator4_out_signal(16 downto 2); --THIS IS NEEDED TO HAVE THE FILTERS
+      AD_data_12bit(15) <= not DO_signal(15); --NO FILTERS
+      AD_data_12bit(14 downto 0) <= DO_signal(14 downto 0); --NO FILTERS
+      AD_data_filters(15) <= not decimator4_out_signal(17); --THIS IS NEEDED TO HAVE THE FILTERS
+      AD_data_filters(14 downto 0) <= decimator4_out_signal(16 downto 2); --THIS IS NEEDED TO HAVE THE FILTERS
       
       if (DO_signal(15) = '1') then
         zerosOrOnes <= "1111";

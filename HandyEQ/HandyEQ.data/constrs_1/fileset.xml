@@ -4,7 +4,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Workspace/HandyEQ-HW/LEON3_softcore/Nexys4_Master.xdc"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/Nexys4_Master.xdc"/>
         <Attr Name="ImportTime" Val="1393523245"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
