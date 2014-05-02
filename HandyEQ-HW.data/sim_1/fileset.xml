@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DARoots Version="1" Minor="30">
+  <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/designs/leon3-digilent-nexys4/testbench.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/designs/leon3-digilent-nexys4/testbench.vhd"/>
+        <Attr Name="ImportTime" Val="1393356919"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/tech/unisim/ise/unisim_VITAL.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="unisim"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/tech/unisim/ise/unisim_VITAL.vhd"/>
+        <Attr Name="ImportTime" Val="1393356991"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/synplify/sim/synplify.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="synplify"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/synplify/sim/synplify.vhd"/>
+        <Attr Name="ImportTime" Val="1393356988"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/synplify/sim/synattr.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="synplify"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/synplify/sim/synattr.vhd"/>
+        <Attr Name="ImportTime" Val="1393356988"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/cypress/ssram/package_utility.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="cypress"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/cypress/ssram/package_utility.vhd"/>
+        <Attr Name="ImportTime" Val="1393356974"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/cypress/ssram/components.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="cypress"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/cypress/ssram/components.vhd"/>
+        <Attr Name="ImportTime" Val="1393356973"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gsi/ssram/g880e18bt.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gsi"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gsi/ssram/g880e18bt.vhd"/>
+        <Attr Name="ImportTime" Val="1393356986"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gsi/ssram/core_burst.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gsi"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gsi/ssram/core_burst.vhd"/>
+        <Attr Name="ImportTime" Val="1393356986"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gsi/ssram/functions.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gsi"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gsi/ssram/functions.vhd"/>
+        <Attr Name="ImportTime" Val="1393356986"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/fmf/fifo/idt7202.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="fmf"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/fmf/fifo/idt7202.vhd"/>
+        <Attr Name="ImportTime" Val="1393356975"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/fmf/flash/m25p80.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="fmf"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/fmf/flash/m25p80.vhd"/>
+        <Attr Name="ImportTime" Val="1393356975"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/techmap/inferred/sim_pll.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="techmap"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/techmap/inferred/sim_pll.vhd"/>
+        <Attr Name="ImportTime" Val="1393356993"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/techmap/inferred/lpddr2_phy_inferred.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="techmap"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/techmap/inferred/lpddr2_phy_inferred.vhd"/>
+        <Attr Name="ImportTime" Val="1393356993"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/fmf/flash/s25fl064a.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="fmf"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/fmf/flash/s25fl064a.vhd"/>
+        <Attr Name="ImportTime" Val="1393356975"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/fmf/flash/flash.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="fmf"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/fmf/flash/flash.vhd"/>
+        <Attr Name="ImportTime" Val="1393356975"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/fmf/utilities/gen_utils.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="fmf"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/fmf/utilities/gen_utils.vhd"/>
+        <Attr Name="ImportTime" Val="1393356975"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/fmf/utilities/conversions.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="fmf"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/fmf/utilities/conversions.vhd"/>
+        <Attr Name="ImportTime" Val="1393356975"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gaisler/spi/spi_flash.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gaisler"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gaisler/spi/spi_flash.vhd"/>
+        <Attr Name="ImportTime" Val="1393356984"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gaisler/jtag/jtagtst.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gaisler"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gaisler/jtag/jtagtst.vhd"/>
+        <Attr Name="ImportTime" Val="1393356979"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gaisler/sim/sim.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gaisler"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gaisler/sim/sim.vhd"/>
+        <Attr Name="ImportTime" Val="1393356983"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gaisler/sim/sram.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gaisler"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gaisler/sim/sram.vhd"/>
+        <Attr Name="ImportTime" Val="1393356983"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gaisler/sim/sram16.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gaisler"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gaisler/sim/sram16.vhd"/>
+        <Attr Name="ImportTime" Val="1393356983"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gaisler/sim/phy.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gaisler"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gaisler/sim/phy.vhd"/>
+        <Attr Name="ImportTime" Val="1393356983"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gaisler/sim/ahbrep.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gaisler"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gaisler/sim/ahbrep.vhd"/>
+        <Attr Name="ImportTime" Val="1393356983"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gaisler/sim/delay_wire.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gaisler"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gaisler/sim/delay_wire.vhd"/>
+        <Attr Name="ImportTime" Val="1393356983"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/gaisler/sim/pwm_check.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="gaisler"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/gaisler/sim/pwm_check.vhd"/>
+        <Attr Name="ImportTime" Val="1393356983"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/grlib/stdlib/stdio.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="grlib"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/grlib/stdlib/stdio.vhd"/>
+        <Attr Name="ImportTime" Val="1393424769"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/grlib/stdlib/testlib.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="grlib"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/grlib/stdlib/testlib.vhd"/>
+        <Attr Name="ImportTime" Val="1393424769"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/grlib/util/util.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="grlib"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/grlib/util/util.vhd"/>
+        <Attr Name="ImportTime" Val="1393424769"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/work/debug/cpu_disas.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/work/debug/cpu_disas.vhd"/>
+        <Attr Name="ImportTime" Val="1393356995"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/grlib/sparc/sparc_disas.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="grlib"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/grlib/sparc/sparc_disas.vhd"/>
+        <Attr Name="ImportTime" Val="1393424769"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/grlib/sparc/cpu_disas.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="grlib"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/grlib/sparc/cpu_disas.vhd"/>
+        <Attr Name="ImportTime" Val="1393424769"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/work/debug/grtestmod.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/work/debug/grtestmod.vhd"/>
+        <Attr Name="ImportTime" Val="1393356995"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/work/debug/debug.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/work/debug/debug.vhd"/>
+        <Attr Name="ImportTime" Val="1393356995"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/micron/ddr_sdram/mt46v16m16.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="micron"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/micron/ddr_sdram/mt46v16m16.vhd"/>
+        <Attr Name="ImportTime" Val="1393356987"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/micron/sdram/mt48lc16m16a2.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="micron"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/micron/sdram/mt48lc16m16a2.vhd"/>
+        <Attr Name="ImportTime" Val="1393356987"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/tech/unisim/ise/simple_simprim.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="unisim"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/tech/unisim/ise/simple_simprim.vhd"/>
+        <Attr Name="ImportTime" Val="1393356991"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/tech/unisim/ise/unisim_VCOMP.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="unisim"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/tech/unisim/ise/unisim_VCOMP.vhd"/>
+        <Attr Name="ImportTime" Val="1393356991"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/tech/unisim/ise/unisim_VPKG.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="unisim"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/tech/unisim/ise/unisim_VPKG.vhd"/>
+        <Attr Name="ImportTime" Val="1393356991"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/grlib/amba/amba_tp.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="grlib"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/grlib/amba/amba_tp.vhd"/>
+        <Attr Name="ImportTime" Val="1393424769"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/grlib/amba/dma2ahb_tp.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="grlib"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/grlib/amba/dma2ahb_tp.vhd"/>
+        <Attr Name="ImportTime" Val="1393424769"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/cypress/ssram/cy7c1354b.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="cypress"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/cypress/ssram/cy7c1354b.vhd"/>
+        <Attr Name="ImportTime" Val="1393356973"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/micron/sdram/components.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="micron"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/micron/sdram/components.vhd"/>
+        <Attr Name="ImportTime" Val="1393356987"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/hynix/ddr2/components.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="hynix"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/hynix/ddr2/components.vhd"/>
+        <Attr Name="ImportTime" Val="1393356986"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/hynix/ddr2/HY5PS121621F.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="hynix"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/hynix/ddr2/HY5PS121621F.vhd"/>
+        <Attr Name="ImportTime" Val="1393356986"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/hynix/ddr2/HY5PS121621F_PACK.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="hynix"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/hynix/ddr2/HY5PS121621F_PACK.vhd"/>
+        <Attr Name="ImportTime" Val="1393356986"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/GRLIB/lib/cypress/ssram/cy7c1380d.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="cypress"/>
+        <Attr Name="ImportPath" Val="Y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/lib/cypress/ssram/cy7c1380d.vhd"/>
+        <Attr Name="ImportTime" Val="1393356974"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="testbench"/>
+      <Option Name="SimulationRunTime" Val="1000 ns"/>
+      <Option Name="UnitUnderTest" Val="UUT"/>
+      <Option Name="SimMode" Val="post-implementation"/>
+      <Option Name="SrcSet" Val="sources_1"/>
+      <Option Name="FuseNoDebug" Val="1"/>
+      <Option Name="NGOutputHDLFormat" Val="vhdl"/>
+      <Option Name="NGRetainHierarchy" Val="1"/>
+    </Config>
+  </FileSet>
+</DARoots>
