@@ -69,10 +69,6 @@ entity xadc_wiz_0 is
     channel_out     : out  STD_LOGIC_VECTOR (4 downto 0);    -- Channel Selection Outputs
     eoc_out         : out  STD_LOGIC;                        -- End of Conversion Signal
     eos_out         : out  STD_LOGIC;                        -- End of Sequence Signal
-    ot_out          : out  STD_LOGIC;                        -- Over-Temperature alarm output
-    vccaux_alarm_out : out  STD_LOGIC;                        -- VCCAUX-sensor alarm output
-    vccint_alarm_out : out  STD_LOGIC;                        -- VCCINT-sensor alarm output
-    user_temp_alarm_out : out  STD_LOGIC;                        -- Temperature-sensor alarm output
     alarm_out       : out STD_LOGIC;                         -- OR'ed output of all the Alarms
     vp_in           : in  STD_LOGIC;                         -- Dedicated Analog Input Pair
     vn_in           : in  STD_LOGIC
@@ -82,9 +78,12 @@ end xadc_wiz_0;
 architecture xilinx of xadc_wiz_0 is
 
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of xilinx : architecture is "xadc_wiz_0,xadc_wiz_v3_0,{component_name=xadc_wiz_0,enable_axi=false,enable_axi4stream=false,dclk_frequency=100,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=true,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=true,enable_Vccaux_alaram=trueenable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=true,user_temp_alaram=true,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}";
+  attribute CORE_GENERATION_INFO of xilinx : architecture is "xadc_wiz_0,xadc_wiz_v3_0,{component_name=xadc_wiz_0,enable_axi=false,enable_axi4stream=false,dclk_frequency=100,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=true,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=falseenable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}";
 
 
+  signal FLOAT_VCCAUX_ALARM : std_logic;
+  signal FLOAT_VCCINT_ALARM : std_logic;
+  signal FLOAT_USER_TEMP_ALARM : std_logic;
   signal FLOAT_VBRAM_ALARM : std_logic;
   signal FLOAT_MUXADDR : std_logic_vector (4 downto 0);
   signal aux_channel_p : std_logic_vector (15 downto 0);
@@ -94,9 +93,6 @@ architecture xilinx of xadc_wiz_0 is
 begin
 
        alarm_out <= alm_int(7);
-       vccaux_alarm_out <= alm_int(2);
-       vccint_alarm_out <= alm_int(1);
-       user_temp_alarm_out <= alm_int(0);
 
         aux_channel_p(0) <= '0';
         aux_channel_n(0) <= '0';
@@ -148,9 +144,9 @@ begin
 
  U0 : XADC
      generic map(
-        INIT_40 => X"0013", -- config reg 0
-        INIT_41 => X"3100", -- config reg 1
-        INIT_42 => X"0400", -- config reg 2
+        INIT_40 => X"0413", -- config reg 0
+        INIT_41 => X"310F", -- config reg 1
+        INIT_42 => X"0500", -- config reg 2
         INIT_48 => X"0100", -- Sequencer channel selection
         INIT_49 => X"0000", -- Sequencer channel selection
         INIT_4A => X"0000", -- Sequencer Average selection
@@ -170,7 +166,7 @@ begin
         INIT_58 => X"5999",  -- Vbram upper alarm limit
         INIT_5C => X"5111",  -- Vbram lower alarm limit
         SIM_DEVICE => "7SERIES",
-        SIM_MONITOR_FILE => "y:/DAT096-Embedded System Design/Workspace/HandyEQ-HW/LEON3_softcore/GRLIB/designs/leon3-digilent-nexys4/Leon3_ADC/Leon3_ADC.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt"
+        SIM_MONITOR_FILE => "y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt"
         )
 
 port map (
@@ -194,7 +190,7 @@ port map (
         JTAGBUSY            => open,
         JTAGLOCKED          => open,
         JTAGMODIFIED        => open,
-        OT                  => ot_out,
+        OT                  => open,
      
         MUXADDR             => FLOAT_MUXADDR,
         VN                  => vn_in,
