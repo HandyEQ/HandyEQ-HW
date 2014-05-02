@@ -28,21 +28,21 @@ signal head         : integer;
 signal tail         : integer;
 signal full, empty  : std_logic;
 signal chunk_counter          : integer;
-signal new_input, new_output  : std_logic; 
+signal new_input, new_output  : std_logic;
         
 attribute mark_debug : string;
 attribute mark_debug of chunk_counter : signal is "true";
 attribute mark_debug of full : signal is "true";
 attribute mark_debug of empty : signal is "true";
 attribute mark_debug of head : signal is "true"; 
-attribute mark_debug of tail : signal is "true";     
+attribute mark_debug of tail : signal is "true";
 attribute mark_debug of input_irq : signal is "true";     
 attribute mark_debug of input_sample : signal is "true";    
 attribute mark_debug of chunk_irq : signal is "true";    
 attribute mark_debug of output_select : signal is "true";   
 attribute mark_debug of output_ready : signal is "true";
 attribute mark_debug of new_input : signal is "true";
-attribute mark_debug of new_output : signal is "true";       
+attribute mark_debug of new_output : signal is "true";
         
 begin  
    main: process(clk, reset) is
@@ -63,7 +63,7 @@ begin
         tail <= 0;
         output_ready <= '0';
         output_sample <= (others => '0');
-        new_output <= '1';          
+        new_output <= '1';
       elsif rising_edge(clk) then
         head_var := head;         
         tail_var := tail;         

@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <!--Product Version: Vivado v2013.4 (64-bit)-->
+<<<<<<< HEAD
+<Project Version="6" Minor="14" Path="Z:/.win/My Documents/DAT096_Embedded System Design Project/HandyEQ/HandyEQ/HandyEQ.xpr">
+=======
 <Project Version="6" Minor="14" Path="Y:/DAT096-Embedded System Design/HandyEQ-HW/HandyEQ/HandyEQ.xpr">
+>>>>>>> SoftwareBuffer
 	<FileSet Dir="sources_1" File="fileset.xml"/>
 	<FileSet Dir="constrs_1" File="fileset.xml"/>
 	<FileSet Dir="sim_1" File="fileset.xml"/>

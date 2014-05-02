@@ -137,11 +137,8 @@ begin
           
         elsif output_select = '0' then
           output_ready  <= '0';  
-          new_output <= '1';      
+          new_output <= '1';
         end if; 
       end if;     
     end process;
 end architecture arch;
-
-
-

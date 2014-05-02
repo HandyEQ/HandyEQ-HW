@@ -82,22 +82,35 @@ entity leon3mp is
     data            : inout std_logic_vector(15 downto 0);
 
     -- 7 segment display
+    sevenSeg          : inout   std_logic_vector(15 downto 0); --inout coz GPIO
     --seg             : out   std_logic_vector(6 downto 0);
     --an              : out   std_logic_vector(7 downto 0);
 
     -- LEDs
-    --Led             : out   std_logic_vector(3 downto 0);
+    LED             : inout   std_logic_vector(15 downto 0);
+    colorLEDs         : inout   std_logic_vector(5 downto 0);
 
     -- Switches
-    sw              : in    std_logic_vector(1 downto 0);
+    sw              : inout    std_logic_vector(15 downto 0);
     
-    --gpio
-    gpioA           : inout std_logic_vector(7 downto 0);
-    gpioB           : inout std_logic_vector(5 downto 0);
-
+    -- GPIO
+    encoder         : inout std_logic_vector(3 downto 0);
+    OLED            : inout std_logic_vector(4 downto 0);
+    testModule1             : inout std_logic_vector(5 downto 0);
+    testModule2             : inout std_logic_vector(5 downto 0);
+    --sevenSeg above is GPIO also
+    sample_ready_port      : out   std_logic;
+    chunk_ready_port       : out   std_logic;
+    
+    -- SPI
+    sck : inout std_ulogic;
+    miso : inout std_ulogic;
+    mosi : inout std_ulogic;
+    spisel : in std_ulogic;
+     
     -- Buttons
     btnCpuResetn    : in    std_ulogic;
-    btn             : in    std_logic_vector(4 downto 0);
+    btn             : inout    std_logic_vector(4 downto 0); --inout if gpio
 
     -- VGA Connector
     --vgaRed          : out   std_logic_vector(2 downto 0);
@@ -151,6 +164,7 @@ entity leon3mp is
 end;
 
 architecture rtl of leon3mp is
+
   component PLLE2_ADV
   generic (
      BANDWIDTH : string := "OPTIMIZED";
@@ -270,7 +284,18 @@ architecture rtl of leon3mp is
                sample:in STD_LOGIC_vector(15 downto 0);
                PWM_out:OUT STD_LOGIc;
                SD_audio_out:OUT STD_LOGIc);
-    end component;  
+    end component;
+  
+  component debouncer
+      Generic(
+              DEBNC_CLOCKS : integer;
+              PORT_WIDTH : integer);
+      Port(
+            SIGNAL_I : in std_logic_vector(2 downto 0);
+            CLK_I : in std_logic;          
+            SIGNAL_O : out std_logic_vector(2 downto 0)
+            );
+  end component;
 
   signal CLKFBOUT      : std_logic;
   signal CLKFBIN       : std_logic;
@@ -293,7 +318,16 @@ architecture rtl of leon3mp is
   signal gpiooB : gpio_out_type;
   signal gpioiC : gpio_in_type;
   signal gpiooC : gpio_out_type;
-  signal gpio_signal : std_logic;
+  
+  signal adc_data_ready_signal : std_logic;
+  signal gpioA_signal : std_logic_vector(31 downto 0);
+  signal gpioB_signal : std_logic_vector(31 downto 0);
+  signal gpioC_signal : std_logic_vector(31 downto 0);
+  --signal gpio_signal : std_ulogic;
+  
+  -- SPI signals
+--  signal spii : spi_in_type;
+--  signal spio : spi_out_type;
 
   signal apbi  : apb_slv_in_type;
   signal apbo  : apb_slv_out_vector := (others => apb_none);
@@ -347,7 +381,6 @@ architecture rtl of leon3mp is
   signal Led_signal : std_logic_vector(15 downto 0);
   signal drdy_signal :  std_logic;
   signal AD_data_signal : std_logic_vector(15 downto 0);
-  
   -- RS232 APB Uart
   signal rxd1 : std_logic;
   signal txd1 : std_logic;
@@ -419,9 +452,6 @@ begin
         port map (clkm, rstn, ahbmi, ahbmo(i), ahbsi, ahbso, irqi(i), irqo(i), dbgi(i), dbgo(i));
     end generate;
 
-   --led(3)  <= not dbgo(0).error;
-   --led(2)  <= not dsuo.active;
-
     -- LEON3 Debug Support Unit    
     dsugen : if CFG_DSU = 1 generate
       dsu0 : dsu3
@@ -450,7 +480,6 @@ begin
    -- led(1) <= not duo.txd;
   end generate;
   nouah : if CFG_AHB_UART = 0 generate apbo(4) <= apb_none; end generate;
-  
 
   ahbjtaggen0 :if CFG_AHB_JTAG = 1 generate
     ahbjtag0 : ahbjtag generic map(tech => fabtech, hindex => CFG_NCPU+CFG_AHB_UART)
@@ -536,9 +565,10 @@ begin
 -----------------------------------------------------------------------
 --- Time Unit ---------------------------------------------------------
 -----------------------------------------------------------------------
+  -- Time Unit
   gpt : if CFG_GPT_ENABLE /= 0 generate
     timer0 : gptimer
-      generic map (pindex => 3, paddr => 3, pirq => CFG_GPT_IRQ,
+      generic map (pindex => 3, paddr => 3, pirq => 7,
                    sepirq => CFG_GPT_SEPIRQ, sbits => CFG_GPT_SW,
                    ntimers => CFG_GPT_NTIM, nbits  => CFG_GPT_TW)
       port map (rstn, clkm, apbi, apbo(3), gpti, open);
@@ -635,42 +665,6 @@ begin
   nram : if CFG_AHBRAMEN = 0 generate ahbso(3) <= ahbs_none; end generate;
 
 -----------------------------------------------------------------------
----  GPIOA (APB 0x80000B00) -------------------------------------------
------------------------------------------------------------------------
-
-  gpio1 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
-    --gpioA(3 downto 0) <= sw(15 downto 12);
-    --Led(15 downto 12) <= gpioA(7 downto 4); 
-    grgpio1: grgpio
-      generic map( pindex => 11, paddr => 11, imask => CFG_GRGPIO_IMASK, nbits => 8)
-    port map( rstn, clkm, apbi, apbo(11), gpioiA, gpiooA);
-    
-    pio_pads : for i in 0 to 7 generate
-      pio_pad1 : iopad generic map (tech => padtech)
-        port map (gpioA(i), gpiooA.dout(i), gpiooA.oen(i), gpioiA.din(i));
-    end generate;
-  end generate;
-   
------------------------------------------------------------------------
----  GPIOB (APB 0x80000C00) -------------------------------------------
------------------------------------------------------------------------
-
--- modify signals of 2 port maps
-
- gpio2 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
-   --gpioB(2 downto 0) <= sw(11 downto 9);
-   --Led(11 downto 9) <= gpioB(5 downto 3); 
-   grgpio2: grgpio
-     generic map( pindex => 12, paddr => 12, imask => CFG_GRGPIO_IMASK, nbits => 6)
-     port map( rstn, clkm, apbi, apbo(12), gpioiB, gpiooB);
-    
-     pio_pads : for i in 0 to 5 generate
-       pio_pad2 : iopad generic map (tech => padtech)
-         port map (gpioB(i), gpiooB.dout(i), gpiooB.oen(i), gpioiB.din(i));
-     end generate;
- end generate;
-
------------------------------------------------------------------------
 --  Test report module, only used for simulation ----------------------
 -----------------------------------------------------------------------
 
@@ -739,8 +733,89 @@ Buffer_apb_out_map : Buffer_apb_out
            
      --signals
      PWM_out_port <= PWM_out_signal;
-     SD_audio_out_port <= SD_audio_out_signal;  
-       
+     SD_audio_out_port <= SD_audio_out_signal; 
+   
+-----------------------------------------------------------------------
+---  GPIOA (APB 0x80000900) -------------------------------------------
+-----------------------------------------------------------------------
+--adc_data_ready_signal <= sw1;
+--interrupts used: 11, 13, 14, 15.
+gpio1 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
+    grgpio1: grgpio
+        generic map( pindex => 9, paddr => 9, pirq => 9, imask => 16#0000FFFF#, nbits => 32, irqgen => 1)
+        port map( rstn, clkm, apbi, apbo(9), gpioiA, gpiooA);
+        
+        pio_pads : for i in 0 to 31 generate
+          pio_pad1 : iopad generic map (tech => padtech)
+            port map (gpioA_signal(i), gpiooA.dout(i), gpiooA.oen(i), gpioiA.din(i)); --adc_data_ready_signal btn(2) sw1
+        end generate;
+end generate;
+	
+gpioA_signal(31 downto 16) <= LED;
+gpioA_signal(15 downto 0) <= sw;
+
+-----------------------------------------------------------------------
+---  GPIOB (APB 0x80000A00) -------------------------------------------
+-----------------------------------------------------------------------
+
+gpio2 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
+    grgpio2: grgpio
+        generic map( pindex => 10, paddr => 10, pirq => 10, imask => 16#03E0FFFF#, nbits => 32, irqgen => 1)
+        port map( rstn, clkm, apbi, apbo(10), gpioiB, gpiooB);
+
+        pio_pads : for i in 0 to 31 generate
+          pio_pad1 : iopad generic map (tech => padtech)
+            port map (gpioB_signal(i), gpiooB.dout(i), gpiooB.oen(i), gpioiB.din(i));
+        end generate;
+end generate;
+
+gpioB_signal(31 downto 26) <= colorLEDs;
+gpioB_signal(25 downto 21) <= btn;
+gpioB_signal(20 downto 16) <= OLED;
+gpioB_signal(15 downto 12) <= encoder;
+gpioB_signal(11 downto 6) <= testModule1;
+gpioB_signal(5 downto 0) <= testModule2;
+
+-----------------------------------------------------------------------
+---  GPIOC (APB 0x80000B00) -------------------------------------------
+-----------------------------------------------------------------------
+sample_ready_port <= adc_data_ready_signal;
+--chunk_ready_port <= ; --signal coming from the input buffer noting a full buffer
+
+gpio3 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
+    grgpio3: grgpio
+        generic map( pindex => 11, paddr => 11, nbits => 16)
+        port map( rstn, clkm, apbi, apbo(11), gpioiC, gpiooC);
+
+        pio_pads : for i in 0 to 15 generate
+          pio_pad1 : iopad generic map (tech => padtech)
+            port map (gpioC_signal(i), gpiooC.dout(i), gpiooC.oen(i), gpioiC.din(i));
+        end generate;
+end generate;
+   
+gpioC_signal(15 downto 0) <= sevenSeg;
+
+-----------------------------------------------------------------------
+---  SPI (APB 0x80000C00) OLED   --------------------------------------
+-----------------------------------------------------------------------   
+
+-- SPI controller with FIFO depth 2 and no slave select register
+
+spictrl0 : spictrl generic map (pindex => 12, paddr => 12, fdepth => 1, slvselen => 0, slvselsz => 1, twen => 0)
+                   port map (rstn, clkm, apbi, apbo(12), spii, spio, open);
+                   
+       misopad : iopad generic map (tech => padtech)
+        port map (miso, spio.miso, spio.misooen, spii.miso);
+        
+       mosipad : iopad generic map (tech => padtech)
+        port map (mosi, spio.mosi, spio.mosioen, spii.mosi);
+        
+       sckpad : iopad generic map (tech => padtech)
+        port map (sck, spio.sck, spio.sckoen, spii.sck);
+        
+       spiselpad : inpad generic map (tech => padtech)
+        port map (spisel, spii.spisel);
+
 -----------------------------------------------------------------------
 ---  Ethernet Clock Generation  ---------------------------------------
 -----------------------------------------------------------------------

@@ -1,15 +1,48 @@
-//#include "uart.h"
+//#define UART_BASE_ADDRESS 0x80000100
+
+#include "uart.h"
 #include "gpio.h"
 #include "digilent_nexys4.h"
-#include <stdio.h>
+//#include <stdio.h>
+
+/*************************************************************/
+int flag = 0, flag2 = 0;
+
+extern void *catch_interrupt(void func(), int irq);
+int *lreg = (int *) 0x80000000;
+
+#define ICLEAR 0x20c
+#define IMASK  0x240
+#define IFORCE 0x208
+
+enable_irq (int irq) 
+{
+
+  lreg[ICLEAR/4] = (1 << irq);  // clear any pending irq
+  lreg[IMASK/4] |= (1 << irq);  // unmaks irq
+}
+
+force_irq (int irq) { lreg[IFORCE/4] = (1 << irq); }
+
+
+void irqhandler(int irq)
+{
+  /*if (irq == 13) {
+    flag = 1;
+    //putStr("iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii\n\r");
+  } */
+    //putStr("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n\r");
+    putInt(flag++);
+    flag++;
+}
+/*************************************************************/
 
 int main(void)
 {
-  /*volatile char* UART_DATA = (char*)UART1;
-  volatile int* UART_STATUS = (int*)UART1 + 0x01;
-  volatile int* UART_CONTROL = (int*)UART1 + 0x02;
-  volatile int* UART_SCALER = (int*)UART1 + 0x03;*/
-  
+  /*volatile char* UART_DATA = (char*)UART_BASE_ADDRESS;
+  volatile int* UART_STATUS = (int*)UART_BASE_ADDRESS + 0x1;
+  volatile int* UART_CONTROL = (int*)UART_BASE_ADDRESS + 0x2;
+  volatile int* UART_SCALER = (int*)UART_BASE_ADDRESS + 0x3;*/
   int i;
   char str[80];
 
@@ -22,7 +55,16 @@ int main(void)
 
   /**UART_SCALER = 650;
   *UART_CONTROL = 0x3;*/
-
+  putStr("Test Started, Entering Infinite Loop.\n\r");
+  
+  //enable_irq (11);
+  catch_interrupt(irqhandler, 11);
+  enable_irq (12);
+  catch_interrupt(irqhandler, 12);
+  //enable_irq (13);
+  catch_interrupt(irqhandler, 13);
+  //enable_irq (14);
+  catch_interrupt(irqhandler, 14);
   /*printf("Test Started, Entering Infinite Loop.\n\r");
   scanf("%s", str);
   printf("SCANF executed. Rec'd: %s\n\r", str);*/
@@ -42,6 +84,12 @@ int main(void)
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 
   GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+  GPIOA -> interrupt = 0x0000000F;
+  GPIOA -> int_pol = 0x0000000F;
+  GPIOA -> int_edg = 0x0000000F;
+
+  putInt(GPIOA -> capability);
 
   /* GPIOB */
 
@@ -77,9 +125,25 @@ int main(void)
     GPIO_WriteBit(GPIOB, NEXYS4_JB8, GPIO_ReadInputDataBit(GPIOB, NEXYS4_JB2));
 
     GPIO_WriteBit(GPIOB, NEXYS4_JB9, GPIO_ReadInputDataBit(GPIOB, NEXYS4_JB3));
+
+    if(flag2 != flag)
+    {
+      flag2 = flag;
+      putInt(flag);
+    }
+    i = *(volatile int*)(0x80000800);
+  //putInt(sample);
+
+  /*if (sample & 0x00000800)
+    sample &= 0xFFFFF7FF;
+  else
+    sample |= 0x00000800;*/
+
+  *(volatile int*)(0x80000A00) = i;
   }
 
-  printf("Test Finished.\n\r");
+  //printf("Test Finished\n\r");
 
   return 0;
+
 }

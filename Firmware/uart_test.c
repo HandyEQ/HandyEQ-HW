@@ -1,4 +1,4 @@
-#include "uart.h"
+#include "uart1.h"
 #include "gpio.h"
 #include "leon3_it.h"
 #include "digilent_nexys4.h"
@@ -33,7 +33,7 @@ int main(void)
 
   /* GPIOA */
 
-  GPIO_DeInit(GPIOA);
+  /*GPIO_DeInit(GPIOA);
 
   GPIO_StructInit(&GPIO_InitStructure);
 
@@ -45,11 +45,11 @@ int main(void)
   GPIO_InitStructure.GPIO_Pin = NEXYS4_LED12 | NEXYS4_LED13 | NEXYS4_LED14 | NEXYS4_LED15;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
+  GPIO_Init(GPIOA, &GPIO_InitStructure);*/
 
   /* GPIOB */
 
-  GPIO_DeInit(GPIOB);
+  /*GPIO_DeInit(GPIOB);
 
   GPIO_StructInit(&GPIO_InitStructure);
 
@@ -61,7 +61,7 @@ int main(void)
   GPIO_InitStructure.GPIO_Pin = NEXYS4_JB7 | NEXYS4_JB8 | NEXYS4_JB9;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 
-  GPIO_Init(GPIOB, &GPIO_InitStructure);
+  GPIO_Init(GPIOB, &GPIO_InitStructure);*/
 
   /******* Main Code *****************************/
   while(1)
@@ -102,9 +102,9 @@ int main(void)
       UART_SendData(UART1, receive_buffer);
     }
     
-    UART_SendData(UART1, '_');
+    //UART_SendData(UART1, '_');
 
-    /* GPIOA */
+    /* GPIOA 
     GPIO_WriteBit(GPIOA, NEXYS4_LED12, GPIO_ReadInputDataBit(GPIOA, NEXYS4_SW12));
 
     GPIO_WriteBit(GPIOA, NEXYS4_LED13, GPIO_ReadInputDataBit(GPIOA, NEXYS4_SW13));
@@ -114,12 +114,12 @@ int main(void)
     GPIO_WriteBit(GPIOA, NEXYS4_LED15, GPIO_ReadInputDataBit(GPIOA, NEXYS4_SW15));
 
 
-    /* GPIOB */
+    /* GPIOB 
     GPIO_WriteBit(GPIOB, NEXYS4_JB7, GPIO_ReadInputDataBit(GPIOB, NEXYS4_JB1));
 
     GPIO_WriteBit(GPIOB, NEXYS4_JB8, GPIO_ReadInputDataBit(GPIOB, NEXYS4_JB2));
 
-    GPIO_WriteBit(GPIOB, NEXYS4_JB9, GPIO_ReadInputDataBit(GPIOB, NEXYS4_JB3));
+    GPIO_WriteBit(GPIOB, NEXYS4_JB9, GPIO_ReadInputDataBit(GPIOB, NEXYS4_JB3));*/
   }
 
   return 0;

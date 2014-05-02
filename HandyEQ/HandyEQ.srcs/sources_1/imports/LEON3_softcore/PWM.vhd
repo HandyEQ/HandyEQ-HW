@@ -30,7 +30,7 @@ begin
       PWM_sample <= sample(width-1 downto width-accuracy);
       PWM_out <= '0';
       
-  elsif (rising_edge(CLK)) then	
+  elsif (rising_edge(CLK)) then
 	if(PWM_counter <= PWM_sample) then
        PWM_out <= '1';
        PWM_counter  <= STD_LOGIC_VECTOR(unsigned(PWM_counter) + 1);
@@ -47,5 +47,4 @@ begin
     	
   end if;
 end process;
-
 END Arch;

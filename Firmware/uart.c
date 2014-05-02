@@ -1,5 +1,3 @@
-#include "uart.h"
-
 struct uart_regs *uart_struct = (struct uart_regs *) uart_addr;
 
 void init_uart(int baud_rate){

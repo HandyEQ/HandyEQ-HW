@@ -720,3 +720,75 @@ set_property IOSTANDARD LVCMOS33 [get_ports SD_audio_out]
 #set_property IOSTANDARD LVCMOS33 [get_ports {MemAdr[22]}]
 
 #set_property SEVERITY {Warning} [get_drc_checks NSTD-1]
+<<<<<<< HEAD
+=======
+
+create_debug_core u_ila_0 labtools_ila_v3
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_BUFG]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {buff_component/head[0]} {buff_component/head[1]} {buff_component/head[2]} {buff_component/head[3]} {buff_component/head[4]} {buff_component/head[5]} {buff_component/head[6]} {buff_component/head[7]} {buff_component/head[8]} {buff_component/head[9]} {buff_component/head[10]} {buff_component/head[11]} {buff_component/head[12]} {buff_component/head[13]} {buff_component/head[14]} {buff_component/head[15]} {buff_component/head[16]} {buff_component/head[17]} {buff_component/head[18]} {buff_component/head[19]} {buff_component/head[20]} {buff_component/head[21]} {buff_component/head[22]} {buff_component/head[23]} {buff_component/head[24]} {buff_component/head[25]} {buff_component/head[26]} {buff_component/head[27]} {buff_component/head[28]} {buff_component/head[29]} {buff_component/head[30]} {buff_component/head[31]}]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {buff_component/tail[0]} {buff_component/tail[1]} {buff_component/tail[2]} {buff_component/tail[3]} {buff_component/tail[4]} {buff_component/tail[5]} {buff_component/tail[6]} {buff_component/tail[7]} {buff_component/tail[8]} {buff_component/tail[9]} {buff_component/tail[10]} {buff_component/tail[11]} {buff_component/tail[12]} {buff_component/tail[13]} {buff_component/tail[14]} {buff_component/tail[15]} {buff_component/tail[16]} {buff_component/tail[17]} {buff_component/tail[18]} {buff_component/tail[19]} {buff_component/tail[20]} {buff_component/tail[21]} {buff_component/tail[22]} {buff_component/tail[23]} {buff_component/tail[24]} {buff_component/tail[25]} {buff_component/tail[26]} {buff_component/tail[27]} {buff_component/tail[28]} {buff_component/tail[29]} {buff_component/tail[30]} {buff_component/tail[31]}]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {buff_component/chunk_counter[0]} {buff_component/chunk_counter[1]} {buff_component/chunk_counter[2]} {buff_component/chunk_counter[3]} {buff_component/chunk_counter[4]} {buff_component/chunk_counter[5]} {buff_component/chunk_counter[6]} {buff_component/chunk_counter[7]} {buff_component/chunk_counter[8]} {buff_component/chunk_counter[9]} {buff_component/chunk_counter[10]} {buff_component/chunk_counter[11]} {buff_component/chunk_counter[12]} {buff_component/chunk_counter[13]} {buff_component/chunk_counter[14]} {buff_component/chunk_counter[15]} {buff_component/chunk_counter[16]} {buff_component/chunk_counter[17]} {buff_component/chunk_counter[18]} {buff_component/chunk_counter[19]} {buff_component/chunk_counter[20]} {buff_component/chunk_counter[21]} {buff_component/chunk_counter[22]} {buff_component/chunk_counter[23]} {buff_component/chunk_counter[24]} {buff_component/chunk_counter[25]} {buff_component/chunk_counter[26]} {buff_component/chunk_counter[27]} {buff_component/chunk_counter[28]} {buff_component/chunk_counter[29]} {buff_component/chunk_counter[30]} {buff_component/chunk_counter[31]}]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {buff_out_component/head[0]} {buff_out_component/head[1]} {buff_out_component/head[2]} {buff_out_component/head[3]} {buff_out_component/head[4]} {buff_out_component/head[5]} {buff_out_component/head[6]} {buff_out_component/head[7]} {buff_out_component/head[8]} {buff_out_component/head[9]} {buff_out_component/head[10]} {buff_out_component/head[11]} {buff_out_component/head[12]} {buff_out_component/head[13]} {buff_out_component/head[14]} {buff_out_component/head[15]} {buff_out_component/head[16]} {buff_out_component/head[17]} {buff_out_component/head[18]} {buff_out_component/head[19]} {buff_out_component/head[20]} {buff_out_component/head[21]} {buff_out_component/head[22]} {buff_out_component/head[23]} {buff_out_component/head[24]} {buff_out_component/head[25]} {buff_out_component/head[26]} {buff_out_component/head[27]} {buff_out_component/head[28]} {buff_out_component/head[29]} {buff_out_component/head[30]} {buff_out_component/head[31]}]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {buff_out_component/tail[0]} {buff_out_component/tail[1]} {buff_out_component/tail[2]} {buff_out_component/tail[3]} {buff_out_component/tail[4]} {buff_out_component/tail[5]} {buff_out_component/tail[6]} {buff_out_component/tail[7]} {buff_out_component/tail[8]} {buff_out_component/tail[9]} {buff_out_component/tail[10]} {buff_out_component/tail[11]} {buff_out_component/tail[12]} {buff_out_component/tail[13]} {buff_out_component/tail[14]} {buff_out_component/tail[15]} {buff_out_component/tail[16]} {buff_out_component/tail[17]} {buff_out_component/tail[18]} {buff_out_component/tail[19]} {buff_out_component/tail[20]} {buff_out_component/tail[21]} {buff_out_component/tail[22]} {buff_out_component/tail[23]} {buff_out_component/tail[24]} {buff_out_component/tail[25]} {buff_out_component/tail[26]} {buff_out_component/tail[27]} {buff_out_component/tail[28]} {buff_out_component/tail[29]} {buff_out_component/tail[30]} {buff_out_component/tail[31]}]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {DO_signal[0]} {DO_signal[1]} {DO_signal[2]} {DO_signal[3]} {DO_signal[4]} {DO_signal[5]} {DO_signal[6]} {DO_signal[7]} {DO_signal[8]} {DO_signal[9]} {DO_signal[10]} {DO_signal[11]} {DO_signal[12]} {DO_signal[13]} {DO_signal[14]} {DO_signal[15]}]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list chunk_irq_signal]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list DEN_signal]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list DRDY_signal]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list buff_component/empty]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list buff_out_component/empty]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list eoc_out_signal]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list buff_out_component/full]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list buff_component/full]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe14]
+connect_debug_port u_ila_0/probe14 [get_nets [list buff_component/I1]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe15]
+connect_debug_port u_ila_0/probe15 [get_nets [list buff_out_component/input_irq]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe16]
+connect_debug_port u_ila_0/probe16 [get_nets [list irq_toogle]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe17]
+connect_debug_port u_ila_0/probe17 [get_nets [list buff_component/n_0_chunk_irq_reg]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe18]
+connect_debug_port u_ila_0/probe18 [get_nets [list buff_out_component/output_select]]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+>>>>>>> SoftwareBuffer

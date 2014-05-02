@@ -1,6 +1,3 @@
-
-
-
 -----------------------------------------------------------------------------
 -- LEON3 Demonstration design test bench configuration
 -- Copyright (C) 2009 Aeroflex Gaisler
@@ -99,9 +96,9 @@ package config is
   constant CFG_DSU_ETH : integer := 1 + 0 + 0;
   constant CFG_ETH_BUF : integer := 2;
   constant CFG_ETH_IPM : integer := 16#8110#;
-  constant CFG_ETH_IPL : integer := 16#1711#;
+  constant CFG_ETH_IPL : integer := 16#1711#; -- 16#1718#;
   constant CFG_ETH_ENM : integer := 16#200000#;
-  constant CFG_ETH_ENL : integer := 16#000011#;
+  constant CFG_ETH_ENL : integer := 16#000011#; --16#000018#;
 -- LEON2 memory controller
   constant CFG_MCTRL_LEON2 : integer := 1;
   constant CFG_MCTRL_RAM8BIT : integer := 0;

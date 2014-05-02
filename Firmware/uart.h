@@ -20,4 +20,6 @@ void send_char_uart(char data);
 char recieve_uart();
 void sent_string_uart(char *data);
 
+#define SIM 2
+#define SYN 1
 #endif

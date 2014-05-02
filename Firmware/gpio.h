@@ -14,10 +14,10 @@ typedef struct
   int int_map_reg[8]; /*!< GPIO interrupt map registers                                            Address offset: 0x20-3C */
 }GPIO_TypeDef;
 
-#define GPIOA               ((GPIO_TypeDef *) 0x80000B00)
-#define GPIOB               ((GPIO_TypeDef *) 0x80000C00)
-/*#define GPIOC               ((GPIO_TypeDef *) 0x00000000)
-#define GPIOD               ((GPIO_TypeDef *) 0x00000000)*/
+#define GPIOA               ((GPIO_TypeDef *) 0x80000900)
+#define GPIOB               ((GPIO_TypeDef *) 0x80000A00)
+#define GPIOC               ((GPIO_TypeDef *) 0x80000B00)
+//#define GPIOD               ((GPIO_TypeDef *) 0x80000000)
 
 #define IS_GPIO_ALL_PERIPH(PERIPH) (((PERIPH) == GPIOA) || \
                                     ((PERIPH) == GPIOB) || \
@@ -46,10 +46,11 @@ typedef enum
 
 typedef struct
 {
-  int GPIO_Pin;              	    /*!< Specifies the GPIO pins to be configured.
-                                  This parameter can be any value of @ref GPIO_pins_define */                               
+  int GPIO_Pin;              	  /*!< Specifies the GPIO pins to be configured.
+                                       This parameter can be any value of @ref GPIO_pins_define */
+                                       
   GPIOMode_TypeDef GPIO_Mode;     /*!< Specifies the operating mode for the selected pins.
-                                  This parameter can be a value of @ref GPIOMode_TypeDef   */
+                                       This parameter can be a value of @ref GPIOMode_TypeDef   */
 }GPIO_InitTypeDef;
 
 #define GPIO_Pin_0                 (0x00000001)  /*!< Pin 0 selected    */

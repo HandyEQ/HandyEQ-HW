@@ -39,7 +39,7 @@ component buff_out is
         clk             : in    std_logic;
         reset           : in    std_logic;
         input_irq       : in    std_logic;
-        input_sample    : in    std_logic_vector(SIZE-1 downto 0); 
+        input_sample    : in    std_logic_vector(SIZE-1 downto 0);
         output_select   : in    std_logic;
         output_ready    : out   std_logic;
         output_sample   : out   std_logic_vector(SIZE-1 downto 0)
@@ -65,7 +65,6 @@ constant pconfig        : apb_config_type := (
 attribute mark_debug : string;
 attribute mark_debug of apbi : signal is "true";
 attribute mark_debug of apbo : signal is "true";
-
 begin
   
   -- combinatorial process
@@ -84,7 +83,7 @@ begin
         --apb_signals.input_sample(sample_size-1) <= apbi.pwdata(31);
         --apb_signals.input_sample(sample_size-2 downto 0) <= apbi.pwdata(sample_size-2 downto 0);  
       end if;
-    end if;  
+    end if;
   end process; 
 
   -- Sequential process
@@ -97,7 +96,7 @@ begin
       process_signals.output_select <= output_select_pwm; -- from pwm
       process_signals.input_irq <= apb_signals.input_irq; -- from soft
       process_signals.input_sample <= apb_signals.input_sample; -- from soft
-      
+
       sample_pwm <= (others => '0');
       sample_pwm(sample_size-1 downto 0) <= process_signals.output_sample;
     end if;

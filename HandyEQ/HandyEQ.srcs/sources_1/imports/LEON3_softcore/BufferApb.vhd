@@ -16,7 +16,6 @@ entity Buffer_apb is
     sample_size : integer := 16;
     buffer_size : integer := 256;
     chunk_size  : integer := 64
-    
   );
   port (
     rstn          : in    std_ulogic;
@@ -60,7 +59,6 @@ signal process_signals  : buffer_signals;
 signal apb_signals      : buffer_signals;
 signal irq              : std_logic_vector(15 downto 0);
 
-
 --constant REVISION       : amba_version_type := 0; 
 constant pconfig        : apb_config_type := (
                         0 => ahb_device_reg ( VENDOR_OPENCORES, GAISLER_GPREG, 0, 0, pirq),
@@ -80,7 +78,7 @@ begin
     if (apbi.psel(pindex) and apbi.penable and apbi.pwrite) = '1' then
       if apbi.paddr(4 downto 2) = "000" then
         -- Read buffer_reg.status
-        apb_signals.output_select <= apbi.pwdata(sample_size + 1); 
+        apb_signals.output_select <= apbi.pwdata(sample_size + 1);
       end if;
     end if;
     
@@ -102,7 +100,6 @@ begin
   begin
     if rstn = '0' then
       process_signals.output_select <= '0';
-      
     elsif rising_edge(clk) then
       process_signals.output_select <= apb_signals.output_select;
       
@@ -112,7 +109,6 @@ begin
       apb_signals.output_sample <= process_signals.output_sample;
     end if;
   end process;
-
   -- Set APB bus signals
   apbo.pirq          <= irq; 
   apbo.pindex        <= pindex;          -- VHDL Generic
@@ -123,7 +119,6 @@ circular_buffer_comp : buff
         SIZE    => sample_size, 
         LENGTH  => buffer_size,
         CHUNK   => chunk_size)
-    port map(
         clk             => clk,
         reset           => rstn,
         input_irq       => sample_irq, -- from XADC

@@ -5,7 +5,7 @@
 // defines and functions (catch_interrupt, enable_irq, disable_irq and force_irq, should be moved to another
 // .h and .c pair, and that included in main.h as well (maybe digilent nexys4.h AND .c (to be generated))
 
-#include "uart.h"
+#include "uart1.h"
 #include "gpio.h"
 #include "digilent_nexys4.h"
 
