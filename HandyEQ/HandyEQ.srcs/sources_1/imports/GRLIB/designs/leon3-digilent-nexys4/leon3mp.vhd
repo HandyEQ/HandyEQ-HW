@@ -86,10 +86,10 @@ entity leon3mp is
     --an              : out   std_logic_vector(7 downto 0);
 
     -- LEDs
-    Led             : out   std_logic_vector(3 downto 0);
+    --Led             : out   std_logic_vector(3 downto 0);
 
     -- Switches
-    sw              : in    std_logic_vector(0 downto 0);
+    sw              : in    std_logic_vector(1 downto 0);
     
     --gpio
     gpioA           : inout std_logic_vector(7 downto 0);
@@ -254,7 +254,8 @@ architecture rtl of leon3mp is
         Port ( clk : in STD_LOGIC;
             reset : in STD_LOGIC;
             vauxp3 : IN STD_LOGIC;
-            vauxn3 : IN STD_LOGIC;
+            vauxn3 : IN STD_LOGIC;                        
+            sw : IN STD_LOGIC;
             AD_data : out STD_LOGIC_VECTOR (15 downto 0);
             data_ready_port : out STD_LOGIC
             );
@@ -268,8 +269,7 @@ architecture rtl of leon3mp is
                clk:STD_LOGIC;
                sample:in STD_LOGIC_vector(15 downto 0);
                PWM_out:OUT STD_LOGIc;
-               SD_audio_out:OUT STD_LOGIc;
-               led_out : out std_logic);
+               SD_audio_out:OUT STD_LOGIc);
     end component;  
 
   signal CLKFBOUT      : std_logic;
@@ -348,8 +348,6 @@ architecture rtl of leon3mp is
   signal drdy_signal :  std_logic;
   signal AD_data_signal : std_logic_vector(15 downto 0);
   
-  signal led_out_buffer :  std_logic;
-
   -- RS232 APB Uart
   signal rxd1 : std_logic;
   signal txd1 : std_logic;
@@ -709,14 +707,12 @@ Buffer_apb_map : Buffer_apb
     generic map (pindex => 13, paddr => 13, pmask => 16#FFF#, pirq => 13) 
     port map (rstn => rstn, clk => clkm, apbi => apbi, apbo => apbo(13), sample_irq => drdy_signal, sample_in => AD_data_signal);
     
-    led(0) <= AD_data_signal(15); --test
-    led(3) <= rstn;
-    
     XADC_component : ADC
     Port map ( clk => clkm,
         reset => rstn,
         vauxp3 => vauxp3,
         vauxn3 => vauxn3,
+        sw => sw(1),
         AD_data => AD_data_signal,
         data_ready_port => drdy_signal);
     
@@ -739,8 +735,7 @@ Buffer_apb_out_map : Buffer_apb_out
              clk => clk,
              sample => sample_pwm_signal,
              PWM_out => PWM_out_signal,
-             SD_audio_out => SD_audio_out_signal,
-             led_out => led(2));
+             SD_audio_out => SD_audio_out_signal);
            
      --signals
      PWM_out_port <= PWM_out_signal;

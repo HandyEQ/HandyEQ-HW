@@ -44,13 +44,8 @@
 			<Port Id="1" Dir="INOUT"/>
 			<Port Id="0" Dir="INOUT"/>
 		</Bus>
-		<Bus Id="Led">
-			<Port Id="3" Dir="OUT"/>
-			<Port Id="2" Dir="OUT"/>
-			<Port Id="1" Dir="OUT"/>
-			<Port Id="0" Dir="OUT"/>
-		</Bus>
 		<Bus Id="sw">
+			<Port Id="1" Dir="IN"/>
 			<Port Id="0" Dir="IN"/>
 		</Bus>
 		<Bus Id="gpioA">
