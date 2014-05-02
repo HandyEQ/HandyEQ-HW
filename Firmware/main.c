@@ -13,12 +13,14 @@ char input_buffer[200];
 char *input_pointer = input_buffer;
 int counter;
 int print;
+signed short a, b, c, d, e, f, g, h;
+int w;
 
 int main(void){
 	//UART
 	newUart = 0;
 	catch_interrupt(uart_input, uart_irq);
-	init_uart(57600);
+	init_uart(115200);
 	enable_irq(uart_irq);
 
 	//Buffer
@@ -27,30 +29,40 @@ int main(void){
 	enable_irq(buf_irq);
 
 	//Delay
-	init_delay(3);
-	setDelay(3);
-	setGain(16384);
+	init_delay();
+	setGain(4096);
+	setFeedback(12288);
 
-	//Chunk
-	print = 0;	
-	
+	print = 1;
+
 	while(1){
+		
 		if(newSample){
-			struct chunk *new_chunk = calloc(1, sizeof(struct chunk));		
-			if(print == 1){
-				printf("R");
-			}
+			struct chunk *new_chunk = calloc(1, sizeof(struct chunk));
+			struct chunk *delay_output = calloc(1, sizeof(struct chunk));
 			retrieve_chunk(new_chunk);
-			if(print == 1){
-				printf("O");
-			}
-			//record_pcm(new_chunk);
-			//calcDelay(current_chunk);
-			output_chunk(new_chunk);
-			if(print == 1){
-				printf("D");
+			//record_pcm(current_chunk);
+			if(print == 1){			
+				calcDelay(new_chunk, delay_output);
+				output_chunk(delay_output);
+				/*a = 0x8000; // - 1
+				b = 0x7FFF; // + 0.99
+				c = 0xFFFF; // - 0.000305
+				d = 0x0001; // + 0.000305
+				printf("a: %hi ,b: %hi ,c: %hi, d: %hi \n", (a>>2), (b>>2), c, d);
+				printf("a+b: %hi ,c+d: %hi \n", a+b, c+d);
+				/*for(e = 0; e < 32768; e++){
+					printf("a+e: %hi \n", a+e);
+				}
+				for(f = c; f > 0x8000; f++){
+					printf("b+f: %hi \n", b+f);
+				}
+				print = 0;*/
+			} else if(print == 0){
+				output_chunk(new_chunk);
 			}
 			free(new_chunk);
+			free(delay_output);
 			newSample = 0;
 		}
 		if(newUart){
@@ -72,9 +84,9 @@ void new_uart(){
 
 void uart_input(){
 	char i = recieve_uart();
-	if(i == 'P'){
+	if(i == 'D'){
 		print = 1;
-	} else if ( i == 'S'){
+	} else if ( i == 'B'){
 		print = 0;
 	}
 	printf("%c", i);

@@ -5,21 +5,20 @@
 #include <string.h>
 #include "buffer.h"
 
-#define power 1073741824
-
 struct delay_struct 
 {
-	int size;
 	int head;
 	int delay;
-	int gain;
- 	struct chunk *chunks[chunk_size];
+	short gain;
+	int feedback;
+ 	int data[10000];
 };
 
-void init_delay(int size);
+void init_delay();
 void setGain(int gain);
+void setFeedback(int feedback);
 void setDelay(int delay);
-signed short int fixedMul(signed short int a, signed short int b);
-void calcDelay(struct chunk *new_chunk);
+signed int fixedMul(signed int a, signed int b);
+void calcDelay(struct chunk * input, struct chunk * output);
 
 #endif

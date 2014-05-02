@@ -2,59 +2,68 @@
 
 struct delay_struct *delay_buffer;
 
-void init_delay(int size){
-	delay_buffer = calloc(1, sizeof(struct delay_struct) + sizeof(struct chunk) * size);
+void init_delay(){
+	delay_buffer = calloc(1, sizeof(struct delay_struct));
 	delay_buffer->head = 0;
+	delay_buffer->delay = 10000;
+	delay_buffer->gain = 0;
+	delay_buffer->feedback = 0;
+
 }
 
 void setGain(int gain){
 	delay_buffer->gain = gain;
 }
 
-void setDelay(int delay){
-	if(delay > delay_buffer->size-1){
-		delay_buffer->delay = delay_buffer->size - 1; 
-	} else {
-		delay_buffer->delay = delay;
-	}
+void setFeedback(int feedback){
+	delay_buffer->feedback = feedback;
 }
 
-signed short int fixedMul(signed short int a, signed short int b){
-	unsigned int temp = a * b;
-	signed short int sum = (temp >> 16);
+int fixedMul(int a, int b){
+	return ((a*b) >> 15);
+}
+
+ int fixedAdd(int a, int b){
+	int sum = a+b;
+	if(sum > 32767){
+		sum = 32767;
+	} else if (sum < -32768) {
+		sum = -32768;
+	}
 	return sum;
 }
 
-void calcDelay(struct chunk * new_chunk){
-	//init var
+void calcDelay(struct chunk * input, struct chunk * output){
+	//Initialize loop  variable
 	int i;
-	signed short int a, b;
-	struct chunk * hold = malloc(sizeof(struct chunk));
 
 	//Retrieve values so that they are stable
-	int size = delay_buffer->size;
 	int head = delay_buffer->head;
 	int gain = delay_buffer->gain;
 	int delay = delay_buffer->delay;
-
-	//Input new chunk in queue
-	memcpy(delay_buffer->chunks[head], new_chunk, sizeof(struct chunk));
-	
-
-	memcpy(hold, delay_buffer->chunks[(head-delay) % size], sizeof(struct chunk));
+	int feedback = delay_buffer->feedback;
 
 	//Manipulate sound
-	for(i = 0; i < chunk_size; i++){
-		a = fixedMul(hold->data[i], gain);
-		b = fixedMul(new_chunk->data[i], (1*power)-gain);
-		hold->data[i] = (a + b);
-		i++;
+	
+	for(i = 0;  i < chunk_size; i++){
+		/*		
+		output->data[i] = delay_buffer->data[head];
+		delay_buffer->data[head] = input->data[i]; 
+		*/
+		
+		output->data[i] = fixedAdd(delay_buffer->data[head], fixedMul(16383, input->data[i]));
+		delay_buffer->data[head] = fixedAdd(fixedMul(gain, delay_buffer->data[head]), fixedMul(feedback, input->data[i]));
+		
+		
+		head = (head+1)%delay;		
 	}
-
-	//Update head
-	delay_buffer->head = (head + 1) % size;
-
-	//Return Value
-	memcpy(new_chunk, hold, sizeof(struct chunk));
-	free(hold);
+	delay_buffer->head = head;
 }
+
+/*
+for(i = 0;  i < chunk_size; i++){
+	output->data[i] = delay_buffer->data[head];
+	head = (head+1)%128;
+	delay_buffer->data[head] = input->data[i];		
+}
+*/
