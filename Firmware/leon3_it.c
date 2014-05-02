@@ -1,6 +1,8 @@
 #include "leon3_it.h"
 
 int called_for_first_time = 1;
+int UART_it_active = 0;
+char receive_buffer = 'X';
 
 /******* Application Specific Functions ******/
 void UART1_IRQHandler(int irq)
