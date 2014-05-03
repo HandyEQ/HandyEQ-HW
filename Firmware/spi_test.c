@@ -18,6 +18,7 @@ int currGPIOAState = 0;
 int currGPIOBState = 0;
 int pastGPIOAState = 0;
 int pastGPIOBState = 0;
+int delayCtr = 0;
 
 char s[8] = "ABCDEF.-";
 char encDirChar = '0';
@@ -30,6 +31,22 @@ int *lreg = (int *) 0x80000000;
 #define IFORCE 0x208
 #define ICLEAR 0x20c
 #define IMASK  0x240
+
+typedef struct
+{
+  int capability; //0x00
+  int reserved[7]; //0x04 08 0C 10 14 18 1C
+  int mode; //20
+  int event; //24
+  int mask; //28
+  int command; //2C
+  int transmit; //30
+  int receive; //34
+  // more to come
+}SPI_TypeDef;
+
+#define SPIA               ((SPI_TypeDef *) 0x80000C00)
+void SPI_SendByte(int i);
 
 typedef struct
 {
@@ -68,6 +85,7 @@ void irqhandler(int irq)
     TIMERA -> timer1ctrl |= 0x00000010;
 
     dbncCtr++;
+    delayCtr++;
   }
   else if (irq == 8)
   { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
@@ -207,19 +225,111 @@ int main(void)
 
   SEVENSEG_Init();
 
+  /****************** OLED *****************************/
+
+
+  GPIO_SetBits(GPIOB, NEXYS4_OLED_VDDC);
+
+  GPIO_SetBits(GPIOB, NEXYS4_OLED_VBATC);
+
+  GPIO_SetBits(GPIOB, NEXYS4_OLED_CS); //Slave Select to HIGH
+  GPIO_SetBits(GPIOB, NEXYS4_OLED_RES); //RES == 1 (reset off)
+
+  GPIO_ResetBits(GPIOB, NEXYS4_OLED_DC); //command
+
+  GPIO_ResetBits(GPIOB, NEXYS4_OLED_CS); //Slave Select to LOW
+
+  SPIA -> mode = 0x0A020004; //CPOL = 0, DIV16 = 1, REV = 1 (MSB first), MS = 1 (master), PM ==2, IGSEL = 1 ignore spi sel
+
+  SPIA -> mode |= 0x00700000; //Word length = 8 (7+1)
+
+  SPIA -> mode |= 0x01000000; //EN = 1
+  
+  //1. Apply power to VDD.
+  GPIO_ResetBits(GPIOB, NEXYS4_OLED_VDDC);
+
+  delayCtr = 0;
+  while (delayCtr < 1);
+
+  //2. Send Display Off command. 0xAE 1010 1110 - 0111 0101 75
+  SPI_SendByte(0xAE);
+
+  GPIO_ResetBits(GPIOB, NEXYS4_OLED_RES); //RES == 0
+
+  delayCtr = 0;
+  while (delayCtr < 1);
+
+  GPIO_SetBits(GPIOB, NEXYS4_OLED_RES); //RES == 1
+  
+  delayCtr = 0;
+  while (delayCtr < 1);
+
+  SPI_SendByte(0x8D);
+  SPI_SendByte(0x14);
+
+  SPI_SendByte(0xD9);
+  SPI_SendByte(0xF1);
+
+  GPIO_ResetBits(GPIOB, NEXYS4_OLED_VBATC);
+  
+  delayCtr = 0;
+  while (delayCtr < 105);
+
+  SPI_SendByte(0x81);
+  SPI_SendByte(0x0F);
+
+  SPI_SendByte(0xA1);
+  SPI_SendByte(0xC8);
+
+  SPI_SendByte(0xDA);
+  SPI_SendByte(0x20);
+
+  SPI_SendByte(0xAF);
+  
+  SPI_SendByte(0xA5);
+
+
+  /*GPIO_SetBits(GPIOB, NEXYS4_OLED_CS); //Slave Select to HIGH
+
+  GPIO_ResetBits(GPIOB, NEXYS4_OLED_VBATC);
+
+  delayCtr = 0;
+  while (delayCtr < 100);
+
+  GPIO_ResetBits(GPIOB, NEXYS4_OLED_CS); //Slave Select to LO
+  delayCtr = 0;
+  while (delayCtr < 1);
+  SPI_SendByte(0xAF);
+  GPIO_SetBits(GPIOB, NEXYS4_OLED_CS); //Slave Select to HI
+
+  GPIO_SetBits(GPIOB, NEXYS4_OLED_DC); //data
+
+  GPIO_ResetBits(GPIOB, NEXYS4_OLED_CS); //Slave Select to LO
+  delayCtr = 0;
+  while (delayCtr < 1);
+
+  SPI_SendByte(0xFF);
+  SPI_SendByte(0xFF);
+  SPI_SendByte(0xFF);
+
+  GPIO_SetBits(GPIOB, NEXYS4_OLED_CS); //Slave Select to HIGH*/
+  
+  //3. Initialize display to desired operating mode.
+
+  //4. Clear screen.
+
+  //5. Apply power to VBAT.
+  //GPIO_SetBits(GPIOA, GPIO_Pin_10);
+  //6. Delay 100ms.
+  //for (delay = 0; delay < 830; delay++);
+  //7. Send Display On command. 0xAF 1010 1111 - 1111 0101 F5
+  //SPIA -> transmit = 0xF5;
+
+  //for (delay = 0; delay < 830; delay++);
+  //GPIO_SetBits(GPIOA, GPIO_Pin_9); //RES == 1
+
   while (1)
   {
-    /*flag = read_encoder();
-
-    if (flag == 1)
-    {
-      if (encDir < 7) encDir++;
-    }
-    else if (flag == -1)
-    {
-      if(encDir > 0) encDir--;
-    }*/
-
     s[0] = '.';
     s[1] = '.';
     s[2] = '.';
@@ -235,60 +345,15 @@ int main(void)
 
     // Switches to LEDs
     GPIO_Write(GPIOA, GPIO_ReadInputData(GPIOA) << 16);
-
-    // RGB LEDs
-    GPIO_WriteBit(GPIOB, NEXYS4_LED17B, GPIO_ReadInputDataBit(GPIOA, NEXYS4_SW5));
-    GPIO_WriteBit(GPIOB, NEXYS4_LED17G, GPIO_ReadInputDataBit(GPIOA, NEXYS4_SW4));
-    GPIO_WriteBit(GPIOB, NEXYS4_LED17R, GPIO_ReadInputDataBit(GPIOA, NEXYS4_SW3));
-    GPIO_WriteBit(GPIOB, NEXYS4_LED16B, GPIO_ReadInputDataBit(GPIOA, NEXYS4_SW2));
-    GPIO_WriteBit(GPIOB, NEXYS4_LED16G, GPIO_ReadInputDataBit(GPIOA, NEXYS4_SW1));
-    GPIO_WriteBit(GPIOB, NEXYS4_LED16R, GPIO_ReadInputDataBit(GPIOA, NEXYS4_SW0));
-
-    if (interruptServedRecently == 1 && dbncCtr > 70)
-    {
-      interruptServedRecently = 0;
-      //btnPress++;
-      
-      A &= GPIO_ReadInputDataBit(GPIOB, NEXYS4_ENC_A);
-      B &= GPIO_ReadInputDataBit(GPIOB, NEXYS4_ENC_B);
-
-      if(A && !B) {// && prevB
-        if (encDir < 7) encDir++;
-      }
-      else if(!A && B) {// && prevA
-        if(encDir > 0) encDir--;
-      }
-      else
-      {
-        //encDir = 0;
-        //encDirChar = '0';
-      }
-      
-      if ((currGPIOBState & NEXYS4_BTNC) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTNC)) // check current states as well to avoid debouncing on release rising edges
-      {
-        putStr("mid\n\r");
-        btnPress++;
-      }
-      else if ((currGPIOBState & NEXYS4_BTNL) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTNL))
-      {
-        putStr("left\n\r");
-      }
-      else if ((currGPIOBState & NEXYS4_BTNR) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTNR))
-      {
-        putStr("rite\n\r");
-      }
-      else if ((currGPIOBState & NEXYS4_BTNU) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTNU))
-      {
-        putStr("up\n\r");
-      }
-      else if ((currGPIOBState & NEXYS4_BTND) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTND))
-      {
-        putStr("down\n\r");
-      }
-    }
   }
-
   return 0;
+}
+
+void SPI_SendByte(int i)
+{
+  while (SPIA -> event & 0x100 == 0); //wait till NotFull bit is 1
+  
+  SPIA -> transmit = i;
 }
 
 /*int read_encoder()
