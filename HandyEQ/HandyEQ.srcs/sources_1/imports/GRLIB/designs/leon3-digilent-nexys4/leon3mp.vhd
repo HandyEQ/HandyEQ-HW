@@ -354,6 +354,10 @@ architecture rtl of leon3mp is
   signal rxd1 : std_logic;
   signal txd1 : std_logic;
   
+  attribute mark_debug : string;
+  attribute mark_debug of spii : signal is "true";
+  attribute mark_debug of spio : signal is "true";
+  
   attribute keep                     : boolean;
   attribute syn_keep                 : boolean;
   attribute syn_preserve             : boolean;
@@ -770,7 +774,6 @@ spictrl0 : spictrl generic map (pindex => 12, paddr => 12, fdepth => 1, slvselen
         
        spiselpad : inpad generic map (tech => padtech)
         port map (spisel, spii.spisel);
-      
 -----------------------------------------------------------------------
 ---  Ethernet Clock Generation  ---------------------------------------
 -----------------------------------------------------------------------
