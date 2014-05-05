@@ -99,7 +99,7 @@
 /* Fixed outputs: ?????????????? ------- */
 /* Choosable inputs/outputs: ???? ------ */
 
-// 7-segment display
+// 7-segment display, handled by higher-level functions, no need for additional defines
 
 
 /* --------------- GPIOD --------------- */
@@ -108,6 +108,55 @@
 /* Choosable inputs/outputs: ???? ------ */
 
 // not yet implemented
+
+typedef struct
+{
+  int scaler; //0x00
+  int scalerReload; //0x04
+  int config; //08
+  int timerLatchCfg; //0C
+  int timer1counter; //10
+  int timer1reload; //14
+  int timer1ctrl; //18
+  int timer1latch; //1C
+  int timer2counter; //20
+  int timer2reload; //24
+  int timer2ctrl; //28
+  int timer2latch; //2C
+}TIMER_TypeDef;
+
+#define TIMERA               ((TIMER_TypeDef *) 0x80000300)
+
+typedef struct
+{
+  int capability; //0x00
+  int reserved[7]; //0x04 08 0C 10 14 18 1C
+  int mode; //20
+  int event; //24
+  int mask; //28
+  int command; //2C
+  int transmit; //30
+  int receive; //34
+  // more to come
+}SPI_TypeDef;
+
+#define SPIA               ((SPI_TypeDef *) 0x80000C00)
+
+void SPI_SendByte(int i);
+void OLED_SendChar(char c);
+
+void OLED_SendString(int line, char* s);
+
+void GPIOAB_IRQHandler(int irq);
+void TIMER1_IRQHandler(int irq);
+
+/* ----- Board-Specific Functions ------ */
+
+void NEXYS4_GPIO_Init();
+void NEXYS4_TIMER_Init();
+void NEXYS4_OLED_SPI_Init();
+void NEXYS4_SEVENSEG_Init();
+
 
 
 #endif
