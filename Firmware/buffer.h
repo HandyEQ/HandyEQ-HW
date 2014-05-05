@@ -21,7 +21,7 @@ typedef struct chunk
 } Chunk;
 
 //Functions for Buffers 
-void retrieve_chunk(struct chunk *current_chunk);
-void output_chunk(struct chunk *current_chunk);
+void retrieve_chunk(Chunk *current_chunk);
+void output_chunk(Chunk *current_chunk);
 
 #endif

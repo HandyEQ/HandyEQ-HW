@@ -5,6 +5,7 @@
 #include "buffer.h"
 #include "uart.h"
 #include "parson.h"
+#include "dspsystem.h"
 
 int newSample;
 int newUart;
@@ -14,6 +15,7 @@ int counter;
 int print;
 signed short a, b, c, d, e, f, g, h;
 int w;
+DspSystem * dspsystem;
 
 int main(void){
 	//UART
@@ -32,22 +34,22 @@ int main(void){
 	setDelayGain(4096);
 	setDelayFeedback(12288);
 
+	//Init dspsystem
+	Chunk *input = calloc(1, sizeof(struct chunk));
+	Chunk *output = calloc(1, sizeof(struct chunk));
+	initDspSystem(dspsystem, input, output);
+
+
 	print = 1;
 
 	while(1){
 		
 		if(newSample){
-			struct chunk *new_chunk = calloc(1, sizeof(struct chunk));
-			struct chunk *delay_output = calloc(1, sizeof(struct chunk));
-			retrieve_chunk(new_chunk);
-			if(print == 1){			
-				calcDelay(new_chunk, delay_output);
-				output_chunk(delay_output);
-			} else if(print == 0){
-				output_chunk(new_chunk);
-			}
-			free(new_chunk);
-			free(delay_output);
+			retrieve_chunk(input);
+			runDspSystem(dspsystem);
+			output_chunk(output);
+			free(input);
+			free(output);
 			newSample = 0;
 		}
 		if(newUart){

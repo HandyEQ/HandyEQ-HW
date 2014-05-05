@@ -1,12 +1,11 @@
 #ifndef FX_H
 #define FX_H
 
-struct AudioEffect;
-typedef struct {
+typedef struct AudioEffect {
 	char name[20];
 	int in;
 	int out;    
-}AudioEffect;
+} AudioEffect;
 
 
 #endif
