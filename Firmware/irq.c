@@ -1,6 +1,6 @@
 #include "irq.h"
 
-struct irq_regs *irq_struct = (struct irq_regs *) irq_addr;
+IrqRegs *irq_struct = (IrqRegs *) irq_addr;
 
 void set_irq_level(int irq, int level){
 	if ( (level == 1) || (level == 0) ){

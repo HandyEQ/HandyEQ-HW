@@ -1,9 +1,9 @@
 #include "delay.h"
 
-struct delay_struct *delay_buffer;
+DelayStruct *delay_buffer;
 
 void init_delay(){
-	delay_buffer = calloc(1, sizeof(struct delay_struct));
+	delay_buffer = calloc(1, sizeof(DelayStruct));
 	delay_buffer->head = 0;
 	delay_buffer->delay = 10000;
 	delay_buffer->gain = 0;
@@ -59,7 +59,7 @@ int fixedMul(int a, int b){
 	return sum;
 }
 
-void calcDelay(struct chunk * input, struct chunk * output){
+void calcDelay(Chunk * input, Chunk * output){
 	//Initialize loop  variable
 	int i;
 
@@ -72,24 +72,9 @@ void calcDelay(struct chunk * input, struct chunk * output){
 	//Manipulate sound
 	
 	for(i = 0;  i < chunk_size; i++){
-		/*		
-		output->data[i] = delay_buffer->data[head];
-		delay_buffer->data[head] = input->data[i]; 
-		*/
-		
 		output->data[i] = fixedAdd(delay_buffer->data[head], fixedMul(16383, input->data[i]));
-		delay_buffer->data[head] = fixedAdd(fixedMul(gain, delay_buffer->data[head]), fixedMul(feedback, input->data[i]));
-		
-		
+		delay_buffer->data[head] = fixedAdd(fixedMul(gain, delay_buffer->data[head]), fixedMul(feedback, input->data[i]));		
 		head = (head+1)%delay;		
 	}
 	delay_buffer->head = head;
 }
-
-/*
-for(i = 0;  i < chunk_size; i++){
-	output->data[i] = delay_buffer->data[head];
-	head = (head+1)%128;
-	delay_buffer->data[head] = input->data[i];		
-}
-*/

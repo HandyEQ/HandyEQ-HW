@@ -1,22 +1,16 @@
 #ifndef DSPSYSTEM_H
 #define DSPSYSTEM_H
 
-
-
 //Maybe:
-struct DspFx;
-typedef struct {
-	
+typedef struct DspFx {
 	char name[20];
 	int in;
 	int out;    
-}DspFx;
-
+} DspFx;
 
 /*Structure for DspBin which is a building block for connecting
  * several dsp effects together in the DspSystem */
-struct DspBin;
-typedef struct {
+typedef struct DspBin {
     int id;	//maybe unnecessary?
     int bypass;		//Flag for bypassing DspFx in DspBin
     
@@ -26,21 +20,18 @@ typedef struct {
     int *out; 	//Output connection, points to next modules input    
     DspFx *fx; //maybe
     
-}DspBin;
-
+} DspBin;
 
 /* Structure for a complete biquad stage 
  * Memory for delay line and pointer to coefficients */
- 
-struct DspSystem;
-typedef struct {
+typedef struct DspSystem {
 		DspBin bin1;
 		DspBin bin2;	
-}DspSystem;
+} DspSystem;
 
 
 /* Global variables */
-extern DspSystem dspsystem;
+//extern DspSystem dspsystem;
 
 /* Function prototypes */
 void infoDspBin(DspBin *bin);
@@ -48,4 +39,5 @@ void infoDspSystem(DspSystem *dspsystem);
 int initDspBin(DspBin *bin,int binid,int bypass, int *in, int *send, int *ret,int *out);
 //int connectDspBin(DspBin *bin, int *in, int *send, int *ret, int *out); //(send return should be same effect), and out should go to next bin
 int connectDspBin(DspBin *bin, int *in, struct *fx, int *out);
+
 #endif
