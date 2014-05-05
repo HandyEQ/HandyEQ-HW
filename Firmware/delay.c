@@ -8,15 +8,41 @@ void init_delay(){
 	delay_buffer->delay = 10000;
 	delay_buffer->gain = 0;
 	delay_buffer->feedback = 0;
+	delay_buffer->size = 10000;
+	delay_buffer->data = calloc(10000, sizeof(int));
 
 }
 
-void setGain(int gain){
+void setDelayGain(int gain){
 	delay_buffer->gain = gain;
 }
 
-void setFeedback(int feedback){
+void setDelayFeedback(int feedback){
 	delay_buffer->feedback = feedback;
+}
+
+void setDelaySize(int size){
+    int * swap = calloc(delay_buffer->size, sizeof(int));
+    memcpy(swap, delay_buffer->data, (delay_buffer->size*sizeof(int)));
+	delay_buffer->data = calloc(size, sizeof(int));
+    if(delay_buffer->data == NULL){
+    	*delay_buffer->data = *swap;  
+	} else {
+		memcpy(delay_buffer->data, swap, (delay_buffer->size*sizeof(int)));
+		free(swap);
+		delay_buffer->size = size;
+		if(delay_buffer->delay > size){
+			delay_buffer->delay = size;
+		}
+	}  
+}
+
+void setDelayTime(int timeMs){;
+	int reqSize = timeMs * 48;
+	if(reqSize > delay_buffer->size){
+		setDelaySize(reqSize);
+	}
+	delay_buffer->delay = reqSize;
 }
 
 int fixedMul(int a, int b){

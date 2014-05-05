@@ -25,5 +25,6 @@ Firmware/*.h~
 Firmware/Makefile~
 Firmware/*.srec
 Firmware/*.exe
+Firmware/*.bat
 .Xil/
 
