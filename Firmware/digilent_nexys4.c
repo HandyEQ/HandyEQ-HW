@@ -214,7 +214,7 @@ void NEXYS4_TIMER_Init()
   TIMERA -> config = 0x00000001;
   TIMERA -> timerLatchCfg = 0x00000000;
 
-  TIMERA -> timer1counter = 1249; //0.1 ms 3: 0.32 us  -------//12499; // 1 ms overall
+  TIMERA -> timer1counter = 1249; //0.1 ms overall
   TIMERA -> timer1reload = 1249;
   TIMERA -> timer1ctrl = 0x0000000B;
 
@@ -242,7 +242,7 @@ void NEXYS4_OLED_SPI_Init()
 
   GPIO_ResetBits(GPIOB, NEXYS4_OLED_CS); //Slave Select to LOW
 
-  SPIA -> mode = 0x3A002204; //CPOL = 1, CPHA = 1, DIV16 = 1, REV = 0 (LSB first), MS = 1 (master), FACT = 1, PM = 0, IGSEL = 1 ignore spi sel
+  SPIA -> mode = 0x3A002384; //CPOL = 1, CPHA = 1, DIV16 = 1, REV = 0 (LSB first), MS = 1 (master), FACT = 1, PM = 0, IGSEL = 1 ignore spi sel, 7-CLK gap inserted between following bytes (does not help)
 
   SPIA -> mode |= 0x00700000; //Word length = 8 (7+1)
 
@@ -372,6 +372,7 @@ void TIMER1_IRQHandler(int irq)
   }
 }
 
+/* SPI and OLED functions */
 void SPI_SendByte(int i)
 {
   int j = 0;
@@ -385,41 +386,47 @@ void SPI_SendByte(int i)
   j |= (i & 64) >> 5;
   j |= (i & 128) >> 7;
 
-  //while ((SPIA -> event) & 0x100 != 0); //wait till NotFull bit is 1
+  while (!((SPIA -> event) & 0x100)); //wait till NotFull bit is 1
   
   SPIA -> transmit = j;
 
-  delayCtr = 0; // timer waiter function since NotFull checking does not work as intended
-  while (delayCtr < 2);
-  
-  //while ((SPIA -> event) & 0x100 != 0); //wait till NotFull bit is 1
+  for (j = 0; j < 20; j++); // waiting for the flag is not enough, extra delay needs to be inserted, 20 is the min OK value
+
+  //delayCtr = 0; // timer waiter function since NotFull checking does not work as intended
+  //while (delayCtr < 2);
 }
 
 void OLED_SendChar(char c)
 {
   int i;
 
-  GPIO_SetBits(GPIOB, NEXYS4_OLED_DC); //data
+  //GPIO_SetBits(GPIOB, NEXYS4_OLED_DC); //data
   
   for (i = 0; i < 8; i++)
   {
-    SPI_SendByte(OLEDChars[c * 8 + i]);
+    SPI_SendByte(OLEDChars[c * 8 + i]); // fetch the correct value from the char array
   }
 }
 
 void OLED_SendString(int line, char* s)
 {
+  /* Significant improvement here: keep four global line-variable strings for the four lines, and when this
+     function is called check if the string to be written is the same the one that is already displayed
+     (stored in the global line-variable). If not, overwrite the line-variable and print to display, but if yes,
+     do nothing. */
   int i = 0;
 
   GPIO_ResetBits(GPIOB, NEXYS4_OLED_DC); //command
 
-  SPI_SendByte(0xB0 + line);
-  SPI_SendByte(0x10);
-  SPI_SendByte(0x00);
+  SPI_SendByte(0xB0 + line); // cmd to set line to write to
+  SPI_SendByte(0x10); // set higher byte of start segment (both are 0s = beginning of the line)
+  SPI_SendByte(0x00); // set lower byte of start segment (both are 0s = beginning of the line)
+
+  GPIO_SetBits(GPIOB, NEXYS4_OLED_DC); //data
 
   while (i < 16) // clear line
   {
-    OLED_SendChar(' ');
+    OLED_SendChar(' '); // the segment ctr is incremented automatically, it will be at the beginning of the line after this while-case
     i++;
   }
 
