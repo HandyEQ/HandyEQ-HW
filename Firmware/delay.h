@@ -15,8 +15,8 @@ struct delay_struct
 };
 
 void init_delay();
-void setGain(int gain);
-void setFeedback(int feedback);
+int setGain(int gain);
+int setFeedback(int feedback);
 void setDelay(int delay);
 signed int fixedMul(signed int a, signed int b);
 void calcDelay(struct chunk * input, struct chunk * output);
