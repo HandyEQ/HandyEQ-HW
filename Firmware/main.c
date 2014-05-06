@@ -13,15 +13,21 @@ char input_buffer[200];
 char *input_pointer = input_buffer;
 int counter;
 int print;
+int handle_buffer;
 signed short a, b, c, d, e, f, g, h;
 int w;
 
 int main(void){
+	//JSON
+	JSON_Object * obj;
+
 	//UART
 	newUart = 0;
 	catch_interrupt(uart_input, uart_irq);
 	init_uart(115200);
 	enable_irq(uart_irq);
+	counter = 0;
+	handle_buffer = 0;
 
 	//Buffer
 	newSample = 0;
@@ -66,8 +72,18 @@ int main(void){
 			newSample = 0;
 		}
 		if(newUart){
+			uart_input();			
 			newUart = 0;
-			uart_input();
+		}else if(handle_buffer == 1){			// does not work if this is placed in the interrupt if case for UART.
+				//save variables somewhere
+				obj = json_array_get_object((JSON_Array *)input_buffer, 0);				 
+				printf("%s", json_object_get_string(obj, "something"));
+				handle_buffer = 0;
+				int i;	
+				for(i = 0; i <= counter ; i++){
+					input_buffer[i] = 0;
+				}
+				counter = 0;
 		}
 	}
 
@@ -83,11 +99,11 @@ void new_uart(){
 }
 
 void uart_input(){
-	char i = recieve_uart();
-	if(i == 'D'){
-		print = 1;
-	} else if ( i == 'B'){
-		print = 0;
+	char temp = recieve_uart();
+	input_buffer[counter] = temp;
+	counter++;
+	if(temp == ']'){		
+		handle_buffer = 1;
+		input_buffer[counter+1] = '\0';		
 	}
-	printf("%c", i);
 }
