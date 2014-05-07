@@ -5,20 +5,21 @@
 #include <string.h>
 #include "buffer.h"
 
-struct delay_struct 
-{
+typedef struct delay_struct {
 	int head;
 	int delay;
 	short gain;
 	int feedback;
- 	int data[10000];
-};
+	int size;
+ 	int *data;
+} DelayStruct;
 
 void init_delay();
-void setGain(int gain);
-void setFeedback(int feedback);
-void setDelay(int delay);
+void setDelayGain(int gain);
+void setDelayFeedback(int feedback);
 signed int fixedMul(signed int a, signed int b);
-void calcDelay(struct chunk * input, struct chunk * output);
+int calcDelay(Chunk * input, Chunk * output);
+void setDelaySize(int size);
+void setDelayTime(int timeMs);
 
 #endif

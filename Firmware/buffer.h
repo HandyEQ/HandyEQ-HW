@@ -2,7 +2,6 @@
 #define BUFFER_H
 
 #include <stdlib.h>
-#include <stdio.h>
 
 #define input_buf_addr 0x80000D00
 #define output_buf_addr 0x80000E00
@@ -10,18 +9,18 @@
 #define chunk_size 64
 
 //Define registers as struct
-struct buffer_regs
+typedef struct buffer_regs
 {
 	volatile unsigned int reg;	/* 0x00 Control, Status and Data Reg*/
-};
+} BufferRegs;
 
-struct chunk
+typedef struct chunk
 {
 	int data[chunk_size];
-};
+} Chunk;
 
 //Functions for Buffers 
-void retrieve_chunk(struct chunk *current_chunk);
-void output_chunk(struct chunk *current_chunk);
+void retrieve_chunk(Chunk *current_chunk);
+void output_chunk(Chunk *current_chunk);
 
 #endif

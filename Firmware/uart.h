@@ -4,13 +4,13 @@
 #define uart_irq 2
 #define uart_addr 0x80000100
 
-struct uart_regs {
+typedef struct uart_regs {
   volatile unsigned int data;
   volatile unsigned int status;
   volatile unsigned int control;
   volatile unsigned int scaler;
   volatile unsigned int FIFO_debug;
-};
+} UartRegs;
 
 /* Baud rates, dependent on the system CLK */
 #define SysCLK 50000000 // 50 MHz

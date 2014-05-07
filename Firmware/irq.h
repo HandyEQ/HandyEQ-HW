@@ -4,7 +4,7 @@
 #define irq_addr 0x80000200
 
 
-struct irq_regs {
+typedef struct irq_regs {
     volatile unsigned int irqlevel;    /* 0x00 */
     volatile unsigned int irqpend;     /* 0x04 */
     volatile unsigned int irqforce;    /* 0x08 */
@@ -18,7 +18,7 @@ struct irq_regs {
     volatile unsigned int icsel1;      /* 0x28 */
     volatile unsigned int dummy1[5];   /* 0x2c - 0x3C */
     volatile unsigned int irqmask;     /* 0x40 */
-};
+} IrqRegs;
 
 void set_irq_level(int irq, int level);
 void enable_irq(int irq);

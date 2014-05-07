@@ -1,6 +1,6 @@
 #include "uart.h"
 
-struct uart_regs *uart_struct = (struct uart_regs *) uart_addr;
+UartRegs *uart_struct = (UartRegs *) uart_addr;
 
 void init_uart(int baud_rate){
 	char init;	
@@ -16,6 +16,7 @@ void init_uart(int baud_rate){
 void send_char_uart(char data){
 	uart_struct -> data = data;
 	while((uart_struct->status & 2) == 1);
+	while((uart_struct->status & 4) == 1);
 }
 
 void send_string_uart(char data[]){
