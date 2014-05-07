@@ -6,6 +6,9 @@
 #include "uart.h"
 #include "dspsystem.h"
 #include "delay.h"
+#include "biquad.h"
+#include "eqcoeff.h"
+#include "eq1band.h"
 
 int newSample;
 int newUart;
@@ -14,10 +17,10 @@ int counter;
 
 int main(void){
 	//Vars
-	DspSystem * dspsystem;
-	int bins;
-	DspBin ** bin, * bin1, * bin2;
-	DspFx * delay1, * delay2;
+	//DspSystem * dspsystem;
+	int bins, loop;
+	//DspBin ** bin, * bin1, * bin2;
+	//DspFx * delay1, * delay2;
 	Chunk *input, * output, * bin1tobin2;
 
 	//UART
@@ -35,30 +38,39 @@ int main(void){
 	
 	
 	//Init Effects
-	delay1 = initDspFx("Delay 1", 0, init_delay(), &calcDelay);
-	delay2 = initDspFx("Delay 2", 0, init_delay(), &calcDelay);
+	//delay1 = initDspFx("Delay 1", 0, init_delay(), &calcDelay);
+	//delay2 = initDspFx("Delay 2", 0, init_delay(), &calcDelay);
 
 	//Init Bins
-	bins = 2;
-	bin = calloc(bins, sizeof(DspBin));
-	bin[0] = initDspBin(0, delay1);
-	bin[1] = initDspBin(0, delay2);
+	//bins = 2;
+	//bin = calloc(bins, sizeof(DspBin));
+	//bin[0] = initDspBin(0, delay1);
+	//bin[1] = initDspBin(0, delay2);
 
 	//Init dspsystem
 	input = calloc(1, sizeof(Chunk));
 	output = calloc(1, sizeof(Chunk));
-	dspsystem = initDspSystem(bin, bins, input, output); 
+	//dspsystem = initDspSystem(bin, bins, input, output); 
 	
 	//Connect bins
-	bin1tobin2 = calloc(1, sizeof(Chunk));
-	connectDspBin(dspsystem->bin[0], dspsystem->in, bin1tobin2);
-	connectDspBin(dspsystem->bin[1], bin1tobin2, dspsystem->out);
+	//bin1tobin2 = calloc(1, sizeof(Chunk));
+	//connectDspBin(dspsystem->bin[0], dspsystem->in, bin1tobin2);
+	//connectDspBin(dspsystem->bin[1], bin1tobin2, dspsystem->out);
+	
+	//Init EQ
+	initEqCoeff();
+	initEq();
 
 	//Main Loop
 	while(1){
 		if(newSample){
 			retrieve_chunk(input);
-			runDspSystem(dspsystem);
+			//runDspSystem(dspsystem);
+			for(loop = 0; loop < chunk_size; loop++){
+				stage1.in = input->data[loop];
+				runBiquad(&stage1);
+				output->data[loop] = stage1.out;
+			}		
 			output_chunk(output);
 			newSample = 0;
 		}
@@ -81,5 +93,6 @@ void new_uart(){
 
 void uart_input(){
 	char i = recieve_uart();
+	setBiquadCoeff(&stage1,&treble[i-48]);
 	printf("%c", i);
 }
