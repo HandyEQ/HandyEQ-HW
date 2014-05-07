@@ -1,13 +1,14 @@
 #include "delay.h"
 
-DelayEffect * init_delay(){
+DelayEffect * init_delay(int timeMs){
 	DelayEffect * delayEff = calloc(1, sizeof(DelayEffect));
 	delayEff->head = 0;
 	delayEff->delay = 10000;
 	delayEff->gain = 4096;
 	delayEff->feedback = 8192;
-	delayEff->size = 10000;
-	delayEff->data = calloc(10000, sizeof(int));
+	setDelayTime(delayEff, timeMs);
+	//delayEff->size = 10000;
+	//delayEff->data = calloc(10000, sizeof(int));
 	return delayEff;
 }
 
@@ -20,11 +21,11 @@ void setDelayFeedback(DelayEffect *delayEff, int feedback){
 }
 
 void setDelaySize(DelayEffect *delayEff, int size){
-    int * swap = calloc(delayEff->size, sizeof(int));
-    memcpy(swap, delayEff->data, (delayEff->size*sizeof(int)));
+    	int * swap = calloc(delayEff->size, sizeof(int));
+   	memcpy(swap, delayEff->data, (delayEff->size*sizeof(int)));
 	delayEff->data = calloc(size, sizeof(int));
-    if(delayEff->data == NULL){
-    	*delayEff->data = *swap;  
+    	if(delayEff->data == NULL){
+    		*delayEff->data = *swap;  
 	} else {
 		memcpy(delayEff->data, swap, (delayEff->size*sizeof(int)));
 		free(swap);
