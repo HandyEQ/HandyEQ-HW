@@ -6,11 +6,10 @@ void init_delay(){
 	delay_buffer = calloc(1, sizeof(DelayStruct));
 	delay_buffer->head = 0;
 	delay_buffer->delay = 10000;
-	delay_buffer->gain = 0;
-	delay_buffer->feedback = 0;
+	delay_buffer->gain = 4096;
+	delay_buffer->feedback = 12288;
 	delay_buffer->size = 10000;
 	delay_buffer->data = calloc(10000, sizeof(int));
-
 }
 
 void setDelayGain(int gain){
@@ -49,7 +48,7 @@ int fixedMul(int a, int b){
 	return ((a*b) >> 15);
 }
 
- int fixedAdd(int a, int b){
+int fixedAdd(int a, int b){
 	int sum = a+b;
 	if(sum > 32767){
 		sum = 32767;
@@ -59,7 +58,7 @@ int fixedMul(int a, int b){
 	return sum;
 }
 
-void calcDelay(Chunk * input, Chunk * output){
+int calcDelay(Chunk * input, Chunk * output){
 	//Initialize loop  variable
 	int i;
 

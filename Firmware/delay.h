@@ -18,7 +18,7 @@ void init_delay();
 void setDelayGain(int gain);
 void setDelayFeedback(int feedback);
 signed int fixedMul(signed int a, signed int b);
-void calcDelay(Chunk * input, Chunk * output);
+int calcDelay(Chunk * input, Chunk * output);
 void setDelaySize(int size);
 void setDelayTime(int timeMs);
 
