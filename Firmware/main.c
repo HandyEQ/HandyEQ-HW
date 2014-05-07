@@ -32,17 +32,17 @@ int main(void){
 	enable_irq(buf_irq);
 
 	//Delay
-	init_delay();
+	
 	
 	//Init Effects
-	delay1 = initDspFx("Delay 1", 0, &calcDelay);
-	delay2 = initDspFx("Delay 2", 0, &calcDelay);
+	delay1 = initDspFx("Delay 1", 0, init_delay(), &calcDelay);
+	delay2 = initDspFx("Delay 2", 0, init_delay(), &calcDelay);
 
 	//Init Bins
 	bins = 2;
 	bin = calloc(bins, sizeof(DspBin));
 	bin[0] = initDspBin(0, delay1);
-	bin[1] = initDspBin(1, delay2);
+	bin[1] = initDspBin(0, delay2);
 
 	//Init dspsystem
 	input = calloc(1, sizeof(Chunk));

@@ -7,9 +7,10 @@
 #include "buffer.h"
 
 typedef struct DspFx {
-	char * name;                        	//Name
-    	int sampleBased;                      	//Flag for sample based function
-    	int (* function)(Chunk *, Chunk *);    	//Pointer to funcion
+	char * name;                        		//Name
+    	int sampleBased; 				//Flag for sample based function
+	void * structPointer;                    	//Pointer to struct
+    	int (* function)(void *, Chunk *, Chunk *);    	//Pointer to funcion
 } DspFx;
 
 /*	
@@ -33,7 +34,7 @@ typedef struct DspSystem {
 
 /* Function prototypes */
 DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out);
-DspFx * initDspFx(char * name, int mode, int (*funcion)(Chunk *, Chunk *));
+DspFx * initDspFx(char * name, int mode, void * structPointer, int (*funcion)(void *, Chunk *, Chunk *));
 DspBin * initDspBin(int bypass, DspFx * fx);
 void connectDspBin(DspBin *bin, Chunk * in, Chunk * out);
 void infoDspSystem(DspSystem *dspsystem); 

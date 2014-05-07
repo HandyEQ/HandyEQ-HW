@@ -18,10 +18,11 @@ DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out){
 	return dspsystem;
 }
 
-DspFx * initDspFx(char * name, int mode, int (*function)(Chunk *, Chunk *)){
+DspFx * initDspFx(char * name, int mode, void * structPointer, int (*function)(void *,Chunk *, Chunk *)){
 	DspFx * fx = calloc(1, sizeof(DspFx)); 
 	fx->name = name;
 	fx->sampleBased = mode;
+	fx->structPointer = structPointer;
 	fx->function = function;
 	return fx;
 }
@@ -45,7 +46,7 @@ void runDspSystem(DspSystem * dspsystem){
 			memcpy(dspsystem->bin[i]->out, dspsystem->bin[i]->in, sizeof(Chunk));
 		}
 		else {
-			(*dspsystem->bin[i]->fx->function)(dspsystem->bin[i]->in, dspsystem->bin[i]->out);
+			(*dspsystem->bin[i]->fx->function)(dspsystem->bin[i]->fx->structPointer, dspsystem->bin[i]->in, dspsystem->bin[i]->out);
 		}
 	}
 }
