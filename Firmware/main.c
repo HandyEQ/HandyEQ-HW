@@ -22,7 +22,7 @@ int main(void){
 
 	//UART
 	newUart = 0;
-	catch_interrupt(uart_input, uart_irq);
+	catch_interrupt(new_uart, uart_irq);
 	init_uart(115200);
 	enable_irq(uart_irq);
 
@@ -35,8 +35,8 @@ int main(void){
 	
 	
 	//Init Effects
-	delay1 = initDspFx("Delay 1", 0, init_delay(), &calcDelay);
-	delay2 = initDspFx("Delay 2", 0, init_delay(), &calcDelay);
+	delay1 = initDspFx("Delay 1", 0, init_delay(100), &calcDelay);
+	delay2 = initDspFx("Delay 2", 0, init_delay(10000), &calcDelay);
 
 	//Init Bins
 	bins = 2;
@@ -63,8 +63,11 @@ int main(void){
 			newSample = 0;
 		}
 		if(newUart){
-			newUart = 0;
 			uart_input();
+			printf("Test");
+			dspsystem->bin[input_buffer[0]-48]->bypass = (dspsystem->bin[input_buffer[0]-48]->bypass+1)%2;
+			printf("Bypass: %d", dspsystem->bin[input_buffer[0]-48]->bypass);
+			newUart = 0;
 		}
 	}
 
@@ -81,5 +84,6 @@ void new_uart(){
 
 void uart_input(){
 	char i = recieve_uart();
-	printf("%c", i);
+	input_buffer[0] = i;
+	//printf("%c", i);
 }

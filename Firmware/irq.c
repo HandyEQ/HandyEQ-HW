@@ -9,6 +9,8 @@ void set_irq_level(int irq, int level){
 }
 
 void enable_irq(int irq){
+	//IT_BASE_ADDR[ICLEAR/4] = (1 << irq);  // clear any pending irq
+	irq_struct -> irqclear = (1 << irq);
 	irq_struct->irqmask |= (1 << irq);
 }
 
