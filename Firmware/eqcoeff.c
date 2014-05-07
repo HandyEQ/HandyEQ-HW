@@ -2,7 +2,7 @@
 /* Initialization of coefficients for 3-band equalizer	*/
 /* For use with HandyEQ project MPEES-1 DAT096 Group6	*/
 /* Preben Thorod @ HandyEQ                              */
-/* Generated: 01 May 2014 07:11:14 */
+/* Generated: 07 May 2014 15:13:59 */
 
 #include <string.h>
 #include "biquad.h"
