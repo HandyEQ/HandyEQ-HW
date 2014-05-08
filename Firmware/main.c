@@ -9,6 +9,7 @@
 #include "biquad.h"
 #include "eqcoeff.h"
 #include "eq1band.h"
+#include "eq3band.h"
 
 int newSample;
 int newUart;
@@ -19,11 +20,11 @@ int main(void){
 	//Vars
 	DspSystem * dspsystem;
 	int bins, loop;
-	DspBin ** bin, * bin1, * bin2;
+	DspBin ** bin;
 	DspFx * delay1, * delay2;
-	DspFx * eq;
+	DspFx * eq1, * eq3;
 	
-	Chunk *input, * output, * bin1tobin2;
+	Chunk *input, * output, * bin1tobin2, * bin2tobin3;
 
 	//UART
 	newUart = 0;
@@ -38,17 +39,19 @@ int main(void){
 
 	//Init EQ
 	initEqCoeff();
-	eq = initDspFx("EQ 1-band", 0, init_eq1band(treble[4]), &runEq1band); 
+	eq1 = initDspFx("EQ 1-band", 0, init_eq1band(treble[4]), &runEq1band);
+	eq3 = initDspFx("EQ 3-band", 0, init_eq3band(), &runEq3band); 
 	
 	//Delay
 	delay1 = initDspFx("Delay 1", 0, init_delay(100), &calcDelay);
 	//delay2 = initDspFx("Delay 2", 0, init_delay(), &calcDelay);
 
 	//Init Bins
-	bins = 2;
+	bins = 3;
 	bin = calloc(bins, sizeof(DspBin));
 	bin[0] = initDspBin(1, delay1);
-	bin[1] = initDspBin(0, eq);
+	bin[1] = initDspBin(0, eq1);
+	bin[2] = initDspBin(0, eq3);
 
 	//Init dspsystem
 	input = calloc(1, sizeof(Chunk));
@@ -57,8 +60,10 @@ int main(void){
 	
 	//Connect bins
 	bin1tobin2 = calloc(1, sizeof(Chunk));
+	bin2tobin3 = calloc(1, sizeof(Chunk));
 	connectDspBin(dspsystem->bin[0], dspsystem->in, bin1tobin2);
-	connectDspBin(dspsystem->bin[1], bin1tobin2, dspsystem->out);
+	connectDspBin(dspsystem->bin[1], bin1tobin2, bin2tobin3);
+	connectDspBin(dspsystem->bin[2], bin2tobin3, dspsystem->out);
 
 
 	//Main Loop
@@ -89,7 +94,7 @@ int main(void){
 				dspsystem->bin[1]->bypass = (dspsystem->bin[1]->bypass+1)%2;
 				printf("EQ Bypass: %d\n", dspsystem->bin[1]->bypass);
 			} else {
-				setEq1bandCoeff(eq->structPointer, &treble[input_buffer[0]-48]);
+				setEqMidCoeff(eq3->structPointer, &midrange[input_buffer[0]-48]);
 			}
 		}
 	}
