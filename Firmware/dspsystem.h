@@ -8,9 +8,9 @@
 
 typedef struct DspFx {
 	char * name;                        		//Name
-    	int sampleBased; 				//Flag for sample based function
+    int sampleBased; 				//Flag for sample based function
 	void * structPointer;                    	//Pointer to struct
-    	int (* function)(void *, Chunk *, Chunk *);    	//Pointer to funcion
+    int (* function)(void *, Chunk *, Chunk *);    	//Pointer to funcion
 } DspFx;
 
 /*	

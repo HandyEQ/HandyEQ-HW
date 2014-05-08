@@ -3,12 +3,9 @@
 DelayEffect * init_delay(int timeMs){
 	DelayEffect * delayEff = calloc(1, sizeof(DelayEffect));
 	delayEff->head = 0;
-	delayEff->delay = 10000;
 	delayEff->gain = 4096;
 	delayEff->feedback = 8192;
 	setDelayTime(delayEff, timeMs);
-	//delayEff->size = 10000;
-	//delayEff->data = calloc(10000, sizeof(int));
 	return delayEff;
 }
 

@@ -31,3 +31,18 @@ void output_chunk(Chunk *current_chunk){
 		s_out_buf->reg = hold;
 	}
 }
+
+Chunk* createChunk(){	
+	//Chunk * newchunk;
+
+	return calloc(1, sizeof(Chunk));
+}
+
+void printChunk(Chunk *currentchunk){
+	int i = 0;
+	printf("Printing chunk:\n");
+	for (i =0; i < chunk_size; i++){
+		printf("i:%i	\t%i\n",i,currentchunk->data[i]);
+	}
+	
+}

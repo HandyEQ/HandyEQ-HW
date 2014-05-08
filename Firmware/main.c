@@ -14,13 +14,15 @@ int newSample;
 int newUart;
 char input_buffer[200];
 int counter;
+DspFx * eq;
 
 int main(void){
 	//Vars
-	//DspSystem * dspsystem;
+	DspSystem * dspsystem;
 	int bins, loop;
-	//DspBin ** bin, * bin1, * bin2;
-	//DspFx * delay1, * delay2;
+	DspBin ** bin, * bin1, * bin2;
+	DspFx * delay1, * delay2;
+	
 	Chunk *input, * output, * bin1tobin2;
 
 	//UART
@@ -34,43 +36,47 @@ int main(void){
 	catch_interrupt(new_sample, buf_irq);
 	enable_irq(buf_irq);
 
+	//Init EQ
+	initEqCoeff();
+	eq = initDspFx("EQ 1-band", 0, init_eq1band(treble[4]), &runEq1band); 
+	
 	//Delay
-	
-	
-	//Init Effects
-	//delay1 = initDspFx("Delay 1", 0, init_delay(), &calcDelay);
+	delay1 = initDspFx("Delay 1", 0, init_delay(), &calcDelay);
 	//delay2 = initDspFx("Delay 2", 0, init_delay(), &calcDelay);
 
 	//Init Bins
-	//bins = 2;
-	//bin = calloc(bins, sizeof(DspBin));
-	//bin[0] = initDspBin(0, delay1);
-	//bin[1] = initDspBin(0, delay2);
+	bins = 2;
+	bin = calloc(bins, sizeof(DspBin));
+	bin[0] = initDspBin(1, delay1);
+	bin[1] = initDspBin(0, eq);
 
 	//Init dspsystem
 	input = calloc(1, sizeof(Chunk));
 	output = calloc(1, sizeof(Chunk));
-	//dspsystem = initDspSystem(bin, bins, input, output); 
+	dspsystem = initDspSystem(bin, bins, input, output); 
 	
 	//Connect bins
-	//bin1tobin2 = calloc(1, sizeof(Chunk));
-	//connectDspBin(dspsystem->bin[0], dspsystem->in, bin1tobin2);
-	//connectDspBin(dspsystem->bin[1], bin1tobin2, dspsystem->out);
-	
-	//Init EQ
-	initEqCoeff();
-	initEq();
+	bin1tobin2 = calloc(1, sizeof(Chunk));
+	connectDspBin(dspsystem->bin[0], dspsystem->in, bin1tobin2);
+	connectDspBin(dspsystem->bin[1], bin1tobin2, dspsystem->out);
+
 
 	//Main Loop
+	
+	
 	while(1){
 		if(newSample){
 			retrieve_chunk(input);
-			//runDspSystem(dspsystem);
-			for(loop = 0; loop < chunk_size; loop++){
-				stage1.in = input->data[loop];
-				runBiquad(&stage1);
-				output->data[loop] = stage1.out;
-			}		
+			
+			
+			runDspSystem(dspsystem);
+			//for(loop = 0; loop < chunk_size; loop++){
+				//eq1bandeffect->stage1.in = input->data[loop];
+				//runBiquad(&stage1);
+				//output->data[loop] = stage1.out;
+			//}		
+			
+			
 			output_chunk(output);
 			newSample = 0;
 		}
@@ -93,6 +99,6 @@ void new_uart(){
 
 void uart_input(){
 	char i = recieve_uart();
-	setBiquadCoeff(&stage1,&treble[i-48]);
+	setEq1bandCoeff(eq->structPointer, &treble[i-48]);		
 	printf("%c", i);
 }
