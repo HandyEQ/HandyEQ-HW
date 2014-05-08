@@ -14,7 +14,6 @@ int newSample;
 int newUart;
 char input_buffer[200];
 int counter;
-DspFx * eq;
 
 int main(void){
 	//Vars
@@ -22,12 +21,13 @@ int main(void){
 	int bins, loop;
 	DspBin ** bin, * bin1, * bin2;
 	DspFx * delay1, * delay2;
+	DspFx * eq;
 	
 	Chunk *input, * output, * bin1tobin2;
 
 	//UART
 	newUart = 0;
-	catch_interrupt(uart_input, uart_irq);
+	catch_interrupt(new_uart, uart_irq);
 	init_uart(115200);
 	enable_irq(uart_irq);
 
@@ -41,7 +41,7 @@ int main(void){
 	eq = initDspFx("EQ 1-band", 0, init_eq1band(treble[4]), &runEq1band); 
 	
 	//Delay
-	delay1 = initDspFx("Delay 1", 0, init_delay(), &calcDelay);
+	delay1 = initDspFx("Delay 1", 0, init_delay(100), &calcDelay);
 	//delay2 = initDspFx("Delay 2", 0, init_delay(), &calcDelay);
 
 	//Init Bins
@@ -83,6 +83,15 @@ int main(void){
 		if(newUart){
 			newUart = 0;
 			uart_input();
+			if(input_buffer[0] == 'D'){
+				dspsystem->bin[0]->bypass = (dspsystem->bin[0]->bypass+1)%2; 
+				printf("Delay Bypass: %d\n", dspsystem->bin[0]->bypass); 
+			} else if(input_buffer[0] == 'E'){
+				dspsystem->bin[1]->bypass = (dspsystem->bin[1]->bypass+1)%2;
+				printf("EQ Bypass: %d\n", dspsystem->bin[1]->bypass);
+			} else {
+				setEq1bandCoeff(eq->structPointer, &treble[input_buffer[0]-48]);
+			}
 		}
 	}
 
@@ -98,7 +107,5 @@ void new_uart(){
 }
 
 void uart_input(){
-	char i = recieve_uart();
-	setEq1bandCoeff(eq->structPointer, &treble[i-48]);		
-	printf("%c", i);
+	input_buffer[0] = recieve_uart();
 }
