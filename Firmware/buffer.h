@@ -2,7 +2,6 @@
 #define BUFFER_H
 
 #include <stdlib.h>
-#include <stdio.h>
 
 #define input_buf_addr 0x80000D00
 #define output_buf_addr 0x80000E00

@@ -1,79 +1,51 @@
-#include <stdio.h>
 #include "dspsystem.h"
-#include "delay.h"
 
-#define NULL ((void *)0)
-
-/* Global variables */
-DspBin * bin1, * bin2;
-DspFx * delay1, * delay2;
-Chunk * bin1out, * bin2out;
-
-/* Functions */
-void initDspSystem(DspSystem * dspsystem, Chunk * in, Chunk * out){	
+DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out){
+	int i;
+	DspSystem * dspsystem = calloc(1, sizeof(DspSystem));
+	
 	printf("DspSystem: Initialisation started\n");
-	dspsystem = calloc(1, sizeof(DspSystem));
-	bin1 = calloc(1, sizeof(DspBin));
-	bin2 = calloc(1, sizeof(DspBin));
-	delay1 = calloc(1, sizeof(DspFx));
-	delay2 = calloc(1, sizeof(DspFx));
-	bin1out = calloc(1, sizeof(Chunk));
-	bin2out = calloc(1, sizeof(Chunk));
 
+	dspsystem->bin = bin;
+	//Set size
+	dspsystem->size = size;	
 	//Init chunks 
 	dspsystem->in = in;
 	dspsystem->out = out;
-
-	//Init Effects
-	initDspFx(delay1, "Delay 1", 0, &calcDelay);
-	initDspFx(delay2, "Delay 2", 0, &calcDelay);
-
-	//Init Bins
-	initDspBin(bin1, 1, delay1);
-	initDspBin(bin2, 1, delay2);
-
-	connectDspBin(bin1, dspsystem->in, bin1out);
-	connectDspBin(bin2, bin1out, dspsystem->out);
-
-	dspsystem->bin[0] = bin1;
-	dspsystem->bin[1] = bin2;
 	
-	
-	printf("DspSystem: Initialized\n");
+	printf("DspSystem: Initialized, Size: %d\n", dspsystem->size);
+
+	return dspsystem;
 }
 
-void initDspFx(DspFx * fx, char * name, int mode, void (*function)(Chunk *, Chunk *)){
+DspFx * initDspFx(char * name, int mode, int (*function)(Chunk *, Chunk *)){
+	DspFx * fx = calloc(1, sizeof(DspFx)); 
 	fx->name = name;
 	fx->sampleBased = mode;
 	fx->function = function;
+	return fx;
 }
 
-void initDspBin(DspBin * bin, int bypass, DspFx * fx){
+DspBin * initDspBin(int bypass, DspFx * fx){
+	DspBin * bin = calloc(1, sizeof(DspBin));
 	bin->bypass = bypass;
 	bin->fx = fx;
+	return bin;
 }
 
 void connectDspBin(DspBin * bin, Chunk * in, Chunk * out){
 	bin->in = in;
 	bin->out = out;
-	bin->fx->in = in;
-	bin->fx->out = out;
 }
 
 void runDspSystem(DspSystem * dspsystem){
-	int i, j;
-	for(i = 0; i < 4; i++){
+	int i;
+	for(i = 0; i < dspsystem->size; i++){
 		if(dspsystem->bin[i]->bypass){
 			memcpy(dspsystem->bin[i]->out, dspsystem->bin[i]->in, sizeof(Chunk));
 		}
 		else {
-			if(dspsystem->bin[i]->fx->sampleBased){
-				for(j = 0; j < chunk_size; j++){
-					//implement this here code
-				}
-			} else {
-				dspsystem->bin[i]->fx->function(dspsystem->bin[i]->fx->in, dspsystem->bin[i]->fx->out);
-			}
+			(*dspsystem->bin[i]->fx->function)(dspsystem->bin[i]->in, dspsystem->bin[i]->out);
 		}
 	}
 }
