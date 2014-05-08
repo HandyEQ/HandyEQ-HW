@@ -12,6 +12,8 @@
 
 /* Global coefficient structs: */
 extern BiquadCoeff treble[9];
+extern BiquadCoeff midrange[9];
+extern BiquadCoeff bass[9];
 
 /* Function prototypes */
 void initEqCoeff();

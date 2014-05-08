@@ -66,8 +66,7 @@ int main(void){
 	
 	while(1){
 		if(newSample){
-			retrieve_chunk(input);
-			
+			retrieve_chunk(input);			
 			
 			runDspSystem(dspsystem);
 			//for(loop = 0; loop < chunk_size; loop++){

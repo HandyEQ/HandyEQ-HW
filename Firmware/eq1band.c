@@ -8,33 +8,11 @@
 #define PRINTEQDEBUG
 
 
-//BiquadStage stage1;	
-
-//int initEq(){
-	//#ifdef PRINTEQDEBUG
-	//printf("EQ: Initialisation started\n");
-	//#endif
-	//strcpy(stage1.name,"EQ-Stage1");	
-	//stage1.coeff = &treble[0];
-	//stage1.in = 0;
-	//stage1.xmem1 = 0;
-	//stage1.xmem2 = 0;
-	//stage1.ymem1 = 0;
-	//stage1.ymem2 = 0;
-	//stage1.outUnscaled = 0;
-	//stage1.out = 0;
-	//#ifdef PRINTEQDEBUG
-	//printf("EQ: Initialized\n");
-	//#endif
-	
-	//return 0;
-//}
-
-
 
 Eq1BandEffect * init_eq1band(BiquadCoeff * coeffstage1){
 	/* Create pointer to Eq1BandEffect */
 	Eq1BandEffect * eq1bandeffect = calloc(1, sizeof(Eq1BandEffect));
+	
 	/* Resets biquad stage */
 	resetBiquad(&(eq1bandeffect->stage1));	
 	
@@ -81,9 +59,6 @@ int runEq1band(void *pointer, Chunk * input, Chunk * output){
 		output->data[i] = eq1bandeffect->stage1.out; 
 		
 	}
-	//for chunksize run biquad (need to adapt run biquad?)l
-	
-	//runBiquad()
 	return 0;
 }
 

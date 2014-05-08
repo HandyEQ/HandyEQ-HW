@@ -3,5 +3,5 @@
 # Preben Thorod - HandyEQ
 
 #eqtest.c removed!
-sparc-elf-gcc -o dspmain_tsim dspsystemmain.c buffer.c biquad.c eq1band.c eqcoeff.c dspsystem.c volume.c delay.c
+sparc-elf-gcc -o dspmain_tsim dspsystemmain.c buffer.c biquad.c eq1band.c eq3band.c eqcoeff.c dspsystem.c volume.c delay.c
 #gcc -o ctraining src/main.c src/biquad.c
