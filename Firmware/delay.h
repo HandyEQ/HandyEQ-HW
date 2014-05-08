@@ -15,11 +15,11 @@ typedef struct delay_struct {
 } DelayEffect;
 
 DelayEffect * init_delay();
-void setDelayGain(DelayEffect *delayEff, int gain);
-void setDelayFeedback(DelayEffect *delayEff, int feedback);
+void setDelayGain(void * pointer, int gain);
+void setDelayFeedback(void * pointer, int feedback);
 signed int fixedMul(signed int a, signed int b);
 int calcDelay(void * pointer, Chunk * input, Chunk * output);
 void setDelaySize(DelayEffect *delayEff, int size);
-void setDelayTime(DelayEffect *delayEff, int timeMs);
+void setDelayTime(void * pointer, int timeMs);
 
 #endif

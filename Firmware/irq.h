@@ -1,6 +1,8 @@
 #ifndef IRQ_H
 #define IRQ_H
 
+#include <stdio.h>
+
 #define irq_addr 0x80000200
 
 typedef struct irq_regs {
@@ -17,12 +19,13 @@ typedef struct irq_regs {
     volatile unsigned int icsel1;      /* 0x28 */
     volatile unsigned int dummy1[5];   /* 0x2c - 0x3C */
     volatile unsigned int irqmask;     /* 0x40 */
-} IrqRegs;
+} irq_regs;
 
-// #define irq_struct               ((irq_regs *) irq_addr)
+#define irq_struct               ((irq_regs *) irq_addr)
 
 void set_irq_level(int irq, int level);
 void enable_irq(int irq);
 void force_irq(int irq);
+void clear_irq(int irq);
 
 #endif
