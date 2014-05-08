@@ -51,9 +51,9 @@ int fixedMul(int a, int b){
 
  int fixedAdd(int a, int b){
 	int sum = a+b;
-	if(sum > 32767){
+	if(a > 0 && b > 0 && sum > 32767){
 		sum = 32767;
-	} else if (sum < -32768) {
+	} else if (a < 0 && b < 0 && sum < -32768) {
 		sum = -32768;
 	}
 	return sum;

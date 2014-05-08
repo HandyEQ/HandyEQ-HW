@@ -6,7 +6,7 @@
 //Maybe:
 typedef struct DspFx {
 	char * name;                         //Name
-    int sampleBased;                       //Flag for sample based function
+    int sampleBased;                      //Flag for sample based function
 	Chunk * in;                            //Pointer to input
 	Chunk * out;                           //Pointer to output 
     void (* function)(Chunk *, Chunk *);    //Pointer to funcion

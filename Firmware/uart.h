@@ -1,6 +1,8 @@
 #ifndef UART_H
 #define UART_H
 
+#include <stdlib.h>
+
 #define uart_irq 2
 #define uart_addr 0x80000100
 
@@ -14,6 +16,12 @@ typedef struct uart_regs {
 
 /* Baud rates, dependent on the system CLK */
 #define SysCLK 50000000 // 50 MHz
+
+typedef struct uart_struct {
+	short bufferSelect;
+	short counter[2];
+	char buffer[2][200];
+} UartBuffers;
 
 void init_uart();
 void send_char_uart(char data);

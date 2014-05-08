@@ -9,13 +9,10 @@
 
 int newSample;
 int newUart;
-char input_buffer[200];
-char *input_pointer = input_buffer;
-int counter;
 int print;
-signed short a, b, c, d, e, f, g, h;
-int w;
 DspSystem * dspsystem;
+UartBuffers * uartBuffers;
+Chunk *input, *output;
 
 int main(void){
 	//UART
@@ -23,6 +20,7 @@ int main(void){
 	catch_interrupt(uart_input, uart_irq);
 	init_uart(115200);
 	enable_irq(uart_irq);
+	uartBuffers = calloc(1, sizeof(UartBuffers));
 
 	//Buffer
 	newSample = 0;
@@ -35,8 +33,8 @@ int main(void){
 	setDelayFeedback(12288);
 
 	//Init dspsystem
-	Chunk *input = calloc(1, sizeof(struct chunk));
-	Chunk *output = calloc(1, sizeof(struct chunk));
+	input = calloc(1, sizeof(Chunk));
+	output = calloc(1, sizeof(Chunk));
 	initDspSystem(dspsystem, input, output);
 
 
@@ -66,15 +64,16 @@ void new_sample(){
 }
 
 void new_uart(){
-	newUart = 1;
+	uartBuffers->buffer[uartBuffers->bufferSelect][uartBuffers->counter[uartBuffers->bufferSelect]] = recieve_uart();
+	uartBuffers->counter[uartBuffers->bufferSelect]++;
+	uartBuffers->buffer[uartBuffers->bufferSelect][uartBuffers->counter[uartBuffers->bufferSelect]] = '\0';
+	if(uartBuffers->buffer[uartBuffers->bufferSelect][uartBuffers->counter[uartBuffers->bufferSelect]-1] == '#'){
+		uartBuffers->counter[uartBuffers->bufferSelect] = 0;
+		uartBuffers->bufferSelect = (uartBuffers->bufferSelect+1)%2;
+		newUart = 1;
+	}
 }
 
 void uart_input(){
-	char i = recieve_uart();
-	if(i == 'D'){
-		print = 1;
-	} else if ( i == 'B'){
-		print = 0;
-	}
-	printf("%c", i);
+	printf("%s", uartBuffers->buffer[(uartBuffers->bufferSelect-1)%2]);
 }

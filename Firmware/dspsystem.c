@@ -7,7 +7,7 @@
 /* Global variables */
 DspBin * bin1, * bin2;
 DspFx * delay1, * delay2;
-Chunk * new_chunk, * bin1out, * bin2out;
+Chunk * bin1out, * bin2out;
 
 /* Functions */
 void initDspSystem(DspSystem * dspsystem, Chunk * in, Chunk * out){	
@@ -17,9 +17,8 @@ void initDspSystem(DspSystem * dspsystem, Chunk * in, Chunk * out){
 	bin2 = calloc(1, sizeof(DspBin));
 	delay1 = calloc(1, sizeof(DspFx));
 	delay2 = calloc(1, sizeof(DspFx));
-	new_chunk = calloc(1, sizeof(struct chunk));
-	bin1out = calloc(1, sizeof(struct chunk));
-	bin2out = calloc(1, sizeof(struct chunk));
+	bin1out = calloc(1, sizeof(Chunk));
+	bin2out = calloc(1, sizeof(Chunk));
 
 	//Init chunks 
 	dspsystem->in = in;
@@ -30,7 +29,7 @@ void initDspSystem(DspSystem * dspsystem, Chunk * in, Chunk * out){
 	initDspFx(delay2, "Delay 2", 0, &calcDelay);
 
 	//Init Bins
-	initDspBin(bin1, 0, delay1);
+	initDspBin(bin1, 1, delay1);
 	initDspBin(bin2, 1, delay2);
 
 	connectDspBin(bin1, dspsystem->in, bin1out);
@@ -62,13 +61,19 @@ void connectDspBin(DspBin * bin, Chunk * in, Chunk * out){
 }
 
 void runDspSystem(DspSystem * dspsystem){
-	int i;
+	int i, j;
 	for(i = 0; i < 4; i++){
 		if(dspsystem->bin[i]->bypass){
 			memcpy(dspsystem->bin[i]->out, dspsystem->bin[i]->in, sizeof(Chunk));
 		}
 		else {
-			dspsystem->bin[i]->fx->function(dspsystem->bin[i]->fx->in, dspsystem->bin[i]->fx->out);
+			if(dspsystem->bin[i]->fx->sampleBased){
+				for(j = 0; j < chunk_size; j++){
+					//implement this here code
+				}
+			} else {
+				dspsystem->bin[i]->fx->function(dspsystem->bin[i]->fx->in, dspsystem->bin[i]->fx->out);
+			}
 		}
 	}
 }
