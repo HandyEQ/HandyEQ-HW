@@ -146,6 +146,7 @@ void SPI_SendByte(int i);
 void OLED_SendChar(char c);
 
 void OLED_SendString(int line, char* s);
+void OLED_SendStringPos(int line, char* s, int pos);
 
 void GPIOAB_IRQHandler(int irq);
 void TIMER1_IRQHandler(int irq);

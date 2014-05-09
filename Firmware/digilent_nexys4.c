@@ -435,8 +435,8 @@ void OLED_SendString(int line, char* s)
   GPIO_ResetBits(GPIOB, NEXYS4_OLED_DC); //command
 
   SPI_SendByte(0xB0 + line); // cmd to set line to write to
-  SPI_SendByte(0x10); // set higher byte of start segment (both are 0s = beginning of the line)
-  SPI_SendByte(0x00); // set lower byte of start segment (both are 0s = beginning of the line)
+  SPI_SendByte(0x10); // set higher nibble of start segment (both are 0s = beginning of the line)
+  SPI_SendByte(0x00); // set lower nibble of start segment (both are 0s = beginning of the line)
 
   GPIO_SetBits(GPIOB, NEXYS4_OLED_DC); //data
 
@@ -453,3 +453,36 @@ void OLED_SendString(int line, char* s)
 	}*/
 }
 
+
+void OLED_SendStringPos(int line, char* s, int pos)
+{
+  /* Significant improvement here: keep four global line-variable strings for the four lines, and when this
+     function is called check if the string to be written is the same the one that is already displayed
+     (stored in the global line-variable). If not, overwrite the line-variable and print to display, but if yes,
+     do nothing. */
+  int i = 0;
+  int col1 = 0, col2 = 0;
+
+  GPIO_ResetBits(GPIOB, NEXYS4_OLED_DC); //command
+  
+  col1 = (int)(pos/2);
+  col2 = (int)(pos%2)*8;
+
+  SPI_SendByte(0xB0 + line); // cmd to set line to write to
+  SPI_SendByte(0x10 + col1); // set higher nibble of start segment (both are 0s = beginning of the line)
+  SPI_SendByte(0x00 + col2); // set lower nibble of start segment (both are 0s = beginning of the line)
+
+  GPIO_SetBits(GPIOB, NEXYS4_OLED_DC); //data
+
+  	i = 0;
+  	while (s[i] && (i < (16-pos)))
+  	{
+    		OLED_SendChar(s[i]);
+    		i++;
+  	}
+	/*while (i < 16) // clear line
+  	{
+    		OLED_SendChar(' '); // the segment ctr is incremented automatically, it will be at the beginning of the line after this while-case
+    		i++;
+	}*/
+}

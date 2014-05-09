@@ -1,11 +1,6 @@
 #ifndef HWINTERFACE_H
 #define HWINTERFACE_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "digilent_nexys4.h"
-#include "gpio.h"
 #include "dspsystem.h"
 
 typedef struct interface {
@@ -14,6 +9,7 @@ typedef struct interface {
 	int buttons[5];
 	int encBtn;
 	int encValue;
+	int encInc;
 	int leds[16];
 	int switches[2];
 } Interface;
@@ -31,14 +27,15 @@ typedef struct menu {
 
 Interface * initHwInterface();
 Menu * initMenu(DspSystem * dspsystem);
-void addEffect(Menu * menu, DspFx * fx);
-void addSetting(Menu * menu, DspFx * fx, int place, char * settingAb, void (*setting)(void *, int)); 
+void addEffect(Menu * menu, DspBin * bin);
+void addSetting(Menu * menu, DspBin * bin, int place, char * settingAb, void (*setting)(void *, int)); 
 void pollSwitches(Interface * interface);
 void showStatus(Menu * menu, Interface * interface);
-void readEnc(Interface * interface);
+void readEnc(Menu * menu, Interface * interface);
 void clearOled();
 void menuNavigation(Menu * menu, Interface * interface);
 void selectRow(Menu * menu, Interface * interface);
 void selectSetting(Menu * menu, Interface * interface);
+void updateSetting(Menu * menu, Interface * interface);
 
 #endif

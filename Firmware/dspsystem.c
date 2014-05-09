@@ -1,4 +1,7 @@
 #include "dspsystem.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out){
 	int i;
@@ -18,12 +21,22 @@ DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out){
 	return dspsystem;
 }
 
-DspFx * initDspFx(char * name, int mode, void * structPointer, int (*function)(void *,Chunk *, Chunk *)){
+DspFx * initDspFx(char * name, void * structPointer, char settingName[3][3], void (*setting[3])(void *, int), int stepVal[3], int stepRangeH[3], int stepRangeL[3], int (*function)(void *,Chunk *, Chunk *)){
 	DspFx * fx = calloc(1, sizeof(DspFx)); 
+	int i;	
 	fx->name = name;
-	fx->sampleBased = mode;
 	fx->structPointer = structPointer;
 	fx->function = function;
+	for(i = 0; i < 3; i++){
+		fx->stepVal[i] = stepVal[i];
+		fx->setting[i] = setting[i];
+		strcpy(fx->settingName[i], settingName[i]);
+		fx->stepRangeH[i] = stepRangeH[i];
+		fx->stepRangeL[i] = stepRangeL[i];
+	}
+	fx->stepVal[3] = 1;
+	fx->stepRangeH[3] = 1;
+	fx->stepRangeL[3] = 0;
 	return fx;
 }
 
@@ -32,6 +45,12 @@ DspBin * initDspBin(int bypass, DspFx * fx){
 	bin->bypass = bypass;
 	bin->fx = fx;
 	return bin;
+}
+
+void bypassDspBin(void * pointer, int bypass){
+	DspBin * bin = pointer;
+	bin->bypass = bypass;
+	printf("Bypassed Bin\n");
 }
 
 void connectDspBin(DspBin * bin, Chunk * in, Chunk * out){

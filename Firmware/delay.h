@@ -1,8 +1,6 @@
 #ifndef DELAY_H
 #define DELAY_H
 
-#include <stdlib.h>
-#include <string.h>
 #include "buffer.h"
 
 typedef struct delay_struct {
@@ -12,6 +10,11 @@ typedef struct delay_struct {
 	int feedback;
 	int size;
  	int *data;
+	void (*setting[3])(void *, int);
+	char settingName[3][3];
+	int stepVal[3];
+	int stepRangeH[3];
+	int stepRangeL[3];
 } DelayEffect;
 
 DelayEffect * init_delay();
@@ -21,5 +24,6 @@ signed int fixedMul(signed int a, signed int b);
 int calcDelay(void * pointer, Chunk * input, Chunk * output);
 void setDelaySize(DelayEffect *delayEff, int size);
 void setDelayTime(void * pointer, int timeMs);
+void removeDelay(void * pointer);
 
 #endif
