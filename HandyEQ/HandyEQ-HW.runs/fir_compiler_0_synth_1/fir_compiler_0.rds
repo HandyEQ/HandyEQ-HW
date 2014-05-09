@@ -1,0 +1,435 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Fri May 09 15:27:54 2014
+# Process ID: 5808
+# Log file: C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/fir_compiler_0_synth_1/fir_compiler_0.rds
+# Journal file: C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/fir_compiler_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+Attempting to get a license: Implementation
+Feature available: Implementation
+Loading parts and site information from C:/Xilinx/Vivado/2013.4/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+source fir_compiler_0.tcl
+# set_param gui.test TreeTableDev
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7a100tcsg324-2
+# set_property target_language VHDL [current_project]
+# set_param project.compositeFile.enableAutoGeneration 0
+# read_ip {{c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci}}
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2013.4/data/ip'.
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property is_locked true [get_files {{c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci}}]
+# read_xdc dont_touch.xdc
+# set_property used_in_implementation false [get_files dont_touch.xdc]
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir {C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.data/wt} [current_project]
+# set_property parent.project_dir {C:/Users/sebkarl/Desktop/fast synt} [current_project]
+# synth_design -top fir_compiler_0 -part xc7a100tcsg324-2 -mode out_of_context
+Command: synth_design -top fir_compiler_0 -part xc7a100tcsg324-2 -mode out_of_context
+
+Starting synthesis...
+
+INFO: [IP_Flow 19-2162] IP 'fir_compiler_0' is locked. Locked reason: Property 'IS_LOCKED' is set to true by the system or user
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 239.184 ; gain = 93.063
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fir_compiler_0' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:70]
+INFO: [Synth 8-3491] module 'fir_compiler_v7_1' declared at 'c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/fir_compiler_v7_1.vhd:109' bound to instance 'U0' of component 'fir_compiler_v7_1' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'fir_compiler_v7_1__parameterized0' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/fir_compiler_v7_1.vhd:233]
+INFO: [Synth 8-3491] module 'fir_compiler_v7_1_viv' declared at 'c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/fir_compiler_v7_1_viv.vhd:118' bound to instance 'i_synth' of component 'fir_compiler_v7_1_viv' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/fir_compiler_v7_1.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'fir_compiler_v7_1_viv__parameterized0' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/fir_compiler_v7_1_viv.vhd:252]
+INFO: [Synth 8-3491] module 'single_rate' declared at 'c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:121' bound to instance 'i_single_rate' of component 'single_rate' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/fir_compiler_v7_1_viv.vhd:262]
+INFO: [Synth 8-638] synthesizing module 'single_rate__parameterized0' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:248]
+INFO: [Synth 8-638] synthesizing module 'glb_ifx_slave' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/axi_utils_v2_0/hdl/glb_ifx_slave.vhd:166]
+INFO: [Synth 8-3491] module 'glb_srl_fifo' declared at 'c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/axi_utils_v2_0/hdl/glb_srl_fifo.vhd:196' bound to instance 'fifo0' of component 'glb_srl_fifo' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/axi_utils_v2_0/hdl/glb_ifx_slave.vhd:199]
+INFO: [Synth 8-638] synthesizing module 'glb_srl_fifo__parameterized0' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/axi_utils_v2_0/hdl/glb_srl_fifo.vhd:248]
+INFO: [Synth 8-256] done synthesizing module 'glb_srl_fifo__parameterized0' (1#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/axi_utils_v2_0/hdl/glb_srl_fifo.vhd:248]
+INFO: [Synth 8-256] done synthesizing module 'glb_ifx_slave' (2#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/axi_utils_v2_0/hdl/glb_ifx_slave.vhd:166]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2623]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2628]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2629]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2630]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2631]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2632]
+INFO: [Synth 8-638] synthesizing module 'delay' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay' (3#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized0' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized0' (3#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized1' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized1' (3#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized2' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized2' (3#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized3' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized3' (3#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized4' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized4' (3#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized5' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized5' (3#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized6' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized6' (3#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized7' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized7' (3#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized8' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized8' (3#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/global_pkg.vhd:4063]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/global_pkg.vhd:4080]
+INFO: [Synth 8-638] synthesizing module 'filt_mem' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/mem.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'dpt_mem' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/dpt_mem.vhd:143]
+INFO: [Synth 8-4472] Detected and applied attribute ram_style = block [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/dpt_mem.vhd:200]
+INFO: [Synth 8-256] done synthesizing module 'dpt_mem' (4#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/dpt_mem.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'filt_mem' (5#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/mem.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'filt_mem__parameterized0' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/mem.vhd:159]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/mem.vhd:194]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/mem.vhd:196]
+INFO: [Synth 8-638] synthesizing module 'sp_mem' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/sp_mem.vhd:141]
+INFO: [Synth 8-4472] Detected and applied attribute rom_style = distributed [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/sp_mem.vhd:247]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem' (6#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/sp_mem.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'filt_mem__parameterized0' (6#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/mem.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'cntrl_delay' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/cntrl_delay.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'cntrl_delay' (7#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/cntrl_delay.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'buff' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/buff.vhd:147]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/buff.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized9' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized9' (7#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'buff' (8#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/buff.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'addsub_mult_accum' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/addsub_mult_accum.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized10' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized10' (8#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized11' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized11' (8#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized12' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized12' (8#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'calc' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/calc.vhd:161]
+INFO: [Synth 8-113] binding component instance 'i_dsp48e1' to cell 'DSP48E1' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/calc.vhd:382]
+INFO: [Synth 8-256] done synthesizing module 'calc' (9#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/calc.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'addsub_mult_accum' (10#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/addsub_mult_accum.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized13' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized13' (10#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized14' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized14' (10#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/delay.vhd:157]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:4742]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:4770]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:4776]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:4782]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:4796]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:4800]
+INFO: [Synth 8-3936] Found unconnected internal register 'g_semi_parallel_and_smac.g_paths[0].p_path_out_reg[0][fab]' and it is trimmed from '48' to '33' bits. [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:4321]
+INFO: [Synth 8-256] done synthesizing module 'single_rate__parameterized0' (11#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:248]
+INFO: [Synth 8-256] done synthesizing module 'fir_compiler_v7_1_viv__parameterized0' (12#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/fir_compiler_v7_1_viv.vhd:252]
+INFO: [Synth 8-256] done synthesizing module 'fir_compiler_v7_1__parameterized0' (13#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/fir_compiler_v7_1.vhd:233]
+INFO: [Synth 8-256] done synthesizing module 'fir_compiler_0' (14#1) [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:70]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 406.543 ; gain = 260.422
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+INFO: [Synth 8-3295] tying undriven pin \g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem :ADDRA[7] to constant 0 [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:3675]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2013.4/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2013.4/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/ConfigModes.xml
+
+Processing XDC Constraints
+Parsing XDC File [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/fir_compiler_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/fir_compiler_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true. (constraint file  {C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/fir_compiler_0_synth_1/dont_touch.xdc}, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 485.309 ; gain = 339.188
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Finished RTL Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 485.309 ; gain = 339.188
+---------------------------------------------------------------------------------
+
+Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic.
+INFO: [Synth 8-4471] merging register 'g_semi_parallel_and_smac.base_en_cntrl_reg' into 'g_semi_parallel_and_smac.base_en_reg' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2607]
+INFO: [Synth 8-4471] merging register 'g_semi_parallel_and_smac.base_max_cntrl_reg' into 'g_semi_parallel_and_smac.base_max_reg' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2609]
+INFO: [Synth 8-4471] merging register 'g_semi_parallel_and_smac.we_gen_reg' into 'g_semi_parallel_and_smac.we_gen_cntrl_reg' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2612]
+INFO: [Synth 8-4471] merging register 'g_semi_parallel_and_smac.we_flush_reg' into 'g_semi_parallel_and_smac.we_gen_cntrl_reg' [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2643]
+INFO: [Synth 8-3936] Found unconnected internal register 'g_semi_parallel_and_smac.we_gen_algn_reg' and it is trimmed from '3' to '2' bits. [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2789]
+INFO: [Synth 8-3936] Found unconnected internal register 'g_semi_parallel_and_smac.base_max_algn_reg' and it is trimmed from '3' to '2' bits. [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_v7_1/hdl/single_rate.vhd:2800]
+INFO: [Synth 8-3971] The signal gen_bram.gen_write_first.gen_double_reg.ram_reg was recognized as a true dual port RAM template.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-2
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 549.406 ; gain = 403.285
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.i_cntrl_cntrl_mem_we/gen_reg.d_reg_reg[0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[0].i_delay/gen_reg.d_reg_reg[0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[1].i_delay/gen_reg.d_reg_reg[0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[2].i_delay/gen_dly.gen_regs.delay_bus_reg[0][0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[2].i_delay/gen_dly.gen_regs.delay_bus_reg[1][0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[4].i_delay/gen_dly.gen_regs.delay_bus_reg[0][0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[4].i_delay/gen_dly.gen_regs.delay_bus_reg[1][0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[5].i_delay/gen_dly.gen_regs.delay_bus_reg[0][0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[5].i_delay/gen_dly.gen_regs.delay_bus_reg[1][0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[6].i_delay/gen_dly.gen_regs.delay_bus_reg[0][0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[6].i_delay/gen_dly.gen_regs.delay_bus_reg[1][0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[6].i_delay/gen_dly.gen_regs.delay_bus_reg[2][0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[6].i_delay/gen_dly.gen_regs.delay_bus_reg[3][0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.flush_data_reg ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.flush_datax2_reg ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.flush_datax2_sub1_reg ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 568.805 ; gain = 422.684
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 580.965 ; gain = 434.844
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 598.906 ; gain = 452.785
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 599.852 ; gain = 453.730
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3332] Sequential element (aempty_1_reg) is unused and will be removed from module glb_srl_fifo__parameterized0.
+INFO: [Synth 8-3332] Sequential element (not_aempty_1_reg) is unused and will be removed from module glb_srl_fifo__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tlast_int_reg ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_smac_cntrl.accum_opcode_reg[9] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_smac_cntrl.accum_opcode_reg[7] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_smac_cntrl.accum_opcode_reg[6] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_smac_cntrl.accum_opcode_reg[2] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_smac_cntrl.accum_opcode_reg[1] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_smac_cntrl.accum_opcode_reg[0] ) is unused and will be removed from module fir_compiler_v7_1_viv__parameterized0.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[15] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[14] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[13] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[12] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[11] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[10] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[9] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[8] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[7] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[6] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[5] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[4] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[3] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[2] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[1] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doA_reg_reg[0] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[15] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[14] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[13] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[12] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[11] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[10] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[9] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[8] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[7] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[6] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[5] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[4] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[3] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[2] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[1] ) is unused and will be removed from module dpt_mem.
+INFO: [Synth 8-3332] Sequential element (\gen_bram.gen_write_first.gen_double_reg.doB_reg_reg[0] ) is unused and will be removed from module dpt_mem.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 611.207 ; gain = 465.086
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+Gated Clock Conversion mode: off
+WARNING: [Synth 8-3295] tying undriven pin \g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_coln_cntrl_and_addr[0].i_coln_cntrl_and_addr :CNTRL_IN[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin \g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_coln_cntrl_and_addr[0].i_coln_cntrl_and_addr :CNTRL_IN[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin \g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_coln_cntrl_and_addr[0].i_coln_cntrl_and_addr :CNTRL_IN[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin \g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_coln_cntrl_and_addr[0].i_coln_cntrl_and_addr :CNTRL_IN[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin \g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_coln_cntrl_and_addr[0].i_coln_cntrl_and_addr :CNTRL_IN[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin \g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_coln_cntrl_and_addr[0].i_coln_cntrl_and_addr :CNTRL_IN[6] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 611.207 ; gain = 465.086
+---------------------------------------------------------------------------------
+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 611.207 ; gain = 465.086
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 611.207 ; gain = 465.086
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |     4|
+|2     |DSP48E1_1  |     1|
+|3     |LUT1       |     7|
+|4     |LUT2       |    15|
+|5     |LUT3       |    10|
+|6     |LUT4       |     5|
+|7     |LUT5       |     4|
+|8     |LUT6       |    45|
+|9     |MUXF7      |    17|
+|10    |RAMB18E1_2 |     1|
+|11    |SRL16E     |    26|
+|12    |FDRE       |   150|
+|13    |FDSE       |     5|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 611.207 ; gain = 465.086
+---------------------------------------------------------------------------------
+
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 611.207 ; gain = 465.086
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Parsing XDC File [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0_ooc.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+160 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 990.027 ; gain = 800.449
+# rename_ref -prefix_all fir_compiler_0
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+# write_checkpoint -noxdef fir_compiler_0.dcp
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+# report_utilization -file fir_compiler_0_utilization_synth.rpt -pb fir_compiler_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 990.027 ; gain = 0.000
+# if { [catch {
+#   file copy -force {C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/fir_compiler_0_synth_1/fir_compiler_0.dcp} {c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.dcp}
+#   write_verilog -force -mode synth_stub {c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0_stub.v}
+#   write_verilog -force -mode funcsim {c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0_funcsim.v}
+#   write_vhdl -force -mode funcsim {c:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0_funcsim.vhdl}
+# } _RESULT ] } { 
+#   puts "Critical Warning: Unable to successfully create or copy supporting IP files."
+# }
+INFO: [Common 17-206] Exiting Vivado at Fri May 09 15:29:24 2014...

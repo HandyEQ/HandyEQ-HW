@@ -1,0 +1,236 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Sun May 04 13:11:34 2014
+# Process ID: 4336
+# Log file: C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/impl_1/leon3mp.rdi
+# Journal file: C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+Attempting to get a license: Implementation
+Feature available: Implementation
+Loading parts and site information from C:/Xilinx/Vivado/2013.4/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+source leon3mp.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp' for cell 'XADC_component/XADC_component'
+INFO: [Netlist 29-17] Analyzing 166 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2013.4
+Loading clock regions from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2013.4/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2013.4/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/ConfigModes.xml
+INFO: [Opt 31-140] Inserted 2 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+Parsing XDC File [C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/impl_1/.Xil/Vivado-4336-CSE-4225-14/dcp_2/xadc_wiz_0_early.xdc] for cell 'XADC_component/XADC_component'
+Finished Parsing XDC File [C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/impl_1/.Xil/Vivado-4336-CSE-4225-14/dcp_2/xadc_wiz_0_early.xdc] for cell 'XADC_component/XADC_component'
+Parsing XDC File [C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: 'E9' is not a valid site or package pin name. [C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc:552]
+Finished Parsing XDC File [C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc]
+Parsing XDC File [C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/impl_1/.Xil/Vivado-4336-CSE-4225-14/dcp/leon3mp.xdc]
+Finished Parsing XDC File [C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/impl_1/.Xil/Vivado-4336-CSE-4225-14/dcp/leon3mp.xdc]
+Parsing XDC File [C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/impl_1/.Xil/Vivado-4336-CSE-4225-14/dcp_2/xadc_wiz_0.xdc] for cell 'XADC_component/XADC_component'
+Finished Parsing XDC File [C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/impl_1/.Xil/Vivado-4336-CSE-4225-14/dcp_2/xadc_wiz_0.xdc] for cell 'XADC_component/XADC_component'
+INFO: [Opt 31-138] Pushed 0 inverter(s).
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 118 instances were transformed.
+  IOBUF => IOBUF (OBUFT, IBUF): 100 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 18 instances
+
+link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 929.801 ; gain = 742.313
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.313 . Memory (MB): peak = 934.152 ; gain = 4.176
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 235b6e5d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 979.949 ; gain = 45.797
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s).
+INFO: [Opt 31-10] Eliminated 388 cells.
+Phase 2 Constant Propagation | Checksum: 2af12e739
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 979.949 ; gain = 45.797
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 4206 unconnected nets.
+INFO: [Opt 31-11] Eliminated 1740 unconnected cells.
+Phase 3 Sweep | Checksum: 2a64af430
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 979.949 ; gain = 45.797
+Ending Logic Optimization Task | Checksum: 2a64af430
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 979.949 ; gain = 45.797
+Implement Debug Cores | Checksum: 1ef26bdbc
+Logic Optimization | Checksum: 1ef26bdbc
+
+Starting Power Optimization Task
+
+Starting PowerOpt TimerUpdates Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending PowerOpt TimerUpdates Task | Checksum: 2a64af430
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 979.949 ; gain = 0.000
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 7 BRAM(s) out of a total of 25 was updated to NO_CHANGE to save power.
+    Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 2 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 2 Total Ports: 50
+Ending Power Optimization Task | Checksum: 229a8912b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1167.145 ; gain = 187.195
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 0 Warnings, 1 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1167.145 ; gain = 237.344
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.298 . Memory (MB): peak = 1167.145 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command place_design
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Core
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1167.145 ; gain = 0.000
+
+Phase 1.1.1 Mandatory Logic Optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1167.145 ; gain = 0.000
+Phase 1.1.1 Mandatory Logic Optimization | Checksum: 9a4691fc
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.917 . Memory (MB): peak = 1167.145 ; gain = 0.000
+
+Phase 1.1.2 Build Super Logic Region (SLR) Database
+Phase 1.1.2 Build Super Logic Region (SLR) Database | Checksum: 9a4691fc
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.945 . Memory (MB): peak = 1167.145 ; gain = 0.000
+
+Phase 1.1.3 Add Constraints
+Phase 1.1.3 Add Constraints | Checksum: 9a4691fc
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.946 . Memory (MB): peak = 1167.145 ; gain = 0.000
+
+Phase 1.1.4 Build Macros
+Phase 1.1.4 Build Macros | Checksum: cc232228
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1167.145 ; gain = 0.000
+
+Phase 1.1.5 Implementation Feasibility check
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/apb_signals_reg[output_select]_i_1' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/apb_signals_reg[output_select] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_map/apbo_reg[prdata][16]_i_1' is driving clock pin of 17 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_map/apbo_reg[prdata][16] {LDCE}
+	Buffer_apb_map/apbo_reg[prdata][15] {LDCE}
+	Buffer_apb_map/apbo_reg[prdata][14] {LDCE}
+	Buffer_apb_map/apbo_reg[prdata][13] {LDCE}
+	Buffer_apb_map/apbo_reg[prdata][12] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/apb_signals_reg[input_irq]_i_1' is driving clock pin of 17 registers. This could lead to large hold time violations. First few involved registers are:
+	Buffer_apb_out_map/apb_signals_reg[input_sample][15] {LDCE}
+	Buffer_apb_out_map/apb_signals_reg[input_sample][14] {LDCE}
+	Buffer_apb_out_map/apb_signals_reg[input_sample][13] {LDCE}
+	Buffer_apb_out_map/apb_signals_reg[input_sample][12] {LDCE}
+	Buffer_apb_out_map/apb_signals_reg[input_sample][11] {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/PWM_sample[9]_P_i_2' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	PWM_module/PWM_sample_reg[9]_LDC {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/PWM_sample[8]_P_i_1' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	PWM_module/PWM_sample_reg[8]_LDC {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/PWM_sample[7]_P_i_1' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	PWM_module/PWM_sample_reg[7]_LDC {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/PWM_sample[6]_P_i_1' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	PWM_module/PWM_sample_reg[6]_LDC {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/PWM_sample[5]_P_i_1' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	PWM_module/PWM_sample_reg[5]_LDC {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/PWM_sample[4]_P_i_1' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	PWM_module/PWM_sample_reg[4]_LDC {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/PWM_sample[3]_P_i_1' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	PWM_module/PWM_sample_reg[3]_LDC {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/PWM_sample[2]_P_i_1' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	PWM_module/PWM_sample_reg[2]_LDC {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/PWM_sample[1]_P_i_1' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	PWM_module/PWM_sample_reg[1]_LDC {LDCE}
+WARNING: [Place 30-568] A LUT 'Buffer_apb_out_map/PWM_sample[0]_P_i_1' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	PWM_module/PWM_sample_reg[0]_LDC {LDCE}
+Phase 1.1.5 Implementation Feasibility check | Checksum: cc232228
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1167.145 ; gain = 0.000
+
+Phase 1.1.6 Pre-Place Cells
+Phase 1.1.6 Pre-Place Cells | Checksum: cc232228
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1167.145 ; gain = 0.000
+
+Phase 1.1.7 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.1.7 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d13cb03a
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1167.145 ; gain = 0.000
+
+Phase 1.1.8 Build Placer Netlist Model
+
+Phase 1.1.8.1 Place Init Design
+
+Phase 1.1.8.1.1 Build Clock Data
+Phase 1.1.8.1.1 Build Clock Data | Checksum: 16be25eda
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1167.145 ; gain = 0.000
+Phase 1.1.8.1 Place Init Design | Checksum: 107ce8aa2
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1167.145 ; gain = 0.000
+Phase 1.1.8 Build Placer Netlist Model | Checksum: 107ce8aa2
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1167.145 ; gain = 0.000
+
+Phase 1.1.9 Constrain Clocks/Macros
+
+Phase 1.1.9.1 Constrain Global/Regional Clocks
+Phase 1.1.9.1 Constrain Global/Regional Clocks | Checksum: a1c7431b
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1167.145 ; gain = 0.000
+Phase 1.1.9 Constrain Clocks/Macros | Checksum: a1c7431b
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1167.145 ; gain = 0.000
+Phase 1.1 Placer Initialization Core | Checksum: a1c7431b
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1167.145 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: a1c7431b
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1167.145 ; gain = 0.000
+
+Phase 2 Global Placement

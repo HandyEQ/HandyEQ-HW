@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Fri May 09 22:10:19 2014
+# Process ID: 1072
+# Log file: C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/synth_1/leon3mp.rds
+# Journal file: C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source leon3mp.tcl
