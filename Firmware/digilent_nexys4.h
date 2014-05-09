@@ -60,27 +60,27 @@
 /* Fixed inputs:  NONE -------------------------- */
 /* Fixed outputs: NONE -------------------------- */
 /* Configurable inputs/outputs: JB1-3, JB7-9 ---- */
-#define NEXYS4_J GPIO_Pin_0
-#define NEXYS4_J GPIO_Pin_1
-#define NEXYS4_J GPIO_Pin_2
-#define NEXYS4_J GPIO_Pin_3
-#define NEXYS4_J GPIO_Pin_4
-#define NEXYS4_J GPIO_Pin_5
-#define NEXYS4_J GPIO_Pin_6
-#define NEXYS4_J GPIO_Pin_7
-#define NEXYS4_J GPIO_Pin_8
-#define NEXYS4_J GPIO_Pin_9
-#define NEXYS4_J GPIO_Pin_10
-#define NEXYS4_J GPIO_Pin_11
+#define NEXYS4_JD1 GPIO_Pin_0
+#define NEXYS4_JD2 GPIO_Pin_1
+#define NEXYS4_JD3 GPIO_Pin_2
+#define NEXYS4_JD4 GPIO_Pin_3
+#define NEXYS4_JD7 GPIO_Pin_4
+#define NEXYS4_JD8 GPIO_Pin_5
+#define NEXYS4_JC1 GPIO_Pin_6
+#define NEXYS4_JC2 GPIO_Pin_7
+#define NEXYS4_JC3 GPIO_Pin_8
+#define NEXYS4_JC4 GPIO_Pin_9
+#define NEXYS4_JC7 GPIO_Pin_10
+#define NEXYS4_JC8 GPIO_Pin_11
 #define NEXYS4_ENC_RITE GPIO_Pin_12
 #define NEXYS4_ENC_LEFT GPIO_Pin_13
 #define NEXYS4_ENC_PUSH GPIO_Pin_14
 #define NEXYS4_ENC_SW GPIO_Pin_15
-#define NEXYS4_OLED GPIO_Pin_16
-#define NEXYS4_OLED GPIO_Pin_17
-#define NEXYS4_OLED GPIO_Pin_18
-#define NEXYS4_OLED GPIO_Pin_19
-#define NEXYS4_OLED GPIO_Pin_20
+//#define NEXYS4_OLED GPIO_Pin_16
+//#define NEXYS4_OLED GPIO_Pin_17
+//#define NEXYS4_OLED GPIO_Pin_18
+//#define NEXYS4_OLED GPIO_Pin_19
+//#define NEXYS4_OLED GPIO_Pin_20
 #define NEXYS4_BTNC GPIO_Pin_21
 #define NEXYS4_BTNU GPIO_Pin_22
 #define NEXYS4_BTNL GPIO_Pin_23

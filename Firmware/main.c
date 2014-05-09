@@ -10,6 +10,9 @@
 #include "eqcoeff.h"
 #include "eq1band.h"
 #include "eq3band.h"
+#include "Testfiles/testmodule.h"
+#include "gpio.h"
+#include "digilent_nexys4.h"
 
 int newSample;
 int newUart;
@@ -23,8 +26,14 @@ int main(void){
 	DspBin ** bin;
 	DspFx * delay1, * delay2;
 	DspFx * eq1, * eq3;
-	
+	int gpiotoggle = 0;	
+
 	Chunk *input, * output, * bin1tobin2, * bin2tobin3;
+	
+	//INIT GPIO
+	initTestmodule();	
+	GPIO_ResetBits(GPIOB, NEXYS4_JC1);
+	
 
 	//UART
 	newUart = 0;
@@ -68,9 +77,20 @@ int main(void){
 
 	//Main Loop
 	
-	
+	printf("Hello from HandyEq!");
 	while(1){
 		if(newSample){
+			if (gpiotoggle) {
+				gpiotoggle = 0;				
+				GPIO_ResetBits(GPIOB, NEXYS4_JC1 | NEXYS4_JC2 );
+			}
+			else {
+				gpiotoggle = 1;
+				GPIO_SetBits(GPIOB, NEXYS4_JC1 | NEXYS4_JC2);
+			}
+	
+
+
 			retrieve_chunk(input);			
 			
 			runDspSystem(dspsystem);
