@@ -13,7 +13,6 @@
 #include "Testfiles/testmodule.h"
 #include "gpio.h"
 #include "digilent_nexys4.h"
-#include "Testfiles/player.h"
 
 int newSample;
 int newUart;
@@ -60,8 +59,8 @@ int main(void){
 	bins = 3;
 	bin = calloc(bins, sizeof(DspBin));
 	bin[0] = initDspBin(1, delay1);
-	bin[1] = initDspBin(1, eq1);
-	bin[2] = initDspBin(1, eq3);
+	bin[1] = initDspBin(0, eq1);
+	bin[2] = initDspBin(0, eq3);
 
 	//Init dspsystem
 	input = calloc(1, sizeof(Chunk));

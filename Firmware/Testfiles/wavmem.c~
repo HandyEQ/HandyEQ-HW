@@ -1,0 +1,12 @@
+#include "wavmem.h"
+
+Chunk* initWavmem(){
+	return calloc(NCHUNKS, sizeof(Chunk));
+
+}
+
+void createWavmem(Chunk* wavmem){
+	
+	
+	
+}
