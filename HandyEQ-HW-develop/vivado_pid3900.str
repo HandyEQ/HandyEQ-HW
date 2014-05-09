@@ -1,0 +1,135 @@
+/*
+
+Vivado v2013.4 (64-bit)
+SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+Process ID: 3900
+
+Current time: 	5/8/14 5:37:16 PM
+Time zone: 	Central European Time (Europe/Berlin)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 2
+
+Screen size: 1280x1024
+Screen resolution (DPI): 96
+Available screens: 2
+
+Java version: 	1.7.0_40 64-bit
+Java home: 	C:/Xilinx/Vivado/2013.4/tps/win64/jre
+
+User name: 	halljo
+User directory: Z:/EmbeddedProj/HandyEQ-HW-develop-8th-May/HandyEQ-HW-develop
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+GUI Allocated memory:	122 mb
+GUI Max memory:		3,066 mb
+Engine Allocated memory: 457 mb
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: START_PROGRESS_DIALOG
+// cb:I (bT:JFrame):  Opening project 'Z:\EmbeddedProj\HandyEQ-HW-develop-8th-May\HandyEQ-HW-develop\HandyEQ-HW.xpr' : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// HMemoryUtils.trashcanNow. Current time: 5/8/14 5:37:17 PM
+// [GUI Memory]: 77 mb (+78403kb) [00:00:25]
+// [Engine Memory]: 457 mb (+327277kb) [00:00:25]
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 81 mb (+3871kb) [00:00:50]
+// [Engine Memory]: 457 mb (+679kb) [00:00:50]
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 483 mb (+27140kb) [00:00:58]
+// [GUI Memory]: 90 mb (+9215kb) [00:00:59]
+// [Engine Memory]: 490 mb (+7413kb) [00:00:59]
+// [GUI Memory]: 97 mb (+7877kb) [00:01:00]
+// [Engine Memory]: 495 mb (+5373kb) [00:01:00]
+// [GUI Memory]: 98 mb (+787kb) [00:01:00]
+// [Engine Memory]: 514 mb (+19603kb) [00:01:01]
+// [Engine Memory]: 522 mb (+8863kb) [00:01:01]
+// [Engine Memory]: 561 mb (+40153kb) [00:01:05]
+// [Engine Memory]: 563 mb (+2134kb) [00:01:06]
+// [GUI Memory]: 99 mb (+863kb) [00:01:16]
+// [GUI Memory]: 101 mb (+2835kb) [00:01:16]
+// [GUI Memory]: 105 mb (+3780kb) [00:01:16]
+// [GUI Memory]: 107 mb (+1890kb) [00:01:16]
+// [GUI Memory]: 110 mb (+2836kb) [00:01:16]
+// [GUI Memory]: 113 mb (+3780kb) [00:01:16]
+// [GUI Memory]: 116 mb (+2835kb) [00:01:16]
+// Tcl Message: open_project {Z:\EmbeddedProj\HandyEQ-HW-develop-8th-May\HandyEQ-HW-develop\HandyEQ-HW.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/sebkarl/Desktop/test' since last save. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2013.4/data/ip'. 
+selectButton (RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, cb:I)
+selectButton (RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, cb:I)
+// HMemoryUtils.trashcanNow. Current time: 5/8/14 5:38:15 PM
+// Tcl Message: open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:01:01 . Memory (MB): peak = 904.805 ; gain = 120.887 
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+dismissDialog ("Opening project 'Z:\\EmbeddedProj\\HandyEQ-HW-develop-8th-May\\HandyEQ-HW-develop\\HandyEQ-HW.xpr'"); // cb:I (bT:JFrame)
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: INFO: [Common 17-344] 'rdi::open_ppr_or_dcp' was cancelled 
+// [GUI Memory]: 122 mb (+6196kb) [00:01:22]
+// [Engine Memory]: 572 mb (+9756kb) [00:01:22]
+// [GUI Memory]: 125 mb (+2900kb) [00:01:22]
+// [GUI Memory]: 132 mb (+7962kb) [00:01:25]
+// o:I (bT:JFrame): XilinxNotify - Available Updates: addNotify
+selectButton (RDIResource.UpdateDialog_CLOSE, "Close"); // a:JButton (JPanel:JComponent, o:I)
+// [Engine Memory]: 574 mb (+2105kb) [00:01:29]
+dismissDialog ("XilinxNotify - Available Updates"); // o:I (bT:JFrame)
+selectTab (PAResourceAtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // g:JideTabbedPane (y:aC, bT:JFrame)
+selectTab (PAResourceAtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // g:JideTabbedPane (y:aC, bT:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, null, -1, false, false, false, true, false); // o:f (u:JPanel, bT:JFrame) - POPUP TRIGGER
+selectMenu (PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae:JMenu (al:JPopupMenu, bT:JFrame)
+selectMenu (PAResourceQtoZ.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae:JMenu (al:JPopupMenu, bT:JFrame)
+selectMenuItem (PAResourceQtoZ.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // ah:JMenuItem (al:JPopupMenu, bT:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 578 mb (+4349kb) [00:01:36]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 579 mb (+831kb) [00:01:37]
+// [Engine Memory]: 580 mb (+733kb) [00:01:39]
+// [Engine Memory]: 582 mb (+2260kb) [00:01:41]
+// [Engine Memory]: 582 mb (+94kb) [00:01:42]
+// [Engine Memory]: 588 mb (+6393kb) [00:01:43]
+// [GUI Memory]: 138 mb (+6612kb) [00:01:44]
+// [Engine Memory]: 588 mb (+135kb) [00:01:47]
+// af:bw (bT:JFrame): Vivado: addNotify
+// Elapsed time: 23 seconds
+selectButton (RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, af:bw)
+// [Engine Memory]: 589 mb (+897kb) [00:01:58]
+dismissDialog ("Vivado"); // af:bw (bT:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_FILE, "File"); // ab:JideMenu (CommandMenuBar:CommandBar, bT:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ae:JMenu (JPopupMenu:JComponent, bT:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_OPEN_EXAMPLE_PROJECT, "Open Example Project"); // ae:JMenu (JPopupMenu:JComponent, bT:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_OPEN_EXAMPLE_PROJECT, "Open Example Project"); // ae:JMenu (JPopupMenu:JComponent, bT:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ae:JMenu (JPopupMenu:JComponent, bT:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ae:JMenu (JPopupMenu:JComponent, bT:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_OPEN_EXAMPLE_PROJECT, "Open Example Project"); // ae:JMenu (JPopupMenu:JComponent, bT:JFrame)
+selectMenuItem (PAResourceCommand.PACommandNames_CLOSE_PROJECT, "Close Project"); // ah:JMenuItem (JPopupMenu:JComponent, bT:JFrame)
+dismissMenu (PAResourceItoP.MainMenuMgr_FILE, "File"); // ab:JideMenu (CommandMenuBar:CommandBar, bT:JFrame)
+// af:bw (bT:JFrame): Confirm Close Project: addNotify
+selectButton (RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, af:bw)
+// cb:I (bT:JFrame):  Close Project : addNotify
+dismissDialog ("Confirm Close Project"); // af:bw (bT:JFrame)
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Current time: 5/8/14 5:39:04 PM
+// Tcl Message: close_project 
+// [Engine Memory]: 593 mb (+4325kb) [00:02:07]
+// 'b' command handler elapsed time: 5 seconds
+dismissDialog ("Close Project"); // cb:I (bT:JFrame)

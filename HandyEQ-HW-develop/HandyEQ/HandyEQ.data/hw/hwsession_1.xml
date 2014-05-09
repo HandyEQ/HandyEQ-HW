@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hwsession version="1" minor="1">
+  <probeset name="hwsession" active="false">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/I1[31]"/>
+        <net name="Buffer_apb_map/I1[30]"/>
+        <net name="Buffer_apb_map/I1[29]"/>
+        <net name="Buffer_apb_map/I1[28]"/>
+        <net name="Buffer_apb_map/I1[27]"/>
+        <net name="Buffer_apb_map/I1[26]"/>
+        <net name="Buffer_apb_map/I1[25]"/>
+        <net name="Buffer_apb_map/I1[24]"/>
+        <net name="Buffer_apb_map/I1[23]"/>
+        <net name="Buffer_apb_map/I1[22]"/>
+        <net name="Buffer_apb_map/I1[21]"/>
+        <net name="Buffer_apb_map/I1[20]"/>
+        <net name="Buffer_apb_map/I1[19]"/>
+        <net name="Buffer_apb_map/I1[18]"/>
+        <net name="Buffer_apb_map/I1[17]"/>
+        <net name="Buffer_apb_map/I1[16]"/>
+        <net name="Buffer_apb_map/I1[15]"/>
+        <net name="Buffer_apb_map/I1[14]"/>
+        <net name="Buffer_apb_map/I1[13]"/>
+        <net name="Buffer_apb_map/I1[12]"/>
+        <net name="Buffer_apb_map/I1[11]"/>
+        <net name="Buffer_apb_map/I1[10]"/>
+        <net name="Buffer_apb_map/I1[9]"/>
+        <net name="Buffer_apb_map/I1[8]"/>
+        <net name="Buffer_apb_map/I1[7]"/>
+        <net name="Buffer_apb_map/I1[6]"/>
+        <net name="Buffer_apb_map/I1[5]"/>
+        <net name="Buffer_apb_map/I1[4]"/>
+        <net name="Buffer_apb_map/I1[3]"/>
+        <net name="Buffer_apb_map/I1[2]"/>
+        <net name="Buffer_apb_map/I1[1]"/>
+        <net name="Buffer_apb_map/I1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/O6[31]"/>
+        <net name="Buffer_apb_map/O6[30]"/>
+        <net name="Buffer_apb_map/O6[29]"/>
+        <net name="Buffer_apb_map/O6[28]"/>
+        <net name="Buffer_apb_map/O6[27]"/>
+        <net name="Buffer_apb_map/O6[26]"/>
+        <net name="Buffer_apb_map/O6[25]"/>
+        <net name="Buffer_apb_map/O6[24]"/>
+        <net name="Buffer_apb_map/O6[23]"/>
+        <net name="Buffer_apb_map/O6[22]"/>
+        <net name="Buffer_apb_map/O6[21]"/>
+        <net name="Buffer_apb_map/O6[20]"/>
+        <net name="Buffer_apb_map/O6[19]"/>
+        <net name="Buffer_apb_map/O6[18]"/>
+        <net name="Buffer_apb_map/O6[17]"/>
+        <net name="Buffer_apb_map/O6[16]"/>
+        <net name="Buffer_apb_map/O6[15]"/>
+        <net name="Buffer_apb_map/O6[14]"/>
+        <net name="Buffer_apb_map/O6[13]"/>
+        <net name="Buffer_apb_map/O6[12]"/>
+        <net name="Buffer_apb_map/O6[11]"/>
+        <net name="Buffer_apb_map/O6[10]"/>
+        <net name="Buffer_apb_map/O6[9]"/>
+        <net name="Buffer_apb_map/O6[8]"/>
+        <net name="Buffer_apb_map/O6[7]"/>
+        <net name="Buffer_apb_map/O6[6]"/>
+        <net name="Buffer_apb_map/O6[5]"/>
+        <net name="Buffer_apb_map/O6[4]"/>
+        <net name="Buffer_apb_map/O6[3]"/>
+        <net name="Buffer_apb_map/O6[2]"/>
+        <net name="Buffer_apb_map/O6[1]"/>
+        <net name="Buffer_apb_map/O6[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/Q[31]"/>
+        <net name="Buffer_apb_map/Q[30]"/>
+        <net name="Buffer_apb_map/Q[29]"/>
+        <net name="Buffer_apb_map/Q[28]"/>
+        <net name="Buffer_apb_map/Q[27]"/>
+        <net name="Buffer_apb_map/Q[26]"/>
+        <net name="Buffer_apb_map/Q[25]"/>
+        <net name="Buffer_apb_map/Q[24]"/>
+        <net name="Buffer_apb_map/Q[23]"/>
+        <net name="Buffer_apb_map/Q[22]"/>
+        <net name="Buffer_apb_map/Q[21]"/>
+        <net name="Buffer_apb_map/Q[20]"/>
+        <net name="Buffer_apb_map/Q[19]"/>
+        <net name="Buffer_apb_map/Q[18]"/>
+        <net name="Buffer_apb_map/Q[17]"/>
+        <net name="Buffer_apb_map/Q[16]"/>
+        <net name="Buffer_apb_map/Q[15]"/>
+        <net name="Buffer_apb_map/Q[14]"/>
+        <net name="Buffer_apb_map/Q[13]"/>
+        <net name="Buffer_apb_map/Q[12]"/>
+        <net name="Buffer_apb_map/Q[11]"/>
+        <net name="Buffer_apb_map/Q[10]"/>
+        <net name="Buffer_apb_map/Q[9]"/>
+        <net name="Buffer_apb_map/Q[8]"/>
+        <net name="Buffer_apb_map/Q[7]"/>
+        <net name="Buffer_apb_map/Q[6]"/>
+        <net name="Buffer_apb_map/Q[5]"/>
+        <net name="Buffer_apb_map/Q[4]"/>
+        <net name="Buffer_apb_map/Q[3]"/>
+        <net name="Buffer_apb_map/Q[2]"/>
+        <net name="Buffer_apb_map/Q[1]"/>
+        <net name="Buffer_apb_map/Q[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[15]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[14]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[13]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[12]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[11]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[10]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[9]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[8]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[7]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[6]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[5]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[4]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[3]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[2]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[1]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/AD_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[15]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[14]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[13]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[12]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[11]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[10]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[9]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[8]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[7]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[6]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[5]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[4]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[3]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[2]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[1]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/I3[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[31]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[30]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[29]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[28]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[27]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[26]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[25]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[24]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[23]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[22]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[21]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[20]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[19]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[18]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[17]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[16]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[15]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[14]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[13]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[12]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[11]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[10]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[9]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[8]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[7]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[6]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[5]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[4]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[3]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[2]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[1]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/chunk_counter[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/data_ready_port"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/empty"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/full"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[31]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[30]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[29]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[28]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[27]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[26]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[25]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[24]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[23]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[22]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[21]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[20]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[19]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[18]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[17]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[16]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[15]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[14]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[13]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[12]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[11]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[10]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[9]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[8]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[7]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[6]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[5]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[4]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[3]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[2]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[1]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/head[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/input_irq"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/n_0_chunk_irq_reg"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/n_0_output_ready_reg"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/new_input"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/new_output"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/output_select"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[31]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[30]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[29]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[28]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[27]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[26]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[25]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[24]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[23]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[22]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[21]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[20]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[19]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[18]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[17]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[16]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[15]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[14]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[13]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[12]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[11]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[10]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[9]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[8]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[7]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[6]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[5]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[4]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[3]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[2]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[1]"/>
+        <net name="Buffer_apb_map/circular_buffer_comp/tail[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/irq[13]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata][0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_10[10]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_11[11]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_12[12]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_13[13]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_14[14]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_15[15]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_16[16]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_1[1]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_2[2]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_3[3]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_4[4]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_5[5]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_6[6]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_7[7]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_8[8]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_map/n_0_apbo_reg[prdata]_9[9]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/O6[31]"/>
+        <net name="Buffer_apb_out_map/O6[30]"/>
+        <net name="Buffer_apb_out_map/O6[29]"/>
+        <net name="Buffer_apb_out_map/O6[28]"/>
+        <net name="Buffer_apb_out_map/O6[27]"/>
+        <net name="Buffer_apb_out_map/O6[26]"/>
+        <net name="Buffer_apb_out_map/O6[25]"/>
+        <net name="Buffer_apb_out_map/O6[24]"/>
+        <net name="Buffer_apb_out_map/O6[23]"/>
+        <net name="Buffer_apb_out_map/O6[22]"/>
+        <net name="Buffer_apb_out_map/O6[21]"/>
+        <net name="Buffer_apb_out_map/O6[20]"/>
+        <net name="Buffer_apb_out_map/O6[19]"/>
+        <net name="Buffer_apb_out_map/O6[18]"/>
+        <net name="Buffer_apb_out_map/O6[17]"/>
+        <net name="Buffer_apb_out_map/O6[16]"/>
+        <net name="Buffer_apb_out_map/O6[15]"/>
+        <net name="Buffer_apb_out_map/O6[14]"/>
+        <net name="Buffer_apb_out_map/O6[13]"/>
+        <net name="Buffer_apb_out_map/O6[12]"/>
+        <net name="Buffer_apb_out_map/O6[11]"/>
+        <net name="Buffer_apb_out_map/O6[10]"/>
+        <net name="Buffer_apb_out_map/O6[9]"/>
+        <net name="Buffer_apb_out_map/O6[8]"/>
+        <net name="Buffer_apb_out_map/O6[7]"/>
+        <net name="Buffer_apb_out_map/O6[6]"/>
+        <net name="Buffer_apb_out_map/O6[5]"/>
+        <net name="Buffer_apb_out_map/O6[4]"/>
+        <net name="Buffer_apb_out_map/O6[3]"/>
+        <net name="Buffer_apb_out_map/O6[2]"/>
+        <net name="Buffer_apb_out_map/O6[1]"/>
+        <net name="Buffer_apb_out_map/O6[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/Q[31]"/>
+        <net name="Buffer_apb_out_map/Q[30]"/>
+        <net name="Buffer_apb_out_map/Q[29]"/>
+        <net name="Buffer_apb_out_map/Q[28]"/>
+        <net name="Buffer_apb_out_map/Q[27]"/>
+        <net name="Buffer_apb_out_map/Q[26]"/>
+        <net name="Buffer_apb_out_map/Q[25]"/>
+        <net name="Buffer_apb_out_map/Q[24]"/>
+        <net name="Buffer_apb_out_map/Q[23]"/>
+        <net name="Buffer_apb_out_map/Q[22]"/>
+        <net name="Buffer_apb_out_map/Q[21]"/>
+        <net name="Buffer_apb_out_map/Q[20]"/>
+        <net name="Buffer_apb_out_map/Q[19]"/>
+        <net name="Buffer_apb_out_map/Q[18]"/>
+        <net name="Buffer_apb_out_map/Q[17]"/>
+        <net name="Buffer_apb_out_map/Q[16]"/>
+        <net name="Buffer_apb_out_map/Q[15]"/>
+        <net name="Buffer_apb_out_map/Q[14]"/>
+        <net name="Buffer_apb_out_map/Q[13]"/>
+        <net name="Buffer_apb_out_map/Q[12]"/>
+        <net name="Buffer_apb_out_map/Q[11]"/>
+        <net name="Buffer_apb_out_map/Q[10]"/>
+        <net name="Buffer_apb_out_map/Q[9]"/>
+        <net name="Buffer_apb_out_map/Q[8]"/>
+        <net name="Buffer_apb_out_map/Q[7]"/>
+        <net name="Buffer_apb_out_map/Q[6]"/>
+        <net name="Buffer_apb_out_map/Q[5]"/>
+        <net name="Buffer_apb_out_map/Q[4]"/>
+        <net name="Buffer_apb_out_map/Q[3]"/>
+        <net name="Buffer_apb_out_map/Q[2]"/>
+        <net name="Buffer_apb_out_map/Q[1]"/>
+        <net name="Buffer_apb_out_map/Q[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq10&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq10&apos;hXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq10&apos;hXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/Q[9]"/>
+        <net name="Buffer_apb_out_map/Q[8]"/>
+        <net name="Buffer_apb_out_map/Q[7]"/>
+        <net name="Buffer_apb_out_map/Q[6]"/>
+        <net name="Buffer_apb_out_map/Q[5]"/>
+        <net name="Buffer_apb_out_map/Q[4]"/>
+        <net name="Buffer_apb_out_map/Q[3]"/>
+        <net name="Buffer_apb_out_map/Q[2]"/>
+        <net name="Buffer_apb_out_map/Q[1]"/>
+        <net name="Buffer_apb_out_map/Q[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/empty"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/full"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[31]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[30]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[29]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[28]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[27]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[26]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[25]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[24]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[23]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[22]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[21]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[20]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[19]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[18]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[17]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[16]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[15]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[14]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[13]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[12]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[11]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[10]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[9]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[8]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[7]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[6]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[5]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[4]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[3]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[2]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[1]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/head[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_irq"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[15]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[14]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[13]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[12]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[11]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[10]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[9]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[8]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[7]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[6]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[5]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[4]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[3]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[2]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[1]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/input_sample[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/new_input"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/new_output"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/output_select"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[31]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[30]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[29]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[28]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[27]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[26]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[25]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[24]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[23]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[22]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[21]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[20]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[19]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[18]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[17]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[16]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[15]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[14]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[13]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[12]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[11]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[10]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[9]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[8]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[7]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[6]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[5]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[4]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[3]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[2]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[1]"/>
+        <net name="Buffer_apb_out_map/circular_buffer_comp/tail[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b0"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b0"/>
+      </probeOptions>
+      <nets>
+        <net name="XADC_component/decimator1_done_signal"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b0"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b0"/>
+      </probeOptions>
+      <nets>
+        <net name="XADC_component/decimator2_done_signal"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b0"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b0"/>
+      </probeOptions>
+      <nets>
+        <net name="XADC_component/decimator3_done_signal"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b0"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b0"/>
+      </probeOptions>
+      <nets>
+        <net name="XADC_component/decimator4_done_signal"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+      </probeOptions>
+      <nets>
+        <net name="XADC_component/eoc_out_signal"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>

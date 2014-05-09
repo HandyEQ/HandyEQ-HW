@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Thu May 08 17:36:59 2014
+# Process ID: 3004
+# Log file: Z:/EmbeddedProj/HandyEQ-HW-develop-8th-May/HandyEQ-HW-develop/vivado.log
+# Journal file: Z:/EmbeddedProj/HandyEQ-HW-develop-8th-May/HandyEQ-HW-develop\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {Z:\EmbeddedProj\HandyEQ-HW-develop-8th-May\HandyEQ-HW-develop\HandyEQ-HW.xpr}
+close_project
