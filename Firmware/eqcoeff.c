@@ -9,9 +9,9 @@
 #include "biquad.h"
 #include "eqcoeff.h"
 
-BiquadCoeff bass[9];
-BiquadCoeff midrange[9];
-BiquadCoeff treble[9];
+extern BiquadCoeff bass[9];
+extern BiquadCoeff midrange[9];
+extern BiquadCoeff treble[9];
 
 void initEqCoeff() {
 	strcpy(bass[0].filtertype, "Base_Shelf");

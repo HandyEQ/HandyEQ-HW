@@ -4,6 +4,7 @@
 #include "digilent_nexys4.h"
 #include "gpio.h"
 #include "hwinterface.h"
+#include "dspsystem.h"
 
 extern int interruptServedRecently;
 extern int dbncCtr;

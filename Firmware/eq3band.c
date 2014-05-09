@@ -29,8 +29,25 @@ Eq3BandEffect * init_eq3band(){
 	strcpy(eq3bandeffect->stage1.name, "Stage 1");
 	strcpy(eq3bandeffect->stage2.name, "Stage 2");
 	strcpy(eq3bandeffect->stage3.name, "Stage 3");
-	
+
 	///Insert init rundalgorithm pointer function (For later)
+	
+	//Insert values for menu
+	eq3bandeffect->setting[0] = &setEqTrebleCoeff;
+	eq3bandeffect->setting[1] = &setEqMidCoeff;
+	eq3bandeffect->setting[2] = &setEqBassCoeff;
+	strcpy(eq3bandeffect->settingName[0], "TB");
+	strcpy(eq3bandeffect->settingName[1], "MI");
+	strcpy(eq3bandeffect->settingName[2], "BA");
+	eq3bandeffect->stepVal[0] = 1;
+	eq3bandeffect->stepVal[1] = 1;
+	eq3bandeffect->stepVal[2] = 1;
+	eq3bandeffect->stepRangeL[0] = 0;
+	eq3bandeffect->stepRangeL[1] = 0;
+	eq3bandeffect->stepRangeL[2] = 0;
+	eq3bandeffect->stepRangeH[0] = 8;
+	eq3bandeffect->stepRangeH[1] = 8;
+	eq3bandeffect->stepRangeH[2] = 8;
 	
 	#ifdef PRINTEQDEBUG
 		printf("EQ3BAND: Initialized:\n");
@@ -57,38 +74,34 @@ int setEq3bandCoeff(void * eqstructptr, BiquadCoeff * coeff){
 }
 
 /* 	Set Treble coefficients 	*/
-int setEqTrebleCoeff(void * eqstructptr, BiquadCoeff * treblecoeff){
+void setEqTrebleCoeff(void * eqstructptr, int index){
 	Eq3BandEffect * eq = eqstructptr;
-	eq->stage1.coeff = treblecoeff;
+	eq->stage1.coeff = &treble[index];
 	
 	#ifdef PRINTEQDEBUG
 	printf("EQ3BAND: %s (%s) is set to %s at %s\n",eq->stage1.name,	eq->stage1.coeff->filtertype, eq->stage1.coeff->gain, eq->stage1.coeff->fc);
 	#endif
-	
-	return 0;		
+			
 }
 /* 	Set Midrange coefficients 	*/
-int setEqMidCoeff(void * eqstructptr, BiquadCoeff * midcoeff){
+void setEqMidCoeff(void * eqstructptr, int index){
 	Eq3BandEffect * eq = eqstructptr;
-	eq->stage2.coeff = midcoeff;
+	eq->stage2.coeff = &midrange[index];
 	
 	#ifdef PRINTEQDEBUG
 	printf("EQ3BAND: %s (%s) is set to %s at %s\n",eq->stage2.name,	eq->stage2.coeff->filtertype, eq->stage2.coeff->gain, eq->stage2.coeff->fc);
 	#endif
 	
-	return 0;
 }
 
 /* 	Set Bass coefficients 	*/
-int setEqBassCoeff(void * eqstructptr, BiquadCoeff * basscoeff){
+void setEqBassCoeff(void * eqstructptr, int index){
 	Eq3BandEffect * eq = eqstructptr;
-	eq->stage3.coeff = basscoeff;
+	eq->stage3.coeff = &bass[index];
 	
 	#ifdef PRINTEQDEBUG
 	printf("EQ3BAND: %s (%s) is set to %s at %s\n",eq->stage3.name,	eq->stage3.coeff->filtertype, eq->stage3.coeff->gain, eq->stage3.coeff->fc);
 	#endif
-	
-	return 0;
 	
 }
 
