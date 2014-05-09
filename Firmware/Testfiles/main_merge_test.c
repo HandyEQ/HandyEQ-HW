@@ -1,5 +1,5 @@
-#include "../digilent_nexys4.h"
-#include "../gpio.h"
+#include "digilent_nexys4.h"
+#include "gpio.h"
 
 int interruptServedRecently = 0;
 int dbncCtr = 0;

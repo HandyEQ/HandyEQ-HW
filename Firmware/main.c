@@ -1,6 +1,16 @@
 #include "main.h"
-#include "gpio.h"
-#include "digilent_nexys4.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "irq.h"
+#include "buffer.h"
+#include "uart.h"
+#include "dspsystem.h"
+#include "delay.h"
+#include "biquad.h"
+#include "eqcoeff.h"
+#include "eq1band.h"
+#include "eq3band.h"
+#include "hwinterface.h"
 
 int newSample;
 int newUart;
@@ -34,6 +44,20 @@ int main(void){
 	Menu * menu;
 	DelayEffect * de1, * de2, * de3, * de4;
 
+/* =======
+	int bins, loop;
+	DspBin ** bin;
+	DspFx * delay1, * delay2;
+	DspFx * eq1, * eq3;
+	int gpiotoggle = 0;	
+
+	
+	//INIT GPIO
+	initTestmodule();	
+	GPIO_ResetBits(GPIOB, NEXYS4_JC1);
+	
+>>>>>>> eq*/
+
 	//UART
 	newUart = 0;
 	catch_interrupt(new_uart, uart_irq);
@@ -62,6 +86,24 @@ int main(void){
 	bin[1] = initDspBin(1, initDspFx("Delay 2", de2, de2->settingName, de2->setting, de2->stepVal, de2->stepRangeH, de2->stepRangeL, &calcDelay));
 	bin[2] = initDspBin(1, initDspFx("Delay 3", de2, de3->settingName, de3->setting, de3->stepVal, de3->stepRangeH, de3->stepRangeL, &calcDelay));
 	bin[3] = initDspBin(1, initDspFx("Delay 2", de2, de4->settingName, de4->setting, de4->stepVal, de4->stepRangeH, de4->stepRangeL, &calcDelay));
+/*=======
+
+	//Init EQ
+	initEqCoeff();
+	eq1 = initDspFx("EQ 1-band", 0, init_eq1band(treble[4]), &runEq1band);
+	eq3 = initDspFx("EQ 3-band", 0, init_eq3band(), &runEq3band); 
+	
+	//Delay
+	delay1 = initDspFx("Delay 1", 0, init_delay(100), &calcDelay);
+	//delay2 = initDspFx("Delay 2", 0, init_delay(), &calcDelay);
+
+	//Init Bins
+	bins = 3;
+	bin = calloc(bins, sizeof(DspBin));
+	bin[0] = initDspBin(1, delay1);
+	bin[1] = initDspBin(0, eq1);
+	bin[2] = initDspBin(0, eq3);
+>>>>>>> eq*/
 
 	//Init dspsystem
 	input = calloc(1, sizeof(Chunk));
@@ -91,9 +133,11 @@ int main(void){
 	showStatus(menu, interface);
 
 	//Main Loop
+	
+	printf("Hello from HandyEq!");
 	while(1){
 		if(newSample){
-			retrieve_chunk(input);
+			retrieve_chunk(input);			
 			runDspSystem(dspsystem);
 			output_chunk(output);
 			newSample = 0;
@@ -103,9 +147,6 @@ int main(void){
 			menuNavigation(menu, interface);
 		//}
 		if(newUart){
-			uart_input();
-			dspsystem->bin[input_buffer[0]-48]->bypass = (dspsystem->bin[input_buffer[0]-48]->bypass+1)%2;
-			printf("Bypass %s: %d\n", dspsystem->bin[input_buffer[0]-48]->fx->name, dspsystem->bin[input_buffer[0]-48]->bypass);
 			newUart = 0;
 		}
 	}
@@ -121,6 +162,6 @@ void new_uart(){
 }
 
 void uart_input(){
-	char i = recieve_uart();
-	input_buffer[0] = i;
+	input_buffer[0] = recieve_uart();
+
 }

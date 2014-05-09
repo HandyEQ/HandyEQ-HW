@@ -1,96 +1,95 @@
-/* Testing for code training */
-
 #include <stdio.h>
-#include <string.h> //For strcpy
-#include "biquad.h"
-#include "eq1band.h"
-#include "eqtest.h"
-#include "eqcoeff.h" 
+#include <stdlib.h>
+
+#include "buffer.h"
 #include "dspsystem.h"
+#include "delay.h"
+#include "biquad.h"
+#include "eqcoeff.h"
+#include "eq1band.h"
+#include "eq3band.h"
 
+int newSample;
+int newUart;
+char input_buffer[200];
+int counter;
 
-int main() {
-	int i =0;
-	int testvar = 8;
+int main(void){
+	//Vars
+	Eq1BandEffect * eff;
+	DspSystem * dspsystem;
+	int bins, loop;
+	DspBin ** bin, * bin1, * bin2;
+	DspFx * delay1, * delay2;
+	DspFx * eq1, * eq3;	
+	Chunk * bin1tobin2;
+	Chunk * input = createChunk();
+	Chunk * output = createChunk();
 	
-	//testing dspsystem:
-	int inputsample = 8;
+	//Buffer
+	newSample = 0;
 	
-	int output=0;
-	/*********************************/
-	/**			INIT				**/
-	/*********************************/
-	
-	printf("\n\nStarting HandyEQ\n");
-	initEqCoeff();
-	if (initEq()) {
-		printf("EQ: Error initializing\n");
-	}
-	
-	if (initDspSystem(&dspsystem)) {
-		printf("DSPSYSTEM: Error initializing\n");
-	}
+	//Init Delay
+	//delay1 = initDspFx("Delay 1", 0, init_delay(0), &calcDelay);
+	//delay2 = initDspFx("Delay 2", 0, init_delay(), &calcDelay);
 
-	//connectDspBin(&(dspsystem.bin1), &inputsample, &volumecontrol,  )
-	 ////////connectDspBin(DspBin *bin, int *in, int *send, int *ret, int *out){ //(send return should be same effect), and out should go to next bin
+	//Init EQ
+	initEqCoeff();	
+	eq1 = initDspFx("EQ 1-band", 0, init_eq1band(treble[4]), &runEq1band);
+	eq3 = initDspFx("EQ 3-band", 0, init_eq3band(), &runEq3band);
+
+	//Init Bins
+	bins = 2;
+	bin = calloc(bins, sizeof(DspBin));
+	bin[0] = initDspBin(1, eq1);			
+	bin[1] = initDspBin(0, eq3);
+
+	//Init dspsystem
+	dspsystem = initDspSystem(bin, bins, input, output); 
+	
+	//Connect bins
+	bin1tobin2 = calloc(1, sizeof(Chunk));
+	connectDspBin(dspsystem->bin[0], dspsystem->in, bin1tobin2);
+	connectDspBin(dspsystem->bin[1], bin1tobin2, dspsystem->out);
+	
+	
+	//Main Loop
+	input->data[0] =16483;
+	/************************************
+	 * 	FOR TSIM: Testing EQ1-band init/set etc
+	 * **********************************/
+			
+	//setEq1bandCoeff(eq1->structPointer, &treble[7]);
+	
+	
+	//printf("Input\n");
+	//printChunk(input);
+		
+	//runDspSystem(dspsystem);
+	
+	//printf("Output\n");
+	//printChunk(output);
+	
+	/************************************
+	 * 	FOR TSIM: Testing EQ3-band init/set etc
+	 * **********************************/
+
 	 
-	  
-	/*********************************/
-	/**			INIT				**/
-	/*********************************/
-	/* Print status */	
-	//printCoeff(&treble[0]);	
-
+	setEqTrebleCoeff(eq3->structPointer, &treble[4]);
+	setEqMidCoeff(eq3->structPointer, &midrange[4]);
+	setEqBassCoeff(eq3->structPointer, &bass[4]);
 	
 	
-	//printf("treble coefficients set to:\n");
-	//printCoeff(&treble);	
-	//printf("\n");
-
-	/*********************************/
-	/**			DSSYSEM INFO		**/
-	/*********************************/
-	infoDspSystem(&dspsystem);
-	dspsystem.bin1.id =testvar;
-	dspsystem.bin2.id =testvar+3;
-	dspsystem.bin2.bypass=1;
-	infoDspSystem(&dspsystem);
+	printf("Input\n");
+	printChunk(input);
 	
-	
-
-	
-	
-	
-	/*********************************/
-	/**		TEST Functions			**/
-	/*********************************/
-	//eqTestSimpleNumbers();
-	//eqTestImpulseResp(22);
-
-	/*********************************/
-	/**		Control					**/
-	/*********************************/
-	
-//	infoBiquad(&stage1);
-	
-//	setBiquadCoeff(&stage1,&treble[2]);
-//	infoBiquad(&stage1);
-	
-//	//printCoeff(&resetcoeffs);
-//	resetBiquad(&stage1);
-//	infoBiquad(&stage1);
-//	
-//	setBiquadCoeff(&stage1, &treble[5]);
-//	
-//	for (i = 0; i<9; i++) {
-//		setBiquadCoeff(&stage1, &treble[i]);
-//	}
-	
-	
-	
+	runDspSystem(dspsystem);
+	 
+	printf("Output\n");
+	printChunk(output);
 
 
-	
 	return 0;
-
 }
+
+

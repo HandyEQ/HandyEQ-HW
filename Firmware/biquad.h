@@ -8,7 +8,7 @@ typedef struct {
     char fc[8];
     char gain[6];
     char q[4];	
-    char dataformat[7]; //newname!
+    char dataformat[7]; 
     int scalefactor;    	
     int a0;
     int a1;
