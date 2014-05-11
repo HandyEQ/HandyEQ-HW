@@ -16,3 +16,5 @@ void SPIMEM_StatusRegister1();
 void SPIMEM_4kBSectorErase();
 void SPIMEM_PageProgram();
 void SPIMEM_Read();
+void SPIMEM_Write_var(int address, int value);
+int SPIMEM_Read_var(int address);
