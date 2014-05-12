@@ -1,7 +1,7 @@
 #ifndef _SEVSEG_H
 #define _SEVSEG_H
 
-#define time               ((int) 6000)
+#define time               ((int) 400)
 
 void SEVENSEG_Init();
 void SEVENSEG_WriteChar(char c);

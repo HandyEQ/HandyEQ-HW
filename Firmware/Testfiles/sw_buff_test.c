@@ -8,7 +8,11 @@
 #include "sevenseg.h"
 
 int flag = 0, flag2 = 0, flag3 = 0, delay = 0, gpioAPrev = 0, gpioBPrev = 0, gpioAChg = 0;
+int prevA = 1, prevB = 0, encDir = 0;
+int interruptServedRecently = 0;
+
 char s[8] = "ABCDEF.-";
+char encDirChar = '0';
 
 extern void *catch_interrupt(void func(), int irq);
 int *lreg = (int *) 0x80000000;
@@ -65,18 +69,33 @@ force_irq (int irq) { lreg[IFORCE/4] = (1 << irq); }
 
 void irqhandler(int irq)
 {
+  int A = 0, B = 0;
+
   if (irq == 7) { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
     lreg[IPEND/4] &= ~(1 << irq);
+
     TIMERA -> timer1ctrl |= 0x00000010;
-    putStr("timer1\n\r");
+    flag++;
+    //putStr("timer1\n\r");
+
+    interruptServedRecently = 0;
   }
   else if (irq == 8) { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
     lreg[IPEND/4] &= ~(1 << irq);
     TIMERA -> timer2ctrl |= 0x00000010;
-    putStr("timer2\n\r");
+    //putStr("timer2\n\r");
+    putInt(encDir);
+    putInt(flag3);
+    flag++;
+    if (flag == 60)
+      flag = 0;
   }
   else if (irq == 9) { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
     lreg[IPEND/4] &= ~(1 << irq);
+
+    putInt(GPIO_ReadInputData(GPIOA));
+
+    s[0] = '2'; s[1] = '0'; s[2] = '1'; s[3] = '4'; s[4] = '0'; s[5] = '5'; s[6] = '0'; s[7] = '2';
 
     switch (gpioAPrev ^ GPIO_ReadInputData(GPIOA))
     {
@@ -138,7 +157,37 @@ void irqhandler(int irq)
   else if (irq == 10) { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
     lreg[IPEND/4] &= ~(1 << irq);
 
-    switch (gpioBPrev ^ GPIO_ReadInputData(GPIOB))
+    if (interruptServedRecently == 0)
+    {
+      flag3++;
+      //putInt(GPIO_ReadInputData(GPIOB));
+
+      A = GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_12);
+      B = GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_13);
+
+      if(A && !B) {// && prevB
+        encDir++;
+        encDirChar = '1';
+      }
+      else if(!A && B) {// && prevA
+        encDir--;
+        encDirChar = '2';
+      }
+      else
+      {
+        //encDir = 0;
+        //encDirChar = '0';
+      }
+
+      prevA = A;
+      prevB = B;
+
+      interruptServedRecently = 1;
+
+      s[0] = '.'; s[1] = '.'; s[2] = '.'; s[3] = '.'; s[4] = '.'; s[5] = '.'; s[6] = '.'; s[7] = encDirChar;
+    }
+
+    /*switch (gpioBPrev ^ GPIO_ReadInputData(GPIOB))
     {
     case 1:
       putStr("0\n\r");
@@ -206,7 +255,7 @@ void irqhandler(int irq)
       break;
     default:
       break;
-    }
+    }*/
 
     //gpioBPrev = 0x03E0FFFF & GPIO_ReadInputData(GPIOB);
     //flag2 = 1;
@@ -320,31 +369,31 @@ GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 
 GPIO_Init(GPIOB, &GPIO_InitStructure);
 
-GPIOA -> interrupt = 0x0000FFFF;
-GPIOA -> int_pol = 0x0000FFFF;
-GPIOA -> int_edg = 0x0000FFFF;
+GPIOA -> interrupt = 0x0000FFFF; // enable int's for inputs
+GPIOA -> int_edg = 0x0000FFFF; // edge triggered
+GPIOA -> int_pol = 0x0000FFFF; // rising edge
 
 catch_interrupt(irqhandler, 9);
 enable_irq(9);
 
-GPIOB -> interrupt = 0x03E0FFFF;
-GPIOB -> int_pol = 0x03E0FFFF;
-GPIOB -> int_edg = 0x03E0FFFF;
+GPIOB -> interrupt = 0x03E0FFFF; // enable int's for inputs
+GPIOB -> int_edg = 0x03E0FFFF; // edge triggered
+GPIOB -> int_pol = 0x03E0CFFF; // rising edge (falling edge for encoder channels)
 
 catch_interrupt(irqhandler, 10);
 enable_irq(10);
 
 /* TIMER */
 
-TIMERA -> scaler = 0x0000FFFF;
-TIMERA -> scalerReload = 0x0000FFFF;
-TIMERA -> config = 0x0000FFFF;
+TIMERA -> scaler = 0x00000003; // divides 50 MHz by 4 (3 + 1)
+TIMERA -> scalerReload = 0x00000003; // divides 50 MHz by 4
+TIMERA -> config = 0x00000001;
 TIMERA -> timerLatchCfg = 0x00000000;
-TIMERA -> timer1counter = 0x0000FFFF;
-TIMERA -> timer1reload = 0x0000FFFF;
+TIMERA -> timer1counter = 0x000F423F;
+TIMERA -> timer1reload = 0x000F423F;
 TIMERA -> timer1ctrl = 0x0000000B;
-TIMERA -> timer2counter = 0x000FFFFF;
-TIMERA -> timer2reload = 0x000FFFFF;
+TIMERA -> timer2counter = 0x00BEBC1F; // divide 12.5 MHz by 12.5M (BEBC1F + 1)
+TIMERA -> timer2reload = 0x00BEBC1F; // divide 12.5 MHz by 12.5M
 TIMERA -> timer2ctrl = 0x0000000B;
 
 
@@ -479,6 +528,9 @@ while (1)
   GPIO_WriteBit(GPIOB, GPIO_Pin_28, GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_2));
   GPIO_WriteBit(GPIOB, GPIO_Pin_27, GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1));
   GPIO_WriteBit(GPIOB, GPIO_Pin_26, GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0));
+
+  //GPIO_WriteBit(GPIOB, GPIO_Pin_26, !GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_13));
+  //GPIO_WriteBit(GPIOB, GPIO_Pin_31, !GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_12));
 
 }
 

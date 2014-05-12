@@ -1,6 +1,8 @@
 #include "sevenseg.h"
 #include "gpio.h"
 
+int timerFlagSeg = 0;
+
 void SEVENSEG_Init()
 {
   GPIO_InitTypeDef GPIO_InitStructure;
@@ -352,18 +354,17 @@ void SEVENSEG_EnableDisplay(int i)
   }
 }
 
-void SEVENSEG_WriteString(char *s)
-{
-  int k = 0, i = 0;
-
-  for(k = 0; k < 8; k++)
-  {
-    SEVENSEG_EnableDisplay(7 - k);
-
-    SEVENSEG_WriteChar(s[k]);
-
-    while (i++ < time);
-
-    i = 0;
-  }
+void SEVENSEG_WriteString(char *s){
+	static int segment = 0;
+	if(timerFlagSeg > 0){
+		timerFlagSeg = 0;
+		SEVENSEG_EnableDisplay(7 - segment);
+		SEVENSEG_WriteChar(s[segment]);
+		if(segment == 7){
+			segment = 0;
+		} else {
+			segment++;
+		}
+	}
+	
 }

@@ -6,7 +6,6 @@
 BiquadCoeff resetcoeffs = {"Bypass","-","0dB","-","Q32.0",1,1,0,0,1,0,0};
 
 void printCoeff(BiquadCoeff *coeff){
-	//UPDATE WITH ALL:
 	printf("Coefficients:\n");
 	printf("filtertype: \t %s\n",coeff->filtertype);
 	printf("fc: \t\t %s\n",coeff->fc);
@@ -57,7 +56,7 @@ void resetBiquad(BiquadStage *s){
 	s->ymem2 = 0;
 	s->outUnscaled = 0;
 	s->out = 0;
-	printf("%s is set to bypass",s->name);
+	//printf("%s is set to bypass",s->name);  
 }
 
 

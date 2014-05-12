@@ -30,13 +30,16 @@ void eqTestSimpleNumbers() {
 void eqTestImpulseResp(int n){
 	int counter=0;	
 	printf("EQTEST: Running impulseresponse for %i iterations\n",n);
-	stage1.in = SCALEVALUE;
+	stage1.in = SCALEVALUE-1;
 	runBiquad(&stage1);
 	for (counter=0; counter < n; counter++) {		
 		runBiquad(&stage1);
-		//print in and out:
-		printf("n: %i \t\t in: %i\t\t out: %i\n",counter,stage1.in,stage1.out);
+		/*print in and out*/
 		
+		//Readable:
+		//printf("n: %i \t\t in: %i\t\t out: %i\n",counter,stage1.in,stage1.out);
+		//comma separated:
+		printf("%i,%i,%i\n",counter,stage1.in,stage1.out);
 
 		stage1.in = 0;
 	}	

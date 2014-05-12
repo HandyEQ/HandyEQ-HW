@@ -385,6 +385,10 @@ architecture rtl of leon3mp is
   signal rxd1 : std_logic;
   signal txd1 : std_logic;
   
+  attribute mark_debug : string;
+  attribute mark_debug of spii : signal is "true";
+  attribute mark_debug of spio : signal is "true";
+  
   attribute keep                     : boolean;
   attribute syn_keep                 : boolean;
   attribute syn_preserve             : boolean;
