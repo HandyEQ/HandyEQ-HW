@@ -1,9 +1,9 @@
-HandyEQ/HandyEQ.cache/
-HandyEQ/HandyEQ.hw/
-HandyEQ/HandyEQ.runs/.jobs/
-HandyEQ/HandyEQ.runs/impl_1/
-HandyEQ/HandyEQ.runs/synth_1/
-HandyEQ/HandyEQ.data/wt/
+HandyEQ/HandyEQ-HW.cache/
+HandyEQ/HandyEQ-HW.hw/
+HandyEQ/HandyEQ-HW.runs/.jobs/
+HandyEQ/HandyEQ-HW.runs/impl_1/
+HandyEQ/HandyEQ-HW.runs/synth_1/
+HandyEQ/HandyEQ-HW.data/wt/
 HandyEQ/*.jou
 HandyEQ/*.log
 HandyEQ/*.png
