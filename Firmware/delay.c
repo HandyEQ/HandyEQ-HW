@@ -8,10 +8,12 @@ DelayEffect * init_delay(){
 	//Initialize
 	DelayEffect * delayEff = calloc(1, sizeof(DelayEffect));
 	delayEff->menusettings = calloc(1, sizeof(MenuSettings));
-	/*delayEff->head = 0;
-	delayEff->gain = 0;
-	delayEff->feedback = 0;*/
-	loadSettings(delayEff);
+	delayEff->head = 0;
+	delayEff->gain = 2000;
+	delayEff->feedback = 10000;
+	delayEff->delay = 100;
+	saveDelaySettings(delayEff);
+	//loadDelaySettings(delayEff);
 	setDelayTime(delayEff, delayEff->delay);
 
 	//Define menu
@@ -20,8 +22,8 @@ DelayEffect * init_delay(){
 	delayEff->menusettings->setting[0] = &setDelayGain;
 	delayEff->menusettings->setting[1] = &setDelayFeedback;
 	delayEff->menusettings->setting[2] = &setDelayTime;
-	delayEff->menusettings->save = &saveSettings;
-	delayEff->menusettings->load = &loadSettings;
+	delayEff->menusettings->save = &saveDelaySettings;
+	delayEff->menusettings->load = &loadDelaySettings;
 	//Setting Names
 	strcpy(delayEff->menusettings->settingName[0], "GA");
 	strcpy(delayEff->menusettings->settingName[1], "FB");
@@ -38,11 +40,12 @@ DelayEffect * init_delay(){
 	delayEff->menusettings->stepRangeH[1] = 32767;
 	delayEff->menusettings->stepRangeH[2] = 2000;
 
-	//saveSettings(delayEff);
+	//delayEff->menusettings->save(delayEff);
+	//delayEff->menusettings->load(delayEff);
 	return delayEff;
 }
 
-void saveSettings(void * pointer){
+void saveDelaySettings(void * pointer){
 	DelayEffect * delayEff = pointer;
 	int * values = calloc(3, sizeof(int));
 	values[0] = delayEff->gain;
@@ -52,7 +55,7 @@ void saveSettings(void * pointer){
 	free(values);
 }
 
-void loadSettings(void * pointer){
+void loadDelaySettings(void * pointer){
 	DelayEffect * delayEff = pointer;
 	int * values;
 	values = SPIMEM_Read_var(DELAYADDR, 3);
@@ -60,7 +63,7 @@ void loadSettings(void * pointer){
 	delayEff->gain = values[0];
 	delayEff->feedback =values[1];
 	delayEff->delay = values[2];
-
+	
 	free(values);
 }
 
@@ -72,12 +75,14 @@ void removeDelay(void * pointer){
 void setDelayGain(void * pointer, int gain){
 	DelayEffect * delayEff = pointer;	
 	delayEff->gain = gain;
+	saveDelaySettings(pointer);
 	printf("Delay Gain: %d\n", gain);
 }
 
 void setDelayFeedback(void * pointer, int feedback){
 	DelayEffect * delayEff = pointer;
 	delayEff->feedback = feedback;
+	saveDelaySettings(pointer);
 	printf("Delay Feedback: %d\n", feedback);
 }
 
@@ -92,10 +97,12 @@ void setDelayTime(void * pointer, int timeMs){
 	if(reqSize > 0){
 		setDelaySize(delayEff, reqSize);
 		delayEff->delay = timeMs;
+		saveDelaySettings(pointer);
 		printf("Delay Time: %d\n", timeMs);
 	} else if(reqSize == 0){
 		setDelaySize(delayEff, 48);
 		delayEff->delay = 1;
+		saveDelaySettings(pointer);
 		printf("Delay Time: %d\n", 1);
 	} else {
 		printf("Not Enough Memory!");

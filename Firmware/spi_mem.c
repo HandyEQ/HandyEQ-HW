@@ -328,14 +328,22 @@ void SPIMEM_Read(char addr2, char addr1, char addr0){
 
 void SPIMEM_Write_var(int address, int values[], int size){
 	int i = 0, j = 0;
+	int valBuffer[size][4];
 
 	buffer_address[0] = (address >> 24) & 0xFF;
 	buffer_address[1] = (address >> 16) & 0xFF;
 	buffer_address[2] = (address >> 8) & 0xFF;
 	buffer_address[3] = address & 0xFF;
 
+	for(j = 0 ; j < size; j++){
+		valBuffer[j][0] = (values[j] >> 24) & 0xFF;
+		valBuffer[j][1] = (values[j] >> 16) & 0xFF;
+		valBuffer[j][2] = (values[j] >> 8) & 0xFF;
+		valBuffer[j][3] = values[j] & 0xFF;	
+	}
+
 	SPIMEM_WriteEnable();
-	//SPIMEM_4kBSectorErase(); //Change this!!!
+	SPIMEM_4kBSectorErase(buffer_address[1], buffer_address[2], buffer_address[3]);
 
 	for(i ; i < 500000; i++);	
 	
@@ -350,14 +358,10 @@ void SPIMEM_Write_var(int address, int values[], int size){
 		SPIMEM -> status |= 0x01; // clear done bit
 	}
 
-	for(j = 0; j < size ; j ++){
-		buffer_value[0] = (values[j] >> 24) & 0xFF;
-		buffer_value[1] = (values[j] >> 16) & 0xFF;
-		buffer_value[2] = (values[j] >> 8) & 0xFF;
-		buffer_value[3] = values[j] & 0xFF;		
+	for(j = 0; j < size ; j ++){		
 
-		for (i = 0; i < sizeof(buffer_value); i++){	
-			SPIMEM -> transmit = buffer_value[i];
+		for (i = 0; i < sizeof(int); i++){	
+			SPIMEM -> transmit = valBuffer[j][i];
 
 			while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
 

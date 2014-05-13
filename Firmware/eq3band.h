@@ -1,6 +1,8 @@
 #ifndef EQ3BAND_H
 #define EQ3BAND_H
 
+#define EQ3BANDADDR 0x00000000
+
 #include "biquad.h"
 #include "buffer.h"
 #include "dspsystem.h"
@@ -24,6 +26,8 @@ int setEq3bandCoeff(void * eqstructptr, BiquadCoeff * coeff);
 void setEqTrebleCoeff(void * eqstructptr, int index);
 void setEqMidCoeff(void * eqstructptr, int index);
 void setEqBassCoeff(void * eqstructptr, int index);
+void saveEqSettings(void * pointer);
+void loadEqSettings(void * pointer);
 
 
 #endif
