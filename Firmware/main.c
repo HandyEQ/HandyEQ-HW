@@ -21,7 +21,7 @@ int main(void){
 
 	//UART
 	newUart = 0;
-	catch_interrupt(uart_input, uart_irq);
+	catch_interrupt(new_uart, uart_irq);
 	init_uart(115200);
 	enable_irq(uart_irq);
 	uartBuffers = calloc(1, sizeof(UartBuffers));
@@ -87,18 +87,21 @@ void new_uart(){
 }
 
 void uart_input(){
+	printf("Uart_input");
 	//Pointer to base of buffer array
-	char * input = uartBuffers->buffer[(uartBuffer->bufferSelect-1)%2];
+	/*char * input = uartBuffers->buffer[(uartBuffers->bufferSelect-1)%2];
 
 	//Size of the buffer		
-	int size = uartBuffers->counter[(uartBuffer->bufferSelect-1)%2];
+	int size = uartBuffers->counter[(uartBuffers->bufferSelect-1)%2];
 
 	//The tempStr is used to temporary store the values read before converting them into an int.
 	char tempStr[7];
 
 	//This value is used to store the converted values before storing them in their correct variable.
 	int tempVal = 0;
-
+	
+	int i;
+ 	
 	for(i = 0; i < size; i+11){
 		if(input[i] == 'S'){
 			//If an effect in a box is to be changed.
@@ -106,14 +109,19 @@ void uart_input(){
 				//If the box effect that is changed is in the first box.
 				if((input[i+3] == '0')){
 					//If the new effect is bypass.
+					printf("bypasseffect1");
 				}else if((input[i+3] == '1')){
 					//If the new effect is noeffect.
+					printf("noeffecteffect1");
 				}else if((input[i+3] == '2')){
 					//If the new effect is equalizer.
+					printf("equalizereffect1");
 				}else if((input[i+3] == '3')){
 					//If the new effect is volume.
+					printf("volumeeffect1");
 				}else if((input[i+3] == '4')){
 					//If the new effect is delay.
+					printf("delayeffect1");
 				}			
 			}else if(input[i+1] == '2'){
 				//If the box effect that is changed is in the second box.
@@ -458,7 +466,7 @@ void uart_input(){
 		}else if(input[i] == 'I'){
 			//Used for when the GUI is connected and need all the current values from the board.
 		}
-	}
+	}*/
 	//char i = recieve_uart();
 	//printf("%c", i);
 }
