@@ -1,0 +1,15 @@
+Storage Target: SPI Flash MultiBoot FPGA
+Storage Family: Artix7
+8M
+FF
+Untitled
+Y:/DAT096-Embedded System Design/HandyEQ-HW-SPIM
+
+MCS
+1
+No
+
+
+MCS
+1
+No

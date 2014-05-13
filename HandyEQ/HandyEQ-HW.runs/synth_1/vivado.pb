@@ -40,17 +40,17 @@ Starting synthesis...
 xc7a100t2default:defaultZ17-349
 õ
 %s*synth2ã
-wStarting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 233.176 ; gain = 86.977
+wStarting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 236.289 ; gain = 87.723
 2default:default
-†
+¨
 Sactual for formal port %s is neither a static name nor a globally static expression1565*oasys2
-reset_in2default:default2u
-_C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
+reset_in2default:default2Ä
+jC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
 1582default:default8@Z8-1565
-¯
+É
 synthesizing module '%s'638*oasys2
-leon3mp2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+leon3mp2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 1762default:default8@Z8-638
 T
 %s*synth2E
@@ -80,19 +80,19 @@ Q
 %s*synth2B
 .	Parameter pclow bound to: 2 - type: integer 
 2default:default
-•
+∞
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+true2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 3772default:default8@Z8-4472
-•
+∞
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+true2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 3782default:default8@Z8-4472
 S
 %s*synth2D
@@ -110,19 +110,19 @@ R
 %s*synth2C
 /	Parameter syncin bound to: 0 - type: integer 
 2default:default
-Û
+ä
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-rstgen2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/rstgen.vhd2default:default2
+rstgen2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/rstgen.vhd2default:default2
 322default:default2
 rst02default:default2
-rstgen2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+rstgen2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 4382default:default8@Z8-3491
-˜
+É
 synthesizing module '%s'638*oasys2*
-rstgen__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/rstgen.vhd2default:default2
+rstgen__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/rstgen.vhd2default:default2
 492default:default8@Z8-638
 S
 %s*synth2D
@@ -140,12 +140,12 @@ R
 %s*synth2C
 /	Parameter syncin bound to: 0 - type: integer 
 2default:default
-≤
+æ
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 rstgen__parameterized02default:default2
 12default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/rstgen.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/rstgen.vhd2default:default2
 492default:default8@Z8-256
 Q
 %s*synth2B
@@ -203,19 +203,19 @@ U
 %s*synth2F
 2	Parameter clkc_odiv bound to: 0 - type: integer 
 2default:default
-ˆ
+ç
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-clkgen2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+clkgen2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 322default:default2
 clkgen02default:default2
-clkgen2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+clkgen2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 4432default:default8@Z8-3491
-˜
+É
 synthesizing module '%s'638*oasys2*
-clkgen__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+clkgen__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 662default:default8@Z8-638
 Q
 %s*synth2B
@@ -285,19 +285,19 @@ U
 %s*synth2F
 2	Parameter freq bound to: 100000 - type: integer 
 2default:default
-˚
+í
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2"
-clkgen_virtex72default:default2É
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
+clkgen_virtex72default:default2é
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
 2952default:default2
 v2default:default2"
-clkgen_virtex72default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+clkgen_virtex72default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 922default:default8@Z8-3491
-ä
+ï
 synthesizing module '%s'638*oasys22
-clkgen_virtex7__parameterized02default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
+clkgen_virtex7__parameterized02default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
 3112default:default8@Z8-638
 T
 %s*synth2E
@@ -423,14 +423,14 @@ Z
 %s*synth2K
 7	Parameter STARTUP_WAIT bound to: TRUE - type: string 
 2default:default
-–
+€
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 	PLLE2_ADV2default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 263382default:default2"
 PLLE2_ADV_inst2default:default2
-	PLLE2_ADV2default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
+	PLLE2_ADV2default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
 3872default:default8@Z8-3491
 Ã
 synthesizing module '%s'638*oasys2-
@@ -568,14 +568,14 @@ c
 12default:default2K
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 263382default:default8@Z8-256
-æ
+…
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 BUFG2default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 6122default:default2
 bufgclk02default:default2
-BUFG2default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
+BUFG2default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
 4572default:default8@Z8-3491
 µ
 synthesizing module '%s'638*oasys2
@@ -589,85 +589,85 @@ oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/
 12default:default2K
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 6122default:default8@Z8-256
-ø
+ 
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 BUFG2default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 6122default:default2
 	bufgclk902default:default2
-BUFG2default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
+BUFG2default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
 4582default:default8@Z8-3491
-ø
+ 
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 BUFG2default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 6122default:default2
 	bufgclkio2default:default2
-BUFG2default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
+BUFG2default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
 4592default:default8@Z8-3491
-≈
+–
 %done synthesizing module '%s' (%s#%s)256*oasys22
 clkgen_virtex7__parameterized02default:default2
 42default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/clkgen_unisim.vhd2default:default2
 3112default:default8@Z8-256
-¨
+∏
 0Net %s in module/entity %s does not have driver.3422*oasys2
 sdclk2default:default2*
-clkgen__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+clkgen__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 542default:default8@Z8-3848
-≠
+π
 0Net %s in module/entity %s does not have driver.3422*oasys2
 pciclk2default:default2*
-clkgen__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+clkgen__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 552default:default8@Z8-3848
-¨
+∏
 0Net %s in module/entity %s does not have driver.3422*oasys2
 clk4x2default:default2*
-clkgen__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+clkgen__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 582default:default8@Z8-3848
-≠
+π
 0Net %s in module/entity %s does not have driver.3422*oasys2
 clk1xu2default:default2*
-clkgen__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+clkgen__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 592default:default8@Z8-3848
-≠
+π
 0Net %s in module/entity %s does not have driver.3422*oasys2
 clk2xu2default:default2*
-clkgen__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+clkgen__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 602default:default8@Z8-3848
-´
+∑
 0Net %s in module/entity %s does not have driver.3422*oasys2
 clkb2default:default2*
-clkgen__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+clkgen__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 612default:default8@Z8-3848
-´
+∑
 0Net %s in module/entity %s does not have driver.3422*oasys2
 clkc2default:default2*
-clkgen__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+clkgen__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 622default:default8@Z8-3848
-¨
+∏
 0Net %s in module/entity %s does not have driver.3422*oasys2
 clk8x2default:default2*
-clkgen__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+clkgen__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 632default:default8@Z8-3848
-≤
+æ
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 clkgen__parameterized02default:default2
 52default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/clkgen.vhd2default:default2
 662default:default8@Z8-256
 S
 %s*synth2D
@@ -793,19 +793,19 @@ T
 %s*synth2E
 1	Parameter fourgslv bound to: 0 - type: integer 
 2default:default
-Ù
+ã
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-ahbctrl2default:default2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/ahbctrl.vhd2default:default2
+ahbctrl2default:default2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/ahbctrl.vhd2default:default2
 392default:default2
 ahb02default:default2
-ahbctrl2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+ahbctrl2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 4512default:default8@Z8-3491
-˜
+É
 synthesizing module '%s'638*oasys2+
-ahbctrl__parameterized02default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/ahbctrl.vhd2default:default2
+ahbctrl__parameterized02default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/ahbctrl.vhd2default:default2
 882default:default8@Z8-638
 S
 %s*synth2D
@@ -931,12 +931,12 @@ T
 %s*synth2E
 1	Parameter fourgslv bound to: 0 - type: integer 
 2default:default
-≤
+æ
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 ahbctrl__parameterized02default:default2
 62default:default2
-12default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/ahbctrl.vhd2default:default2
+12default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/ahbctrl.vhd2default:default2
 882default:default8@Z8-256
 R
 %s*synth2C
@@ -1102,9 +1102,9 @@ O
 %s*synth2@
 ,	Parameter svt bound to: 1 - type: integer 
 2default:default
-S
-%s*synth2D
-0	Parameter rstaddr bound to: 0 - type: integer 
+V
+%s*synth2G
+3	Parameter rstaddr bound to: 2880 - type: integer 
 2default:default
 O
 %s*synth2@
@@ -1126,19 +1126,19 @@ N
 %s*synth2?
 +	Parameter bp bound to: 1 - type: integer 
 2default:default
-Ù
+ã
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-leon3s2default:default2}
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3s.vhd2default:default2
+leon3s2default:default2à
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3s.vhd2default:default2
 352default:default2
 u02default:default2
-leon3s2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+leon3s2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 4652default:default8@Z8-3491
-˚
+á
 synthesizing module '%s'638*oasys2*
-leon3s__parameterized02default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3s.vhd2default:default2
+leon3s__parameterized02default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3s.vhd2default:default2
 1002default:default8@Z8-638
 R
 %s*synth2C
@@ -1304,9 +1304,9 @@ O
 %s*synth2@
 ,	Parameter svt bound to: 1 - type: integer 
 2default:default
-S
-%s*synth2D
-0	Parameter rstaddr bound to: 0 - type: integer 
+V
+%s*synth2G
+3	Parameter rstaddr bound to: 2880 - type: integer 
 2default:default
 O
 %s*synth2@
@@ -1492,9 +1492,9 @@ O
 %s*synth2@
 ,	Parameter svt bound to: 1 - type: integer 
 2default:default
-S
-%s*synth2D
-0	Parameter rstaddr bound to: 0 - type: integer 
+V
+%s*synth2G
+3	Parameter rstaddr bound to: 2880 - type: integer 
 2default:default
 O
 %s*synth2@
@@ -1544,19 +1544,19 @@ N
 %s*synth2?
 +	Parameter bp bound to: 1 - type: integer 
 2default:default
-Ì
+Ö
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-leon3x2default:default2}
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
+leon3x2default:default2à
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
 422default:default2
 leon3x02default:default2
-leon3x2default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3s.vhd2default:default2
+leon3x2default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3s.vhd2default:default2
 1102default:default8@Z8-3491
-˚
+á
 synthesizing module '%s'638*oasys2*
-leon3x__parameterized02default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
+leon3x__parameterized02default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
 1212default:default8@Z8-638
 R
 %s*synth2C
@@ -1722,9 +1722,9 @@ O
 %s*synth2@
 ,	Parameter svt bound to: 1 - type: integer 
 2default:default
-S
-%s*synth2D
-0	Parameter rstaddr bound to: 0 - type: integer 
+V
+%s*synth2G
+3	Parameter rstaddr bound to: 2880 - type: integer 
 2default:default
 O
 %s*synth2@
@@ -1938,9 +1938,9 @@ O
 %s*synth2@
 ,	Parameter svt bound to: 1 - type: integer 
 2default:default
-S
-%s*synth2D
-0	Parameter rstaddr bound to: 0 - type: integer 
+V
+%s*synth2G
+3	Parameter rstaddr bound to: 2880 - type: integer 
 2default:default
 O
 %s*synth2@
@@ -1966,19 +1966,19 @@ N
 %s*synth2?
 +	Parameter bp bound to: 1 - type: integer 
 2default:default
-Â
+˝
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-proc32default:default2|
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
+proc32default:default2á
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
 432default:default2
 p02default:default2
-proc32default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
+proc32default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
 1542default:default8@Z8-3491
-˘
+Ö
 synthesizing module '%s'638*oasys2)
-proc3__parameterized02default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
+proc3__parameterized02default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
 1232default:default8@Z8-638
 R
 %s*synth2C
@@ -2144,9 +2144,9 @@ O
 %s*synth2@
 ,	Parameter svt bound to: 1 - type: integer 
 2default:default
-S
-%s*synth2D
-0	Parameter rstaddr bound to: 0 - type: integer 
+V
+%s*synth2G
+3	Parameter rstaddr bound to: 2880 - type: integer 
 2default:default
 O
 %s*synth2@
@@ -2244,9 +2244,9 @@ O
 %s*synth2@
 ,	Parameter svt bound to: 1 - type: integer 
 2default:default
-S
-%s*synth2D
-0	Parameter rstaddr bound to: 0 - type: integer 
+V
+%s*synth2G
+3	Parameter rstaddr bound to: 2880 - type: integer 
 2default:default
 O
 %s*synth2@
@@ -2264,19 +2264,19 @@ N
 %s*synth2?
 +	Parameter bp bound to: 1 - type: integer 
 2default:default
-ﬁ
+ˆ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-iu32default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu32default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 452default:default2
 iu2default:default2
-iu32default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
+iu32default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
 1452default:default8@Z8-3491
-ı
+Å
 synthesizing module '%s'638*oasys2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 1012default:default8@Z8-638
 P
 %s*synth2A
@@ -2350,9 +2350,9 @@ O
 %s*synth2@
 ,	Parameter svt bound to: 1 - type: integer 
 2default:default
-S
-%s*synth2D
-0	Parameter rstaddr bound to: 0 - type: integer 
+V
+%s*synth2G
+3	Parameter rstaddr bound to: 2880 - type: integer 
 2default:default
 O
 %s*synth2@
@@ -2370,514 +2370,514 @@ N
 %s*synth2?
 +	Parameter bp bound to: 1 - type: integer 
 2default:default
-–
-default block is never used226*oasys2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+‹
+default block is never used226*oasys2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 27572default:default8@Z8-226
-–
-default block is never used226*oasys2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+‹
+default block is never used226*oasys2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 14262default:default8@Z8-226
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[flush]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[exack]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[a_rs1]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[d][pc]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 fpi[d][inst]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 fpi[d][cnt]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 fpi[d][trap]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 fpi[d][annul]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[d][pv]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[a][pc]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 fpi[a][inst]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 fpi[a][cnt]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 fpi[a][trap]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 fpi[a][annul]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[a][pv]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[e][pc]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 fpi[e][inst]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 fpi[e][cnt]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 fpi[e][trap]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 fpi[e][annul]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[e][pv]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[m][pc]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 fpi[m][inst]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 fpi[m][cnt]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 fpi[m][trap]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 fpi[m][annul]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[m][pv]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[x][pc]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 fpi[x][inst]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 fpi[x][cnt]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 fpi[x][trap]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 fpi[x][annul]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 fpi[x][pv]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 fpi[lddata]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-¥
+¿
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 fpi[dbg][enable]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-≥
+ø
 0Net %s in module/entity %s does not have driver.3422*oasys2#
 fpi[dbg][write]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 fpi[dbg][fsr]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-≤
+æ
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 fpi[dbg][addr]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-≤
+æ
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 fpi[dbg][data]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 892default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[flush]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[exack]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[a_rs1]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[d][pc]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 cpi[d][inst]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 cpi[d][cnt]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 cpi[d][trap]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 cpi[d][annul]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[d][pv]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[a][pc]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 cpi[a][inst]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 cpi[a][cnt]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 cpi[a][trap]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 cpi[a][annul]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[a][pv]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[e][pc]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 cpi[e][inst]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 cpi[e][cnt]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 cpi[e][trap]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 cpi[e][annul]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[e][pv]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[m][pc]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 cpi[m][inst]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 cpi[m][cnt]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 cpi[m][trap]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 cpi[m][annul]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[m][pv]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[x][pc]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 cpi[x][inst]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 cpi[x][cnt]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-∞
+º
 0Net %s in module/entity %s does not have driver.3422*oasys2 
 cpi[x][trap]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 cpi[x][annul]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Æ
+∫
 0Net %s in module/entity %s does not have driver.3422*oasys2
 
 cpi[x][pv]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-Ø
+ª
 0Net %s in module/entity %s does not have driver.3422*oasys2
 cpi[lddata]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-¥
+¿
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 cpi[dbg][enable]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-≥
+ø
 0Net %s in module/entity %s does not have driver.3422*oasys2#
 cpi[dbg][write]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 cpi[dbg][fsr]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-≤
+æ
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 cpi[dbg][addr]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-≤
+æ
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 cpi[dbg][data]2default:default2'
-iu3__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+iu3__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 912default:default8@Z8-3848
-∞
+º
 %done synthesizing module '%s' (%s#%s)256*oasys2'
 iu3__parameterized02default:default2
 72default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 1012default:default8@Z8-256
 Q
 %s*synth2B
@@ -2899,19 +2899,19 @@ P
 %s*synth2A
 -	Parameter arch bound to: 0 - type: integer 
 2default:default
-‰
+¸
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-mul322default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/mul32.vhd2default:default2
+mul322default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/mul32.vhd2default:default2
 392default:default2
 mul02default:default2
-mul322default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
+mul322default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
 1552default:default8@Z8-3491
-ˆ
+Ç
 synthesizing module '%s'638*oasys2)
-mul32__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/mul32.vhd2default:default2
+mul32__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/mul32.vhd2default:default2
 562default:default8@Z8-638
 Q
 %s*synth2B
@@ -2957,19 +2957,19 @@ V
 %s*synth2G
 3	Parameter stall_mode bound to: 1 - type: integer 
 2default:default
-Î
+É
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-techmult2default:default2|
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/techmult.vhd2default:default2
+techmult2default:default2á
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/techmult.vhd2default:default2
 352default:default2
 m32322default:default2
-techmult2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/mul32.vhd2default:default2
+techmult2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/mul32.vhd2default:default2
 3872default:default8@Z8-3491
-˚
+á
 synthesizing module '%s'638*oasys2,
-techmult__parameterized02default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/techmult.vhd2default:default2
+techmult__parameterized02default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/techmult.vhd2default:default2
 522default:default8@Z8-638
 Q
 %s*synth2B
@@ -3011,19 +3011,19 @@ V
 %s*synth2G
 3	Parameter stall_mode bound to: 1 - type: integer 
 2default:default
-˛
+ï
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2!
-gen_mult_pipe2default:default2Ñ
-pC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/mul_inferred.vhd2default:default2
+gen_mult_pipe2default:default2è
+{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/mul_inferred.vhd2default:default2
 752default:default2
 dwm2default:default2!
-gen_mult_pipe2default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/techmult.vhd2default:default2
+gen_mult_pipe2default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/techmult.vhd2default:default2
 1332default:default8@Z8-3491
-â
+î
 synthesizing module '%s'638*oasys21
-gen_mult_pipe__parameterized02default:default2Ü
-pC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/mul_inferred.vhd2default:default2
+gen_mult_pipe__parameterized02default:default2ë
+{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/mul_inferred.vhd2default:default2
 902default:default8@Z8-638
 T
 %s*synth2E
@@ -3041,47 +3041,47 @@ V
 %s*synth2G
 3	Parameter stall_mode bound to: 1 - type: integer 
 2default:default
-ƒ
+œ
 %done synthesizing module '%s' (%s#%s)256*oasys21
 gen_mult_pipe__parameterized02default:default2
 82default:default2
-12default:default2Ü
-pC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/mul_inferred.vhd2default:default2
+12default:default2ë
+{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/mul_inferred.vhd2default:default2
 902default:default8@Z8-256
-∂
+¬
 %done synthesizing module '%s' (%s#%s)256*oasys2,
 techmult__parameterized02default:default2
 92default:default2
-12default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/techmult.vhd2default:default2
+12default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/techmult.vhd2default:default2
 522default:default8@Z8-256
-≤
+æ
 %done synthesizing module '%s' (%s#%s)256*oasys2)
 mul32__parameterized02default:default2
 102default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/mul32.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/mul32.vhd2default:default2
 562default:default8@Z8-256
-‰
+¸
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-div322default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/div32.vhd2default:default2
+div322default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/div32.vhd2default:default2
 422default:default2
 div02default:default2
-div322default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
+div322default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
 1572default:default8@Z8-3491
-Ê
+Ú
 synthesizing module '%s'638*oasys2
-div322default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/div32.vhd2default:default2
+div322default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/div32.vhd2default:default2
 522default:default8@Z8-638
-¢
+Æ
 %done synthesizing module '%s' (%s#%s)256*oasys2
 div322default:default2
 112default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/div32.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/arith/div32.vhd2default:default2
 522default:default8@Z8-256
 R
 %s*synth2C
@@ -3211,19 +3211,19 @@ Q
 %s*synth2B
 .	Parameter mmuen bound to: 0 - type: integer 
 2default:default
-Ù
+ã
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-	mmu_cache2default:default2Ä
-lC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
+	mmu_cache2default:default2ã
+wC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
 402default:default2
 c0mmu2default:default2
-	mmu_cache2default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
+	mmu_cache2default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
 1672default:default8@Z8-3491
-Å
+å
 synthesizing module '%s'638*oasys2-
-mmu_cache__parameterized02default:default2Ç
-lC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
+mmu_cache__parameterized02default:default2ç
+wC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
 962default:default8@Z8-638
 R
 %s*synth2C
@@ -3393,21 +3393,21 @@ Q
 %s*synth2B
 .	Parameter mmuen bound to: 0 - type: integer 
 2default:default
-˛
+î
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 
-mmu_icache2default:default2Å
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
+mmu_icache2default:default2å
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
 412default:default2
 icache02default:default2
 
-mmu_icache2default:default2Ç
-lC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
+mmu_icache2default:default2ç
+wC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
 1232default:default8@Z8-3491
-É
+é
 synthesizing module '%s'638*oasys2.
-mmu_icache__parameterized02default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
+mmu_icache__parameterized02default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
 732default:default8@Z8-638
 P
 %s*synth2A
@@ -3449,28 +3449,28 @@ Q
 %s*synth2B
 .	Parameter mmuen bound to: 0 - type: integer 
 2default:default
-◊
-default block is never used226*oasys2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
+‚
+default block is never used226*oasys2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
 3812default:default8@Z8-226
-∫
+≈
 0Net %s in module/entity %s does not have driver.3422*oasys2
 tag[2]2default:default2.
-mmu_icache__parameterized02default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
+mmu_icache__parameterized02default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
 2792default:default8@Z8-3848
-∫
+≈
 0Net %s in module/entity %s does not have driver.3422*oasys2
 tag[3]2default:default2.
-mmu_icache__parameterized02default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
+mmu_icache__parameterized02default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
 2792default:default8@Z8-3848
-ø
+ 
 %done synthesizing module '%s' (%s#%s)256*oasys2.
 mmu_icache__parameterized02default:default2
 122default:default2
-12default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
+12default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_icache.vhd2default:default2
 732default:default8@Z8-256
 O
 %s*synth2@
@@ -3556,21 +3556,21 @@ Q
 %s*synth2B
 .	Parameter mmuen bound to: 0 - type: integer 
 2default:default
-˛
+î
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 
-mmu_dcache2default:default2Å
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+mmu_dcache2default:default2å
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 442default:default2
 dcache02default:default2
 
-mmu_dcache2default:default2Ç
-lC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
+mmu_dcache2default:default2ç
+wC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
 1292default:default8@Z8-3491
-É
+é
 synthesizing module '%s'638*oasys2.
-mmu_dcache__parameterized02default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+mmu_dcache__parameterized02default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 882default:default8@Z8-638
 O
 %s*synth2@
@@ -3656,12 +3656,12 @@ Q
 %s*synth2B
 .	Parameter mmuen bound to: 0 - type: integer 
 2default:default
-ø
+ 
 %done synthesizing module '%s' (%s#%s)256*oasys2.
 mmu_dcache__parameterized02default:default2
 132default:default2
-12default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+12default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 882default:default8@Z8-256
 R
 %s*synth2C
@@ -3683,21 +3683,21 @@ T
 %s*synth2E
 1	Parameter scantest bound to: 0 - type: integer 
 2default:default
-˘
+è
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 
-mmu_acache2default:default2Å
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
+mmu_acache2default:default2å
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
 412default:default2
 a02default:default2
 
-mmu_acache2default:default2Ç
-lC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
+mmu_acache2default:default2ç
+wC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
 1382default:default8@Z8-3491
-É
+é
 synthesizing module '%s'638*oasys2.
-mmu_acache__parameterized02default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
+mmu_acache__parameterized02default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
 672default:default8@Z8-638
 R
 %s*synth2C
@@ -3719,41 +3719,41 @@ T
 %s*synth2E
 1	Parameter scantest bound to: 0 - type: integer 
 2default:default
-¯
+É
 found unpartitioned %s node3665*oasys2
-	construct2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
+	construct2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
 1782default:default8@Z8-4512
-¯
+É
 found unpartitioned %s node3665*oasys2
-	construct2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
+	construct2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
 1782default:default8@Z8-4512
-¯
+É
 found unpartitioned %s node3665*oasys2
-	construct2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
+	construct2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
 1782default:default8@Z8-4512
-ø
+ 
 %done synthesizing module '%s' (%s#%s)256*oasys2.
 mmu_acache__parameterized02default:default2
 142default:default2
-12default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
+12default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_acache.vhd2default:default2
 672default:default8@Z8-256
-Ω
+»
 %done synthesizing module '%s' (%s#%s)256*oasys2-
 mmu_cache__parameterized02default:default2
 152default:default2
-12default:default2Ç
-lC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
+12default:default2ç
+wC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_cache.vhd2default:default2
 962default:default8@Z8-256
-µ
+¡
 %done synthesizing module '%s' (%s#%s)256*oasys2)
 proc3__parameterized02default:default2
 162default:default2
-12default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
+12default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/proc3.vhd2default:default2
 1232default:default8@Z8-256
 Q
 %s*synth2B
@@ -3779,19 +3779,19 @@ R
 %s*synth2C
 /	Parameter testen bound to: 0 - type: integer 
 2default:default
-ˇ
+ñ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2!
-regfile_3p_l32default:default2Ñ
-pC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/regfile_3p_l3.vhd2default:default2
+regfile_3p_l32default:default2è
+{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/regfile_3p_l3.vhd2default:default2
 332default:default2
 rf02default:default2!
-regfile_3p_l32default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
+regfile_3p_l32default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
 1672default:default8@Z8-3491
-â
+î
 synthesizing module '%s'638*oasys21
-regfile_3p_l3__parameterized02default:default2Ü
-pC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/regfile_3p_l3.vhd2default:default2
+regfile_3p_l3__parameterized02default:default2ë
+{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/regfile_3p_l3.vhd2default:default2
 542default:default8@Z8-638
 Q
 %s*synth2B
@@ -3845,21 +3845,21 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-˘
+ê
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 
-regfile_3p2default:default2~
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/regfile_3p.vhd2default:default2
+regfile_3p2default:default2â
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/regfile_3p.vhd2default:default2
 322default:default2
 rhu2default:default2
 
-regfile_3p2default:default2Ü
-pC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/regfile_3p_l3.vhd2default:default2
+regfile_3p2default:default2ë
+{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/regfile_3p_l3.vhd2default:default2
 792default:default8@Z8-3491
-Ä
+ã
 synthesizing module '%s'638*oasys2.
-regfile_3p__parameterized02default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/regfile_3p.vhd2default:default2
+regfile_3p__parameterized02default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/regfile_3p.vhd2default:default2
 542default:default8@Z8-638
 Q
 %s*synth2B
@@ -3921,21 +3921,21 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ú
+â
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 
-syncram_2p2default:default2~
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+syncram_2p2default:default2â
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 362default:default2
 x02default:default2
 
-syncram_2p2default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/regfile_3p.vhd2default:default2
+syncram_2p2default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/regfile_3p.vhd2default:default2
 772default:default8@Z8-3491
-Ä
+ã
 synthesizing module '%s'638*oasys2.
-syncram_2p__parameterized02default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+syncram_2p__parameterized02default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 552default:default8@Z8-638
 Q
 %s*synth2B
@@ -3985,19 +3985,19 @@ Q
 %s*synth2B
 .	Parameter wrfst bound to: 1 - type: integer 
 2default:default
-à
+û
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2%
-unisim_syncram_2p2default:default2É
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram_2p2default:default2é
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 5362default:default2
 x02default:default2%
-unisim_syncram_2p2default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+unisim_syncram_2p2default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 1792default:default8@Z8-3491
-ç
+ò
 synthesizing module '%s'638*oasys25
-!unisim_syncram_2p__parameterized02default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+!unisim_syncram_2p__parameterized02default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 5502default:default8@Z8-638
 Q
 %s*synth2B
@@ -4023,19 +4023,19 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 32 - type: integer 
 2default:default
-ç
+£
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2%
-unisim_syncram_dp2default:default2É
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram_dp2default:default2é
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2762default:default2
 x02default:default2%
-unisim_syncram_dp2default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram_dp2default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 6022default:default8@Z8-3491
-ç
+ò
 synthesizing module '%s'638*oasys25
-!unisim_syncram_dp__parameterized02default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+!unisim_syncram_dp__parameterized02default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2952default:default8@Z8-638
 Q
 %s*synth2B
@@ -4045,14 +4045,14 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 32 - type: integer 
 2default:default
-Œ
+Ÿ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2"
 RAMB16_S36_S362default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 317702default:default2
 r02default:default2"
-RAMB16_S36_S362default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+RAMB16_S36_S362default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 4342default:default8@Z8-3491
 ¡
 synthesizing module '%s'638*oasys2"
@@ -4382,26 +4382,26 @@ G	Parameter SRVAL_B bound to: 36'b000000000000000000000000000000000000
 12default:default2K
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 317702default:default8@Z8-256
-…
+‘
 %done synthesizing module '%s' (%s#%s)256*oasys25
 !unisim_syncram_dp__parameterized02default:default2
 182default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2952default:default8@Z8-256
-…
+‘
 %done synthesizing module '%s' (%s#%s)256*oasys25
 !unisim_syncram_2p__parameterized02default:default2
 192default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 5502default:default8@Z8-256
-º
+«
 %done synthesizing module '%s' (%s#%s)256*oasys2.
 syncram_2p__parameterized02default:default2
 202default:default2
-12default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+12default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 552default:default8@Z8-256
 Q
 %s*synth2B
@@ -4435,30 +4435,30 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ú
+â
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 
-syncram_2p2default:default2~
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+syncram_2p2default:default2â
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 362default:default2
 x12default:default2
 
-syncram_2p2default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/regfile_3p.vhd2default:default2
+syncram_2p2default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/regfile_3p.vhd2default:default2
 802default:default8@Z8-3491
-º
+«
 %done synthesizing module '%s' (%s#%s)256*oasys2.
 regfile_3p__parameterized02default:default2
 212default:default2
-12default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/regfile_3p.vhd2default:default2
+12default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/regfile_3p.vhd2default:default2
 542default:default8@Z8-256
-≈
+–
 %done synthesizing module '%s' (%s#%s)256*oasys21
 regfile_3p_l3__parameterized02default:default2
 222default:default2
-12default:default2Ü
-pC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/regfile_3p_l3.vhd2default:default2
+12default:default2ë
+{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/regfile_3p_l3.vhd2default:default2
 542default:default8@Z8-256
 Q
 %s*synth2B
@@ -4540,19 +4540,19 @@ R
 %s*synth2C
 /	Parameter testen bound to: 0 - type: integer 
 2default:default
-Ò
+â
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-cachemem2default:default2
-kC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
+cachemem2default:default2ä
+vC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
 372default:default2
 cmem02default:default2
-cachemem2default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
+cachemem2default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
 1772default:default8@Z8-3491
-ˇ
+ä
 synthesizing module '%s'638*oasys2,
-cachemem__parameterized02default:default2Å
-kC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
+cachemem__parameterized02default:default2å
+vC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
 702default:default8@Z8-638
 Q
 %s*synth2B
@@ -4654,19 +4654,19 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ô
+Ü
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-syncram2default:default2{
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram2default:default2Ü
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 352default:default2
 itags02default:default2
-syncram2default:default2Å
-kC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
+syncram2default:default2å
+vC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
 3232default:default8@Z8-3491
-˘
+Ö
 synthesizing module '%s'638*oasys2+
-syncram__parameterized02default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram__parameterized02default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 512default:default8@Z8-638
 Q
 %s*synth2B
@@ -4696,19 +4696,19 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 23 - type: integer 
 2default:default
-˝
+î
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2"
-unisim_syncram2default:default2É
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram2default:default2é
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 442default:default2
 x02default:default2"
-unisim_syncram2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+unisim_syncram2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 1122default:default8@Z8-3491
-â
+î
 synthesizing module '%s'638*oasys22
-unisim_syncram__parameterized02default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram__parameterized02default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 562default:default8@Z8-638
 Q
 %s*synth2B
@@ -4718,7 +4718,7 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 23 - type: integer 
 2default:default
-≈
+–
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 
 RAMB16_S362default:default2I
@@ -4726,8 +4726,8 @@ RAMB16_S362default:default2I
 316742default:default2
 r2default:default2
 
-RAMB16_S362default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+RAMB16_S362default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 1972default:default8@Z8-3491
 Ω
 synthesizing module '%s'638*oasys2
@@ -5043,19 +5043,19 @@ RAMB16_S362default:default2
 12default:default2K
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 316742default:default8@Z8-256
-≈
+–
 %done synthesizing module '%s' (%s#%s)256*oasys22
 unisim_syncram__parameterized02default:default2
 242default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 562default:default8@Z8-256
-µ
+¡
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 syncram__parameterized02default:default2
 252default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 512default:default8@Z8-256
 Q
 %s*synth2B
@@ -5077,19 +5077,19 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ô
+Ü
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-syncram2default:default2{
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram2default:default2Ü
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 352default:default2
 idata02default:default2
-syncram2default:default2Å
-kC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
+syncram2default:default2å
+vC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
 3252default:default8@Z8-3491
-˘
+Ö
 synthesizing module '%s'638*oasys2+
-syncram__parameterized22default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram__parameterized22default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 512default:default8@Z8-638
 Q
 %s*synth2B
@@ -5119,19 +5119,19 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 32 - type: integer 
 2default:default
-˝
+î
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2"
-unisim_syncram2default:default2É
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram2default:default2é
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 442default:default2
 x02default:default2"
-unisim_syncram2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+unisim_syncram2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 1122default:default8@Z8-3491
-â
+î
 synthesizing module '%s'638*oasys22
-unisim_syncram__parameterized22default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram__parameterized22default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 562default:default8@Z8-638
 R
 %s*synth2C
@@ -5141,14 +5141,14 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 32 - type: integer 
 2default:default
-√
+Œ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 	RAMB16_S92default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 324012default:default2
 r2default:default2
-	RAMB16_S92default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+	RAMB16_S92default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2152default:default8@Z8-3491
 º
 synthesizing module '%s'638*oasys2
@@ -5462,46 +5462,46 @@ L
 12default:default2K
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 324012default:default8@Z8-256
-√
+Œ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 	RAMB16_S92default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 324012default:default2
 r2default:default2
-	RAMB16_S92default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+	RAMB16_S92default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2152default:default8@Z8-3491
-√
+Œ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 	RAMB16_S92default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 324012default:default2
 r2default:default2
-	RAMB16_S92default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+	RAMB16_S92default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2152default:default8@Z8-3491
-√
+Œ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 	RAMB16_S92default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 324012default:default2
 r2default:default2
-	RAMB16_S92default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+	RAMB16_S92default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2152default:default8@Z8-3491
-≈
+–
 %done synthesizing module '%s' (%s#%s)256*oasys22
 unisim_syncram__parameterized22default:default2
 262default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 562default:default8@Z8-256
-µ
+¡
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 syncram__parameterized22default:default2
 262default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 512default:default8@Z8-256
 Q
 %s*synth2B
@@ -5523,14 +5523,14 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ô
+Ü
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-syncram2default:default2{
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram2default:default2Ü
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 352default:default2
 itags02default:default2
-syncram2default:default2Å
-kC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
+syncram2default:default2å
+vC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
 3232default:default8@Z8-3491
 Q
 %s*synth2B
@@ -5552,14 +5552,14 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ô
+Ü
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-syncram2default:default2{
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram2default:default2Ü
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 352default:default2
 idata02default:default2
-syncram2default:default2Å
-kC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
+syncram2default:default2å
+vC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
 3252default:default8@Z8-3491
 Q
 %s*synth2B
@@ -5581,19 +5581,19 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ô
+Ü
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-syncram2default:default2{
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram2default:default2Ü
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 352default:default2
 dtags02default:default2
-syncram2default:default2Å
-kC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
+syncram2default:default2å
+vC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
 3482default:default8@Z8-3491
-˘
+Ö
 synthesizing module '%s'638*oasys2+
-syncram__parameterized42default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram__parameterized42default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 512default:default8@Z8-638
 Q
 %s*synth2B
@@ -5623,19 +5623,19 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 24 - type: integer 
 2default:default
-˝
+î
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2"
-unisim_syncram2default:default2É
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram2default:default2é
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 442default:default2
 x02default:default2"
-unisim_syncram2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+unisim_syncram2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 1122default:default8@Z8-3491
-â
+î
 synthesizing module '%s'638*oasys22
-unisim_syncram__parameterized42default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram__parameterized42default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 562default:default8@Z8-638
 Q
 %s*synth2B
@@ -5645,28 +5645,28 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 24 - type: integer 
 2default:default
-Œ
+Ÿ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2"
 RAMB16_S36_S362default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 317702default:default2
 r02default:default2"
-RAMB16_S36_S362default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+RAMB16_S36_S362default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 1852default:default8@Z8-3491
-≈
+–
 %done synthesizing module '%s' (%s#%s)256*oasys22
 unisim_syncram__parameterized42default:default2
 262default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 562default:default8@Z8-256
-µ
+¡
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 syncram__parameterized42default:default2
 262default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 512default:default8@Z8-256
 Q
 %s*synth2B
@@ -5688,14 +5688,14 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ô
+Ü
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-syncram2default:default2{
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram2default:default2Ü
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 352default:default2
 dtags02default:default2
-syncram2default:default2Å
-kC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
+syncram2default:default2å
+vC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
 3482default:default8@Z8-3491
 Q
 %s*synth2B
@@ -5717,19 +5717,19 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ô
+Ü
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-syncram2default:default2{
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram2default:default2Ü
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 352default:default2
 ddata02default:default2
-syncram2default:default2Å
-kC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
+syncram2default:default2å
+vC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
 4072default:default8@Z8-3491
-˘
+Ö
 synthesizing module '%s'638*oasys2+
-syncram__parameterized62default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram__parameterized62default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 512default:default8@Z8-638
 Q
 %s*synth2B
@@ -5759,19 +5759,19 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 32 - type: integer 
 2default:default
-˝
+î
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2"
-unisim_syncram2default:default2É
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram2default:default2é
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 442default:default2
 x02default:default2"
-unisim_syncram2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+unisim_syncram2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 1122default:default8@Z8-3491
-â
+î
 synthesizing module '%s'638*oasys22
-unisim_syncram__parameterized62default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram__parameterized62default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 562default:default8@Z8-638
 R
 %s*synth2C
@@ -5781,7 +5781,7 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 32 - type: integer 
 2default:default
-≈
+–
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 
 RAMB16_S182default:default2I
@@ -5789,8 +5789,8 @@ RAMB16_S182default:default2I
 301032default:default2
 r2default:default2
 
-RAMB16_S182default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+RAMB16_S182default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2062default:default8@Z8-3491
 Ω
 synthesizing module '%s'638*oasys2
@@ -6106,7 +6106,7 @@ RAMB16_S182default:default2
 12default:default2K
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 301032default:default8@Z8-256
-≈
+–
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 
 RAMB16_S182default:default2I
@@ -6114,22 +6114,22 @@ RAMB16_S182default:default2I
 301032default:default2
 r2default:default2
 
-RAMB16_S182default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+RAMB16_S182default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2062default:default8@Z8-3491
-≈
+–
 %done synthesizing module '%s' (%s#%s)256*oasys22
 unisim_syncram__parameterized62default:default2
 272default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 562default:default8@Z8-256
-µ
+¡
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 syncram__parameterized62default:default2
 272default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 512default:default8@Z8-256
 Q
 %s*synth2B
@@ -6151,21 +6151,21 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ô
+Ü
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-syncram2default:default2{
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
+syncram2default:default2Ü
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram.vhd2default:default2
 352default:default2
 ddata02default:default2
-syncram2default:default2Å
-kC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
+syncram2default:default2å
+vC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
 4072default:default8@Z8-3491
-ª
+∆
 %done synthesizing module '%s' (%s#%s)256*oasys2,
 cachemem__parameterized02default:default2
 282default:default2
-12default:default2Å
-kC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
+12default:default2å
+vC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/cachemem.vhd2default:default2
 702default:default8@Z8-256
 Q
 %s*synth2B
@@ -6179,19 +6179,19 @@ R
 %s*synth2C
 /	Parameter testen bound to: 0 - type: integer 
 2default:default
-Ô
+á
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-tbufmem2default:default2~
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
+tbufmem2default:default2â
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
 352default:default2
 tbmem02default:default2
-tbufmem2default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
+tbufmem2default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
 1872default:default8@Z8-3491
-˝
+à
 synthesizing module '%s'638*oasys2+
-tbufmem__parameterized02default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
+tbufmem__parameterized02default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
 472default:default8@Z8-638
 Q
 %s*synth2B
@@ -6225,19 +6225,19 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ò
+à
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-	syncram642default:default2}
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram64.vhd2default:default2
+	syncram642default:default2à
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram64.vhd2default:default2
 372default:default2
 ram02default:default2
-	syncram642default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
+	syncram642default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
 562default:default8@Z8-3491
-˝
+â
 synthesizing module '%s'638*oasys2-
-syncram64__parameterized02default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram64.vhd2default:default2
+syncram64__parameterized02default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram64.vhd2default:default2
 532default:default8@Z8-638
 Q
 %s*synth2B
@@ -6263,46 +6263,46 @@ Q
 %s*synth2B
 .	Parameter abits bound to: 7 - type: integer 
 2default:default
-Ñ
+õ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2$
-unisim_syncram642default:default2É
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+unisim_syncram642default:default2é
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 6172default:default2
 x02default:default2$
-unisim_syncram642default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram64.vhd2default:default2
+unisim_syncram642default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram64.vhd2default:default2
 1202default:default8@Z8-3491
-å
+ó
 synthesizing module '%s'638*oasys24
- unisim_syncram64__parameterized02default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+ unisim_syncram64__parameterized02default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 6292default:default8@Z8-638
 Q
 %s*synth2B
 .	Parameter abits bound to: 7 - type: integer 
 2default:default
-Œ
+Ÿ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2"
 RAMB16_S36_S362default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 317702default:default2
 r02default:default2"
-RAMB16_S36_S362default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+RAMB16_S36_S362default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 6722default:default8@Z8-3491
-»
+”
 %done synthesizing module '%s' (%s#%s)256*oasys24
  unisim_syncram64__parameterized02default:default2
 292default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 6292default:default8@Z8-256
-π
+≈
 %done synthesizing module '%s' (%s#%s)256*oasys2-
 syncram64__parameterized02default:default2
 302default:default2
-12default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram64.vhd2default:default2
+12default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram64.vhd2default:default2
 532default:default8@Z8-256
 Q
 %s*synth2B
@@ -6324,35 +6324,35 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ò
+à
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-	syncram642default:default2}
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram64.vhd2default:default2
+	syncram642default:default2à
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram64.vhd2default:default2
 372default:default2
 ram02default:default2
-	syncram642default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
+	syncram642default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
 562default:default8@Z8-3491
-π
+ƒ
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 tbufmem__parameterized02default:default2
 312default:default2
-12default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
+12default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
 472default:default8@Z8-256
-∑
+√
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 leon3x__parameterized02default:default2
 322default:default2
-12default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
+12default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3x.vhd2default:default2
 1212default:default8@Z8-256
-∑
+√
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 leon3s__parameterized02default:default2
 332default:default2
-12default:default2
-iC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3s.vhd2default:default2
+12default:default2ä
+tC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/leon3s.vhd2default:default2
 1002default:default8@Z8-256
 R
 %s*synth2C
@@ -6390,19 +6390,19 @@ R
 %s*synth2C
 /	Parameter testen bound to: 0 - type: integer 
 2default:default
-
+á
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-dsu32default:default2{
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3.vhd2default:default2
+dsu32default:default2Ü
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3.vhd2default:default2
 372default:default2
 dsu02default:default2
-dsu32default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+dsu32default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 4782default:default8@Z8-3491
-ˆ
+Ç
 synthesizing module '%s'638*oasys2(
-dsu3__parameterized02default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3.vhd2default:default2
+dsu3__parameterized02default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3.vhd2default:default2
 622default:default8@Z8-638
 R
 %s*synth2C
@@ -6480,19 +6480,19 @@ R
 %s*synth2C
 /	Parameter testen bound to: 0 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-dsu3x2default:default2|
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3x.vhd2default:default2
+dsu3x2default:default2á
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3x.vhd2default:default2
 392default:default2
 x02default:default2
-dsu3x2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3.vhd2default:default2
+dsu3x2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3.vhd2default:default2
 702default:default8@Z8-3491
-¯
+Ñ
 synthesizing module '%s'638*oasys2)
-dsu3x__parameterized02default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3x.vhd2default:default2
+dsu3x__parameterized02default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3x.vhd2default:default2
 682default:default8@Z8-638
 R
 %s*synth2C
@@ -6546,28 +6546,28 @@ R
 %s*synth2C
 /	Parameter testen bound to: 0 - type: integer 
 2default:default
-Ï
+Ñ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-tbufmem2default:default2~
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
+tbufmem2default:default2â
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/tbufmem.vhd2default:default2
 352default:default2
 mem02default:default2
-tbufmem2default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3x.vhd2default:default2
+tbufmem2default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3x.vhd2default:default2
 7432default:default8@Z8-3491
-¥
+¿
 %done synthesizing module '%s' (%s#%s)256*oasys2)
 dsu3x__parameterized02default:default2
 342default:default2
-12default:default2~
-hC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3x.vhd2default:default2
+12default:default2â
+sC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3x.vhd2default:default2
 682default:default8@Z8-256
-≤
+æ
 %done synthesizing module '%s' (%s#%s)256*oasys2(
 dsu3__parameterized02default:default2
 352default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/dsu3.vhd2default:default2
 622default:default8@Z8-256
 R
 %s*synth2C
@@ -6677,19 +6677,19 @@ R
 %s*synth2C
 /	Parameter mobile bound to: 0 - type: integer 
 2default:default
-Ò
+à
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-mctrl2default:default2{
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
+mctrl2default:default2Ü
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
 352default:default2
 sr12default:default2
-mctrl2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+mctrl2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3491
-˜
+É
 synthesizing module '%s'638*oasys2)
-mctrl__parameterized02default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
+mctrl__parameterized02default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
 792default:default8@Z8-638
 R
 %s*synth2C
@@ -6799,34 +6799,34 @@ R
 %s*synth2C
 /	Parameter mobile bound to: 0 - type: integer 
 2default:default
-–
-default block is never used226*oasys2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
+‹
+default block is never used226*oasys2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
 3662default:default8@Z8-226
-–
-default block is never used226*oasys2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
+‹
+default block is never used226*oasys2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
 4772default:default8@Z8-226
-–
-default block is never used226*oasys2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
+‹
+default block is never used226*oasys2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
 4922default:default8@Z8-226
-–
-default block is never used226*oasys2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
+‹
+default block is never used226*oasys2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
 7002default:default8@Z8-226
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2
 	rrsbdrive2default:default2)
-mctrl__parameterized02default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
+mctrl__parameterized02default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
 1932default:default8@Z8-3848
-≥
+ø
 %done synthesizing module '%s' (%s#%s)256*oasys2)
 mctrl__parameterized02default:default2
 362default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
 792default:default8@Z8-256
 Q
 %s*synth2B
@@ -6852,19 +6852,19 @@ R
 %s*synth2C
 /	Parameter width bound to: 23 - type: integer 
 2default:default
-˙
+ë
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpadv2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpadv2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1272default:default2
 addr_pad2default:default2
-outpadv2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+outpadv2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5342default:default8@Z8-3491
-˘
+Ö
 synthesizing module '%s'638*oasys2+
-outpadv__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpadv__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1352default:default8@Z8-638
 Q
 %s*synth2B
@@ -6910,19 +6910,19 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
-˜
+É
 synthesizing module '%s'638*oasys2*
-outpad__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 392default:default8@Z8-638
 Q
 %s*synth2B
@@ -6960,19 +6960,19 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-¯
+è
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2!
-unisim_outpad2default:default2Å
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
+unisim_outpad2default:default2å
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
 2022default:default2
 x02default:default2!
-unisim_outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+unisim_outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z8-3491
-á
+í
 synthesizing module '%s'638*oasys21
-unisim_outpad__parameterized02default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
+unisim_outpad__parameterized02default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
 2072default:default8@Z8-638
 Q
 %s*synth2B
@@ -7006,14 +7006,14 @@ R
 %s*synth2C
 /	Parameter SLEW bound to: SLOW - type: string 
 2default:default
-∏
+√
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 OBUF2default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 175922default:default2
 op2default:default2
-OBUF2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
+OBUF2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
 2292default:default8@Z8-3491
 «
 synthesizing module '%s'638*oasys2(
@@ -7043,19 +7043,19 @@ R
 12default:default2K
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 175922default:default8@Z8-256
-√
+Œ
 %done synthesizing module '%s' (%s#%s)256*oasys21
 unisim_outpad__parameterized02default:default2
 382default:default2
-12default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
+12default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
 2072default:default8@Z8-256
-≥
+ø
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 outpad__parameterized02default:default2
 392default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 392default:default8@Z8-256
 Q
 %s*synth2B
@@ -7077,14 +7077,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7106,14 +7106,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7135,14 +7135,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7164,14 +7164,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7193,14 +7193,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7222,14 +7222,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7251,14 +7251,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7280,14 +7280,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7309,14 +7309,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7338,14 +7338,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7367,14 +7367,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7396,14 +7396,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7425,14 +7425,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7454,14 +7454,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7483,14 +7483,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7512,14 +7512,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7541,14 +7541,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7570,14 +7570,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7599,14 +7599,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7628,14 +7628,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7657,14 +7657,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7686,21 +7686,21 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-‚
+˙
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 x02default:default2
-outpad2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z8-3491
-µ
+¡
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 outpadv__parameterized02default:default2
 402default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1352default:default8@Z8-256
 Q
 %s*synth2B
@@ -7722,14 +7722,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-ˆ
+ç
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 oen_pad2default:default2
-outpad2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+outpad2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5362default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7751,14 +7751,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-ı
+å
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 cs_pad2default:default2
-outpad2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+outpad2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5382default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7780,14 +7780,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-ı
+å
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 lb_pad2default:default2
-outpad2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+outpad2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5402default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7809,14 +7809,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-ı
+å
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 ub_pad2default:default2
-outpad2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+outpad2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5422default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7838,14 +7838,14 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-ˆ
+ç
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-outpad2default:default2z
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpad2default:default2Ö
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 322default:default2
 wri_pad2default:default2
-outpad2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+outpad2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5442default:default8@Z8-3491
 Q
 %s*synth2B
@@ -7879,19 +7879,19 @@ R
 %s*synth2C
 /	Parameter filter bound to: 0 - type: integer 
 2default:default
-Ú
+â
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-iopadv2default:default2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopadv2default:default2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1572default:default2
 bdr2default:default2
-iopadv2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+iopadv2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5482default:default8@Z8-3491
-˜
+É
 synthesizing module '%s'638*oasys2*
-iopadv__parameterized02default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopadv__parameterized02default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1682default:default8@Z8-638
 Q
 %s*synth2B
@@ -7953,19 +7953,19 @@ R
 %s*synth2C
 /	Parameter filter bound to: 0 - type: integer 
 2default:default
-ﬁ
+ˆ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-iopad2default:default2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 322default:default2
 x02default:default2
-iopad2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z8-3491
-ı
+Å
 synthesizing module '%s'638*oasys2)
-iopad__parameterized02default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad__parameterized02default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 402default:default8@Z8-638
 Q
 %s*synth2B
@@ -8011,19 +8011,19 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-Ù
+ã
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2 
-unisim_iopad2default:default2Å
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
+unisim_iopad2default:default2å
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
 942default:default2
 x02default:default2 
-unisim_iopad2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+unisim_iopad2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z8-3491
-Ö
+ê
 synthesizing module '%s'638*oasys20
-unisim_iopad__parameterized02default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
+unisim_iopad__parameterized02default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
 992default:default8@Z8-638
 Q
 %s*synth2B
@@ -8053,14 +8053,14 @@ R
 %s*synth2C
 /	Parameter SLEW bound to: SLOW - type: string 
 2default:default
-∫
+≈
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
 IOBUF2default:default2I
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 132412default:default2
 op2default:default2
-IOBUF2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
+IOBUF2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
 1212default:default8@Z8-3491
 »
 synthesizing module '%s'638*oasys2)
@@ -8090,19 +8090,19 @@ R
 12default:default2K
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 132412default:default8@Z8-256
-¡
+Ã
 %done synthesizing module '%s' (%s#%s)256*oasys20
 unisim_iopad__parameterized02default:default2
 422default:default2
-12default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
+12default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
 992default:default8@Z8-256
-±
+Ω
 %done synthesizing module '%s' (%s#%s)256*oasys2)
 iopad__parameterized02default:default2
 432default:default2
-12default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+12default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 402default:default8@Z8-256
 Q
 %s*synth2B
@@ -8132,14 +8132,14 @@ R
 %s*synth2C
 /	Parameter filter bound to: 0 - type: integer 
 2default:default
-ﬁ
+ˆ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-iopad2default:default2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 322default:default2
 x02default:default2
-iopad2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z8-3491
 Q
 %s*synth2B
@@ -8169,14 +8169,14 @@ R
 %s*synth2C
 /	Parameter filter bound to: 0 - type: integer 
 2default:default
-ﬁ
+ˆ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-iopad2default:default2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 322default:default2
 x02default:default2
-iopad2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z8-3491
 Q
 %s*synth2B
@@ -8206,14 +8206,14 @@ R
 %s*synth2C
 /	Parameter filter bound to: 0 - type: integer 
 2default:default
-ﬁ
+ˆ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-iopad2default:default2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 322default:default2
 x02default:default2
-iopad2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z8-3491
 Q
 %s*synth2B
@@ -8243,14 +8243,14 @@ R
 %s*synth2C
 /	Parameter filter bound to: 0 - type: integer 
 2default:default
-ﬁ
+ˆ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-iopad2default:default2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 322default:default2
 x02default:default2
-iopad2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z8-3491
 Q
 %s*synth2B
@@ -8280,14 +8280,14 @@ R
 %s*synth2C
 /	Parameter filter bound to: 0 - type: integer 
 2default:default
-ﬁ
+ˆ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-iopad2default:default2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 322default:default2
 x02default:default2
-iopad2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z8-3491
 Q
 %s*synth2B
@@ -8317,14 +8317,14 @@ R
 %s*synth2C
 /	Parameter filter bound to: 0 - type: integer 
 2default:default
-ﬁ
+ˆ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-iopad2default:default2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 322default:default2
 x02default:default2
-iopad2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z8-3491
 Q
 %s*synth2B
@@ -8354,21 +8354,21 @@ R
 %s*synth2C
 /	Parameter filter bound to: 0 - type: integer 
 2default:default
-ﬁ
+ˆ
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-iopad2default:default2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 322default:default2
 x02default:default2
-iopad2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopad2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z8-3491
-≥
+ø
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 iopadv__parameterized02default:default2
 442default:default2
-12default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+12default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1682default:default8@Z8-256
 Q
 %s*synth2B
@@ -8402,14 +8402,14 @@ R
 %s*synth2C
 /	Parameter filter bound to: 0 - type: integer 
 2default:default
-Û
+ä
 Hmodule '%s' declared at '%s:%s' bound to instance '%s' of component '%s'3392*oasys2
-iopadv2default:default2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+iopadv2default:default2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1572default:default2
 bdr22default:default2
-iopadv2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+iopadv2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5512default:default8@Z8-3491
 ‘
 ÅMessage '%s' appears more than %s times and has been disabled. User can change this message limit to see more message instances.
@@ -8464,10 +8464,10 @@ R
 %s*synth2C
 /	Parameter ccheck bound to: 1 - type: integer 
 2default:default
-˜
+É
 synthesizing module '%s'638*oasys2+
-apbctrl__parameterized02default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/apbctrl.vhd2default:default2
+apbctrl__parameterized02default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/apbctrl.vhd2default:default2
 632default:default8@Z8-638
 R
 %s*synth2C
@@ -8517,12 +8517,12 @@ R
 %s*synth2C
 /	Parameter ccheck bound to: 1 - type: integer 
 2default:default
-≥
+ø
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 apbctrl__parameterized02default:default2
 452default:default2
-12default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/apbctrl.vhd2default:default2
+12default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/apbctrl.vhd2default:default2
 632default:default8@Z8-256
 R
 %s*synth2C
@@ -8544,10 +8544,10 @@ P
 %s*synth2A
 -	Parameter eirq bound to: 0 - type: integer 
 2default:default
-ˆ
+Ç
 synthesizing module '%s'638*oasys2)
-irqmp__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/irqmp/irqmp.vhd2default:default2
+irqmp__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/irqmp/irqmp.vhd2default:default2
 562default:default8@Z8-638
 R
 %s*synth2C
@@ -8569,16 +8569,16 @@ P
 %s*synth2A
 -	Parameter eirq bound to: 0 - type: integer 
 2default:default
-œ
-default block is never used226*oasys2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/irqmp/irqmp.vhd2default:default2
+€
+default block is never used226*oasys2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/irqmp/irqmp.vhd2default:default2
 1572default:default8@Z8-226
-≤
+æ
 %done synthesizing module '%s' (%s#%s)256*oasys2)
 irqmp__parameterized02default:default2
 462default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/irqmp/irqmp.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/irqmp/irqmp.vhd2default:default2
 562default:default8@Z8-256
 R
 %s*synth2C
@@ -8620,10 +8620,10 @@ S
 %s*synth2D
 0	Parameter ewdogen bound to: 0 - type: integer 
 2default:default
-˘
+Ö
 synthesizing module '%s'638*oasys2+
-gptimer__parameterized02default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/gptimer.vhd2default:default2
+gptimer__parameterized02default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/gptimer.vhd2default:default2
 652default:default8@Z8-638
 R
 %s*synth2C
@@ -8665,12 +8665,12 @@ S
 %s*synth2D
 0	Parameter ewdogen bound to: 0 - type: integer 
 2default:default
-µ
+¡
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 gptimer__parameterized02default:default2
 472default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/gptimer.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/gptimer.vhd2default:default2
 652default:default8@Z8-256
 R
 %s*synth2C
@@ -8708,9 +8708,9 @@ R
 %s*synth2C
 /	Parameter sdcard bound to: 0 - type: integer 
 2default:default
-T
-%s*synth2E
-1	Parameter readcmd bound to: 11 - type: integer 
+S
+%s*synth2D
+0	Parameter readcmd bound to: 3 - type: integer 
 2default:default
 U
 %s*synth2F
@@ -8740,10 +8740,10 @@ R
 %s*synth2C
 /	Parameter offset bound to: 0 - type: integer 
 2default:default
-˙
+Ü
 synthesizing module '%s'638*oasys2,
-spimctrl__parameterized02default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spimctrl.vhd2default:default2
+spimctrl__parameterized02default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spimctrl.vhd2default:default2
 752default:default8@Z8-638
 R
 %s*synth2C
@@ -8781,9 +8781,9 @@ R
 %s*synth2C
 /	Parameter sdcard bound to: 0 - type: integer 
 2default:default
-T
-%s*synth2E
-1	Parameter readcmd bound to: 11 - type: integer 
+S
+%s*synth2D
+0	Parameter readcmd bound to: 3 - type: integer 
 2default:default
 U
 %s*synth2F
@@ -8813,12 +8813,12 @@ R
 %s*synth2C
 /	Parameter offset bound to: 0 - type: integer 
 2default:default
-∂
+¬
 %done synthesizing module '%s' (%s#%s)256*oasys2,
 spimctrl__parameterized02default:default2
 482default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spimctrl.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spimctrl.vhd2default:default2
 752default:default8@Z8-256
 W
 %s*synth2H
@@ -8828,11 +8828,11 @@ W
 %s*synth2O
 ;	Parameter SIM_CCLK_FREQ bound to: 5.000000 - type: float 
 2default:default
-≤
+Ω
 ,binding component instance '%s' to cell '%s'113*oasys2"
 STARTUPE2_inst2default:default2
-	STARTUPE22default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+	STARTUPE22default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 6332default:default8@Z8-113
 R
 %s*synth2C
@@ -8874,10 +8874,10 @@ R
 %s*synth2C
 /	Parameter sbits bound to: 12 - type: integer 
 2default:default
-˘
+Ö
 synthesizing module '%s'638*oasys2+
-apbuart__parameterized02default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/uart/apbuart.vhd2default:default2
+apbuart__parameterized02default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/uart/apbuart.vhd2default:default2
 632default:default8@Z8-638
 R
 %s*synth2C
@@ -8919,12 +8919,12 @@ R
 %s*synth2C
 /	Parameter sbits bound to: 12 - type: integer 
 2default:default
-µ
+¡
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 apbuart__parameterized02default:default2
 492default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/uart/apbuart.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/uart/apbuart.vhd2default:default2
 632default:default8@Z8-256
 Q
 %s*synth2B
@@ -8946,10 +8946,10 @@ T
 %s*synth2E
 1	Parameter strength bound to: 0 - type: integer 
 2default:default
-ı
+Å
 synthesizing module '%s'638*oasys2)
-inpad__parameterized02default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/inpad.vhd2default:default2
+inpad__parameterized02default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/inpad.vhd2default:default2
 392default:default8@Z8-638
 Q
 %s*synth2B
@@ -8979,10 +8979,10 @@ S
 %s*synth2D
 0	Parameter voltage bound to: 3 - type: integer 
 2default:default
-Ö
+ê
 synthesizing module '%s'638*oasys20
-unisim_inpad__parameterized02default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
+unisim_inpad__parameterized02default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
 392default:default8@Z8-638
 Q
 %s*synth2B
@@ -9032,19 +9032,19 @@ Y
 12default:default2K
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 105802default:default8@Z8-256
-¡
+Ã
 %done synthesizing module '%s' (%s#%s)256*oasys20
 unisim_inpad__parameterized02default:default2
 512default:default2
-12default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
+12default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/pads_unisim.vhd2default:default2
 392default:default8@Z8-256
-±
+Ω
 %done synthesizing module '%s' (%s#%s)256*oasys2)
 inpad__parameterized02default:default2
 522default:default2
-12default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/inpad.vhd2default:default2
+12default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/inpad.vhd2default:default2
 392default:default8@Z8-256
 Q
 %s*synth2B
@@ -9202,10 +9202,10 @@ T
 %s*synth2E
 1	Parameter mdiohold bound to: 1 - type: integer 
 2default:default
-¯
+Ñ
 synthesizing module '%s'638*oasys2*
-grethm__parameterized02default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/greth/grethm.vhd2default:default2
+grethm__parameterized02default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/greth/grethm.vhd2default:default2
 852default:default8@Z8-638
 R
 %s*synth2C
@@ -9475,10 +9475,10 @@ V
 %s*synth2G
 3	Parameter maxsize bound to: 1500 - type: integer 
 2default:default
-ˆ
+Ç
 synthesizing module '%s'638*oasys2)
-greth__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/greth/greth.vhd2default:default2
+greth__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/greth/greth.vhd2default:default2
 862default:default8@Z8-638
 R
 %s*synth2C
@@ -9704,10 +9704,10 @@ V
 %s*synth2G
 3	Parameter maxsize bound to: 1500 - type: integer 
 2default:default
-Ù
+Ä
 synthesizing module '%s'638*oasys2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 1582default:default8@Z8-638
 T
 %s*synth2E
@@ -9805,9 +9805,9 @@ V
 %s*synth2G
 3	Parameter maxsize bound to: 1500 - type: integer 
 2default:default
-Ã
-default block is never used226*oasys2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+ÿ
+default block is never used226*oasys2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 10502default:default8@Z8-226
 T
 %s*synth2E
@@ -9829,10 +9829,10 @@ P
 %s*synth2A
 -	Parameter rmii bound to: 1 - type: integer 
 2default:default
-˜
+É
 synthesizing module '%s'638*oasys2,
-greth_tx__parameterized02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_tx.vhd2default:default2
+greth_tx__parameterized02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_tx.vhd2default:default2
 482default:default8@Z8-638
 T
 %s*synth2E
@@ -9858,32 +9858,32 @@ S
 %s*synth2D
 0	Parameter acthigh bound to: 0 - type: integer 
 2default:default
-˚
+á
 synthesizing module '%s'638*oasys2.
-eth_rstgen__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_rstgen.vhd2default:default2
+eth_rstgen__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_rstgen.vhd2default:default2
 402default:default8@Z8-638
 S
 %s*synth2D
 0	Parameter acthigh bound to: 0 - type: integer 
 2default:default
-∑
+√
 %done synthesizing module '%s' (%s#%s)256*oasys2.
 eth_rstgen__parameterized02default:default2
 532default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_rstgen.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_rstgen.vhd2default:default2
 402default:default8@Z8-256
-Õ
-default block is never used226*oasys2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_tx.vhd2default:default2
+Ÿ
+default block is never used226*oasys2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_tx.vhd2default:default2
 3602default:default8@Z8-226
-≥
+ø
 %done synthesizing module '%s' (%s#%s)256*oasys2,
 greth_tx__parameterized02default:default2
 542default:default2
-12default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_tx.vhd2default:default2
+12default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_tx.vhd2default:default2
 482default:default8@Z8-256
 Q
 %s*synth2B
@@ -9901,10 +9901,10 @@ V
 %s*synth2G
 3	Parameter maxsize bound to: 1500 - type: integer 
 2default:default
-˜
+É
 synthesizing module '%s'638*oasys2,
-greth_rx__parameterized02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_rx.vhd2default:default2
+greth_rx__parameterized02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_rx.vhd2default:default2
 492default:default8@Z8-638
 Q
 %s*synth2B
@@ -9926,125 +9926,125 @@ S
 %s*synth2D
 0	Parameter acthigh bound to: 0 - type: integer 
 2default:default
-‘
+‡
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2
 
 r_reg[rxd]2default:default2
 42default:default2
-22default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_rx.vhd2default:default2
+22default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_rx.vhd2default:default2
 3562default:default8@Z8-3936
-÷
+‚
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2 
 rin_reg[rxd]2default:default2
 42default:default2
-22default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_rx.vhd2default:default2
+22default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_rx.vhd2default:default2
 3412default:default8@Z8-3936
-≥
+ø
 %done synthesizing module '%s' (%s#%s)256*oasys2,
 greth_rx__parameterized02default:default2
 552default:default2
-12default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_rx.vhd2default:default2
+12default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_rx.vhd2default:default2
 492default:default8@Z8-256
-Ì
+˘
 synthesizing module '%s'638*oasys2
-eth_ahb_mst2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_ahb_mst.vhd2default:default2
+eth_ahb_mst2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_ahb_mst.vhd2default:default2
 462default:default8@Z8-638
-–
-default block is never used226*oasys2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_ahb_mst.vhd2default:default2
+‹
+default block is never used226*oasys2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_ahb_mst.vhd2default:default2
 1212default:default8@Z8-226
-–
-default block is never used226*oasys2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_ahb_mst.vhd2default:default2
+‹
+default block is never used226*oasys2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_ahb_mst.vhd2default:default2
 1322default:default8@Z8-226
-©
+µ
 %done synthesizing module '%s' (%s#%s)256*oasys2
 eth_ahb_mst2default:default2
 562default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_ahb_mst.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/eth_ahb_mst.vhd2default:default2
 462default:default8@Z8-256
-≥
+ø
 0Net %s in module/entity %s does not have driver.3422*oasys2#
 ahbmo2[hbusreq]2default:default2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 4652default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 ahbmo2[hlock]2default:default2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 4652default:default8@Z8-3848
-≤
+æ
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 ahbmo2[htrans]2default:default2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 4652default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 ahbmo2[haddr]2default:default2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 4652default:default8@Z8-3848
-≤
+æ
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 ahbmo2[hwrite]2default:default2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 4652default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 ahbmo2[hsize]2default:default2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 4652default:default8@Z8-3848
-≤
+æ
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 ahbmo2[hburst]2default:default2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 4652default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 ahbmo2[hprot]2default:default2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 4652default:default8@Z8-3848
-≤
+æ
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 ahbmo2[hwdata]2default:default2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 4652default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 tmsti2[ready]2default:default2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 4562default:default8@Z8-3848
-±
+Ω
 0Net %s in module/entity %s does not have driver.3422*oasys2!
 tmsti2[error]2default:default2*
-grethc__parameterized02default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+grethc__parameterized02default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 4562default:default8@Z8-3848
 ‘
 ÅMessage '%s' appears more than %s times and has been disabled. User can change this message limit to see more message instances.
 14*common2 
 Synth 8-38482default:default2
 1002default:defaultZ17-14
-∞
+º
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 grethc__parameterized02default:default2
 572default:default2
-12default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+12default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 1582default:default8@Z8-256
 Q
 %s*synth2B
@@ -10078,10 +10078,10 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ä
+ã
 synthesizing module '%s'638*oasys2.
-syncram_2p__parameterized22default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+syncram_2p__parameterized22default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 552default:default8@Z8-638
 Q
 %s*synth2B
@@ -10131,10 +10131,10 @@ Q
 %s*synth2B
 .	Parameter wrfst bound to: 0 - type: integer 
 2default:default
-ç
+ò
 synthesizing module '%s'638*oasys25
-!unisim_syncram_2p__parameterized22default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+!unisim_syncram_2p__parameterized22default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 5502default:default8@Z8-638
 Q
 %s*synth2B
@@ -10160,10 +10160,10 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 32 - type: integer 
 2default:default
-ç
+ò
 synthesizing module '%s'638*oasys25
-!unisim_syncram_dp__parameterized22default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+!unisim_syncram_dp__parameterized22default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2952default:default8@Z8-638
 Q
 %s*synth2B
@@ -10173,26 +10173,26 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 32 - type: integer 
 2default:default
-…
+‘
 %done synthesizing module '%s' (%s#%s)256*oasys25
 !unisim_syncram_dp__parameterized22default:default2
 572default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2952default:default8@Z8-256
-…
+‘
 %done synthesizing module '%s' (%s#%s)256*oasys25
 !unisim_syncram_2p__parameterized22default:default2
 572default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 5502default:default8@Z8-256
-º
+«
 %done synthesizing module '%s' (%s#%s)256*oasys2.
 syncram_2p__parameterized22default:default2
 572default:default2
-12default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+12default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 552default:default8@Z8-256
 Q
 %s*synth2B
@@ -10226,10 +10226,10 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ä
+ã
 synthesizing module '%s'638*oasys2.
-syncram_2p__parameterized42default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+syncram_2p__parameterized42default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 552default:default8@Z8-638
 Q
 %s*synth2B
@@ -10279,10 +10279,10 @@ Q
 %s*synth2B
 .	Parameter wrfst bound to: 0 - type: integer 
 2default:default
-ç
+ò
 synthesizing module '%s'638*oasys25
-!unisim_syncram_2p__parameterized42default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+!unisim_syncram_2p__parameterized42default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 5502default:default8@Z8-638
 Q
 %s*synth2B
@@ -10312,10 +10312,10 @@ R
 %s*synth2C
 /	Parameter sepclk bound to: 0 - type: integer 
 2default:default
-í
+ù
 synthesizing module '%s'638*oasys26
-"generic_syncram_2p__parameterized02default:default2â
-sC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/memory_inferred.vhd2default:default2
+"generic_syncram_2p__parameterized02default:default2î
+~C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/memory_inferred.vhd2default:default2
 1302default:default8@Z8-638
 Q
 %s*synth2B
@@ -10329,26 +10329,26 @@ R
 %s*synth2C
 /	Parameter sepclk bound to: 0 - type: integer 
 2default:default
-Œ
+Ÿ
 %done synthesizing module '%s' (%s#%s)256*oasys26
 "generic_syncram_2p__parameterized02default:default2
 582default:default2
-12default:default2â
-sC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/memory_inferred.vhd2default:default2
+12default:default2î
+~C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/memory_inferred.vhd2default:default2
 1302default:default8@Z8-256
-…
+‘
 %done synthesizing module '%s' (%s#%s)256*oasys25
 !unisim_syncram_2p__parameterized42default:default2
 582default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 5502default:default8@Z8-256
-º
+«
 %done synthesizing module '%s' (%s#%s)256*oasys2.
 syncram_2p__parameterized42default:default2
 582default:default2
-12default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+12default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 552default:default8@Z8-256
 Q
 %s*synth2B
@@ -10382,10 +10382,10 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ä
+ã
 synthesizing module '%s'638*oasys2.
-syncram_2p__parameterized62default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+syncram_2p__parameterized62default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 552default:default8@Z8-638
 Q
 %s*synth2B
@@ -10435,10 +10435,10 @@ Q
 %s*synth2B
 .	Parameter wrfst bound to: 0 - type: integer 
 2default:default
-ç
+ò
 synthesizing module '%s'638*oasys25
-!unisim_syncram_2p__parameterized62default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+!unisim_syncram_2p__parameterized62default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 5502default:default8@Z8-638
 Q
 %s*synth2B
@@ -10464,10 +10464,10 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 16 - type: integer 
 2default:default
-ç
+ò
 synthesizing module '%s'638*oasys25
-!unisim_syncram_dp__parameterized42default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+!unisim_syncram_dp__parameterized42default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2952default:default8@Z8-638
 Q
 %s*synth2B
@@ -10477,26 +10477,26 @@ R
 %s*synth2C
 /	Parameter dbits bound to: 16 - type: integer 
 2default:default
-…
+‘
 %done synthesizing module '%s' (%s#%s)256*oasys25
 !unisim_syncram_dp__parameterized42default:default2
 582default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 2952default:default8@Z8-256
-…
+‘
 %done synthesizing module '%s' (%s#%s)256*oasys25
 !unisim_syncram_2p__parameterized62default:default2
 582default:default2
-12default:default2Ö
-oC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
+12default:default2ê
+zC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/unisim/memory_unisim.vhd2default:default2
 5502default:default8@Z8-256
-º
+«
 %done synthesizing module '%s' (%s#%s)256*oasys2.
 syncram_2p__parameterized62default:default2
 582default:default2
-12default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+12default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 552default:default8@Z8-256
 Q
 %s*synth2B
@@ -10530,19 +10530,19 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-≤
+æ
 %done synthesizing module '%s' (%s#%s)256*oasys2)
 greth__parameterized02default:default2
 592default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/greth/greth.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/greth/greth.vhd2default:default2
 862default:default8@Z8-256
-¥
+¿
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 grethm__parameterized02default:default2
 602default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/greth/grethm.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/greth/grethm.vhd2default:default2
 852default:default8@Z8-256
 Q
 %s*synth2B
@@ -10616,10 +10616,10 @@ T
 %s*synth2E
 1	Parameter strength bound to: 0 - type: integer 
 2default:default
-˜
+É
 synthesizing module '%s'638*oasys2*
-inpadv__parameterized02default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/inpad.vhd2default:default2
+inpadv__parameterized02default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/inpad.vhd2default:default2
 1262default:default8@Z8-638
 Q
 %s*synth2B
@@ -10685,12 +10685,12 @@ T
 %s*synth2E
 1	Parameter strength bound to: 0 - type: integer 
 2default:default
-≥
+ø
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 inpadv__parameterized02default:default2
 612default:default2
-12default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/inpad.vhd2default:default2
+12default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/inpad.vhd2default:default2
 1262default:default8@Z8-256
 Q
 %s*synth2B
@@ -10756,10 +10756,10 @@ Q
 %s*synth2B
 .	Parameter width bound to: 2 - type: integer 
 2default:default
-˘
+Ö
 synthesizing module '%s'638*oasys2+
-outpadv__parameterized22default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+outpadv__parameterized22default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1352default:default8@Z8-638
 Q
 %s*synth2B
@@ -10825,12 +10825,12 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-µ
+¡
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 outpadv__parameterized22default:default2
 612default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1352default:default8@Z8-256
 Q
 %s*synth2B
@@ -10872,10 +10872,10 @@ U
 %s*synth2F
 2	Parameter strength bound to: 12 - type: integer 
 2default:default
-ı
+Ä
 synthesizing module '%s'638*oasys2
-ahbrom2default:default2â
-sC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/ahbrom.vhd2default:default2
+ahbrom2default:default2î
+~C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/ahbrom.vhd2default:default2
 342default:default8@Z8-638
 R
 %s*synth2C
@@ -10901,12 +10901,12 @@ R
 %s*synth2C
 /	Parameter kbytes bound to: 1 - type: integer 
 2default:default
-±
+º
 %done synthesizing module '%s' (%s#%s)256*oasys2
 ahbrom2default:default2
 622default:default2
-12default:default2â
-sC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/ahbrom.vhd2default:default2
+12default:default2î
+~C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/ahbrom.vhd2default:default2
 342default:default8@Z8-256
 S
 %s*synth2D
@@ -10936,10 +10936,10 @@ W
 %s*synth2H
 4	Parameter chunk_size bound to: 64 - type: integer 
 2default:default
-ˆ
+Ç
 synthesizing module '%s'638*oasys2.
-Buffer_apb__parameterized02default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
+Buffer_apb__parameterized02default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
 322default:default8@Z8-638
 S
 %s*synth2D
@@ -10969,19 +10969,19 @@ W
 %s*synth2H
 4	Parameter chunk_size bound to: 64 - type: integer 
 2default:default
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
 232default:default8@Z8-4472
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
 242default:default8@Z8-4472
 Q
 %s*synth2B
@@ -10995,10 +10995,10 @@ R
 %s*synth2C
 /	Parameter CHUNK bound to: 64 - type: integer 
 2default:default
-Ì
+¯
 synthesizing module '%s'638*oasys2(
-buff__parameterized02default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+buff__parameterized02default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 242default:default8@Z8-638
 Q
 %s*synth2B
@@ -11012,168 +11012,168 @@ R
 %s*synth2C
 /	Parameter CHUNK bound to: 64 - type: integer 
 2default:default
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 152default:default8@Z8-4472
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 162default:default8@Z8-4472
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 172default:default8@Z8-4472
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 182default:default8@Z8-4472
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 202default:default8@Z8-4472
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 272default:default8@Z8-4472
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 282default:default8@Z8-4472
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 292default:default8@Z8-4472
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 292default:default8@Z8-4472
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 302default:default8@Z8-4472
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 312default:default8@Z8-4472
-ç
+ò
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+true2default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 312default:default8@Z8-4472
-©
+¥
 %done synthesizing module '%s' (%s#%s)256*oasys2(
 buff__parameterized02default:default2
 632default:default2
-12default:default2t
-^C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
+12default:default2
+iC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/Buffer.vhd2default:default2
 242default:default8@Z8-256
-≤
+æ
 %done synthesizing module '%s' (%s#%s)256*oasys2.
 Buffer_apb__parameterized02default:default2
 642default:default2
-12default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
+12default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
 322default:default8@Z8-256
-›
+È
 synthesizing module '%s'638*oasys2
-ADC2default:default2u
-_C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
+ADC2default:default2Ä
+jC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
 412default:default8@Z8-638
-è
+õ
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2u
-_C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
+true2default:default2Ä
+jC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
 1162default:default8@Z8-4472
-è
+õ
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2u
-_C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
+true2default:default2Ä
+jC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
 1282default:default8@Z8-4472
-¶
+≤
 5synthesizing blackbox instance '%s' of component '%s'637*oasys2"
 XADC_component2default:default2
 
-xadc_wiz_02default:default2u
-_C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
+xadc_wiz_02default:default2Ä
+jC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
 1492default:default8@Z8-637
-Ì
+˘
 synthesizing module '%s'638*oasys2"
-fir_compiler_02default:default2z
-dc:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0_stub.v2default:default2
+fir_compiler_02default:default2Ö
+oc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0_stub.v2default:default2
 162default:default8@Z8-638
-„
+Ô
 synthesizing module '%s'638*oasys2
-eoc_ctrl2default:default2v
-`C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/eoc_ctrl.vhd2default:default2
+eoc_ctrl2default:default2Å
+kC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/eoc_ctrl.vhd2default:default2
 132default:default8@Z8-638
-ã
+ó
 Esignal '%s' is read in the process but is not in the sensitivity list614*oasys2
-eoc2default:default2v
-`C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/eoc_ctrl.vhd2default:default2
+eoc2default:default2Å
+kC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/eoc_ctrl.vhd2default:default2
 172default:default8@Z8-614
-ü
+´
 %done synthesizing module '%s' (%s#%s)256*oasys2
 eoc_ctrl2default:default2
 652default:default2
-12default:default2v
-`C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/eoc_ctrl.vhd2default:default2
+12default:default2Å
+kC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/eoc_ctrl.vhd2default:default2
 132default:default8@Z8-256
-ó
+£
 Esignal '%s' is read in the process but is not in the sensitivity list614*oasys2#
-fir_done_signal2default:default2u
-_C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
+fir_done_signal2default:default2Ä
+jC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
 2122default:default8@Z8-614
-ñ
+¢
 Esignal '%s' is read in the process but is not in the sensitivity list614*oasys2"
-eoc_out_signal2default:default2u
-_C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
+eoc_out_signal2default:default2Ä
+jC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
 2122default:default8@Z8-614
-ô
+•
 %done synthesizing module '%s' (%s#%s)256*oasys2
 ADC2default:default2
 662default:default2
-12default:default2u
-_C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
+12default:default2Ä
+jC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
 412default:default8@Z8-256
 S
 %s*synth2D
@@ -11199,10 +11199,10 @@ Y
 %s*synth2J
 6	Parameter buffer_size bound to: 256 - type: integer 
 2default:default
-˝
+â
 synthesizing module '%s'638*oasys22
-Buffer_apb_out__parameterized02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+Buffer_apb_out__parameterized02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 312default:default8@Z8-638
 S
 %s*synth2D
@@ -11228,19 +11228,19 @@ Y
 %s*synth2J
 6	Parameter buffer_size bound to: 256 - type: integer 
 2default:default
-ì
+ü
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+true2default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 232default:default8@Z8-4472
-ì
+ü
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+true2default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 242default:default8@Z8-4472
 Q
 %s*synth2B
@@ -11250,10 +11250,10 @@ T
 %s*synth2E
 1	Parameter LENGTH bound to: 256 - type: integer 
 2default:default
-Ù
+Ä
 synthesizing module '%s'638*oasys2,
-buff_out__parameterized02default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+buff_out__parameterized02default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 222default:default8@Z8-638
 Q
 %s*synth2B
@@ -11263,89 +11263,89 @@ T
 %s*synth2E
 1	Parameter LENGTH bound to: 256 - type: integer 
 2default:default
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 142default:default8@Z8-4472
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 152default:default8@Z8-4472
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 162default:default8@Z8-4472
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 172default:default8@Z8-4472
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 252default:default8@Z8-4472
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 262default:default8@Z8-4472
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 272default:default8@Z8-4472
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 272default:default8@Z8-4472
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 282default:default8@Z8-4472
-ê
+ú
 &Detected and applied attribute %s = %s3620*oasys2
 
 mark_debug2default:default2
-true2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+true2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 282default:default8@Z8-4472
-∞
+º
 %done synthesizing module '%s' (%s#%s)256*oasys2,
 buff_out__parameterized02default:default2
 672default:default2
-12default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
+12default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferOut.vhd2default:default2
 222default:default8@Z8-256
-π
+≈
 %done synthesizing module '%s' (%s#%s)256*oasys22
 Buffer_apb_out__parameterized02default:default2
 682default:default2
-12default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+12default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 312default:default8@Z8-256
 R
 %s*synth2C
@@ -11355,10 +11355,10 @@ U
 %s*synth2F
 2	Parameter accuracy bound to: 10 - type: integer 
 2default:default
-È
+Ù
 synthesizing module '%s'638*oasys2'
-PWM__parameterized02default:default2q
-[C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/PWM.vhd2default:default2
+PWM__parameterized02default:default2|
+fC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/PWM.vhd2default:default2
 172default:default8@Z8-638
 R
 %s*synth2C
@@ -11368,17 +11368,17 @@ U
 %s*synth2F
 2	Parameter accuracy bound to: 10 - type: integer 
 2default:default
-â
+î
 Esignal '%s' is read in the process but is not in the sensitivity list614*oasys2
-sample2default:default2q
-[C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/PWM.vhd2default:default2
+sample2default:default2|
+fC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/PWM.vhd2default:default2
 262default:default8@Z8-614
-•
+∞
 %done synthesizing module '%s' (%s#%s)256*oasys2'
 PWM__parameterized02default:default2
 692default:default2
-12default:default2q
-[C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/PWM.vhd2default:default2
+12default:default2|
+fC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/PWM.vhd2default:default2
 172default:default8@Z8-256
 R
 %s*synth2C
@@ -11428,10 +11428,10 @@ R
 %s*synth2C
 /	Parameter irqgen bound to: 1 - type: integer 
 2default:default
-˜
+É
 synthesizing module '%s'638*oasys2*
-grgpio__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+grgpio__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 652default:default8@Z8-638
 R
 %s*synth2C
@@ -11481,26 +11481,26 @@ R
 %s*synth2C
 /	Parameter irqgen bound to: 1 - type: integer 
 2default:default
-Ÿ
+Â
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2
 r_reg[ilat]2default:default2
 322default:default2
-162default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+162default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 3352default:default8@Z8-3936
-€
+Á
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2!
 rin_reg[ilat]2default:default2
 322default:default2
-162default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+162default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 3062default:default8@Z8-3936
-≥
+ø
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 grgpio__parameterized02default:default2
 702default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 652default:default8@Z8-256
 Q
 %s*synth2B
@@ -12446,10 +12446,10 @@ R
 %s*synth2C
 /	Parameter irqgen bound to: 1 - type: integer 
 2default:default
-˜
+É
 synthesizing module '%s'638*oasys2*
-grgpio__parameterized22default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+grgpio__parameterized22default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 652default:default8@Z8-638
 S
 %s*synth2D
@@ -12499,26 +12499,26 @@ R
 %s*synth2C
 /	Parameter irqgen bound to: 1 - type: integer 
 2default:default
-Ÿ
+Â
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2
 r_reg[ilat]2default:default2
 322default:default2
-262default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+262default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 3352default:default8@Z8-3936
-€
+Á
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2!
 rin_reg[ilat]2default:default2
 322default:default2
-262default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+262default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 3062default:default8@Z8-3936
-≥
+ø
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 grgpio__parameterized22default:default2
 702default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 652default:default8@Z8-256
 Q
 %s*synth2B
@@ -13464,10 +13464,10 @@ R
 %s*synth2C
 /	Parameter irqgen bound to: 0 - type: integer 
 2default:default
-˜
+É
 synthesizing module '%s'638*oasys2*
-grgpio__parameterized42default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+grgpio__parameterized42default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 652default:default8@Z8-638
 S
 %s*synth2D
@@ -13517,12 +13517,12 @@ R
 %s*synth2C
 /	Parameter irqgen bound to: 0 - type: integer 
 2default:default
-≥
+ø
 %done synthesizing module '%s' (%s#%s)256*oasys2*
 grgpio__parameterized42default:default2
 702default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 652default:default8@Z8-256
 Q
 %s*synth2B
@@ -14072,10 +14072,10 @@ R
 %s*synth2C
 /	Parameter ignore bound to: 0 - type: integer 
 2default:default
-¯
+Ñ
 synthesizing module '%s'638*oasys2+
-spictrl__parameterized02default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrl.vhd2default:default2
+spictrl__parameterized02default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrl.vhd2default:default2
 912default:default8@Z8-638
 S
 %s*synth2D
@@ -14261,10 +14261,10 @@ R
 %s*synth2C
 /	Parameter ignore bound to: 0 - type: integer 
 2default:default
-˚
+á
 synthesizing module '%s'638*oasys2,
-spictrlx__parameterized02default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+spictrlx__parameterized02default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 1082default:default8@Z8-638
 O
 %s*synth2@
@@ -14382,10 +14382,10 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-Ä
+ã
 synthesizing module '%s'638*oasys2.
-syncram_2p__parameterized82default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+syncram_2p__parameterized82default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 552default:default8@Z8-638
 P
 %s*synth2A
@@ -14431,10 +14431,10 @@ R
 %s*synth2C
 /	Parameter sepclk bound to: 0 - type: integer 
 2default:default
-í
+ù
 synthesizing module '%s'638*oasys26
-"generic_syncram_2p__parameterized22default:default2â
-sC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/memory_inferred.vhd2default:default2
+"generic_syncram_2p__parameterized22default:default2î
+~C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/memory_inferred.vhd2default:default2
 1302default:default8@Z8-638
 Q
 %s*synth2B
@@ -14448,19 +14448,19 @@ R
 %s*synth2C
 /	Parameter sepclk bound to: 0 - type: integer 
 2default:default
-Œ
+Ÿ
 %done synthesizing module '%s' (%s#%s)256*oasys26
 "generic_syncram_2p__parameterized22default:default2
 702default:default2
-12default:default2â
-sC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/memory_inferred.vhd2default:default2
+12default:default2î
+~C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/memory_inferred.vhd2default:default2
 1302default:default8@Z8-256
-º
+«
 %done synthesizing module '%s' (%s#%s)256*oasys2.
 syncram_2p__parameterized82default:default2
 702default:default2
-12default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+12default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 552default:default8@Z8-256
 P
 %s*synth2A
@@ -14494,25 +14494,25 @@ V
 %s*synth2G
 3	Parameter custombits bound to: 1 - type: integer 
 2default:default
-ß
+≥
 merging register '%s' into '%s'3619*oasys2'
 r_reg[spiolb][mosi]2default:default2%
-r_reg[spio][mosi]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+r_reg[spio][mosi]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 20082default:default8@Z8-4471
-∑
+√
 %done synthesizing module '%s' (%s#%s)256*oasys2,
 spictrlx__parameterized02default:default2
 712default:default2
-12default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+12default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 1082default:default8@Z8-256
-¥
+¿
 %done synthesizing module '%s' (%s#%s)256*oasys2+
 spictrl__parameterized02default:default2
 722default:default2
-12default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrl.vhd2default:default2
+12default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrl.vhd2default:default2
 912default:default8@Z8-256
 Q
 %s*synth2B
@@ -14866,12 +14866,12 @@ c
 12default:default2K
 5C:/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 263382default:default8@Z8-256
-¥
+ø
 %done synthesizing module '%s' (%s#%s)256*oasys2
 leon3mp2default:default2
 732default:default2
-12default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+12default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 1762default:default8@Z8-256
 î
 +design %s has port %s driven by constant %s3447*oasys2
@@ -14898,7 +14898,7 @@ tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/desi
 chunk_ready_port2default:defaultZ8-3331
 ú
 %s*synth2å
-xFinished RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 566.102 ; gain = 419.902
+xFinished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 568.355 ; gain = 419.789
 2default:default
 ;
 %s*synth2,
@@ -14925,705 +14925,705 @@ l
 %s*synth2]
 I+------+------------------+-------+---------+-------+------------------+
 2default:default
-ã
+ó
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_02default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-ã
+ó
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_12default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-ã
+ó
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_22default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-ã
+ó
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_32default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-ã
+ó
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_42default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-ã
+ó
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_52default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-ã
+ó
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_62default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-ã
+ó
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_72default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-ã
+ó
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_82default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-ã
+ó
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_92default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_102default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_112default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_122default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_132default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_142default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_152default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_162default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_172default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_182default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_192default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_202default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_212default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_222default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_232default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_242default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_252default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_262default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_272default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_282default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_292default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_302default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-å
+ò
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 i_312default:default2
-I02default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+I02default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 112default:default8@Z8-3295
-¨
+∑
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 clkgen02default:default2!
-\cgi[pllref] 2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\cgi[pllref] 2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 4432default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 clkgen02default:default2$
-\cgi[clksel] [1]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\cgi[clksel] [1]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 4432default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 clkgen02default:default2$
-\cgi[clksel] [0]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\cgi[clksel] [0]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 4432default:default8@Z8-3295
-Æ
+π
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 spictrl02default:default2"
-\spii[astart] 2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\spii[astart] 2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 8862default:default8@Z8-3295
-Æ
+π
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 spictrl02default:default2"
-\spii[cstart] 2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\spii[cstart] 2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 8862default:default8@Z8-3295
-Æ
+π
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 spictrl02default:default2"
-\spii[ignore] 2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\spii[ignore] 2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 8862default:default8@Z8-3295
-±
+º
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2$
-\memi[data] [15]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [15]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-±
+º
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2$
-\memi[data] [14]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [14]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-±
+º
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2$
-\memi[data] [13]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [13]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-±
+º
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2$
-\memi[data] [12]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [12]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-±
+º
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2$
-\memi[data] [11]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [11]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-±
+º
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2$
-\memi[data] [10]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [10]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-∞
+ª
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2#
-\memi[data] [9]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [9]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-∞
+ª
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2#
-\memi[data] [8]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [8]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-∞
+ª
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2#
-\memi[data] [7]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [7]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-∞
+ª
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2#
-\memi[data] [6]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [6]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-∞
+ª
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2#
-\memi[data] [5]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [5]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-∞
+ª
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2#
-\memi[data] [4]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [4]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-∞
+ª
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2#
-\memi[data] [3]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [3]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-∞
+ª
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2#
-\memi[data] [2]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [2]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-∞
+ª
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2#
-\memi[data] [1]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [1]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-∞
+ª
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2#
-\memi[data] [0]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[data] [0]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [63]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [63]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [62]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [62]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [61]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [61]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [60]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [60]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [59]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [59]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [58]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [58]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [57]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [57]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [56]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [56]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [55]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [55]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [54]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [54]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [53]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [53]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [52]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [52]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [51]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [51]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [50]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [50]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [49]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [49]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [48]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [48]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [47]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [47]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [46]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [46]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [45]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [45]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [44]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [44]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [43]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [43]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [42]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [42]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [41]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [41]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [40]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [40]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [39]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [39]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [38]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [38]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [37]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [37]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [36]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [36]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [35]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [35]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [34]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [34]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [33]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [33]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [32]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [32]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [31]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [31]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [30]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [30]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [29]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [29]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [28]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [28]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [27]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [27]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [26]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [26]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [25]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [25]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [24]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [24]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [23]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [23]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [22]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [22]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [21]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [21]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [20]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [20]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [19]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [19]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
-Ø
+∫
 'tying undriven pin %s:%s to constant 0
 3295*oasys2
 	\mg2.sr1 2default:default2"
-\memi[sd] [18]2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+\memi[sd] [18]2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5162default:default8@Z8-3295
 ‘
 ÅMessage '%s' appears more than %s times and has been disabled. User can change this message limit to see more message instances.
@@ -15666,905 +15666,905 @@ BC:/Xilinx/Vivado/2013.4/data\./parts/xilinx/artix7/IOStandards.xml2default:de
 +Loading device configuration modes from %s
 14*device2T
 @C:/Xilinx/Vivado/2013.4/data\parts/xilinx/artix7/ConfigModes.xml2default:defaultZ21-14
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5482default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 1712default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5512default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 6992default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 8892default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 8922default:default8@Z18-548
-©
+µ
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
+Vivado2default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/iopad.vhd2default:default2
 662default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 8952default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-´
+∑
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 1382default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5342default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5362default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5382default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5402default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5422default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
-∫
+≈
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2ä
-tC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
+Vivado2default:default2ï
+C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/designs/leon3-digilent-nexys4/leon3mp.vhd2default:default2
 5442default:default8@Z18-548
-™
+∂
 jCould not create '%s' constraint because %s. '%s' is ignored by %s but preserved for implementation tool.
 526*constraints2
 slew2default:default24
  invalid SLEW value '0' specified2default:default2
 slew2default:default2
-Vivado2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
+Vivado2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/outpad.vhd2default:default2
 512default:default8@Z18-548
 ⁄
 ÅMessage '%s' appears more than %s times and has been disabled. User can change this message limit to see more message instances.
@@ -16575,30 +16575,30 @@ fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/
 
 Processing XDC Constraints
 244*projectZ1-262
-Ø
+ª
 Parsing XDC File [%s]
-179*designutils2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc2default:defaultZ20-179
-∏
+179*designutils2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc2default:defaultZ20-179
+ƒ
 Finished Parsing XDC File [%s]
-178*designutils2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc2default:defaultZ20-178
+178*designutils2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc2default:defaultZ20-178
 /
 Deriving generated clocks
 2*timingZ38-2
-ÿ
+Ô
 ŸImplementation specific constraints were found while reading constraint file [%s]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [%s].
-233*project2y
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc2default:default2h
-TC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/synth_1/.Xil/leon3mp_propImpl.xdc2default:defaultZ1-236
-î
+233*project2Ñ
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc2default:default2s
+_C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/synth_1/.Xil/leon3mp_propImpl.xdc2default:defaultZ1-236
+ü
 Parsing XDC File [%s]
-179*designutils2^
-JC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/synth_1/dont_buffer.xdc2default:defaultZ20-179
-ù
+179*designutils2i
+UC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/synth_1/dont_buffer.xdc2default:defaultZ20-179
+®
 Finished Parsing XDC File [%s]
-178*designutils2^
-JC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/synth_1/dont_buffer.xdc2default:defaultZ20-178
+178*designutils2i
+UC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/synth_1/dont_buffer.xdc2default:defaultZ20-178
 ?
 &Completed Processing XDC Constraints
 
@@ -16618,126 +16618,126 @@ MSuccessfully populated the BRAM INIT strings from the following elf files: %s
 2default:defaultZ1-111
 µ
 %s*synth2•
-êFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:17 . Memory (MB): peak = 855.313 ; gain = 709.113
+êFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 858.723 ; gain = 710.156
 2default:default
 ù
 %s*synth2ç
-yFinished RTL Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:17 . Memory (MB): peak = 855.313 ; gain = 709.113
+yFinished RTL Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 858.723 ; gain = 710.156
 2default:default
-ÿ
+‰
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2 
 r_reg[haddr]2default:default2
 142default:default2
-92default:default2{
-eC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/ahbctrl.vhd2default:default2
+92default:default2Ü
+pC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/grlib/amba/ahbctrl.vhd2default:default2
 6982default:default8@Z8-3936
-£
+Ø
 merging register '%s' into '%s'3619*oasys2%
 r_reg[mode][amen]2default:default2#
-r_reg[mode][tw]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+r_reg[mode][tw]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 20082default:default8@Z8-4471
-£
+Ø
 merging register '%s' into '%s'3619*oasys2%
 r_reg[mode][asel]2default:default2#
-r_reg[mode][tw]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+r_reg[mode][tw]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 20082default:default8@Z8-4471
-°
+≠
 merging register '%s' into '%s'3619*oasys2#
 r_reg[mode][od]2default:default2#
-r_reg[mode][tw]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+r_reg[mode][tw]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 20082default:default8@Z8-4471
-¢
+Æ
 merging register '%s' into '%s'3619*oasys2$
 r_reg[mode][tac]2default:default2#
-r_reg[mode][tw]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+r_reg[mode][tw]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 20082default:default8@Z8-4471
-¢
+Æ
 merging register '%s' into '%s'3619*oasys2$
 r_reg[mode][tto]2default:default2#
-r_reg[mode][tw]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+r_reg[mode][tw]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 20082default:default8@Z8-4471
-¢
+Æ
 merging register '%s' into '%s'3619*oasys2$
 r_reg[event][at]2default:default2#
-r_reg[mode][tw]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+r_reg[mode][tw]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 20082default:default8@Z8-4471
-°
+≠
 merging register '%s' into '%s'3619*oasys2#
 r_reg[mask][at]2default:default2#
-r_reg[mode][tw]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+r_reg[mode][tw]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 20082default:default8@Z8-4471
-•
+±
 merging register '%s' into '%s'3619*oasys2%
 r_reg[spio][miso]2default:default2%
-r_reg[spio][mosi]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+r_reg[spio][mosi]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 20082default:default8@Z8-4471
-•
+±
 merging register '%s' into '%s'3619*oasys2'
 r_reg[spio][astart]2default:default2#
-r_reg[mode][tw]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+r_reg[mode][tw]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 20082default:default8@Z8-4471
-•
+±
 merging register '%s' into '%s'3619*oasys2'
 r_reg[spio][aready]2default:default2#
-r_reg[mode][tw]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+r_reg[mode][tw]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 20082default:default8@Z8-4471
-–
+‹
 }HDL ADVISOR - The operator resource <%s> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator3413*oasys2
-adder2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
+adder2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 12912default:default8@Z8-3537
-≠
+π
 L'%s' operator could not be merged with '%s' operator due to loss of accuracy41*oasys2
 +2default:default2
-+2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
++2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 9702default:default8@Z8-41
-≠
+π
 L'%s' operator could not be merged with '%s' operator due to loss of accuracy41*oasys2
 +2default:default2
-+2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
++2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 9362default:default8@Z8-41
-≠
+π
 L'%s' operator could not be merged with '%s' operator due to loss of accuracy41*oasys2
 +2default:default2
-+2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
++2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 9702default:default8@Z8-41
-≠
+π
 L'%s' operator could not be merged with '%s' operator due to loss of accuracy41*oasys2
 +2default:default2
-+2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
++2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spictrlx.vhd2default:default2
 9362default:default8@Z8-41
-ﬂ
+Î
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2#
 r_reg[readdata]2default:default2
 322default:default2
-162default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
+162default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/esa/memoryctrl/mctrl.vhd2default:default2
 10032default:default8@Z8-3936
-¢
+Æ
 merging register '%s' into '%s'3619*oasys2&
 r_reg[sd][timeout]2default:default2!
-r_reg[sd][cd]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spimctrl.vhd2default:default2
+r_reg[sd][cd]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spimctrl.vhd2default:default2
 10392default:default8@Z8-4471
-¨
+∏
 merging register '%s' into '%s'3619*oasys2)
 r_reg[spio][cdcsnoen]2default:default2(
-r_reg[spio][mosioen]2default:default2}
-gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spimctrl.vhd2default:default2
+r_reg[spio][mosioen]2default:default2à
+rC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/spi/spimctrl.vhd2default:default2
 10392default:default8@Z8-4471
 û
 3inferred FSM for state register '%s' in module '%s'802*oasys2$
@@ -16747,10 +16747,10 @@ gC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/
 3inferred FSM for state register '%s' in module '%s'802*oasys2"
 r_reg[rxstate]2default:default2+
 apbuart__parameterized02default:defaultZ8-802
-Ã
+ÿ
 }HDL ADVISOR - The operator resource <%s> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator3413*oasys2
-adder2default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_tx.vhd2default:default2
+adder2default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/greth_tx.vhd2default:default2
 2672default:default8@Z8-3537
 û
 3inferred FSM for state register '%s' in module '%s'802*oasys2$
@@ -16764,15 +16764,15 @@ dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/
 3inferred FSM for state register '%s' in module '%s'802*oasys2#
 r_reg[rx_state]2default:default2,
 greth_rx__parameterized02default:defaultZ8-802
- 
+÷
 }HDL ADVISOR - The operator resource <%s> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator3413*oasys2
-adder2default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+adder2default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 8262default:default8@Z8-3537
-À
+◊
 }HDL ADVISOR - The operator resource <%s> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator3413*oasys2
-adder2default:default2x
-bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
+adder2default:default2É
+mC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/eth/core/grethc.vhd2default:default2
 15392default:default8@Z8-3537
 õ
 3inferred FSM for state register '%s' in module '%s'802*oasys2#
@@ -16794,116 +16794,116 @@ bC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/
 3inferred FSM for state register '%s' in module '%s'802*oasys2%
 r_reg[edclrstate]2default:default2*
 grethc__parameterized02default:defaultZ8-802
-û
+™
 merging register '%s' into '%s'3619*oasys2!
 r_reg[e][mac]2default:default2#
-r_reg[w][s][ec]2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+r_reg[w][s][ec]2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 33602default:default8@Z8-4471
-†
+¨
 merging register '%s' into '%s'3619*oasys2#
 r_reg[w][s][ef]2default:default2#
-r_reg[w][s][ec]2default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
+r_reg[w][s][ec]2default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/iu3.vhd2default:default2
 33602default:default8@Z8-4471
-Ø
+∫
 merging register '%s' into '%s'3619*oasys2(
 r_reg[cctrl][dsnoop]2default:default2%
-r_reg[mmctrl1][e]2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+r_reg[mmctrl1][e]2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 16192default:default8@Z8-4471
-≠
+∏
 merging register '%s' into '%s'3619*oasys2&
 r_reg[mmctrl1][nf]2default:default2%
-r_reg[mmctrl1][e]2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+r_reg[mmctrl1][e]2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 16192default:default8@Z8-4471
-Æ
+π
 merging register '%s' into '%s'3619*oasys2'
 r_reg[mmctrl1][pso]2default:default2%
-r_reg[mmctrl1][e]2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+r_reg[mmctrl1][e]2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 16192default:default8@Z8-4471
-±
+º
 merging register '%s' into '%s'3619*oasys2*
 r_reg[mmctrl1][tlbdis]2default:default2%
-r_reg[mmctrl1][e]2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+r_reg[mmctrl1][e]2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 16192default:default8@Z8-4471
-ø
+ 
 merging register '%s' into '%s'3619*oasys2,
 r_reg[mmctrl1][bar][1:0]2default:default21
-r_reg[mmctrl1][pagesize][1:0]2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+r_reg[mmctrl1][pagesize][1:0]2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 16192default:default8@Z8-4471
-ß
+≤
 merging register '%s' into '%s'3619*oasys2%
 r_reg[mmctrl1][e]2default:default2 
-r_reg[reqst]2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+r_reg[reqst]2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 16192default:default8@Z8-4471
-ü
+™
 merging register '%s' into '%s'3619*oasys2
 r_reg[lock]2default:default2
 
-r_reg[lrr]2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+r_reg[lrr]2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 16192default:default8@Z8-4471
-™
+µ
 merging register '%s' into '%s'3619*oasys2$
 r_reg[dadj][1:0]2default:default2$
-r_reg[tadj][1:0]2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+r_reg[tadj][1:0]2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 16192default:default8@Z8-4471
-™
+µ
 merging register '%s' into '%s'3619*oasys2$
 r_reg[sadj][1:0]2default:default2$
-r_reg[tadj][1:0]2default:default2É
-mC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
+r_reg[tadj][1:0]2default:default2é
+xC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/leon3v3/mmu_dcache.vhd2default:default2
 16192default:default8@Z8-4471
 ù
 3inferred FSM for state register '%s' in module '%s'802*oasys2!
 r_reg[dstate]2default:default2.
 mmu_dcache__parameterized02default:defaultZ8-802
-ﬁ
+È
 }HDL ADVISOR - The operator resource <%s> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator3413*oasys2
 
-multiplier2default:default2Ü
-pC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/mul_inferred.vhd2default:default2
+multiplier2default:default2ë
+{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/inferred/mul_inferred.vhd2default:default2
 1042default:default8@Z8-3537
 á
 3inferred FSM for state register '%s' in module '%s'802*oasys2 
 r_reg[state]2default:default2
 div322default:defaultZ8-802
-ı
+Å
 !inferring latch for variable '%s'327*oasys2$
-apbo_reg[prdata]2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
+apbo_reg[prdata]2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
 892default:default8@Z8-327
-É
+è
 !inferring latch for variable '%s'327*oasys22
-apb_signals_reg[output_select]2default:default2w
-aC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
+apb_signals_reg[output_select]2default:default2Ç
+lC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApb.vhd2default:default2
 822default:default8@Z8-327
-Ò
+˝
 !inferring latch for variable '%s'327*oasys2!
-DI_signal_reg2default:default2u
-_C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
+DI_signal_reg2default:default2Ä
+jC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
 1512default:default8@Z8-327
-Ú
+˛
 !inferring latch for variable '%s'327*oasys2"
-DWE_signal_reg2default:default2u
-_C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
+DWE_signal_reg2default:default2Ä
+jC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/TopXADC.vhd2default:default2
 1542default:default8@Z8-327
-Ç
+é
 !inferring latch for variable '%s'327*oasys2.
-apb_signals_reg[input_irq]2default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+apb_signals_reg[input_irq]2default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 802default:default8@Z8-327
-Ö
+ë
 !inferring latch for variable '%s'327*oasys21
-apb_signals_reg[input_sample]2default:default2z
-dC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
+apb_signals_reg[input_sample]2default:default2Ö
+oC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/LEON3_softcore/BufferApbOut.vhd2default:default2
 802default:default8@Z8-327
 —
 Gencoded FSM with state register '%s' using encoding '%s' in module '%s'3353*oasys2$
@@ -17016,7 +17016,7 @@ a
 2default:default
 a
 %s*synth2R
->|9     |leon3mp__GCB5               |           1|      2925|
+>|9     |leon3mp__GCB5               |           1|      2923|
 2default:default
 a
 %s*synth2R
@@ -17030,7 +17030,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 2default:default
 ±
 %s*synth2°
-åFinished Loading Part and Timing Information : Time (s): cpu = 00:01:53 ; elapsed = 00:02:09 . Memory (MB): peak = 855.313 ; gain = 709.113
+åFinished Loading Part and Timing Information : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 858.723 ; gain = 710.156
 2default:default
 B
 %s*synth23
@@ -17090,15 +17090,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   3 Input      8 Bit       Adders := 1     
+2default:default
+Q
+%s*synth2B
 .	   4 Input      8 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input      8 Bit       Adders := 6     
-2default:default
-Q
-%s*synth2B
-.	   3 Input      8 Bit       Adders := 1     
 2default:default
 Q
 %s*synth2B
@@ -17266,11 +17266,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input     65 Bit        Muxes := 1     
+.	   2 Input     65 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     65 Bit        Muxes := 3     
+.	   6 Input     65 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17278,11 +17278,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     48 Bit        Muxes := 3     
+.	  13 Input     48 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	  13 Input     48 Bit        Muxes := 2     
+.	   2 Input     48 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -17302,47 +17302,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  16 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  19 Input     32 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	   2 Input     32 Bit        Muxes := 168   
-2default:default
-Q
-%s*synth2B
-.	  10 Input     32 Bit        Muxes := 5     
-2default:default
-Q
-%s*synth2B
-.	  18 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  13 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   8 Input     32 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	   4 Input     32 Bit        Muxes := 21    
-2default:default
-Q
-%s*synth2B
 .	 142 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   7 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  15 Input     32 Bit        Muxes := 1     
+.	  16 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17350,7 +17314,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input     32 Bit        Muxes := 9     
+.	   4 Input     32 Bit        Muxes := 21    
 2default:default
 Q
 %s*synth2B
@@ -17358,7 +17322,23 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   9 Input     32 Bit        Muxes := 3     
+.	   7 Input     32 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input     32 Bit        Muxes := 168   
+2default:default
+Q
+%s*synth2B
+.	   8 Input     32 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	  19 Input     32 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   3 Input     32 Bit        Muxes := 9     
 2default:default
 Q
 %s*synth2B
@@ -17366,15 +17346,23 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     30 Bit        Muxes := 21    
+.	  15 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   4 Input     30 Bit        Muxes := 3     
+.	   9 Input     32 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	   3 Input     30 Bit        Muxes := 2     
+.	  13 Input     32 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  18 Input     32 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  10 Input     32 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -17382,7 +17370,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   3 Input     30 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
 .	   7 Input     30 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   4 Input     30 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
+.	   2 Input     30 Bit        Muxes := 21    
 2default:default
 Q
 %s*synth2B
@@ -17418,10 +17418,6 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     16 Bit        Muxes := 37    
-2default:default
-Q
-%s*synth2B
 .	   6 Input     16 Bit        Muxes := 4     
 2default:default
 Q
@@ -17430,15 +17426,11 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   2 Input     16 Bit        Muxes := 37    
+2default:default
+Q
+%s*synth2B
 .	  15 Input     16 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input     15 Bit        Muxes := 17    
-2default:default
-Q
-%s*synth2B
-.	  10 Input     15 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17446,7 +17438,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	  10 Input     15 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	  14 Input     15 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input     15 Bit        Muxes := 17    
 2default:default
 Q
 %s*synth2B
@@ -17470,19 +17470,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     11 Bit        Muxes := 11    
-2default:default
-Q
-%s*synth2B
-.	   8 Input     11 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	  19 Input     11 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   7 Input     11 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17490,7 +17478,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   2 Input     11 Bit        Muxes := 11    
+2default:default
+Q
+%s*synth2B
 .	  16 Input     11 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input     11 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   8 Input     11 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17498,11 +17498,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   9 Input     10 Bit        Muxes := 1     
+.	   2 Input     10 Bit        Muxes := 42    
 2default:default
 Q
 %s*synth2B
-.	   4 Input     10 Bit        Muxes := 1     
+.	   9 Input     10 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17514,7 +17514,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     10 Bit        Muxes := 42    
+.	   4 Input     10 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17522,7 +17522,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   4 Input      8 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
 .	   2 Input      8 Bit        Muxes := 58    
+2default:default
+Q
+%s*synth2B
+.	   3 Input      8 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17530,15 +17538,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	 142 Input      8 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   4 Input      8 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
 .	   8 Input      8 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
+.	 142 Input      8 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17546,7 +17550,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      8 Bit        Muxes := 1     
+.	   6 Input      7 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      7 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      7 Bit        Muxes := 23    
 2default:default
 Q
 %s*synth2B
@@ -17558,11 +17570,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  15 Input      7 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   7 Input      7 Bit        Muxes := 2     
+.	  16 Input      7 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -17570,15 +17578,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input      7 Bit        Muxes := 2     
+.	  15 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      7 Bit        Muxes := 23    
+.	   2 Input      6 Bit        Muxes := 43    
 2default:default
 Q
 %s*synth2B
-.	  16 Input      7 Bit        Muxes := 2     
+.	   9 Input      6 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   5 Input      6 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -17594,19 +17606,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   5 Input      6 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
-.	   9 Input      6 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      6 Bit        Muxes := 43    
-2default:default
-Q
-%s*synth2B
-.	  19 Input      5 Bit        Muxes := 1     
+.	   4 Input      5 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
@@ -17614,15 +17614,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      5 Bit        Muxes := 40    
-2default:default
-Q
-%s*synth2B
-.	   4 Input      5 Bit        Muxes := 4     
-2default:default
-Q
-%s*synth2B
-.	   6 Input      5 Bit        Muxes := 5     
+.	  19 Input      5 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17630,27 +17622,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   9 Input      4 Bit        Muxes := 2     
+.	   2 Input      5 Bit        Muxes := 40    
 2default:default
 Q
 %s*synth2B
-.	   2 Input      4 Bit        Muxes := 136   
-2default:default
-Q
-%s*synth2B
-.	   3 Input      4 Bit        Muxes := 6     
-2default:default
-Q
-%s*synth2B
-.	   6 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   4 Input      4 Bit        Muxes := 4     
-2default:default
-Q
-%s*synth2B
-.	  13 Input      4 Bit        Muxes := 1     
+.	   6 Input      5 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -17658,11 +17634,23 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   2 Input      4 Bit        Muxes := 136   
+2default:default
+Q
+%s*synth2B
 .	  15 Input      4 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	  16 Input      4 Bit        Muxes := 2     
+.	   4 Input      4 Bit        Muxes := 4     
+2default:default
+Q
+%s*synth2B
+.	   9 Input      4 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	  13 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17670,11 +17658,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   5 Input      3 Bit        Muxes := 2     
+.	   3 Input      4 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
-.	  15 Input      3 Bit        Muxes := 1     
+.	  16 Input      4 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   6 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17682,7 +17674,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      3 Bit        Muxes := 1     
+.	   7 Input      3 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
@@ -17690,19 +17682,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 55    
-2default:default
-Q
-%s*synth2B
-.	   7 Input      3 Bit        Muxes := 4     
-2default:default
-Q
-%s*synth2B
-.	  19 Input      3 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   8 Input      3 Bit        Muxes := 4     
+2default:default
+Q
+%s*synth2B
+.	  15 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17710,7 +17694,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   3 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	  16 Input      3 Bit        Muxes := 5     
+2default:default
+Q
+%s*synth2B
+.	   5 Input      3 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      3 Bit        Muxes := 55    
 2default:default
 Q
 %s*synth2B
@@ -17718,27 +17714,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      2 Bit        Muxes := 10    
-2default:default
-Q
-%s*synth2B
-.	  11 Input      2 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  19 Input      2 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  10 Input      2 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
-.	   6 Input      2 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	  16 Input      2 Bit        Muxes := 5     
+.	  19 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -17746,15 +17722,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      2 Bit        Muxes := 5     
-2default:default
-Q
-%s*synth2B
-.	   9 Input      2 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   8 Input      2 Bit        Muxes := 5     
+2default:default
+Q
+%s*synth2B
+.	   3 Input      2 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -17762,51 +17734,35 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   9 Input      1 Bit        Muxes := 29    
+.	  16 Input      2 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
-.	  15 Input      1 Bit        Muxes := 19    
+.	  19 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      1 Bit        Muxes := 32    
+.	   6 Input      2 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	  13 Input      1 Bit        Muxes := 33    
+.	   9 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 2909  
+.	  11 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	  11 Input      1 Bit        Muxes := 22    
+.	  10 Input      2 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
-.	  14 Input      1 Bit        Muxes := 29    
-2default:default
-Q
-%s*synth2B
-.	   3 Input      1 Bit        Muxes := 111   
+.	   4 Input      2 Bit        Muxes := 10    
 2default:default
 Q
 %s*synth2B
 .	   6 Input      1 Bit        Muxes := 111   
-2default:default
-Q
-%s*synth2B
-.	   8 Input      1 Bit        Muxes := 89    
-2default:default
-Q
-%s*synth2B
-.	  10 Input      1 Bit        Muxes := 105   
-2default:default
-Q
-%s*synth2B
-.	  19 Input      1 Bit        Muxes := 9     
 2default:default
 Q
 %s*synth2B
@@ -17819,6 +17775,50 @@ Q
 Q
 %s*synth2B
 .	  16 Input      1 Bit        Muxes := 39    
+2default:default
+Q
+%s*synth2B
+.	   8 Input      1 Bit        Muxes := 89    
+2default:default
+Q
+%s*synth2B
+.	  11 Input      1 Bit        Muxes := 22    
+2default:default
+Q
+%s*synth2B
+.	   3 Input      1 Bit        Muxes := 111   
+2default:default
+Q
+%s*synth2B
+.	  14 Input      1 Bit        Muxes := 29    
+2default:default
+Q
+%s*synth2B
+.	  10 Input      1 Bit        Muxes := 105   
+2default:default
+Q
+%s*synth2B
+.	  19 Input      1 Bit        Muxes := 9     
+2default:default
+Q
+%s*synth2B
+.	  15 Input      1 Bit        Muxes := 19    
+2default:default
+Q
+%s*synth2B
+.	   5 Input      1 Bit        Muxes := 32    
+2default:default
+Q
+%s*synth2B
+.	   9 Input      1 Bit        Muxes := 29    
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 2909  
+2default:default
+Q
+%s*synth2B
+.	  13 Input      1 Bit        Muxes := 33    
 2default:default
 F
 %s*synth27
@@ -17966,11 +17966,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input     30 Bit        Muxes := 2     
+.	   2 Input     30 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     30 Bit        Muxes := 8     
+.	   4 Input     30 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -17994,11 +17994,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 531   
+.	   4 Input      1 Bit        Muxes := 15    
 2default:default
 Q
 %s*synth2B
-.	   4 Input      1 Bit        Muxes := 15    
+.	   2 Input      1 Bit        Muxes := 531   
 2default:default
 F
 %s*synth27
@@ -18058,15 +18058,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input     32 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
 .	   3 Input     32 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   4 Input     32 Bit        Muxes := 3     
+.	  10 Input     32 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
+.	   2 Input     32 Bit        Muxes := 22    
 2default:default
 Q
 %s*synth2B
@@ -18074,7 +18074,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     32 Bit        Muxes := 22    
+.	   4 Input     32 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -18086,7 +18086,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     10 Bit        Muxes := 9     
+.	   6 Input     10 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -18094,7 +18094,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input     10 Bit        Muxes := 1     
+.	   2 Input     10 Bit        Muxes := 9     
 2default:default
 Q
 %s*synth2B
@@ -18110,19 +18110,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      2 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      2 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 524   
-2default:default
-Q
-%s*synth2B
-.	   7 Input      1 Bit        Muxes := 13    
+.	  10 Input      2 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -18130,7 +18122,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input      1 Bit        Muxes := 13    
+2default:default
+Q
+%s*synth2B
 .	  14 Input      1 Bit        Muxes := 29    
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 524   
 2default:default
 F
 %s*synth27
@@ -18182,10 +18182,6 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      2 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      2 Bit        Muxes := 35    
 2default:default
 Q
@@ -18194,7 +18190,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 143   
+.	   3 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -18203,6 +18199,10 @@ Q
 Q
 %s*synth2B
 .	   4 Input      1 Bit        Muxes := 8     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 143   
 2default:default
 E
 %s*synth26
@@ -18326,11 +18326,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input     32 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	   2 Input     32 Bit        Muxes := 39    
+.	   3 Input     32 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -18338,11 +18334,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   6 Input     32 Bit        Muxes := 2     
+2default:default
+Q
+%s*synth2B
 .	  19 Input     32 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   3 Input     32 Bit        Muxes := 2     
+.	   2 Input     32 Bit        Muxes := 39    
+2default:default
+Q
+%s*synth2B
+.	   2 Input     30 Bit        Muxes := 12    
 2default:default
 Q
 %s*synth2B
@@ -18351,10 +18355,6 @@ Q
 Q
 %s*synth2B
 .	   4 Input     30 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input     30 Bit        Muxes := 12    
 2default:default
 Q
 %s*synth2B
@@ -18374,19 +18374,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      8 Bit        Muxes := 19    
-2default:default
-Q
-%s*synth2B
-.	   3 Input      8 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   8 Input      8 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
+.	   2 Input      8 Bit        Muxes := 19    
+2default:default
+Q
+%s*synth2B
 .	   4 Input      8 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   3 Input      8 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -18406,11 +18406,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      5 Bit        Muxes := 3     
+.	  19 Input      5 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	  19 Input      5 Bit        Muxes := 1     
+.	   4 Input      5 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -18422,23 +18422,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      4 Bit        Muxes := 15    
 2default:default
 Q
 %s*synth2B
-.	  10 Input      3 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   3 Input      3 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   8 Input      3 Bit        Muxes := 1     
+.	   6 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -18450,7 +18438,19 @@ Q
 2default:default
 Q
 %s*synth2B
+.	  10 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	  19 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   8 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   3 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -18458,11 +18458,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  19 Input      2 Bit        Muxes := 1     
+.	   4 Input      2 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
-.	   5 Input      2 Bit        Muxes := 2     
+.	  19 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -18470,7 +18470,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      2 Bit        Muxes := 6     
+.	   5 Input      2 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -18478,31 +18478,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  19 Input      1 Bit        Muxes := 9     
-2default:default
-Q
-%s*synth2B
 .	  16 Input      1 Bit        Muxes := 2     
-2default:default
-Q
-%s*synth2B
-.	  13 Input      1 Bit        Muxes := 4     
-2default:default
-Q
-%s*synth2B
-.	   4 Input      1 Bit        Muxes := 113   
-2default:default
-Q
-%s*synth2B
-.	   8 Input      1 Bit        Muxes := 39    
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 182   
-2default:default
-Q
-%s*synth2B
-.	   6 Input      1 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -18510,7 +18486,23 @@ Q
 2default:default
 Q
 %s*synth2B
+.	  13 Input      1 Bit        Muxes := 4     
+2default:default
+Q
+%s*synth2B
 .	   7 Input      1 Bit        Muxes := 8     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 182   
+2default:default
+Q
+%s*synth2B
+.	  19 Input      1 Bit        Muxes := 9     
+2default:default
+Q
+%s*synth2B
+.	   4 Input      1 Bit        Muxes := 113   
 2default:default
 Q
 %s*synth2B
@@ -18519,6 +18511,14 @@ Q
 Q
 %s*synth2B
 .	  10 Input      1 Bit        Muxes := 14    
+2default:default
+Q
+%s*synth2B
+.	   8 Input      1 Bit        Muxes := 39    
+2default:default
+Q
+%s*synth2B
+.	   6 Input      1 Bit        Muxes := 1     
 2default:default
 I
 %s*synth2:
@@ -19330,15 +19330,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      7 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
 .	   6 Input      7 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	  16 Input      4 Bit        Muxes := 1     
+.	   2 Input      7 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -19347,6 +19343,10 @@ Q
 Q
 %s*synth2B
 .	   3 Input      4 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  16 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19362,19 +19362,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  16 Input      1 Bit        Muxes := 22    
-2default:default
-Q
-%s*synth2B
-.	   6 Input      1 Bit        Muxes := 4     
-2default:default
-Q
-%s*synth2B
 .	   2 Input      1 Bit        Muxes := 30    
 2default:default
 Q
 %s*synth2B
+.	  16 Input      1 Bit        Muxes := 22    
+2default:default
+Q
+%s*synth2B
 .	   8 Input      1 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   6 Input      1 Bit        Muxes := 4     
 2default:default
 I
 %s*synth2:
@@ -19478,11 +19478,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     11 Bit        Muxes := 2     
+.	   9 Input     11 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   9 Input     11 Bit        Muxes := 1     
+.	   2 Input     11 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -19494,15 +19494,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   2 Input      4 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
 .	   9 Input      4 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
 .	  10 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   2 Input      4 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -19514,11 +19514,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 15    
+.	   9 Input      1 Bit        Muxes := 17    
 2default:default
 Q
 %s*synth2B
-.	   9 Input      1 Bit        Muxes := 17    
+.	   2 Input      1 Bit        Muxes := 15    
 2default:default
 B
 %s*synth23
@@ -19662,11 +19662,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  13 Input     48 Bit        Muxes := 2     
+.	   2 Input     48 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     48 Bit        Muxes := 2     
+.	  13 Input     48 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -19674,11 +19674,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  18 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   7 Input     32 Bit        Muxes := 1     
+.	  13 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19686,11 +19682,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     32 Bit        Muxes := 4     
-2default:default
-Q
-%s*synth2B
-.	   9 Input     32 Bit        Muxes := 1     
+.	  18 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19698,7 +19690,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  13 Input     32 Bit        Muxes := 1     
+.	   9 Input     32 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19706,11 +19702,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   7 Input     30 Bit        Muxes := 1     
+.	   2 Input     32 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     30 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input     30 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19734,7 +19734,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input     15 Bit        Muxes := 12    
+.	  14 Input     15 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19742,7 +19742,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  14 Input     15 Bit        Muxes := 1     
+.	   2 Input     15 Bit        Muxes := 12    
 2default:default
 Q
 %s*synth2B
@@ -19755,10 +19755,6 @@ Q
 Q
 %s*synth2B
 .	   2 Input     13 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   8 Input     11 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19778,6 +19774,10 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   8 Input     11 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	   2 Input     10 Bit        Muxes := 1     
 2default:default
 Q
@@ -19786,15 +19786,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      8 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   8 Input      8 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   7 Input      7 Bit        Muxes := 2     
+.	  10 Input      8 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  10 Input      7 Bit        Muxes := 6     
 2default:default
 Q
 %s*synth2B
@@ -19806,11 +19806,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      7 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  10 Input      7 Bit        Muxes := 6     
+.	   7 Input      7 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -19818,7 +19814,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   5 Input      6 Bit        Muxes := 2     
+.	   8 Input      7 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   6 Input      6 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19826,7 +19826,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input      6 Bit        Muxes := 1     
+.	   5 Input      6 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -19846,15 +19846,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      4 Bit        Muxes := 7     
-2default:default
-Q
-%s*synth2B
-.	  15 Input      4 Bit        Muxes := 3     
-2default:default
-Q
-%s*synth2B
 .	  16 Input      4 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  10 Input      4 Bit        Muxes := 7     
 2default:default
 Q
 %s*synth2B
@@ -19862,15 +19858,11 @@ Q
 2default:default
 Q
 %s*synth2B
+.	  15 Input      4 Bit        Muxes := 3     
+2default:default
+Q
+%s*synth2B
 .	  13 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	  10 Input      3 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   7 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19878,7 +19870,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   2 Input      3 Bit        Muxes := 17    
+2default:default
+Q
+%s*synth2B
 .	   9 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  10 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19886,11 +19886,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   7 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
 .	   6 Input      3 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 17    
+.	  10 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19898,7 +19902,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      2 Bit        Muxes := 1     
+.	   8 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -19910,15 +19914,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      2 Bit        Muxes := 1     
+.	  16 Input      1 Bit        Muxes := 15    
 2default:default
 Q
 %s*synth2B
-.	  13 Input      1 Bit        Muxes := 29    
-2default:default
-Q
-%s*synth2B
-.	   2 Input      1 Bit        Muxes := 153   
+.	  15 Input      1 Bit        Muxes := 19    
 2default:default
 Q
 %s*synth2B
@@ -19934,23 +19934,23 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  10 Input      1 Bit        Muxes := 36    
+.	   2 Input      1 Bit        Muxes := 153   
 2default:default
 Q
 %s*synth2B
-.	  16 Input      1 Bit        Muxes := 15    
-2default:default
-Q
-%s*synth2B
-.	  15 Input      1 Bit        Muxes := 19    
-2default:default
-Q
-%s*synth2B
-.	   3 Input      1 Bit        Muxes := 8     
+.	  13 Input      1 Bit        Muxes := 29    
 2default:default
 Q
 %s*synth2B
 .	   5 Input      1 Bit        Muxes := 10    
+2default:default
+Q
+%s*synth2B
+.	  10 Input      1 Bit        Muxes := 36    
+2default:default
+Q
+%s*synth2B
+.	   3 Input      1 Bit        Muxes := 8     
 2default:default
 M
 %s*synth2>
@@ -20194,15 +20194,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  11 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   4 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     32 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	  11 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20226,15 +20226,15 @@ Q
 2default:default
 Q
 %s*synth2B
+.	   6 Input      1 Bit        Muxes := 25    
+2default:default
+Q
+%s*synth2B
 .	   2 Input      1 Bit        Muxes := 51    
 2default:default
 Q
 %s*synth2B
 .	  11 Input      1 Bit        Muxes := 21    
-2default:default
-Q
-%s*synth2B
-.	   6 Input      1 Bit        Muxes := 25    
 2default:default
 @
 %s*synth21
@@ -20662,7 +20662,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	  14 Input     32 Bit        Muxes := 1     
+.	   6 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20670,7 +20670,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input     32 Bit        Muxes := 1     
+.	  14 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20694,11 +20694,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 216   
-2default:default
-Q
-%s*synth2B
-.	   5 Input      1 Bit        Muxes := 1     
+.	   6 Input      1 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -20710,7 +20706,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input      1 Bit        Muxes := 3     
+.	   2 Input      1 Bit        Muxes := 216   
+2default:default
+Q
+%s*synth2B
+.	   5 Input      1 Bit        Muxes := 1     
 2default:default
 C
 %s*synth24
@@ -20802,19 +20802,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input     12 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   2 Input     12 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      8 Bit        Muxes := 5     
+.	   6 Input     12 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      6 Bit        Muxes := 2     
+.	   2 Input      8 Bit        Muxes := 5     
 2default:default
 Q
 %s*synth2B
@@ -20826,15 +20822,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   7 Input      3 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
-.	   6 Input      3 Bit        Muxes := 1     
+.	   2 Input      6 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -20842,7 +20830,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      2 Bit        Muxes := 1     
+.	   6 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   7 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      2 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -20850,7 +20850,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      2 Bit        Muxes := 2     
+.	   4 Input      2 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   4 Input      1 Bit        Muxes := 9     
 2default:default
 Q
 %s*synth2B
@@ -20859,10 +20863,6 @@ Q
 Q
 %s*synth2B
 .	   6 Input      1 Bit        Muxes := 31    
-2default:default
-Q
-%s*synth2B
-.	   4 Input      1 Bit        Muxes := 9     
 2default:default
 A
 %s*synth22
@@ -20918,15 +20918,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input     32 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   4 Input     32 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
 .	   2 Input     32 Bit        Muxes := 27    
+2default:default
+Q
+%s*synth2B
+.	   8 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -20946,19 +20946,19 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   4 Input      4 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   3 Input      4 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 7     
+.	   4 Input      4 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   8 Input      3 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   2 Input      3 Bit        Muxes := 7     
 2default:default
 Q
 %s*synth2B
@@ -20970,7 +20970,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      1 Bit        Muxes := 13    
+.	   3 Input      1 Bit        Muxes := 2     
 2default:default
 Q
 %s*synth2B
@@ -20978,7 +20978,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      1 Bit        Muxes := 2     
+.	   8 Input      1 Bit        Muxes := 13    
 2default:default
 A
 %s*synth22
@@ -21246,11 +21246,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input     32 Bit        Muxes := 1     
+.	   2 Input     32 Bit        Muxes := 8     
 2default:default
 Q
 %s*synth2B
-.	   2 Input     32 Bit        Muxes := 8     
+.	   3 Input     32 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -21294,11 +21294,11 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   8 Input      2 Bit        Muxes := 1     
+.	   2 Input      2 Bit        Muxes := 4     
 2default:default
 Q
 %s*synth2B
-.	   2 Input      2 Bit        Muxes := 4     
+.	   8 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -21310,15 +21310,15 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   3 Input      1 Bit        Muxes := 63    
-2default:default
-Q
-%s*synth2B
 .	   4 Input      1 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
 .	   8 Input      1 Bit        Muxes := 1     
+2default:default
+Q
+%s*synth2B
+.	   3 Input      1 Bit        Muxes := 63    
 2default:default
 2
 %s*synth2#
@@ -21430,10 +21430,6 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   6 Input      5 Bit        Muxes := 1     
-2default:default
-Q
-%s*synth2B
 .	   4 Input      5 Bit        Muxes := 1     
 2default:default
 Q
@@ -21442,7 +21438,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      3 Bit        Muxes := 3     
+.	   6 Input      5 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -21450,7 +21446,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   5 Input      2 Bit        Muxes := 1     
+.	   2 Input      3 Bit        Muxes := 3     
 2default:default
 Q
 %s*synth2B
@@ -21458,11 +21454,7 @@ Q
 2default:default
 Q
 %s*synth2B
-.	   2 Input      1 Bit        Muxes := 81    
-2default:default
-Q
-%s*synth2B
-.	   5 Input      1 Bit        Muxes := 20    
+.	   5 Input      2 Bit        Muxes := 1     
 2default:default
 Q
 %s*synth2B
@@ -21472,23 +21464,31 @@ Q
 %s*synth2B
 .	   4 Input      1 Bit        Muxes := 20    
 2default:default
-í
+Q
+%s*synth2B
+.	   2 Input      1 Bit        Muxes := 81    
+2default:default
+Q
+%s*synth2B
+.	   5 Input      1 Bit        Muxes := 20    
+2default:default
+ù
 merging register '%s' into '%s'3619*oasys2Z
 Fs1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_reg[waddr][7:0]2default:default2Z
-Fs1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_reg[waddr][7:0]2default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+Fs1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_reg[waddr][7:0]2default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 1252default:default8@Z8-4471
-à
+ì
 merging register '%s' into '%s'3619*oasys2U
 As1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_reg[write]2default:default2U
-As1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_reg[write]2default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+As1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_reg[write]2default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 1252default:default8@Z8-4471
-ñ
+°
 merging register '%s' into '%s'3619*oasys2\
 Hs1.dp.x1/wrfst_gen.no_contention_check.wfrstblocknoc.r_reg[datain][31:0]2default:default2\
-Hs1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_reg[datain][31:0]2default:default2Ä
-jC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
+Hs1.dp.x0/wrfst_gen.no_contention_check.wfrstblocknoc.r_reg[datain][31:0]2default:default2ã
+uC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/techmap/maps/syncram_2p.vhd2default:default2
 1252default:default8@Z8-4471
 µ
 ESequential element (%s) is unused and will be removed from module %s.3332*oasys2%
@@ -21951,33 +21951,33 @@ ESequential element (%s) is unused and will be removed from module %s.3332*
 14*common2 
 Synth 8-33322default:default2
 1002default:defaultZ17-14
-Ÿ
+Â
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2
 r_reg[edge]2default:default2
 322default:default2
-162default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+162default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 3352default:default8@Z8-3936
-⁄
+Ê
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2 
 r_reg[level]2default:default2
 322default:default2
-162default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+162default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 3352default:default8@Z8-3936
-Ÿ
+Â
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2
 r_reg[edge]2default:default2
 322default:default2
-262default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+262default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 3352default:default8@Z8-3936
-⁄
+Ê
 RFound unconnected internal register '%s' and it is trimmed from '%s' to '%s' bits.3455*oasys2 
 r_reg[level]2default:default2
 322default:default2
-262default:default2|
-fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
+262default:default2á
+qC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/gaisler/misc/grgpio.vhd2default:default2
 3352default:default8@Z8-3936
 î
 +design %s has port %s driven by constant %s3447*oasys2
@@ -22004,7 +22004,7 @@ fC:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/sources_1/imports/GRLIB/lib/
 chunk_ready_port2default:defaultZ8-3331
 ©
 %s*synth2ô
-ÑFinished Cross Boundary Optimization : Time (s): cpu = 00:02:13 ; elapsed = 00:02:30 . Memory (MB): peak = 855.313 ; gain = 709.113
+ÑFinished Cross Boundary Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 858.723 ; gain = 710.156
 2default:default
 ¢
 %s*synth2í
@@ -22242,19 +22242,19 @@ Mi_4/\eth0.e1/m100.u0/ethc0 /\tx_rmii1.tx0 /\FSM_onehot_r_reg[main_state][15] 2
 *i_8/\spimc.spimctrl0/r_reg[spi][hsize][2] 2default:defaultZ8-3333
 †
 %s*synth2ê
-|Finished Area Optimization : Time (s): cpu = 00:06:31 ; elapsed = 00:07:01 . Memory (MB): peak = 1303.297 ; gain = 1157.098
+|Finished Area Optimization : Time (s): cpu = 00:03:53 ; elapsed = 00:04:04 . Memory (MB): peak = 1304.082 ; gain = 1155.516
 2default:default
 Ø
 %s*synth2ü
-äFinished Applying XDC Timing Constraints : Time (s): cpu = 00:06:39 ; elapsed = 00:07:09 . Memory (MB): peak = 1303.297 ; gain = 1157.098
+äFinished Applying XDC Timing Constraints : Time (s): cpu = 00:03:57 ; elapsed = 00:04:08 . Memory (MB): peak = 1304.082 ; gain = 1155.516
 2default:default
 ¢
 %s*synth2í
-~Finished Timing Optimization : Time (s): cpu = 00:06:45 ; elapsed = 00:07:16 . Memory (MB): peak = 1303.297 ; gain = 1157.098
+~Finished Timing Optimization : Time (s): cpu = 00:04:00 ; elapsed = 00:04:11 . Memory (MB): peak = 1304.082 ; gain = 1155.516
 2default:default
 °
 %s*synth2ë
-}Finished Technology Mapping : Time (s): cpu = 00:08:13 ; elapsed = 00:08:49 . Memory (MB): peak = 1403.848 ; gain = 1257.648
+}Finished Technology Mapping : Time (s): cpu = 00:04:46 ; elapsed = 00:04:59 . Memory (MB): peak = 1404.461 ; gain = 1255.895
 2default:default
 D
 %s*synth25
@@ -22262,7 +22262,7 @@ D
 2default:default
 õ
 %s*synth2ã
-wFinished IO Insertion : Time (s): cpu = 00:08:16 ; elapsed = 00:08:52 . Memory (MB): peak = 1403.848 ; gain = 1257.648
+wFinished IO Insertion : Time (s): cpu = 00:04:47 ; elapsed = 00:05:01 . Memory (MB): peak = 1404.461 ; gain = 1255.895
 2default:default
 ;
 %s*synth2,
@@ -22291,11 +22291,11 @@ I+------+------------------+-------+---------+-------+------------------+
 2default:default
 ¨
 %s*synth2ú
-áFinished Renaming Generated Instances : Time (s): cpu = 00:08:17 ; elapsed = 00:08:52 . Memory (MB): peak = 1403.848 ; gain = 1257.648
+áFinished Renaming Generated Instances : Time (s): cpu = 00:04:48 ; elapsed = 00:05:01 . Memory (MB): peak = 1404.461 ; gain = 1255.895
 2default:default
 ©
 %s*synth2ô
-ÑFinished Rebuilding User Hierarchy : Time (s): cpu = 00:08:23 ; elapsed = 00:08:58 . Memory (MB): peak = 1403.848 ; gain = 1257.648
+ÑFinished Rebuilding User Hierarchy : Time (s): cpu = 00:04:51 ; elapsed = 00:05:04 . Memory (MB): peak = 1404.461 ; gain = 1255.895
 2default:default
 ¢
 %s*synth2í
@@ -22421,27 +22421,27 @@ H
 2default:default
 H
 %s*synth29
-%|8     |LUT2                |   877|
+%|8     |LUT2                |   885|
 2default:default
 H
 %s*synth29
-%|9     |LUT3                |  1352|
+%|9     |LUT3                |  1364|
 2default:default
 H
 %s*synth29
-%|10    |LUT4                |  1608|
+%|10    |LUT4                |  1611|
 2default:default
 H
 %s*synth29
-%|11    |LUT5                |  3269|
+%|11    |LUT5                |  3262|
 2default:default
 H
 %s*synth29
-%|12    |LUT6                |  8566|
+%|12    |LUT6                |  8556|
 2default:default
 H
 %s*synth29
-%|13    |MUXF7               |  1115|
+%|13    |MUXF7               |  1114|
 2default:default
 H
 %s*synth29
@@ -22493,11 +22493,11 @@ H
 2default:default
 H
 %s*synth29
-%|26    |FDRE                |  5186|
+%|26    |FDRE                |  5178|
 2default:default
 H
 %s*synth29
-%|27    |FDSE                |   137|
+%|27    |FDSE                |   145|
 2default:default
 H
 %s*synth29
@@ -22546,7 +22546,7 @@ b+------+-----------------------------------------+-----------------------------
 2default:default
 Ö
 %s*synth2v
-b|1     |top                                      |                                       | 31176|
+b|1     |top                                      |                                       | 31181|
 2default:default
 Ö
 %s*synth2v
@@ -23254,7 +23254,7 @@ b|177   |    \xcv.x0                              |unisim_iopad__parameterized0_
 2default:default
 Ö
 %s*synth2v
-b|178   |  \spimc.spimctrl0                       |spimctrl__parameterized0               |   401|
+b|178   |  \spimc.spimctrl0                       |spimctrl__parameterized0               |   392|
 2default:default
 Ö
 %s*synth2v
@@ -23526,7 +23526,7 @@ b|245   |    \xcv.x0                              |unisim_iopad__parameterized0_
 2default:default
 Ö
 %s*synth2v
-b|246   |  \bpromgen.brom                         |ahbrom                                 |   180|
+b|246   |  \bpromgen.brom                         |ahbrom                                 |   194|
 2default:default
 Ö
 %s*synth2v
@@ -24070,7 +24070,7 @@ b+------+-----------------------------------------+-----------------------------
 2default:default
 ®
 %s*synth2ò
-ÉFinished Writing Synthesis Report : Time (s): cpu = 00:08:25 ; elapsed = 00:09:01 . Memory (MB): peak = 1403.848 ; gain = 1257.648
+ÉFinished Writing Synthesis Report : Time (s): cpu = 00:04:52 ; elapsed = 00:05:05 . Memory (MB): peak = 1404.461 ; gain = 1255.895
 2default:default
 l
 %s*synth2]
@@ -24078,7 +24078,7 @@ ISynthesis finished with 0 errors, 0 critical warnings and 2249 warnings.
 2default:default
 ¶
 %s*synth2ñ
-ÅSynthesis Optimization Complete : Time (s): cpu = 00:08:25 ; elapsed = 00:09:01 . Memory (MB): peak = 1403.848 ; gain = 1257.648
+ÅSynthesis Optimization Complete : Time (s): cpu = 00:04:52 ; elapsed = 00:05:06 . Memory (MB): peak = 1404.461 ; gain = 1255.895
 2default:default
 ^
 -Analyzing %s Unisim elements for replacement
@@ -24133,26 +24133,18 @@ U
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2"
 synth_design: 2default:default2
-00:08:512default:default2
-00:09:242default:default2
-1403.8482default:default2
-1219.0352default:defaultZ17-268
+00:05:062default:default2
+00:05:182default:default2
+1405.2582default:default2
+1218.0822default:defaultZ17-268
 <
 %Done setting XDC timing constraints.
 35*timingZ38-35
-ˇ
-I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
-268*common2&
-write_checkpoint: 2default:default2
-00:00:042default:default2
-00:00:072default:default2
-1406.1172default:default2
-2.2702default:defaultZ17-268
 Ä
-treport_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.827 . Memory (MB): peak = 1406.117 ; gain = 0.000
+treport_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.203 . Memory (MB): peak = 1414.184 ; gain = 0.000
 *common
 w
 Exiting %s at %s...
 206*common2
 Vivado2default:default2,
-Fri May 09 22:19:58 20142default:defaultZ17-206
+Mon May 12 12:12:16 20142default:defaultZ17-206

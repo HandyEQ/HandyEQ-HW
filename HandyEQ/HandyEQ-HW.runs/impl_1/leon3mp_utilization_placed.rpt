@@ -1,8 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date         : Fri May 09 22:24:02 2014
-| Host         : XDAT26 running 64-bit Service Pack 1  (build 7601)
+| Date         : Mon May 12 12:14:17 2014
+| Host         : CSE-4225-14 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file leon3mp_utilization_placed.rpt -pb leon3mp_utilization_placed.pb
 | Design       : leon3mp
 | Device       : xc7a100t
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Loced | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs                 | 14917 |     0 |     63400 | 23.52 |
-|   LUT as Logic             | 14820 |     0 |     63400 | 23.37 |
-|   LUT as Memory            |    97 |     0 |     19000 |  0.51 |
+| Slice LUTs                 | 14915 |     0 |     63400 | 23.52 |
+|   LUT as Logic             | 14817 |     0 |     63400 | 23.37 |
+|   LUT as Memory            |    98 |     0 |     19000 |  0.51 |
 |     LUT as Distributed RAM |    72 |     0 |           |       |
-|     LUT as Shift Register  |    25 |     0 |           |       |
+|     LUT as Shift Register  |    26 |     0 |           |       |
 | Slice Registers            | 12566 |     0 |    126800 |  9.91 |
 |   Register as Flip Flop    | 12521 |     0 |    126800 |  9.87 |
 |   Register as Latch        |    45 |     0 |    126800 |  0.03 |
-| F7 Muxes                   |  1132 |     0 |     31700 |  3.57 |
+| F7 Muxes                   |  1131 |     0 |     31700 |  3.56 |
 | F8 Muxes                   |   451 |     0 |     15850 |  2.84 |
 +----------------------------+-------+-------+-----------+-------+
 
@@ -49,24 +49,24 @@ Table of Contents
 +-------------------------------------------------------------+------------+-------+-----------+-------+
 |                          Site Type                          |    Used    | Loced | Available | Util% |
 +-------------------------------------------------------------+------------+-------+-----------+-------+
-| Slice                                                       |       6534 |     0 |     15850 | 41.22 |
-| LUT as Logic                                                |      14820 |     0 |     63400 | 23.37 |
+| Slice                                                       |       6264 |     0 |     15850 | 39.52 |
+| LUT as Logic                                                |      14817 |     0 |     63400 | 23.37 |
 |   using O5 output only                                      |          0 |       |           |       |
-|   using O6 output only                                      |      13159 |       |           |       |
-|   using O5 and O6                                           |       1661 |       |           |       |
-| LUT as Memory                                               |         97 |     0 |     19000 |  0.51 |
+|   using O6 output only                                      |      13147 |       |           |       |
+|   using O5 and O6                                           |       1670 |       |           |       |
+| LUT as Memory                                               |         98 |     0 |     19000 |  0.51 |
 |   LUT as Distributed RAM                                    |         72 |     0 |           |       |
 |     using O5 output only                                    |          0 |       |           |       |
 |     using O6 output only                                    |          0 |       |           |       |
 |     using O5 and O6                                         |         72 |       |           |       |
-|   LUT as Shift Register                                     |         25 |     0 |           |       |
+|   LUT as Shift Register                                     |         26 |     0 |           |       |
 |     using O5 output only                                    |          3 |       |           |       |
-|     using O6 output only                                    |         10 |       |           |       |
-|     using O5 and O6                                         |         12 |       |           |       |
-| LUT Flip Flop Pairs                                         |      20325 |     0 |     63400 | 32.05 |
-|   fully used LUT-FF pairs                                   |       6095 |       |           |       |
-|   LUT-FF pairs with unused LUT                              |       5411 |       |           |       |
-|   LUT-FF pairs with unused Flip Flop                        |       8819 |       |           |       |
+|     using O6 output only                                    |         12 |       |           |       |
+|     using O5 and O6                                         |         11 |       |           |       |
+| LUT Flip Flop Pairs                                         |      20024 |     0 |     63400 | 31.58 |
+|   fully used LUT-FF pairs                                   |       6157 |       |           |       |
+|   LUT-FF pairs with unused LUT                              |       5112 |       |           |       |
+|   LUT-FF pairs with unused Flip Flop                        |       8755 |       |           |       |
 | Unique Control Sets                                         |        719 |       |           |       |
 | Minimum number of registers lost to control set restriction | 2114(Lost) |       |           |       |
 +-------------------------------------------------------------+------------+-------+-----------+-------+
@@ -164,18 +164,18 @@ Table of Contents
 +-----------+------+
 |  Ref Name | Used |
 +-----------+------+
-| LUT6      | 8597 |
+| LUT6      | 8587 |
 | FDCE      | 6951 |
-| FDRE      | 5325 |
-| LUT5      | 3279 |
-| LUT4      | 1611 |
-| LUT3      | 1354 |
-| MUXF7     | 1132 |
-| LUT2      |  868 |
+| FDRE      | 5317 |
+| LUT5      | 3272 |
+| LUT4      | 1614 |
+| LUT3      | 1366 |
+| MUXF7     | 1131 |
+| LUT2      |  876 |
 | LUT1      |  772 |
 | MUXF8     |  451 |
 | CARRY4    |  301 |
-| FDSE      |  142 |
+| FDSE      |  150 |
 | IBUF      |  111 |
 | RAMD32    |  108 |
 | FDPE      |  103 |

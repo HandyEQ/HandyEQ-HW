@@ -32,7 +32,7 @@ package config is
   constant CFG_MAC : integer := 0;
   constant CFG_BP : integer := 1;
   constant CFG_SVT : integer := 1;
-  constant CFG_RSTADDR : integer := 16#00000#;
+  constant CFG_RSTADDR : integer := 16#00b40#; -- Use the mapped address from SPIM instead
   constant CFG_LDDEL : integer := (1);
   constant CFG_NOTAG : integer := 1;
   constant CFG_NWP : integer := (0);
@@ -182,7 +182,7 @@ package config is
 -- SPI memory controller
   constant CFG_SPIMCTRL : integer := 1;
   constant CFG_SPIMCTRL_SDCARD : integer := 0;
-  constant CFG_SPIMCTRL_READCMD : integer := 16#0B#;
+  constant CFG_SPIMCTRL_READCMD : integer := 16#03#;
   constant CFG_SPIMCTRL_DUMMYBYTE : integer := 0;
   constant CFG_SPIMCTRL_DUALOUTPUT : integer := 0;
   constant CFG_SPIMCTRL_SCALER : integer := (1);

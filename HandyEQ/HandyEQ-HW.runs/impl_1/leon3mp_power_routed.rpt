@@ -1,8 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date             : Fri May 09 22:27:19 2014
-| Host             : XDAT26 running 64-bit Service Pack 1  (build 7601)
+| Date             : Mon May 12 12:15:53 2014
+| Host             : CSE-4225-14 running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file leon3mp_power_routed.rpt -pb leon3mp_power_summary_routed.pb
 | Design           : leon3mp
 | Device           : xc7a100tcsg324-2
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.413 |
-| Dynamic (W)              | 0.314 |
+| Total On-Chip Power (W)  | 0.409 |
+| Dynamic (W)              | 0.311 |
 | Device Static (W)        | 0.098 |
 | Total Off-Chip Power (W) | 0.000 |
 | Effective TJA (C/W)      | 4.6   |
@@ -51,22 +51,22 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.024 |       11 |       --- |             --- |
-| Slice Logic              |     0.019 |    31295 |       --- |             --- |
-|   LUT as Logic           |     0.018 |    14820 |     63400 |           23.37 |
+| Slice Logic              |     0.018 |    31300 |       --- |             --- |
+|   LUT as Logic           |     0.017 |    14817 |     63400 |           23.37 |
 |   Register               |    <0.001 |    12566 |    126800 |            9.91 |
 |   CARRY4                 |    <0.001 |      301 |     15850 |            1.89 |
-|   F7/F8 Muxes            |    <0.001 |     1583 |     63400 |            2.49 |
-|   LUT as Shift Register  |    <0.001 |       25 |     19000 |            0.13 |
+|   F7/F8 Muxes            |    <0.001 |     1582 |     63400 |            2.49 |
+|   LUT as Shift Register  |    <0.001 |       26 |     19000 |            0.13 |
 |   LUT as Distributed RAM |    <0.001 |       72 |     19000 |            0.37 |
 |   Others                 |     0.000 |      183 |       --- |             --- |
-| Signals                  |     0.027 |    25152 |       --- |             --- |
+| Signals                  |     0.026 |    25159 |       --- |             --- |
 | Block RAM                |     0.014 |       19 |       135 |           14.07 |
 | PLL                      |     0.196 |        2 |         6 |           33.33 |
 | DSPs                     |     0.002 |        5 |       240 |            2.08 |
-| I/O                      |     0.031 |      158 |       210 |           75.23 |
+| I/O                      |     0.029 |      158 |       210 |           75.23 |
 | XADC                     |    <0.001 |        1 |       --- |             --- |
 | Static Power             |     0.098 |          |           |                 |
-| Total                    |     0.413 |          |           |                 |
+| Total                    |     0.409 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,9 +76,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.116 |       0.100 |      0.016 |
+| Vccint    |       1.000 |     0.114 |       0.098 |      0.016 |
 | Vccaux    |       1.800 |     0.120 |       0.102 |      0.018 |
-| Vcco33    |       3.300 |     0.013 |       0.009 |      0.004 |
+| Vcco33    |       3.300 |     0.012 |       0.008 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -155,11 +155,11 @@ Table of Contents
 +-------------------------------------------------------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                                                                            | Power (W) |
 +-------------------------------------------------------------------------------------------------------------------------------------------------+-----------+
-| leon3mp                                                                                                                                         |     0.314 |
-|   Buffer_apb_map                                                                                                                                |     0.013 |
-|     circular_buffer_comp                                                                                                                        |     0.013 |
-|   Buffer_apb_out_map                                                                                                                            |     0.009 |
-|     circular_buffer_comp                                                                                                                        |     0.009 |
+| leon3mp                                                                                                                                         |     0.311 |
+|   Buffer_apb_map                                                                                                                                |     0.011 |
+|     circular_buffer_comp                                                                                                                        |     0.011 |
+|   Buffer_apb_out_map                                                                                                                            |     0.008 |
+|     circular_buffer_comp                                                                                                                        |     0.008 |
 |   PWM_module                                                                                                                                    |     0.001 |
 |   XADC_component                                                                                                                                |     0.003 |
 |     FIRFilter                                                                                                                                   |     0.002 |
@@ -518,8 +518,8 @@ Table of Contents
 |       ttl0.slow0.op                                                                                                                             |    <0.001 |
 |   gpt.timer0                                                                                                                                    |    <0.001 |
 |   irqctrl.irqctrl0                                                                                                                              |    <0.001 |
-|   leon3gen.cpu[0].u0                                                                                                                            |     0.039 |
-|     leon3x0                                                                                                                                     |     0.039 |
+|   leon3gen.cpu[0].u0                                                                                                                            |     0.040 |
+|     leon3x0                                                                                                                                     |     0.040 |
 |       cmem0                                                                                                                                     |     0.012 |
 |         dme.dd0[0].ddata0                                                                                                                       |     0.001 |
 |           xc2v.x0                                                                                                                               |     0.001 |
@@ -568,7 +568,7 @@ Table of Contents
 |         mem0[1].ram0                                                                                                                            |    <0.001 |
 |           nopar.s64.xc2v.x0                                                                                                                     |    <0.001 |
 |   mg2.sr1                                                                                                                                       |     0.001 |
-|   mgpads.addr_pad                                                                                                                               |     0.015 |
+|   mgpads.addr_pad                                                                                                                               |     0.014 |
 |     v[0].x0                                                                                                                                     |    <0.001 |
 |       xcv.x0                                                                                                                                    |    <0.001 |
 |     v[10].x0                                                                                                                                    |    <0.001 |

@@ -1,32 +1,43 @@
 #include "spi_mem_test.h"
-#include "uart.h"
 
 unsigned char buffer_address[4]; // Two buffers is needed because the transfer did not work if delay occured.
 unsigned char buffer_value[4];
+extern unsigned char copy_buff[59184];
 
-int main(int argc, char const *argv[]){
+/*int main(int argc, char const *argv[]){
 	int i = 0;
 
 	SPIMEM_Detect();
-	SPIMEM_Write_var(0,0xdeadbeef);
+	//SPIMEM_Write_var(0,0xdeadbeef);
 
-	SPIMEM_Read_var(0);
+	//SPIMEM_Read_var(0);
+	SPIMEM_Read();
+	
+	//SPIMEM_Write_var(0x00b00000, 0x3D);
+	printf("ret %x\n\r", SPIMEM_Read_var(0x00b00002));
+
+	SPIMEM_WriteEnable();
+	buffer_address[0] = buffer_address[1] = buffer_address[2] = buffer_address[3] = 0x0;
+	SPIMEM_4kBSectorErase();
+	for (i = 0; i < 50000; i++);
+	SPIMEM_PageProgram();
+	
 	SPIMEM_Read();
 
 	return 0;
-}
+}*/
 
 void SPIMEM_SendCmd(int data){
 	SPIMEM -> status |= 0x01; // clear done bit
 
 	while ((SPIMEM -> status & 0x04) != 0x04); // init == 1, initialized
-	printf("init == 1\n\r");
+	//printf("init == 1\n\r");
 
 	while ((SPIMEM -> status & 0x02) != 0x00); // busy == 0, not busy
-	printf("busy == 0\n\r");
+	//printf("busy == 0\n\r");
 
 	while ((SPIMEM -> status & 0x01) != 0x00); // done == 0, only should be 1 after successful transfers
-	printf("done == 0\n\r");
+	//printf("done == 0\n\r");
 
 	SPIMEM -> control |= 1; // enter user mode
 
@@ -40,7 +51,7 @@ void SPIMEM_SendCmd(int data){
 	//printf("busy == 0\n\r");
 
 	while ((SPIMEM -> status & 0x01) != 0x01); // done == 1, only should be 1 after successful transfers
-	printf("done == 1\n\r");
+	//printf("done == 1\n\r");
 
 	SPIMEM -> status |= 0x01; // clear done bit
 
@@ -55,7 +66,7 @@ void SPIMEM_SendCmd(int data){
 
 	SPIMEM -> status |= 0x01; // clear done bit
 
-	printf("%d sent\n\r", data);
+	//printf("%d sent\n\r", data);
 }
 
 void SPIMEM_Detect(){
@@ -162,13 +173,13 @@ void SPIMEM_WriteEnable(){
 	SPIMEM -> status |= 0x01; // clear done bit
 
 	while ((SPIMEM -> status & 0x04) != 0x04); // init == 1, initialized
-	printf("init == 1\n\r");
+	//printf("init == 1\n\r");
 
 	while ((SPIMEM -> status & 0x02) != 0x00); // busy == 0, not busy
-	printf("busy == 0\n\r");
+	//printf("busy == 0\n\r");
 
 	while ((SPIMEM -> status & 0x01) != 0x00); // done == 0, only should be 1 after successful transfers
-	printf("done == 0\n\r");
+	//printf("done == 0\n\r");
 
 	SPIMEM -> control |= 1; // enter user mode
 
@@ -182,7 +193,7 @@ void SPIMEM_WriteEnable(){
 	//printf("busy == 0\n\r");
 
 	while ((SPIMEM -> status & 0x01) != 0x01); // done == 1, only should be 1 after successful transfers
-	printf("done == 1\n\r");
+	//printf("done == 1\n\r");
 
 	SPIMEM -> status |= 0x01; // clear done bit
 
@@ -197,11 +208,11 @@ void SPIMEM_WriteEnable(){
 
 	SPIMEM -> status |= 0x01; // clear done bit
 
-	printf("0x06 sent\n\r");
+	//printf("0x06 sent\n\r");
 
 	SPIMEM -> control &= 0xFFFFFFFE; // leave user mode, this command sets CSE to high automatically
 
-	printf("WREN sent\n\r");
+	//printf("WREN sent\n\r");
 }
 
 void SPIMEM_StatusRegister1(){
@@ -223,13 +234,19 @@ void SPIMEM_StatusRegister1(){
 	printf("Status sent\n\r");
 }
 
-void SPIMEM_4kBSectorErase(){
+void SPIMEM_4kBSectorErase(char addr2, char addr1, char addr0){
 	int i = 0;
 
-	SPIMEM_SendCmd(0x21);
+	SPIMEM_SendCmd(0x20);
 
-	for (i = 0; i < 4; i++){
-		SPIMEM -> transmit = buffer_address[i];
+	for (i = 0; i < 3; i++){
+		if(i == 0){
+			SPIMEM -> transmit = addr2;
+		}else if(i == 1){
+			SPIMEM -> transmit = addr1;
+		}else{
+			SPIMEM -> transmit = addr0;
+		}		
 
 		while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
 
@@ -241,13 +258,19 @@ void SPIMEM_4kBSectorErase(){
 	printf("Erase done\n\r");
 }
 
-void SPIMEM_PageProgram(){
+void SPIMEM_PageProgram(char addr2, char addr1, char addr0){
 	int i = 0;
 
 	SPIMEM_SendCmd(0x02);
 
 	for (i = 0; i < 3; i++){
-		SPIMEM -> transmit = 0x00;
+		if(i == 0){
+			SPIMEM -> transmit = addr2;
+		}else if(i == 1){
+			SPIMEM -> transmit = addr1;
+		}else{
+			SPIMEM -> transmit = addr0;
+		}
 
 		while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
 
@@ -255,7 +278,7 @@ void SPIMEM_PageProgram(){
 	}
 
 	for (i = 0; i < 256; i++){
-		SPIMEM -> transmit = 0xad;
+		SPIMEM -> transmit = copy_buff[i + (unsigned char)addr1 * 256];
 
 		while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
 
@@ -264,29 +287,38 @@ void SPIMEM_PageProgram(){
 
 	SPIMEM -> control &= 0xFFFFFFFE; // leave user mode, this command sets CSE to high automatically
 
-	printf("Write done\n\r");
+	//printf("Write done\n\r");
 }
 
-void SPIMEM_Read(){
+void SPIMEM_Read(char addr2, char addr1, char addr0){
 	int i = 0;
 
 	SPIMEM_SendCmd(0x03);
 
 	for (i = 0; i < 3; i++){
-		SPIMEM -> transmit = 0x00;
+		if(i == 0){
+			SPIMEM -> transmit = addr2;
+		}else if(i == 1){
+			SPIMEM -> transmit = addr1;
+		}else{
+			SPIMEM -> transmit = addr0;
+		}
 
 		while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
 
 		SPIMEM -> status |= 0x01; // clear done bit
 	}
 
-	for (i = 0 ; i < 256; i++){
+	for (i = 0 ; i < 59184; i++){
 		SPIMEM -> transmit = 0x00;
 
 		while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
 
 		SPIMEM -> status |= 0x01; // clear done bit
-		printf("%x ", SPIMEM -> receive);
+		if(SPIMEM -> receive != copy_buff[i]){
+			printf("Error: %x should be %x, at offset %x\n\r", SPIMEM -> receive, copy_buff[i], i);
+		}
+		
 	}  
 
 	printf("Read done\n\r");
@@ -299,10 +331,16 @@ void SPIMEM_Write_var(int address, int value){
 	buffer_address[0] = (address >> 24) & 0xFF;
 	buffer_address[1] = (address >> 16) & 0xFF;
 	buffer_address[2] = (address >> 8) & 0xFF;
-	buffer_address[3] = address & 0xFF;	
+	buffer_address[3] = address & 0xFF;
+
+	//sprintf( buffer, "%x", value);
+	buffer_value[0] = (value >> 24) & 0xFF;
+	buffer_value[1] = (value >> 16) & 0xFF;
+	buffer_value[2] = (value >> 8) & 0xFF;
+	buffer_value[3] = value & 0xFF;	
 
 	SPIMEM_WriteEnable();
-	SPIMEM_4kBSectorErase(buffer_address);
+	//SPIMEM_4kBSectorErase(); //Change this!!!
 
 	for(i ; i < 500000; i++);	
 	
@@ -316,12 +354,6 @@ void SPIMEM_Write_var(int address, int value){
 
 		SPIMEM -> status |= 0x01; // clear done bit
 	}		
-
-	//sprintf( buffer, "%x", value);
-	buffer_value[0] = (value >> 24) & 0xFF;
-	buffer_value[1] = (value >> 16) & 0xFF;
-	buffer_value[2] = (value >> 8) & 0xFF;
-	buffer_value[3] = value & 0xFF;
 
 	for (i = 0; i < sizeof(buffer_value); i++){	
 		SPIMEM -> transmit = buffer_value[i];
@@ -372,7 +404,7 @@ int SPIMEM_Read_var(int address){
 	SPIMEM -> control &= 0xFFFFFFFE; // leave user mode, this command sets CSE to high automatically
 	
 	temp = buffer_value[0]*1000 + buffer_value[1]*100 + buffer_value[2]*10 + buffer_value[3];
-    printf("Returned %d \n\r", temp);
+    	printf("Returned %d \n\r", temp);
 	printf("Read_var done\n\r");
 	return temp;
 }

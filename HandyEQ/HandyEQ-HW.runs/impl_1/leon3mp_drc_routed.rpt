@@ -1,8 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date         : Fri May 09 22:26:19 2014
-| Host         : XDAT26 running 64-bit Service Pack 1  (build 7601)
+| Date         : Mon May 12 12:15:23 2014
+| Host         : CSE-4225-14 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_drc
 -----------------------------------------------------------------------------------
 
@@ -256,7 +256,7 @@ Related violations: <none>
 PLHOLDVIO-2#2 Warning
 Non-Optimal connections which could lead to hold violations  
 A LUT Buffer_apb_map/apbo_reg[prdata][16]_i_1 is driving clock pin of 17 cells. This could lead to large hold time violations. First few involved cells are:
-    Buffer_apb_map/apbo_reg[prdata][8] {LDCE}
+    Buffer_apb_map/apbo_reg[prdata][7] {LDCE}
     Buffer_apb_map/apbo_reg[prdata][16] {LDCE}
     Buffer_apb_map/apbo_reg[prdata][15] {LDCE}
     Buffer_apb_map/apbo_reg[prdata][14] {LDCE}
@@ -337,11 +337,11 @@ Related violations: <none>
 PLHOLDVIO-2#13 Warning
 Non-Optimal connections which could lead to hold violations  
 A LUT Buffer_apb_out_map/apb_signals_reg[input_irq]_i_1 is driving clock pin of 17 cells. This could lead to large hold time violations. First few involved cells are:
-    Buffer_apb_out_map/apb_signals_reg[input_sample][6] {LDCE}
     Buffer_apb_out_map/apb_signals_reg[input_sample][15] {LDCE}
     Buffer_apb_out_map/apb_signals_reg[input_sample][14] {LDCE}
     Buffer_apb_out_map/apb_signals_reg[input_sample][13] {LDCE}
     Buffer_apb_out_map/apb_signals_reg[input_sample][12] {LDCE}
+    Buffer_apb_out_map/apb_signals_reg[input_sample][11] {LDCE}
 
 Related violations: <none>
 

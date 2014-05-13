@@ -50,12 +50,12 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param gui.test TreeTableDev
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir {C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.data/wt} [current_project]
-  set_property parent.project_dir {C:/Users/sebkarl/Desktop/fast synt} [current_project]
-  add_files {{C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/synth_1/leon3mp.dcp}}
-  add_files {{C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}
-  add_files {{C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/fir_compiler_0_synth_1/fir_compiler_0.dcp}}
-  read_xdc {{C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc}}
+  set_property webtalk.parent_dir {C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.data/wt} [current_project]
+  set_property parent.project_dir {C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt} [current_project]
+  add_files {{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/synth_1/leon3mp.dcp}}
+  add_files {{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp}}
+  add_files {{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/fir_compiler_0_synth_1/fir_compiler_0.dcp}}
+  read_xdc {{C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/constrs_1/imports/LEON3_softcore/Nexys4_Master.xdc}}
   link_design -top leon3mp -part xc7a100tcsg324-2
   close_msg_db -file init_design.pb
 } RESULT]

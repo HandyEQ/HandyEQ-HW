@@ -1,8 +1,8 @@
 Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
-| Date         : Fri May 09 22:19:57 2014
-| Host         : XDAT26 running 64-bit Service Pack 1  (build 7601)
+| Date         : Mon May 12 12:12:16 2014
+| Host         : CSE-4225-14 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file leon3mp_utilization_synth.rpt -pb leon3mp_utilization_synth.pb
 | Design       : leon3mp
 | Device       : xc7a100t
@@ -29,15 +29,15 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Loced | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 15124 |     0 |     63400 | 23.85 |
-|   LUT as Logic             | 15041 |     0 |     63400 | 23.72 |
+| Slice LUTs*                | 15125 |     0 |     63400 | 23.85 |
+|   LUT as Logic             | 15042 |     0 |     63400 | 23.72 |
 |   LUT as Memory            |    83 |     0 |     19000 |  0.43 |
 |     LUT as Distributed RAM |    72 |     0 |           |       |
 |     LUT as Shift Register  |    11 |     0 |           |       |
 | Slice Registers            | 12419 |     0 |    126800 |  9.79 |
 |   Register as Flip Flop    | 12374 |     0 |    126800 |  9.75 |
 |   Register as Latch        |    45 |     0 |    126800 |  0.03 |
-| F7 Muxes                   |  1115 |     0 |     31700 |  3.51 |
+| F7 Muxes                   |  1114 |     0 |     31700 |  3.51 |
 | F8 Muxes                   |   451 |     0 |     15850 |  2.84 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis for a more realistic count.
@@ -133,18 +133,18 @@ Table of Contents
 +-----------+------+
 |  Ref Name | Used |
 +-----------+------+
-| LUT6      | 8566 |
+| LUT6      | 8556 |
 | FDCE      | 6948 |
-| FDRE      | 5186 |
-| LUT5      | 3269 |
-| LUT4      | 1608 |
-| LUT3      | 1352 |
-| MUXF7     | 1115 |
+| FDRE      | 5178 |
+| LUT5      | 3262 |
+| LUT4      | 1611 |
+| LUT3      | 1364 |
+| MUXF7     | 1114 |
 | LUT1      |  956 |
-| LUT2      |  877 |
+| LUT2      |  885 |
 | MUXF8     |  451 |
 | CARRY4    |  297 |
-| FDSE      |  137 |
+| FDSE      |  145 |
 | RAMD32    |  108 |
 | IBUF      |  108 |
 | FDPE      |  103 |

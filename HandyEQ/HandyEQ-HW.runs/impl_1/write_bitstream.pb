@@ -52,9 +52,12 @@ U
 j
 QWebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
 118*projectZ1-118
-s
-ZWebTalk report has not been sent to Xilinx. Please check your network and proxy settings.
-185*commonZ17-185
+ê
+Ü'%s' has been successfully sent to Xilinx on %s. For additional details about this file, please refer to the Webtalk help file at %s.
+186*common2u
+aC:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/impl_1/usage_statistics_webtalk.xml2default:default2,
+Mon May 12 12:16:38 20142default:default2I
+5C:/Xilinx/Vivado/2013.4/doc/webtalk_introduction.html2default:defaultZ17-186
 Q
 Releasing license: %s
 83*common2"
@@ -63,10 +66,10 @@ Q
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2%
 write_bitstream: 2default:default2
-00:00:592default:default2
-00:01:122default:default2
-1608.0002default:default2
-317.6252default:defaultZ17-268
+00:00:342default:default2
+00:00:362default:default2
+1617.9382default:default2
+310.4732default:defaultZ17-268
 
 
 End Record
