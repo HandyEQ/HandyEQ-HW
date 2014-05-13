@@ -13,7 +13,7 @@
 #include "Testfiles/testmodule.h"
 #include "gpio.h"
 #include "digilent_nexys4.h"
-#include "Testfiles/player.h"
+//#include "Testfiles/player.h"
 
 int newSample;
 int newUart;
@@ -49,19 +49,20 @@ int main(void){
 
 	//Init EQ
 	initEqCoeff();
-	eq1 = initDspFx("EQ 1-band", 0, init_eq1band(treble[4]), &runEq1band);
+////	eq1 = initDspFx("EQ 1-band", 0, init_eq1band(treble[4]), &runEq1band);
 	eq3 = initDspFx("EQ 3-band", 0, init_eq3band(), &runEq3band); 
 	
 	//Delay
-	delay1 = initDspFx("Delay 1", 0, init_delay(100), &calcDelay);
+////	delay1 = initDspFx("Delay 1", 0, init_delay(100), &calcDelay);
 	//delay2 = initDspFx("Delay 2", 0, init_delay(), &calcDelay);
 
 	//Init Bins
-	bins = 3;
+	bins = 1;
 	bin = calloc(bins, sizeof(DspBin));
-	bin[0] = initDspBin(1, delay1);
-	bin[1] = initDspBin(1, eq1);
-	bin[2] = initDspBin(1, eq3);
+////	bin[0] = initDspBin(1, delay1);
+////	bin[1] = initDspBin(1, eq1);
+////	bin[2] = initDspBin(1, eq3);
+	bin[0] = initDspBin(0, eq3);
 
 	//Init dspsystem
 	input = calloc(1, sizeof(Chunk));
@@ -70,10 +71,12 @@ int main(void){
 	
 	//Connect bins
 	bin1tobin2 = calloc(1, sizeof(Chunk));
-	bin2tobin3 = calloc(1, sizeof(Chunk));
-	connectDspBin(dspsystem->bin[0], dspsystem->in, bin1tobin2);
-	connectDspBin(dspsystem->bin[1], bin1tobin2, bin2tobin3);
-	connectDspBin(dspsystem->bin[2], bin2tobin3, dspsystem->out);
+////	bin2tobin3 = calloc(1, sizeof(Chunk));
+////	connectDspBin(dspsystem->bin[0], dspsystem->in, bin1tobin2);
+////	connectDspBin(dspsystem->bin[1], bin1tobin2, bin2tobin3);
+////	connectDspBin(dspsystem->bin[2], bin2tobin3, dspsystem->out);
+
+	connectDspBin(dspsystem->bin[0], dspsystem->in, dspsystem->out);
 
 
 	//Main Loop
@@ -81,15 +84,17 @@ int main(void){
 	printf("Hello from HandyEq!");
 	while(1){
 		if(newSample){
-			if (gpiotoggle) {
-				gpiotoggle = 0;				
-				GPIO_ResetBits(GPIOB, NEXYS4_JC1 | NEXYS4_JC2 );
-			}
-			else {
-				gpiotoggle = 1;
-				GPIO_SetBits(GPIOB, NEXYS4_JC1 | NEXYS4_JC2);
-			}
-	
+			GPIO_SetBits(GPIOB, NEXYS4_JC1);
+
+//			if (gpiotoggle) {
+//				gpiotoggle = 0;				
+//				GPIO_ResetBits(GPIOB, NEXYS4_JC1 | NEXYS4_JC2 );
+//			}
+//			else {
+//				gpiotoggle = 1;
+//				GPIO_SetBits(GPIOB, NEXYS4_JC1 | NEXYS4_JC2);
+//			}
+//	
 
 
 			retrieve_chunk(input);			
@@ -101,7 +106,7 @@ int main(void){
 				//output->data[loop] = stage1.out;
 			//}		
 			
-			
+			GPIO_ResetBits(GPIOB, NEXYS4_JC1);			
 			output_chunk(output);
 			newSample = 0;
 		}
@@ -109,13 +114,16 @@ int main(void){
 			newUart = 0;
 			uart_input();
 			if(input_buffer[0] == 'D'){
-				dspsystem->bin[0]->bypass = (dspsystem->bin[0]->bypass+1)%2; 
-				printf("Delay Bypass: %d\n", dspsystem->bin[0]->bypass); 
+				////dspsystem->bin[0]->bypass = (dspsystem->bin[0]->bypass+1)%2; 
+				////printf("Delay Bypass: %d\n", dspsystem->bin[0]->bypass); 
 			} else if(input_buffer[0] == 'E'){
-				dspsystem->bin[1]->bypass = (dspsystem->bin[1]->bypass+1)%2;
-				printf("EQ Bypass: %d\n", dspsystem->bin[1]->bypass);
+				dspsystem->bin[0]->bypass = (dspsystem->bin[0]->bypass+1)%2;
+				printf("EQ Bypass: %d\n", dspsystem->bin[0]->bypass);
 			} else {
-				setEqMidCoeff(eq3->structPointer, &midrange[input_buffer[0]-48]);
+
+				//setEqMidCoeff(eq3->structPointer, &midrange[input_buffer[0]-48]);
+				//setEqTrebleCoeff(eq3->structPointer, &treble[input_buffer[0]-48]);
+				setEqBassCoeff(eq3->structPointer, &bass[input_buffer[0]-48]);
 			}
 		}
 	}

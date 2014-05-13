@@ -3,7 +3,7 @@ LD_LIBRARY_PATH := /nfs4/merkurius.ita.chalmers.se/sw/unsup64/gmp-5.0.2/lib:/nfs
 CC = sparc-elf-gcc -msoft-float -mcpu=v8 -g -lm
 OBJC= sparc-elf-objcopy
 
-%.exe: %.c gpio.c uart.c irq.c buffer.c delay.c dspsystem.c eq1band.c eqcoeff.c biquad.c eq3band.c Testfiles/testmodule.c Testfiles/player.c Testfiles/wavmem.c
+%.exe: %.c gpio.c uart.c irq.c buffer.c delay.c dspsystem.c eq1band.c eqcoeff.c biquad.c eq3band.c Testfiles/testmodule.c Testfiles/player.c 
 	export PATH=${PATH} && export LD_LIBRARY_PATH=${LD_LIBRARY_PATH} && $(CC) $^ -o $@ 
 
 %.srec: %.exe
