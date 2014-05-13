@@ -1,10 +1,10 @@
 -- Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2013.4 (win64) Build 353583 Mon Dec  9 17:49:19 MST 2013
--- Date        : Fri May 02 16:15:19 2014
--- Host        : CSE-4225-11 running 64-bit Service Pack 1  (build 7601)
+-- Date        : Tue May 13 10:33:00 2014
+-- Host        : CSE-4225-14 running 64-bit Service Pack 1  (build 7601)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/sebkarl/Desktop/test/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.vhdl
+--               C:/Users/sebkarl/Desktop/Develop_test/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_funcsim.vhdl
 -- Design      : xadc_wiz_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
