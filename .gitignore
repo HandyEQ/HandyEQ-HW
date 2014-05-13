@@ -29,4 +29,5 @@ Firmware/*.bat
 Firmware/*.sh~
 .Xil/
 .gitignore~
-
+~*
+*.exe
