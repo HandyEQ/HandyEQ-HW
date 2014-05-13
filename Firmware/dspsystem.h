@@ -3,16 +3,21 @@
 
 #include "buffer.h"
 
+typedef struct MenuSettings {
+	void (*function)(void *, Chunk *, Chunk *);
+	void (*setting[4])(void *, int);
+	void (*save)(void *);
+	void (*load)(void *);
+	char settingName[3][3];
+	int stepVal[3];
+	int stepRangeH[3];
+	int stepRangeL[3];
+} MenuSettings;
+
 typedef struct DspFx {
 	char * name;                        		//Name
-    	//int sampleBased; 				//Flag for sample based function
 	void * structPointer;                    	//Pointer to struct
-    	int (* function)(void *, Chunk *, Chunk *);    	//Pointer to funcion
-	void (* setting[3])(void *, int);		//Pointer to 3 Settings
-	char settingName[3][3];				//Name of settings
-	int stepVal[4];
-	int stepRangeH[4];
-	int stepRangeL[3];
+	MenuSettings * menusettings;			//Pointer to the effects menu settings
 } DspFx;
 
 /*	
@@ -36,7 +41,7 @@ typedef struct DspSystem {
 
 /* Function prototypes */
 DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out);
-DspFx * initDspFx(char * name, void * structPointer, char settingName[3][3], void (*setting[3])(void *, int), int stepVal[3], int stepRangeH[3], int stepRangeL[3], int (*funcion)(void *, Chunk *, Chunk *));
+DspFx * initDspFx(char * name, void * structPointer, MenuSettings * menusettings);
 DspBin * initDspBin(int bypass, DspFx * fx);
 void connectDspBin(DspBin *bin, Chunk * in, Chunk * out);
 void infoDspSystem(DspSystem *dspsystem);

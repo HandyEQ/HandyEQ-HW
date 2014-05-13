@@ -33,7 +33,8 @@ typedef struct {
 	int ymem1;
 	int ymem2;
 	int outUnscaled;//Output accumulator before scaling back
-	int out;	
+	int out;
+	int index;	
 }BiquadStage;
 
 /* Global variables */

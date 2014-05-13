@@ -3,7 +3,7 @@
 
 #include "dspsystem.h"
 
-typedef struct interface {
+typedef struct Interface {
 	char * sevenseg;
 	char oled[4][17];
 	int buttons[5];
@@ -14,12 +14,16 @@ typedef struct interface {
 	int switches[2];
 } Interface;
 
-typedef struct menu {
+typedef struct Menu {
 	DspSystem * dspsystem;
+	/*
+	MenuSettings * menusettings;		
 	char settingName[4][4][3];
 	void (*setting[4][4])(void *, int);
-	int (*getVal[4][4])(void *);
-	char value[4][4][6];
+	void (*save[4])(void *);
+	int (*load[4])(void *);
+	*/	
+	char value[4][4][6];	
 	int state;
 	int row;
 	int column;

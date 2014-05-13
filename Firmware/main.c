@@ -81,25 +81,13 @@ int main(void){
 	initEqCoeff();
 	eq3 = init_eq3band();
 
-	//Init Effects
-	//delay1 = initDspFx("Delay 1", 0, de1, de1->settingName, de1->setting, &calcDelay);
-	//delay2 = initDspFx("Delay 2", 0, de2, de2->settingName, de2->setting, &calcDelay);
-
 	//Init Bins
 	bins = 2;
 	bin = calloc(bins, sizeof(DspBin));
-	bin[0] = initDspBin(1, initDspFx("Delay 1", de1, de1->settingName, de1->setting, de1->stepVal, de1->stepRangeH, de1->stepRangeL, &calcDelay));
-	bin[1] = initDspBin(1, initDspFx("EQ 3-band", eq3, eq3->settingName, eq3->setting, eq3->stepVal, eq3->stepRangeH, eq3->stepRangeL, &runEq3band));
+	bin[1] = initDspBin(1, initDspFx("Delay 1", de1, de1->menusettings));
+	bin[0] = initDspBin(1, initDspFx("EQ 3B", eq3, eq3->menusettings));
 	//bin[2] = initDspBin(1, initDspFx("Delay 3", de2, de3->settingName, de3->setting, de3->stepVal, de3->stepRangeH, de3->stepRangeL, &calcDelay));
 	//bin[3] = initDspBin(1, initDspFx("Delay 2", de2, de4->settingName, de4->setting, de4->stepVal, de4->stepRangeH, de4->stepRangeL, &calcDelay));
-/*=======
-
-	//Init EQ
-	
-	eq1 = initDspFx("EQ 1-band", 0, init_eq1band(treble[4]), &runEq1band);
-	eq3 = initDspFx("EQ 3-band", 0, init_eq3band(), &runEq3band); 
-	
->>>>>>> eq*/
 
 	//Init dspsystem
 	input = calloc(1, sizeof(Chunk));
@@ -118,18 +106,11 @@ int main(void){
 	//Init Interface
 	interface = initHwInterface();
 	menu = initMenu(dspsystem);
-	/*addSetting(menu, bin[0], 0, "GA\0", &setDelayGain);
-	addSetting(menu, bin[0], 1, "FB\0", &setDelayFeedback);
-	addSetting(menu, bin[0], 2, "DT\0", &setDelayTime);
-	addSetting(menu, bin[1], 0, "GA\0", &setDelayGain);
-	addSetting(menu, bin[1], 1, "FB\0", &setDelayFeedback);
-	addSetting(menu, bin[1], 2, "DT\0", &setDelayTime);
-	*/
 	clearOled();
 	showStatus(menu, interface);
 
 	//Main Loop
-	setEqMidCoeff(eq3, 4);
+	//setEqMidCoeff(eq3, 4);
 	printf("Hello from HandyEq!");
 	while(1){
 		if(newSample){
@@ -161,3 +142,4 @@ void uart_input(){
 	input_buffer[0] = recieve_uart();
 
 }
+
