@@ -5,7 +5,7 @@
 #include "eq1band.h"
 #include "buffer.h"
 
-#define PRINTEQDEBUG
+//#define PRINTEQDEBUG
 
 
 

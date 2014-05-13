@@ -1,5 +1,6 @@
 #include "spi_mem.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 unsigned char buffer_address[4]; // Two buffers is needed because the transfer did not work if delay occured.
 unsigned char buffer_value[4];
@@ -325,20 +326,13 @@ void SPIMEM_Read(char addr2, char addr1, char addr0){
 	printf("Read done\n\r");
 }
 
-void SPIMEM_Write_var(int address, int value){
-	int i = 0;
+void SPIMEM_Write_var(int address, int values[], int size){
+	int i = 0, j = 0;
 
-	//sprintf( buffer, "%x", address);
 	buffer_address[0] = (address >> 24) & 0xFF;
 	buffer_address[1] = (address >> 16) & 0xFF;
 	buffer_address[2] = (address >> 8) & 0xFF;
 	buffer_address[3] = address & 0xFF;
-
-	//sprintf( buffer, "%x", value);
-	buffer_value[0] = (value >> 24) & 0xFF;
-	buffer_value[1] = (value >> 16) & 0xFF;
-	buffer_value[2] = (value >> 8) & 0xFF;
-	buffer_value[3] = value & 0xFF;	
 
 	SPIMEM_WriteEnable();
 	//SPIMEM_4kBSectorErase(); //Change this!!!
@@ -354,14 +348,21 @@ void SPIMEM_Write_var(int address, int value){
 		while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
 
 		SPIMEM -> status |= 0x01; // clear done bit
-	}		
+	}
 
-	for (i = 0; i < sizeof(buffer_value); i++){	
-		SPIMEM -> transmit = buffer_value[i];
+	for(j = 0; j < size ; j ++){
+		buffer_value[0] = (values[j] >> 24) & 0xFF;
+		buffer_value[1] = (values[j] >> 16) & 0xFF;
+		buffer_value[2] = (values[j] >> 8) & 0xFF;
+		buffer_value[3] = values[j] & 0xFF;		
 
-		while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
+		for (i = 0; i < sizeof(buffer_value); i++){	
+			SPIMEM -> transmit = buffer_value[i];
 
-		SPIMEM -> status |= 0x01; // clear done bit
+			while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
+
+			SPIMEM -> status |= 0x01; // clear done bit
+		}
 	}
 
 	SPIMEM -> control &= 0xFFFFFFFE; // leave user mode, this command sets CSE to high automatically
@@ -369,9 +370,10 @@ void SPIMEM_Write_var(int address, int value){
 	printf("Write_var done\n\r");
 }
 
-int SPIMEM_Read_var(int address){
-	int i = 0;
-	int temp;
+int * SPIMEM_Read_var(int address, int size){
+	int i = 0, j = 0;
+	int valBuffer[size][4];
+	int * returnBuffer = calloc(size, sizeof(int));
 	//unsigned char buffer_address[4];	
 	//unsigned char buffer_value[4];
 
@@ -389,25 +391,31 @@ int SPIMEM_Read_var(int address){
 		while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
 
 		SPIMEM -> status |= 0x01; // clear done bit
-	}	
+	}
+	
+	for(j = 0 ; j < size; j++){
 
-	for (i = 0; i < sizeof(buffer_address); i++){	
-		SPIMEM -> transmit = 0x00; // dummy
+		for (i = 0; i < sizeof(int); i++){	
+			SPIMEM -> transmit = 0x00; // dummy
 
-		while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
+			while ((SPIMEM -> status & 0x01) == 0x00); // done == 1, should be 1 after successful transfers
 		
-		buffer_value[i] = SPIMEM -> receive;
-		printf("%x ", SPIMEM -> receive);
+			valBuffer[j][i]  =  SPIMEM -> receive;
+			printf("%x ", SPIMEM -> receive);
 
-		SPIMEM -> status |= 0x01; // clear done bit
+			SPIMEM -> status |= 0x01; // clear done bit
+		}	
 	}
 
 	SPIMEM -> control &= 0xFFFFFFFE; // leave user mode, this command sets CSE to high automatically
+
+	for(j = 0; j < size; j++){
+		returnBuffer[j] = valBuffer[j][0]*1000 + valBuffer[j][1]*100 + valBuffer[j][2]*10 + valBuffer[j][3];	
+	}
 	
-	temp = buffer_value[0]*1000 + buffer_value[1]*100 + buffer_value[2]*10 + buffer_value[3];
-    	printf("Returned %d \n\r", temp);
+    	//printf("Returned %d \n\r", temp);
 	printf("Read_var done\n\r");
-	return temp;
+	return returnBuffer;
 }
 
 

@@ -21,22 +21,12 @@ DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out){
 	return dspsystem;
 }
 
-DspFx * initDspFx(char * name, void * structPointer, char settingName[3][3], void (*setting[3])(void *, int), int stepVal[3], int stepRangeH[3], int stepRangeL[3], int (*function)(void *,Chunk *, Chunk *)){
+DspFx * initDspFx(char * name, void * structPointer, MenuSettings * menusettings){
 	DspFx * fx = calloc(1, sizeof(DspFx)); 
 	int i;	
 	fx->name = name;
 	fx->structPointer = structPointer;
-	fx->function = function;
-	for(i = 0; i < 3; i++){
-		fx->stepVal[i] = stepVal[i];
-		fx->setting[i] = setting[i];
-		strcpy(fx->settingName[i], settingName[i]);
-		fx->stepRangeH[i] = stepRangeH[i];
-		fx->stepRangeL[i] = stepRangeL[i];
-	}
-	fx->stepVal[3] = 1;
-	fx->stepRangeH[3] = 1;
-	fx->stepRangeL[3] = 0;
+	fx->menusettings = menusettings;
 	return fx;
 }
 
@@ -65,7 +55,7 @@ void runDspSystem(DspSystem * dspsystem){
 			memcpy(dspsystem->bin[i]->out, dspsystem->bin[i]->in, sizeof(Chunk));
 		}
 		else {
-			(*dspsystem->bin[i]->fx->function)(dspsystem->bin[i]->fx->structPointer, dspsystem->bin[i]->in, dspsystem->bin[i]->out);
+			(*dspsystem->bin[i]->fx->menusettings->function)(dspsystem->bin[i]->fx->structPointer, dspsystem->bin[i]->in, dspsystem->bin[i]->out);
 		}
 	}
 }

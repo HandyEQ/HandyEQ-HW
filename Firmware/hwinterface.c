@@ -5,6 +5,7 @@
 #include "gpio.h"
 #include "hwinterface.h"
 #include "dspsystem.h"
+#include "spi_mem.h"
 
 extern int interruptServedRecently;
 extern int dbncCtr;
@@ -31,24 +32,18 @@ Interface * initHwInterface(){
 	return interface;
 }
 
-void clearOled(){
-	OLED_SendString(0,"                \0");
-	OLED_SendString(1,"                \0");
-	OLED_SendString(2,"                \0");
-	OLED_SendString(3,"                \0");
-}
-
 Menu * initMenu(DspSystem * dspsystem){
 	Menu * menu = calloc(1, sizeof(Menu));
 	int i, j;
-	menu->dspsystem = dspsystem;
-	menu->state = 0;
-	menu->row = 0;
+	menu->dspsystem = dspsystem;	
+		
 	for(i = 0; i < dspsystem->size; i++){
-		for(j = 0; j < 3; j++){
-			addSetting(menu, dspsystem->bin[i], j, dspsystem->bin[i]->fx->settingName[j], dspsystem->bin[i]->fx->setting[j]);
+		for(j = 0; j < 3; j++){	
+			//Add bypass function to menu for each bin
+			addSetting(menu, dspsystem->bin[i], j, dspsystem->bin[i]->fx->menusettings->settingName[j], dspsystem->bin[i]->fx->menusettings->setting[j]);
 	
 		}
+		//Add other settings
 		addSetting(menu, dspsystem->bin[i], 3, "BP\0", &bypassDspBin);
 	}
 	return menu;
@@ -63,8 +58,8 @@ void addSetting(Menu * menu, DspBin * bin, int place, char * settingAb, void (*s
 	for(i = 0; i < menu->dspsystem->size; i++){
 		//printf("%d\n", i);
 		if(menu->dspsystem->bin[i] == bin){	
-			memcpy(menu->settingName[i][place], settingAb, 3*sizeof(char));
-			menu->setting[i][place] = setting;
+			memcpy(menu->dspsystem->bin[i]->fx->menusettings->settingName[place], settingAb, 3*sizeof(char));
+			menu->dspsystem->bin[i]->fx->menusettings->setting[place] = setting;
 			sprintf(menu->value[i][place], "%5d", 0);  
 		}
 	}
@@ -189,17 +184,24 @@ void menuNavigation(Menu * menu, Interface * interface){
 
 void updateSetting(Menu * menu, Interface * interface){
 	if(menu->column == 3){
-		(*menu->setting[menu->row][menu->column])(menu->dspsystem->bin[menu->row], interface->encValue);
+		(*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])(menu->dspsystem->bin[menu->row], interface->encValue);
+		//(*menu->setting[menu->row][menu->column])(menu->dspsystem->bin[menu->row], interface->encValue);
 	} else { 
-		(*menu->setting[menu->row][menu->column])(menu->dspsystem->bin[menu->row]->fx->structPointer, interface->encValue);
+		(*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])(menu->dspsystem->bin[menu->row]->fx->structPointer, interface->encValue);
+		//(*menu->setting[menu->row][menu->column])(menu->dspsystem->bin[menu->row]->fx->structPointer, interface->encValue);
 	}	
 	sprintf(menu->value[menu->row][menu->column], "%5d", interface->encValue);
 	strcpy(interface->oled[menu->row], menu->value[menu->row][menu->column]);
 	OLED_SendStringPos(menu->row, menu->value[menu->row][menu->column], 11);
+	
+	//Write to mem
+	
+	
 }
 
 void selectSetting(Menu * menu, Interface * interface){
-	sprintf(interface->oled[menu->row], "%.2s:%.5s", menu->settingName[menu->row][menu->column], menu->value[menu->row][menu->column]);
+	//menu->settingName[menu->row][menu->column]
+	sprintf(interface->oled[menu->row], "%.2s:%.5s", menu->dspsystem->bin[menu->row]->fx->menusettings->settingName[menu->column], menu->value[menu->row][menu->column]);
 	OLED_SendStringPos(menu->row, interface->oled[menu->row], 8);
 }
 
@@ -213,6 +215,13 @@ void selectRow(Menu * menu, Interface * interface){
 		}
 		OLED_SendString(i, interface->oled[i]);
 	}
+}
+
+void clearOled(){
+	OLED_SendString(0,"                \0");
+	OLED_SendString(1,"                \0");
+	OLED_SendString(2,"                \0");
+	OLED_SendString(3,"                \0");
 }
 
 void pollSwitches(Interface * interface){
@@ -232,17 +241,8 @@ void showStatus(Menu * menu, Interface * interface){
 	int i;
 	//float v1, v2, v3;
 	for(i = 0; i < menu->dspsystem->size; i++){
-		/*v1 = atoi(menu->value[i][0])/32768;
-		v2 = atoi(menu->value[i][1])/32768;
-		v3 = atoi(menu->value[i][3]);
-		sprintf(interface->oled[i], "%1d:%.1s:%.1s%1.1f:%.1s%1.1f:%.1s%.1d", i, 
-			menu->dspsystem->bin[i]->fx->name, 
-			menu->settingName[i][0], v1,
-			menu->settingName[i][1], v2, 
-			menu->settingName[i][3], v3
-		);*/
-		
-		sprintf(interface->oled[i], "%1d:%.5s %.2s:%.5s", i, menu->dspsystem->bin[i]->fx->name, menu->settingName[i][0], menu->value[i][0]);
+		//menu->settingName[i][0]
+		sprintf(interface->oled[i], "%1d:%.5s %.2s:%.5s", i, menu->dspsystem->bin[i]->fx->name, menu->dspsystem->bin[i]->fx->menusettings->settingName[0], menu->value[i][0]);
 		OLED_SendString(i, interface->oled[i]);
 	}
 }
@@ -254,15 +254,15 @@ void readEnc(Menu * menu, Interface * interface){
       		B &= GPIO_ReadInputDataBit(GPIOB, NEXYS4_ENC_B);
 
       		if (A && !B){
-			if(interface->encValue < menu->dspsystem->bin[menu->row]->fx->stepRangeH[menu->column]){
-          			interface->encValue += menu->dspsystem->bin[menu->row]->fx->stepVal[menu->column];
+			if(interface->encValue < menu->dspsystem->bin[menu->row]->fx->menusettings->stepRangeH[menu->column]){
+          			interface->encValue += menu->dspsystem->bin[menu->row]->fx->menusettings->stepVal[menu->column];
 				sprintf(interface->oled[menu->row], "%5d", interface->encValue); 
 				OLED_SendStringPos(menu->row, interface->oled[menu->row], 11);
 				//sprintf(interface->sevenseg, "%8d", interface->encValue);
 			}
       		} else if (!A && B){
-			if(interface->encValue > menu->dspsystem->bin[menu->row]->fx->stepRangeL[menu->column]){
-          			interface->encValue -= menu->dspsystem->bin[menu->row]->fx->stepVal[menu->column];
+			if(interface->encValue > menu->dspsystem->bin[menu->row]->fx->menusettings->stepRangeL[menu->column]){
+          			interface->encValue -= menu->dspsystem->bin[menu->row]->fx->menusettings->stepVal[menu->column];
 				sprintf(interface->oled[menu->row], "%5d", interface->encValue); 
 				OLED_SendStringPos(menu->row, interface->oled[menu->row], 11);
 				//sprintf(interface->sevenseg, "%8d", interface->encValue);
