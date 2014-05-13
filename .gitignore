@@ -13,4 +13,5 @@ Firmware/*.srec
 Firmware/*.bat
 .Xil/
 *.exe
+*.srec
 *~
