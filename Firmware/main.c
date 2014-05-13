@@ -87,13 +87,119 @@ void uart_input(){
 	int value;
 	int indexFunction = 0, indexEffect = 0;
 
+	//The tempStr is used to temporary store the values read before converting them into an int.
+	char tempStr[7];
+	//This value is used to store the converted values before storing them in their correct variable.
+	int tempVal = 0;
+
 	//String
 	char temp = recieve_uart();
 	//Parser	
 	if(temp == '#'){					
-		//printf("%s\n", input_buffer);
+		printf("%s\n", input_buffer);
 		i = 0;
 		while(i < counter){
+			printf("%i, %i,", counter, i);
+			printf("%c \n", input_buffer[i]);
+			if(input_buffer[i] == 'S'){
+				//If an effect in a box is to be changed.
+				if((input_buffer[i+1] == '1')){
+					//If the box effect that is changed is in the first box.
+					if((input_buffer[i+3] == '0')){
+						//If the new effect is bypass.
+						printf("bypasseffect1");
+					}else if((input_buffer[i+3] == '1')){
+						//If the new effect is noeffect.
+						printf("noeffecteffect1");
+					}else if((input_buffer[i+3] == '2')){
+						//If the new effect is equalizer.
+						printf("equalizereffect1");
+					}else if((input_buffer[i+3] == '3')){
+						//If the new effect is volume.
+						printf("volumeeffect1");
+					}else if((input_buffer[i+3] == '4')){
+						//If the new effect is delay.
+						printf("delayeffect1");
+					}			
+				}else if(input_buffer[i+1] == '2'){
+					//If the box effect that is changed is in the second box.
+					if((input_buffer[i+3] == '0')){
+						//If the new effect is bypass.
+						printf("bypasseffect2");
+					}else if((input_buffer[i+3] == '1')){
+						//If the new effect is noeffect.
+					}else if((input_buffer[i+3] == '2')){
+						//If the new effect is equalizer.
+					}else if((input_buffer[i+3] == '3')){
+						//If the new effect is volume.
+					}else if((input_buffer[i+3] == '4')){
+						//If the new effect is delay.
+					}
+				}else if(input_buffer[i+1] == '3'){
+					//If the box effect that is changed is in the third box.
+					if((input_buffer[i+3] == '0')){
+						//If the new effect is bypass.
+						printf("bypasseffect3");
+					}else if((input_buffer[i+3] == '1')){
+						//If the new effect is noeffect.
+					}else if((input_buffer[i+3] == '2')){
+						//If the new effect is equalizer.
+					}else if((input_buffer[i+3] == '3')){
+						//If the new effect is volume.
+					}else if((input_buffer[i+3] == '4')){
+						//If the new effect is delay.
+					}
+				}else if(input_buffer[i+3] == '4'){
+					//If the box effect that is changed is in the forth box.
+					if((input_buffer[i+3] == '0')){
+						//If the new effect is bypass.
+						printf("bypasseffect4");
+					}else if((input_buffer[i+3] == '1')){
+						//If the new effect is noeffect.
+					}else if((input_buffer[i+3] == '2')){
+						//If the new effect is equalizer.
+					}else if((input_buffer[i+3] == '3')){
+						//If the new effect is volume.
+					}else if((input_buffer[i+3] == '4')){
+						//If the new effect is delay.
+					}
+				}
+			}else if(input_buffer[i] == '1'){
+				//If a setting for the first effect box has been changed.
+				if(input_buffer[i+1] == 'E'){
+					printf("Equal1");
+					//The new value is for the equalizer effect.
+					//These value vary from 0 - 8 where 0 represent -12 dB.
+					if(input_buffer[i+2] == 'B'){
+						//The value is for the bass.
+						//The value that is to be used starts at input[i+4]
+						//This value is stored in the tempStr to be converted without getting unwanted values.
+						strncpy(tempStr, input_buffer+(i+4), 6);
+						tempStr[6] = '\0';
+						//The tempVal should contain the value that is to be stored as the bass value in the first effect box.
+						tempVal = atoi(tempStr);
+    						printf("%i", tempVal);
+					}else if(input_buffer[i+2] == 'M'){
+						//The value is for the mid.
+						//The value that is to be used starts at input[i+4]
+						//This value is stored in the tempStr to be converted without getting unwanted values.
+						strncpy(tempStr, input_buffer+(i+4), 6);
+						tempStr[6] = '\0';
+						//The tempVal should contain the value that is to be stored as the mid value in the first effect box.
+						tempVal = atoi(tempStr);
+    						printf("%i", tempVal);	
+					}else if(input_buffer[i+2] == 'T'){
+						//The value is for the treble.
+						//The value that is to be used starts at input[i+4]
+						//This value is stored in the tempStr to be converted without getting unwanted values.
+						strncpy(tempStr, input_buffer+(i+4), 6);
+						tempStr[6] = '\0';
+						//The tempVal should contain the value that is to be stored as the treble value in the first effect box.
+						tempVal = atoi(tempStr);
+    						printf("%i", tempVal);	
+					} 
+				}		
+			}
 			/*switch(input_buffer[i])
 			{
 				case 'D':
@@ -111,7 +217,7 @@ void uart_input(){
 					indexFunction = 1;
 				case 'L':
 					indexFunction = 2;
-			}*/
+			}
 			if(input_buffer[i] == 'D'){
 				indexEffect = 0;
 			}
@@ -121,9 +227,9 @@ void uart_input(){
 				indexFunction = 1;
 			}
 			value = (10000*(input_buffer[i+4]-48)) + (1000*(input_buffer[i+5]-48)) + (100*(input_buffer[i+6]-48)) + (10*(input_buffer[i+7]-48)) + (input_buffer[i+8]-48);
-			(*effects[indexEffect].function[indexFunction])(value);
+			(*effects[indexEffect].function[indexFunction])(value);*/
 			//(*effects[0].function[1])(value);
-			i += 10;
+			i += 11;
 		} 
 		counter = 0;			
 	} else {
