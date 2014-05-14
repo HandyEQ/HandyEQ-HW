@@ -100,9 +100,6 @@ void uart_input(){
 	int tempVal = 0;
 	
 	int i,k;
- 	
-		printf("%i\n", size);
-		printf("%s\n", input);
 	for(i = 0; i < size; i+=11){
 		//Used to minimize the calculations.
 		j = input+4+i;
@@ -115,19 +112,19 @@ void uart_input(){
 				//If the box effect that is changed is in the first box.
 				if((input[k] == '0')){
 					//If the new effect is bypass.
-					printf("bypasseffect1\n");
+					//printf("bypasseffect1\n");
 				}else if((input[k] == '1')){
 					//If the new effect is noeffect.
-					printf("noeffecteffect1\n");
+					//printf("noeffecteffect1\n");
 				}else if((input[k] == '2')){
 					//If the new effect is equalizer.
-					printf("equalizereffect1\n");
+					//printf("equalizereffect1\n");
 				}else if((input[k] == '3')){
 					//If the new effect is volume.
-					printf("volumeeffect1\n");
+					//printf("volumeeffect1\n");
 				}else if((input[k] == '4')){
 					//If the new effect is delay.
-					printf("delayeffect1\n");
+					//printf("delayeffect1\n");
 				}			
 			}else if(input[k] == '2'){
 				//Used to minimize the calculations.
@@ -135,19 +132,19 @@ void uart_input(){
 				//If the box effect that is changed is in the second box.
 				if((input[k] == '0')){
 					//If the new effect is bypass.
-					printf("bypasseffect2\n");
+					//printf("bypasseffect2\n");
 				}else if((input[k] == '1')){
-					printf("noeffecteffect2\n");
+					//printf("noeffecteffect2\n");
 					//If the new effect is noeffect.
 				}else if((input[k] == '2')){
 					//If the new effect is equalizer.
-					printf("equalizerffect2\n");
+					//printf("equalizerffect2\n");
 				}else if((input[k] == '3')){
 					//If the new effect is volume.
-					printf("volumeeffect2\n");
+					//printf("volumeeffect2\n");
 				}else if((input[k] == '4')){
 					//If the new effect is delay.
-					printf("delayeffect2\n");
+					//printf("delayeffect2\n");
 				}
 			}else if(input[k] == '3'){
 				//Used to minimize the calculations.
@@ -155,19 +152,19 @@ void uart_input(){
 				//If the box effect that is changed is in the third box.
 				if((input[k] == '0')){
 					//If the new effect is bypass.
-					printf("bypasseffect3\n");
+					//printf("bypasseffect3\n");
 				}else if((input[k] == '1')){
 					//If the new effect is noeffect.
-					printf("noeffecteffect3\n");
+					//printf("noeffecteffect3\n");
 				}else if((input[k] == '2')){
 					//If the new effect is equalizer.
-					printf("equalizereffect3\n");
+					//printf("equalizereffect3\n");
 				}else if((input[k] == '3')){
 					//If the new effect is volume.
-					printf("volumeeffect3\n");
+					//printf("volumeeffect3\n");
 				}else if((input[k] == '4')){
 					//If the new effect is delay.
-					printf("delayeffect3\n");
+					//printf("delayeffect3\n");
 				}
 			}else if(input[k] == '4'){
 				//Used to minimize the calculations.
@@ -175,19 +172,19 @@ void uart_input(){
 				//If the box effect that is changed is in the forth box.
 				if((input[k] == '0')){
 					//If the new effect is bypass.
-					printf("bypasseffect4\n");
+					//printf("bypasseffect4\n");
 				}else if((input[k] == '1')){
 					//If the new effect is noeffect.
-					printf("noeffecteffect4\n");
+					//printf("noeffecteffect4\n");
 				}else if((input[k] == '2')){
 					//If the new effect is equalizer.
-					printf("equalizereffect4\n");
+					//printf("equalizereffect4\n");
 				}else if((input[k] == '3')){
 					//If the new effect is volume.
-					printf("volumeeffect4\n");
+					//printf("volumeeffect4\n");
 				}else if((input[k] == '4')){
 					//If the new effect is delay.
-					printf("delayeffect4\n");
+					//printf("delayeffect4\n");
 				}
 			}
 		}else if(input[i] == '1'){
@@ -205,7 +202,9 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the bass value in the first effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ1 bass, %i \n", tempVal);
+					//printf("EQ1 bass, %i \n", tempVal);
+ 		
+					printf("%s", input);
 				}else if((input[k] == 'M')){
 					//The value is for the mid.
 					//The value that is to be used starts at input[i+4]
@@ -214,7 +213,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the mid value in the first effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ1 mid, %i \n", tempVal);	
+					//printf("EQ1 mid, %i \n", tempVal);
 				}else if((input[k] == 'T')){
 					//The value is for the treble.
 					//The value that is to be used starts at input[i+4]
@@ -223,7 +222,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the treble value in the first effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ1 treble, %i \n", tempVal);	
+					//printf("EQ1 treble, %i \n", tempVal);	
 				} 
 			}else if((input[k] == 'V')){
 				//The new value is for the volume effect.
@@ -235,7 +234,7 @@ void uart_input(){
 				tempStr[6] = '\0';
 				//The tempVal should contain the value that is to be stored as the volume value in the first effect box.
 				tempVal = atoi(tempStr);
-				printf("Volume1, %i \n", tempVal);	
+				//printf("Volume1, %i \n", tempVal);
 			}else if((input[k] == 'D')){
 				//Used to minimize the calculations.
 				k++;
@@ -249,7 +248,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the delay time value in the first effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay1 time(ms), %i \n", tempVal);		
+					//printf("Delay1 time(ms), %i \n", tempVal);	
 				}else if((input[k] == 'G')){
 					//The value is for the gain.
 					//This value is in float point.
@@ -260,7 +259,7 @@ void uart_input(){
 					//The tempVal should contain the value that is to be stored as the float point of gain value
 					//in the first effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay1 gain, %i \n", tempVal);		
+					//printf("Delay1 gain, %i \n", tempVal);		
 				}else if((input[k] == 'F')){
 					//The value is for the feedback.
 					//This value is in float point.
@@ -271,7 +270,7 @@ void uart_input(){
 					//The tempVal should contain the value that is to be stored as the float point of feedback value
 					//in the first effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay1 feedback, %i \n", tempVal);		
+					//printf("Delay1 feedback, %i \n", tempVal);		
 				} 
 			}else{
 				//The value is for the bypass or no effect which have no values.
@@ -291,7 +290,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the bass value in the second effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ2 bass, %i \n", tempVal);
+					//printf("EQ2 bass, %i \n", tempVal);
 				}else if((input[k] == 'M')){
 					//The value is for the mid.
 					//The value that is to be used starts at input[i+4]
@@ -300,7 +299,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the mid value in the second effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ2 mid, %i \n", tempVal);	
+					//printf("EQ2 mid, %i \n", tempVal);	
 				}else if((input[k] == 'T')){
 					//The value is for the treble.
 					//The value that is to be used starts at input[i+4]
@@ -309,7 +308,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the treble value in the second effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ2 treble, %i \n", tempVal);		
+					//printf("EQ2 treble, %i \n", tempVal);		
 				} 
 			}else if((input[k] == 'V')){
 				//The new value is for the volume effect.
@@ -321,7 +320,7 @@ void uart_input(){
 				tempStr[6] = '\0';
 				//The tempVal should contain the value that is to be stored as the volume value in the second effect box.
 				tempVal = atoi(tempStr);
-				printf("Volume2, %i \n", tempVal);
+				//printf("Volume2, %i \n", tempVal);
 			}else if((input[k] == 'D')){
 				//Used to minimize the calculations.
 				k++;
@@ -335,7 +334,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the delay time value in the second effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay2 time(ms), %i \n", tempVal);	
+					//printf("Delay2 time(ms), %i \n", tempVal);	
 				}else if((input[k] == 'G')){
 					//The value is for the gain.
 					//This value is in float point.
@@ -346,7 +345,7 @@ void uart_input(){
 					//The tempVal should contain the value that is to be stored as the float point of gain value
 					//in the second effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay2 gain, %i \n", tempVal);		
+					//printf("Delay2 gain, %i \n", tempVal);		
 				}else if((input[k] == 'F')){
 					//The value is for the feedback.
 					//This value is in float point.
@@ -357,7 +356,7 @@ void uart_input(){
 					//The tempVal should contain the value that is to be stored as the float point of feedback value
 					//in the second effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay2 feedback, %i \n", tempVal);	
+					//printf("Delay2 feedback, %i \n", tempVal);	
 				} 
 			}else{
 				//The value is for the bypass or no effect which have no values.
@@ -377,7 +376,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the bass value in the third effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ3 bass, %i \n", tempVal);
+					//printf("EQ3 bass, %i \n", tempVal);
 				}else if((input[k] == 'M')){
 					//The value is for the mid.
 					//The value that is to be used starts at input[i+4]
@@ -386,7 +385,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the mid value in the third effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ3 mid, %i \n", tempVal);	
+					//printf("EQ3 mid, %i \n", tempVal);	
 				}else if((input[k] == 'T')){
 					//The value is for the treble.
 					//The value that is to be used starts at input[i+4]
@@ -395,7 +394,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the treble value in the third effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ3 treble, %i \n", tempVal);		
+					//printf("EQ3 treble, %i \n", tempVal);		
 				} 
 			}else if((input[k] == 'V')){
 				//The new value is for the volume effect.
@@ -407,7 +406,7 @@ void uart_input(){
 				tempStr[6] = '\0';
 				//The tempVal should contain the value that is to be stored as the volume value in the third effect box.
 				tempVal = atoi(tempStr);
-				printf("Volume3, %i \n", tempVal);
+				//printf("Volume3, %i \n", tempVal);
 			}else if((input[k] == 'D')){
 				//Used to minimize the calculations.
 				k++;
@@ -421,7 +420,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the delay time value in the third effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay3 time(ms), %i \n", tempVal);	
+					//printf("Delay3 time(ms), %i \n", tempVal);	
 				}else if((input[k] == 'G')){
 					//The value is for the gain.
 					//This value is in float point.
@@ -432,7 +431,7 @@ void uart_input(){
 					//The tempVal should contain the value that is to be stored as the float point of gain value
 					//in the third effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay3 gain, %i \n", tempVal);		
+					//printf("Delay3 gain, %i \n", tempVal);		
 				}else if((input[k] == 'F')){
 					//The value is for the feedback.
 					//This value is in float point.
@@ -443,7 +442,7 @@ void uart_input(){
 					//The tempVal should contain the value that is to be stored as the float point of feedback value
 					//in the third effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay3 feedback, %i \n", tempVal);	
+					//printf("Delay3 feedback, %i \n", tempVal);	
 				} 
 			}else{
 				//The value is for the bypass or no effect which have no values.
@@ -463,7 +462,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the bass value in the forth effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ4 bass, %i \n", tempVal);
+					//printf("EQ4 bass, %i \n", tempVal);
 				}else if((input[k] == 'M')){
 					//The value is for the mid.
 					//The value that is to be used starts at input[i+4]
@@ -472,7 +471,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the mid value in the forth effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ4 mid, %i \n", tempVal);	
+					//printf("EQ4 mid, %i \n", tempVal);
 				}else if((input[k] == 'T')){
 					//The value is for the treble.
 					//The value that is to be used starts at input[i+4]
@@ -481,7 +480,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the treble value in the forth effect box.
 					tempVal = atoi(tempStr);
-					printf("EQ4 treble, %i \n", tempVal);		
+					//printf("EQ4 treble, %i \n", tempVal);	
 				} 
 			}else if((input[k] == 'V')){
 				//The new value is for the volume effect.
@@ -493,7 +492,7 @@ void uart_input(){
 				tempStr[6] = '\0';
 				//The tempVal should contain the value that is to be stored as the volume value in the forth effect box.
 				tempVal = atoi(tempStr);
-				printf("Volume4, %i \n", tempVal);
+				//printf("Volume4, %i \n", tempVal);
 			}else if((input[k] == 'D')){
 				//Used to minimize the calculations.
 				k++;
@@ -507,7 +506,7 @@ void uart_input(){
 					tempStr[6] = '\0';
 					//The tempVal should contain the value that is to be stored as the delay time value in the forth effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay4 time(ms), %i \n", tempVal);	
+					//printf("Delay4 time(ms), %i \n", tempVal);	
 				}else if((input[k] == 'G')){
 					//The value is for the gain.
 					//This value is in float point.
@@ -518,7 +517,7 @@ void uart_input(){
 					//The tempVal should contain the value that is to be stored as the float point of gain value
 					//in the forth effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay4 gain, %i \n", tempVal);		
+					//printf("Delay4 gain, %i \n", tempVal);		
 				}else if((input[k] == 'F')){
 					//The value is for the feedback.
 					//This value is in float point.
@@ -529,14 +528,15 @@ void uart_input(){
 					//The tempVal should contain the value that is to be stored as the float point of feedback value
 					//in the forth effect box.
 					tempVal = atoi(tempStr);
-					printf("Delay4 feedback, %i \n", tempVal);	
+					//printf("Delay4 feedback, %i \n", tempVal);	
 				} 
 			}else{
 				//The value is for the bypass or no effect which have no values.
 			}
 		}else if(input[i] == 'I'){
 			//Used for when the GUI is connected and need all the current values from the board.
-			printf("Sending initiation values.");
+			//Example of how a initiation can look. all effects are set to no effect except effect2 that is set to Equalizer and the bass is given the value 3db.
+			printf("S1E1NE0000:S2E2EQ0000:2EBA+00005:S3E1NE0000:S4E1NE0000#");
 		}
 	}
 	//char i = recieve_uart();
