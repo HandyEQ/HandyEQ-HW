@@ -3,11 +3,7 @@
 /* For use with HandyEQ project MPEES-1 DAT096 Group6	*/
 /* Preben Thorod @ HandyEQ                              */
 /* Fs = 48077Hz                                            */
-/* Generated: 14 May 2014 20:55:24 */
-
-/* THIS IS FINAL COEFFICIENTS, STILL SOME CLIPPING ON -12db Bass, but with the time left of project, 
-Commander Carl-Johan Häll approves this as final version, we need only to be carful with the test signal 
-so we're not applyin a to hot signal. (Clipping occurs when input signal is out of specified voltage anyways */
+/* Generated: 14 May 2014 19:46:16 */
 
 #include <string.h>
 #include "biquad.h"
@@ -18,75 +14,62 @@ BiquadCoeff midrange[9];
 BiquadCoeff treble[9];
 
 void initEqCoeff() {
-//	strcpy(bass[0].filtertype, "Base_Shelf");
-//	strcpy(bass[0].fc, "600Hz");
-//	strcpy(bass[0].gain, "-12dB");
-//	strcpy(bass[0].q, "0.4");
-//	strcpy(bass[0].dataformat, "Q20.12");
-//	bass[0].scalefactor =  4096;
-//	bass[0].a0 = 4096;
-//	bass[0].a1 = -6775;
-//	bass[0].a2 = 2762;
-//	bass[0].b0 = 3748;
-//	bass[0].b1 = -6806;
-//	bass[0].b2 = 3079;
-
 	strcpy(bass[0].filtertype, "Base_Shelf");
 	strcpy(bass[0].fc, "600Hz");
 	strcpy(bass[0].gain, "-12dB");
-	strcpy(bass[0].q, "0.70711");
-	strcpy(bass[0].dataformat, "Q18.14");
-	bass[0].scalefactor =  16384;
-	bass[0].a0 = 16384;
-	bass[0].a1 = -29161;
-	bass[0].a2 = 13136;
-	bass[0].b0 = 15507;
-	bass[0].b1 = -29295;
-	bass[0].b2 = 13879;
+	strcpy(bass[0].q, "0.6");
+	strcpy(bass[0].dataformat, "Q20.12");
+	bass[0].scalefactor =  4096;
+	bass[0].a0 = 4096;
+	bass[0].a1 = -7163;
+	bass[0].a2 = 3156;
+	bass[0].b0 = 3845;
+	bass[0].b1 = -7197;
+	bass[0].b2 = 3374;
 
 	strcpy(bass[1].filtertype, "Base_Shelf");
 	strcpy(bass[1].fc, "600Hz");
 	strcpy(bass[1].gain, "-9dB");
-	strcpy(bass[1].q, "0.4");
+	strcpy(bass[1].q, "0.6");
 	strcpy(bass[1].dataformat, "Q20.12");
 	bass[1].scalefactor =  4096;
 	bass[1].a0 = 4096;
-	bass[1].a1 = -6977;
-	bass[1].a2 = 2942;
-	bass[1].b0 = 3853;
-	bass[1].b1 = -6997;
-	bass[1].b2 = 3166;
+	bass[1].a1 = -7321;
+	bass[1].a2 = 3289;
+	bass[1].b0 = 3923;
+	bass[1].b1 = -7342;
+	bass[1].b2 = 3442;
 
 	strcpy(bass[2].filtertype, "Base_Shelf");
 	strcpy(bass[2].fc, "600Hz");
 	strcpy(bass[2].gain, "-6dB");
-	strcpy(bass[2].q, "0.4");
+	strcpy(bass[2].q, "0.6");
 	strcpy(bass[2].dataformat, "Q20.12");
 	bass[2].scalefactor =  4096;
 	bass[2].a0 = 4096;
-	bass[2].a1 = -7154;
-	bass[2].a2 = 3102;
-	bass[2].b0 = 3945;
-	bass[2].b1 = -7165;
-	bass[2].b2 = 3242;
+	bass[2].a1 = -7455;
+	bass[2].a2 = 3405;
+	bass[2].b0 = 3989;
+	bass[2].b1 = -7467;
+	bass[2].b2 = 3500;
 
 	strcpy(bass[3].filtertype, "Base_Shelf");
 	strcpy(bass[3].fc, "600Hz");
 	strcpy(bass[3].gain, "-3dB");
-	strcpy(bass[3].q, "0.4");
+	strcpy(bass[3].q, "0.6");
 	strcpy(bass[3].dataformat, "Q20.12");
 	bass[3].scalefactor =  4096;
 	bass[3].a0 = 4096;
-	bass[3].a1 = -7307;
-	bass[3].a2 = 3243;
-	bass[3].b0 = 4026;
-	bass[3].b1 = -7311;
-	bass[3].b2 = 3308;
+	bass[3].a1 = -7570;
+	bass[3].a2 = 3507;
+	bass[3].b0 = 4047;
+	bass[3].b1 = -7574;
+	bass[3].b2 = 3551;
 
 	strcpy(bass[4].filtertype, "Base_Shelf");
 	strcpy(bass[4].fc, "600Hz");
 	strcpy(bass[4].gain, "0dB");
-	strcpy(bass[4].q, "0.4");
+	strcpy(bass[4].q, "0.6");
 	strcpy(bass[4].dataformat, "Q20.12");
 	bass[4].scalefactor =  4096;
 	bass[4].a0 = 4096;
@@ -99,54 +82,54 @@ void initEqCoeff() {
 	strcpy(bass[5].filtertype, "Base_Shelf");
 	strcpy(bass[5].fc, "600Hz");
 	strcpy(bass[5].gain, "3dB");
-	strcpy(bass[5].q, "0.4");
+	strcpy(bass[5].q, "0.6");
 	strcpy(bass[5].dataformat, "Q20.12");
 	bass[5].scalefactor =  4096;
 	bass[5].a0 = 4096;
-	bass[5].a1 = -7438;
-	bass[5].a2 = 3365;
-	bass[5].b0 = 4167;
-	bass[5].b1 = -7434;
-	bass[5].b2 = 3299;
+	bass[5].a1 = -7666;
+	bass[5].a2 = 3594;
+	bass[5].b0 = 4146;
+	bass[5].b1 = -7662;
+	bass[5].b2 = 3549;
 
 	strcpy(bass[6].filtertype, "Base_Shelf");
 	strcpy(bass[6].fc, "600Hz");
 	strcpy(bass[6].gain, "6dB");
-	strcpy(bass[6].q, "0.4");
+	strcpy(bass[6].q, "0.6");
 	strcpy(bass[6].dataformat, "Q20.12");
 	bass[6].scalefactor =  4096;
 	bass[6].a0 = 4096;
-	bass[6].a1 = -7438;
-	bass[6].a2 = 3365;
-	bass[6].b0 = 4252;
-	bass[6].b1 = -7427;
-	bass[6].b2 = 3220;
+	bass[6].a1 = -7666;
+	bass[6].a2 = 3594;
+	bass[6].b0 = 4205;
+	bass[6].b1 = -7655;
+	bass[6].b2 = 3496;
 
 	strcpy(bass[7].filtertype, "Base_Shelf");
 	strcpy(bass[7].fc, "600Hz");
 	strcpy(bass[7].gain, "9dB");
-	strcpy(bass[7].q, "0.4");
+	strcpy(bass[7].q, "0.6");
 	strcpy(bass[7].dataformat, "Q20.12");
 	bass[7].scalefactor =  4096;
 	bass[7].a0 = 4096;
-	bass[7].a1 = -7438;
-	bass[7].a2 = 3365;
-	bass[7].b0 = 4354;
-	bass[7].b1 = -7418;
-	bass[7].b2 = 3128;
+	bass[7].a1 = -7666;
+	bass[7].a2 = 3594;
+	bass[7].b0 = 4277;
+	bass[7].b1 = -7645;
+	bass[7].b2 = 3434;
 
 	strcpy(bass[8].filtertype, "Base_Shelf");
 	strcpy(bass[8].fc, "600Hz");
 	strcpy(bass[8].gain, "12dB");
-	strcpy(bass[8].q, "0.4");
+	strcpy(bass[8].q, "0.6");
 	strcpy(bass[8].dataformat, "Q20.12");
 	bass[8].scalefactor =  4096;
 	bass[8].a0 = 4096;
-	bass[8].a1 = -7438;
-	bass[8].a2 = 3365;
-	bass[8].b0 = 4477;
-	bass[8].b1 = -7404;
-	bass[8].b2 = 3019;
+	bass[8].a1 = -7666;
+	bass[8].a2 = 3594;
+	bass[8].b0 = 4363;
+	bass[8].b1 = -7631;
+	bass[8].b2 = 3362;
 
 	strcpy(midrange[0].filtertype, "Notch");
 	strcpy(midrange[0].fc, "1450Hz");

@@ -105,9 +105,13 @@ int runEq3band(void *pointer, Chunk * input, Chunk * output){
 	
 	for (i = 0; i < chunk_size; i++){
 
-		//Input scaling: Ideal maximum gain from eq, all bands set to +12db is ~ +13,4dB
+		//Input scaling: Ideal maximum gain from eq, all bands set to +12db is ~ +15.1dB
 		//Shifting down 3 bits: 20log(2^3 / 1 ) = 20 log(8/1) = 18dB gain reduction which should leave some headroom also.
-		inputscaled = input->data[i] >> 3;
+
+//		inputscaled = input->data[i] >> 3;
+		
+		inputscaled = input->data[i] >> 2;
+
 
 		eq3bandeffect->stage1.in = inputscaled;	
 		GPIO_SetBits(GPIOB, NEXYS4_JC3);	
@@ -120,8 +124,10 @@ int runEq3band(void *pointer, Chunk * input, Chunk * output){
 		eq3bandeffect->stage3.in = eq3bandeffect->stage2.out; 
 		runBiquad(&eq3bandeffect->stage3);
 		
-		output->data[i] = eq3bandeffect->stage3.out; 
+		output->data[i] = eq3bandeffect->stage3.out;
+
 		
+
 		
 	}
 	GPIO_ResetBits(GPIOB, NEXYS4_JC2);

@@ -65,17 +65,39 @@ void resetBiquad(BiquadStage *s){
 /* Retrun type etc */
 
 int runBiquad(BiquadStage *s){   //maybe change to void depending on return method....
+
+
+
+		/* IIR DFI difference equation: */
+		s->outUnscaled = 	( s->coeff->b0 * s->in 		);
+		s->outUnscaled += 	( s->coeff->b1 * s->xmem1	); 
+		s->outUnscaled += 	( s->coeff->b2 * s->xmem2	); 
+		s->outUnscaled -= 	( s->coeff->a1 * s->ymem1	); 
+		s->outUnscaled -= 	( s->coeff->a2 * s->ymem2	);
 	
+		//* Scale back coefficient scaling factor */  
+		s->out = s->outUnscaled / s->coeff->scalefactor;  //Should maybe have check for scalefacto !=0! (hangs simulator if uninitialized)
+		
+
+		//HARDCODE TESTING OF SHIFT ISTEAD OF DIVIDING: (SOME COEFFICIENTS DOES NOT MATCH THIS:
+
+////		s->out = s->outUnscaled >> 14; //14=16384 s->coeff->scalefactor;  //Should maybe have check for scalefacto !=0! (hangs simulator if uninitialized)
 	
-	/* IIR DFI difference equation: */
-	s->outUnscaled = 	( s->coeff->b0 * s->in 		);
-	s->outUnscaled += 	( s->coeff->b1 * s->xmem1	); 
-	s->outUnscaled += 	( s->coeff->b2 * s->xmem2	); 
-	s->outUnscaled -= 	( s->coeff->a1 * s->ymem1	); 
-	s->outUnscaled -= 	( s->coeff->a2 * s->ymem2	);
+
+
+
+
+////		/* IIR DFI difference equation: */
+////		s->outUnscaled = 	( (s->coeff->b0 * s->in 	)/s->coeff->scalefactor	);
+////		s->outUnscaled += 	( (s->coeff->b1 * s->xmem1	)/s->coeff->scalefactor	);
+////		s->outUnscaled += 	( (s->coeff->b2 * s->xmem2	)/s->coeff->scalefactor	);
+////		s->outUnscaled -= 	( (s->coeff->a1 * s->ymem1	)/s->coeff->scalefactor	);
+////		s->outUnscaled -= 	( (s->coeff->a2 * s->ymem2	)/s->coeff->scalefactor	);
 	
-	//* Scale back coefficient scaling factor */  
-	s->out = s->outUnscaled / s->coeff->scalefactor;  //Should maybe have check for scalefacto !=0! (hangs simulator if uninitialized)
+		//* Scale back coefficient scaling factor */  
+////		s->out = s->outUnscaled;  //Should maybe have check for scalefacto !=0! (hangs simulator if uninitialized)
+
+
 	
 	//* Shift delay line */
 	s->xmem2 = s->xmem1;

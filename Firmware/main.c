@@ -49,8 +49,8 @@ int main(void){
 
 	//Init EQ
 	initEqCoeff();
-////	eq1 = initDspFx("EQ 1-band", 0, init_eq1band(treble[4]), &runEq1band);
-	eq3 = initDspFx("EQ 3-band", 0, init_eq3band(), &runEq3band); 
+	eq1 = initDspFx("EQ 1-band", 0, init_eq1band(treble[4]), &runEq1band);
+///	eq3 = initDspFx("EQ 3-band", 0, init_eq3band(), &runEq3band); 
 	
 	//Delay
 ////	delay1 = initDspFx("Delay 1", 0, init_delay(100), &calcDelay);
@@ -60,9 +60,9 @@ int main(void){
 	bins = 1;
 	bin = calloc(bins, sizeof(DspBin));
 ////	bin[0] = initDspBin(1, delay1);
-////	bin[1] = initDspBin(1, eq1);
+	bin[0] = initDspBin(0, eq1);
 ////	bin[2] = initDspBin(1, eq3);
-	bin[0] = initDspBin(0, eq3);
+///	bin[0] = initDspBin(0, eq3);
 
 	//Init dspsystem
 	input = calloc(1, sizeof(Chunk));
@@ -120,10 +120,15 @@ int main(void){
 				dspsystem->bin[0]->bypass = (dspsystem->bin[0]->bypass+1)%2;
 				printf("EQ Bypass: %d\n", dspsystem->bin[0]->bypass);
 			} else {
-
+				/* 3-Band */
 				//setEqMidCoeff(eq3->structPointer, &midrange[input_buffer[0]-48]);
 				//setEqTrebleCoeff(eq3->structPointer, &treble[input_buffer[0]-48]);
-				setEqBassCoeff(eq3->structPointer, &bass[input_buffer[0]-48]);
+				//setEqBassCoeff(eq3->structPointer, &bass[input_buffer[0]-48]);
+
+				/* 1-Band */
+				setEq1bandCoeff(eq1->structPointer, &midrange[input_buffer[0]-48]);
+				setEq1bandCoeff(eq1->structPointer, &treble[input_buffer[0]-48]);
+				setEq1bandCoeff(eq1->structPointer, &bass[input_buffer[0]-48]);
 			}
 		}
 	}
