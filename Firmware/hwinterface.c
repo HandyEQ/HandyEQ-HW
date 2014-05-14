@@ -21,12 +21,17 @@ extern int encDir;
 extern int btnPress ;
 extern char dashOrSpace;
 
+extern volatile int spi_size;
+extern volatile int * varsToWrite;
+extern volatile int * varsToRead;
+extern volatile int address;
+
 Interface * initHwInterface(){
 	Interface * interface;
 	NEXYS4_GPIO_Init();
 	NEXYS4_TIMER_Init();
 	NEXYS4_OLED_SPI_Init();
-	NEXYS4_SEVENSEG_Init();
+	//NEXYS4_SEVENSEG_Init();
 	interface = calloc(1, sizeof(Interface));
 	interface->sevenseg = calloc(9, sizeof(char));
 	return interface;
@@ -39,12 +44,14 @@ Menu * initMenu(DspSystem * dspsystem){
 		
 	for(i = 0; i < dspsystem->size; i++){
 		for(j = 0; j < 3; j++){	
-			//Add bypass function to menu for each bin
-			addSetting(menu, dspsystem->bin[i], j, dspsystem->bin[i]->fx->menusettings->settingName[j], dspsystem->bin[i]->fx->menusettings->setting[j]);
-	
+			//Add other settings	
+			addSetting(menu, dspsystem->bin[i], j, dspsystem->bin[i]->fx->menusettings->settingName[j], dspsystem->bin[i]->fx->menusettings->setting[j]);	
 		}
-		//Add other settings
+		//Add bypass function to menu for each bin
 		addSetting(menu, dspsystem->bin[i], 3, "BP\0", &bypassDspBin);
+		dspsystem->bin[i]->fx->menusettings->stepVal[j] = 1;
+		dspsystem->bin[i]->fx->menusettings->stepRangeH[j] = 1;
+		dspsystem->bin[i]->fx->menusettings->stepRangeL[j] = 0;
 	}
 	return menu;
 }
@@ -184,11 +191,12 @@ void menuNavigation(Menu * menu, Interface * interface){
 
 void updateSetting(Menu * menu, Interface * interface){
 	if(menu->column == 3){
+		//Bypass Effect
 		(*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])(menu->dspsystem->bin[menu->row], interface->encValue);
-		//(*menu->setting[menu->row][menu->column])(menu->dspsystem->bin[menu->row], interface->encValue);
 	} else { 
+		//Update setting
 		(*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])(menu->dspsystem->bin[menu->row]->fx->structPointer, interface->encValue);
-		//(*menu->setting[menu->row][menu->column])(menu->dspsystem->bin[menu->row]->fx->structPointer, interface->encValue);
+		(*menu->dspsystem->bin[menu->row]->fx->menusettings->save)(menu->dspsystem->bin[menu->row]->fx->structPointer);
 	}	
 	sprintf(menu->value[menu->row][menu->column], "%5d", interface->encValue);
 	strcpy(interface->oled[menu->row], menu->value[menu->row][menu->column]);

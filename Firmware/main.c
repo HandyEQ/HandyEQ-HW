@@ -15,7 +15,6 @@
 
 int newSample;
 int newUart;
-int newSPIWreq;
 char input_buffer[200];
 int counter;
 
@@ -34,6 +33,11 @@ int encDir = 0;
 int btnPress = 0;
 char dashOrSpace = ' ';
 int i = 0;
+
+extern volatile int spi_size;
+extern volatile int * varsToWrite;
+extern volatile int * varsToRead;
+extern volatile int address;
 
 BiquadCoeff bass[9];
 BiquadCoeff midrange[9];
@@ -70,17 +74,20 @@ int main(void){
 	catch_interrupt(new_uart, uart_irq);
 	init_uart(115200);
 	enable_irq(uart_irq);
+	
+	//SPI
+	SPIMEM_Init();
+	catch_interrupt(SPIMEM_Write_vars, spiW_irq);
+	enable_irq(spiW_irq);
+	set_irq_level(spiW_irq, 1);
+	catch_interrupt(SPIMEM_Read_vars, spiR_irq);
+	enable_irq(spiR_irq);	
+	set_irq_level(spiR_irq, 1);
 
 	//Buffer
 	newSample = 0;
 	catch_interrupt(new_sample, buf_irq);
 	enable_irq(buf_irq);
-
-	//SPI
-	newSPIWreq = 0;
-	SPIMEM_Init();
-	catch_interrupt(new_SPIWreq, spi_irq);
-	enable_irq(spi_irq);	
 
 	//Init Delay
 	de1 = init_delay(100);
@@ -117,6 +124,7 @@ int main(void){
 	clearOled();
 	showStatus(menu, interface);
 
+	//de2 = init_delay(100);
 	//Main Loop
 	//setEqMidCoeff(eq3, 4);
 	printf("Hello from HandyEq!");
@@ -126,6 +134,7 @@ int main(void){
 			runDspSystem(dspsystem);
 			output_chunk(output);
 			newSample = 0;
+			//printf("S");
 		} //else {
 			//pollSwitches(interface);
 			readEnc(menu, interface);
@@ -133,9 +142,7 @@ int main(void){
 		//}
 		if(newUart){
 			newUart = 0;
-		}
-		if(newSPIWreq){
-			newSPIWreq = 0;
+			uart_input();
 		}
 	}
 	return 0;
@@ -149,13 +156,11 @@ void new_uart(){
 	newUart = 1;
 }
 
-void new_SPIWreq(){
-	newSPIWreq = 1;
-	//SPIMEM_Write_vars(); //does not block, how to set priority?
-}
-
 void uart_input(){
 	input_buffer[0] = recieve_uart();
-
+	/*varsToWrite[0] = 1234;
+	varsToWrite[1] = 12345;
+	varsToWrite[2] = 123;
+	force_irq(spiW_irq);*/
 }
 

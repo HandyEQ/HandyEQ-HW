@@ -4,26 +4,24 @@
 #include <stdio.h>
 #include "spi_mem.h"
 
+extern volatile int spi_size;
+extern volatile int * varsToWrite;
+extern volatile int * varsToRead;
+extern volatile int address;
+
 DelayEffect * init_delay(){
 	//Initialize
 	DelayEffect * delayEff = calloc(1, sizeof(DelayEffect));
 	delayEff->menusettings = calloc(1, sizeof(MenuSettings));
 	delayEff->head = 0;
+	
 	delayEff->gain = 2000;
 	delayEff->feedback = 10000;
 	delayEff->delay = 100;
 
-	/*loadDelaySettings();
-	delayEff->gain = varsToRead[0];
-	delayEff->feedback = varsToRead[1];
-	delayEff->delay = varsToRead[2];*/
-	
-	varsToWrite[0] = 2000;//delayEff->gain;
-	varsToWrite[1] = 10000;//delayEff->feedback;
-	varsToWrite[2] = 100;//delayEff->delay;
-	saveDelaySettings();
-	
+	//loadDelaySettings(delayEff);	
 	setDelayTime(delayEff, delayEff->delay);
+	saveDelaySettings(delayEff);
 
 	//Define menu
 	//Functions
@@ -54,13 +52,25 @@ DelayEffect * init_delay(){
 	return delayEff;
 }
 
-void saveDelaySettings(){
-	SPIMEM_Write_vars();
-	force_irq(spi_irq); //Dont seem to block???
+void saveDelaySettings(void * pointer){
+	DelayEffect * delayEff = pointer;
+	varsToWrite[0] = delayEff->gain;
+	varsToWrite[1] = delayEff->feedback;
+	varsToWrite[2] = delayEff->delay;
+	address = DELAYADDR;
+	//varsToWrite = varsToRead; // Just test
+	printf("Before Save\n");
+	force_irq(spiW_irq);
+	printf("After Save\n");
 }
 
-void loadDelaySettings(){
-	//SPIMEM_Read_var();
+void loadDelaySettings(void * pointer){
+	DelayEffect * delayEff = pointer;
+	address = DELAYADDR;
+	force_irq(spiR_irq);	
+	delayEff->gain = varsToRead[0];
+	delayEff->feedback = varsToRead[1];
+	delayEff->delay = varsToRead[2];
 }
 
 void removeDelay(void * pointer){
@@ -71,14 +81,12 @@ void removeDelay(void * pointer){
 void setDelayGain(void * pointer, int gain){
 	DelayEffect * delayEff = pointer;	
 	delayEff->gain = gain;
-	varsToWrite[0] = gain;
 	printf("Delay Gain: %d\n", gain);
 }
 
 void setDelayFeedback(void * pointer, int feedback){
 	DelayEffect * delayEff = pointer;
 	delayEff->feedback = feedback;
-	varsToWrite[1] = feedback;
 	printf("Delay Feedback: %d\n", feedback);
 }
 
@@ -93,12 +101,10 @@ void setDelayTime(void * pointer, int timeMs){
 	if(reqSize > 0){
 		setDelaySize(delayEff, reqSize);
 		delayEff->delay = timeMs;
-		varsToWrite[2] = timeMs;
 		printf("Delay Time: %d\n", timeMs);
 	} else if(reqSize == 0){
 		setDelaySize(delayEff, 48);
 		delayEff->delay = 1;
-		varsToWrite[2] = 1;
 		printf("Delay Time: %d\n", 1);
 	} else {
 		printf("Not Enough Memory!");

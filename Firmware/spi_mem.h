@@ -8,12 +8,13 @@ typedef struct
 }SPIMEM_TypeDef;
 
 #define SPIMEM               ((SPIMEM_TypeDef *) 0xFFF00400)
-#define spi_irq 14
+#define spiW_irq 11
+#define spiR_irq 14
 
-int spi_size;
-int * varsToWrite;
-int * varsToRead;
-int address;
+volatile int spi_size;
+volatile int * varsToWrite;
+volatile int * varsToRead;
+volatile int address;
 
 void SPIMEM_Init();
 void SPIMEM_SendCmd(int data);

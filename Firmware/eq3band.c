@@ -81,35 +81,31 @@ int setEq3bandCoeff(void * eqstructptr, BiquadCoeff * coeff){
 	return 0;
 }
 
-/*void saveEqSettings(void * pointer){
+void saveEqSettings(void * pointer){
 	Eq3BandEffect * eq = pointer;
-	int * values = calloc(3, sizeof(int));
-	values[0] = eq->stage1.index;
-	values[1] = eq->stage2.index;
-	values[2] = eq->stage3.index;
-	SPIMEM_Write_var(EQ3BANDADDR, values, 3);
-	free(values);
+	varsToWrite[0] = eq->stage1.index;
+	varsToWrite[1] = eq->stage2.index;
+	varsToWrite[2] = eq->stage3.index;	
+	address = EQ3BANDADDR;	
+	//varsToWrite = varsToRead; // Just test
+	force_irq(spiW_irq);
 }
 
 void loadEqSettings(void * pointer){
 	Eq3BandEffect * eq = pointer;
-	int * values;
-	values = SPIMEM_Read_var(EQ3BANDADDR, 3);
-
-	eq->stage1.index = values[0];
-	eq->stage2.index =values[1];
-	eq->stage3.index = values[2];
-
-	free(values);
-}*/
+	address = EQ3BANDADDR;
+	force_irq(spiR_irq);
+	varsToWrite[0] = eq->stage1.index;
+	varsToWrite[1] = eq->stage2.index;
+	varsToWrite[2] = eq->stage3.index;	
+	
+}
 
 /* 	Set Treble coefficients 	*/
 void setEqTrebleCoeff(void * eqstructptr, int index){
 	Eq3BandEffect * eq = eqstructptr;
 	eq->stage1.coeff = &treble[index];
 	eq->stage1.index = index;
-	varsToWrite[3] = index;
-	//saveEqSettings(eqstructptr);
 	
 	#ifdef PRINTEQDEBUG
 	printf("EQ3BAND: %s (%s) is set to %s at %s\n",eq->stage1.name,	eq->stage1.coeff->filtertype, eq->stage1.coeff->gain, eq->stage1.coeff->fc);
@@ -121,8 +117,6 @@ void setEqMidCoeff(void * eqstructptr, int index){
 	Eq3BandEffect * eq = eqstructptr;
 	eq->stage2.coeff = &midrange[index];
 	eq->stage2.index = index;
-	varsToWrite[4] = index;
-	//saveEqSettings(eqstructptr);
 	
 	#ifdef PRINTEQDEBUG
 	printf("EQ3BAND: %s (%s) is set to %s at %s\n",eq->stage2.name,	eq->stage2.coeff->filtertype, eq->stage2.coeff->gain, eq->stage2.coeff->fc);
@@ -135,8 +129,6 @@ void setEqBassCoeff(void * eqstructptr, int index){
 	Eq3BandEffect * eq = eqstructptr;
 	eq->stage3.coeff = &bass[index];
 	eq->stage3.index = index;
-	varsToWrite[5] = index;
-	//saveEqSettings(eqstructptr);
 	
 	#ifdef PRINTEQDEBUG
 	printf("EQ3BAND: %s (%s) is set to %s at %s\n",eq->stage3.name,	eq->stage3.coeff->filtertype, eq->stage3.coeff->gain, eq->stage3.coeff->fc);

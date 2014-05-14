@@ -8,10 +8,10 @@ typedef struct MenuSettings {
 	void (*setting[4])(void *, int);
 	void (*save)(void *);
 	void (*load)(void *);
-	char settingName[3][3];
-	int stepVal[3];
-	int stepRangeH[3];
-	int stepRangeL[3];
+	char settingName[4][3];
+	int stepVal[4];
+	int stepRangeH[4];
+	int stepRangeL[4];
 } MenuSettings;
 
 typedef struct DspFx {
