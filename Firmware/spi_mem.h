@@ -8,7 +8,14 @@ typedef struct
 }SPIMEM_TypeDef;
 
 #define SPIMEM               ((SPIMEM_TypeDef *) 0xFFF00400)
+#define spi_irq 14
 
+int spi_size;
+int * varsToWrite;
+int * varsToRead;
+int address;
+
+void SPIMEM_Init();
 void SPIMEM_SendCmd(int data);
 void SPIMEM_Detect();
 void SPIMEM_WriteEnable();
@@ -16,5 +23,5 @@ void SPIMEM_StatusRegister1();
 void SPIMEM_4kBSectorErase(char addr2, char addr1, char addr0);
 void SPIMEM_PageProgram(char addr2, char addr1, char addr0);
 void SPIMEM_Read(char addr2, char addr1, char addr0);
-void SPIMEM_Write_var(int address, int * values, int size);
-int * SPIMEM_Read_var(int address, int size);
+void SPIMEM_Write_vars();
+void SPIMEM_Read_vars();

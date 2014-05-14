@@ -29,6 +29,22 @@ unsigned char copy_buff[59184];
 	return 0;
 }*/
 
+void SPIMEM_Init(){
+	spi_size = 6;
+	varsToWrite = calloc(spi_size, sizeof(int));
+	varsToRead = calloc(spi_size, sizeof(int));
+	address = 0x00000000;
+
+	// Dummy to be able to write
+	varsToWrite[0] = 0x12345678;
+	varsToWrite[1] = 0x12345678; 
+	varsToWrite[2] = 0x12345678;
+	varsToWrite[3] = 0x12345678;
+	varsToWrite[4] = 0x12345678; 
+	varsToWrite[5] = 0x12345678;
+	SPIMEM_Write_vars(); 	
+}
+
 void SPIMEM_SendCmd(int data){
 	SPIMEM -> status |= 0x01; // clear done bit
 
@@ -326,20 +342,20 @@ void SPIMEM_Read(char addr2, char addr1, char addr0){
 	printf("Read done\n\r");
 }
 
-void SPIMEM_Write_var(int address, int values[], int size){
+void SPIMEM_Write_vars(){
 	int i = 0, j = 0;
-	int valBuffer[size][4];
+	int valBuffer[spi_size][4];
 
 	buffer_address[0] = (address >> 24) & 0xFF;
 	buffer_address[1] = (address >> 16) & 0xFF;
 	buffer_address[2] = (address >> 8) & 0xFF;
 	buffer_address[3] = address & 0xFF;
 
-	for(j = 0 ; j < size; j++){
-		valBuffer[j][0] = (values[j] >> 24) & 0xFF;
-		valBuffer[j][1] = (values[j] >> 16) & 0xFF;
-		valBuffer[j][2] = (values[j] >> 8) & 0xFF;
-		valBuffer[j][3] = values[j] & 0xFF;	
+	for(j = 0 ; j < spi_size; j++){
+		valBuffer[j][0] = (varsToWrite[j] >> 24) & 0xFF;
+		valBuffer[j][1] = (varsToWrite[j] >> 16) & 0xFF;
+		valBuffer[j][2] = (varsToWrite[j] >> 8) & 0xFF;
+		valBuffer[j][3] = varsToWrite[j] & 0xFF;	
 	}
 
 	SPIMEM_WriteEnable();
@@ -358,7 +374,7 @@ void SPIMEM_Write_var(int address, int values[], int size){
 		SPIMEM -> status |= 0x01; // clear done bit
 	}
 
-	for(j = 0; j < size ; j ++){		
+	for(j = 0; j < spi_size ; j ++){		
 
 		for (i = 0; i < sizeof(int); i++){	
 			SPIMEM -> transmit = valBuffer[j][i];
@@ -374,10 +390,9 @@ void SPIMEM_Write_var(int address, int values[], int size){
 	printf("Write_var done\n\r");
 }
 
-int * SPIMEM_Read_var(int address, int size){
+void SPIMEM_Read_var(){
 	int i = 0, j = 0;
-	int valBuffer[size][4];
-	int * returnBuffer = calloc(size, sizeof(int));
+	int valBuffer[spi_size][4];
 	//unsigned char buffer_address[4];	
 	//unsigned char buffer_value[4];
 
@@ -397,7 +412,7 @@ int * SPIMEM_Read_var(int address, int size){
 		SPIMEM -> status |= 0x01; // clear done bit
 	}
 	
-	for(j = 0 ; j < size; j++){
+	for(j = 0 ; j < spi_size; j++){
 
 		for (i = 0; i < sizeof(int); i++){	
 			SPIMEM -> transmit = 0x00; // dummy
@@ -413,13 +428,12 @@ int * SPIMEM_Read_var(int address, int size){
 
 	SPIMEM -> control &= 0xFFFFFFFE; // leave user mode, this command sets CSE to high automatically
 
-	for(j = 0; j < size; j++){
-		returnBuffer[j] = valBuffer[j][0]*1000 + valBuffer[j][1]*100 + valBuffer[j][2]*10 + valBuffer[j][3];	
+	for(j = 0; j < spi_size; j++){
+		varsToRead[j] = valBuffer[j][0]*1000 + valBuffer[j][1]*100 + valBuffer[j][2]*10 + valBuffer[j][3];	
 	}
 	
     	//printf("Returned %d \n\r", temp);
 	printf("Read_var done\n\r");
-	return returnBuffer;
 }
 
 

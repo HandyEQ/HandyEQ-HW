@@ -11,9 +11,11 @@
 #include "eq1band.h"
 #include "eq3band.h"
 #include "hwinterface.h"
+#include "spi_mem.h"
 
 int newSample;
 int newUart;
+int newSPIWreq;
 char input_buffer[200];
 int counter;
 
@@ -73,7 +75,13 @@ int main(void){
 	newSample = 0;
 	catch_interrupt(new_sample, buf_irq);
 	enable_irq(buf_irq);
-	
+
+	//SPI
+	newSPIWreq = 0;
+	SPIMEM_Init();
+	catch_interrupt(new_SPIWreq, spi_irq);
+	enable_irq(spi_irq);	
+
 	//Init Delay
 	de1 = init_delay(100);
 
@@ -126,6 +134,9 @@ int main(void){
 		if(newUart){
 			newUart = 0;
 		}
+		if(newSPIWreq){
+			newSPIWreq = 0;
+		}
 	}
 	return 0;
 }
@@ -136,6 +147,11 @@ void new_sample(){
 
 void new_uart(){
 	newUart = 1;
+}
+
+void new_SPIWreq(){
+	newSPIWreq = 1;
+	//SPIMEM_Write_vars(); //does not block, how to set priority?
 }
 
 void uart_input(){

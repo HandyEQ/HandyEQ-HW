@@ -24,7 +24,7 @@ void calcDelay(void * pointer, Chunk * input, Chunk * output);
 void setDelaySize(DelayEffect *delayEff, int size);
 void setDelayTime(void * pointer, int timeMs);
 void removeDelay(void * pointer);
-void saveDelaySettings(void * pointer);
-void loadDelaySettings(void * pointer);
+void saveDelaySettings();
+void loadDelaySettings();
 
 #endif

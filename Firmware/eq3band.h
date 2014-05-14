@@ -26,8 +26,8 @@ int setEq3bandCoeff(void * eqstructptr, BiquadCoeff * coeff);
 void setEqTrebleCoeff(void * eqstructptr, int index);
 void setEqMidCoeff(void * eqstructptr, int index);
 void setEqBassCoeff(void * eqstructptr, int index);
-void saveEqSettings(void * pointer);
-void loadEqSettings(void * pointer);
+//void saveEqSettings(void * pointer);
+//void loadEqSettings(void * pointer);
 
 
 #endif
