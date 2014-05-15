@@ -7,18 +7,18 @@
 #include "dspsystem.h"
 #include "spi_mem.h"
 
-extern int interruptServedRecently;
-extern int dbncCtr;
-extern int A;
-extern int B;
-extern int flagGPIOA;
-extern int currGPIOBState;
-extern int delayCtr;
-extern int flag3;
+extern volatile int interruptServedRecently;
+extern volatile int dbncCtr;
+extern volatile int A;
+extern volatile int B;
+extern volatile int flagGPIOA;
+extern volatile int currGPIOBState;
+extern volatile int delayCtr;
+extern volatile int flag3;
 
 extern char* s;
-extern int encDir;
-extern int btnPress ;
+extern volatile int encDir;
+extern volatile int btnPress ;
 extern char dashOrSpace;
 
 Interface * initHwInterface(){
@@ -39,12 +39,10 @@ Menu * initMenu(DspSystem * dspsystem){
 		
 	for(i = 0; i < dspsystem->size; i++){
 		for(j = 0; j < 3; j++){	
-			//Add other settings
-			//addSetting(menu, dspsystem->bin[i], j, dspsystem->bin[i]->fx->menusettings->settingName[j], dspsystem->bin[i]->fx->menusettings->setting[j]);
+			//Add init values for all settings
 			sprintf(menu->value[i][j], "%5d", dspsystem->bin[i]->fx->menusettings->initVal[j]);	
 		}
 		//Add bypass function to menu for each bin
-		//addSetting(menu, dspsystem->bin[i], 3, "BP\0", &bypassDspBin);
 		strcpy(dspsystem->bin[i]->fx->menusettings->settingName[3], "BP\0");
 		dspsystem->bin[i]->fx->menusettings->setting[3] = &bypassDspBin;
 		dspsystem->bin[i]->fx->menusettings->stepVal[3] = 1;

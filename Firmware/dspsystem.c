@@ -3,21 +3,31 @@
 #include <string.h>
 #include <stdio.h>
 
-DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out){
+DspSystem * initDspSystem(int size, Chunk * in, Chunk * out){
 	int i;
+	//Allocate Memory
 	DspSystem * dspsystem = calloc(1, sizeof(DspSystem));
-	
-	printf("DspSystem: Initialisation started\n");
+	dspsystem->bin = calloc(size, sizeof(DspBin));
 
-	dspsystem->bin = bin;
-	//Set size
-	dspsystem->size = size;	
 	//Init chunks 
 	dspsystem->in = in;
 	dspsystem->out = out;
-	
-	printf("DspSystem: Initialized, Size: %d\n", dspsystem->size);
 
+	//Init Bins
+	for(i = 0; i < size; i++){
+		dspsystem->bin[i] = initDspBin();
+		if(i == 0){
+			dspsystem->bin[i]->in = dspsystem->in
+			dspsystem->bin[i]->out = (Chunk *)calloc(1, sizeof(Chunk));
+		} else if(i == size-1){
+			dspsystem->bin[i]->in = dspsystem->bin[i-1]->out;
+			dspsystem->bin[i]->out = dspsystem->out
+		} else {
+			dspsystem->bin[i]->in = dspsystem->bin[i-1]->out;
+			dspsystem->bin[i]->out = (Chunk *)calloc(1, sizeof(Chunk));
+		}
+	}
+	dspsystem->size = size;	
 	return dspsystem;
 }
 
@@ -31,11 +41,26 @@ DspFx * initDspFx(char * name, void * structPointer, MenuSettings * menusettings
 	return fx;
 }
 
-DspBin * initDspBin(int bypass, DspFx * fx){
+DspBin * initDspBin(){
 	DspBin * bin = calloc(1, sizeof(DspBin));
-	bin->bypass = bypass;
-	bin->fx = fx;
+	bin->bypass = 1;
 	return bin;
+}
+
+void addFx(DspBin * bin, DspFx * fx){
+	bin->fx = fx;
+}
+
+void removeFx(DspBin * bin){
+	bin->bypass = 1;	
+	bin->fx = NULL;	
+}
+
+void removeBin(DspSystem * dspsystem, int index){
+	//Might not be needed
+}
+void addBin(DspSystem * dspsystem, int index, DspBin * bin){
+
 }
 
 void bypassDspBin(void * pointer, int bypass){
@@ -44,9 +69,20 @@ void bypassDspBin(void * pointer, int bypass){
 	printf("Bypassed Bin\n");
 }
 
-void connectDspBin(DspBin * bin, Chunk * in, Chunk * out){
-	bin->in = in;
-	bin->out = out;
+void connectDspBin(DspBin * bin1, DspBin * bin2){
+	Chunk * binToBin = calloc(1, sizeof(Chunk));
+	bin1->in = in;
+	bin2->out = out;
+
+	//Connect bins
+	bin1tobin2 = calloc(1, sizeof(Chunk));
+	//bin2tobin3 = calloc(1, sizeof(Chunk));
+	//bin3tobin4 = calloc(1, sizeof(Chunk));
+	connectDspBin(dspsystem->bin[0], dspsystem->in, bin1tobin2);
+	connectDspBin(dspsystem->bin[1], bin1tobin2, dspsystem->out);
+	//connectDspBin(dspsystem->bin[2], bin2tobin3, bin3tobin4);
+	//connectDspBin(dspsystem->bin[3], bin3tobin4, dspsystem->out);
+	
 }
 
 void runDspSystem(DspSystem * dspsystem){
@@ -61,12 +97,3 @@ void runDspSystem(DspSystem * dspsystem){
 	}
 }
 
-void infoDspSystem(DspSystem *dspsystem){
-	 
-	//infoDspBin(&(dspsystem->bin1));
-	
-	//printf("DSPSYSTEM,bin1: \t id: %i\n",dspsystem->bin1.id);	
-	//printf("DSPSYSTEM,bin1: \t bypass: %i\n",dspsystem->bin1.bypass);	
-	//printf("DSPSYSTEM,bin2: \t id: %i\n",dspsystem->bin2.id);
-	//printf("DSPSYSTEM,bin2: \t bypass: %i\n",dspsystem->bin2.bypass);	
-}

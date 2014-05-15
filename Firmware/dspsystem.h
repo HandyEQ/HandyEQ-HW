@@ -45,7 +45,8 @@ DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out);
 DspFx * initDspFx(char * name, void * structPointer, MenuSettings * menusettings);
 DspBin * initDspBin(int bypass, DspFx * fx);
 void connectDspBin(DspBin *bin, Chunk * in, Chunk * out);
-void infoDspSystem(DspSystem *dspsystem);
 void bypassDspBin(void * pointer, int bypass);
+void removeBin(DspSystem * dspsystem, int index);
+void changeBin(DspSystem * dspsystem, int index, DspBin * bin);
 
 #endif

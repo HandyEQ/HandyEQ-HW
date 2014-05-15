@@ -17,10 +17,11 @@ void retrieve_chunk(Chunk *current_chunk){
 		} while(hold & (1 << 16) == 0);	
 		s_inp_buf->reg = (0 << 17);
 		hold  &= 0x0000FFFF;
-		if(hold & 0x00008000 == 1){
-			hold += 0xFFFF0000;
+		if((hold & 0x00008000) == 1){
+			hold |= 0xFFFF0000;
 		}		
 		current_chunk->data[i++] = hold;
+		//printf("%d\r", (signed int)(hold));
 	}
 }
 

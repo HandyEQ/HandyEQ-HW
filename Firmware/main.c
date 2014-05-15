@@ -12,29 +12,30 @@
 #include "eq1band.h"
 #include "eq3band.h"
 #include "hwinterface.h"
+#include "volume.h"
 
 //Flag for new sample
-int newSample;
+volatile int newSample;
 
 //Flag for new UART and data buffer
-int newUart;
+volatile int newUart;
 UartBuffers * uartBuffers;
 
 //Varibales for GPIO 
-int interruptServedRecently = 0;
-int dbncCtr = 0;
-int A = 0;
-int B = 0;
-int flagGPIOA = 0;
-int currGPIOBState = 0;
-int delayCtr = 0;
-int flag3 = 0;
+volatile int interruptServedRecently = 0;
+volatile int dbncCtr = 0;
+volatile int A = 0;
+volatile int B = 0;
+volatile int flagGPIOA = 0;
+volatile int currGPIOBState = 0;
+volatile int delayCtr = 0;
+volatile int flag3 = 0;
 
 char* s = "AAA00BBB";
-int encDir = 0;
-int btnPress = 0;
+volatile int encDir = 0;
+volatile int btnPress = 0;
 char dashOrSpace = ' ';
-int i = 0;
+volatile int i = 0;
 
 //Coeffs for EQ
 BiquadCoeff bass[9];
@@ -43,7 +44,6 @@ BiquadCoeff treble[9];
 
 
 int main(void){
-	
 	DspSystem * dspsystem;
 	int bins;
 	DspBin ** bin;
@@ -106,10 +106,11 @@ int main(void){
 	printf("Hello from HandyEq!");
 	while(1){
 		if(newSample){
-			retrieve_chunk(input);			
-			runDspSystem(dspsystem);
-			output_chunk(output);
 			newSample = 0;
+			retrieve_chunk(input);			
+			//runDspSystem(dspsystem);
+			output_chunk(output);
+			
 		} //else {
 			//pollSwitches(interface);
 			readEnc(menu, interface);
@@ -117,6 +118,7 @@ int main(void){
 		//}
 		if(newUart){
 			newUart = 0;
+			uart_input(dspsystem);
 		}
 	}
 	return 0;
@@ -137,7 +139,12 @@ void new_uart(){
 	}
 }
 
-void uart_input(){
+void uart_input(DspSystem * dspsystem){
+	DelayEffect * delay;
+	Eq3BandEffect * equalizer;
+	VolumeControl * volume;
+	DspBin * bin;
+	DspFx * fx;
 	//Pointer to base of buffer array
 	char * j, * input = uartBuffers->buffer[(uartBuffers->bufferSelect+1)%2];
 
@@ -164,18 +171,41 @@ void uart_input(){
 				if((input[k] == '0')){
 					//If the new effect is bypass.
 					//printf("bypasseffect1\n");
+
+					dspsystem->bin[0]->bypass = 1;
+
 				}else if((input[k] == '1')){
 					//If the new effect is noeffect.
 					//printf("noeffecteffect1\n");
+
+					removeBin(dspsystem, 0);
+
 				}else if((input[k] == '2')){
 					//If the new effect is equalizer.
 					//printf("equalizereffect1\n");
+					
+					equalizer = init_eq3band();
+					fx = initDspFx("EQ", equalizer, equalizer->menusettings);
+					bin = initDspBin(0, fx);
+					changeBin(dspsystem, 0, bin);
+	 
 				}else if((input[k] == '3')){
 					//If the new effect is volume.
 					//printf("volumeeffect1\n");
+					
+					volume = initVolume();
+					fx = initDspFx("EQ", volume, volume->menusettings);
+					bin = initDspBin(0, fx);
+					changeBin(dspsystem, 0, bin);					
+
 				}else if((input[k] == '4')){
 					//If the new effect is delay.
 					//printf("delayeffect1\n");
+
+					delay = init_delay(300);
+					fx = initDspFx("EQ", delay, delay->menusettings);
+					bin = initDspBin(0, fx);
+					changeBin(dspsystem, 0, bin);
 				}			
 			}else if(input[k] == '2'){
 				//Used to minimize the calculations.
