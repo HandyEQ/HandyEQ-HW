@@ -8,10 +8,11 @@ DelayEffect * init_delay(){
 	//Initialize
 	DelayEffect * delayEff = calloc(1, sizeof(DelayEffect));
 	delayEff->menusettings = calloc(1, sizeof(MenuSettings));
-	/*delayEff->head = 0;
-	delayEff->gain = 0;
-	delayEff->feedback = 0;*/
-	loadSettings(delayEff);
+	delayEff->head = 0;
+	delayEff->gain = 1635;
+	delayEff->feedback = 8190;
+	delayEff->delay = 300;
+	//loadSettings(delayEff);
 	setDelayTime(delayEff, delayEff->delay);
 
 	//Define menu
@@ -26,6 +27,10 @@ DelayEffect * init_delay(){
 	strcpy(delayEff->menusettings->settingName[0], "GA");
 	strcpy(delayEff->menusettings->settingName[1], "FB");
 	strcpy(delayEff->menusettings->settingName[2], "DT");
+	//Init values for settings
+	delayEff->menusettings->initVal[0] = delayEff->gain;
+	delayEff->menusettings->initVal[1] = delayEff->feedback;
+	delayEff->menusettings->initVal[2] = delayEff->delay;
 	//Step values for settings
 	delayEff->menusettings->stepVal[0] = 327;
 	delayEff->menusettings->stepVal[1] = 1638;
@@ -110,11 +115,12 @@ int fixedMul(int a, int b){
 int fixedAdd(int a, int b){
 	int sum = a+b;
  	if(sum > 32767){
-		sum = 32767;
+		return 32767;
 	} else if (sum < -32768) {
-		sum = -32768;
+		return -32768;
+	} else {
+		return sum;
 	}
-	return sum;
 }
 
 void calcDelay(void *pointer, Chunk * input, Chunk * output){
@@ -131,7 +137,7 @@ void calcDelay(void *pointer, Chunk * input, Chunk * output){
 	//Manipulate sound
 	
 	for(i = 0;  i < chunk_size; i++){
-		output->data[i] = fixedAdd(delayEff->data[head], fixedMul(16384, input->data[i]));
+		output->data[i] = fixedAdd(delayEff->data[head], (input->data[i]>>1));
 		delayEff->data[head] = fixedAdd(fixedMul(gain, delayEff->data[head]), fixedMul(feedback, input->data[i]));		
 		head = (head+1)%size;		
 	}

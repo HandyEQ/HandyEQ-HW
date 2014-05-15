@@ -27,6 +27,7 @@ DspFx * initDspFx(char * name, void * structPointer, MenuSettings * menusettings
 	fx->name = name;
 	fx->structPointer = structPointer;
 	fx->menusettings = menusettings;
+	//fx->menusettings = (MenuSettings *)(structPointer+32);
 	return fx;
 }
 

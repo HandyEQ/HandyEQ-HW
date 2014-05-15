@@ -30,16 +30,14 @@ Eq3BandEffect * init_eq3band(){
 	strcpy(eq3bandeffect->stage1.name, "Stage 1");
 	strcpy(eq3bandeffect->stage2.name, "Stage 2");
 	strcpy(eq3bandeffect->stage3.name, "Stage 3");
-
-	///Insert init rundalgorithm pointer function (For later)
 	
 	//Insert values for menu
 	eq3bandeffect->menusettings->function = &runEq3band;
 	eq3bandeffect->menusettings->setting[0] = &setEqTrebleCoeff;
 	eq3bandeffect->menusettings->setting[1] = &setEqMidCoeff;
 	eq3bandeffect->menusettings->setting[2] = &setEqBassCoeff;
-	eq3bandeffect->menusettings->save = NULL;
-	eq3bandeffect->menusettings->load = NULL;
+	eq3bandeffect->menusettings->save = &saveEQ;
+	eq3bandeffect->menusettings->load = &loadEQ;
 
 	strcpy(eq3bandeffect->menusettings->settingName[0], "TB");
 	strcpy(eq3bandeffect->menusettings->settingName[1], "MI");
@@ -64,6 +62,14 @@ Eq3BandEffect * init_eq3band(){
 	#endif	
 
 	return eq3bandeffect; // returns pointer to eqstruct
+}
+
+void saveEQ(void * ptr){
+
+}
+
+void loadEQ(void * ptr){
+
 }
 
 int setEq3bandCoeff(void * eqstructptr, BiquadCoeff * coeff){

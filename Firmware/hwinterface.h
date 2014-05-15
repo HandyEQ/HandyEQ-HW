@@ -15,14 +15,7 @@ typedef struct Interface {
 } Interface;
 
 typedef struct Menu {
-	DspSystem * dspsystem;
-	/*
-	MenuSettings * menusettings;		
-	char settingName[4][4][3];
-	void (*setting[4][4])(void *, int);
-	void (*save[4])(void *);
-	int (*load[4])(void *);
-	*/	
+	DspSystem * dspsystem;	
 	char value[4][4][6];	
 	int state;
 	int row;

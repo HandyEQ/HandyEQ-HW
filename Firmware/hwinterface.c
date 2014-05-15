@@ -39,12 +39,18 @@ Menu * initMenu(DspSystem * dspsystem){
 		
 	for(i = 0; i < dspsystem->size; i++){
 		for(j = 0; j < 3; j++){	
-			//Add bypass function to menu for each bin
-			addSetting(menu, dspsystem->bin[i], j, dspsystem->bin[i]->fx->menusettings->settingName[j], dspsystem->bin[i]->fx->menusettings->setting[j]);
-	
+			//Add other settings
+			//addSetting(menu, dspsystem->bin[i], j, dspsystem->bin[i]->fx->menusettings->settingName[j], dspsystem->bin[i]->fx->menusettings->setting[j]);
+			sprintf(menu->value[i][j], "%5d", dspsystem->bin[i]->fx->menusettings->initVal[j]);	
 		}
-		//Add other settings
-		addSetting(menu, dspsystem->bin[i], 3, "BP\0", &bypassDspBin);
+		//Add bypass function to menu for each bin
+		//addSetting(menu, dspsystem->bin[i], 3, "BP\0", &bypassDspBin);
+		strcpy(dspsystem->bin[i]->fx->menusettings->settingName[3], "BP\0");
+		dspsystem->bin[i]->fx->menusettings->setting[3] = &bypassDspBin;
+		dspsystem->bin[i]->fx->menusettings->stepVal[3] = 1;
+		dspsystem->bin[i]->fx->menusettings->stepRangeH[3] = 1;
+		dspsystem->bin[i]->fx->menusettings->stepRangeL[3] = 0;
+		sprintf(menu->value[i][3], "%5d", dspsystem->bin[i]->bypass); 
 	}
 	return menu;
 }
