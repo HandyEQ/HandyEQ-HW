@@ -38,35 +38,9 @@ Menu * initMenu(DspSystem * dspsystem){
 	menu->dspsystem = dspsystem;	
 		
 	for(i = 0; i < dspsystem->size; i++){
-		for(j = 0; j < 3; j++){	
-			//Add init values for all settings
-			sprintf(menu->value[i][j], "%5d", dspsystem->bin[i]->fx->menusettings->initVal[j]);	
-		}
-		//Add bypass function to menu for each bin
-		strcpy(dspsystem->bin[i]->fx->menusettings->settingName[3], "BP\0");
-		dspsystem->bin[i]->fx->menusettings->setting[3] = &bypassDspBin;
-		dspsystem->bin[i]->fx->menusettings->stepVal[3] = 1;
-		dspsystem->bin[i]->fx->menusettings->stepRangeH[3] = 1;
-		dspsystem->bin[i]->fx->menusettings->stepRangeL[3] = 0;
-		sprintf(menu->value[i][3], "%5d", dspsystem->bin[i]->bypass); 
+		addSetting(menu, i);
 	}
 	return menu;
-}
-
-void addEffect(Menu * menu, DspBin * bin){
-
-}
-
-void addSetting(Menu * menu, DspBin * bin, int place, char * settingAb, void (*setting)(void *, int)){
-	int i;
-	for(i = 0; i < menu->dspsystem->size; i++){
-		//printf("%d\n", i);
-		if(menu->dspsystem->bin[i] == bin){	
-			memcpy(menu->dspsystem->bin[i]->fx->menusettings->settingName[place], settingAb, 3*sizeof(char));
-			menu->dspsystem->bin[i]->fx->menusettings->setting[place] = setting;
-			sprintf(menu->value[i][place], "%5d", 0);  
-		}
-	}
 }
 
 void menuNavigation(Menu * menu, Interface * interface){
@@ -74,7 +48,6 @@ void menuNavigation(Menu * menu, Interface * interface){
 	if(menu->state == 0){
 		if(interface->buttons[0]){
 			interface->buttons[0] = 0;
-			showStatus(menu, interface);
 			menu->column = 0;
 
 		} else if(interface->buttons[1]){
@@ -89,17 +62,16 @@ void menuNavigation(Menu * menu, Interface * interface){
 			menu->row = menu->row == -1 ? menu->dspsystem->size-1 : menu->row;
 			selectRow(menu, interface);
 			menu->state = 1;
-			printf("row: %d, column: %d\n", menu->row, menu->column);
+			//printf("row: %d, column: %d\n", menu->row, menu->column);
 		} else if(interface->buttons[4]){
 			interface->buttons[4] = 0;
 			menu->row = (menu->row+1)%menu->dspsystem->size;
 			selectRow(menu, interface);
 			menu->state = 1;
-			printf("row: %d, column: %d\n", menu->row, menu->column);
+			//printf("row: %d, column: %d\n", menu->row, menu->column);
 		} else if(interface->encBtn){
 			interface->encBtn = 0;
 		}
-
 	} else if (menu->state == 1){
 		if(interface->buttons[0]){
 			interface->buttons[0] = 0;
@@ -113,34 +85,30 @@ void menuNavigation(Menu * menu, Interface * interface){
 			menu->column = menu->column == -1 ? 3 : menu->column;
 			selectSetting(menu, interface);
 			interface->encValue = atoi(menu->value[menu->row][menu->column]);
-			interface->encInc = 327;
-			if(menu->column == 3){
-				interface->encInc = 1;
-			}
 			menu->state = 2; 
-			printf("row: %d, column: %d\n", menu->row, menu->column);
+			//printf("row: %d, column: %d\n", menu->row, menu->column);
+
 		} else if(interface->buttons[2]){
 			interface->buttons[2] = 0;
 			menu->column = (menu->column+1)%4;
 			selectSetting(menu, interface);
 			interface->encValue = atoi(menu->value[menu->row][menu->column]);
-			interface->encInc = 327;
-			if(menu->column == 3){
-				interface->encInc = 1;
-			}
 			menu->state = 2;
-			printf("row: %d, column: %d\n", menu->row, menu->column);
+			//printf("row: %d, column: %d\n", menu->row, menu->column);
+
 		} else if(interface->buttons[3]){
 			interface->buttons[3] = 0;
 			menu->row = (menu->row-1)%menu->dspsystem->size;
 			menu->row = menu->row == -1 ? menu->dspsystem->size-1 : menu->row;
 			selectRow(menu, interface);
-			printf("row: %d, column: %d\n", menu->row, menu->column);
+			//printf("row: %d, column: %d\n", menu->row, menu->column);
+
 		} else if(interface->buttons[4]){
 			interface->buttons[4] = 0;
 			menu->row = (menu->row+1)%menu->dspsystem->size;
 			selectRow(menu, interface);
-			printf("row: %d, column: %d\n", menu->row, menu->column);
+			//printf("row: %d, column: %d\n", menu->row, menu->column);
+
 		} else if(interface->encBtn){
 			interface->encBtn = 0;
 		}
@@ -151,28 +119,23 @@ void menuNavigation(Menu * menu, Interface * interface){
 			showStatus(menu, interface);
 			menu->state = 0;
 			menu->column = 0;
-			printf("row: %d, column: %d\n", menu->row, menu->column);
+			//printf("row: %d, column: %d\n", menu->row, menu->column);
+
 		} else if(interface->buttons[1]){
 			interface->buttons[1] = 0;
 			menu->column = (menu->column-1)%4;
 			menu->column = menu->column == -1 ? 3 : menu->column;
 			interface->encValue = atoi(menu->value[menu->row][menu->column]);
-			interface->encInc = 327;
-			if(menu->column == 3){
-				interface->encInc = 1;
-			}
  			selectSetting(menu, interface);
-			printf("row: %d, column: %d\n", menu->row, menu->column);
+			//printf("row: %d, column: %d\n", menu->row, menu->column);
+
 		} else if(interface->buttons[2]){
 			interface->buttons[2] = 0;
 			menu->column = (menu->column+1)%4;
 			interface->encValue = atoi(menu->value[menu->row][menu->column]);
-			interface->encInc = 327;
-			if(menu->column == 3){
-				interface->encInc = 1;
-			}
 			selectSetting(menu, interface);
-			printf("row: %d, column: %d\n", menu->row, menu->column);
+			//printf("row: %d, column: %d\n", menu->row, menu->column);
+
 		} else if(interface->buttons[3]){
 			interface->buttons[3] = 0;
 
@@ -186,27 +149,74 @@ void menuNavigation(Menu * menu, Interface * interface){
 	}
 }
 
+void addSetting(Menu * menu, int row){
+	int j;
+	char * oled = calloc(17, sizeof(char));
+	for(j = 0; j < 3; j++){	
+		//Add init values for all settings
+		sprintf(menu->value[row][j], "%5d", menu->dspsystem->bin[row]->fx->menusettings->initVal[j]);	
+	}
+	//Add bypass function to menu for each bin
+	strcpy(menu->dspsystem->bin[row]->fx->menusettings->settingName[3], "BP\0");
+	menu->dspsystem->bin[row]->fx->menusettings->setting[3] = &bypassDspBin;
+	menu->dspsystem->bin[row]->fx->menusettings->stepVal[3] = 1;
+	menu->dspsystem->bin[row]->fx->menusettings->stepRangeH[3] = 1;
+	menu->dspsystem->bin[row]->fx->menusettings->stepRangeL[3] = 0;
+	sprintf(menu->value[row][3], "%5d", menu->dspsystem->bin[row]->bypass); 
+	sprintf(
+	    oled, "%1d:%.5s %.2s:%.5s", 
+		row, 
+	    menu->dspsystem->bin[row]->fx->name, 
+	    menu->dspsystem->bin[row]->fx->menusettings->settingName[0], 
+	    menu->value[row][0]
+	);
+	OLED_SendString(row, oled);
+}
+
+void updateValue(Menu * menu, int value, int row, int col){
+    sprintf(menu->value[row][col], "%5d", value);
+}
+
+
+void removeSetting(Menu * menu, int row){
+    OLED_SendString(row,"No Effect       \0");
+}
+
 void updateSetting(Menu * menu, Interface * interface){
-	if(menu->column == 3){
-		(*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])(menu->dspsystem->bin[menu->row], interface->encValue);
-		//(*menu->setting[menu->row][menu->column])(menu->dspsystem->bin[menu->row], interface->encValue);
-	} else { 
-		(*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])(menu->dspsystem->bin[menu->row]->fx->structPointer, interface->encValue);
-		//(*menu->setting[menu->row][menu->column])(menu->dspsystem->bin[menu->row]->fx->structPointer, interface->encValue);
-	}	
-	sprintf(menu->value[menu->row][menu->column], "%5d", interface->encValue);
-	strcpy(interface->oled[menu->row], menu->value[menu->row][menu->column]);
-	OLED_SendStringPos(menu->row, menu->value[menu->row][menu->column], 11);
-	
-	//Write to mem
-	
-	
+    if(menu->dspsystem->bin[menu->row]->fx == NULL){
+        OLED_SendString(menu->row,"No Effect       \0");
+    } else {
+        if(menu->column == 3){
+	        (*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])
+	        (
+		        menu->dspsystem->bin[menu->row], 
+		        interface->encValue
+	        );
+        } else { 
+	        (*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])
+	        (
+		        menu->dspsystem->bin[menu->row]->fx->structPointer, 
+		        interface->encValue
+	        );
+        }	
+        sprintf(menu->value[menu->row][menu->column], "%5d", interface->encValue);
+        strcpy(interface->oled[menu->row], menu->value[menu->row][menu->column]);
+        OLED_SendStringPos(menu->row, menu->value[menu->row][menu->column], 11);
+    }
 }
 
 void selectSetting(Menu * menu, Interface * interface){
-	//menu->settingName[menu->row][menu->column]
-	sprintf(interface->oled[menu->row], "%.2s:%.5s", menu->dspsystem->bin[menu->row]->fx->menusettings->settingName[menu->column], menu->value[menu->row][menu->column]);
-	OLED_SendStringPos(menu->row, interface->oled[menu->row], 8);
+    if(menu->dspsystem->bin[menu->row]->fx == NULL){
+        updateSetting(menu, interface);
+    } else {
+        sprintf(
+            interface->oled[menu->row], 
+            "%.2s:%.5s", 
+            menu->dspsystem->bin[menu->row]->fx->menusettings->settingName[menu->column], 
+            menu->value[menu->row][menu->column]
+        );
+        OLED_SendStringPos(menu->row, interface->oled[menu->row], 8);
+    }
 }
 
 void selectRow(Menu * menu, Interface * interface){
@@ -246,7 +256,13 @@ void showStatus(Menu * menu, Interface * interface){
 	//float v1, v2, v3;
 	for(i = 0; i < menu->dspsystem->size; i++){
 		//menu->settingName[i][0]
-		sprintf(interface->oled[i], "%1d:%.5s %.2s:%.5s", i, menu->dspsystem->bin[i]->fx->name, menu->dspsystem->bin[i]->fx->menusettings->settingName[0], menu->value[i][0]);
+		sprintf(
+		    interface->oled[i], "%1d:%.5s %.2s:%.5s", 
+		    i, 
+		    menu->dspsystem->bin[i]->fx->name, 
+		    menu->dspsystem->bin[i]->fx->menusettings->settingName[0], 
+		    menu->value[i][0]
+		);
 		OLED_SendString(i, interface->oled[i]);
 	}
 }
@@ -276,37 +292,37 @@ void readEnc(Menu * menu, Interface * interface){
 		{
 			//Center
 			interface->buttons[0] = 1;
-			//printf("C\n");
+			////printf("C\n");
 		}
 		else if ((currGPIOBState & NEXYS4_BTNL) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTNL))
 		{	
 			//Left
 			interface->buttons[1] = 1;
-			//printf("L\n");
+			////printf("L\n");
 		}
 		else if ((currGPIOBState & NEXYS4_BTNR) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTNR))
 		{
 			//Right
 			interface->buttons[2] = 1;
-			//printf("R\n");
+			////printf("R\n");
 		}
 		else if ((currGPIOBState & NEXYS4_BTNU) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTNU))
 		{
 			//Up
 			interface->buttons[3] = 1;
-			//printf("U\n");
+			////printf("U\n");
 		}
 		else if ((currGPIOBState & NEXYS4_BTND) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTND))
 		{
 			//Down
 			interface->buttons[4] = 1;
-			//printf("D\n");
+			////printf("D\n");
 		}
 		else if ((currGPIOBState & NEXYS4_ENC_BTN) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_ENC_BTN))
 		{
 			//Enc
 			interface->encBtn = 1;
-			//printf("E\n");
+			////printf("E\n");
 		}
 	}
 }

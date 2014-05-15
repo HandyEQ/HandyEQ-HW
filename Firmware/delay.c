@@ -46,6 +46,11 @@ DelayEffect * init_delay(){
 	//saveSettings(delayEff);
 	return delayEff;
 }
+ 
+/*
+Char * printSettings(){
+	Char * output = calloc(10000, sizeof(Char));
+}*/
 
 void saveSettings(void * pointer){
 	DelayEffect * delayEff = pointer;
@@ -87,7 +92,8 @@ void setDelayFeedback(void * pointer, int feedback){
 }
 
 void setDelaySize(DelayEffect * delayEff, int size){
-	delayEff->data = realloc(delayEff->data, size*sizeof(int));
+	free(delayEff->data);
+	delayEff->data = calloc(size, sizeof(int));
 	delayEff->size = size;
 }
 

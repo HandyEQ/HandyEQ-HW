@@ -22,10 +22,13 @@ typedef struct Menu {
 	int column;
 } Menu;
 
-Interface * initHwInterface();
+
 Menu * initMenu(DspSystem * dspsystem);
-void addEffect(Menu * menu, DspBin * bin);
-void addSetting(Menu * menu, DspBin * bin, int place, char * settingAb, void (*setting)(void *, int)); 
+void addSetting(Menu * menu, int row);
+void removeSetting(Menu * menu, int row);
+void updateValue(Menu * menu, int value, int row, int col);
+
+Interface * initHwInterface();
 void pollSwitches(Interface * interface);
 void showStatus(Menu * menu, Interface * interface);
 void readEnc(Menu * menu, Interface * interface);
@@ -34,5 +37,6 @@ void menuNavigation(Menu * menu, Interface * interface);
 void selectRow(Menu * menu, Interface * interface);
 void selectSetting(Menu * menu, Interface * interface);
 void updateSetting(Menu * menu, Interface * interface);
+
 
 #endif

@@ -41,12 +41,11 @@ typedef struct DspSystem {
 } DspSystem;
 
 /* Function prototypes */
-DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out);
+DspSystem * initDspSystem(int size, Chunk * in, Chunk * out);
 DspFx * initDspFx(char * name, void * structPointer, MenuSettings * menusettings);
-DspBin * initDspBin(int bypass, DspFx * fx);
-void connectDspBin(DspBin *bin, Chunk * in, Chunk * out);
+DspBin * initDspBin();
 void bypassDspBin(void * pointer, int bypass);
-void removeBin(DspSystem * dspsystem, int index);
-void changeBin(DspSystem * dspsystem, int index, DspBin * bin);
+void addFx(DspBin * bin, DspFx * fx);
+void removeFx(DspBin * bin);
 
 #endif

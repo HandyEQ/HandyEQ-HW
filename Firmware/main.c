@@ -45,13 +45,11 @@ BiquadCoeff treble[9];
 
 int main(void){
 	DspSystem * dspsystem;
-	int bins;
-	DspBin ** bin;
-	Chunk *input, * output, * bin1tobin2, * bin2tobin3, * bin3tobin4;
+	Chunk *input, * output;
 	DelayEffect * delayEff;
 	Interface * interface;
 	Menu * menu;
-	DelayEffect * de1, * de2, * de3, * de4;
+	DelayEffect * de1;
 	Eq3BandEffect * eq3;
 
 	//UART
@@ -73,27 +71,14 @@ int main(void){
 	initEqCoeff();
 	eq3 = init_eq3band();
 
-	//Init Bins
-	bins = 2;
-	bin = calloc(bins, sizeof(DspBin));
-	bin[1] = initDspBin(1, initDspFx("Delay 1", de1, de1->menusettings));
-	bin[0] = initDspBin(1, initDspFx("EQ 3B", eq3, eq3->menusettings));
-	//bin[2] = initDspBin(1, initDspFx("Delay 3", de2, de3->settingName, de3->setting, de3->stepVal, de3->stepRangeH, de3->stepRangeL, &calcDelay));
-	//bin[3] = initDspBin(1, initDspFx("Delay 2", de2, de4->settingName, de4->setting, de4->stepVal, de4->stepRangeH, de4->stepRangeL, &calcDelay));
-
 	//Init dspsystem
 	input = calloc(1, sizeof(Chunk));
 	output = calloc(1, sizeof(Chunk));
-	dspsystem = initDspSystem(bin, bins, input, output); 
-	
-	//Connect bins
-	bin1tobin2 = calloc(1, sizeof(Chunk));
-	//bin2tobin3 = calloc(1, sizeof(Chunk));
-	//bin3tobin4 = calloc(1, sizeof(Chunk));
-	connectDspBin(dspsystem->bin[0], dspsystem->in, bin1tobin2);
-	connectDspBin(dspsystem->bin[1], bin1tobin2, dspsystem->out);
-	//connectDspBin(dspsystem->bin[2], bin2tobin3, bin3tobin4);
-	//connectDspBin(dspsystem->bin[3], bin3tobin4, dspsystem->out);
+	dspsystem = initDspSystem(4, input, output);
+	addFx(dspsystem->bin[0], initDspFx("Delay 1", de1, de1->menusettings));
+	addFx(dspsystem->bin[1], initDspFx("Delay 2", de1, de1->menusettings));
+	addFx(dspsystem->bin[2], initDspFx("Delay 2", de1, de1->menusettings));
+	addFx(dspsystem->bin[3], initDspFx("Delay 2", de1, de1->menusettings));
 	
 	//Init Interface
 	interface = initHwInterface();
@@ -103,12 +88,12 @@ int main(void){
 
 	//Main Loop
 	//setEqMidCoeff(eq3, 4);
-	printf("Hello from HandyEq!");
+	//printf("Hello from HandyEq!");
 	while(1){
 		if(newSample){
 			newSample = 0;
 			retrieve_chunk(input);			
-			//runDspSystem(dspsystem);
+			runDspSystem(dspsystem);
 			output_chunk(output);
 			
 		} //else {
@@ -118,7 +103,7 @@ int main(void){
 		//}
 		if(newUart){
 			newUart = 0;
-			uart_input(dspsystem);
+			uart_input(menu);
 		}
 	}
 	return 0;
@@ -139,12 +124,14 @@ void new_uart(){
 	}
 }
 
-void uart_input(DspSystem * dspsystem){
+void uart_input(Menu * menu){
+    DspSystem * dspsystem = menu->dspsystem; 
 	DelayEffect * delay;
 	Eq3BandEffect * equalizer;
 	VolumeControl * volume;
 	DspBin * bin;
 	DspFx * fx;
+	int boxnr;
 	//Pointer to base of buffer array
 	char * j, * input = uartBuffers->buffer[(uartBuffers->bufferSelect+1)%2];
 
@@ -163,462 +150,128 @@ void uart_input(DspSystem * dspsystem){
 		j = input+4+i;
 		k = i+1; 
 		if(input[i] == 'S'){
-			//If an effect in a box is to be changed.
-			if((input[k] == '1')){
-				//Used to minimize the calculations.
-				k+=2;
-				//If the box effect that is changed is in the first box.
-				if((input[k] == '0')){
-					//If the new effect is bypass.
-					//printf("bypasseffect1\n");
-
-					dspsystem->bin[0]->bypass = 1;
-
-				}else if((input[k] == '1')){
-					//If the new effect is noeffect.
-					//printf("noeffecteffect1\n");
-
-					removeBin(dspsystem, 0);
-
-				}else if((input[k] == '2')){
-					//If the new effect is equalizer.
-					//printf("equalizereffect1\n");
-					
-					equalizer = init_eq3band();
-					fx = initDspFx("EQ", equalizer, equalizer->menusettings);
-					bin = initDspBin(0, fx);
-					changeBin(dspsystem, 0, bin);
-	 
-				}else if((input[k] == '3')){
-					//If the new effect is volume.
-					//printf("volumeeffect1\n");
-					
-					volume = initVolume();
-					fx = initDspFx("EQ", volume, volume->menusettings);
-					bin = initDspBin(0, fx);
-					changeBin(dspsystem, 0, bin);					
-
-				}else if((input[k] == '4')){
-					//If the new effect is delay.
-					//printf("delayeffect1\n");
-
-					delay = init_delay(300);
-					fx = initDspFx("EQ", delay, delay->menusettings);
-					bin = initDspBin(0, fx);
-					changeBin(dspsystem, 0, bin);
-				}			
-			}else if(input[k] == '2'){
-				//Used to minimize the calculations.
-				k+=2;
-				//If the box effect that is changed is in the second box.
-				if((input[k] == '0')){
-					//If the new effect is bypass.
-					//printf("bypasseffect2\n");
-				}else if((input[k] == '1')){
-					//printf("noeffecteffect2\n");
-					//If the new effect is noeffect.
-				}else if((input[k] == '2')){
-					//If the new effect is equalizer.
-					//printf("equalizerffect2\n");
-				}else if((input[k] == '3')){
-					//If the new effect is volume.
-					//printf("volumeeffect2\n");
-				}else if((input[k] == '4')){
-					//If the new effect is delay.
-					//printf("delayeffect2\n");
+			//Save The Box Number
+			strncpy(tempStr, &input[k], 1);
+			tempStr[1] = '\0';
+			boxnr = atoi(tempStr)-1;
+			k+=2;
+			//If the box effect that is changed is in the first box.
+			if((input[k] == '0')){
+				//If the new effect is bypass.
+				if(dspsystem->bin[boxnr]->fx == NULL){
+				    //printf("No Effect in this box to enable\r");
+				} else {
+				    dspsystem->bin[boxnr]->bypass = (dspsystem->bin[boxnr]->bypass + 1)%2;
+				    updateValue(menu, dspsystem->bin[boxnr]->bypass, boxnr, 3);
 				}
-			}else if(input[k] == '3'){
-				//Used to minimize the calculations.
-				k+=2;
-				//If the box effect that is changed is in the third box.
-				if((input[k] == '0')){
-					//If the new effect is bypass.
-					//printf("bypasseffect3\n");
-				}else if((input[k] == '1')){
-					//If the new effect is noeffect.
-					//printf("noeffecteffect3\n");
-				}else if((input[k] == '2')){
-					//If the new effect is equalizer.
-					//printf("equalizereffect3\n");
-				}else if((input[k] == '3')){
-					//If the new effect is volume.
-					//printf("volumeeffect3\n");
-				}else if((input[k] == '4')){
-					//If the new effect is delay.
-					//printf("delayeffect3\n");
-				}
-			}else if(input[k] == '4'){
-				//Used to minimize the calculations.
-				k+=2;
-				//If the box effect that is changed is in the forth box.
-				if((input[k] == '0')){
-					//If the new effect is bypass.
-					//printf("bypasseffect4\n");
-				}else if((input[k] == '1')){
-					//If the new effect is noeffect.
-					//printf("noeffecteffect4\n");
-				}else if((input[k] == '2')){
-					//If the new effect is equalizer.
-					//printf("equalizereffect4\n");
-				}else if((input[k] == '3')){
-					//If the new effect is volume.
-					//printf("volumeeffect4\n");
-				}else if((input[k] == '4')){
-					//If the new effect is delay.
-					//printf("delayeffect4\n");
-				}
-			}
-		}else if(input[i] == '1'){
-			//If a setting for the first effect box has been changed.
-			if((input[k] == 'E')){
-				//Used to minimize the calculations.
-				k++;
-				//The new value is for the equalizer effect.
-				//These value vary from 0 - 8 where 0 represent -12 dB.
-				if((input[k] == 'B')){
-					//The value is for the bass.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the bass value in the first effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ1 bass, %i \n", tempVal);
- 		
-					printf("%s", input);
-				}else if((input[k] == 'M')){
-					//The value is for the mid.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the mid value in the first effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ1 mid, %i \n", tempVal);
-				}else if((input[k] == 'T')){
-					//The value is for the treble.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the treble value in the first effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ1 treble, %i \n", tempVal);	
-				} 
-			}else if((input[k] == 'V')){
-				//The new value is for the volume effect.
-				//This value vary from 0 -(-99)dB.
-				//There is only one value for the volume.
-				//The value that is to be used starts at input[i+4]
-				//This value is stored in the tempStr to be converted without getting unwanted values.
-				strncpy(tempStr, j, 6);
-				tempStr[6] = '\0';
-				//The tempVal should contain the value that is to be stored as the volume value in the first effect box.
-				tempVal = atoi(tempStr);
-				//printf("Volume1, %i \n", tempVal);
-			}else if((input[k] == 'D')){
-				//Used to minimize the calculations.
-				k++;
-				//The new value is for the delay effect.
-				//The value that is to be used starts at input[i+4]
-				if((input[k] == 'D')){
-					//The value is for the delay time.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the delay time value in the first effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay1 time(ms), %i \n", tempVal);	
-				}else if((input[k] == 'G')){
-					//The value is for the gain.
-					//This value is in float point.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the float point of gain value
-					//in the first effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay1 gain, %i \n", tempVal);		
-				}else if((input[k] == 'F')){
-					//The value is for the feedback.
-					//This value is in float point.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the float point of feedback value
-					//in the first effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay1 feedback, %i \n", tempVal);		
-				} 
-			}else{
-				//The value is for the bypass or no effect which have no values.
-			}	
-		}else if(input[i] == '2'){
-			//If a setting for the second effect box has been changed.
-			if((input[k] == 'E')){
-				//Used to minimize the calculations.
-				k++;
-				//The new value is for the equalizer effect.
-				//These value vary from 0 - 8 where 0 represent -12 dB.
-				if((input[k] == 'B')){
-					//The value is for the bass.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the bass value in the second effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ2 bass, %i \n", tempVal);
-				}else if((input[k] == 'M')){
-					//The value is for the mid.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the mid value in the second effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ2 mid, %i \n", tempVal);	
-				}else if((input[k] == 'T')){
-					//The value is for the treble.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the treble value in the second effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ2 treble, %i \n", tempVal);		
-				} 
-			}else if((input[k] == 'V')){
-				//The new value is for the volume effect.
-				//This value vary from 0 -(-99)dB.
-				//There is only one value for the volume.
-				//The value that is to be used starts at input[i+4]
-				//This value is stored in the tempStr to be converted without getting unwanted values.
-				strncpy(tempStr, j, 6);
-				tempStr[6] = '\0';
-				//The tempVal should contain the value that is to be stored as the volume value in the second effect box.
-				tempVal = atoi(tempStr);
-				//printf("Volume2, %i \n", tempVal);
-			}else if((input[k] == 'D')){
-				//Used to minimize the calculations.
-				k++;
-				//The new value is for the delay effect.
-				//The value that is to be used starts at input[i+4]
-				if((input[k] == 'D')){
-					//The value is for the delay time.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the delay time value in the second effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay2 time(ms), %i \n", tempVal);	
-				}else if((input[k] == 'G')){
-					//The value is for the gain.
-					//This value is in float point.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the float point of gain value
-					//in the second effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay2 gain, %i \n", tempVal);		
-				}else if((input[k] == 'F')){
-					//The value is for the feedback.
-					//This value is in float point.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the float point of feedback value
-					//in the second effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay2 feedback, %i \n", tempVal);	
-				} 
-			}else{
-				//The value is for the bypass or no effect which have no values.
-			}
-		}else if(input[i] == '3'){
-			//If a setting for the third effect box has been changed.
-			if((input[k] == 'E')){
-				//Used to minimize the calculations.
-				k++;
-				//The new value is for the equalizer effect.
-				//These value vary from 0 - 8 where 0 represent -12 dB.
-				if((input[k] == 'B')){
-					//The value is for the bass.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the bass value in the third effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ3 bass, %i \n", tempVal);
-				}else if((input[k] == 'M')){
-					//The value is for the mid.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the mid value in the third effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ3 mid, %i \n", tempVal);	
-				}else if((input[k] == 'T')){
-					//The value is for the treble.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the treble value in the third effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ3 treble, %i \n", tempVal);		
-				} 
-			}else if((input[k] == 'V')){
-				//The new value is for the volume effect.
-				//This value vary from 0 -(-99)dB.
-				//There is only one value for the volume.
-				//The value that is to be used starts at input[i+4]
-				//This value is stored in the tempStr to be converted without getting unwanted values.
-				strncpy(tempStr, j, 6);
-				tempStr[6] = '\0';
-				//The tempVal should contain the value that is to be stored as the volume value in the third effect box.
-				tempVal = atoi(tempStr);
-				//printf("Volume3, %i \n", tempVal);
-			}else if((input[k] == 'D')){
-				//Used to minimize the calculations.
-				k++;
-				//The new value is for the delay effect.
-				//The value that is to be used starts at input[i+4]
-				if((input[k] == 'D')){
-					//The value is for the delay time.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the delay time value in the third effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay3 time(ms), %i \n", tempVal);	
-				}else if((input[k] == 'G')){
-					//The value is for the gain.
-					//This value is in float point.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the float point of gain value
-					//in the third effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay3 gain, %i \n", tempVal);		
-				}else if((input[k] == 'F')){
-					//The value is for the feedback.
-					//This value is in float point.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the float point of feedback value
-					//in the third effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay3 feedback, %i \n", tempVal);	
-				} 
-			}else{
-				//The value is for the bypass or no effect which have no values.
-			}
-		}else if(input[i] == '4'){
-			//If a setting for the forth effect box has been changed.
-			if((input[k] == 'E')){
-				//Used to minimize the calculations.
-				k++;
-				//The new value is for the equalizer effect.
-				//These value vary from 0 - 8 where 0 represent -12 dB.
-				if((input[k] == 'B')){
-					//The value is for the bass.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the bass value in the forth effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ4 bass, %i \n", tempVal);
-				}else if((input[k] == 'M')){
-					//The value is for the mid.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the mid value in the forth effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ4 mid, %i \n", tempVal);
-				}else if((input[k] == 'T')){
-					//The value is for the treble.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the treble value in the forth effect box.
-					tempVal = atoi(tempStr);
-					//printf("EQ4 treble, %i \n", tempVal);	
-				} 
-			}else if((input[k] == 'V')){
-				//The new value is for the volume effect.
-				//This value vary from 0 -(-99)dB.
-				//There is only one value for the volume.
-				//The value that is to be used starts at input[i+4]
-				//This value is stored in the tempStr to be converted without getting unwanted values.
-				strncpy(tempStr, j, 6);
-				tempStr[6] = '\0';
-				//The tempVal should contain the value that is to be stored as the volume value in the forth effect box.
-				tempVal = atoi(tempStr);
-				//printf("Volume4, %i \n", tempVal);
-			}else if((input[k] == 'D')){
-				//Used to minimize the calculations.
-				k++;
-				//The new value is for the delay effect.
-				//The value that is to be used starts at input[i+4]
-				if((input[k] == 'D')){
-					//The value is for the delay time.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the delay time value in the forth effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay4 time(ms), %i \n", tempVal);	
-				}else if((input[k] == 'G')){
-					//The value is for the gain.
-					//This value is in float point.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the float point of gain value
-					//in the forth effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay4 gain, %i \n", tempVal);		
-				}else if((input[k] == 'F')){
-					//The value is for the feedback.
-					//This value is in float point.
-					//The value that is to be used starts at input[i+4]
-					//This value is stored in the tempStr to be converted without getting unwanted values.
-					strncpy(tempStr, j, 6);
-					tempStr[6] = '\0';
-					//The tempVal should contain the value that is to be stored as the float point of feedback value
-					//in the forth effect box.
-					tempVal = atoi(tempStr);
-					//printf("Delay4 feedback, %i \n", tempVal);	
-				} 
-			}else{
-				//The value is for the bypass or no effect which have no values.
-			}
-		}else if(input[i] == 'I'){
+
+			} else if((input[k] == '1')){
+				//If the new effect is noeffect.
+				removeFx(dspsystem->bin[boxnr]);
+				removeSetting(menu, boxnr);
+
+			} else if((input[k] == '2')){
+				//If the new effect is equalizer.
+				equalizer = init_eq3band();
+				addFx(dspsystem->bin[boxnr], initDspFx("EQ   ", equalizer, equalizer->menusettings));
+				addSetting(menu, boxnr);
+ 
+			} else if((input[k] == '3')){
+				//If the new effect is volume.
+				volume = initVolume();
+				addFx(dspsystem->bin[boxnr], initDspFx("Vol  ", volume, volume->menusettings));
+				addSetting(menu, boxnr);					
+
+			} else if((input[k] == '4')){
+				//If the new effect is delay.
+				delay = init_delay();
+				addFx(dspsystem->bin[boxnr], initDspFx("Delay", delay, delay->menusettings));
+				addSetting(menu, boxnr);
+			}			
+		} else if(input[i] == 'I'){
 			//Used for when the GUI is connected and need all the current values from the board.
-			//Example of how a initiation can look. all effects are set to no effect except effect2 that is set to Equalizer and the bass is given the value 3db.
-			printf("S1E1NE0000:S2E2EQ0000:2EBA+00005:S3E1NE0000:S4E1NE0000#");
-		}
+			
+		} else {
+			//Find Bin Number
+			strncpy(tempStr, &input[i], 1);
+			tempStr[1] = '\0';
+			boxnr = atoi(tempStr)-1;
+			//Find Value
+			strncpy(tempStr, j, 6);
+			tempStr[6] = '\0';
+			tempVal = atoi(tempStr);
+			if(input[k] == 'E'){
+				k++;
+				//The new value is for the equalizer effect.
+				//These value vary from 0 - 8 where 0 represent -12 dB.
+				if((input[k] == 'B')){
+					//The value is for the bass.
+					(*dspsystem->bin[boxnr]->fx->menusettings->setting[2])
+					(
+						dspsystem->bin[boxnr]->fx->structPointer, 
+						tempVal
+					);
+					updateValue(menu, tempVal, boxnr, 2);
+				}else if((input[k] == 'M')){
+					//The value is for the mid.
+					(*dspsystem->bin[boxnr]->fx->menusettings->setting[1])
+					(
+						dspsystem->bin[boxnr]->fx->structPointer, 
+						tempVal
+					);
+					updateValue(menu, tempVal, boxnr, 1);
+				}else if((input[k] == 'T')){
+					//The value is for the treble.
+					(*dspsystem->bin[boxnr]->fx->menusettings->setting[0])
+					(
+						dspsystem->bin[boxnr]->fx->structPointer, 
+						tempVal
+					);
+					updateValue(menu, tempVal, boxnr, 0);
+				}
+				 
+			} else if((input[k] == 'D')){
+				k++;
+				//The new value is for the delay effect.
+				if((input[k] == 'D')){
+					//The value is for the delay time.
+					(*dspsystem->bin[boxnr]->fx->menusettings->setting[2])
+					(
+						dspsystem->bin[boxnr]->fx->structPointer, 
+						tempVal
+					);
+					updateValue(menu, tempVal, boxnr, 2);
+				}else if((input[k] == 'G')){
+					//The value is for the gain.
+					//This value is in float point.
+					(*dspsystem->bin[boxnr]->fx->menusettings->setting[0])
+					(
+						dspsystem->bin[boxnr]->fx->structPointer, 
+						tempVal
+					);	
+					updateValue(menu, tempVal, boxnr, 0);
+				}else if((input[k] == 'F')){
+					//The value is for the feedback.
+					//This value is in float point.
+					(*dspsystem->bin[boxnr]->fx->menusettings->setting[1])
+					(
+						dspsystem->bin[boxnr]->fx->structPointer, 
+						tempVal
+					);
+					updateValue(menu, tempVal, boxnr, 1);
+				} 
+			} else if((input[k] == 'V')){
+				//The new value is for the volume effect.
+				//This value vary from 0 -(-99)dB.
+				//There is only one value for the volume.
+				(*dspsystem->bin[boxnr]->fx->menusettings->setting[0])
+				(
+					dspsystem->bin[boxnr]->fx->structPointer, 
+					tempVal
+				);
+				updateValue(menu, tempVal, boxnr, 0);
+			} 
+		} 
 	}
 }
 
