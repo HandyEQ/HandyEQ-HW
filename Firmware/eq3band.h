@@ -6,10 +6,10 @@
 #include "dspsystem.h"
 
 typedef struct eq3band {
+	MenuSettings * menusettings; 	//Must be first
 	BiquadStage stage1;		//Treble
 	BiquadStage stage2;		//Mid	
 	BiquadStage stage3;		//Bass
-	MenuSettings * menusettings;
 } Eq3BandEffect;
 
 
@@ -24,6 +24,8 @@ int setEq3bandCoeff(void * eqstructptr, BiquadCoeff * coeff);
 void setEqTrebleCoeff(void * eqstructptr, int index);
 void setEqMidCoeff(void * eqstructptr, int index);
 void setEqBassCoeff(void * eqstructptr, int index);
+void saveEQ(void * ptr);
+void loadEQ(void * ptr);
 
 
 #endif

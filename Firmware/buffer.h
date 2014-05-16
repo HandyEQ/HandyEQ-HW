@@ -17,7 +17,7 @@ typedef struct buffer_regs
 
 typedef struct chunk
 {
-	int data[chunk_size];
+	volatile int data[chunk_size];
 } Chunk;
 
 //Functions for Buffers 

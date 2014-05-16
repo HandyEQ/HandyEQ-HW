@@ -51,12 +51,21 @@ int setEq1bandCoeff(void * eqstructptr, BiquadCoeff * coeff){
 int runEq1band(void *pointer, Chunk * input, Chunk * output){
 	Eq1BandEffect * eq1bandeffect = pointer;
 	int i=0;
+	int inputscaled=0;
 	
 	for (i = 0; i < chunk_size; i++){
-		
-		eq1bandeffect->stage1.in = input->data[i] ;
+
+		//Input scaling: Ideal maximum gain from eq, all bands set to +12db is ~ +15.1dB
+		//Shifting down 3 bits: 20log(2^3 / 1 ) = 20 log(8/1) = 18dB gain reduction which should leave some headroom also.
+
+		inputscaled = input->data[i] >>2;
+		eq1bandeffect->stage1.in = inputscaled;	
 		runBiquad(&eq1bandeffect->stage1);
 		output->data[i] = eq1bandeffect->stage1.out; 
+		
+		
+		
+		
 		
 	}
 	return 0;

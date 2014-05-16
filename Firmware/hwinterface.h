@@ -6,33 +6,31 @@
 typedef struct Interface {
 	char * sevenseg;
 	char oled[4][17];
-	int buttons[5];
-	int encBtn;
-	int encValue;
-	int encInc;
-	int leds[16];
-	int switches[2];
+	volatile int buttons[5];
+	volatile int encBtn;
+    volatile int encValue;
+	volatile int encInc;
+	volatile int leds[16];
+	volatile int switches[2];
 } Interface;
 
 typedef struct Menu {
-	DspSystem * dspsystem;
-	/*
-	MenuSettings * menusettings;		
-	char settingName[4][4][3];
-	void (*setting[4][4])(void *, int);
-	void (*save[4])(void *);
-	int (*load[4])(void *);
-	*/	
+	DspSystem * dspsystem;	
 	char value[4][4][6];	
-	int state;
-	int row;
-	int column;
+	volatile int state;
+	volatile int row;
+	volatile int column;
 } Menu;
 
-Interface * initHwInterface();
+
 Menu * initMenu(DspSystem * dspsystem);
-void addEffect(Menu * menu, DspBin * bin);
-void addSetting(Menu * menu, DspBin * bin, int place, char * settingAb, void (*setting)(void *, int)); 
+void initHeapMenu(Menu * menu, DspSystem * dspsystem);
+void addSetting(Menu * menu, int row);
+void removeSetting(Menu * menu, int row);
+void updateValue(Menu * menu, int value, int row, int col);
+
+Interface * initHwInterface();
+void initHeapHwInterface(Interface * interface);
 void pollSwitches(Interface * interface);
 void showStatus(Menu * menu, Interface * interface);
 void readEnc(Menu * menu, Interface * interface);
@@ -41,5 +39,6 @@ void menuNavigation(Menu * menu, Interface * interface);
 void selectRow(Menu * menu, Interface * interface);
 void selectSetting(Menu * menu, Interface * interface);
 void updateSetting(Menu * menu, Interface * interface);
+
 
 #endif

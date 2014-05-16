@@ -8,10 +8,11 @@ typedef struct MenuSettings {
 	void (*setting[4])(void *, int);
 	void (*save)(void *);
 	void (*load)(void *);
-	char settingName[3][3];
-	int stepVal[3];
-	int stepRangeH[3];
-	int stepRangeL[3];
+	char settingName[4][3];
+	int initVal[3];
+	int stepVal[4];
+	int stepRangeH[4];
+	int stepRangeL[4];
 } MenuSettings;
 
 typedef struct DspFx {
@@ -40,11 +41,11 @@ typedef struct DspSystem {
 } DspSystem;
 
 /* Function prototypes */
-DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out);
+DspSystem * initDspSystem(int size, Chunk * in, Chunk * out);
 DspFx * initDspFx(char * name, void * structPointer, MenuSettings * menusettings);
-DspBin * initDspBin(int bypass, DspFx * fx);
-void connectDspBin(DspBin *bin, Chunk * in, Chunk * out);
-void infoDspSystem(DspSystem *dspsystem);
+DspBin * initDspBin();
 void bypassDspBin(void * pointer, int bypass);
+void addFx(DspBin * bin, DspFx * fx);
+void removeFx(DspBin * bin);
 
 #endif

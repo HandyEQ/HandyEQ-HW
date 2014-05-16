@@ -12,7 +12,7 @@ void enable_irq(int irq){
 	//IT_BASE_ADDR[ICLEAR/4] = (1 << irq);  // clear any pending irq
 	irq_struct -> irqclear &= ~(1 << irq);
 	irq_struct->irqmask |= (1 << irq);
-	printf("Irq Number %d Enabled\n", irq);
+	//printf("Irq Number %d Enabled\n", irq);
 }
 
 void force_irq(int irq){

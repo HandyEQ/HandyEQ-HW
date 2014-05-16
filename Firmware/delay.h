@@ -7,13 +7,13 @@
 #include "dspsystem.h"
 
 typedef struct delay_struct {
+	MenuSettings * menusettings; //Must be first 
 	int head;
 	int delay;
-	short gain;
-	int feedback;
+	signed int gain;
+	signed int feedback;
 	int size;
  	int *data;
-	MenuSettings * menusettings;
 } DelayEffect;
 
 DelayEffect * init_delay();
@@ -27,4 +27,5 @@ void removeDelay(void * pointer);
 void saveSettings(void * pointer);
 void loadSettings(void * pointer);
 
+char * printSettings();
 #endif

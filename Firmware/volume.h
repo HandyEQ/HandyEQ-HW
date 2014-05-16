@@ -1,13 +1,14 @@
 #ifndef VOLUME_H
 #define	VOLUME_H
 
+#include "buffer.h"
 #include "dspsystem.h"
 
 #define VOLUMEDEBUG
 
 /* typedefs */
-struct VolumeControl;
-typedef struct {
+typedef struct VolumeControl{
+	MenuSettings * menusettings; //Must be first
 	//struct DspFx fx;
 	char name[10];
 	int in;				
@@ -15,15 +16,15 @@ typedef struct {
 	int gain;
 	int scalefactor;
 	int acc;		
-}VolumeControl;
+} VolumeControl;
 
 
 /* function prototypes */
-int initVolume(VolumeControl *vol);
+VolumeControl * initVolume();
 int resetVolume(VolumeControl *vol);
 int setVolume(VolumeControl *vol, int gain);
 
-void runVolume(VolumeControl *vol);
+void runVolume(void * pointer, Chunk * input, Chunk * output);
 void printVolume(VolumeControl *vol);
 
 /* Global variables: */

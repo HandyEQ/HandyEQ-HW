@@ -6,15 +6,15 @@
 /* Global variables */
 VolumeControl outputlevel;
 
-int initVolume(VolumeControl *vol){
-	
+VolumeControl * initVolume(){
+	VolumeControl * vol = calloc(1, sizeof(VolumeControl));
 	strcpy(vol->name,"VolumeOutput");
 	vol->in=0;
 	vol->gain=16384;
 	vol->scalefactor=16384;
 	vol->acc=0;
 	vol->out=0;
-	return 0;
+	return vol;
 }
 
 int resetVolume(VolumeControl *vol){
@@ -34,9 +34,13 @@ int setVolume(VolumeControl *vol, int gain) {
 	return 0;
 }
 
-void runVolume(VolumeControl *vol){
-	vol->acc = (vol->in)  *(vol->gain);
-	vol->out = (vol->acc) /(vol->scalefactor);
+void runVolume(void * pointer, Chunk * input, Chunk * output){
+	VolumeControl *vol = pointer;
+	int i;	
+	for(i = 0; i < chunk_size; i++){
+		vol->acc = (vol->in)  *(vol->gain);
+		vol->out = (vol->acc) /(vol->scalefactor);
+	}
 }
 
 void printVolume(VolumeControl *vol) {

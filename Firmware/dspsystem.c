@@ -3,22 +3,64 @@
 #include <string.h>
 #include <stdio.h>
 
-DspSystem * initDspSystem(DspBin ** bin, int size, Chunk * in, Chunk * out){
+DspSystem * initDspSystem(int size, Chunk * in, Chunk * out){
 	int i;
+	//Allocate Memory
 	DspSystem * dspsystem = calloc(1, sizeof(DspSystem));
-	
-	printf("DspSystem: Initialisation started\n");
+	dspsystem->bin = calloc(size, sizeof(DspBin));
 
-	dspsystem->bin = bin;
-	//Set size
-	dspsystem->size = size;	
 	//Init chunks 
 	dspsystem->in = in;
 	dspsystem->out = out;
-	
-	printf("DspSystem: Initialized, Size: %d\n", dspsystem->size);
 
+	//Init Bins
+	for(i = 0; i < size; i++){
+		dspsystem->bin[i] = initDspBin();
+		if(i == 0 && i == size-1){
+		    dspsystem->bin[i]->in = dspsystem->in;
+			dspsystem->bin[i]->out = dspsystem->out;
+		} else if(i == 0){
+			dspsystem->bin[i]->in = dspsystem->in;
+			dspsystem->bin[i]->out = (Chunk *)calloc(1, sizeof(Chunk));
+		} else if(i == size-1){
+			dspsystem->bin[i]->in = dspsystem->bin[i-1]->out;
+			dspsystem->bin[i]->out = dspsystem->out;
+		} else {
+			dspsystem->bin[i]->in = dspsystem->bin[i-1]->out;
+			dspsystem->bin[i]->out = (Chunk *)calloc(1, sizeof(Chunk));
+		}
+	}
+	dspsystem->size = size;	
 	return dspsystem;
+}
+
+void initHeapDspSystem(DspSystem * dspsystem, int size, Chunk * in, Chunk * out){
+	int i;
+	//Allocate Memory
+	dspsystem->bin = calloc(size, sizeof(DspBin));
+
+	//Init chunks 
+	dspsystem->in = in;
+	dspsystem->out = out;
+
+	//Init Bins
+	for(i = 0; i < size; i++){
+		dspsystem->bin[i] = initDspBin();
+		if(i == 0 && i == size-1){
+		    dspsystem->bin[i]->in = dspsystem->in;
+			dspsystem->bin[i]->out = dspsystem->out;
+		} else if(i == 0){
+			dspsystem->bin[i]->in = dspsystem->in;
+			dspsystem->bin[i]->out = (Chunk *)calloc(1, sizeof(Chunk));
+		} else if(i == size-1){
+			dspsystem->bin[i]->in = dspsystem->bin[i-1]->out;
+			dspsystem->bin[i]->out = dspsystem->out;
+		} else {
+			dspsystem->bin[i]->in = dspsystem->bin[i-1]->out;
+			dspsystem->bin[i]->out = (Chunk *)calloc(1, sizeof(Chunk));
+		}
+	}
+	dspsystem->size = size;	
 }
 
 DspFx * initDspFx(char * name, void * structPointer, MenuSettings * menusettings){
@@ -27,45 +69,50 @@ DspFx * initDspFx(char * name, void * structPointer, MenuSettings * menusettings
 	fx->name = name;
 	fx->structPointer = structPointer;
 	fx->menusettings = menusettings;
+	//fx->menusettings = (MenuSettings *)(structPointer+32);
 	return fx;
 }
 
-DspBin * initDspBin(int bypass, DspFx * fx){
+DspBin * initDspBin(){
 	DspBin * bin = calloc(1, sizeof(DspBin));
-	bin->bypass = bypass;
-	bin->fx = fx;
+	bin->bypass = 1;
+	bin->fx = NULL;
 	return bin;
+}
+
+void addFx(DspBin * bin, DspFx * fx){
+    bin->bypass = 1;
+	free(bin->fx);
+	bin->fx = fx;
+	bin->bypass = 0;
+}
+
+void removeFx(DspBin * bin){
+	bin->bypass = 1;
+	free(bin->fx);	
+	bin->fx = NULL;	
 }
 
 void bypassDspBin(void * pointer, int bypass){
 	DspBin * bin = pointer;
 	bin->bypass = bypass;
-	printf("Bypassed Bin\n");
-}
-
-void connectDspBin(DspBin * bin, Chunk * in, Chunk * out){
-	bin->in = in;
-	bin->out = out;
+	//printf("Bypassed Bin\n");
 }
 
 void runDspSystem(DspSystem * dspsystem){
 	int i;
 	for(i = 0; i < dspsystem->size; i++){
-		if(dspsystem->bin[i]->bypass){
+		if((dspsystem->bin[i]->bypass == 1) || (dspsystem->bin[i]->fx == NULL)){
 			memcpy(dspsystem->bin[i]->out, dspsystem->bin[i]->in, sizeof(Chunk));
 		}
 		else {
-			(*dspsystem->bin[i]->fx->menusettings->function)(dspsystem->bin[i]->fx->structPointer, dspsystem->bin[i]->in, dspsystem->bin[i]->out);
+			(*dspsystem->bin[i]->fx->menusettings->function)
+			(
+			    dspsystem->bin[i]->fx->structPointer, 
+			    dspsystem->bin[i]->in, 
+			    dspsystem->bin[i]->out
+			);
 		}
 	}
 }
 
-void infoDspSystem(DspSystem *dspsystem){
-	 
-	//infoDspBin(&(dspsystem->bin1));
-	
-	//printf("DSPSYSTEM,bin1: \t id: %i\n",dspsystem->bin1.id);	
-	//printf("DSPSYSTEM,bin1: \t bypass: %i\n",dspsystem->bin1.bypass);	
-	//printf("DSPSYSTEM,bin2: \t id: %i\n",dspsystem->bin2.id);
-	//printf("DSPSYSTEM,bin2: \t bypass: %i\n",dspsystem->bin2.bypass);	
-}

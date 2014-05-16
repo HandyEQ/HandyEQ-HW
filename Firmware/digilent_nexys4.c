@@ -3,15 +3,16 @@
 #include "irq.h"
 #include "sevenseg.h"
 
-extern int interruptServedRecently;
-extern int dbncCtr;
-extern int A;
-extern int B;
-extern int flagGPIOA;
-extern int currGPIOBState;
-extern int delayCtr;
-extern int flag3;
-extern int timerFlagSeg;
+
+extern volatile int interruptServedRecently;
+extern volatile int dbncCtr;
+extern volatile int A;
+extern volatile int B;
+extern volatile int flagGPIOA;
+extern volatile int currGPIOBState;
+extern volatile int delayCtr;
+extern volatile int flag3;
+extern volatile int timerFlagSeg;
 
 int OLEDChars[] = {
   0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,    // 0x00, NUL
@@ -204,7 +205,8 @@ void NEXYS4_GPIO_Init()
   GPIOB -> int_edg = 0x03E0FFFF; // edge triggered
   GPIOB -> int_pol = 0x03E0CFFF; // rising edge (falling edge for encoder channels)
 
-  catch_interrupt(GPIOAB_IRQHandler, 10);
+  catch_interrupt(GPIOAB_IRQHandler, 10);//TESTING:
+	GPIO_SetBits(GPIOB, NEXYS4_JC2);
   enable_irq(10);
 }
 
@@ -217,6 +219,8 @@ void NEXYS4_TIMER_Init()
 
   TIMERA -> timer1counter = 1249; //0.1 ms overall
   TIMERA -> timer1reload = 1249;
+  /*TIMERA -> timer1counter = 12499; //0.1 ms overall
+   *TIMERA -> timer1reload = 12499;*/
   TIMERA -> timer1ctrl = 0x0000000B;
 
   TIMERA -> timer2counter = 12499; // divide 12.5 MHz by 12.5k (BEBC1F + 1) 0,001 s overall
@@ -226,8 +230,8 @@ void NEXYS4_TIMER_Init()
   catch_interrupt(TIMER1_IRQHandler, 7);
   enable_irq(7);
 
-  catch_interrupt(TIMER1_IRQHandler, 8);
-  enable_irq(8);
+  //catch_interrupt(TIMER1_IRQHandler, 8);
+  //enable_irq(8);
 }
 
 void NEXYS4_OLED_SPI_Init()
@@ -256,6 +260,7 @@ void NEXYS4_OLED_SPI_Init()
 
   delayCtr = 0;
   while (delayCtr < 50){
+  //while (delayCtr < 5){
   	//printf("%d\n", delayCtr);
   }
 
@@ -267,6 +272,7 @@ void NEXYS4_OLED_SPI_Init()
 
   delayCtr = 0;
   while (delayCtr < 50){
+  //while (delayCtr < 5){
   	//printf("%d\n", delayCtr);
   }
 
@@ -274,6 +280,7 @@ void NEXYS4_OLED_SPI_Init()
   
   delayCtr = 0;
   while (delayCtr < 50){
+  //while (delayCtr < 5){
   	//printf("%d\n", delayCtr);
   }
 
@@ -294,6 +301,7 @@ void NEXYS4_OLED_SPI_Init()
   
   delayCtr = 0;
   while (delayCtr < 1050){
+  //while (delayCtr < 105){
   	//printf("%d\n", delayCtr);
   }
 
@@ -368,30 +376,34 @@ void GPIOAB_IRQHandler(int irq)
 }
 
 void TIMER1_IRQHandler(int irq) {
+    //TESTING:
+	GPIO_SetBits(GPIOB, NEXYS4_JC4);
   	if (irq == 7){ 
-	//having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
-    	//lreg[IPEND/4] &= ~(1 << irq);
-	//irq_struct->irqpend &= ~(1 << irq); // clear pending bit
+	    /*having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
+    	 *lreg[IPEND/4] &= ~(1 << irq);
+	     *irq_struct->irqpend &= ~(1 << irq); // clear pending bit */
 		clear_irq(irq);
     		TIMERA -> timer1ctrl |= 0x00000010;
 
     		dbncCtr++;
     		delayCtr++;
 	} else if (irq == 8){
-		//having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
-    		//lreg[IPEND/4] &= ~(1 << irq);
-		//irq_struct->irqpend &= ~(1 << irq); // clear pending bit
+		/* having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
+    	 * lreg[IPEND/4] &= ~(1 << irq);
+		 * irq_struct->irqpend &= ~(1 << irq); // clear pending bit */
 		clear_irq(irq);
 		TIMERA -> timer2ctrl |= 0x00000010;
-    		flag3 = 1;
+    	flag3 = 1;
 		timerFlagSeg = 1;
 	}
+	//TESTING:
+	GPIO_ResetBits(GPIOB, NEXYS4_JC4);
 }
 
 /* SPI and OLED functions */
 void SPI_SendByte(int i)
 {
-  int j = 0;
+  volatile int j = 0;
 
   j |= (i & 1) << 7;
   j |= (i & 2) << 5;
@@ -406,7 +418,7 @@ void SPI_SendByte(int i)
   
   SPIA -> transmit = j;
 
-  for (j = 0; j < 20; j++); // waiting for the flag is not enough, extra delay needs to be inserted, 20 is the min OK value
+  for (j = 0; j < 40; j++); // waiting for the flag is not enough, extra delay needs to be inserted, 20 is the min OK value
 
   //delayCtr = 0; // timer waiter function since NotFull checking does not work as intended
   //while (delayCtr < 2);
@@ -414,7 +426,7 @@ void SPI_SendByte(int i)
 
 void OLED_SendChar(char c)
 {
-  int i;
+  volatile int i;
 
   //GPIO_SetBits(GPIOB, NEXYS4_OLED_DC); //data
   
@@ -430,7 +442,7 @@ void OLED_SendString(int line, char* s)
      function is called check if the string to be written is the same the one that is already displayed
      (stored in the global line-variable). If not, overwrite the line-variable and print to display, but if yes,
      do nothing. */
-  int i = 0;
+  volatile int i = 0;
 
   GPIO_ResetBits(GPIOB, NEXYS4_OLED_DC); //command
 
@@ -460,8 +472,8 @@ void OLED_SendStringPos(int line, char* s, int pos)
      function is called check if the string to be written is the same the one that is already displayed
      (stored in the global line-variable). If not, overwrite the line-variable and print to display, but if yes,
      do nothing. */
-  int i = 0;
-  int col1 = 0, col2 = 0;
+  volatile int i = 0;
+  volatile int col1 = 0, col2 = 0;
 
   GPIO_ResetBits(GPIOB, NEXYS4_OLED_DC); //command
   
