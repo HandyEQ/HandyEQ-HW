@@ -69,8 +69,9 @@ int main(void){
 	input = calloc(1, sizeof(Chunk));
 	output = calloc(1, sizeof(Chunk));
 	dspsystem = initDspSystem(3, input, output);
-	addFx(dspsystem->bin[1], initDspFx("Delay", de1, de1->menusettings));
-	//addFx(dspsystem->bin[0], initDspFx("EQ   ", eq3, eq3->menusettings));
+	addFx(dspsystem->bin[0], initDspFx("EQ   ", eq3, eq3->menusettings));
+	//addFx(dspsystem->bin[1], initDspFx("Delay", de1, de1->menusettings));
+	
 	
 	//Init Interface
 	interface = initHwInterface();
@@ -127,7 +128,7 @@ void uart_input(Menu * menu){
 	DspBin * bin;
 	DspFx * fx;
 	int boxnr;
-	char * currentSettings = calloc(99, sizeof(char));
+	char * currentSettings;
 	//Pointer to base of buffer array
 	char * j, * input = uartBuffers->buffer[(uartBuffers->bufferSelect+1)%2];
 
@@ -186,7 +187,8 @@ void uart_input(Menu * menu){
 			}			
 		} else if(input[i] == 'I'){
 			//Used for when the GUI is connected and need all the current values from the board.
-			//
+			/*
+			currentSettings = calloc(99, sizeof(char));
 			printf(
 	            "S1XX%1dXXXXX#"
 	            "S2XX%1dXXXXX#"
@@ -199,9 +201,10 @@ void uart_input(Menu * menu){
 	            menu->row, 
 	            name, 
 	            menu->dspsystem->bin[menu->row]->fx->menusettings->settingName, 
-	            interface->encValue
+	            menu->value[i][j]
 	        );
 			free(currentSettings);
+			*/
 		} else {
 			//Find Bin Number
 			strncpy(tempStr, &input[i], 1);
