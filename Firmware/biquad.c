@@ -3,7 +3,13 @@
 #include <string.h>
 #include "biquad.h"
 
-BiquadCoeff resetcoeffs = {"Bypass","-","0dB","-","Q32.0",1,1,0,0,1,0,0};
+#ifdef GPIOUTP
+    //FOR TESTING:
+    #include "gpio.h"
+    #include "digilent_nexys4.h"
+#endif
+
+BiquadCoeff resetcoeffs = {"Bypass","-","0dB","-","Q32.0",4096,4096,0,0,4096,0,0};
 
 void printCoeff(BiquadCoeff *coeff){
 	printf("Coefficients:\n");
@@ -63,25 +69,52 @@ void resetBiquad(BiquadStage *s){
 /* INFO*/
 /* Retrun type etc */
 
-int runBiquad(BiquadStage *s){   //maybe change to void depending on return method....
-
-	/* IIR DFI difference equation: */
-	s->outUnscaled = 	( s->coeff->b0 * s->in 		);
-	s->outUnscaled += 	( s->coeff->b1 * s->xmem1	); 
-	s->outUnscaled += 	( s->coeff->b2 * s->xmem2	); 
-	s->outUnscaled -= 	( s->coeff->a1 * s->ymem1	); 
-	s->outUnscaled -= 	( s->coeff->a2 * s->ymem2	);
-
-	//* Scale back coefficient scaling factor */  
-	s->out = s->outUnscaled / s->coeff->scalefactor;  //Should maybe have check for scalefacto !=0! (hangs simulator if uninitialized)
-		
+int runBiquad(BiquadStage *s, Chunk * in, Chunk * out){   //maybe change to void depending on return method....
+    int a1 = s->coeff->a1;
+    int a2 = s->coeff->a2;
+    int b0 = s->coeff->b0;
+    int b1 = s->coeff->b1;
+    int b2 = s->coeff->b2;
+    int scale = s->coeff->scalefactor;
+    int i;
+    int accu;
+    int inData;
+    for(i = 0; i < chunk_size; i++){
+        
+        inData = in->data[i];
+	    /* IIR DFI difference equation: */
+	    accu = 	    ( b0 * inData       );
+	    accu += 	( b1 * s->xmem1     ); 
+	    accu += 	( b2 * s->xmem2	    ); 
+	    accu -= 	( a1 * s->ymem1	    ); 
+	    accu -= 	( a2 * s->ymem2	    );
+	    out->data[i] = (scale == 0) ? accu : (accu / scale);
+	    
+	    /*accu = 	    ( b0 * (in->data[i]>>2) )>>12;
+	    accu += 	( b1 * s->xmem1         )>>12; 
+	    accu += 	( b2 * s->xmem2	        )>>12; 
+	    accu -= 	( a1 * s->ymem1	        )>>12; 
+	    accu -= 	( a2 * s->ymem2	        )>>12;
+	    
+	    
+	    accu = 	    ( b0 * in->data[i]      )>>14;
+	    accu += 	( b1 * s->xmem1         )>>12; 
+	    accu += 	( b2 * s->xmem2	        )>>12; 
+	    accu -= 	( a1 * s->ymem1	        )>>12; 
+	    accu -= 	( a2 * s->ymem2	        )>>12;
 	
-	//* Shift delay line */
-	s->xmem2 = s->xmem1;
-	s->ymem2 = s->ymem1;
-	s->xmem1 = s->in;   
-	s->ymem1 = s->out;
-		
+	    //* Scale back coefficient scaling factor  
+	    
+	    out->data[i] = accu;*/
+	     	
+	
+	    //* Shift delay line */
+	    s->xmem2 = s->xmem1;
+	    s->ymem2 = s->ymem1;
+	    s->xmem1 = inData;   
+	    s->ymem1 = out->data[i];
+    }
+    
 	return 0;
 }
 

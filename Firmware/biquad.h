@@ -1,6 +1,8 @@
 #ifndef BIQUAD_H
 #define BIQUAD_H
 
+#include "buffer.h"
+
 /*Structure holding filter coefficient and relevant information */
 struct BiquadCoeff;
 typedef struct {
@@ -45,6 +47,6 @@ void printCoeff(BiquadCoeff *coeff);
 void infoBiquad(BiquadStage *s);
 void setBiquadCoeff(BiquadStage *s,BiquadCoeff *coeff);
 void resetBiquad(BiquadStage *s);
-int runBiquad(BiquadStage *s);
+int runBiquad(BiquadStage *s, Chunk * in, Chunk * out);
 
 #endif

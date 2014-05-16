@@ -6,11 +6,15 @@
 #include "buffer.h"
 #include "biquad.h" //for global reset coeffs
 
-//FOR TESTING:
-#include "gpio.h"
-#include "digilent_nexys4.h"
+//Uncomment this for GPIO output 
+//#define GPIOUTP
+#ifdef GPIOUTP
+    //FOR TESTING:
+    #include "gpio.h"
+    #include "digilent_nexys4.h"
+#endif
 
-//#define PRINTEQDEBUG
+
 
 
 //Eq3BandEffect * init_eq3band(BiquadCoeff * coeffstage1,BiquadCoeff * coeffstage2,BiquadCoeff * coeffstage3){ // (with coeffs as input arguments
@@ -47,9 +51,9 @@ Eq3BandEffect * init_eq3band(){
 	strcpy(eq3bandeffect->menusettings->settingName[2], "BA");
 
 	//Init values for settings
-	eq3bandeffect->menusettings->initVal[0] = 3;
-	eq3bandeffect->menusettings->initVal[1] = 3;
-	eq3bandeffect->menusettings->initVal[2] = 3;
+	eq3bandeffect->menusettings->initVal[0] = 4;
+	eq3bandeffect->menusettings->initVal[1] = 4;
+	eq3bandeffect->menusettings->initVal[2] = 4;
 
 	eq3bandeffect->menusettings->stepVal[0] = 1;
 	eq3bandeffect->menusettings->stepVal[1] = 1;
@@ -130,39 +134,33 @@ void setEqBassCoeff(void * eqstructptr, int index){
 }
 
 void runEq3band(void *pointer, Chunk * input, Chunk * output){
-	//TESTING:
-	//GPIO_SetBits(GPIOB, NEXYS4_JC2);
-	
+	//Test//
+	#ifdef GPIOUTP
+	    GPIO_SetBits(GPIOB, NEXYS4_JC2);	
+        GPIO_SetBits(GPIOB, NEXYS4_JC3);
+    #endif
+    //----//
+    
+	Chunk q1; 
+	Chunk q2;
 	Eq3BandEffect * eq3bandeffect = pointer;
-	int i=0;
-	int inputscaled=0;
-	
-	for (i = 0; i < chunk_size; i++){
-
-		//Input scaling: Ideal maximum gain from eq, all bands set to +12db is ~ +15.1dB
-		//Shifting down 3 bits: 20log(2^3 / 1 ) = 20 log(8/1) = 18dB gain reduction which should leave some headroom also.
-		
-		inputscaled = input->data[i] >> 2;
-
-
-		eq3bandeffect->stage1.in = inputscaled;	
-		//GPIO_SetBits(GPIOB, NEXYS4_JC3);	
-		runBiquad(&eq3bandeffect->stage1);	
-		//GPIO_ResetBits(GPIOB, NEXYS4_JC3);	
-		
-		eq3bandeffect->stage2.in = eq3bandeffect->stage1.out; 		
-		runBiquad(&eq3bandeffect->stage2);
-		
-		eq3bandeffect->stage3.in = eq3bandeffect->stage2.out; 
-		runBiquad(&eq3bandeffect->stage3);
-		
-		output->data[i] = eq3bandeffect->stage3.out;
-
-		
-
-		
-	}
-	//GPIO_ResetBits(GPIOB, NEXYS4_JC2);
+	int i;
+    runBiquad(&eq3bandeffect->stage1, input, &q1);	
+    
+    //Test//
+    #ifdef GPIOUTP
+        GPIO_ResetBits(GPIOB, NEXYS4_JC3);		
+    #endif
+    //----//
+    
+    runBiquad(&eq3bandeffect->stage2, &q1, &q2);
+    runBiquad(&eq3bandeffect->stage3, &q2, output);
+    
+    //Test//
+	#ifdef GPIOUTP
+	    GPIO_ResetBits(GPIOB, NEXYS4_JC2);
+    #endif
+    //----//  
 }
 
 	

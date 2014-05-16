@@ -4,13 +4,21 @@
 #include <stdio.h>
 #include "spi_mem.h"
 
+//Uncomment this for GPIO output 
+//#define GPIOUTP
+#ifdef GPIOUTP
+    //FOR TESTING:
+    #include "gpio.h"
+    #include "digilent_nexys4.h"
+#endif
+
 DelayEffect * init_delay(){
 	//Initialize
 	DelayEffect * delayEff = calloc(1, sizeof(DelayEffect));
 	delayEff->menusettings = calloc(1, sizeof(MenuSettings));
 	delayEff->head = 0;
-	delayEff->gain = 1635;
-	delayEff->feedback = 8190;
+	delayEff->gain = 2000;
+	delayEff->feedback = 11000;
 	delayEff->delay = 300;
 	//loadSettings(delayEff);
 	setDelayTime(delayEff, delayEff->delay);
@@ -109,22 +117,13 @@ void setDelayTime(void * pointer, int timeMs){
 	}
 }
 
-int fixedMul(int a, int b){
-	return ((a*b) >> 15);
-}
-
-int fixedAdd(int a, int b){
-	int sum = a+b;
- 	if(sum > 32767){
-		return 32767;
-	} else if (sum < -32768) {
-		return -32768;
-	} else {
-		return sum;
-	}
-}
-
 void calcDelay(void *pointer, Chunk * input, Chunk * output){
+    //Test//
+	#ifdef GPIOUTP
+        GPIO_SetBits(GPIOB, NEXYS4_JC2);
+    #endif
+    //----//
+    
 	//Initialize loop  variable
 	DelayEffect * delayEff = pointer;
 	int i;
@@ -138,9 +137,15 @@ void calcDelay(void *pointer, Chunk * input, Chunk * output){
 	//Manipulate sound
 	
 	for(i = 0;  i < chunk_size; i++){
-		output->data[i] = fixedAdd(delayEff->data[head]>>1, input->data[i]>>1)<<1;
-		delayEff->data[head] = fixedAdd(fixedMul(gain, delayEff->data[head])>>1, fixedMul(feedback, input->data[i])>>1)<<1;		
+	    output->data[i] = ((delayEff->data[head]) + (input->data[i]));
+		delayEff->data[head] = ((gain * delayEff->data[head]>>1)>>15) + ((feedback * input->data[i]>>1)>>15);		
 		head = (head+1)%size;		
 	}
 	delayEff->head = head;
+	
+	//Test//
+	#ifdef GPIOUTP
+	    GPIO_ResetBits(GPIOB, NEXYS4_JC2);
+	#endif
+    //----//
 }

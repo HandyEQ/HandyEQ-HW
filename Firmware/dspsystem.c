@@ -16,7 +16,10 @@ DspSystem * initDspSystem(int size, Chunk * in, Chunk * out){
 	//Init Bins
 	for(i = 0; i < size; i++){
 		dspsystem->bin[i] = initDspBin();
-		if(i == 0){
+		if(i == 0 && i == size-1){
+		    dspsystem->bin[i]->in = dspsystem->in;
+			dspsystem->bin[i]->out = dspsystem->out;
+		} else if(i == 0){
 			dspsystem->bin[i]->in = dspsystem->in;
 			dspsystem->bin[i]->out = (Chunk *)calloc(1, sizeof(Chunk));
 		} else if(i == size-1){
@@ -29,6 +32,35 @@ DspSystem * initDspSystem(int size, Chunk * in, Chunk * out){
 	}
 	dspsystem->size = size;	
 	return dspsystem;
+}
+
+void initHeapDspSystem(DspSystem * dspsystem, int size, Chunk * in, Chunk * out){
+	int i;
+	//Allocate Memory
+	dspsystem->bin = calloc(size, sizeof(DspBin));
+
+	//Init chunks 
+	dspsystem->in = in;
+	dspsystem->out = out;
+
+	//Init Bins
+	for(i = 0; i < size; i++){
+		dspsystem->bin[i] = initDspBin();
+		if(i == 0 && i == size-1){
+		    dspsystem->bin[i]->in = dspsystem->in;
+			dspsystem->bin[i]->out = dspsystem->out;
+		} else if(i == 0){
+			dspsystem->bin[i]->in = dspsystem->in;
+			dspsystem->bin[i]->out = (Chunk *)calloc(1, sizeof(Chunk));
+		} else if(i == size-1){
+			dspsystem->bin[i]->in = dspsystem->bin[i-1]->out;
+			dspsystem->bin[i]->out = dspsystem->out;
+		} else {
+			dspsystem->bin[i]->in = dspsystem->bin[i-1]->out;
+			dspsystem->bin[i]->out = (Chunk *)calloc(1, sizeof(Chunk));
+		}
+	}
+	dspsystem->size = size;	
 }
 
 DspFx * initDspFx(char * name, void * structPointer, MenuSettings * menusettings){

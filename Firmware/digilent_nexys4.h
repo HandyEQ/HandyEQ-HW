@@ -60,18 +60,18 @@
 /* Fixed inputs:  NONE -------------------------- */
 /* Fixed outputs: NONE -------------------------- */
 /* Configurable inputs/outputs: JB1-3, JB7-9 ---- */
-#define NEXYS4_JXX0 GPIO_Pin_0
-#define NEXYS4_JXX1 GPIO_Pin_1
-#define NEXYS4_JXX2 GPIO_Pin_2
-#define NEXYS4_JXX3 GPIO_Pin_3
-#define NEXYS4_JXX4 GPIO_Pin_4
-#define NEXYS4_JXX5 GPIO_Pin_5
-#define NEXYS4_JXX6 GPIO_Pin_6
-#define NEXYS4_JXX7 GPIO_Pin_7
-#define NEXYS4_JXX8 GPIO_Pin_8
-#define NEXYS4_JXX9 GPIO_Pin_9
-#define NEXYS4_JX10 GPIO_Pin_10
-#define NEXYS4_JX11 GPIO_Pin_11
+#define NEXYS4_JD1 GPIO_Pin_0
+#define NEXYS4_JD2 GPIO_Pin_1
+#define NEXYS4_JD3 GPIO_Pin_2
+#define NEXYS4_JD4 GPIO_Pin_3
+#define NEXYS4_JD7 GPIO_Pin_4
+#define NEXYS4_JD8 GPIO_Pin_5
+#define NEXYS4_JC1 GPIO_Pin_6
+#define NEXYS4_JC2 GPIO_Pin_7
+#define NEXYS4_JC3 GPIO_Pin_8
+#define NEXYS4_JC4 GPIO_Pin_9
+#define NEXYS4_JC7 GPIO_Pin_10
+#define NEXYS4_JC8 GPIO_Pin_11
 #define NEXYS4_ENC_A GPIO_Pin_12
 #define NEXYS4_ENC_B GPIO_Pin_13
 #define NEXYS4_ENC_BTN GPIO_Pin_14
@@ -134,32 +134,32 @@
 
 typedef struct
 {
-  int scaler; //0x00
-  int scalerReload; //0x04
-  int config; //08
-  int timerLatchCfg; //0C
-  int timer1counter; //10
-  int timer1reload; //14
-  int timer1ctrl; //18
-  int timer1latch; //1C
-  int timer2counter; //20
-  int timer2reload; //24
-  int timer2ctrl; //28
-  int timer2latch; //2C
+  volatile int scaler; //0x00
+  volatile int scalerReload; //0x04
+  volatile int config; //08
+  volatile int timerLatchCfg; //0C
+  volatile int timer1counter; //10
+  volatile int timer1reload; //14
+  volatile int timer1ctrl; //18
+  volatile int timer1latch; //1C
+  volatile int timer2counter; //20
+  volatile int timer2reload; //24
+  volatile int timer2ctrl; //28
+  volatile int timer2latch; //2C
 }TIMER_TypeDef;
 
 #define TIMERA               ((TIMER_TypeDef *) 0x80000300)
 
 typedef struct
 {
-  int capability; //0x00
-  int reserved[7]; //0x04 08 0C 10 14 18 1C
-  int mode; //20
-  int event; //24
-  int mask; //28
-  int command; //2C
-  int transmit; //30
-  int receive; //34
+  volatile int capability; //0x00
+  volatile int reserved[7]; //0x04 08 0C 10 14 18 1C
+  volatile int mode; //20
+  volatile int event; //24
+  volatile int mask; //28
+  volatile int command; //2C
+  volatile int transmit; //30
+  volatile int receive; //34
   // more to come
 }SPI_TypeDef;
 

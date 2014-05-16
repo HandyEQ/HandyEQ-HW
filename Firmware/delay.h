@@ -10,8 +10,8 @@ typedef struct delay_struct {
 	MenuSettings * menusettings; //Must be first 
 	int head;
 	int delay;
-	int gain;
-	int feedback;
+	signed int gain;
+	signed int feedback;
 	int size;
  	int *data;
 } DelayEffect;

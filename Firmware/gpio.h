@@ -3,15 +3,15 @@
 
 typedef struct
 {
-  int data;           /*!< GPIO data register, current values can be read from here (read-only)    Address offset: 0x00 */
-  int output;         /*!< GPIO output register, desired output values have to be specified here   Address offset: 0x04 */
-  int direction;      /*!< GPIO direction register, 1: output, 0: input                            Address offset: 0x08 */
-  int interrupt;      /*!< GPIO interrupt register                                                 Address offset: 0x0C */
-  int int_pol;        /*!< GPIO interrupt polarity register                                        Address offset: 0x10 */
-  int int_edg;        /*!< GPIO interrupt edge register                                            Address offset: 0x14 */
-  int bypass;         /*!< GPIO bypass register                                                    Address offset: 0x18 */
-  int capability;     /*!< GPIO capability register (read-only)                                    Address offset: 0x1C */
-  int int_map_reg[8]; /*!< GPIO interrupt map registers                                            Address offset: 0x20-3C */
+  volatile int data;           /*!< GPIO data register, current values can be read from here (read-only)    Address offset: 0x00 */
+  volatile int output;         /*!< GPIO output register, desired output values have to be specified here   Address offset: 0x04 */
+  volatile int direction;      /*!< GPIO direction register, 1: output, 0: input                            Address offset: 0x08 */
+  volatile int interrupt;      /*!< GPIO interrupt register                                                 Address offset: 0x0C */
+  volatile int int_pol;        /*!< GPIO interrupt polarity register                                        Address offset: 0x10 */
+  volatile int int_edg;        /*!< GPIO interrupt edge register                                            Address offset: 0x14 */
+  volatile int bypass;         /*!< GPIO bypass register                                                    Address offset: 0x18 */
+  volatile int capability;     /*!< GPIO capability register (read-only)                                    Address offset: 0x1C */
+  volatile int int_map_reg[8]; /*!< GPIO interrupt map registers                                            Address offset: 0x20-3C */
 }GPIO_TypeDef;
 
 #define GPIOA               ((GPIO_TypeDef *) 0x80000900)
@@ -46,7 +46,7 @@ typedef enum
 
 typedef struct
 {
-  int GPIO_Pin;              	  /*!< Specifies the GPIO pins to be configured.
+  volatile int GPIO_Pin;              	  /*!< Specifies the GPIO pins to be configured.
                                        This parameter can be any value of @ref GPIO_pins_define */
                                        
   GPIOMode_TypeDef GPIO_Mode;     /*!< Specifies the operating mode for the selected pins.

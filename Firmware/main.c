@@ -13,6 +13,14 @@
 #include "hwinterface.h"
 #include "volume.h"
 
+//Uncomment this for GPIO output 
+//#define GPIOUTP
+#ifdef GPIOUTP
+    //FOR TESTING:
+    #include "gpio.h"
+    #include "digilent_nexys4.h"
+#endif
+
 //Flag for new sample
 volatile int newSample;
 
@@ -41,11 +49,13 @@ BiquadCoeff bass[9];
 BiquadCoeff midrange[9];
 BiquadCoeff treble[9];
 
+//System variables
+Chunk in, out;
+DspSystem dsp;
+Menu menu;
+Interface interface;
+
 int main(void){
-	DspSystem * dspsystem;
-	Chunk *input, * output;
-	Interface * interface;
-	Menu * menu;
 	DelayEffect * de1;
 	Eq3BandEffect * eq3;
 
@@ -56,49 +66,61 @@ int main(void){
 	enable_irq(uart_irq);
 	uartBuffers = calloc(1, sizeof(UartBuffers));
 	
+	//INIT GPIO
+	initTestmodule();	
+	
 	//Init Delay
-	de1 = init_delay(100);
+	de1 = init_delay();
 
 	//Init EQ
 	initEqCoeff();
 	eq3 = init_eq3band();
 
 	//Init dspsystem
-	input = calloc(1, sizeof(Chunk));
-	output = calloc(1, sizeof(Chunk));
-	dspsystem = initDspSystem(3, input, output);
-	addFx(dspsystem->bin[0], initDspFx("EQ   ", eq3, eq3->menusettings));
-	//addFx(dspsystem->bin[1], initDspFx("Delay", de1, de1->menusettings));
+	initHeapDspSystem(&dsp, 4, &in, &out);
+	addFx(dsp.bin[0], initDspFx("EQ   ", eq3, eq3->menusettings));
+	addFx(dsp.bin[1], initDspFx("Delay", de1, de1->menusettings));
 	
 	//Init Interface
-	interface = initHwInterface();
-	menu = initMenu(dspsystem);
+	initHeapHwInterface(&interface);
+	initHeapMenu(&menu, &dsp);
 	clearOled();
-	showStatus(menu, interface);
+	showStatus(&menu, &interface);
 	
 	//Buffer
-	newSample = 0;
 	catch_interrupt(new_sample, buf_irq);
 	enable_irq(buf_irq);
-
+    newSample = 0;
+    
 	//Main Loop
 	while(1){
 		if(newSample){
 			newSample = 0;
-            //GPIO_SetBits(GPIOB, NEXYS4_JC1);
-            retrieve_chunk(input);			
-			runDspSystem(dspsystem);
-			//GPIO_ResetBits(GPIOB, NEXYS4_JC1);			
-			output_chunk(output);
-			
-		} //else {
-			//pollSwitches(interface);
-			readEnc(menu, interface);
-			menuNavigation(menu, interface);
-		//}
+			#ifdef GPIOUTP
+			    GPIO_SetBits(GPIOB, NEXYS4_JC1);
+			#endif
+            
+            retrieve_chunk(&in);
+            runDspSystem(&dsp);		
+	        output_chunk(&out);
+            
+            #ifdef GPIOUTP
+			    GPIO_ResetBits(GPIOB, NEXYS4_JC1);
+			#endif
+		}
+		readEnc(&menu, &interface);
+		menuNavigation(&menu, &interface);
 		if(newUart){
+		    #ifdef GPIOUTP
+		        GPIO_SetBits(GPIOB, NEXYS4_JC7);
+		    #endif
+		    
 			newUart = 0;
-			uart_input(menu);
+			uart_input(&menu);
+			
+			#ifdef GPIOUTP
+			    GPIO_ResetBits(GPIOB, NEXYS4_JC7);
+			#endif
 		}
 	}
 	return 0;

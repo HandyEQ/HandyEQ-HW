@@ -26,15 +26,23 @@ Interface * initHwInterface(){
 	NEXYS4_GPIO_Init();
 	NEXYS4_TIMER_Init();
 	NEXYS4_OLED_SPI_Init();
-	NEXYS4_SEVENSEG_Init();
+	//NEXYS4_SEVENSEG_Init();
 	interface = calloc(1, sizeof(Interface));
 	interface->sevenseg = calloc(9, sizeof(char));
 	return interface;
 }
 
+void initHeapHwInterface(Interface * interface){
+	NEXYS4_GPIO_Init();
+	NEXYS4_TIMER_Init();
+	NEXYS4_OLED_SPI_Init();
+	//NEXYS4_SEVENSEG_Init();
+	interface->sevenseg = calloc(9, sizeof(char));
+}
+
 Menu * initMenu(DspSystem * dspsystem){
 	Menu * menu = calloc(1, sizeof(Menu));
-	int i, j;
+	int i;
 	menu->dspsystem = dspsystem;	
 		
 	for(i = 0; i < dspsystem->size; i++){
@@ -45,6 +53,18 @@ Menu * initMenu(DspSystem * dspsystem){
 		}
 	}
 	return menu;
+}
+
+void initHeapMenu(Menu * menu, DspSystem * dspsystem){
+	int i;
+	menu->dspsystem = dspsystem;		
+	for(i = 0; i < dspsystem->size; i++){
+	    if(menu->dspsystem->bin[i]->fx != NULL){
+		    addSetting(menu, i);
+		} else {
+		    removeSetting(menu, i);
+		}
+	}
 }
 
 void menuNavigation(Menu * menu, Interface * interface){
@@ -175,6 +195,7 @@ void addSetting(Menu * menu, int row){
 	    menu->value[row][0]
 	);
 	OLED_SendString(row, oled);
+	free(oled);
 }
 
 void updateValue(Menu * menu, int value, int row, int col){
@@ -197,7 +218,7 @@ void updateSetting(Menu * menu, Interface * interface){
 	        );
 	        //SX__0_____#
 	        printf(
-	            "S%1dXX%1dXXXXX#", 
+	            "S%1dXX%1dXXXXX#\r", 
 	            menu->row+1, 
 	            interface->encValue
 	        );
@@ -212,7 +233,7 @@ void updateSetting(Menu * menu, Interface * interface){
 	        strncpy(name, menu->dspsystem->bin[menu->row]->fx->name, 2);
 	        name[3] = '\0';
 	        printf(
-	            "%1d%2S%2S+%.5d#", 
+	            "%1d%2S%2S+%.5d\r#", 
 	            menu->row+1, 
 	            name, 
 	            menu->dspsystem->bin[menu->row]->fx->menusettings->settingName, 
@@ -292,6 +313,7 @@ void showStatus(Menu * menu, Interface * interface){
 
 void readEnc(Menu * menu, Interface * interface){
 	if (interruptServedRecently == 1 && dbncCtr > 700){
+	//if (interruptServedRecently == 1 && dbncCtr > 70){
       		interruptServedRecently = 0;
       		A &= GPIO_ReadInputDataBit(GPIOB, NEXYS4_ENC_A);
       		B &= GPIO_ReadInputDataBit(GPIOB, NEXYS4_ENC_B);
