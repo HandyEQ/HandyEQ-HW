@@ -36,23 +36,23 @@ DspFx * initDspFx(char * name, void * structPointer, MenuSettings * menusettings
 	int i;	
 	fx->name = name;
 	fx->structPointer = structPointer;
-	//fx->menusettings = menusettings;
-	fx->menusettings = (MenuSettings *)(structPointer+32);
+	fx->menusettings = menusettings;
+	//fx->menusettings = (MenuSettings *)(structPointer+32);
 	return fx;
 }
 
 DspBin * initDspBin(){
 	DspBin * bin = calloc(1, sizeof(DspBin));
 	bin->bypass = 1;
+	bin->fx = NULL;
 	return bin;
 }
 
 void addFx(DspBin * bin, DspFx * fx){
-    int i = bin->bypass;
     bin->bypass = 1;
 	free(bin->fx);
 	bin->fx = fx;
-	bin->bypass = i;
+	bin->bypass = 0;
 }
 
 void removeFx(DspBin * bin){
@@ -61,20 +61,16 @@ void removeFx(DspBin * bin){
 	bin->fx = NULL;	
 }
 
-void addBin(DspSystem * dspsystem, int index, DspBin * bin){
-
-}
-
 void bypassDspBin(void * pointer, int bypass){
 	DspBin * bin = pointer;
 	bin->bypass = bypass;
-	printf("Bypassed Bin\n");
+	//printf("Bypassed Bin\n");
 }
 
 void runDspSystem(DspSystem * dspsystem){
 	int i;
 	for(i = 0; i < dspsystem->size; i++){
-		if(dspsystem->bin[i]->bypass){
+		if((dspsystem->bin[i]->bypass == 1) || (dspsystem->bin[i]->fx == NULL)){
 			memcpy(dspsystem->bin[i]->out, dspsystem->bin[i]->in, sizeof(Chunk));
 		}
 		else {

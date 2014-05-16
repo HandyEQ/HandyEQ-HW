@@ -46,11 +46,6 @@ DelayEffect * init_delay(){
 	//saveSettings(delayEff);
 	return delayEff;
 }
- 
-/*
-Char * printSettings(){
-	Char * output = calloc(10000, sizeof(Char));
-}*/
 
 void saveSettings(void * pointer){
 	DelayEffect * delayEff = pointer;
@@ -82,13 +77,13 @@ void removeDelay(void * pointer){
 void setDelayGain(void * pointer, int gain){
 	DelayEffect * delayEff = pointer;	
 	delayEff->gain = gain;
-	printf("Delay Gain: %d\n", gain);
+	//printf("Delay Gain: %d\n", gain);
 }
 
 void setDelayFeedback(void * pointer, int feedback){
 	DelayEffect * delayEff = pointer;
 	delayEff->feedback = feedback;
-	printf("Delay Feedback: %d\n", feedback);
+	//printf("Delay Feedback: %d\n", feedback);
 }
 
 void setDelaySize(DelayEffect * delayEff, int size){
@@ -103,13 +98,13 @@ void setDelayTime(void * pointer, int timeMs){
 	if(reqSize > 0){
 		setDelaySize(delayEff, reqSize);
 		delayEff->delay = timeMs;
-		printf("Delay Time: %d\n", timeMs);
+		//printf("Delay Time: %d\n", timeMs);
 	} else if(reqSize == 0){
 		setDelaySize(delayEff, 48);
 		delayEff->delay = 1;
-		printf("Delay Time: %d\n", 1);
+		//printf("Delay Time: %d\n", 1);
 	} else {
-		printf("Not Enough Memory!");
+		//printf("Not Enough Memory!");
 
 	}
 }
@@ -143,8 +138,8 @@ void calcDelay(void *pointer, Chunk * input, Chunk * output){
 	//Manipulate sound
 	
 	for(i = 0;  i < chunk_size; i++){
-		output->data[i] = fixedAdd(delayEff->data[head], (input->data[i]>>1));
-		delayEff->data[head] = fixedAdd(fixedMul(gain, delayEff->data[head]), fixedMul(feedback, input->data[i]));		
+		output->data[i] = fixedAdd(delayEff->data[head]>>1, input->data[i]>>1)<<1;
+		delayEff->data[head] = fixedAdd(fixedMul(gain, delayEff->data[head])>>1, fixedMul(feedback, input->data[i])>>1)<<1;		
 		head = (head+1)%size;		
 	}
 	delayEff->head = head;

@@ -27,4 +27,5 @@ void removeDelay(void * pointer);
 void saveSettings(void * pointer);
 void loadSettings(void * pointer);
 
+char * printSettings();
 #endif

@@ -29,7 +29,7 @@ void output_chunk(Chunk *current_chunk){
 	int i = 0;
 	int hold;
 	while(i < chunk_size){
-		hold = (signed int)(current_chunk->data[i++] & 0x0000FFFF);
+		hold = (current_chunk->data[i++] & 0x0000FFFF);
 		s_out_buf->reg = hold + (1 << 18);
 		s_out_buf->reg = hold;
 	}

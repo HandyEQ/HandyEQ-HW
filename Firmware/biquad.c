@@ -42,7 +42,6 @@ void infoBiquad(BiquadStage *s){
 void setBiquadCoeff(BiquadStage *s,BiquadCoeff *coeff){
 	s->coeff = coeff;
 	printf("%s (%s) is set to %s at %s\n",s->name,coeff->filtertype,coeff->gain,coeff->fc);
-	//
 }
 
 /* Resets stage to pass-through (Allpass) */
@@ -74,8 +73,10 @@ int runBiquad(BiquadStage *s){   //maybe change to void depending on return meth
 	s->outUnscaled -= 	( s->coeff->a1 * s->ymem1	); 
 	s->outUnscaled -= 	( s->coeff->a2 * s->ymem2	);
 	
-	//* Scale back coefficient scaling factor */  
-	s->out = s->outUnscaled / s->coeff->scalefactor;  //Should maybe have check for scalefacto !=0! (hangs simulator if uninitialized)
+	//* Scale back coefficient scaling factor */ 
+	if(s->coeff->scalefactor != 0){ 
+	    s->out = s->outUnscaled / s->coeff->scalefactor;  //Should maybe have check for scalefacto !=0! (hangs simulator if uninitialized)
+	}
 	
 	//* Shift delay line */
 	s->xmem2 = s->xmem1;

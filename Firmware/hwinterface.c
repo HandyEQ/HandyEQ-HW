@@ -38,7 +38,11 @@ Menu * initMenu(DspSystem * dspsystem){
 	menu->dspsystem = dspsystem;	
 		
 	for(i = 0; i < dspsystem->size; i++){
-		addSetting(menu, i);
+	    if(menu->dspsystem->bin[i]->fx != NULL){
+		    addSetting(menu, i);
+		} else {
+		    removeSetting(menu, i);
+		}
 	}
 	return menu;
 }
@@ -183,14 +187,19 @@ void removeSetting(Menu * menu, int row){
 }
 
 void updateSetting(Menu * menu, Interface * interface){
-    if(menu->dspsystem->bin[menu->row]->fx == NULL){
-        OLED_SendString(menu->row,"No Effect       \0");
-    } else {
+    char * name = calloc(3, sizeof(char));
+    if(menu->dspsystem->bin[menu->row]->fx != NULL){
         if(menu->column == 3){
 	        (*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])
 	        (
 		        menu->dspsystem->bin[menu->row], 
 		        interface->encValue
+	        );
+	        //SX__0_____#
+	        printf(
+	            "S%1dXX%1dXXXXX#", 
+	            menu->row+1, 
+	            interface->encValue
 	        );
         } else { 
 	        (*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])
@@ -198,11 +207,23 @@ void updateSetting(Menu * menu, Interface * interface){
 		        menu->dspsystem->bin[menu->row]->fx->structPointer, 
 		        interface->encValue
 	        );
+	        //1EQBA+0000X#
+	        //1DEGA+XXXXX#
+	        strncpy(name, menu->dspsystem->bin[menu->row]->fx->name, 2);
+	        name[3] = '\0';
+	        printf(
+	            "%1d%2S%2S+%.5d#", 
+	            menu->row+1, 
+	            name, 
+	            menu->dspsystem->bin[menu->row]->fx->menusettings->settingName, 
+	            interface->encValue
+	        );
         }	
         sprintf(menu->value[menu->row][menu->column], "%5d", interface->encValue);
         strcpy(interface->oled[menu->row], menu->value[menu->row][menu->column]);
         OLED_SendStringPos(menu->row, menu->value[menu->row][menu->column], 11);
     }
+    free(name);
 }
 
 void selectSetting(Menu * menu, Interface * interface){
@@ -253,17 +274,19 @@ void pollSwitches(Interface * interface){
 
 void showStatus(Menu * menu, Interface * interface){
 	int i;
-	//float v1, v2, v3;
 	for(i = 0; i < menu->dspsystem->size; i++){
-		//menu->settingName[i][0]
-		sprintf(
-		    interface->oled[i], "%1d:%.5s %.2s:%.5s", 
-		    i, 
-		    menu->dspsystem->bin[i]->fx->name, 
-		    menu->dspsystem->bin[i]->fx->menusettings->settingName[0], 
-		    menu->value[i][0]
-		);
-		OLED_SendString(i, interface->oled[i]);
+	    if(menu->dspsystem->bin[i]->fx == NULL){
+	        removeSetting(menu, i);
+	    } else {
+		    sprintf(
+		        interface->oled[i], "%1d:%.5s %.2s:%.5s", 
+		        i, 
+		        menu->dspsystem->bin[i]->fx->name, 
+		        menu->dspsystem->bin[i]->fx->menusettings->settingName[0], 
+		        menu->value[i][0]
+		    );
+		    OLED_SendString(i, interface->oled[i]);
+		}
 	}
 }
 
@@ -274,55 +297,47 @@ void readEnc(Menu * menu, Interface * interface){
       		B &= GPIO_ReadInputDataBit(GPIOB, NEXYS4_ENC_B);
 
       		if (A && !B){
-			if(interface->encValue < menu->dspsystem->bin[menu->row]->fx->menusettings->stepRangeH[menu->column]){
-          			interface->encValue += menu->dspsystem->bin[menu->row]->fx->menusettings->stepVal[menu->column];
-				sprintf(interface->oled[menu->row], "%5d", interface->encValue); 
-				OLED_SendStringPos(menu->row, interface->oled[menu->row], 11);
-				//sprintf(interface->sevenseg, "%8d", interface->encValue);
-			}
+			    if(interface->encValue < menu->dspsystem->bin[menu->row]->fx->menusettings->stepRangeH[menu->column]){
+              		interface->encValue += menu->dspsystem->bin[menu->row]->fx->menusettings->stepVal[menu->column];
+				    sprintf(interface->oled[menu->row], "%5d", interface->encValue); 
+				    OLED_SendStringPos(menu->row, interface->oled[menu->row], 11);
+			    }
       		} else if (!A && B){
-			if(interface->encValue > menu->dspsystem->bin[menu->row]->fx->menusettings->stepRangeL[menu->column]){
-          			interface->encValue -= menu->dspsystem->bin[menu->row]->fx->menusettings->stepVal[menu->column];
-				sprintf(interface->oled[menu->row], "%5d", interface->encValue); 
-				OLED_SendStringPos(menu->row, interface->oled[menu->row], 11);
-				//sprintf(interface->sevenseg, "%8d", interface->encValue);
-			}
+			    if(interface->encValue > menu->dspsystem->bin[menu->row]->fx->menusettings->stepRangeL[menu->column]){
+              		interface->encValue -= menu->dspsystem->bin[menu->row]->fx->menusettings->stepVal[menu->column];
+				    sprintf(interface->oled[menu->row], "%5d", interface->encValue); 
+				    OLED_SendStringPos(menu->row, interface->oled[menu->row], 11);
+			    }
       		}
 		if ((currGPIOBState & NEXYS4_BTNC) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTNC))
 		{
 			//Center
 			interface->buttons[0] = 1;
-			////printf("C\n");
 		}
 		else if ((currGPIOBState & NEXYS4_BTNL) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTNL))
 		{	
 			//Left
 			interface->buttons[1] = 1;
-			////printf("L\n");
 		}
 		else if ((currGPIOBState & NEXYS4_BTNR) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTNR))
 		{
 			//Right
 			interface->buttons[2] = 1;
-			////printf("R\n");
 		}
 		else if ((currGPIOBState & NEXYS4_BTNU) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTNU))
 		{
 			//Up
 			interface->buttons[3] = 1;
-			////printf("U\n");
 		}
 		else if ((currGPIOBState & NEXYS4_BTND) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_BTND))
 		{
 			//Down
 			interface->buttons[4] = 1;
-			////printf("D\n");
 		}
 		else if ((currGPIOBState & NEXYS4_ENC_BTN) && GPIO_ReadInputDataBit(GPIOB, NEXYS4_ENC_BTN))
 		{
 			//Enc
 			interface->encBtn = 1;
-			////printf("E\n");
 		}
 	}
 }

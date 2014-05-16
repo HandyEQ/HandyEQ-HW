@@ -8,7 +8,7 @@ typedef struct Interface {
 	char oled[4][17];
 	int buttons[5];
 	int encBtn;
-	int encValue;
+int encValue;
 	int encInc;
 	int leds[16];
 	int switches[2];

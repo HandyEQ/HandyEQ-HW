@@ -7,7 +7,7 @@
 #include "biquad.h" //for global reset coeffs
 
 
-#define PRINTEQDEBUG
+//#define PRINTEQDEBUG
 
 
 //Eq3BandEffect * init_eq3band(BiquadCoeff * coeffstage1,BiquadCoeff * coeffstage2,BiquadCoeff * coeffstage3){ // (with coeffs as input arguments
@@ -44,9 +44,9 @@ Eq3BandEffect * init_eq3band(){
 	strcpy(eq3bandeffect->menusettings->settingName[2], "BA");
 
 	//Init values for settings
-	eq3bandeffect->menusettings->initVal[0] = 4;
-	eq3bandeffect->menusettings->initVal[1] = 4;
-	eq3bandeffect->menusettings->initVal[2] = 4;
+	eq3bandeffect->menusettings->initVal[0] = 3;
+	eq3bandeffect->menusettings->initVal[1] = 3;
+	eq3bandeffect->menusettings->initVal[2] = 3;
 
 	eq3bandeffect->menusettings->stepVal[0] = 1;
 	eq3bandeffect->menusettings->stepVal[1] = 1;
@@ -135,7 +135,6 @@ void runEq3band(void *pointer, Chunk * input, Chunk * output){
 		
 		eq3bandeffect->stage1.in = input->data[i] ;
 		runBiquad(&eq3bandeffect->stage1);
-		
 		
 		eq3bandeffect->stage2.in = eq3bandeffect->stage1.out; 		
 		runBiquad(&eq3bandeffect->stage2);
