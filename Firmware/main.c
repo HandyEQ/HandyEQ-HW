@@ -9,7 +9,6 @@
 #include "delay.h"
 #include "biquad.h"
 #include "eqcoeff.h"
-#include "eq1band.h"
 #include "eq3band.h"
 #include "hwinterface.h"
 #include "volume.h"
@@ -42,7 +41,6 @@ BiquadCoeff bass[9];
 BiquadCoeff midrange[9];
 BiquadCoeff treble[9];
 
-
 int main(void){
 	DspSystem * dspsystem;
 	Chunk *input, * output;
@@ -72,7 +70,6 @@ int main(void){
 	addFx(dspsystem->bin[0], initDspFx("EQ   ", eq3, eq3->menusettings));
 	//addFx(dspsystem->bin[1], initDspFx("Delay", de1, de1->menusettings));
 	
-	
 	//Init Interface
 	interface = initHwInterface();
 	menu = initMenu(dspsystem);
@@ -88,8 +85,10 @@ int main(void){
 	while(1){
 		if(newSample){
 			newSample = 0;
-			retrieve_chunk(input);			
+            //GPIO_SetBits(GPIOB, NEXYS4_JC1);
+            retrieve_chunk(input);			
 			runDspSystem(dspsystem);
+			//GPIO_ResetBits(GPIOB, NEXYS4_JC1);			
 			output_chunk(output);
 			
 		} //else {

@@ -64,29 +64,24 @@ void resetBiquad(BiquadStage *s){
 /* Retrun type etc */
 
 int runBiquad(BiquadStage *s){   //maybe change to void depending on return method....
-	
-	
+
 	/* IIR DFI difference equation: */
 	s->outUnscaled = 	( s->coeff->b0 * s->in 		);
 	s->outUnscaled += 	( s->coeff->b1 * s->xmem1	); 
 	s->outUnscaled += 	( s->coeff->b2 * s->xmem2	); 
 	s->outUnscaled -= 	( s->coeff->a1 * s->ymem1	); 
 	s->outUnscaled -= 	( s->coeff->a2 * s->ymem2	);
-	
-	//* Scale back coefficient scaling factor */ 
-	if(s->coeff->scalefactor != 0){ 
-	    s->out = s->outUnscaled / s->coeff->scalefactor;  //Should maybe have check for scalefacto !=0! (hangs simulator if uninitialized)
-	}
+
+	//* Scale back coefficient scaling factor */  
+	s->out = s->outUnscaled / s->coeff->scalefactor;  //Should maybe have check for scalefacto !=0! (hangs simulator if uninitialized)
+		
 	
 	//* Shift delay line */
 	s->xmem2 = s->xmem1;
 	s->ymem2 = s->ymem1;
 	s->xmem1 = s->in;   
 	s->ymem1 = s->out;
-	 
-	 
-	
-	
+		
 	return 0;
 }
 

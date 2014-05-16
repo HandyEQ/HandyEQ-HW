@@ -15,3 +15,4 @@ Firmware/*.bat
 *.exe
 *.srec
 *~
+.gitignore~

@@ -6,6 +6,9 @@
 #include "buffer.h"
 #include "biquad.h" //for global reset coeffs
 
+//FOR TESTING:
+#include "gpio.h"
+#include "digilent_nexys4.h"
 
 //#define PRINTEQDEBUG
 
@@ -126,15 +129,26 @@ void setEqBassCoeff(void * eqstructptr, int index){
 	
 }
 
-
 void runEq3band(void *pointer, Chunk * input, Chunk * output){
+	//TESTING:
+	//GPIO_SetBits(GPIOB, NEXYS4_JC2);
+	
 	Eq3BandEffect * eq3bandeffect = pointer;
 	int i=0;
+	int inputscaled=0;
 	
 	for (i = 0; i < chunk_size; i++){
+
+		//Input scaling: Ideal maximum gain from eq, all bands set to +12db is ~ +15.1dB
+		//Shifting down 3 bits: 20log(2^3 / 1 ) = 20 log(8/1) = 18dB gain reduction which should leave some headroom also.
 		
-		eq3bandeffect->stage1.in = input->data[i] ;
-		runBiquad(&eq3bandeffect->stage1);
+		inputscaled = input->data[i] >> 2;
+
+
+		eq3bandeffect->stage1.in = inputscaled;	
+		//GPIO_SetBits(GPIOB, NEXYS4_JC3);	
+		runBiquad(&eq3bandeffect->stage1);	
+		//GPIO_ResetBits(GPIOB, NEXYS4_JC3);	
 		
 		eq3bandeffect->stage2.in = eq3bandeffect->stage1.out; 		
 		runBiquad(&eq3bandeffect->stage2);
@@ -142,10 +156,13 @@ void runEq3band(void *pointer, Chunk * input, Chunk * output){
 		eq3bandeffect->stage3.in = eq3bandeffect->stage2.out; 
 		runBiquad(&eq3bandeffect->stage3);
 		
-		output->data[i] = eq3bandeffect->stage3.out; 
+		output->data[i] = eq3bandeffect->stage3.out;
+
 		
+
 		
 	}
+	//GPIO_ResetBits(GPIOB, NEXYS4_JC2);
 }
 
 	
