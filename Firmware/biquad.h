@@ -1,3 +1,12 @@
+/*
+** Author(s): Preben Thorod
+** Creation Date: 
+** Last Modified: 2014-05-16
+** Function:
+** Biquad IIR filter with functions
+** for calculating sample chunks.
+*/
+
 #ifndef BIQUAD_H
 #define BIQUAD_H
 
@@ -50,3 +59,4 @@ void resetBiquad(BiquadStage *s);
 int runBiquad(BiquadStage *s, Chunk * in, Chunk * out);
 
 #endif
+

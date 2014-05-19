@@ -1,3 +1,14 @@
+/*
+** Author(s): Johan Bregell
+** Creation Date: 
+** Last Modified: 2014-05-19
+** Function:
+** An Delay/Echo effect with functions
+** for creating new instances and modify 
+** each instance separatley. Fully integrated
+** to the DSP-System.
+*/
+
 #ifndef DELAY_H
 #define DELAY_H
 

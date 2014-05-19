@@ -1,3 +1,16 @@
+/*
+** Author: Johan Bregell
+** Creation Date: 
+** Last Modified: 2014-05-19
+** Function:
+** Base file of the HandyEQ firmaware
+** Calls for initialisation of IRQs, 
+** Buffers, UART, Timers and GPIO.
+** Also calls for HW-GUI updates.
+** Handles new sample chunks and UART
+** sync with the PC-GUI.
+*/
+
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,7 +24,6 @@
 #include "eqcoeff.h"
 #include "eq3band.h"
 #include "hwinterface.h"
-#include "volume.h"
 
 //Uncomment this for GPIO output 
 //#define GPIOUTP
@@ -78,8 +90,8 @@ int main(void){
 
 	//Init dspsystem
 	initHeapDspSystem(&dsp, 4, &in, &out);
-	addFx(dsp.bin[0], initDspFx("EQ   ", eq3, eq3->menusettings));
-	addFx(dsp.bin[1], initDspFx("Delay", de1, de1->menusettings));
+	addFx(dsp.bin[1], initDspFx("EQ   ", eq3, eq3->menusettings));
+	addFx(dsp.bin[0], initDspFx("Delay", de1, de1->menusettings));
 	
 	//Init Interface
 	initHeapHwInterface(&interface);
@@ -116,7 +128,7 @@ int main(void){
 		    #endif
 		    
 			newUart = 0;
-			uart_input(&menu);
+			uart_input();
 			
 			#ifdef GPIOUTP
 			    GPIO_ResetBits(GPIOB, NEXYS4_JC7);
@@ -141,15 +153,15 @@ void new_uart(){
 	}
 }
 
-void uart_input(Menu * menu){
-    DspSystem * dspsystem = menu->dspsystem; 
+void uart_input(){
+    DspSystem * dspsystem = menu.dspsystem; 
 	DelayEffect * delay;
 	Eq3BandEffect * equalizer;
-	VolumeControl * volume;
+	//VolumeControl * volume;
 	DspBin * bin;
 	DspFx * fx;
 	int boxnr;
-	char * currentSettings;
+	int w,z;
 	//Pointer to base of buffer array
 	char * j, * input = uartBuffers->buffer[(uartBuffers->bufferSelect+1)%2];
 
@@ -180,52 +192,59 @@ void uart_input(Menu * menu){
 				    //printf("No Effect in this box to enable\r");
 				} else {
 				    dspsystem->bin[boxnr]->bypass = (dspsystem->bin[boxnr]->bypass + 1)%2;
-				    updateValue(menu, dspsystem->bin[boxnr]->bypass, boxnr, 3);
+				    updateValue(&menu, dspsystem->bin[boxnr]->bypass, boxnr, 3);
 				}
 
 			} else if((input[k] == '1')){
 				//If the new effect is noeffect.
 				removeFx(dspsystem->bin[boxnr]);
-				removeSetting(menu, boxnr);
+				removeSetting(&menu, boxnr);
 
 			} else if((input[k] == '2')){
 				//If the new effect is equalizer.
 				equalizer = init_eq3band();
 				addFx(dspsystem->bin[boxnr], initDspFx("EQ   ", equalizer, equalizer->menusettings));
-				addSetting(menu, boxnr);
+				addSetting(&menu, boxnr);
  
 			} else if((input[k] == '3')){
 				//If the new effect is volume.
-				volume = initVolume();
+				//To be added
+				/*volume = initVolume();
 				addFx(dspsystem->bin[boxnr], initDspFx("Vol  ", volume, volume->menusettings));
-				addSetting(menu, boxnr);					
+				addSetting(&menu, boxnr);*/					
 
 			} else if((input[k] == '4')){
 				//If the new effect is delay.
 				delay = init_delay();
 				addFx(dspsystem->bin[boxnr], initDspFx("Delay", delay, delay->menusettings));
-				addSetting(menu, boxnr);
+				addSetting(&menu, boxnr);
 			}			
-		} else if(input[i] == 'I'){
+		} else if (input[i] == 'I'){
 			//Used for when the GUI is connected and need all the current values from the board.
-			/*
-			currentSettings = calloc(99, sizeof(char));
-			printf(
-	            "S1XX%1dXXXXX#"
-	            "S2XX%1dXXXXX#"
-	            "S3XX%1dXXXXX#", 
-	            menu->row, 
-	            interface->encValue
-	        );
-			printf(
-	            "%1d%2S%2S+%.5d#", 
-	            menu->row, 
-	            name, 
-	            menu->dspsystem->bin[menu->row]->fx->menusettings->settingName, 
-	            menu->value[i][j]
-	        );
-			free(currentSettings);
-			*/
+			for (w = 0; w < menu.dspsystem->size; w++){
+			    if (menu.dspsystem->bin[w]->fx == NULL){
+			        printf("S%.1dE1NE0000#", w+1);
+			    } else if (menu.dspsystem->bin[w]->bypass == 1) {
+			        printf("S%.1dE0BY0000#", w+1);
+			    } else if (menu.dspsystem->bin[w]->fx->name[0] == 'E'){
+			        printf("S%.1dE2EQ0000#", w+1);    
+			    } else if (menu.dspsystem->bin[w]->fx->name[0] == 'D') {
+			        printf("S%.1dE4DE0000#", w+1);
+			    } else if (menu.dspsystem->bin[w]->fx->name[0] == 'V') {
+			        printf("S%.1dE3VO0000#", w+1);
+			    }	    
+			    for (z = 0; z < 3; z++){
+			        if (menu.dspsystem->bin[w]->fx != NULL){
+			            printf(
+			                "%.1d%c%2s%+.5d#",
+			                w+1,
+			                menu.dspsystem->bin[w]->fx->name[0], 
+			                menu.dspsystem->bin[w]->fx->menusettings->settingName[z], 
+			                atoi(menu.value[w][z])
+			            );
+			        }
+	            }
+			}
 		} else {
 			//Find Bin Number
 			strncpy(tempStr, &input[i], 1);
@@ -246,7 +265,7 @@ void uart_input(Menu * menu){
 						dspsystem->bin[boxnr]->fx->structPointer, 
 						tempVal
 					);
-					updateValue(menu, tempVal, boxnr, 2);
+					updateValue(&menu, tempVal, boxnr, 2);
 				}else if((input[k] == 'M')){
 					//The value is for the mid.
 					(*dspsystem->bin[boxnr]->fx->menusettings->setting[1])
@@ -254,7 +273,7 @@ void uart_input(Menu * menu){
 						dspsystem->bin[boxnr]->fx->structPointer, 
 						tempVal
 					);
-					updateValue(menu, tempVal, boxnr, 1);
+					updateValue(&menu, tempVal, boxnr, 1);
 				}else if((input[k] == 'T')){
 					//The value is for the treble.
 					(*dspsystem->bin[boxnr]->fx->menusettings->setting[0])
@@ -262,7 +281,7 @@ void uart_input(Menu * menu){
 						dspsystem->bin[boxnr]->fx->structPointer, 
 						tempVal
 					);
-					updateValue(menu, tempVal, boxnr, 0);
+					updateValue(&menu, tempVal, boxnr, 0);
 				}
 				 
 			} else if((input[k] == 'D')){
@@ -275,7 +294,7 @@ void uart_input(Menu * menu){
 						dspsystem->bin[boxnr]->fx->structPointer, 
 						tempVal
 					);
-					updateValue(menu, tempVal, boxnr, 2);
+					updateValue(&menu, tempVal, boxnr, 2);
 				}else if((input[k] == 'G')){
 					//The value is for the gain.
 					//This value is in float point.
@@ -284,7 +303,7 @@ void uart_input(Menu * menu){
 						dspsystem->bin[boxnr]->fx->structPointer, 
 						tempVal
 					);	
-					updateValue(menu, tempVal, boxnr, 0);
+					updateValue(&menu, tempVal, boxnr, 0);
 				}else if((input[k] == 'F')){
 					//The value is for the feedback.
 					//This value is in float point.
@@ -293,7 +312,7 @@ void uart_input(Menu * menu){
 						dspsystem->bin[boxnr]->fx->structPointer, 
 						tempVal
 					);
-					updateValue(menu, tempVal, boxnr, 1);
+					updateValue(&menu, tempVal, boxnr, 1);
 				} 
 			} else if((input[k] == 'V')){
 				//The new value is for the volume effect.
@@ -304,7 +323,7 @@ void uart_input(Menu * menu){
 					dspsystem->bin[boxnr]->fx->structPointer, 
 					tempVal
 				);
-				updateValue(menu, tempVal, boxnr, 0);
+				updateValue(&menu, tempVal, boxnr, 0);
 			} 
 		} 
 	}

@@ -1,3 +1,13 @@
+/*
+** Author(s): Preben Thorod
+** Creation Date: 
+** Last Modified: 2014-05-19
+** Function:
+** Equaliser effect, contains functions for 
+** instansiating new equalizers and modify
+** thesy independently.
+*/
+
 #ifndef EQ3BAND_H
 #define EQ3BAND_H
 

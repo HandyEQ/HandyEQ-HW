@@ -1,3 +1,15 @@
+/*
+** Author(s): Johan Bregell
+** Creation Date: 
+** Last Modified: 2014-05-19
+** Function:
+** Holds values for HW-GUI controls
+** and updates the menu when the 
+** controls are pressed. 
+** Uses the GPIO and Nexys4 files
+** for underlying functions.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -208,7 +220,8 @@ void removeSetting(Menu * menu, int row){
 }
 
 void updateSetting(Menu * menu, Interface * interface){
-    char * name = calloc(3, sizeof(char));
+    char * name = calloc(12, sizeof(char));
+    int z;
     if(menu->dspsystem->bin[menu->row]->fx != NULL){
         if(menu->column == 3){
 	        (*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])
@@ -216,33 +229,56 @@ void updateSetting(Menu * menu, Interface * interface){
 		        menu->dspsystem->bin[menu->row], 
 		        interface->encValue
 	        );
-	        //SX__0_____#
-	        printf(
-	            "S%1dXX%1dXXXXX#\r", 
-	            menu->row+1, 
-	            interface->encValue
-	        );
+	        if(interface->encValue == 1){
+			    printf(
+			        "S%.1dE0BY0000#",
+			        menu->row+1
+	            );
+	        } else {
+	            if (menu->dspsystem->bin[menu->row]->fx == NULL){
+			        printf("S%.1dE1NE0000#", menu->row+1);
+			    } else if (menu->dspsystem->bin[menu->row]->bypass == 1) {
+			        printf("S%.1dE0BY0000#", menu->row+1);
+			    } else if (menu->dspsystem->bin[menu->row]->fx->name[0] == 'E'){
+			        printf("S%.1dE2EQ0000#", menu->row+1);    
+			    } else if (menu->dspsystem->bin[menu->row]->fx->name[0] == 'D') {
+			        printf("S%.1dE4DE0000#", menu->row+1);
+			    } else if (menu->dspsystem->bin[menu->row]->fx->name[0] == 'V') {
+			        printf("S%.1dE3VO0000#", menu->row+1);
+			    }
+			    //strcat(currentSettings, setting);		    
+			    for (z = 0; z < 3; z++){
+			        if (menu->dspsystem->bin[menu->row]->fx != NULL){
+			            printf(
+			                "%.1d%c%2s%+.5d#",
+			                menu->row+1,
+			                menu->dspsystem->bin[menu->row]->fx->name[0], 
+			                menu->dspsystem->bin[menu->row]->fx->menusettings->settingName[z], 
+			                atoi(menu->value[menu->row][z])
+			            );
+			        }
+	            }
+	        }
         } else { 
 	        (*menu->dspsystem->bin[menu->row]->fx->menusettings->setting[menu->column])
 	        (
 		        menu->dspsystem->bin[menu->row]->fx->structPointer, 
 		        interface->encValue
 	        );
-	        //1EQBA+0000X#
-	        //1DEGA+XXXXX#
-	        strncpy(name, menu->dspsystem->bin[menu->row]->fx->name, 2);
-	        name[3] = '\0';
-	        printf(
-	            "%1d%2S%2S+%.5d\r#", 
-	            menu->row+1, 
-	            name, 
-	            menu->dspsystem->bin[menu->row]->fx->menusettings->settingName, 
-	            interface->encValue
-	        );
+	        if(menu->dspsystem->bin[menu->row]->bypass == 0){
+	            printf(
+			        "%.1d%c%2s%+.5d#",
+			        menu->row+1,
+			        menu->dspsystem->bin[menu->row]->fx->name[0], 
+			        menu->dspsystem->bin[menu->row]->fx->menusettings->settingName[menu->column], 
+			        interface->encValue
+	            );
+	        }
         }	
         sprintf(menu->value[menu->row][menu->column], "%5d", interface->encValue);
         strcpy(interface->oled[menu->row], menu->value[menu->row][menu->column]);
         OLED_SendStringPos(menu->row, menu->value[menu->row][menu->column], 11);
+        
     }
     free(name);
 }

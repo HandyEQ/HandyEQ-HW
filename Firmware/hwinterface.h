@@ -1,3 +1,15 @@
+/*
+** Author(s): Johan Bregell
+** Creation Date: 
+** Last Modified: 2014-05-19
+** Function:
+** Holds values for HW-GUI controls
+** and updates the menu when the 
+** controls are pressed. 
+** Uses the GPIO and Nexys4 files
+** for underlying functions.
+*/
+
 #ifndef HWINTERFACE_H
 #define HWINTERFACE_H
 
@@ -42,3 +54,4 @@ void updateSetting(Menu * menu, Interface * interface);
 
 
 #endif
+

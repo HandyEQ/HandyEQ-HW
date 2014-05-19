@@ -384,8 +384,3 @@ void initEqCoeff() {
 
 };
 
-
-
-
-
-

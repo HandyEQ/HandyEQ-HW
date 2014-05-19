@@ -1,4 +1,12 @@
-/* void initresetcoeffs(); need to be run before coeffs is used */
+/*
+** Author(s): Preben Thorod
+** Creation Date: 
+** Last Modified: 2014-05-16
+** Function:
+** Biquad IIR filter with functions
+** for calculating sample chunks.
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include "biquad.h"
@@ -87,27 +95,9 @@ int runBiquad(BiquadStage *s, Chunk * in, Chunk * out){   //maybe change to void
 	    accu += 	( b1 * s->xmem1     ); 
 	    accu += 	( b2 * s->xmem2	    ); 
 	    accu -= 	( a1 * s->ymem1	    ); 
-	    accu -= 	( a2 * s->ymem2	    );
+	    accu -= 	( a2 * s->ymem2	    );   
 	    out->data[i] = (scale == 0) ? accu : (accu / scale);
 	    
-	    /*accu = 	    ( b0 * (in->data[i]>>2) )>>12;
-	    accu += 	( b1 * s->xmem1         )>>12; 
-	    accu += 	( b2 * s->xmem2	        )>>12; 
-	    accu -= 	( a1 * s->ymem1	        )>>12; 
-	    accu -= 	( a2 * s->ymem2	        )>>12;
-	    
-	    
-	    accu = 	    ( b0 * in->data[i]      )>>14;
-	    accu += 	( b1 * s->xmem1         )>>12; 
-	    accu += 	( b2 * s->xmem2	        )>>12; 
-	    accu -= 	( a1 * s->ymem1	        )>>12; 
-	    accu -= 	( a2 * s->ymem2	        )>>12;
-	
-	    //* Scale back coefficient scaling factor  
-	    
-	    out->data[i] = accu;*/
-	     	
-	
 	    //* Shift delay line */
 	    s->xmem2 = s->xmem1;
 	    s->ymem2 = s->ymem1;
@@ -117,8 +107,4 @@ int runBiquad(BiquadStage *s, Chunk * in, Chunk * out){   //maybe change to void
     
 	return 0;
 }
-
-
-
-
 

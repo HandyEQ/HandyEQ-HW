@@ -1,3 +1,17 @@
+/*
+** Author(s): Johan Bregell, Preben Thorod
+** Creation Date: 
+** Last Modified: 2014-05-19
+** Function:
+** Base file in the DSP system, must be 
+** initialised to enable sound and effects.
+** Controls framework for how new settings 
+** must be formed to fit into the system,
+** and thus works close with the Menu.
+** Contains functions for adding, removing, 
+** and bypassing effects. 
+*/
+
 #ifndef DSPSYSTEM_H
 #define DSPSYSTEM_H
 
@@ -49,3 +63,4 @@ void addFx(DspBin * bin, DspFx * fx);
 void removeFx(DspBin * bin);
 
 #endif
+

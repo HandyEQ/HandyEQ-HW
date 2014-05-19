@@ -1,3 +1,13 @@
+/*
+** Author(s): Preben Thorod
+** Creation Date: 
+** Last Modified: 2014-05-19
+** Function:
+** Equaliser effect, contains functions for 
+** instansiating new equalizers and modify
+** thesy independently.
+*/
+
 #include <stdlib.h> // For calloc()
 #include <stdio.h>
 #include <string.h>
@@ -31,9 +41,12 @@ Eq3BandEffect * init_eq3band(){
 	resetBiquad(&(eq3bandeffect->stage3));	
 	
 	/* Initialise name and coeffisients for stage 1*/
-	eq3bandeffect->stage1.coeff = &resetcoeffs;	
-	eq3bandeffect->stage2.coeff = &resetcoeffs;	
-	eq3bandeffect->stage3.coeff = &resetcoeffs;	
+	setEqTrebleCoeff(eq3bandeffect, 4);
+	setEqMidCoeff(eq3bandeffect, 4);
+	setEqBassCoeff(eq3bandeffect, 4);
+	/*eq3bandeffect->stage1.coeff = &treble[4];	
+	eq3bandeffect->stage2.coeff = &midrange[4];	
+	eq3bandeffect->stage3.coeff = &bass[4];	*/
 	strcpy(eq3bandeffect->stage1.name, "Stage 1");
 	strcpy(eq3bandeffect->stage2.name, "Stage 2");
 	strcpy(eq3bandeffect->stage3.name, "Stage 3");
@@ -46,7 +59,7 @@ Eq3BandEffect * init_eq3band(){
 	eq3bandeffect->menusettings->save = &saveEQ;
 	eq3bandeffect->menusettings->load = &loadEQ;
 
-	strcpy(eq3bandeffect->menusettings->settingName[0], "TB");
+	strcpy(eq3bandeffect->menusettings->settingName[0], "TR");
 	strcpy(eq3bandeffect->menusettings->settingName[1], "MI");
 	strcpy(eq3bandeffect->menusettings->settingName[2], "BA");
 

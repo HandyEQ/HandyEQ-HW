@@ -415,6 +415,7 @@ int * SPIMEM_Read_var(int address, int size){
 	
     	//printf("Returned %d \n\r", temp);
 	printf("Read_var done\n\r");
+	free(returnBuffer);
 	return returnBuffer;
 }
 

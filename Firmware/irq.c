@@ -1,3 +1,12 @@
+/*
+** Author: Johan Bregell
+** Creation Date: 
+** Last Modified: 
+** Function:
+** Maps the memory adress of the IRQ to 
+** enable the use of the IRQ functions. 
+*/
+
 #include "irq.h"
 
 //IrqRegs *irq_struct = (IrqRegs *) irq_addr;

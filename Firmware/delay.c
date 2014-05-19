@@ -1,3 +1,14 @@
+/*
+** Author(s): Johan Bregell
+** Creation Date: 
+** Last Modified: 2014-05-19
+** Function:
+** An Delay/Echo effect with functions
+** for creating new instances and modify 
+** each instance separatley. Fully integrated
+** to the DSP-System.
+*/
+
 #include "delay.h"
 #include <stdlib.h>
 #include <string.h>
@@ -42,7 +53,7 @@ DelayEffect * init_delay(){
 	//Step values for settings
 	delayEff->menusettings->stepVal[0] = 327;
 	delayEff->menusettings->stepVal[1] = 1638;
-	delayEff->menusettings->stepVal[2] = 10;
+	delayEff->menusettings->stepVal[2] = 100;
 	//Range for the setting Low to High
 	delayEff->menusettings->stepRangeL[0] = 0;
 	delayEff->menusettings->stepRangeL[1] = 0;
@@ -138,7 +149,7 @@ void calcDelay(void *pointer, Chunk * input, Chunk * output){
 	
 	for(i = 0;  i < chunk_size; i++){
 	    output->data[i] = ((delayEff->data[head]) + (input->data[i]));
-		delayEff->data[head] = ((gain * delayEff->data[head]>>1)>>15) + ((feedback * input->data[i]>>1)>>15);		
+		delayEff->data[head] = ((gain * delayEff->data[head])>>15) + ((feedback * input->data[i])>>15);		
 		head = (head+1)%size;		
 	}
 	delayEff->head = head;
@@ -149,3 +160,4 @@ void calcDelay(void *pointer, Chunk * input, Chunk * output){
 	#endif
     //----//
 }
+

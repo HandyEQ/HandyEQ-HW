@@ -1,3 +1,13 @@
+/*
+** Author: Johan Bregell
+** Creation Date: 
+** Last Modified: 
+** Function:
+** Maps the memory adress of the UART 
+** to enable sending and recieving messages
+** over UART. 
+*/
+
 #ifndef UART_H
 #define UART_H
 
