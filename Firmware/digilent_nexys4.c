@@ -1,19 +1,23 @@
+// This file contains the board specific functions concerning the OLED display, GPIO ports,
+// timers and seven-segment displays.
+
 #include "digilent_nexys4.h"
 #include "gpio.h"
 #include "irq.h"
 #include "sevenseg.h"
 
+/* shared variables */
+extern int interruptServedRecently;
+extern int dbncCtr;
+extern int A;
+extern int B;
+extern int flagGPIOA;
+extern int currGPIOBState;
+extern int delayCtr;
+extern int flag3;
+extern int timerFlagSeg;
 
-extern volatile int interruptServedRecently;
-extern volatile int dbncCtr;
-extern volatile int A;
-extern volatile int B;
-extern volatile int flagGPIOA;
-extern volatile int currGPIOBState;
-extern volatile int delayCtr;
-extern volatile int flag3;
-extern volatile int timerFlagSeg;
-
+// character library, every cahracter is denoted by its ASCII value, one character consists of 8 bytes
 int OLEDChars[] = {
   0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,    // 0x00, NUL
   0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,    // 0x01, SOH
@@ -146,6 +150,11 @@ int OLEDChars[] = {
   0xAA,0x55,0xAA,0x55,0xAA,0x55,0xAA,0x55     // 0x7F, DEL
 };
 
+/**
+  * @brief   This function initializes the GPIO ports of the board.
+  * @param  None
+  * @retval None
+  */
 void NEXYS4_GPIO_Init()
 {
   GPIO_InitTypeDef GPIO_InitStructure;
@@ -155,7 +164,7 @@ void NEXYS4_GPIO_Init()
   GPIO_DeInit(GPIOA);
 
   GPIO_StructInit(&GPIO_InitStructure);
-
+  // set the switches to input
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4
                               | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9
                               | GPIO_Pin_10 | GPIO_Pin_11 | GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
@@ -163,7 +172,7 @@ void NEXYS4_GPIO_Init()
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
 
   GPIO_Init(GPIOA, &GPIO_InitStructure);
-
+  // set the LEDs to output
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_16 | GPIO_Pin_17 | GPIO_Pin_18 | GPIO_Pin_19 | GPIO_Pin_20
                               | GPIO_Pin_21 | GPIO_Pin_22 | GPIO_Pin_23 | GPIO_Pin_24 | GPIO_Pin_25
                               | GPIO_Pin_26 | GPIO_Pin_27 | GPIO_Pin_28 | GPIO_Pin_29 | GPIO_Pin_30 | GPIO_Pin_31;
@@ -177,12 +186,12 @@ void NEXYS4_GPIO_Init()
   GPIO_DeInit(GPIOB);
 
   GPIO_StructInit(&GPIO_InitStructure);
-
+  // set the buttons and the encoder extension board's devices to input
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15 
                               | GPIO_Pin_21 | GPIO_Pin_22 | GPIO_Pin_23 | GPIO_Pin_24 | GPIO_Pin_25;
 
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
-
+  // set the three-color LEDs, the OLED display's signals and the testmodules to output
   GPIO_Init(GPIOB, &GPIO_InitStructure);
 
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4
@@ -194,49 +203,55 @@ void NEXYS4_GPIO_Init()
 
   GPIO_Init(GPIOB, &GPIO_InitStructure);
 
-  GPIOA -> interrupt = 0x0000FFFF; // enable interrupts for inputs
+  GPIOA -> interrupt = 0x0000FFFF; // enable interrupts for GPIOA inputs
   GPIOA -> int_edg = 0x0000FFFF; // edge triggered
   GPIOA -> int_pol = 0x0000FFFF; // rising edge
 
   catch_interrupt(GPIOAB_IRQHandler, 9);
   enable_irq(9);
 
-  GPIOB -> interrupt = 0x03E0FFFF; // enable interrupts for inputs
+  GPIOB -> interrupt = 0x03E0FFFF; // enable interrupts for GPIOB inputs
   GPIOB -> int_edg = 0x03E0FFFF; // edge triggered
   GPIOB -> int_pol = 0x03E0CFFF; // rising edge (falling edge for encoder channels)
 
-  catch_interrupt(GPIOAB_IRQHandler, 10);//TESTING:
-	GPIO_SetBits(GPIOB, NEXYS4_JC2);
+  catch_interrupt(GPIOAB_IRQHandler, 10);
   enable_irq(10);
 }
 
+/**
+  * @brief   This function initializes the timer module of the CPU.
+  * @param  None
+  * @retval None
+  */
 void NEXYS4_TIMER_Init()
 {
   TIMERA -> scaler = 0x00000003; // divides 50 MHz by 4 (3 + 1)
   TIMERA -> scalerReload = 0x00000003; // divides 50 MHz by 4
-  TIMERA -> config = 0x00000001;
-  TIMERA -> timerLatchCfg = 0x00000000;
+  TIMERA -> config = 0x00000001; // set config to base state
+  TIMERA -> timerLatchCfg = 0x00000000; // no latching is used
 
-  TIMERA -> timer1counter = 1249; //0.1 ms overall
-  TIMERA -> timer1reload = 1249;
-  /*TIMERA -> timer1counter = 12499; //0.1 ms overall
-   *TIMERA -> timer1reload = 12499;*/
-  TIMERA -> timer1ctrl = 0x0000000B;
+  TIMERA -> timer1counter = 1249; // divide 12.5 MHz by 1250 0.1 ms overall
+  TIMERA -> timer1reload = 1249; // divide 12.5 MHz by 1250 0.1 ms overall
+  TIMERA -> timer1ctrl = 0x0000000B; // interrupt enable, reload value from register on underflow, enable the counter
 
-  TIMERA -> timer2counter = 12499; // divide 12.5 MHz by 12.5k (BEBC1F + 1) 0,001 s overall
-  TIMERA -> timer2reload = 12499; // divide 12.5 MHz by 12.5k
-  TIMERA -> timer2ctrl = 0x0000000B;
+  TIMERA -> timer2counter = 12499; // divide 12.5 MHz by 12.5k 0.001 s overall
+  TIMERA -> timer2reload = 12499; // divide 12.5 MHz by 12.5k 0.001 s overall
+  TIMERA -> timer2ctrl = 0x0000000B; // interrupt enable, reload value from register on underflow, enable the counter
 
   catch_interrupt(TIMER1_IRQHandler, 7);
   enable_irq(7);
 
-  //catch_interrupt(TIMER1_IRQHandler, 8);
-  //enable_irq(8);
+  catch_interrupt(TIMER1_IRQHandler, 8);
+  enable_irq(8);
 }
 
+/**
+  * @brief   This function initializes the SPI module and the OLED display.
+  * @param  None
+  * @retval None
+  */
 void NEXYS4_OLED_SPI_Init()
 {
-	//printf("INIT OLED\n");
   GPIO_SetBits(GPIOB, NEXYS4_OLED_VDDC);
 
   GPIO_SetBits(GPIOB, NEXYS4_OLED_VBATC);
@@ -248,85 +263,64 @@ void NEXYS4_OLED_SPI_Init()
 
   GPIO_ResetBits(GPIOB, NEXYS4_OLED_CS); //Slave Select to LOW
 	
-	//printf("Resetted bits\n");
   SPIA -> mode = 0x3A002384; //CPOL = 1, CPHA = 1, DIV16 = 1, REV = 0 (LSB first), MS = 1 (master), FACT = 1, PM = 0, IGSEL = 1 ignore spi sel, 7-CLK gap inserted between following bytes (does not help)
 
   SPIA -> mode |= 0x00700000; //Word length = 8 (7+1)
 
   SPIA -> mode |= 0x01000000; //EN = 1
-  	//printf("wrote to SPIA\n");
-  //1. Apply power to VDD.
+  //1. Apply power to VDD, logic power.
   GPIO_ResetBits(GPIOB, NEXYS4_OLED_VDDC);
 
-  delayCtr = 0;
+  delayCtr = 0; // wait 5 ms
   while (delayCtr < 50){
-  //while (delayCtr < 5){
-  	//printf("%d\n", delayCtr);
   }
 
-  //2. Send Display Off command. 0xAE 1010 1110 - 0111 0101 75
+  //2. Send Display Off command. 0xAE
   SPI_SendByte(0xAE);
-  //SPI_SendByte(0x75);
 
   GPIO_ResetBits(GPIOB, NEXYS4_OLED_RES); //RES == 0
 
-  delayCtr = 0;
+  delayCtr = 0; // wait 5 ms
   while (delayCtr < 50){
-  //while (delayCtr < 5){
-  	//printf("%d\n", delayCtr);
   }
 
   GPIO_SetBits(GPIOB, NEXYS4_OLED_RES); //RES == 1
   
-  delayCtr = 0;
+  delayCtr = 0; // wait 5 ms
   while (delayCtr < 50){
-  //while (delayCtr < 5){
-  	//printf("%d\n", delayCtr);
   }
 
-//printf("Send Bytes 1\n");
+  // set screen specifics, such as contrast, polarity, etc.
   SPI_SendByte(0x8D);
   SPI_SendByte(0x14);
-  //SPI_SendByte(0xB1);
-  //SPI_SendByte(0x28);
 
-//printf("Send Bytes 2\n");
   SPI_SendByte(0xD9);
   SPI_SendByte(0xF1);
-  //SPI_SendByte(0x9B);
-  //SPI_SendByte(0x8F);
 
-//printf("Reset Bits 1\n");
-  GPIO_ResetBits(GPIOB, NEXYS4_OLED_VBATC);
+  GPIO_ResetBits(GPIOB, NEXYS4_OLED_VBATC); // enable screen power
   
-  delayCtr = 0;
+  delayCtr = 0; // wait 5 ms
   while (delayCtr < 1050){
-  //while (delayCtr < 105){
-  	//printf("%d\n", delayCtr);
   }
 
-//printf("Send Bytes 3\n");
   SPI_SendByte(0x81);
   SPI_SendByte(0x0F);
-  //SPI_SendByte(0x81);
-  //SPI_SendByte(0xF0);
 
-//printf("Send Bytes 4\n");
   SPI_SendByte(0xA1);
   SPI_SendByte(0xC8);
-  //SPI_SendByte(0x85);
-  //SPI_SendByte(0x13);
 
-//printf("Send Bytes 5\n");
   SPI_SendByte(0xDA);
   SPI_SendByte(0x20);
-  //SPI_SendByte(0x5B);
-  //SPI_SendByte(0x04);
 
+  //turn display on
   SPI_SendByte(0xAF);
-//printf("DONE\n");
 }
 
+/**
+  * @brief   This function initializes the seven-segment displays on the board.
+  * @param  None
+  * @retval None
+  */
 void NEXYS4_SEVENSEG_Init()
 {
 	SEVENSEG_Init();
@@ -335,37 +329,29 @@ void NEXYS4_SEVENSEG_Init()
 
 
 /*** IRQ Handlers ***/
+
+/**
+  * @brief   This function handles the interrupts from the GPIOs and the timers.
+  * @param  IRQ designator
+  * @retval None
+  */
 void GPIOAB_IRQHandler(int irq)
 {
   if (irq == 9) // switches
-  { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
-    //lreg[IPEND/4] &= ~(1 << irq);
-	//irq_struct->irqpend &= ~(1 << irq); // clear pending bit
-	clear_irq(irq);
-    //not necessary here, switches to be read by polling
+  {
+	  clear_irq(irq);
+    // not necessary in the current application as switches are read by polling
     flagGPIOA = 1;
   } 
   else if (irq == 10) // btns, encoder
-  { //having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
-    //lreg[IPEND/4] &= ~(1 << irq);
-	//irq_struct->irqpend &= ~(1 << irq); // clear pending bit
-	clear_irq(irq);
+  {
+	  clear_irq(irq);
+    
+    // debouncing
     if (interruptServedRecently == 0)
     {
       A = GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_12);
       B = GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_13);
-
-      /*if(A && !B) {// && prevB
-        if (encDir < 7) encDir++;
-      }
-      else if(!A && B) {// && prevA
-        if(encDir > 0) encDir--;
-      }
-      else
-      {
-        //encDir = 0;
-        //encDirChar = '0';
-      }*/
 
       currGPIOBState = GPIO_ReadInputData(GPIOB);
 
@@ -376,35 +362,32 @@ void GPIOAB_IRQHandler(int irq)
 }
 
 void TIMER1_IRQHandler(int irq) {
-    //TESTING:
-	GPIO_SetBits(GPIOB, NEXYS4_JC4);
   	if (irq == 7){ 
-	    /*having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
-    	 *lreg[IPEND/4] &= ~(1 << irq);
-	     *irq_struct->irqpend &= ~(1 << irq); // clear pending bit */
-		clear_irq(irq);
-    		TIMERA -> timer1ctrl |= 0x00000010;
+		    clear_irq(irq);
+    		TIMERA -> timer1ctrl |= 0x00000010; // clear timer pending bit by writing one to it
 
     		dbncCtr++;
     		delayCtr++;
 	} else if (irq == 8){
-		/* having simple 'if'-s instead of 'else if'-s for the other irq checks makes the output noisier
-    	 * lreg[IPEND/4] &= ~(1 << irq);
-		 * irq_struct->irqpend &= ~(1 << irq); // clear pending bit */
-		clear_irq(irq);
-		TIMERA -> timer2ctrl |= 0x00000010;
-    	flag3 = 1;
-		timerFlagSeg = 1;
+		    clear_irq(irq);
+		    TIMERA -> timer2ctrl |= 0x00000010; // clear timer pending bit by writing one to it
+    		flag3 = 1;
+		    timerFlagSeg = 1;
 	}
-	//TESTING:
-	GPIO_ResetBits(GPIOB, NEXYS4_JC4);
 }
 
 /* SPI and OLED functions */
+
+/**
+  * @brief   This function initializes sends a byte thru SPI.
+  * @param  byte to send
+  * @retval None
+  */
 void SPI_SendByte(int i)
 {
-  volatile int j = 0;
+  int j = 0;
 
+  // the MSB first sending is done by flipping the order of bits in the byte
   j |= (i & 1) << 7;
   j |= (i & 2) << 5;
   j |= (i & 4) << 3;
@@ -416,68 +399,75 @@ void SPI_SendByte(int i)
 
   while (!((SPIA -> event) & 0x100)); //wait till NotFull bit is 1
   
-  SPIA -> transmit = j;
+  SPIA -> transmit = j; // transmit the byte
 
-  for (j = 0; j < 40; j++); // waiting for the flag is not enough, extra delay needs to be inserted, 20 is the min OK value
-
-  //delayCtr = 0; // timer waiter function since NotFull checking does not work as intended
-  //while (delayCtr < 2);
+  for (j = 0; j < 20; j++); // waiting for the flag is not enough, extra delay needs to be inserted, 20 is the min OK value
 }
 
+/**
+  * @brief   This function sends a character to the OLED display.
+  * @param  character to send
+  * @retval None
+  */
 void OLED_SendChar(char c)
 {
-  volatile int i;
-
-  //GPIO_SetBits(GPIOB, NEXYS4_OLED_DC); //data
+  int i;
   
   for (i = 0; i < 8; i++)
   {
-    SPI_SendByte(OLEDChars[c * 8 + i]); // fetch the correct value from the char array
+    SPI_SendByte(OLEDChars[c * 8 + i]); // fetch the correct value from the char library array
   }
 }
 
+/**
+  * @brief   This function sends a string to the beginning of the OLED display's specified line.
+  * @param  line to write to
+  * @param  string to write
+  * @retval None
+  */
 void OLED_SendString(int line, char* s)
 {
   /* Significant improvement here: keep four global line-variable strings for the four lines, and when this
      function is called check if the string to be written is the same the one that is already displayed
      (stored in the global line-variable). If not, overwrite the line-variable and print to display, but if yes,
      do nothing. */
-  volatile int i = 0;
+  int i = 0;
 
-  GPIO_ResetBits(GPIOB, NEXYS4_OLED_DC); //command
+  GPIO_ResetBits(GPIOB, NEXYS4_OLED_DC); // let the display know that a command will be sent 
 
-  SPI_SendByte(0xB0 + line); // cmd to set line to write to
+  SPI_SendByte(0xB0 + line); // set line to write to
   SPI_SendByte(0x10); // set higher nibble of start segment (both are 0s = beginning of the line)
   SPI_SendByte(0x00); // set lower nibble of start segment (both are 0s = beginning of the line)
 
   GPIO_SetBits(GPIOB, NEXYS4_OLED_DC); //data
 
   	i = 0;
-  	while (s[i] && (i < 16))
+  	while (s[i] && (i < 16)) // send characters until a terminating 0 character or the end of the line (position 15) is written
   	{
     		OLED_SendChar(s[i]);
     		i++;
   	}
-	/*while (i < 16) // clear line
-  	{
-    		OLED_SendChar(' '); // the segment ctr is incremented automatically, it will be at the beginning of the line after this while-case
-    		i++;
-	}*/
 }
 
-
+/**
+  * @brief   This function sends a string to the OLED display's specified line and starts from the specified position.
+  * @param  line to write to
+  * @param  string to write
+  * @param  position to start writing from
+  * @retval None
+  */
 void OLED_SendStringPos(int line, char* s, int pos)
 {
   /* Significant improvement here: keep four global line-variable strings for the four lines, and when this
      function is called check if the string to be written is the same the one that is already displayed
      (stored in the global line-variable). If not, overwrite the line-variable and print to display, but if yes,
      do nothing. */
-  volatile int i = 0;
-  volatile int col1 = 0, col2 = 0;
+  int i = 0;
+  int col1 = 0, col2 = 0;
 
   GPIO_ResetBits(GPIOB, NEXYS4_OLED_DC); //command
   
-  col1 = (int)(pos/2);
+  col1 = (int)(pos/2); // calculate the starting position of the character (can be every 8th of the 128 segments)
   col2 = (int)(pos%2)*8;
 
   SPI_SendByte(0xB0 + line); // cmd to set line to write to
@@ -487,14 +477,9 @@ void OLED_SendStringPos(int line, char* s, int pos)
   GPIO_SetBits(GPIOB, NEXYS4_OLED_DC); //data
 
   	i = 0;
-  	while (s[i] && (i < (16-pos)))
+  	while (s[i] && (i < (16-pos))) // send characters until a terminating 0 character or the end of the line (position 15) is written
   	{
     		OLED_SendChar(s[i]);
     		i++;
   	}
-	/*while (i < 16) // clear line
-  	{
-    		OLED_SendChar(' '); // the segment ctr is incremented automatically, it will be at the beginning of the line after this while-case
-    		i++;
-	}*/
 }

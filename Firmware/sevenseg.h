@@ -1,3 +1,6 @@
+// Header file with the function prototypes for the seven-segment displays.
+
+/* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef _SEVSEG_H
 #define _SEVSEG_H
 

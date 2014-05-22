@@ -1,18 +1,12 @@
-/*
-** Author: Johan Bregell
-** Creation Date: 
-** Last Modified: 
-** Function:
-** Maps the memory adress of the IRQ to 
-** enable the use of the IRQ functions. 
-*/
+// This file holds interrupt specifics such as the module's address and register mapping
 
+/* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef IRQ_H
 #define IRQ_H
 
 #include <stdio.h>
 
-#define irq_addr 0x80000200
+#define irq_addr 0x80000200 // address on the bus
 
 typedef struct irq_regs {
     volatile unsigned int irqlevel;    /* 0x00 */
