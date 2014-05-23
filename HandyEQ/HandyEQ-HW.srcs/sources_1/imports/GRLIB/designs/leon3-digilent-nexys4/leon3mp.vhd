@@ -790,7 +790,7 @@ Buffer_apb_map : Buffer_apb
     
 	-- XADC instantiation
     XADC_component : ADC
-    Port map ( clk => clkm,
+    Port map ( clk => clk,
         reset => rstn,
         vauxp3 => vauxp3,
         vauxn3 => vauxn3,
@@ -819,7 +819,7 @@ Buffer_apb_out_map : Buffer_apb_out
  
     PWM_module: PWM
     generic map(width => 16,
-                accuracy => 10)
+                accuracy => 11)
     PORT MAP(reset => rstn,
              clk => clk,
              sample => sample_pwm_signal,
