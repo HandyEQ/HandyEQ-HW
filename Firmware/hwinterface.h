@@ -34,7 +34,7 @@ typedef struct Menu {
 	volatile int column;
 } Menu;
 
-
+/* Functions */
 Menu * initMenu(DspSystem * dspsystem);
 void initHeapMenu(Menu * menu, DspSystem * dspsystem);
 void addSetting(Menu * menu, int row);

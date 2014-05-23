@@ -19,6 +19,7 @@
 #include "dspsystem.h"
 #include "spi_mem.h"
 
+/* shared variables */
 extern volatile int interruptServedRecently;
 extern volatile int dbncCtr;
 extern volatile int A;
@@ -33,6 +34,7 @@ extern volatile int encDir;
 extern volatile int btnPress ;
 extern char dashOrSpace;
 
+/* Instansiate interface on stack */
 Interface * initHwInterface(){
 	Interface * interface;
 	NEXYS4_GPIO_Init();
@@ -44,6 +46,7 @@ Interface * initHwInterface(){
 	return interface;
 }
 
+/* Instansiate interface on heap */
 void initHeapHwInterface(Interface * interface){
 	NEXYS4_GPIO_Init();
 	NEXYS4_TIMER_Init();
@@ -52,6 +55,7 @@ void initHeapHwInterface(Interface * interface){
 	interface->sevenseg = calloc(9, sizeof(char));
 }
 
+/* Instansiate menu on stack */
 Menu * initMenu(DspSystem * dspsystem){
 	Menu * menu = calloc(1, sizeof(Menu));
 	int i;
@@ -67,6 +71,7 @@ Menu * initMenu(DspSystem * dspsystem){
 	return menu;
 }
 
+/* Instansiate menu on heap */
 void initHeapMenu(Menu * menu, DspSystem * dspsystem){
 	int i;
 	menu->dspsystem = dspsystem;		
@@ -79,6 +84,10 @@ void initHeapMenu(Menu * menu, DspSystem * dspsystem){
 	}
 }
 
+/* 
+** Function that navigates trough the menu by checking
+** what button that was pressed and change state accordingly
+*/
 void menuNavigation(Menu * menu, Interface * interface){
 	//Base State	
 	if(menu->state == 0){
@@ -185,6 +194,10 @@ void menuNavigation(Menu * menu, Interface * interface){
 	}
 }
 
+/*
+** Adds new setting to the menu on the supplied row in
+** in the Menu system
+*/
 void addSetting(Menu * menu, int row){
 	int j;
 	char * oled = calloc(17, sizeof(char));
@@ -210,15 +223,20 @@ void addSetting(Menu * menu, int row){
 	free(oled);
 }
 
+/* Updates the current value for the specified setting */
 void updateValue(Menu * menu, int value, int row, int col){
     sprintf(menu->value[row][col], "%5d", value);
 }
 
-
+/* Removes all the settings from one row */
 void removeSetting(Menu * menu, int row){
     OLED_SendString(row,"No Effect       \0");
 }
 
+/* 
+** Calls the setting function for the selected setting and updates 
+** the OLED with the new value and send the update to the UART
+*/
 void updateSetting(Menu * menu, Interface * interface){
     char * name = calloc(12, sizeof(char));
     int z;
@@ -245,8 +263,7 @@ void updateSetting(Menu * menu, Interface * interface){
 			        printf("S%.1dE4DE0000#", menu->row+1);
 			    } else if (menu->dspsystem->bin[menu->row]->fx->name[0] == 'V') {
 			        printf("S%.1dE3VO0000#", menu->row+1);
-			    }
-			    //strcat(currentSettings, setting);		    
+			    }	    
 			    for (z = 0; z < 3; z++){
 			        if (menu->dspsystem->bin[menu->row]->fx != NULL){
 			            printf(
@@ -283,6 +300,9 @@ void updateSetting(Menu * menu, Interface * interface){
     free(name);
 }
 
+/*
+** Updates the OLED to show the new selected setting
+*/
 void selectSetting(Menu * menu, Interface * interface){
     if(menu->dspsystem->bin[menu->row]->fx == NULL){
         updateSetting(menu, interface);
@@ -297,6 +317,9 @@ void selectSetting(Menu * menu, Interface * interface){
     }
 }
 
+/*
+** Updates the OLED to show which row is selected
+*/
 void selectRow(Menu * menu, Interface * interface){
 	int i;
 	for(i = 0; i < menu->dspsystem->size; i++){
@@ -309,6 +332,7 @@ void selectRow(Menu * menu, Interface * interface){
 	}
 }
 
+/* Clears the OLED of all text */
 void clearOled(){
 	OLED_SendString(0,"                \0");
 	OLED_SendString(1,"                \0");
@@ -316,6 +340,7 @@ void clearOled(){
 	OLED_SendString(3,"                \0");
 }
 
+/* Polls the HW switches and looks if the have been altered */
 void pollSwitches(Interface * interface){
 	interface->switches[1] = GPIO_ReadInputData(GPIOA);
 	if(interface->switches[1] > 32767){
@@ -329,6 +354,10 @@ void pollSwitches(Interface * interface){
 	}
 }
 
+/*
+** Updates the OLED and shows the base satus line for 
+** all effects
+*/
 void showStatus(Menu * menu, Interface * interface){
 	int i;
 	for(i = 0; i < menu->dspsystem->size; i++){
@@ -347,9 +376,12 @@ void showStatus(Menu * menu, Interface * interface){
 	}
 }
 
+/*
+** Reads the status of the 5 buttons and the status 
+** of the Encoder and its button
+*/
 void readEnc(Menu * menu, Interface * interface){
 	if (interruptServedRecently == 1 && dbncCtr > 700){
-	//if (interruptServedRecently == 1 && dbncCtr > 70){
       		interruptServedRecently = 0;
       		A &= GPIO_ReadInputDataBit(GPIOB, NEXYS4_ENC_A);
       		B &= GPIO_ReadInputDataBit(GPIOB, NEXYS4_ENC_B);

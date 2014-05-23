@@ -1,6 +1,14 @@
+// This file comprises the general GPIO managemnet functions.
+
 #include "gpio.h"
 
 /* Function used to set the GPIO configuration to the default reset state *****/
+
+/**
+  * @brief   This function deinitializes a GPIO port (sets everything to base state).
+  * @param  port to reset
+  * @retval None
+  */
 void GPIO_DeInit(GPIO_TypeDef* GPIOx)
 {
 	/* data (read-only, input values can be read out from here) */
@@ -31,6 +39,13 @@ void GPIO_DeInit(GPIO_TypeDef* GPIOx)
 }
 
 /* Initialization and Configuration functions *********************************/
+
+/**
+  * @brief   This function initializes a GPIO port.
+  * @param  port to initialize
+  * @param  initializer structure
+  * @retval None
+  */
 void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct)
 {
 	if (GPIO_InitStruct -> GPIO_Mode == GPIO_Mode_OUT)
@@ -43,7 +58,11 @@ void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct)
 	}
 }
 
-
+/**
+  * @brief   This function initializes an initializer struct.
+  * @param  structure to initialize
+  * @retval None
+  */
 void GPIO_StructInit(GPIO_InitTypeDef* GPIO_InitStruct)
 {
 	GPIO_InitStruct -> GPIO_Pin  = GPIO_Pin_All;
@@ -51,6 +70,13 @@ void GPIO_StructInit(GPIO_InitTypeDef* GPIO_InitStruct)
 }
 
 /* GPIO Read and Write functions **********************************************/
+
+/**
+  * @brief   This function reads a specified GPIO pin.
+  * @param  GPIO port
+  * @param  GPIO pin
+  * @retval None
+  */
 int GPIO_ReadInputDataBit(GPIO_TypeDef* GPIOx, int GPIO_Pin)
 {
 	if (((GPIOx -> data) & GPIO_Pin) == 0)
@@ -63,37 +89,66 @@ int GPIO_ReadInputDataBit(GPIO_TypeDef* GPIOx, int GPIO_Pin)
 	}
 }
 
-
+/**
+  * @brief   This function reads a specified GPIO port.
+  * @param  GPIO port
+  * @retval None
+  */
 int GPIO_ReadInputData(GPIO_TypeDef* GPIOx)
 {
 	return GPIOx -> data;
 }
 
-
+/**
+  * @brief   This function reads a specified GPIO output pin.
+  * @param  GPIO port
+  * @param  GPIO pin
+  * @retval None
+  */
 int GPIO_ReadOutputDataBit(GPIO_TypeDef* GPIOx, int GPIO_Pin)
 {
 	return GPIO_ReadInputDataBit(GPIOx, GPIO_Pin);
 }
 
-
+/**
+  * @brief   This function reads a specified GPIO port.
+  * @param  GPIO port
+  * @retval None
+  */
 int GPIO_ReadOutputData(GPIO_TypeDef* GPIOx)
 {
 	return GPIO_ReadInputData(GPIOx);
 }
 
-
+/**
+  * @brief   This function set a specified GPIO pin to high.
+  * @param  GPIO port
+  * @param  GPIO pin
+  * @retval None
+  */
 void GPIO_SetBits(GPIO_TypeDef* GPIOx, int GPIO_Pin)
 {
 	GPIOx -> output |= GPIO_Pin;
 }
 
-
+/**
+  * @brief   This function set a specified GPIO pin to low.
+  * @param  GPIO port
+  * @param  GPIO pin
+  * @retval None
+  */
 void GPIO_ResetBits(GPIO_TypeDef* GPIOx, int GPIO_Pin)
 {
 	GPIOx -> output &= ~(GPIO_Pin);
 }
 
-
+/**
+  * @brief   This function set a specified GPIO pin to the specified value.
+  * @param  GPIO port
+  * @param  GPIO pin
+  * @param  output level to be written to the pin
+  * @retval None
+  */
 void GPIO_WriteBit(GPIO_TypeDef* GPIOx, int GPIO_Pin, BitAction BitVal)
 {
 	if (BitVal == Bit_RESET)
@@ -106,7 +161,12 @@ void GPIO_WriteBit(GPIO_TypeDef* GPIOx, int GPIO_Pin, BitAction BitVal)
 	}
 }
 
-
+/**
+  * @brief   This function set a specified GPIO port to the specified value.
+  * @param  GPIO port
+  * @param  output levels to be written to the pins of the port
+  * @retval None
+  */
 void GPIO_Write(GPIO_TypeDef* GPIOx, int PortVal)
 {
 	GPIOx -> output = PortVal;

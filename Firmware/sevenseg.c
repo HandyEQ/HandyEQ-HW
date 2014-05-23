@@ -1,8 +1,15 @@
+// This file contains the seven-segment display initializer and management functions.
+
 #include "sevenseg.h"
 #include "gpio.h"
 
 int timerFlagSeg = 0;
 
+/**
+  * @brief   This function initilaizes the seven-segment display.
+  * @param  None
+  * @retval None
+  */
 void SEVENSEG_Init()
 {
   GPIO_InitTypeDef GPIO_InitStructure;
@@ -23,6 +30,11 @@ void SEVENSEG_Init()
   GPIO_Init(GPIOC, &GPIO_InitStructure);
 }
 
+/**
+  * @brief   This function writes a character (of the possible set) to the selected seven-segment display.
+  * @param  character to write
+  * @retval None
+  */
 void SEVENSEG_WriteChar(char c)
 {
   switch(c)
@@ -249,6 +261,11 @@ void SEVENSEG_WriteChar(char c)
   }
 }
 
+/**
+  * @brief   This function enables the selected seven-segment display.
+  * @param  display to enable
+  * @retval None
+  */
 void SEVENSEG_EnableDisplay(int i)
 {
   switch (i)
@@ -354,8 +371,15 @@ void SEVENSEG_EnableDisplay(int i)
   }
 }
 
+/**
+  * @brief   This function writes a string to the seven-segment displays.
+  * @param  None
+  * @retval None
+  */
 void SEVENSEG_WriteString(char *s){
 	static int segment = 0;
+
+    // updating the displays is done rapidly and periodically to make all eight displays visible and display different values at the same time
 	if(timerFlagSeg > 0){
 		timerFlagSeg = 0;
 		SEVENSEG_EnableDisplay(7 - segment);
@@ -365,6 +389,5 @@ void SEVENSEG_WriteString(char *s){
 		} else {
 			segment++;
 		}
-	}
-	
+	}	
 }

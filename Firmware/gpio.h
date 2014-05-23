@@ -1,3 +1,7 @@
+// This file holds the specific GPIO values such as addresses and register mapping. 
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+
 #ifndef _APBGPIO_H
 #define _APBGPIO_H
 
@@ -19,14 +23,13 @@ typedef struct
 #define GPIOC               ((GPIO_TypeDef *) 0x80000B00)
 //#define GPIOD               ((GPIO_TypeDef *) 0x80000000)
 
+// assertions for safe usage
 #define IS_GPIO_ALL_PERIPH(PERIPH) (((PERIPH) == GPIOA) || \
                                     ((PERIPH) == GPIOB) || \
                                     ((PERIPH) == GPIOC) || \
                                     ((PERIPH) == GPIOD) || \
                                     ((PERIPH) == GPIOE) || \
                                     ((PERIPH) == GPIOF))
-
-#define IS_GPIO_LIST_PERIPH(PERIPH) (((PERIPH) == GPIOA) || ((PERIPH) == GPIOB))
 
 typedef enum
 {
@@ -46,7 +49,7 @@ typedef enum
 
 typedef struct
 {
-  volatile int GPIO_Pin;              	  /*!< Specifies the GPIO pins to be configured.
+  int GPIO_Pin;              	  /*!< Specifies the GPIO pins to be configured.
                                        This parameter can be any value of @ref GPIO_pins_define */
                                        
   GPIOMode_TypeDef GPIO_Mode;     /*!< Specifies the operating mode for the selected pins.
