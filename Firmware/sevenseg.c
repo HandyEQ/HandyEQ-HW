@@ -1,4 +1,10 @@
-// This file contains the seven-segment display initializer and management functions.
+/*
+** Author: Arpad Jokai
+** Last Modified: 2014-05-19
+** Function:
+** This file contains the seven-segment display 
+** initializer and management functions.
+*/
 
 #include "sevenseg.h"
 #include "gpio.h"

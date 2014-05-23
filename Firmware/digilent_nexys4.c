@@ -1,5 +1,10 @@
-// This file contains the board specific functions concerning the OLED display, GPIO ports,
-// timers and seven-segment displays.
+/*
+** Author: Arpad Jokai
+** Last Modified: 2014-05-19
+** Function:
+** This file contains the board specific functions concerning 
+** the OLED display, GPIO ports, timers and seven-segment displays.
+*/
 
 #include "digilent_nexys4.h"
 #include "gpio.h"

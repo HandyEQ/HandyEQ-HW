@@ -1,3 +1,11 @@
+/*
+** Author: Arpad Jokai
+** Last Modified: 2014-05-19
+** Function:
+** This file contains the board specific functions concerning 
+** the OLED display, GPIO ports, timers and seven-segment displays.
+*/
+
 #ifndef _NEXYS4BRD_H
 #define _NEXYS4BRD_H
 

@@ -1,5 +1,10 @@
-// This file holds the specific GPIO values such as addresses and register mapping. 
-
+/*
+** Author: Arpad Jokai
+** Last Modified: 2014-05-19
+** Function:
+** This file holds the specific GPIO values 
+** such as addresses and register mapping. 
+*/
 /* Define to prevent recursive inclusion -------------------------------------*/
 
 #ifndef _APBGPIO_H

@@ -1,7 +1,6 @@
 /*
 ** Author: Johan Bregell
-** Creation Date: 
-** Last Modified: 
+** Last Modified: 2014-05-19
 ** Function:
 ** Maps the memory adress of the IRQ to 
 ** enable the use of the IRQ functions. 

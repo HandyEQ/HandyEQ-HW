@@ -1,6 +1,5 @@
 /*
 ** Author(s): Preben Thorod
-** Creation Date: 
 ** Last Modified: 2014-05-16
 ** Function:
 ** Biquad IIR filter with functions

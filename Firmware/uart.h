@@ -1,7 +1,6 @@
 /*
 ** Author: Johan Bregell
-** Creation Date: 
-** Last Modified: 
+** Last Modified: 2014-05-19
 ** Function:
 ** Maps the memory adress of the UART 
 ** to enable sending and recieving messages

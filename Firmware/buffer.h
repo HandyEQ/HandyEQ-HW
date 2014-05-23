@@ -1,3 +1,11 @@
+/*
+** Author: Johan Bregell
+** Last Modified: 2014-05-19
+** Function:
+** Functions for retrieving data from the input buffer
+** and insert data to the output buffer
+*/
+
 #ifndef BUFFER_H
 #define BUFFER_H
 

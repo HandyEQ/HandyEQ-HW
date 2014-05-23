@@ -1,3 +1,11 @@
+/*
+** Author: Preben Thorod
+** Last Modified: 2014-05-19
+** Function:
+** Volume control effect with functions for 
+** initialising, control, and run the effect
+*/
+
 #ifndef VOLUME_H
 #define	VOLUME_H
 

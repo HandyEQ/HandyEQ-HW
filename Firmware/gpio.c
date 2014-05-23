@@ -1,4 +1,9 @@
-// This file comprises the general GPIO managemnet functions.
+/*
+** Author: Arpad Jokai
+** Last Modified: 2014-05-19
+** Function:
+** This file comprises the general GPIO managemnet functions.
+*/
 
 #include "gpio.h"
 

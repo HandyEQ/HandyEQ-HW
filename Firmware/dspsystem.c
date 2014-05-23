@@ -1,6 +1,5 @@
 /*
 ** Author(s): Johan Bregell, Preben Thorod
-** Creation Date: 
 ** Last Modified: 2014-05-19
 ** Function:
 ** Base file in the DSP system, must be 

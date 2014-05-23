@@ -1,3 +1,10 @@
+/*
+** Author: Arpad Jokai, Sebastian Karlsson
+** Last Modified: 2014-05-19
+** Function:
+** Functions for initialising and using the SPI Flash memory
+*/
+
 typedef struct
 {
   int config; //0x00

@@ -1,6 +1,5 @@
 /*
 ** Author(s): Johan Bregell
-** Creation Date: 
 ** Last Modified: 2014-05-19
 ** Function:
 ** An Delay/Echo effect with functions

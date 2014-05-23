@@ -1,3 +1,10 @@
+/*
+** Author: Arpad Jokai, Sebastian Karlsson
+** Last Modified: 2014-05-19
+** Function:
+** Functions for initialising and using the SPI Flash memory
+*/
+
 #include "spi_mem.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -5,29 +12,6 @@
 unsigned char buffer_address[4]; // Two buffers is needed because the transfer did not work if delay occured.
 unsigned char buffer_value[4];
 unsigned char copy_buff[59184];
-
-/*int main(int argc, char const *argv[]){
-	int i = 0;
-
-	SPIMEM_Detect();
-	//SPIMEM_Write_var(0,0xdeadbeef);
-
-	//SPIMEM_Read_var(0);
-	SPIMEM_Read();
-	
-	//SPIMEM_Write_var(0x00b00000, 0x3D);
-	printf("ret %x\n\r", SPIMEM_Read_var(0x00b00002));
-
-	SPIMEM_WriteEnable();
-	buffer_address[0] = buffer_address[1] = buffer_address[2] = buffer_address[3] = 0x0;
-	SPIMEM_4kBSectorErase();
-	for (i = 0; i < 50000; i++);
-	SPIMEM_PageProgram();
-	
-	SPIMEM_Read();
-
-	return 0;
-}*/
 
 void SPIMEM_SendCmd(int data){
 	SPIMEM -> status |= 0x01; // clear done bit

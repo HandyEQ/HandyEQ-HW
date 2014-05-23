@@ -1,4 +1,10 @@
-// Header file with the function prototypes for the seven-segment displays.
+/*
+** Author: Arpad Jokai
+** Last Modified: 2014-05-19
+** Function:
+** Header file with the function prototypes 
+** for the seven-segment displays.
+*/
 
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef _SEVSEG_H
