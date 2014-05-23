@@ -1,3 +1,13 @@
+-- This is a description of a synchronous circular buffer with 
+-- asynchronous reset where values are stored temporarily.   
+--
+-- @port	clk:			clock signal
+-- @port	reset:			reset signal
+-- @port	input_irq:		input request signal
+-- @port	input_sample :	input data port
+-- @port	output_select:	output request signal
+-- @port	output_ready:	indicate when data is ready on the output data port
+-- @port	output_sample:	output data port
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -27,6 +37,7 @@ signal tail         : integer;
 signal full, empty  : std_logic;
 signal new_input, new_output  : std_logic; 
 
+-- Signals marked for debugging 
 attribute mark_debug : string;
 attribute mark_debug of full : signal is "true";
 attribute mark_debug of empty : signal is "true";
@@ -61,10 +72,11 @@ begin
         tail_var := tail;
         head_var := head;
         
-        --Put
+        --Put operation
         if (input_irq = '1') and (new_input = '1') then
           new_input <= '0'; -- used to not input several samples if input_irq is high more then one clk.
-          -- Modulo
+          
+	  -- Modulo operation
           if (head_var + 1) = LENGTH then
             head_var_modulo := 0;
           else
@@ -80,7 +92,8 @@ begin
             --Insert new sample
             circ_buffer(head_var) <= input_sample;
             empty <= '0';
-          
+
+            -- Check if the buffer will be full
             if(head_var_modulo = tail_var) then
               full <= '1';
             elsif (head_var = tail_var) and (full = '1')  then
@@ -99,10 +112,11 @@ begin
           new_input <= '1';
         end if;
       
-        -- Get      
+        -- Get operation    
         if (output_select = '1') and (new_output = '1') then
           new_output <= '0'; -- used to not outpus several samples if output_select is high more then one clk.
-          -- Modulo
+          
+	  -- Modulo operation 
           if (head_var + 1) = LENGTH then
             head_var_modulo := 0;
           else
@@ -114,13 +128,16 @@ begin
           else
             tail_var_modulo := tail_var + 1;
           end if;
-          full <= '0';            
+
+          full <= '0';
+	  -- Check it the buffer is empty            
           if(tail_var = head_var) and (empty = '1')then
               empty <= '1';
               output_sample(0) <= '0';
               output_ready  <= '0';
               output_sample <= (others => '0');
-              
+
+          -- Check it the buffer will get empty     
           elsif(tail_var_modulo = head_var) then
               empty <= '1';
               output_ready  <= '1';

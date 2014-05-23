@@ -1,10 +1,19 @@
+-- This is a description of a synchronous interface with 
+-- asynchronous reset that connect a circular buffer to a AMBA APB bus.   
+--
+-- @port	rstn:		reset signal
+-- @port	clk:		clock signal
+-- @port	apbi:		APB input signals
+-- @port	apbo :		APB output signals
+-- @port	sample_irq:	input request signal
+-- @port	sample_in:	input data port
+-- @port	chunk_irq_out:	indicates when a chunk of values have been collected 
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.math_real.all;
 use ieee.numeric_std.all;
 library grlib;
 use grlib.amba.all;
---use grlib.stdlib.all;
 use grlib.devices.all;
 
 entity Buffer_apb is
@@ -64,7 +73,8 @@ signal irq              : std_logic_vector(15 downto 0);
 constant pconfig        : apb_config_type := (
                         0 => ahb_device_reg ( VENDOR_OPENCORES, GAISLER_GPREG, 0, 0, pirq),
                         1 => apb_iobar(paddr, pmask));
-                        
+
+-- Signals marked for debugging                        
 attribute mark_debug : string;
 attribute mark_debug of apbi : signal is "true";
 attribute mark_debug of apbo : signal is "true";
@@ -88,10 +98,6 @@ begin
         -- Write buffer_reg.data
         apbo.prdata(sample_size) <= apb_signals.output_ready;
         apbo.prdata(sample_size-1 downto 0) <= apb_signals.output_sample;
-         
-        --apbo.prdata <= (others => '0');        
-        --apbo.prdata(31) <= apb_signals.output_sample(sample_size-1);
-        --apbo.prdata(sample_size-2 downto 0) <= apb_signals.output_sample(sample_size-2 downto 0);
       end if;
     end if;    
   end process;
@@ -125,8 +131,8 @@ circular_buffer_comp : buff
     port map(
         clk             => clk,
         reset           => rstn,
-        input_irq       => sample_irq, -- from XADC
-        input_sample    => sample_in, -- from XAD
+        input_irq       => sample_irq,
+        input_sample    => sample_in,
         output_select   => process_signals.output_select,
         output_ready    => process_signals.output_ready,
         output_sample   => process_signals.output_sample,

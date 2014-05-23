@@ -1,26 +1,15 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 02/21/2014 05:18:57 PM
--- Design Name: 
--- Module Name: TopXADC - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
-
-
+-- This is a description of a synchronous ADC with 
+-- asynchronous reset that convert an analog signal to digital.
+-- The converted signal is then passe through a low-pass FIR filter   
+--
+-- @port	clk:		clock signal
+-- @port	reset:		reset signal
+-- @port	vauxp3:		analog input signal
+-- @port	vauxn3:		analog input signal
+-- @port	sw:		input signal connected to a switch
+-- @port	AD_data:	output data port
+-- @port	data_ready_port:indicate that the data is ready on the output port
+-- @port	eoc_out_port:	end of conversion
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -55,10 +44,6 @@ COMPONENT xadc_wiz_0
         vn_in : IN STD_LOGIC;
         vauxp3 : IN STD_LOGIC;
         vauxn3 : IN STD_LOGIC;
-        --user_temp_alarm_out : OUT STD_LOGIC;
-        --vccint_alarm_out : OUT STD_LOGIC;
-        --vccaux_alarm_out : OUT STD_LOGIC;
-        --ot_out : OUT STD_LOGIC;
         channel_out : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
         eoc_out : OUT STD_LOGIC;
         alarm_out : OUT STD_LOGIC;
@@ -123,13 +108,10 @@ SIGNAL data_ready_port_signal : STD_LOGIC;
 SIGNAL Filter_in_signal: STD_LOGIC_VECTOR(15 downto 0);
 
 
--- New signals
 SIGNAL temp_FIR_out_signal:STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL fir_done_signal:STD_LOGIC;
 SIGNAL m_axis_data_tvalid_signal: STD_LOGIC;
 SIGNAL s_axis_data_tready_signal: STD_LOGIC;
-
-
 
 
 signal zerosOrOnes:STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -160,10 +142,6 @@ XADC_component : xadc_wiz_0
         vn_in => '0',
         vauxp3 => vauxp3,
         vauxn3 => vauxn3,
-        --user_temp_alarm_out => user_temp_alarm_out_signal,
-        --vccint_alarm_out => vccint_alarm_out_signal,
-        --vccaux_alarm_out => vccaux_alarm_out_signal,
-        --ot_out => ot_out_signal,
         channel_out => channel_out_signal,
         eoc_out => eoc_out_signal,
         alarm_out => alarm_out_signal,
@@ -204,15 +182,13 @@ XADC_component : xadc_wiz_0
         
 
 
-   -- bypass
+--    bypass  
 --    AD_data_signal <= AD_data_12bit when sw = '1' else
 --                         AD_data_filters;
     AD_data_signal <= AD_data_12bit;
             
 process(clk, reset)
-    --variable count : integer;
 begin  
-  --data_ready_port <= data_ready_port_signal;
   data_ready_port <= fir_done_signal;
   eoc_out_port <= eoc_out_signal;
   
@@ -223,11 +199,12 @@ begin
     DADDR_signal <= (OTHERS=>'0');
     AD_data <= (OTHERS=>'0');
     first_conv <= '1';
-    --count := 0;
     Filter_in_signal <= (OTHERS=>'0');
     data_ready_port_signal <= '0';
   elsif rising_edge(clk) then
     AD_data <= AD_data_filters;
+	
+    -- Check if a new sample is ready
     if (eoc_out_signal = '1') then --DRDY_signal
       AD_data_12bit(15) <= not DO_signal(15); --NO FILTERS
       AD_data_12bit(14 downto 0) <= DO_signal(14 downto 0); --NO FILTERS
@@ -240,14 +217,13 @@ begin
         zerosOrOnes <= "0000";
       end if;
 
-
-      --Filter_in_signal(15) <= not DO_signal(15);
-      --Filter_in_signal(14 downto 0) <= not DO_signal(14 downto 0);
+      -- The converted signal passed to the filter	
       Filter_in_signal <= DO_signal;
       
       first_conv <= '1';
     end if;
     
+    -- Enables a new sample to be converted	
     if (first_conv = '1' and eoc_out_signal = '0') then -- DRDY_signal
       DEN_signal <= '1';
       DADDR_signal <= "0010011";
@@ -255,15 +231,6 @@ begin
     else
       DEN_signal <= '0';
     end if;
-    
---    if (eoc_out_signal = '1' and count < 15) then
---        count := count + 1;
---        data_ready_port_signal <= '0';
---    elsif (eoc_out_signal = '1' and count = 15) then
---        count := 0;
---        data_ready_port_signal <= '1';
---    end if;
-        
   end if;  
 end process;
         

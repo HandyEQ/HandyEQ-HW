@@ -87,7 +87,7 @@ entity leon3mp is
     data            : inout std_logic_vector(15 downto 0);
 
     -- 7 segment display
-    sevenSeg          : inout   std_logic_vector(15 downto 0); --inout coz GPIO
+    sevenSeg          : inout   std_logic_vector(15 downto 0); --inout beacuse GPIO
     --seg             : out   std_logic_vector(6 downto 0);
     --an              : out   std_logic_vector(7 downto 0);
 
@@ -232,8 +232,10 @@ architecture rtl of leon3mp is
   end component;
   
   component BUFG port (O : out std_logic; I : in std_logic); end component;
-   
-    component Buffer_apb 
+    
+	--input and output buffer components
+    
+	component Buffer_apb 
         generic(
             pindex      : integer := 0;
             paddr       : integer := 0;
@@ -275,6 +277,8 @@ architecture rtl of leon3mp is
          );
     end component;
    
+	-- XADC wrapper component
+	
     component ADC is
         Port ( clk : in STD_LOGIC;
             reset : in STD_LOGIC;
@@ -287,6 +291,8 @@ architecture rtl of leon3mp is
             );
     end component; 
     
+	-- PWM wrapper component
+	
     component PWM 
           generic (
             width  : integer;
@@ -297,6 +303,8 @@ architecture rtl of leon3mp is
                PWM_out:OUT STD_LOGIc;
                SD_audio_out:OUT STD_LOGIc);
     end component;
+  
+  -- HW debouncer component
   
   component debouncer
       Generic(
@@ -560,7 +568,7 @@ begin
   noddr : if (CFG_DDR2SP+CFG_MIG_DDR2) = 0 generate lock <= '1'; end generate;
  
 ----------------------------------------------------------------------
----  APB Bridge and various periherals -------------------------------
+---  APB Bridge and various peripherals -------------------------------
 ----------------------------------------------------------------------
 
   -- APB Bridge
@@ -573,7 +581,7 @@ begin
 -----------------------------------------------------------------------
   irqctrl : if CFG_IRQ3_ENABLE /= 0 generate
     irqctrl0 : irqmp
-      generic map (pindex => 2, paddr => 2, ncpu => CFG_NCPU)
+      generic map (pindex => 2, paddr => 2, ncpu => CFG_NCPU) -- ncpu == 1, single-cpu system
       port map (rstn, clkm, apbi, apbo(2), irqo, irqi);
   end generate;
   irq3 : if CFG_IRQ3_ENABLE = 0 generate
@@ -584,9 +592,11 @@ begin
   end generate;
 
 -----------------------------------------------------------------------
---- Time Unit ---------------------------------------------------------
+--- Timer Unit ---------------------------------------------------------
 -----------------------------------------------------------------------
-  -- Time Unit
+ 
+ -- 2 timers (ntimers == 2) driving separate interrupt lines (sepirq == 1)
+
   gpt : if CFG_GPT_ENABLE /= 0 generate
     timer0 : gptimer
       generic map (pindex => 3, paddr => 3, pirq => 7,
@@ -603,7 +613,7 @@ begin
 -----------------------------------------------------------------------
     spimc: if CFG_SPIMCTRL = 1 generate
       spimctrl0 : spimctrl        -- SPI Memory Controller
-        generic map (hindex => 4, hirq => 4, faddr => 16#00b#, fmask => 16#fff#,
+        generic map (hindex => 4, hirq => 4, faddr => 16#00b#, fmask => 16#fff#, -- address offset: 00b00
                      ioaddr => 16#004#, iomask => 16#fff#,
                      spliten => CFG_SPLIT, oepol  => 0,
                      sdcard => CFG_SPIMCTRL_SDCARD,
@@ -778,6 +788,7 @@ Buffer_apb_map : Buffer_apb
     generic map (pindex => 13, paddr => 13, pmask => 16#FFF#, pirq => 13) 
     port map (rstn => rstn, clk => clkm, apbi => apbi, apbo => apbo(13), sample_irq => drdy_signal, sample_in => AD_data_signal, chunk_irq_out => chunk_irq_out_signal);
     
+	-- XADC instantiation
     XADC_component : ADC
     Port map ( clk => clkm,
         reset => rstn,
@@ -802,7 +813,9 @@ Buffer_apb_out_map : Buffer_apb_out
    -- bypass
 --    sample_pwm_signal <= AD_data_signal when sw(0) = '1' else
 --                         sample_pwm_buffer_signal; 
-    sample_pwm_signal <= sample_pwm_buffer_signal;
+    
+	-- PWM instantiation
+	sample_pwm_signal <= sample_pwm_buffer_signal;
  
     PWM_module: PWM
     generic map(width => 16,
@@ -821,15 +834,14 @@ Buffer_apb_out_map : Buffer_apb_out
 ---  GPIOA (APB 0x80000900) -------------------------------------------
 -----------------------------------------------------------------------
 --adc_data_ready_signal <= sw1;
---interrupts used: 11, 13, 14, 15.
 gpio1 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
     grgpio1: grgpio
-        generic map( pindex => 9, paddr => 9, pirq => 9, imask => 16#0000FFFF#, nbits => 32, irqgen => 1)
+        generic map( pindex => 9, paddr => 9, pirq => 9, imask => 16#0000FFFF#, nbits => 32, irqgen => 1) -- assert the same interrupt line (9) for all inputs
         port map( rstn, clkm, apbi, apbo(9), gpioiA, gpiooA);
         
         pio_pads : for i in 0 to 31 generate
           pio_pad1 : iopad generic map (tech => padtech)
-            port map (gpioA_signal(i), gpiooA.dout(i), gpiooA.oen(i), gpioiA.din(i)); --adc_data_ready_signal btn(2) sw1
+            port map (gpioA_signal(i), gpiooA.dout(i), gpiooA.oen(i), gpioiA.din(i));
         end generate;
 end generate;
 	
@@ -842,7 +854,7 @@ gpioA_signal(15 downto 0) <= sw;
 
 gpio2 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
     grgpio2: grgpio
-        generic map( pindex => 10, paddr => 10, pirq => 10, imask => 16#03E0FFFF#, nbits => 32, irqgen => 1)
+        generic map( pindex => 10, paddr => 10, pirq => 10, imask => 16#03E0FFFF#, nbits => 32, irqgen => 1) -- assert the same interrupt line (10) for all inputs
         port map( rstn, clkm, apbi, apbo(10), gpioiB, gpiooB);
 
         pio_pads : for i in 0 to 31 generate
@@ -866,7 +878,7 @@ sample_ready_port <= adc_data_ready_signal;
 
 gpio3 : if CFG_GRGPIO_ENABLE /= 0 generate -- GR GPIO unit
     grgpio3: grgpio
-        generic map( pindex => 11, paddr => 11, nbits => 16)
+        generic map( pindex => 11, paddr => 11, nbits => 16) -- no interrupt needed, since only the 7-segment displays are driven by GPIOC, which does not generate intersupts
         port map( rstn, clkm, apbi, apbo(11), gpioiC, gpiooC);
 
         pio_pads : for i in 0 to 15 generate
@@ -883,7 +895,7 @@ gpioC_signal(15 downto 0) <= sevenSeg;
 
 -- SPI controller with FIFO depth 2 and no slave select register
 
-spictrl0 : spictrl generic map (pindex => 12, paddr => 12, fdepth => 1, slvselen => 0, slvselsz => 1, twen => 0)
+spictrl0 : spictrl generic map (pindex => 12, paddr => 12, fdepth => 1, slvselen => 0, slvselsz => 1, twen => 0) -- three-wire mode disabled
                    port map (rstn, clkm, apbi, apbo(12), spii, spio, open);
                    
        misopad : iopad generic map (tech => padtech)

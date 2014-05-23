@@ -56,13 +56,13 @@ xadc_wiz_02default:default2M
 xc7a100t2default:defaultZ17-349
 õ
 %s*synth2ã
-wStarting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 242.164 ; gain = 93.227
+wStarting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 239.102 ; gain = 92.934
 2default:default
-È
+
 synthesizing module '%s'638*oasys2
 
-xadc_wiz_02default:default2z
-dc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
+xadc_wiz_02default:default2Ä
+jc:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
 782default:default8@Z8-638
 V
 %s*synth2G
@@ -208,23 +208,23 @@ O
 %s*synth2Õ
 ∏	Parameter SIM_MONITOR_FILE bound to: c:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/simulation/functional/design.txt - type: string 
 2default:default
-ê
+ó
 ,binding component instance '%s' to cell '%s'113*oasys2
 U02default:default2
-XADC2default:default2z
-dc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
+XADC2default:default2Ä
+jc:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
 1452default:default8@Z8-113
-§
+´
 %done synthesizing module '%s' (%s#%s)256*oasys2
 
 xadc_wiz_02default:default2
 12default:default2
-12default:default2z
-dc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
+12default:default2Ä
+jc:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd2default:default2
 782default:default8@Z8-256
 ú
 %s*synth2å
-xFinished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 275.324 ; gain = 126.387
+xFinished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 272.391 ; gain = 126.223
 2default:default
 ;
 %s*synth2,
@@ -291,34 +291,34 @@ BC:/Xilinx/Vivado/2013.4/data\./parts/xilinx/artix7/IOStandards.xml2default:de
 
 Processing XDC Constraints
 244*projectZ1-262
-ÿ
+ﬂ
 $Parsing XDC File [%s] for cell '%s'
-848*designutils2|
-hc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
+848*designutils2Ç
+nc:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
 U02default:defaultZ20-848
-·
+Ë
 -Finished Parsing XDC File [%s] for cell '%s'
-847*designutils2|
-hc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
+847*designutils2Ç
+nc:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
 U02default:defaultZ20-847
-‘
+⁄
 $Parsing XDC File [%s] for cell '%s'
-848*designutils2x
-dc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
+848*designutils2~
+jc:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
 U02default:defaultZ20-848
-›
+„
 -Finished Parsing XDC File [%s] for cell '%s'
-847*designutils2x
-dc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
+847*designutils2~
+jc:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
 U02default:defaultZ20-847
-©
+Ø
 Parsing XDC File [%s]
-179*designutils2s
-_C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/xadc_wiz_0_synth_1/dont_touch.xdc2default:defaultZ20-179
-≤
+179*designutils2y
+eC:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.runs/xadc_wiz_0_synth_1/dont_touch.xdc2default:defaultZ20-179
+∏
 Finished Parsing XDC File [%s]
-178*designutils2s
-_C:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.runs/xadc_wiz_0_synth_1/dont_touch.xdc2default:defaultZ20-178
+178*designutils2y
+eC:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.runs/xadc_wiz_0_synth_1/dont_touch.xdc2default:defaultZ20-178
 ?
 &Completed Processing XDC Constraints
 
@@ -330,11 +330,11 @@ u
 2default:defaultZ1-111
 µ
 %s*synth2•
-êFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 474.105 ; gain = 325.168
+êFinished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 471.672 ; gain = 325.504
 2default:default
 ù
 %s*synth2ç
-yFinished RTL Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 474.105 ; gain = 325.168
+yFinished RTL Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 471.672 ; gain = 325.504
 2default:default
 <
 %s*synth2-
@@ -365,7 +365,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 2default:default
 ±
 %s*synth2°
-åFinished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 537.625 ; gain = 388.688
+åFinished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 534.258 ; gain = 388.090
 2default:default
 B
 %s*synth23
@@ -385,7 +385,7 @@ B
 2default:default
 ©
 %s*synth2ô
-ÑFinished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 537.625 ; gain = 388.688
+ÑFinished Cross Boundary Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 534.258 ; gain = 388.090
 2default:default
 ¢
 %s*synth2í
@@ -407,19 +407,19 @@ R-------------------------------------------------------------------------------
 2default:default
 û
 %s*synth2é
-zFinished Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 538.652 ; gain = 389.715
+zFinished Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 536.297 ; gain = 390.129
 2default:default
 ≠
 %s*synth2ù
-àFinished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 538.660 ; gain = 389.723
+àFinished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 536.301 ; gain = 390.133
 2default:default
 †
 %s*synth2ê
-|Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 538.660 ; gain = 389.723
+|Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 536.301 ; gain = 390.133
 2default:default
 ü
 %s*synth2è
-{Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 548.188 ; gain = 399.250
+{Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 545.832 ; gain = 399.664
 2default:default
 D
 %s*synth25
@@ -427,7 +427,7 @@ D
 2default:default
 ô
 %s*synth2â
-uFinished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 548.188 ; gain = 399.250
+uFinished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 545.832 ; gain = 399.664
 2default:default
 ;
 %s*synth2,
@@ -456,11 +456,11 @@ I+------+------------------+-------+---------+-------+------------------+
 2default:default
 ™
 %s*synth2ö
-ÖFinished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 548.188 ; gain = 399.250
+ÖFinished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 545.832 ; gain = 399.664
 2default:default
 ß
 %s*synth2ó
-ÇFinished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 548.188 ; gain = 399.250
+ÇFinished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 545.832 ; gain = 399.664
 2default:default
 ¢
 %s*synth2í
@@ -553,7 +553,7 @@ E
 2default:default
 ¶
 %s*synth2ñ
-ÅFinished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 548.188 ; gain = 399.250
+ÅFinished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 545.832 ; gain = 399.664
 2default:default
 i
 %s*synth2Z
@@ -561,7 +561,7 @@ FSynthesis finished with 0 errors, 0 critical warnings and 0 warnings.
 2default:default
 £
 %s*synth2ì
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 548.188 ; gain = 399.250
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 545.832 ; gain = 399.664
 2default:default
 \
 -Analyzing %s Unisim elements for replacement
@@ -571,25 +571,25 @@ a
 2Unisim Transformation completed in %s CPU seconds
 28*netlist2
 02default:defaultZ29-28
-ÿ
+ﬂ
 $Parsing XDC File [%s] for cell '%s'
-848*designutils2|
-hc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
+848*designutils2Ç
+nc:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
 U02default:defaultZ20-848
-·
+Ë
 -Finished Parsing XDC File [%s] for cell '%s'
-847*designutils2|
-hc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
+847*designutils2Ç
+nc:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_OOC.xdc2default:default2
 U02default:defaultZ20-847
-‘
+⁄
 $Parsing XDC File [%s] for cell '%s'
-848*designutils2x
-dc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
+848*designutils2~
+jc:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
 U02default:defaultZ20-848
-›
+„
 -Finished Parsing XDC File [%s] for cell '%s'
-847*designutils2x
-dc:/Users/sebkarl/Desktop/HandyEQ-HW-Fast synt/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
+847*designutils2~
+jc:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc2default:default2
 U02default:defaultZ20-847
 C
 Pushed %s inverter(s).
@@ -619,18 +619,18 @@ U
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2"
 synth_design: 2default:default2
-00:00:252default:default2
-00:00:262default:default2
-951.9802default:default2
-759.2892default:defaultZ17-268
+00:00:482default:default2
+00:00:572default:default2
+949.6682default:default2
+760.1172default:defaultZ17-268
 <
 %Done setting XDC timing constraints.
 35*timingZ38-35
 
-sreport_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 951.980 ; gain = 0.000
+sreport_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 949.668 ; gain = 0.000
 *common
 w
 Exiting %s at %s...
 206*common2
 Vivado2default:default2,
-Tue May 06 14:42:46 20142default:defaultZ17-206
+Fri May 23 14:21:10 20142default:defaultZ17-206

@@ -1,3 +1,10 @@
+-- This is a description of a synchronous decimator with 
+-- asynchronous reset that decimate the rate of a signal.   
+--
+-- @port	clk:		clock signal
+-- @port	eoc:		Signal to decimate
+-- @port	reset:		reset signal
+-- @port	rate48_en :	decimated signal
 library ieee;
 use ieee.std_logic_1164.all;
 

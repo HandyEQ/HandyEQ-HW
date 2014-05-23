@@ -1,3 +1,11 @@
+-- This is a description of a synchronous PWM generaot with 
+-- asynchronous reset that convert values to a PWM pulses.   
+--
+-- @port	reset:		reset signal
+-- @port	clk:		clock signal
+-- @port	sample:		input value to be converted
+-- @port	PWM_out :	PWM output
+-- @port	SD_audio_out :	select signal to audio jack 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
@@ -32,16 +40,18 @@ begin
       
   elsif (rising_edge(CLK)) then
 	if(PWM_counter <= PWM_sample) then
-       PWM_out <= '1';
-       PWM_counter  <= STD_LOGIC_VECTOR(unsigned(PWM_counter) + 1);
+	-- The PWM signal is high in the first part of a pulse
+		PWM_out <= '1';
+		PWM_counter  <= STD_LOGIC_VECTOR(unsigned(PWM_counter) + 1);
    	else
-        PWM_out <= '0';
-        PWM_counter  <= STD_LOGIC_VECTOR(unsigned(PWM_counter) + 1);
+	-- The PWM pulse goes low when the counter have reached the input value
+        	PWM_out <= '0';
+        	PWM_counter  <= STD_LOGIC_VECTOR(unsigned(PWM_counter) + 1);
     end if;
-        
+    
+    -- Reset the counter when a pulse have been generated    
     if PWM_counter = PWM_compare then
         PWM_counter <= (others => '0');
-        -- sample have to be converted so that tha (max value of sample = number of clk pulses in a Pulse window)
         PWM_sample <= sample(width-1 downto width-accuracy);
     end if;
     	

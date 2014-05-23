@@ -2,9 +2,9 @@
 # Vivado v2013.4 (64-bit)
 # SW Build 353583 on Mon Dec  9 17:49:19 MST 2013
 # IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
-# Start of session at: Fri May 09 15:27:54 2014
-# Process ID: 5808
-# Log file: C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/fir_compiler_0_synth_1/fir_compiler_0.rds
-# Journal file: C:/Users/sebkarl/Desktop/fast synt/HandyEQ-HW.runs/fir_compiler_0_synth_1\vivado.jou
+# Start of session at: Fri May 23 14:21:14 2014
+# Process ID: 6012
+# Log file: C:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.runs/fir_compiler_0_synth_1/fir_compiler_0.rds
+# Journal file: C:/Users/sebkarl/Desktop/HandyEQ-HW-develop/HandyEQ/HandyEQ-HW.runs/fir_compiler_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source fir_compiler_0.tcl

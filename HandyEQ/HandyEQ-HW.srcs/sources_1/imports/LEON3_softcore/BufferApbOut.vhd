@@ -1,11 +1,18 @@
-
+-- This is a description of a synchronous interface with 
+-- asynchronous reset that connect a circular buffer to a AMBA APB bus.   
+--
+-- @port	rstn:			reset signal
+-- @port	clk:			clock signal
+-- @port	apbi:			APB input signals
+-- @port	apbo :			APB output signals
+-- @port	output_select_pwm:	output request signal
+-- @port	sample_pwm:		input data port
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.math_real.all;
 use ieee.numeric_std.all;
 library grlib;
 use grlib.amba.all;
---use grlib.stdlib.all;
 use grlib.devices.all;
 
 entity Buffer_apb_out is
@@ -74,14 +81,10 @@ begin
     
     -- Read registers
     temp := apbi.psel(pindex) and apbi.penable and apbi.pwrite;
-    --apb_signals.input_irq <= temp; -- Could save clocks
     if temp = '1' then
       if apbi.paddr(4 downto 2) = "000" then 
         apb_signals.input_irq <= apbi.pwdata(sample_size + 2);
         apb_signals.input_sample <= apbi.pwdata(sample_size-1 downto 0); 
-        
-        --apb_signals.input_sample(sample_size-1) <= apbi.pwdata(31);
-        --apb_signals.input_sample(sample_size-2 downto 0) <= apbi.pwdata(sample_size-2 downto 0);  
       end if;
     end if;
   end process; 
