@@ -79,7 +79,11 @@ int main(void){
 	uartBuffers = calloc(1, sizeof(UartBuffers));
 	
 	//INIT GPIO
-	initTestmodule();	
+	#ifdef GPIOUTP
+    //FOR TESTING:
+        initTestmodule();
+    #endif
+		
 	
 	//Init Delay
 	de1 = init_delay();
@@ -90,8 +94,8 @@ int main(void){
 
 	//Init dspsystem
 	initHeapDspSystem(&dsp, 4, &in, &out);
-	addFx(dsp.bin[1], initDspFx("EQ   ", eq3, eq3->menusettings));
-	addFx(dsp.bin[0], initDspFx("Delay", de1, de1->menusettings));
+	//addFx(dsp.bin[1], initDspFx("EQ   ", eq3, eq3->menusettings));
+	//addFx(dsp.bin[0], initDspFx("Delay", de1, de1->menusettings));
 	
 	//Init Interface
 	initHeapHwInterface(&interface);
@@ -318,12 +322,13 @@ void uart_input(){
 				//The new value is for the volume effect.
 				//This value vary from 0 -(-99)dB.
 				//There is only one value for the volume.
-				(*dspsystem->bin[boxnr]->fx->menusettings->setting[0])
+				/*(*dspsystem->bin[boxnr]->fx->menusettings->setting[0])
 				(
 					dspsystem->bin[boxnr]->fx->structPointer, 
 					tempVal
 				);
 				updateValue(&menu, tempVal, boxnr, 0);
+			    */
 			} 
 		} 
 	}

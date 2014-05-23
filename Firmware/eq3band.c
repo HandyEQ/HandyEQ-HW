@@ -114,6 +114,10 @@ int setEq3bandCoeff(void * eqstructptr, BiquadCoeff * coeff){
 /* 	Set Treble coefficients 	*/
 void setEqTrebleCoeff(void * eqstructptr, int index){
 	Eq3BandEffect * eq = eqstructptr;
+	eq->stage1.xmem1 = 0; 
+	eq->stage1.xmem2 = 0;
+	eq->stage1.ymem1 = 0;
+	eq->stage1.ymem2 = 0;
 	eq->stage1.coeff = &treble[index];
 	eq->stage1.index = index;
 	
@@ -125,6 +129,10 @@ void setEqTrebleCoeff(void * eqstructptr, int index){
 /* 	Set Midrange coefficients 	*/
 void setEqMidCoeff(void * eqstructptr, int index){
 	Eq3BandEffect * eq = eqstructptr;
+	eq->stage2.xmem1 = 0; 
+	eq->stage2.xmem2 = 0;
+	eq->stage2.ymem1 = 0;
+	eq->stage2.ymem2 = 0;
 	eq->stage2.coeff = &midrange[index];
 	eq->stage2.index = index;
 	
@@ -137,6 +145,10 @@ void setEqMidCoeff(void * eqstructptr, int index){
 /* 	Set Bass coefficients 	*/
 void setEqBassCoeff(void * eqstructptr, int index){
 	Eq3BandEffect * eq = eqstructptr;
+	eq->stage3.xmem1 = 0; 
+	eq->stage3.xmem2 = 0;
+	eq->stage3.ymem1 = 0;
+	eq->stage3.ymem2 = 0;
 	eq->stage3.coeff = &bass[index];
 	eq->stage3.index = index;
 	
@@ -158,7 +170,7 @@ void runEq3band(void *pointer, Chunk * input, Chunk * output){
 	Chunk q2;
 	Eq3BandEffect * eq3bandeffect = pointer;
 	int i;
-    runBiquad(&eq3bandeffect->stage1, input, &q1);	
+    runBiquad(&eq3bandeffect->stage3, input, &q1);	
     
     //Test//
     #ifdef GPIOUTP
@@ -167,7 +179,7 @@ void runEq3band(void *pointer, Chunk * input, Chunk * output){
     //----//
     
     runBiquad(&eq3bandeffect->stage2, &q1, &q2);
-    runBiquad(&eq3bandeffect->stage3, &q2, output);
+    runBiquad(&eq3bandeffect->stage1, &q2, output);
     
     //Test//
 	#ifdef GPIOUTP

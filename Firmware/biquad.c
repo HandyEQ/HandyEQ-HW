@@ -91,12 +91,13 @@ int runBiquad(BiquadStage *s, Chunk * in, Chunk * out){   //maybe change to void
         
         inData = in->data[i];
 	    /* IIR DFI difference equation: */
-	    accu = 	    ( b0 * inData       );
-	    accu += 	( b1 * s->xmem1     ); 
-	    accu += 	( b2 * s->xmem2	    ); 
-	    accu -= 	( a1 * s->ymem1	    ); 
-	    accu -= 	( a2 * s->ymem2	    );   
+	    accu = 	    ( b0 * inData       ); ///scale;
+	    accu += 	( b1 * s->xmem1     ); ///scale; 
+	    accu += 	( b2 * s->xmem2	    ); ///scale; 
+	    accu -= 	( a1 * s->ymem1	    ); ///scale; 
+	    accu -= 	( a2 * s->ymem2	    ); ///scale;   
 	    out->data[i] = (scale == 0) ? accu : (accu / scale);
+	    //out->data[i] = accu;
 	    
 	    //* Shift delay line */
 	    s->xmem2 = s->xmem1;
